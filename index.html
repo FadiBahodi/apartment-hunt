@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apartment Hunt — Fadi & Nomi — July 2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #161a22;
+    --border: #262b36;
+    --text: #e6e8eb;
+    --muted: #8a94a6;
+    --accent: #ff6b35;
+    --good: #4ade80;
+    --warn: #fbbf24;
+    --bad: #f87171;
+    --link: #60a5fa;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+  header { padding: 16px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  header h1 { margin: 0; font-size: 20px; font-weight: 600; }
+  header .meta { color: var(--muted); font-size: 13px; }
+  .layout { display: grid; grid-template-columns: 380px 1fr 460px; gap: 0; height: calc(100vh - 60px); }
+  @media (max-width: 1400px) { .layout { grid-template-columns: 360px 1fr; } #detail { display: none; } }
+  @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } #map { height: 50vh; } }
+
+  #sidebar { overflow-y: auto; border-right: 1px solid var(--border); padding: 12px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .filters button { background: var(--panel); border: 1px solid var(--border); color: var(--text); padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; }
+  .filters button.active { background: var(--accent); border-color: var(--accent); color: #000; }
+  .sort-control { display: flex; align-items: center; gap: 6px; margin-bottom: 12px; font-size: 12px; color: var(--muted); }
+  .sort-control select { background: var(--panel); color: var(--text); border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px; }
+
+  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 10px; cursor: pointer; transition: border-color .15s; }
+  .card:hover { border-color: var(--accent); }
+  .card.selected { border-color: var(--accent); }
+  .card .name { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
+  .card .zone { color: var(--muted); font-size: 11px; margin-bottom: 6px; }
+  .card .rent { color: var(--accent); font-weight: 600; font-size: 14px; }
+  .card .meta { font-size: 11px; color: var(--muted); margin-top: 4px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .badge { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; text-transform: uppercase; }
+  .badge.good { background: rgba(74,222,128,.15); color: var(--good); }
+  .badge.warn { background: rgba(251,191,36,.15); color: var(--warn); }
+  .badge.bad { background: rgba(248,113,113,.15); color: var(--bad); }
+  .badge.fine { background: rgba(96,165,250,.15); color: var(--link); }
+
+  #map { height: 100%; }
+  .leaflet-popup-content-wrapper { background: var(--panel); color: var(--text); }
+  .leaflet-popup-tip { background: var(--panel); }
+  .marker-cvh { background: var(--accent); border: 3px solid #fff; }
+
+  #detail { overflow-y: auto; border-left: 1px solid var(--border); padding: 16px; }
+  #detail .placeholder { color: var(--muted); text-align: center; margin-top: 40px; }
+  #detail h2 { margin: 0 0 4px; font-size: 18px; }
+  #detail .addr { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+  #detail .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; }
+  #detail .photos img { width: 100%; height: 120px; object-fit: cover; border-radius: 6px; background: #222; }
+  #detail .photos img.lg { grid-column: span 2; height: 200px; }
+  #detail .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0; }
+  #detail .stat { background: var(--bg); padding: 8px; border-radius: 6px; border: 1px solid var(--border); }
+  #detail .stat .k { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: .05em; }
+  #detail .stat .v { font-weight: 600; font-size: 14px; margin-top: 2px; }
+  #detail h3 { font-size: 13px; text-transform: uppercase; color: var(--muted); margin: 16px 0 6px; letter-spacing: .05em; }
+  #detail ul { padding-left: 18px; margin: 4px 0; }
+  #detail .pros li { color: var(--good); }
+  #detail .cons li { color: var(--bad); }
+  #detail .external { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  #detail .external a { color: var(--link); text-decoration: none; padding: 6px 10px; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; font-size: 12px; }
+  #detail .external a:hover { border-color: var(--accent); }
+  .red { color: var(--bad); }
+  .warn-banner { background: rgba(248,113,113,.1); border: 1px solid var(--bad); padding: 8px 10px; border-radius: 6px; font-size: 12px; margin: 8px 0; color: var(--bad); }
+
+  .legend { position: absolute; bottom: 20px; left: 20px; background: var(--panel); border: 1px solid var(--border); padding: 8px 12px; border-radius: 6px; font-size: 12px; z-index: 1000; }
+  .legend .row { display: flex; align-items: center; gap: 6px; margin: 2px 0; }
+  .legend .dot { width: 10px; height: 10px; border-radius: 50%; }
+</style>
+</head>
+<body>
+<header>
+  <h1>🏠 Apartment Hunt</h1>
+  <span class="meta">Fadi & Nomi · CVH-anchored · Move-in July 2026 · Pet-friendly · Budget $1,800–$2,800</span>
+  <span class="meta" id="count"></span>
+  <span class="meta" style="margin-left:auto"><a href="#" id="show-shortlist" style="color:var(--accent);text-decoration:none;border:1px solid var(--accent);padding:4px 10px;border-radius:4px;">⭐ Top picks</a></span>
+</header>
+<div id="shortlist-modal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.85);z-index:9999;overflow-y:auto;padding:40px;">
+  <div style="max-width:900px;margin:0 auto;background:var(--panel);border-radius:12px;padding:24px;border:1px solid var(--border);">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <h2 style="margin:0">⭐ The Honest Shortlist</h2>
+      <button id="close-shortlist" style="background:transparent;border:1px solid var(--border);color:var(--text);padding:6px 12px;border-radius:4px;cursor:pointer;">✕ Close</button>
+    </div>
+    <div id="shortlist-content"></div>
+  </div>
+</div>
+<div class="layout">
+  <aside id="sidebar">
+    <div class="filters" id="filters"></div>
+    <div class="sort-control">
+      <span>Sort:</span>
+      <select id="sort">
+        <option value="cvh">CVH drive (km)</option>
+        <option value="rent">Rent (low→high)</option>
+        <option value="sqft">Sqft (high→low)</option>
+        <option value="union">Toronto Union (min)</option>
+        <option value="rating">Rating</option>
+      </select>
+    </div>
+    <div id="cards"></div>
+    <div style="margin-top: 24px; padding: 12px; border: 1px solid var(--bad); border-radius: 6px; background: rgba(248,113,113,.05);">
+      <h3 style="margin: 0 0 8px; font-size: 12px; color: var(--bad); text-transform: uppercase;">⛔ Hard avoid (documented)</h3>
+      <div id="avoid"></div>
+    </div>
+  </aside>
+  <main id="map-wrap">
+    <div id="map"></div>
+    <div class="legend">
+      <div class="row"><span class="dot" style="background: var(--accent)"></span> CVH (work anchor)</div>
+      <div class="row"><span class="dot" style="background: var(--good)"></span> Good rating</div>
+      <div class="row"><span class="dot" style="background: var(--warn)"></span> Verify pets / caution</div>
+      <div class="row"><span class="dot" style="background: var(--link)"></span> Fine / neutral</div>
+      <div class="row"><span class="dot" style="background: #a78bfa"></span> Running route node</div>
+    </div>
+  </main>
+  <aside id="detail">
+    <div class="placeholder">Click a building or pin to see details, photos, drive times.</div>
+  </aside>
+</div>
+
+<script src="data.js"></script>
+<script src="manifest.js"></script>
+<script>
+  const photoMap = window.PHOTO_MANIFEST || {};
+  let activeFilter = 'all';
+  let activeSort = 'cvh';
+  let selectedId = null;
+
+  const map = L.map('map').setView([43.61, -79.62], 11);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '© OpenStreetMap © CARTO',
+    maxZoom: 19,
+    subdomains: 'abcd'
+  }).addTo(map);
+
+  // CVH marker
+  L.marker([CVH.lat, CVH.lng], {
+    icon: L.divIcon({
+      className: '',
+      html: '<div style="background:#ff6b35;width:18px;height:18px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 8px rgba(255,107,53,.8)"></div>',
+      iconSize: [24, 24], iconAnchor: [12, 12]
+    })
+  }).addTo(map).bindPopup('<b>Credit Valley Hospital</b><br>2200 Eglinton W');
+
+  // Old home marker
+  L.marker([OLD_HOME.lat, OLD_HOME.lng], {
+    icon: L.divIcon({
+      className: '',
+      html: '<div style="background:#666;width:12px;height:12px;border-radius:50%;border:2px solid #aaa;opacity:.6"></div>',
+      iconSize: [16, 16], iconAnchor: [8, 8]
+    })
+  }).addTo(map).bindPopup('<b>11 Charlotte (old)</b>');
+
+  // Running markers
+  RUNNING.forEach(r => {
+    L.circleMarker([r.lat, r.lng], {
+      radius: 6, color: r.type === 'trail-allyear' ? '#a78bfa' : '#7c6dc7',
+      fillOpacity: 0.6, weight: 2
+    }).addTo(map).bindPopup(`<b>${r.name}</b><br><small>${r.note}</small>`);
+  });
+
+  function ratingClass(rating) {
+    if (!rating) return 'fine';
+    const r = rating.toUpperCase();
+    if (r.startsWith('GOOD')) return 'good';
+    if (r.startsWith('STRETCH') || r.startsWith('POTENTIAL') || r.startsWith('FINE')) return 'fine';
+    if (r.startsWith('CAUTION')) return 'warn';
+    if (r.startsWith('AVOID')) return 'bad';
+    return 'fine';
+  }
+
+  const markers = {};
+  function pinColor(apt) {
+    const c = ratingClass(apt.rating);
+    return c === 'good' ? '#4ade80' : c === 'warn' ? '#fbbf24' : c === 'bad' ? '#f87171' : '#60a5fa';
+  }
+
+  function renderMarkers(list) {
+    Object.values(markers).forEach(m => map.removeLayer(m));
+    list.forEach(apt => {
+      if (!apt.lat || !apt.lng) return;
+      const m = L.marker([apt.lat, apt.lng], {
+        icon: L.divIcon({
+          className: '',
+          html: `<div style="background:${pinColor(apt)};width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 4px rgba(0,0,0,.6);cursor:pointer"></div>`,
+          iconSize: [18, 18], iconAnchor: [9, 9]
+        })
+      }).addTo(map).bindPopup(`<b>${apt.name}</b><br>$${apt.rent_1bed_low || apt.rent_2bed}+/mo · ${apt.drive_to_cvh_km} km to CVH<br><a href="#" onclick="selectApt('${apt.id}');return false;">Open detail →</a>`);
+      m.on('click', () => selectApt(apt.id));
+      markers[apt.id] = m;
+    });
+  }
+
+  function rentDisplay(apt) {
+    if (apt.rent_1bed_low) {
+      return apt.rent_1bed_high && apt.rent_1bed_high !== apt.rent_1bed_low
+        ? `$${apt.rent_1bed_low.toLocaleString()}–$${apt.rent_1bed_high.toLocaleString()}`
+        : `$${apt.rent_1bed_low.toLocaleString()}`;
+    }
+    if (apt.rent_2bed) return `$${apt.rent_2bed.toLocaleString()} (2-bed only)`;
+    return '—';
+  }
+
+  function renderCards() {
+    const filtered = APARTMENTS.filter(a => {
+      if (activeFilter === 'all') return true;
+      if (activeFilter === 'pet-verified') return a.pet_status === 'verified';
+      if (activeFilter === 'cvh-tier1') return a.drive_to_cvh_min_peak <= 15;
+      if (activeFilter === 'toronto-close') return a.drive_to_union_min_offpeak && a.drive_to_union_min_offpeak <= 25;
+      if (activeFilter === 'cheap') return (a.rent_1bed_low || a.rent_2bed) <= 2000;
+      if (activeFilter === 'has-photos') return (photoMap[a.id] || []).length > 0;
+      return true;
+    });
+    const sorted = filtered.slice().sort((a, b) => {
+      switch (activeSort) {
+        case 'cvh': return (a.drive_to_cvh_km||999) - (b.drive_to_cvh_km||999);
+        case 'rent': return (a.rent_1bed_low||a.rent_2bed||9999) - (b.rent_1bed_low||b.rent_2bed||9999);
+        case 'sqft': return (b.sqft_high||0) - (a.sqft_high||0);
+        case 'union': return (a.drive_to_union_min_offpeak||999) - (b.drive_to_union_min_offpeak||999);
+        case 'rating': {
+          const order = { 'GOOD': 0, 'FINE': 1, 'POTENTIAL': 2, 'STRETCH': 3, 'CAUTION': 4 };
+          return (order[(a.rating||'FINE').split(' ')[0]] ?? 5) - (order[(b.rating||'FINE').split(' ')[0]] ?? 5);
+        }
+      }
+    });
+
+    document.getElementById('count').textContent = `${sorted.length} of ${APARTMENTS.length} buildings`;
+    const html = sorted.map(a => {
+      const cls = ratingClass(a.rating);
+      const photoCount = (photoMap[a.id] || []).length;
+      return `
+        <div class="card ${selectedId===a.id?'selected':''}" data-id="${a.id}" onclick="selectApt('${a.id}')">
+          <div class="name">${a.name} <span class="badge ${cls}">${a.rating || 'fine'}</span></div>
+          <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
+          <div class="rent">${rentDisplay(a)}/mo${a.sqft_high ? ` · up to ${a.sqft_high} sqft` : ''}</div>
+          <div class="meta">
+            <span>🏥 ${a.drive_to_cvh_km}km · ~${a.drive_to_cvh_min_peak}min peak</span>
+            <span>🚆 ${a.drive_to_union_min_offpeak ? a.drive_to_union_min_offpeak+'min Union' : ''}</span>
+            <span>🐕 ${a.pet_status === 'verified' ? '✓' : a.pet_status === 'conflicting' ? '⚠️' : '?'}</span>
+            <span>📸 ${photoCount}</span>
+          </div>
+        </div>`;
+    }).join('');
+    document.getElementById('cards').innerHTML = html || '<p style="color:var(--muted)">No matches.</p>';
+    renderMarkers(sorted);
+  }
+
+  function selectApt(id) {
+    selectedId = id;
+    const a = APARTMENTS.find(x => x.id === id);
+    if (!a) return;
+    map.setView([a.lat, a.lng], 13);
+    if (markers[id]) markers[id].openPopup();
+    const photos = photoMap[id] || [];
+    const photosHtml = photos.length
+      ? photos.map((p, i) => `<img src="${p}" class="${i===0?'lg':''}" onerror="this.style.display='none'">`).join('')
+      : `<div style="grid-column:span 2;background:var(--bg);padding:24px;text-align:center;border:1px dashed var(--border);border-radius:6px;color:var(--muted)">📷 Photos still downloading or unavailable. Listing link below has full photos.</div>`;
+    const cls = ratingClass(a.rating);
+    const petWarn = a.pet_status === 'conflicting' ? '<div class="warn-banner">⚠️ Pet policy CONFLICTS across listing sites — verify in writing before viewing.</div>' :
+      a.pet_status === 'verify-condo-rules' ? '<div class="warn-banner">⚠️ CONDO unit — RTA s.14 does NOT protect pet rights if condo declaration bans pets. Demand declaration before signing.</div>' :
+      a.pet_status === 'verify-specifics' ? '<div class="warn-banner">⚠️ Verify dog size/breed limits with leasing.</div>' : '';
+
+    const gmapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${a.lat},${a.lng}&destination=${CVH.lat},${CVH.lng}`;
+    const gmapsAddrUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.address)}`;
+    const streetviewUrl = `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${a.lat},${a.lng}`;
+
+    document.getElementById('detail').innerHTML = `
+      <h2>${a.name} <span class="badge ${cls}">${a.rating}</span></h2>
+      <div class="addr">${a.address}</div>
+      ${petWarn}
+      <div class="photos">${photosHtml}</div>
+      <div class="stats">
+        <div class="stat"><div class="k">Rent (1-bed)</div><div class="v">${rentDisplay(a)}</div></div>
+        <div class="stat"><div class="k">Sqft</div><div class="v">${a.sqft_low ? a.sqft_low + '–' + a.sqft_high : a.sqft_high || '—'}</div></div>
+        <div class="stat"><div class="k">Drive to CVH</div><div class="v">${a.drive_to_cvh_km} km · ~${a.drive_to_cvh_min_peak} min peak</div></div>
+        <div class="stat"><div class="k">→ Union (min)</div><div class="v">${a.drive_to_union_min_offpeak || '—'}</div></div>
+        <div class="stat"><div class="k">Pets</div><div class="v">${a.pets}</div></div>
+        <div class="stat"><div class="k">Promo</div><div class="v">${a.promo || '—'}</div></div>
+      </div>
+      <h3>🏃 Running</h3>
+      <p>${a.running}</p>
+      <h3>🚆 Transit</h3>
+      <p>${a.transit}</p>
+      ${a.visual_note ? `<h3>👁 What the photos actually show</h3><p style="background:rgba(96,165,250,.06);border-left:3px solid var(--link);padding:8px 10px;border-radius:4px;font-size:13px;">${a.visual_note}</p>` : ''}
+      ${a.pros && a.pros.length ? `<h3>✅ Pros</h3><ul class="pros">${a.pros.map(p=>`<li>${p}</li>`).join('')}</ul>` : ''}
+      ${a.cons && a.cons.length ? `<h3>❌ Cons</h3><ul class="cons">${a.cons.map(p=>`<li>${p}</li>`).join('')}</ul>` : ''}
+      ${a.red_flags ? `<h3>⚠️ Red flags / notes</h3><p class="red">${a.red_flags}</p>` : ''}
+      <div class="external">
+        <a href="${a.listing_url}" target="_blank">📄 Listing</a>
+        <a href="${gmapsAddrUrl}" target="_blank">📍 Google Maps</a>
+        <a href="${gmapsUrl}" target="_blank">🚗 Drive to CVH</a>
+        <a href="${streetviewUrl}" target="_blank">👁 Street View</a>
+        <a href="https://www.google.com/search?q=${encodeURIComponent(a.address + ' reviews reddit')}" target="_blank">🔍 Reddit search</a>
+      </div>
+    `;
+    document.querySelectorAll('.card').forEach(c => c.classList.toggle('selected', c.dataset.id === id));
+  }
+
+  // Filters
+  const filterDefs = [
+    { id: 'all', label: 'All' },
+    { id: 'cvh-tier1', label: '🏥 CVH ≤15min peak' },
+    { id: 'toronto-close', label: '🌆 Union ≤25min' },
+    { id: 'pet-verified', label: '🐕 Pet verified' },
+    { id: 'cheap', label: '💰 ≤$2,000' },
+    { id: 'has-photos', label: '📸 Has photos' },
+  ];
+  document.getElementById('filters').innerHTML = filterDefs.map(f =>
+    `<button data-id="${f.id}" class="${activeFilter===f.id?'active':''}">${f.label}</button>`
+  ).join('');
+  document.querySelectorAll('#filters button').forEach(b => {
+    b.onclick = () => {
+      activeFilter = b.dataset.id;
+      document.querySelectorAll('#filters button').forEach(x => x.classList.toggle('active', x.dataset.id === activeFilter));
+      renderCards();
+    };
+  });
+  document.getElementById('sort').onchange = e => { activeSort = e.target.value; renderCards(); };
+
+  document.getElementById('avoid').innerHTML = AVOID.map(a =>
+    `<div style="font-size:11px;margin-bottom:8px;"><b>${a.name}</b><br><span style="color:var(--muted)">${a.why}</span><br><small style="color:var(--muted);font-style:italic">${a.source}</small></div>`
+  ).join('');
+
+  window.selectApt = selectApt;
+  renderCards();
+
+  // Top-picks modal
+  const SHORTLIST = [
+    { tier: "🏥 BEST FOR CVH OPERATIONAL EXCELLENCE", picks: ["elora", "collegeway_2285", "reid_drive"], why: "Tier 1 commute (≤12 min peak), pet-verified, doorstep Sawmill/Culham/Riverwood running spine." },
+    { tier: "🌆 BEST FOR TORONTO LIFESTYLE (closest to old Harbourfront vibe)", picks: ["vita_on_the_lake", "lago_waterfront", "eau_du_soleil"], why: "Doorstep Humber Bay Park + Martin Goodman (the only year-round-cleared trail in west GTA). Eau du Soleil is the only one explicitly accepting pets of all sizes." },
+    { tier: "💰 BEST VALUE / PET-VERIFIED", picks: ["park_lawn_285", "shoreline_towers", "promenade_2301", "lincoln_545"], why: "Sub-$2,000 pet-verified, with 285 Park Lawn at $1,500 being the cheapest verified Toronto-side 1-bed." },
+    { tier: "🚆 BEST TRANSIT BASE", picks: ["station_place_5249", "markwood_4365"], why: "Station Place: subway + GO + bus terminal at door (Union 16 min). Markwood: shortest CVH (7km/10min) + on-site dog run + aggressive promo." },
+    { tier: "🎯 BEST IF NOMI WANTS AMENITIES", picks: ["dialogue", "arc_erin_mills"], why: "BGO/Daniels institutional management, modern fit-and-finish, dog spa, concierge." }
+  ];
+
+  function showShortlist() {
+    const html = SHORTLIST.map(t => `
+      <div style="margin-bottom:24px;padding:12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
+        <h3 style="margin:0 0 4px;color:var(--accent);font-size:14px;">${t.tier}</h3>
+        <p style="color:var(--muted);font-size:12px;margin:0 0 10px;">${t.why}</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;">
+          ${t.picks.map(id => {
+            const a = APARTMENTS.find(x => x.id === id);
+            if (!a) return '';
+            const photo = (photoMap[id] || [])[0] || '';
+            return `<div style="background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:8px;cursor:pointer;" onclick="document.getElementById('shortlist-modal').style.display='none';selectApt('${id}')">
+              ${photo ? `<img src="${photo}" style="width:100%;height:80px;object-fit:cover;border-radius:4px;margin-bottom:4px;">` : ''}
+              <div style="font-weight:600;font-size:12px;">${a.name}</div>
+              <div style="color:var(--accent);font-size:11px;">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}+ · ${a.drive_to_cvh_km}km CVH</div>
+              <div style="color:var(--muted);font-size:10px;">${a.zone}</div>
+            </div>`;
+          }).join('')}
+        </div>
+      </div>
+    `).join('');
+    document.getElementById('shortlist-content').innerHTML = `
+      ${html}
+      <div style="background:rgba(248,113,113,.08);border:1px solid var(--bad);border-radius:6px;padding:12px;font-size:12px;">
+        <b style="color:var(--bad);">⛔ HARD AVOID:</b> 1980 Fowler Dr, 2250 Homelands Dr, 240 Markland Drive, Skyrise Rentals (no pets). All have documented red flags (CBC, Bed Bug Registry, listing confirmation). Details in left sidebar.
+      </div>
+      <div style="margin-top:16px;padding:12px;background:var(--bg);border-radius:6px;font-size:12px;color:var(--muted);">
+        <b style="color:var(--text);">Verify before signing — every finalist:</b>
+        <ol style="padding-left:18px;margin:8px 0;">
+          <li>Run Google Maps with departure times set to Tue 6:45 AM, Tue 12:45 PM, Tue 3 PM, Tue 10:30 PM, Wed 7:15 AM (post-night) for the actual address → CVH. Two separate weeks.</li>
+          <li>For any condo unit (Vita, Lago, Eau du Soleil, Miracle, Arc): demand the condo declaration in writing — RTA s.14 does NOT protect pets if declaration bans them.</li>
+          <li>Tour at 11 PM and 7 AM, not just midday.</li>
+          <li>Walk the running route from the unit door — time and inspect.</li>
+          <li>Pull the building's Mississauga MARC or Toronto RentSafeTO score.</li>
+        </ol>
+      </div>
+    `;
+    document.getElementById('shortlist-modal').style.display = 'block';
+  }
+  document.getElementById('show-shortlist').onclick = e => { e.preventDefault(); showShortlist(); };
+  document.getElementById('close-shortlist').onclick = () => document.getElementById('shortlist-modal').style.display = 'none';
+  document.getElementById('shortlist-modal').onclick = e => { if (e.target.id === 'shortlist-modal') e.target.style.display = 'none'; };
+</script>
+</body>
+</html>
