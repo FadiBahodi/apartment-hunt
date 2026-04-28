@@ -24,7 +24,7 @@ const APARTMENTS = [
     red_flags: "Older 1980s tower with full reno; AC is ductless mini-split (not central); 1-bed sqft small for couple+dog",
     rating: "GOOD",
     listing_url: "https://www.mintoapartments.com/gta/Mississauga-apartment-rentals/Elora/main.html",
-    lat: 43.6048, lng: -79.7414,
+    lat: 43.5830211, lng: -79.7539141,
     pros: ["Pet wash station", "Full reno", "Closest to Sawmill running spine", "Free WiFi promo"],
     cons: ["Small sqft (511-639)", "Mini-split AC not central", "Older bones"],
     visual_note: "PHOTO CONFIRMS: gorgeous fully-renovated unit. White cabinets, light-wood plank floors, kitchen island, recessed lighting, light-filled. Premium feel for the price."
@@ -46,7 +46,7 @@ const APARTMENTS = [
     red_flags: "InterRent corporate ratings 1.3-2/5 across multiple platforms (flooding, unresponsive). Verify operator.",
     rating: "FINE — verify operator",
     listing_url: "https://www.zumper.com/apartment-buildings/p322177/battleford-glen-erin-meadowvale-mississauga-on",
-    lat: 43.6055, lng: -79.7421,
+    lat: 43.5840974, lng: -79.7554141,
     pros: ["Bigger sqft than Elora at lower price", "Pool, BBQ, playground", "Pets explicitly OK"],
     cons: ["InterRent corporate concerns", "1970s-80s building"],
     visual_note: "Photos show a 1970s buff-brick tower; suite shots show parquet floors + sliding glass to balcony — older bones, not gut-renovated like Elora."
@@ -68,7 +68,7 @@ const APARTMENTS = [
     red_flags: "Surface lot only (no underground); Milton line GO has rush-only service",
     rating: "GOOD",
     listing_url: "https://www.zumper.com/apartment-buildings/p296363/reid-drive-apartments-at-14-skylark-apts-mississauga-on-l5m-2a8",
-    lat: 43.5810, lng: -79.7113,
+    lat: 43.5754891, lng: -79.7040106,
     pros: ["Largest 1-beds on shortlist (716-898 sqft)", "Gut-renovated kitchens (quartz waterfall, two-tone cabinets)", "Streetsville village + GO walkable"],
     cons: ["Milton line GO frequency", "Surface parking only"],
     visual_note: "Suite photos show recent gut reno: white quartz waterfall counters, two-tone cabinets (gloss white upper / espresso lower), full SS, light wide-plank LVP. Modern."
@@ -91,7 +91,7 @@ const APARTMENTS = [
     red_flags: "1-bed currently waitlist; call (289) 401-9832 immediately for July",
     rating: "GOOD — closest to CVH",
     listing_url: "https://www.hazelviewproperties.com/properties/2285-the-collegeway",
-    lat: 43.5311, lng: -79.6700,
+    lat: 43.5402711, lng: -79.6830518,
     pros: ["CLOSEST building to CVH (3.5 km)", "Hazelview confirmed pet-friendly", "Zumper Expert Rating 9.7/10"],
     cons: ["1-bed waitlist", "Older building"],
     visual_note: "Photo behind the Hazelview '2 months free' overlay shows grey sectional, modern coffee table, framed art — recently refreshed living room."
@@ -134,7 +134,7 @@ const APARTMENTS = [
     red_flags: "No 1-bed inventory currently; only 2-bed 946 sqft. Built 2019.",
     rating: "GOOD — but stretch budget for 2-bed",
     listing_url: "https://www.zumper.com/apartment-buildings/p406320/daniels-gateway-arc-erin-mills-central-erin-mills-mississauga-on",
-    lat: 43.5587, lng: -79.7114,
+    lat: 43.5582480, lng: -79.7074941,
     pros: ["LITERALLY ON EGLINTON 2 km from CVH", "Built 2019 (newest)", "Strata.ca: 'flawless management'"],
     cons: ["No 1-bed inventory", "Condo declaration risk"],
     visual_note: "Lobby photo: PREMIUM. Geometric perforated metal wall art, designer pendants, dark-grey sectionals, marble coffee table, floor-to-ceiling glass walls. Boutique-hotel feel."
@@ -156,7 +156,7 @@ const APARTMENTS = [
     red_flags: "Hurontario LRT chaos through 2028 degrades north-south routes. Square One running fragmented. Brand new = no track record.",
     rating: "GOOD if amenities matter",
     listing_url: "https://www.rentdialogue.com/",
-    lat: 43.5953, lng: -79.6429,
+    lat: 43.5897825, lng: -79.6503031,
     pros: ["24/7 concierge, dog spa, smart home", "BGO institutional landlord", "2 mo free + free WiFi"],
     cons: ["LRT construction chaos", "Running is fragmented", "Higher base rent"],
     visual_note: "Premium look confirmed: light-wood quartz waterfall island, white kitchen, white-bouclé bar stools, track lighting. Most modern of the verified options."
@@ -178,7 +178,7 @@ const APARTMENTS = [
     red_flags: "RentSafeTO 78/100 (acceptable; pest log good). Older building. AM peak 28-40 min to CVH (Tier 3).",
     rating: "GOOD VALUE",
     listing_url: "https://www.greenwin.ca/properties/545-the-west-mall",
-    lat: 43.6519621, lng: -79.5680931,
+    lat: 43.6516887, lng: -79.5695913,
     pros: ["CHEAPEST verified pet-friendly 1-bed ($1,845)", "Heat + water included", "1 month free", "Walking distance to Centennial Park"],
     cons: ["Older building (1970s)", "Tier 3 commute", "Etobicoke Creek not winter-maintained"],
     visual_note: "Behind the '1 month free' overlay: large windows, parquet hardwood floors, baseboard heaters. Empty unit shot — older bones, not renovated. Tour in person."
@@ -200,7 +200,7 @@ const APARTMENTS = [
     red_flags: "One Yelp review flagged 'rough crowd, screen tenants better'",
     rating: "FINE",
     listing_url: "https://www.parkproperty.ca/apartments/340-mill-road",
-    lat: 43.6402, lng: -79.5712,
+    lat: 43.6397985, lng: -79.5855821,
     pros: ["1 month free + $1,000 cash", "Newly renovated", "Co-working + Wi-Fi lounge"],
     cons: ["Yelp tenant complaint", "Tier 3 commute"],
     visual_note: "Exterior is utilitarian 16-17 storey concrete tower with white balconies — looks 1970s-80s, less aesthetically pleasing than Erin Mills options."
@@ -245,7 +245,7 @@ const APARTMENTS = [
     red_flags: "Pet policy conflicts across listing sites. Confirm in writing before viewing.",
     rating: "POTENTIAL — pet TBD",
     listing_url: "https://rentals.ca/mississauga/1201-walden-circle",
-    lat: 43.5093, lng: -79.6160,
+    lat: 43.5134823, lng: -79.6320598,
     pros: ["CHEAPEST 1-bed ($1,710)", "3 min walk to Clarkson GO", "Pool, fitness, squash, tennis"],
     cons: ["Pet policy unverified", "No winter trail maintenance on waterfront"],
     visual_note: "Photo shows BIG corner-window unit with skyline view, fresh white walls, light-wood floors, white SS kitchen. Recently renovated — better than expected for the price. Strong upside if pets work out."
@@ -267,7 +267,7 @@ const APARTMENTS = [
     red_flags: "Older building; Lakeview is industrial-adjacent in spots — verify exact location",
     rating: "POTENTIAL",
     listing_url: "https://www.zumper.com/apartment-buildings/p219250/1257-lakeshore-road-east-lakeview-mississauga-on",
-    lat: 43.5612, lng: -79.5567,
+    lat: 43.5819835, lng: -79.5535542,
     pros: ["Pet-friendly confirmed", "Waterfront access"],
     cons: ["Industrial adjacency in spots"]
   },
@@ -288,7 +288,7 @@ const APARTMENTS = [
     red_flags: "Etobicoke-Lakeshore RentSafeTO area average 92/100 (good). No specific complaints found.",
     rating: "GOOD — Toronto vibe + waterfront",
     listing_url: "https://www.greenwin.ca/students/45-forty-second-st",
-    lat: 43.5919, lng: -79.5440,
+    lat: 43.5882491, lng: -79.5427490,
     pros: ["Across from Marie Curtis Park", "5 min walk to Long Branch GO (22 min Union)", "Martin Goodman waterfront access", "Brand new red-brick build with retail at base"],
     cons: ["Tier 4 commute to CVH (35-50 min peak)", "Higher rent than CEM"],
     visual_note: "Photo confirms: brand-new 3-storey red-brick mixed-use building with retail at street, white-trim windows, modern facade. Solid build."
