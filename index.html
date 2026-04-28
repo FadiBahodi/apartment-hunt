@@ -178,14 +178,18 @@
     subdomains: 'abcd'
   }).addTo(map);
 
+  // CVH 15min and 25min drive radius (rough — straight-line equivalents)
+  L.circle([CVH.lat, CVH.lng], {radius: 8000, color: '#ff6b35', fillOpacity: 0.04, weight: 1, dashArray: '4 6'}).addTo(map).bindTooltip("~15min drive radius (off-peak)", {permanent: false});
+  L.circle([CVH.lat, CVH.lng], {radius: 14000, color: '#ff6b35', fillOpacity: 0.02, weight: 1, dashArray: '2 8'}).addTo(map).bindTooltip("~25min drive radius (off-peak)", {permanent: false});
   // CVH marker
   L.marker([CVH.lat, CVH.lng], {
     icon: L.divIcon({
       className: '',
-      html: '<div style="background:#ff6b35;width:18px;height:18px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 8px rgba(255,107,53,.8)"></div>',
-      iconSize: [24, 24], iconAnchor: [12, 12]
-    })
-  }).addTo(map).bindPopup('<b>Credit Valley Hospital</b><br>2200 Eglinton W');
+      html: '<div style="background:#ff6b35;width:22px;height:22px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 12px rgba(255,107,53,.9);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px;">H</div>',
+      iconSize: [28, 28], iconAnchor: [14, 14]
+    }),
+    zIndexOffset: 2000
+  }).addTo(map).bindPopup('<b>🏥 Credit Valley Hospital</b><br>2200 Eglinton Ave W<br><small>Lat: 43.5594, Lng: -79.7037 (verified Nominatim)</small>');
 
   // Old home marker
   L.marker([OLD_HOME.lat, OLD_HOME.lng], {

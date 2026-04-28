@@ -3,7 +3,7 @@
 // Move-in: July 2026
 // Generated: 2026-04-27
 
-const CVH = { lat: 43.5594, lng: -79.7106, name: "Credit Valley Hospital" };
+const CVH = { lat: 43.5594410, lng: -79.7037121, name: "Credit Valley Hospital" };
 const OLD_HOME = { lat: 43.6432, lng: -79.4006, name: "11 Charlotte St (old)" };
 
 const APARTMENTS = [
@@ -113,7 +113,7 @@ const APARTMENTS = [
     red_flags: "Condo — RTA s.14 does NOT protect you if declaration bans pets. Demand declaration before signing. Per-unit landlord variance.",
     rating: "FINE — pending condo declaration check",
     listing_url: "https://condos.ca/mississauga/miracle-in-mississauga-4900-glen-erin-dr",
-    lat: 43.5552, lng: -79.7212,
+    lat: 43.5535701, lng: -79.7110129,
     pros: ["Indoor pool, concierge, gym", "Multiple units active", "Built 2013 (newer)"],
     cons: ["Condo declaration risk", "Per-unit variance"]
   },
@@ -178,7 +178,7 @@ const APARTMENTS = [
     red_flags: "RentSafeTO 78/100 (acceptable; pest log good). Older building. AM peak 28-40 min to CVH (Tier 3).",
     rating: "GOOD VALUE",
     listing_url: "https://www.greenwin.ca/properties/545-the-west-mall",
-    lat: 43.6478, lng: -79.5751,
+    lat: 43.6519621, lng: -79.5680931,
     pros: ["CHEAPEST verified pet-friendly 1-bed ($1,845)", "Heat + water included", "1 month free", "Walking distance to Centennial Park"],
     cons: ["Older building (1970s)", "Tier 3 commute", "Etobicoke Creek not winter-maintained"],
     visual_note: "Behind the '1 month free' overlay: large windows, parquet hardwood floors, baseboard heaters. Empty unit shot — older bones, not renovated. Tour in person."
@@ -223,7 +223,7 @@ const APARTMENTS = [
     red_flags: "AM peak 35-50 min to CVH. No central AC, window units only. No balconies. 1950s-60s low-rise.",
     rating: "STRETCH — best running, worst commute",
     listing_url: "https://www.zumper.com/apartment-buildings/p288791/mimico-estates-mimico-toronto-on",
-    lat: 43.6076, lng: -79.4938,
+    lat: 43.6102238, lng: -79.4890189,
     pros: ["788 sqft 1-bed (largest on list) for $1,830", "Martin Goodman Trail = year-round bare pavement", "Mimico GO 17 min to Union", "1.5 months free"],
     cons: ["35-50 min AM peak to CVH", "No central AC, no balconies", "Old building"],
     visual_note: "SURPRISING CHARM: courtyard photo shows mid-century buff-brick low-rise around manicured topiary garden + small fountain. Quiet, established, almost institutional/landscaped. Window AC units visible (no central). Unique vibe — felt more like a college quad than a rental."
