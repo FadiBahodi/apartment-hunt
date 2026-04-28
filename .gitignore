@@ -5,3 +5,7 @@ start.txt
 .DS_Store
 *.log
 listings_toronto.md
+review_trigger.sh
+timer2.sh
+timer.sh
+photos_manifest.json

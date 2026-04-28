@@ -20,9 +20,9 @@
     --link: #60a5fa;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; font-feature-settings: "ss01", "cv11"; }
   header { padding: 16px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-  header h1 { margin: 0; font-size: 20px; font-weight: 600; }
+  header h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
   header .meta { color: var(--muted); font-size: 13px; }
   .layout { display: grid; grid-template-columns: 380px 1fr 460px; gap: 0; height: calc(100vh - 60px); }
   @media (max-width: 1400px) { .layout { grid-template-columns: 360px 1fr; } #detail { display: none; } }
@@ -30,18 +30,23 @@
 
   #sidebar { overflow-y: auto; border-right: 1px solid var(--border); padding: 12px; }
   .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-  .filters button { background: var(--panel); border: 1px solid var(--border); color: var(--text); padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; }
-  .filters button.active { background: var(--accent); border-color: var(--accent); color: #000; }
+  .filters button { background: var(--panel); border: 1px solid var(--border); color: var(--text); padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; transition: all .12s; }
+  .filters button:hover { border-color: var(--accent); }
+  .filters button.active { background: rgba(255,107,53,.12); border-color: var(--accent); color: var(--accent); }
   .sort-control { display: flex; align-items: center; gap: 6px; margin-bottom: 12px; font-size: 12px; color: var(--muted); }
   .sort-control select { background: var(--panel); color: var(--text); border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px; }
 
-  .card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 10px; cursor: pointer; transition: border-color .15s; }
-  .card:hover { border-color: var(--accent); }
-  .card.selected { border-color: var(--accent); }
-  .card .name { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
-  .card .zone { color: var(--muted); font-size: 11px; margin-bottom: 6px; }
-  .card .rent { color: var(--accent); font-weight: 600; font-size: 14px; }
-  .card .meta { font-size: 11px; color: var(--muted); margin-top: 4px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .card { display: grid; grid-template-columns: 56px 1fr auto; gap: 10px; align-items: start; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; cursor: pointer; transition: all .15s; }
+  .card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .card.selected { border-color: var(--accent); background: rgba(255,107,53,.04); }
+  .card .thumb { width: 56px; height: 56px; border-radius: 6px; background-size: cover; background-position: center; background-color: #1f2530; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
+  .card .body { min-width: 0; }
+  .card .name { font-weight: 600; font-size: 15px; margin-bottom: 1px; letter-spacing: -0.01em; line-height: 1.2; }
+  .card .zone { color: var(--muted); font-size: 11px; margin-bottom: 4px; }
+  .card .meta { font-size: 12px; color: var(--muted); margin-top: 2px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .card .rent-col { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
+  .card .rent { color: var(--accent); font-weight: 700; font-size: 17px; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
+  .card .rent .sub { color: var(--muted); font-size: 10px; font-weight: 500; }
   .badge { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; text-transform: uppercase; }
   .badge.good { background: rgba(74,222,128,.15); color: var(--good); }
   .badge.warn { background: rgba(251,191,36,.15); color: var(--warn); }
@@ -56,7 +61,7 @@
 
   #detail { overflow-y: auto; border-left: 1px solid var(--border); padding: 16px; }
   #detail .placeholder { color: var(--muted); text-align: center; margin-top: 40px; }
-  #detail h2 { margin: 0 0 4px; font-size: 18px; }
+  #detail h2 { margin: 0 0 4px; font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
   #detail .addr { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
   #detail .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 12px; }
   #detail .photos img { width: 100%; height: 120px; object-fit: cover; border-radius: 6px; background: #222; }
@@ -75,7 +80,7 @@
   .red { color: var(--bad); }
   .warn-banner { background: rgba(248,113,113,.1); border: 1px solid var(--bad); padding: 8px 10px; border-radius: 6px; font-size: 12px; margin: 8px 0; color: var(--bad); }
 
-  .legend { position: absolute; bottom: 20px; left: 20px; background: var(--panel); border: 1px solid var(--border); padding: 8px 12px; border-radius: 6px; font-size: 12px; z-index: 1000; }
+  .legend { position: absolute; top: 12px; right: 12px; background: rgba(22,26,34,.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid var(--border); padding: 8px 12px; border-radius: 6px; font-size: 12px; z-index: 1000; }
   .legend .row { display: flex; align-items: center; gap: 6px; margin: 2px 0; }
   .legend .dot { width: 10px; height: 10px; border-radius: 50%; }
 </style>
@@ -174,9 +179,10 @@
   // Running markers
   RUNNING.forEach(r => {
     L.circleMarker([r.lat, r.lng], {
-      radius: 6, color: r.type === 'trail-allyear' ? '#a78bfa' : '#7c6dc7',
-      fillOpacity: 0.6, weight: 2
-    }).addTo(map).bindPopup(`<b>${r.name}</b><br><small>${r.note}</small>`);
+      radius: 7, color: '#fff',
+      fillColor: r.type === 'trail-allyear' ? '#c4b5fd' : '#a78bfa',
+      fillOpacity: 0.85, weight: 1.5
+    }).addTo(map).bindPopup(`<b>🏃 ${r.name}</b><br><small>${r.note}</small>`);
   });
 
   function ratingClass(rating) {
@@ -194,17 +200,24 @@
     const c = ratingClass(apt.rating);
     return c === 'good' ? '#4ade80' : c === 'warn' ? '#fbbf24' : c === 'bad' ? '#f87171' : '#60a5fa';
   }
+  function pinGlyph(apt) {
+    const c = ratingClass(apt.rating);
+    return c === 'good' ? '✓' : c === 'warn' ? '!' : c === 'bad' ? '✕' : '·';
+  }
 
   function renderMarkers(list) {
     Object.values(markers).forEach(m => map.removeLayer(m));
     list.forEach(apt => {
       if (!apt.lat || !apt.lng) return;
+      const isSelected = selectedId === apt.id;
+      const sz = isSelected ? 24 : 18;
       const m = L.marker([apt.lat, apt.lng], {
         icon: L.divIcon({
           className: '',
-          html: `<div style="background:${pinColor(apt)};width:14px;height:14px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 4px rgba(0,0,0,.6);cursor:pointer"></div>`,
-          iconSize: [18, 18], iconAnchor: [9, 9]
-        })
+          html: `<div style="background:${pinColor(apt)};width:${sz}px;height:${sz}px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.5)${isSelected?',0 0 0 4px rgba(255,107,53,.4)':''};display:flex;align-items:center;justify-content:center;color:#000;font-weight:700;font-size:${isSelected?14:11}px;cursor:pointer;transition:all .15s;">${pinGlyph(apt)}</div>`,
+          iconSize: [sz, sz], iconAnchor: [sz/2, sz/2]
+        }),
+        zIndexOffset: isSelected ? 1000 : 0
       }).addTo(map).bindPopup(`<b>${apt.name}</b><br>$${apt.rent_1bed_low || apt.rent_2bed}+/mo · ${apt.drive_to_cvh_km} km to CVH<br><a href="#" onclick="selectApt('${apt.id}');return false;">Open detail →</a>`);
       m.on('click', () => selectApt(apt.id));
       markers[apt.id] = m;
@@ -248,17 +261,27 @@
     document.getElementById('count').textContent = `${sorted.length} of ${APARTMENTS.length} buildings`;
     const html = sorted.map(a => {
       const cls = ratingClass(a.rating);
-      const photoCount = (photoMap[a.id] || []).length;
+      const photos = photoMap[a.id] || [];
+      const photoCount = photos.length;
+      const thumbStyle = photos[0] ? `background-image:url('${photos[0]}')` : `background:${pinColor(a)};color:#000;`;
+      const thumbInner = photos[0] ? '' : (a.rating || 'F').charAt(0);
       return `
         <div class="card ${selectedId===a.id?'selected':''}" data-id="${a.id}" onclick="selectApt('${a.id}')">
-          <div class="name">${a.name} <span class="badge ${cls}">${a.rating || 'fine'}</span></div>
-          <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
-          <div class="rent">${rentDisplay(a)}/mo${a.sqft_high ? ` · up to ${a.sqft_high} sqft` : ''}</div>
-          <div class="meta">
-            <span>🏥 ${a.drive_to_cvh_km}km · ~${a.drive_to_cvh_min_peak}min peak</span>
-            ${a.drive_to_union_min_offpeak ? `<span>🚆 ${a.drive_to_union_min_offpeak}min Union</span>` : ''}
-            <span>🐕 ${a.pet_status === 'verified' ? '✓' : a.pet_status === 'verified-large-pets' ? '✓ big' : a.pet_status === 'conflicting' ? '⚠️' : '?'}</span>
-            ${photoCount ? `<span>📸 ${photoCount}</span>` : ''}
+          <div class="thumb" style="${thumbStyle}">${thumbInner}</div>
+          <div class="body">
+            <div class="name">${a.name}</div>
+            <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
+            <div class="meta">
+              <span>🏥 ${a.drive_to_cvh_km}km</span>
+              <span>⏱ ${a.drive_to_cvh_min_peak}min peak</span>
+              ${a.drive_to_union_min_offpeak ? `<span>🚆 ${a.drive_to_union_min_offpeak}min Union</span>` : ''}
+              <span>🐕 ${a.pet_status === 'verified' ? '✓' : a.pet_status === 'verified-large-pets' ? '✓ big dogs' : a.pet_status === 'conflicting' ? '⚠️' : '?'}</span>
+              ${photoCount ? `<span>📸 ${photoCount}</span>` : ''}
+            </div>
+          </div>
+          <div class="rent-col">
+            <span class="badge ${cls}">${(a.rating || 'fine').split(' ')[0]}</span>
+            <div class="rent">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}<span class="sub">${a.rent_1bed_high && a.rent_1bed_high !== a.rent_1bed_low ? '–'+a.rent_1bed_high : ''}${a.sqft_high ? ' · '+a.sqft_high+'sf' : ''}</span></div>
           </div>
         </div>`;
     }).join('');
@@ -271,6 +294,8 @@
     const a = APARTMENTS.find(x => x.id === id);
     if (!a) return;
     map.setView([a.lat, a.lng], 13);
+    // Re-render markers with new selection state
+    renderCards();
     if (markers[id]) markers[id].openPopup();
     const photos = photoMap[id] || [];
     const photosHtml = photos.length
