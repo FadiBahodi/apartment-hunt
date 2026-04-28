@@ -14,6 +14,8 @@
     --text: #e6e8eb;
     --muted: #8a94a6;
     --accent: #ff6b35;
+    --accent-text: #ff8a5c;
+    --focus: #ffd166;
     --good: #4ade80;
     --warn: #fbbf24;
     --bad: #f87171;
@@ -24,9 +26,10 @@
   header { padding: 16px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
   header h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
   header .meta { color: var(--muted); font-size: 13px; }
-  .layout { display: grid; grid-template-columns: 380px 1fr 460px; gap: 0; height: calc(100vh - 60px); }
-  @media (max-width: 1400px) { .layout { grid-template-columns: 360px 1fr; } #detail { display: none; } }
+  .layout { display: grid; grid-template-columns: 380px 1fr 460px; gap: 0; height: calc(100vh - 60px); position: relative; }
+  @media (max-width: 1400px) { .layout { grid-template-columns: 360px 1fr; } #detail { position: absolute; right: 0; top: 0; bottom: 0; width: 460px; max-width: 90vw; background: var(--panel); z-index: 500; border-left: 1px solid var(--border); transform: translateX(100%); transition: transform .2s; box-shadow: -8px 0 24px rgba(0,0,0,.4); } #detail.show { transform: translateX(0); } #detail-close { display: block; } }
   @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } #map { height: 50vh; } }
+  #detail-close { display: none; position: absolute; top: 8px; right: 12px; background: var(--bg); border: 1px solid var(--border); color: var(--text); width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 18px; z-index: 10; }
 
   #sidebar { overflow-y: auto; border-right: 1px solid var(--border); padding: 12px; }
   .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
@@ -83,6 +86,19 @@
   .legend { position: absolute; top: 12px; right: 12px; background: rgba(22,26,34,.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid var(--border); padding: 8px 12px; border-radius: 6px; font-size: 12px; z-index: 1000; }
   .legend .row { display: flex; align-items: center; gap: 6px; margin: 2px 0; }
   .legend .dot { width: 10px; height: 10px; border-radius: 50%; }
+
+  /* Keyboard accessibility — visible focus rings on all interactives */
+  :focus { outline: none; }
+  button:focus-visible, a:focus-visible, select:focus-visible, .card:focus-visible, [role="button"]:focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+  .card { outline-offset: 2px; }
+
+  /* WCAG AA: brighten orange when used as text on dark bg (#ff6b35 on #0f1115 = 3.97:1, fails AA) */
+  .filters button.active { color: var(--accent-text); }
+  #detail .external a { color: #82b6ff; }
 </style>
 </head>
 <body>
@@ -90,7 +106,7 @@
   <h1>🏠 Apartment Hunt</h1>
   <span class="meta">Fadi & Nomi · CVH-anchored · Move-in July 2026 · Pet-friendly · Budget $1,800–$2,800</span>
   <span class="meta" id="count"></span>
-  <span class="meta" style="margin-left:auto"><a href="#" id="show-shortlist" style="color:var(--accent);text-decoration:none;border:1px solid var(--accent);padding:4px 10px;border-radius:4px;">⭐ Top picks</a></span>
+  <span class="meta" style="margin-left:auto"><a href="#" id="show-shortlist" style="color:var(--accent-text);text-decoration:none;border:1px solid var(--accent);padding:4px 10px;border-radius:4px;font-weight:600;">⭐ Top picks</a></span>
 </header>
 <div id="shortlist-modal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.85);z-index:9999;overflow-y:auto;padding:40px;">
   <div style="max-width:900px;margin:0 auto;background:var(--panel);border-radius:12px;padding:24px;border:1px solid var(--border);">
@@ -127,16 +143,20 @@
       <div class="row"><span class="dot" style="background: var(--good)"></span> Good rating</div>
       <div class="row"><span class="dot" style="background: var(--warn)"></span> Verify pets / caution</div>
       <div class="row"><span class="dot" style="background: var(--link)"></span> Fine / neutral</div>
-      <div class="row"><span class="dot" style="background: #a78bfa"></span> Running route node</div>
+      <div class="row"><span class="dot" style="background: #10b981"></span> Trail (winter cleared)</div>
+      <div class="row"><span class="dot" style="background: #a855f7"></span> Trail (3-season)</div>
+      <div class="row"><span class="dot" style="background: #22c55e"></span> Park</div>
     </div>
   </main>
   <aside id="detail">
+    <button id="detail-close" onclick="document.getElementById('detail').classList.remove('show')" aria-label="Close detail">✕</button>
     <div class="placeholder">Click a building or pin to see details, photos, drive times.</div>
   </aside>
 </div>
 
 <script src="data.js"></script>
 <script src="manifest.js"></script>
+<script src="trails.js"></script>
 <script>
   const photoMap = window.PHOTO_MANIFEST || {};
   let activeFilters = new Set(['all']);
@@ -176,14 +196,24 @@
     })
   }).addTo(map).bindPopup('<b>11 Charlotte (old)</b>');
 
-  // Running markers
-  RUNNING.forEach(r => {
-    L.circleMarker([r.lat, r.lng], {
-      radius: 7, color: '#fff',
-      fillColor: r.type === 'trail-allyear' ? '#c4b5fd' : '#a78bfa',
-      fillOpacity: 0.85, weight: 1.5
-    }).addTo(map).bindPopup(`<b>🏃 ${r.name}</b><br><small>${r.note}</small>`);
-  });
+  // === REAL TRAIL POLYLINES ===
+  if (window.TRAILS) {
+    window.TRAILS.forEach(t => {
+      const poly = L.polyline(t.coords, {
+        color: t.color, weight: 4, opacity: 0.7,
+        dashArray: t.winter_maintained ? null : '8 4'
+      }).addTo(map);
+      poly.bindPopup(`<b>🏃 ${t.name}</b><br><b>${t.length_km}km</b> · ${t.surface}<br>Winter: ${t.winter_maintained ? '✅ MAINTAINED' : '❌ not maintained'}<br><small>${t.note}</small>`);
+    });
+  }
+  // === PARKS ===
+  if (window.PARKS) {
+    window.PARKS.forEach(p => {
+      L.circleMarker([p.lat, p.lng], {
+        radius: 9, color: '#22c55e', fillColor: '#22c55e', fillOpacity: 0.4, weight: 2
+      }).addTo(map).bindPopup(`<b>🌲 ${p.name}</b><br>${p.area_acres} acres<br><small>${p.note}</small>`);
+    });
+  }
 
   function ratingClass(rating) {
     if (!rating) return 'fine';
@@ -266,7 +296,7 @@
       const thumbStyle = photos[0] ? `background-image:url('${photos[0]}')` : `background:${pinColor(a)};color:#000;`;
       const thumbInner = photos[0] ? '' : (a.rating || 'F').charAt(0);
       return `
-        <div class="card ${selectedId===a.id?'selected':''}" data-id="${a.id}" onclick="selectApt('${a.id}')">
+        <div class="card ${selectedId===a.id?'selected':''}" data-id="${a.id}" tabindex="0" role="button" aria-label="${a.name}, ${a.zone}" onclick="selectApt('${a.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectApt('${a.id}')}">
           <div class="thumb" style="${thumbStyle}">${thumbInner}</div>
           <div class="body">
             <div class="name">${a.name}</div>
@@ -294,6 +324,7 @@
     const a = APARTMENTS.find(x => x.id === id);
     if (!a) return;
     map.setView([a.lat, a.lng], 13);
+    document.getElementById('detail').classList.add('show');
     // Re-render markers with new selection state
     renderCards();
     if (markers[id]) markers[id].openPopup();
@@ -393,7 +424,7 @@
   function showShortlist() {
     const html = SHORTLIST.map(t => `
       <div style="margin-bottom:24px;padding:12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
-        <h3 style="margin:0 0 4px;color:var(--accent);font-size:14px;">${t.tier}</h3>
+        <h3 style="margin:0 0 4px;color:var(--accent-text);font-size:14px;">${t.tier}</h3>
         <p style="color:var(--muted);font-size:12px;margin:0 0 10px;">${t.why}</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;">
           ${t.picks.map(id => {
