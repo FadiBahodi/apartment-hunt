@@ -252,7 +252,7 @@
           iconSize: [sz, sz], iconAnchor: [sz/2, sz/2]
         }),
         zIndexOffset: isSelected ? 1000 : 0
-      }).addTo(map).bindPopup(`<b>${apt.name}</b><br>$${apt.rent_1bed_low || apt.rent_2bed}+/mo · ${apt.drive_to_cvh_km} km to CVH<br><a href="#" onclick="selectApt('${apt.id}');return false;">Open detail →</a>`);
+      }).addTo(map).bindPopup(`<b>${apt.name}</b><br>$${(apt.rent_1bed_low||apt.rent_2bed||0).toLocaleString()}+/mo · ${apt.drive_to_cvh_km} km to CVH<br><small style="color:#888">Click again on the marker to open detail panel</small>`);
       m.on('click', () => selectApt(apt.id));
       markers[apt.id] = m;
     });
@@ -344,6 +344,9 @@
     const gmapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${a.lat},${a.lng}&destination=${CVH.lat},${CVH.lng}`;
     const gmapsAddrUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.address)}`;
     const streetviewUrl = `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${a.lat},${a.lng}`;
+    const stravaHeatmapUrl = `https://www.strava.com/heatmap#13/${a.lng}/${a.lat}/hot/run`;
+    const allTrailsUrl = `https://www.alltrails.com/explore?b_tl_lat=${(a.lat+0.02).toFixed(4)}&b_tl_lng=${(a.lng-0.02).toFixed(4)}&b_br_lat=${(a.lat-0.02).toFixed(4)}&b_br_lng=${(a.lng+0.02).toFixed(4)}`;
+    const transitUrl = `https://www.google.com/maps/dir/?api=1&origin=${a.lat},${a.lng}&destination=Union+Station+Toronto&travelmode=transit`;
 
     document.getElementById('detail').innerHTML = `
       <h2>${a.name} <span class="badge ${cls}">${a.rating}</span></h2>
@@ -368,10 +371,13 @@
       ${a.red_flags ? `<h3>⚠️ Red flags / notes</h3><p class="red">${a.red_flags}</p>` : ''}
       <div class="external">
         <a href="${a.listing_url}" target="_blank">📄 Listing</a>
-        <a href="${gmapsAddrUrl}" target="_blank">📍 Google Maps</a>
-        <a href="${gmapsUrl}" target="_blank">🚗 Drive to CVH</a>
+        <a href="${gmapsAddrUrl}" target="_blank">📍 Maps</a>
+        <a href="${gmapsUrl}" target="_blank">🚗 Drive→CVH</a>
+        <a href="${transitUrl}" target="_blank">🚇 Transit→Union</a>
         <a href="${streetviewUrl}" target="_blank">👁 Street View</a>
-        <a href="https://www.google.com/search?q=${encodeURIComponent(a.address + ' reviews reddit')}" target="_blank">🔍 Reddit search</a>
+        <a href="${stravaHeatmapUrl}" target="_blank">🔥 Strava heatmap</a>
+        <a href="${allTrailsUrl}" target="_blank">🥾 AllTrails nearby</a>
+        <a href="https://www.google.com/search?q=${encodeURIComponent(a.address + ' reviews reddit')}" target="_blank">🔍 Reddit</a>
       </div>
     `;
     document.querySelectorAll('.card').forEach(c => c.classList.toggle('selected', c.dataset.id === id));
