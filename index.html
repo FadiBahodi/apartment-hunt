@@ -48,6 +48,7 @@
   .badge.bad { background: rgba(248,113,113,.15); color: var(--bad); }
   .badge.fine { background: rgba(96,165,250,.15); color: var(--link); }
 
+  #map-wrap { position: relative; }
   #map { height: 100%; }
   .leaflet-popup-content-wrapper { background: var(--panel); color: var(--text); }
   .leaflet-popup-tip { background: var(--panel); }
@@ -133,9 +134,17 @@
 <script src="manifest.js"></script>
 <script>
   const photoMap = window.PHOTO_MANIFEST || {};
-  let activeFilter = 'all';
+  let activeFilters = new Set(['all']);
   let activeSort = 'cvh';
   let selectedId = null;
+  const filterMatchers = {
+    'pet-verified': a => a.pet_status === 'verified' || a.pet_status === 'verified-large-pets',
+    'cvh-tier1': a => a.drive_to_cvh_min_peak <= 15,
+    'toronto-close': a => a.drive_to_union_min_offpeak && a.drive_to_union_min_offpeak <= 25,
+    'cheap': a => (a.rent_1bed_low || a.rent_2bed || 9999) <= 2000,
+    'has-photos': a => (photoMap[a.id] || []).length > 0,
+    'good-rating': a => /^GOOD/i.test(a.rating || ''),
+  };
 
   const map = L.map('map').setView([43.61, -79.62], 11);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -214,12 +223,13 @@
 
   function renderCards() {
     const filtered = APARTMENTS.filter(a => {
-      if (activeFilter === 'all') return true;
-      if (activeFilter === 'pet-verified') return a.pet_status === 'verified';
-      if (activeFilter === 'cvh-tier1') return a.drive_to_cvh_min_peak <= 15;
-      if (activeFilter === 'toronto-close') return a.drive_to_union_min_offpeak && a.drive_to_union_min_offpeak <= 25;
-      if (activeFilter === 'cheap') return (a.rent_1bed_low || a.rent_2bed) <= 2000;
-      if (activeFilter === 'has-photos') return (photoMap[a.id] || []).length > 0;
+      if (activeFilters.has('all') || activeFilters.size === 0) return true;
+      // AND-combine all active filters
+      for (const f of activeFilters) {
+        if (f === 'all') continue;
+        const match = filterMatchers[f];
+        if (match && !match(a)) return false;
+      }
       return true;
     });
     const sorted = filtered.slice().sort((a, b) => {
@@ -246,9 +256,9 @@
           <div class="rent">${rentDisplay(a)}/mo${a.sqft_high ? ` · up to ${a.sqft_high} sqft` : ''}</div>
           <div class="meta">
             <span>🏥 ${a.drive_to_cvh_km}km · ~${a.drive_to_cvh_min_peak}min peak</span>
-            <span>🚆 ${a.drive_to_union_min_offpeak ? a.drive_to_union_min_offpeak+'min Union' : ''}</span>
-            <span>🐕 ${a.pet_status === 'verified' ? '✓' : a.pet_status === 'conflicting' ? '⚠️' : '?'}</span>
-            <span>📸 ${photoCount}</span>
+            ${a.drive_to_union_min_offpeak ? `<span>🚆 ${a.drive_to_union_min_offpeak}min Union</span>` : ''}
+            <span>🐕 ${a.pet_status === 'verified' ? '✓' : a.pet_status === 'verified-large-pets' ? '✓ big' : a.pet_status === 'conflicting' ? '⚠️' : '?'}</span>
+            ${photoCount ? `<span>📸 ${photoCount}</span>` : ''}
           </div>
         </div>`;
     }).join('');
@@ -307,7 +317,7 @@
     document.querySelectorAll('.card').forEach(c => c.classList.toggle('selected', c.dataset.id === id));
   }
 
-  // Filters
+  // Filters (multi-select, AND-combined)
   const filterDefs = [
     { id: 'all', label: 'All' },
     { id: 'cvh-tier1', label: '🏥 CVH ≤15min peak' },
@@ -315,17 +325,28 @@
     { id: 'pet-verified', label: '🐕 Pet verified' },
     { id: 'cheap', label: '💰 ≤$2,000' },
     { id: 'has-photos', label: '📸 Has photos' },
+    { id: 'good-rating', label: '⭐ Good rating only' },
   ];
-  document.getElementById('filters').innerHTML = filterDefs.map(f =>
-    `<button data-id="${f.id}" class="${activeFilter===f.id?'active':''}">${f.label}</button>`
-  ).join('');
-  document.querySelectorAll('#filters button').forEach(b => {
-    b.onclick = () => {
-      activeFilter = b.dataset.id;
-      document.querySelectorAll('#filters button').forEach(x => x.classList.toggle('active', x.dataset.id === activeFilter));
-      renderCards();
-    };
-  });
+  function renderFilters() {
+    document.getElementById('filters').innerHTML = filterDefs.map(f =>
+      `<button data-id="${f.id}" class="${activeFilters.has(f.id)?'active':''}">${f.label}</button>`
+    ).join('');
+    document.querySelectorAll('#filters button').forEach(b => {
+      b.onclick = () => {
+        const id = b.dataset.id;
+        if (id === 'all') { activeFilters = new Set(['all']); }
+        else {
+          activeFilters.delete('all');
+          if (activeFilters.has(id)) activeFilters.delete(id);
+          else activeFilters.add(id);
+          if (activeFilters.size === 0) activeFilters.add('all');
+        }
+        renderFilters();
+        renderCards();
+      };
+    });
+  }
+  renderFilters();
   document.getElementById('sort').onchange = e => { activeSort = e.target.value; renderCards(); };
 
   document.getElementById('avoid').innerHTML = AVOID.map(a =>

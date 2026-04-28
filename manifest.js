@@ -12,11 +12,11 @@ window.PHOTO_MANIFEST = {
     "photos/battleford_glen_erin_5.jpg"
   ],
   "dialogue": [
-    "photos/dialogue_confederation_1.jpg",
     "photos/dialogue_confederation_2.jpg",
     "photos/dialogue_confederation_3.jpg",
     "photos/dialogue_confederation_4.jpg",
-    "photos/dialogue_confederation_5.jpg"
+    "photos/dialogue_confederation_5.jpg",
+    "photos/dialogue_confederation_1.jpg"
   ],
   "eau_du_soleil": [
     "photos/eau_du_soleil_1.jpg",
@@ -39,8 +39,8 @@ window.PHOTO_MANIFEST = {
     "photos/forty_second_45_4.jpg"
   ],
   "james_90": [
-    "photos/james_90_1.jpg",
-    "photos/james_90_2.jpg"
+    "photos/james_90_2.jpg",
+    "photos/james_90_1.jpg"
   ],
   "lake_shore_155": [
     "photos/lake_shore_155_1.jpg",
@@ -50,8 +50,8 @@ window.PHOTO_MANIFEST = {
     "photos/lake_shore_155_5.jpg"
   ],
   "lake_shore_2335": [
-    "photos/lake_shore_2335_1.jpg",
-    "photos/lake_shore_2335_2.jpg"
+    "photos/lake_shore_2335_2.jpg",
+    "photos/lake_shore_2335_1.jpg"
   ],
   "lakeshore_760": [
     "photos/lakeshore_760_1.jpg",
@@ -70,23 +70,23 @@ window.PHOTO_MANIFEST = {
     "photos/landmark_2493_2.jpg"
   ],
   "lincoln_545": [
-    "photos/lincoln_545_1.jpg",
     "photos/lincoln_545_2.jpg",
     "photos/lincoln_545_3.jpg",
     "photos/west_mall_545_1.png",
-    "photos/west_mall_545_2.jpg"
+    "photos/west_mall_545_2.jpg",
+    "photos/west_mall_545_3.jpg"
   ],
   "markwood_4365": [
-    "photos/markwood_4365_1.jpg",
     "photos/markwood_4365_2.jpg",
-    "photos/markwood_4365_3.jpg"
+    "photos/markwood_4365_3.jpg",
+    "photos/markwood_4365_1.jpg"
   ],
   "mill_road_340": [
-    "photos/mill_road_340_1.jpg",
     "photos/mill_road_340_2.jpg",
     "photos/mill_road_340_3.jpg",
     "photos/mill_road_340_4.jpg",
-    "photos/mill_road_340_5.jpg"
+    "photos/mill_road_340_5.jpg",
+    "photos/mill_road_340_1.jpg"
   ],
   "mimico_estates": [
     "photos/mimico_estates_1.jpg",
@@ -96,12 +96,12 @@ window.PHOTO_MANIFEST = {
     "photos/mimico_estates_5.jpg"
   ],
   "newholm_8": [
-    "photos/newholm_8_1.jpg",
-    "photos/newholm_8_2.jpg"
+    "photos/newholm_8_2.jpg",
+    "photos/newholm_8_1.jpg"
   ],
   "park_lawn_285": [
-    "photos/park_lawn_285_1.jpg",
-    "photos/park_lawn_285_2.jpg"
+    "photos/park_lawn_285_2.jpg",
+    "photos/park_lawn_285_1.jpg"
   ],
   "promenade_2301": [
     "photos/promenade_2301_1.jpg",
@@ -116,15 +116,15 @@ window.PHOTO_MANIFEST = {
     "photos/reid_drive_5.jpg"
   ],
   "shoreline_towers": [
-    "photos/shoreline_2313_1.jpg",
-    "photos/shoreline_2313_2.jpg"
+    "photos/shoreline_2313_2.jpg",
+    "photos/shoreline_2313_1.jpg"
   ],
   "collegeway_2285": [
-    "photos/the_collegeway_2285_1.jpg",
     "photos/the_collegeway_2285_2.jpg",
     "photos/the_collegeway_2285_3.jpg",
     "photos/the_collegeway_2285_4.jpg",
-    "photos/the_collegeway_2285_5.jpg"
+    "photos/the_collegeway_2285_5.jpg",
+    "photos/the_collegeway_2285_1.jpg"
   ],
   "walden_circle": [
     "photos/walden_circle_1.jpg",
