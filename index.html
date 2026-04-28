@@ -119,6 +119,7 @@
 </div>
 <div class="layout">
   <aside id="sidebar">
+    <input type="search" id="search" placeholder="🔍 Search by name, address, zone…" style="width:100%;background:var(--panel);border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:6px;font-size:13px;margin-bottom:10px;">
     <div class="filters" id="filters"></div>
     <div class="sort-control">
       <span>Sort:</span>
@@ -268,8 +269,14 @@
     return '—';
   }
 
+  let searchTerm = '';
   function renderCards() {
+    const q = searchTerm.toLowerCase().trim();
     const filtered = APARTMENTS.filter(a => {
+      if (q) {
+        const haystack = (a.name + ' ' + a.address + ' ' + a.zone + ' ' + (a.pros||[]).join(' ') + ' ' + (a.cons||[]).join(' ')).toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
       if (activeFilters.has('all') || activeFilters.size === 0) return true;
       // AND-combine all active filters
       for (const f of activeFilters) {
@@ -414,6 +421,7 @@
   }
   renderFilters();
   document.getElementById('sort').onchange = e => { activeSort = e.target.value; renderCards(); };
+  document.getElementById('search').oninput = e => { searchTerm = e.target.value; renderCards(); };
 
   document.getElementById('avoid').innerHTML = AVOID.map(a =>
     `<div style="font-size:11px;margin-bottom:8px;"><b>${a.name}</b><br><span style="color:var(--muted)">${a.why}</span><br><small style="color:var(--muted);font-style:italic">${a.source}</small></div>`
