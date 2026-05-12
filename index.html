@@ -294,7 +294,19 @@ window.DATA_READY = Promise.all([
   fetch('data/timeline.json').then(r=>r.ok?r.json():null).catch(()=>null).then(d=>window.TIMELINE=d),
   fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>'').then(text=>{
     if (!text) return;
-    text.split('\n').filter(Boolean).forEach(line=>{ try { window.APARTMENTS.push(JSON.parse(line)); } catch{} });
+    const existingIds = new Set(window.APARTMENTS.map(a => a.id));
+    let added = 0;
+    text.split('\n').filter(Boolean).forEach(line=>{
+      try {
+        const obj = JSON.parse(line);
+        if (obj.id && !existingIds.has(obj.id)) {
+          window.APARTMENTS.push(obj);
+          existingIds.add(obj.id);
+          added++;
+        }
+      } catch{}
+    });
+    console.log(`Loaded ${added} additional listings from more_listings.jsonl. Total: ${window.APARTMENTS.length}`);
   })
 ]);
 </script>
