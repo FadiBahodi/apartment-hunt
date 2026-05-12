@@ -99,22 +99,139 @@
   /* WCAG AA: brighten orange when used as text on dark bg (#ff6b35 on #0f1115 = 3.97:1, fails AA) */
   .filters button.active { color: var(--accent-text); }
   #detail .external a { color: #82b6ff; }
+
+  /* Nav buttons */
+  .nav-btn { color: var(--accent-text); text-decoration: none; border: 1px solid var(--border); padding: 5px 10px; border-radius: 5px; font-size: 12px; font-weight: 600; transition: all .12s; }
+  .nav-btn:hover { border-color: var(--accent); background: rgba(255,107,53,.08); }
+  .nav-btn .badge-count { background: var(--accent); color: #000; padding: 1px 5px; border-radius: 8px; font-size: 10px; margin-left: 3px; }
+
+  /* Fit score badge */
+  .fit-badge { display: inline-flex; align-items: center; gap: 3px; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+  /* Card actions */
+  .card .actions { position: absolute; top: 8px; right: 8px; display: flex; gap: 4px; opacity: 0; transition: opacity .15s; }
+  .card { position: relative; }
+  .card:hover .actions, .card.selected .actions { opacity: 1; }
+  .card .actions button { background: rgba(0,0,0,.5); border: 1px solid var(--border); color: var(--muted); width: 26px; height: 26px; border-radius: 4px; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+  .card .actions button.on { color: var(--accent); border-color: var(--accent); }
+  .card .actions button:hover { color: var(--text); }
+
+  /* Modal */
+  .modal { display: none; position: fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,.85); z-index: 9999; overflow-y: auto; padding: 20px; }
+  .modal.show { display: block; }
+  .modal-inner { max-width: 1100px; margin: 0 auto; background: var(--panel); border-radius: 12px; padding: 24px; border: 1px solid var(--border); }
+  .modal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .modal-close { background: transparent; border: 1px solid var(--border); color: var(--text); padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+
+  /* Compare table */
+  .cmp-table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  .cmp-table th, .cmp-table td { padding: 8px 10px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
+  .cmp-table th { background: var(--bg); font-weight: 600; position: sticky; top: 0; }
+  .cmp-table tr:hover { background: rgba(255,255,255,.02); }
+  .cmp-table .cell-good { color: var(--good); font-weight: 600; }
+  .cmp-table .cell-bad { color: var(--bad); }
+  .cmp-table img { width: 60px; height: 40px; object-fit: cover; border-radius: 4px; }
+
+  /* Timeline */
+  .tl-phase { margin-bottom: 24px; padding: 12px; background: var(--bg); border-left: 3px solid var(--accent); border-radius: 4px; }
+  .tl-phase h3 { margin: 0 0 4px; color: var(--accent-text); font-size: 14px; text-transform: none; letter-spacing: 0; }
+  .tl-phase .range { color: var(--muted); font-size: 11px; margin-bottom: 8px; }
+  .tl-item { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; border-bottom: 1px dashed var(--border); }
+  .tl-item:last-child { border-bottom: none; }
+  .tl-item input[type=checkbox] { margin-top: 4px; cursor: pointer; }
+  .tl-item .when { color: var(--muted); font-size: 11px; min-width: 70px; }
+  .tl-item .what { flex: 1; }
+  .tl-item.done .what { text-decoration: line-through; color: var(--muted); }
+  .tl-item .urg-critical { color: var(--bad); font-weight: 700; font-size: 10px; text-transform: uppercase; }
+  .tl-item .urg-high { color: var(--warn); font-weight: 600; font-size: 10px; text-transform: uppercase; }
+  .tl-item .urg-normal { color: var(--muted); font-size: 10px; text-transform: uppercase; }
+
+  /* Detail extras */
+  .cost-table { width: 100%; font-size: 12px; border-collapse: collapse; margin: 8px 0; }
+  .cost-table td { padding: 4px 6px; border-bottom: 1px solid var(--border); }
+  .cost-table td:last-child { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .cost-table tr.total td { border-top: 2px solid var(--accent); border-bottom: none; padding-top: 8px; color: var(--accent-text); font-weight: 700; font-size: 13px; }
+  .notes-area { width: 100%; min-height: 80px; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 8px; border-radius: 6px; font-family: inherit; font-size: 12px; resize: vertical; }
+  .action-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+  .action-row button { background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; transition: all .12s; }
+  .action-row button.on { border-color: var(--accent); color: var(--accent); background: rgba(255,107,53,.08); }
+  .action-row button:hover { border-color: var(--accent); }
+
+  .fit-bar { width: 100%; height: 8px; background: var(--bg); border-radius: 4px; overflow: hidden; margin: 6px 0; }
+  .fit-bar-fill { height: 100%; transition: width .3s; }
+
+  .review-bar { display: inline-block; width: 60px; height: 6px; background: var(--bg); border-radius: 3px; vertical-align: middle; margin-left: 6px; overflow: hidden; }
+  .review-bar-fill { height: 100%; background: var(--good); }
 </style>
 </head>
 <body>
 <header>
   <h1>🏠 Apartment Hunt</h1>
-  <span class="meta">Fadi & Nomi · CVH-anchored · Move-in July 2026 · Pet-friendly · Budget $1,800–$2,800</span>
+  <span class="meta">Fadi & Nomi · CVH-anchored · Move-in <b style="color:var(--text)">July 1, 2026</b> · <span id="days-to-move" style="color:var(--accent-text);font-weight:700"></span></span>
   <span class="meta" id="count"></span>
-  <span class="meta" style="margin-left:auto"><a href="#" id="show-shortlist" style="color:var(--accent-text);text-decoration:none;border:1px solid var(--accent);padding:4px 10px;border-radius:4px;font-weight:600;">⭐ Top picks</a></span>
+  <span class="nav-spacer" style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;">
+    <a href="#" id="show-shortlist" class="nav-btn">⭐ Top picks</a>
+    <a href="#" id="show-favorites" class="nav-btn">❤️ <span id="fav-count">0</span></a>
+    <a href="#" id="show-compare" class="nav-btn">⚖️ Compare <span id="cmp-count">0</span></a>
+    <a href="#" id="show-timeline" class="nav-btn">📅 Timeline</a>
+    <a href="#" id="show-help" class="nav-btn" title="How to use this site">?</a>
+  </span>
 </header>
-<div id="shortlist-modal" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.85);z-index:9999;overflow-y:auto;padding:40px;">
-  <div style="max-width:900px;margin:0 auto;background:var(--panel);border-radius:12px;padding:24px;border:1px solid var(--border);">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-      <h2 style="margin:0">⭐ The Honest Shortlist</h2>
-      <button id="close-shortlist" style="background:transparent;border:1px solid var(--border);color:var(--text);padding:6px 12px;border-radius:4px;cursor:pointer;">✕ Close</button>
-    </div>
+<div id="shortlist-modal" class="modal">
+  <div class="modal-inner" style="max-width:900px;">
+    <div class="modal-head"><h2 style="margin:0">⭐ The Honest Shortlist</h2><button class="modal-close" data-close="shortlist-modal">✕ Close</button></div>
     <div id="shortlist-content"></div>
+  </div>
+</div>
+<div id="favorites-modal" class="modal">
+  <div class="modal-inner" style="max-width:1100px;">
+    <div class="modal-head"><h2 style="margin:0">❤️ Your Favorites</h2><button class="modal-close" data-close="favorites-modal">✕ Close</button></div>
+    <div id="favorites-content"></div>
+  </div>
+</div>
+<div id="compare-modal" class="modal">
+  <div class="modal-inner" style="max-width:1400px;">
+    <div class="modal-head">
+      <h2 style="margin:0">⚖️ Compare</h2>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <span style="color:var(--muted);font-size:12px;">Click ⚖️ on any card/detail to add</span>
+        <button class="modal-close" data-close="compare-modal">✕ Close</button>
+      </div>
+    </div>
+    <div id="compare-content"></div>
+  </div>
+</div>
+<div id="timeline-modal" class="modal">
+  <div class="modal-inner" style="max-width:1000px;">
+    <div class="modal-head"><h2 style="margin:0">📅 Timeline · May 11 → July 1</h2><button class="modal-close" data-close="timeline-modal">✕ Close</button></div>
+    <div id="timeline-content">Loading…</div>
+  </div>
+</div>
+<div id="help-modal" class="modal">
+  <div class="modal-inner" style="max-width:700px;">
+    <div class="modal-head"><h2 style="margin:0">? How to use this</h2><button class="modal-close" data-close="help-modal">✕</button></div>
+    <div style="font-size:13px;line-height:1.7;">
+      <h3 style="color:var(--accent-text);margin-top:0">The flow</h3>
+      <ol>
+        <li><b>Filter + sort</b> the list (CVH ≤15min, ≤$2,000, etc — multi-select).</li>
+        <li><b>Click a building</b> → detail panel opens with photos, cost breakdown, reviews, fit score.</li>
+        <li><b>Heart it</b> (❤️) to save to favorites. <b>Add to compare</b> (⚖️) to stack 2-4 side-by-side.</li>
+        <li><b>Mark called/toured</b> as you progress — saved locally so you don't lose track.</li>
+        <li><b>📅 Timeline</b> shows the week-by-week May 11 → July 1 plan (51 days).</li>
+        <li><b>Notes per building</b> — type your own observations; saved to localStorage.</li>
+      </ol>
+      <h3 style="color:var(--accent-text)">Fit Score 0-100</h3>
+      <p>Weighted: CVH commute (30) · Running (20) · Pet (15) · Cost (15) · Toronto (8) · Building rep (7) · Value (5). Click a building to see the breakdown.</p>
+      <h3 style="color:var(--accent-text)">Map legend</h3>
+      <p>🟢 winter-cleared trail · 🟣 3-season trail · 🟢 park · 🟠 CVH (15/25min radius rings) · pin glyphs ✓!✕· = rating tier.</p>
+      <h3 style="color:var(--accent-text)">Critical reminders</h3>
+      <ul>
+        <li>Run Google Maps at <b>your actual shift times</b> (5:15am, 7am, 1pm, 3:30pm, 11pm, 7am post-night). My drive times are priors, not posteriors.</li>
+        <li>Condo rentals: demand the <b>condo declaration</b> before signing. RTA s.14 doesn't override pet bans in the declaration.</li>
+        <li>Tour at <b>11pm and 7am</b>, not midday — different building entirely.</li>
+        <li>Avoid list (sidebar) is documented from CBC/Bed Bug Registry/listings — those buildings have real problems.</li>
+      </ul>
+    </div>
   </div>
 </div>
 <div class="layout">
@@ -124,6 +241,7 @@
     <div class="sort-control">
       <span>Sort:</span>
       <select id="sort">
+        <option value="fit">Fit Score (best→)</option>
         <option value="cvh">CVH drive (km)</option>
         <option value="rent">Rent (low→high)</option>
         <option value="sqft">Sqft (high→low)</option>
@@ -158,11 +276,34 @@
 <script src="data.js"></script>
 <script src="manifest.js"></script>
 <script src="trails.js"></script>
+<script src="scoring.js"></script>
+<script src="storage.js"></script>
+<script>
+// Optional data files — load with fallbacks
+function loadOptional(src) {
+  return new Promise(res => {
+    const s = document.createElement('script');
+    s.src = src; s.onload = () => res(true); s.onerror = () => res(false);
+    document.head.appendChild(s);
+  });
+}
+window.DATA_READY = Promise.all([
+  fetch('data/costs.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.COSTS=d),
+  fetch('data/reviews.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.REVIEWS=d),
+  fetch('data/zones.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.ZONES=d),
+  fetch('data/timeline.json').then(r=>r.ok?r.json():null).catch(()=>null).then(d=>window.TIMELINE=d),
+  fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>'').then(text=>{
+    if (!text) return;
+    text.split('\n').filter(Boolean).forEach(line=>{ try { window.APARTMENTS.push(JSON.parse(line)); } catch{} });
+  })
+]);
+</script>
 <script>
   const photoMap = window.PHOTO_MANIFEST || {};
   let activeFilters = new Set(['all']);
-  let activeSort = 'cvh';
+  let activeSort = 'fit';
   let selectedId = null;
+  let compareList = []; // ids
   const filterMatchers = {
     'pet-verified': a => a.pet_status === 'verified' || a.pet_status === 'verified-large-pets',
     'cvh-tier1': a => a.drive_to_cvh_min_peak <= 15,
@@ -170,7 +311,18 @@
     'cheap': a => (a.rent_1bed_low || a.rent_2bed || 9999) <= 2000,
     'has-photos': a => (photoMap[a.id] || []).length > 0,
     'good-rating': a => /^GOOD/i.test(a.rating || ''),
+    'favorites': a => STORE.isFavorite(a.id),
+    'top-fit': a => (window.computeFitScore ? computeFitScore(a, window.COSTS||{}).score : 0) >= 60,
   };
+
+  // Days to move countdown
+  (function(){
+    const tgt = new Date('2026-07-01');
+    const now = new Date();
+    const days = Math.ceil((tgt - now) / (1000*60*60*24));
+    const el = document.getElementById('days-to-move');
+    if (el) el.textContent = days > 0 ? `${days} days left` : 'TODAY';
+  })();
 
   const map = L.map('map').setView([43.61, -79.62], 11);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -288,6 +440,7 @@
     });
     const sorted = filtered.slice().sort((a, b) => {
       switch (activeSort) {
+        case 'fit': return (computeFitScore(b, window.COSTS||{}).score) - (computeFitScore(a, window.COSTS||{}).score);
         case 'cvh': return (a.drive_to_cvh_km||999) - (b.drive_to_cvh_km||999);
         case 'rent': return (a.rent_1bed_low||a.rent_2bed||9999) - (b.rent_1bed_low||b.rent_2bed||9999);
         case 'sqft': return (b.sqft_high||0) - (a.sqft_high||0);
@@ -306,6 +459,11 @@
       const photoCount = photos.length;
       const thumbStyle = photos[0] ? `background-image:url('${photos[0]}')` : `background:${pinColor(a)};color:#000;`;
       const thumbInner = photos[0] ? '' : (a.rating || 'F').charAt(0);
+      const fit = computeFitScore(a, window.COSTS||{});
+      const fitColor = fitScoreColor(fit.score);
+      const isFav = STORE.isFavorite(a.id);
+      const isCmp = compareList.includes(a.id);
+      const review = (window.REVIEWS||{})[a.id];
       return `
         <div class="card ${selectedId===a.id?'selected':''}" data-id="${a.id}" tabindex="0" role="button" aria-label="${a.name}, ${a.zone}" onclick="selectApt('${a.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectApt('${a.id}')}">
           <div class="thumb" style="${thumbStyle}">${thumbInner}</div>
@@ -313,10 +471,11 @@
             <div class="name">${a.name}</div>
             <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
             <div class="meta">
-              <span>🏥 ${a.drive_to_cvh_km}km</span>
-              <span>⏱ ${a.drive_to_cvh_min_peak}min peak</span>
-              ${a.drive_to_union_min_offpeak ? `<span>🚆 ${a.drive_to_union_min_offpeak}min Union</span>` : ''}
-              <span>🐕 ${a.pet_status === 'verified' ? '✓' : a.pet_status === 'verified-large-pets' ? '✓ big dogs' : a.pet_status === 'conflicting' ? '⚠️' : '?'}</span>
+              <span class="fit-badge" style="background:${fitColor}22;color:${fitColor};border:1px solid ${fitColor}77">FIT ${fit.score}</span>
+              <span>🏥 ${a.drive_to_cvh_km}km · ${a.drive_to_cvh_min_peak}min</span>
+              ${a.drive_to_union_min_offpeak ? `<span>🚆 ${a.drive_to_union_min_offpeak}min</span>` : ''}
+              <span>🐕 ${a.pet_status === 'verified' ? '✓' : a.pet_status === 'verified-large-pets' ? '✓ BIG' : a.pet_status === 'conflicting' ? '⚠️' : '?'}</span>
+              ${review?.google_rating ? `<span>⭐ ${review.google_rating}</span>` : ''}
               ${photoCount ? `<span>📸 ${photoCount}</span>` : ''}
             </div>
           </div>
@@ -324,10 +483,29 @@
             <span class="badge ${cls}">${(a.rating || 'fine').split(' ')[0]}</span>
             <div class="rent">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}<span class="sub">${a.rent_1bed_high && a.rent_1bed_high !== a.rent_1bed_low ? '–'+a.rent_1bed_high : ''}${a.sqft_high ? ' · '+a.sqft_high+'sf' : ''}</span></div>
           </div>
+          <div class="actions" onclick="event.stopPropagation()">
+            <button class="${isFav?'on':''}" onclick="toggleFavorite('${a.id}')" title="Favorite" aria-label="Favorite">${isFav?'❤️':'🤍'}</button>
+            <button class="${isCmp?'on':''}" onclick="toggleCompare('${a.id}')" title="Add to compare" aria-label="Compare">⚖️</button>
+          </div>
         </div>`;
     }).join('');
     document.getElementById('cards').innerHTML = html || '<p style="color:var(--muted)">No matches.</p>';
     renderMarkers(sorted);
+    document.getElementById('fav-count').textContent = STORE.favorites().length;
+    document.getElementById('cmp-count').textContent = compareList.length ? `(${compareList.length})` : '';
+  }
+
+  function toggleFavorite(id) {
+    STORE.toggleFavorite(id);
+    renderCards();
+    if (selectedId === id) selectApt(id); // refresh detail
+  }
+  function toggleCompare(id) {
+    const i = compareList.indexOf(id);
+    if (i >= 0) compareList.splice(i, 1);
+    else if (compareList.length < 4) compareList.push(id);
+    renderCards();
+    if (selectedId === id) selectApt(id);
   }
 
   function selectApt(id) {
@@ -355,11 +533,101 @@
     const allTrailsUrl = `https://www.alltrails.com/explore?b_tl_lat=${(a.lat+0.02).toFixed(4)}&b_tl_lng=${(a.lng-0.02).toFixed(4)}&b_br_lat=${(a.lat-0.02).toFixed(4)}&b_br_lng=${(a.lng+0.02).toFixed(4)}`;
     const transitUrl = `https://www.google.com/maps/dir/?api=1&origin=${a.lat},${a.lng}&destination=Union+Station+Toronto&travelmode=transit`;
 
+    const fit = computeFitScore(a, window.COSTS||{});
+    const fitColor = fitScoreColor(fit.score);
+    const fitBreakdown = fit.breakdown.map(b =>
+      `<tr><td>${b.k}</td><td style="text-align:right">${b.v}/${b.max}</td><td style="color:var(--muted);font-size:11px">${b.note}</td></tr>`
+    ).join('');
+
+    const cost = (window.COSTS||{})[a.id];
+    let costHtml = '';
+    if (cost) {
+      const baseRent = a.rent_1bed_low || a.rent_2bed || 0;
+      const eff = cost.net_effective_1bed || baseRent;
+      const total = cost.estimated_monthly_total_1bed || (baseRent + 100);
+      const rows = [
+        ['Base rent', `$${baseRent.toLocaleString()}`],
+        cost.promo_savings_year ? ['Promo savings/yr', `−$${cost.promo_savings_year.toLocaleString()}`] : null,
+        ['Net effective rent', `$${eff.toLocaleString()}`],
+        cost.parking_monthly?.underground ? ['Parking (underground)', `+$${cost.parking_monthly.underground}`] : null,
+        cost.parking_monthly?.outdoor ? ['Parking (outdoor)', `+$${cost.parking_monthly.outdoor}`] : null,
+        cost.locker_monthly ? ['Locker', `+$${cost.locker_monthly}`] : null,
+        cost.heat_included === false ? ['Heat', '+$80-150'] : ['Heat', '✓ included'],
+        cost.water_included === false ? ['Water', '+$30'] : ['Water', '✓ included'],
+        cost.hydro_included === false ? ['Hydro', '+$50-100'] : ['Hydro', '✓ included'],
+        cost.internet_included ? ['Internet', '✓ included'] : ['Internet', '+$60-90'],
+        cost.pet_fee_one_time ? ['Pet fee (one-time)', `+$${cost.pet_fee_one_time}`] : null,
+        cost.pet_rent_monthly ? ['Pet rent', `+$${cost.pet_rent_monthly}/mo`] : null,
+        cost.application_fee ? ['Application fee', `$${cost.application_fee}`] : null,
+        ['Renter insurance', '~$25/mo (req)'],
+      ].filter(Boolean);
+      costHtml = `
+        <h3>💰 Cost decoder</h3>
+        <table class="cost-table">${rows.map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join('')}
+          <tr class="total"><td>Est. total/month</td><td>~$${total.toLocaleString()}</td></tr>
+        </table>
+        ${cost.notes ? `<p style="font-size:11px;color:var(--muted);margin-top:4px">${cost.notes}</p>` : ''}
+      `;
+    }
+
+    const review = (window.REVIEWS||{})[a.id];
+    let reviewHtml = '';
+    if (review) {
+      const themes = [];
+      if (review.top_3_positive_themes?.length) themes.push(`<div><b style="color:var(--good)">+ Positive themes:</b> ${review.top_3_positive_themes.join(' · ')}</div>`);
+      if (review.top_3_negative_themes?.length) themes.push(`<div><b style="color:var(--bad)">− Negative themes:</b> ${review.top_3_negative_themes.join(' · ')}</div>`);
+      const quotes = (review.reddit_quotes||[]).slice(0,2).map(q=>`<blockquote style="border-left:2px solid var(--muted);padding-left:8px;margin:4px 0;color:var(--muted);font-style:italic;font-size:11px">"${q.text}" ${q.url?`<a href="${q.url}" target="_blank" style="color:var(--link)">↗</a>`:''}</blockquote>`).join('');
+      reviewHtml = `
+        <h3>📊 Reviews & sentiment</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:6px;">
+          ${review.google_rating ? `<div class="stat"><div class="k">Google</div><div class="v">⭐ ${review.google_rating} <span style="color:var(--muted);font-size:10px">(${review.google_review_count||0})</span></div></div>` : ''}
+          ${review.rentsafeto_score ? `<div class="stat"><div class="k">RentSafeTO</div><div class="v">${review.rentsafeto_score}/100</div></div>` : ''}
+          <div class="stat"><div class="k">Reddit sentiment</div><div class="v" style="color:${review.reddit_sentiment==='positive'?'var(--good)':review.reddit_sentiment==='negative'?'var(--bad)':'var(--muted)'}">${review.reddit_sentiment||'—'}</div></div>
+        </div>
+        ${themes.join('')}
+        ${quotes}
+      `;
+    }
+
+    const zone = (window.ZONES||{})[a.zone];
+    let zoneHtml = '';
+    if (zone) {
+      zoneHtml = `
+        <h3>🏘 Zone: ${a.zone}</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;font-size:11px;margin-bottom:6px;">
+          <div class="stat"><div class="k">Walk</div><div class="v">${zone.walk_score||'—'}/100</div></div>
+          <div class="stat"><div class="k">Transit</div><div class="v">${zone.transit_score||'—'}/100</div></div>
+          <div class="stat"><div class="k">Bike</div><div class="v">${zone.bike_score||'—'}/100</div></div>
+        </div>
+        ${zone.nearest_full_grocery ? `<div style="font-size:12px;color:var(--muted)">🛒 Grocery: <b style="color:var(--text)">${zone.nearest_full_grocery.name}</b> (~${zone.nearest_full_grocery.minutes_walk}min walk)</div>` : ''}
+        ${zone.nearest_running_club ? `<div style="font-size:12px;color:var(--muted)">🏃 Run club: ${zone.nearest_running_club}</div>` : ''}
+        ${zone.vibe ? `<div style="font-size:12px;color:var(--muted);margin-top:4px;font-style:italic">${zone.vibe}</div>` : ''}
+        ${zone.ideal_for ? `<div style="font-size:12px;color:var(--accent-text);margin-top:4px"><b>Best for:</b> ${zone.ideal_for}</div>` : ''}
+      `;
+    }
+
+    const isFav = STORE.isFavorite(a.id);
+    const isCmp = compareList.includes(a.id);
+    const calledAt = STORE.called()[a.id];
+    const touredAt = STORE.toured()[a.id];
+
     document.getElementById('detail').innerHTML = `
-      <h2>${a.name} <span class="badge ${cls}">${a.rating}</span></h2>
+      <button id="detail-close" onclick="document.getElementById('detail').classList.remove('show')" aria-label="Close detail">✕</button>
+      <h2>${a.name} <span class="fit-badge" style="background:${fitColor}22;color:${fitColor};border:1px solid ${fitColor}">FIT ${fit.score}</span> <span class="badge ${cls}">${a.rating}</span></h2>
       <div class="addr">${a.address}</div>
+      <div class="action-row">
+        <button class="${isFav?'on':''}" onclick="toggleFavorite('${a.id}')">${isFav?'❤️ Saved':'🤍 Save'}</button>
+        <button class="${isCmp?'on':''}" onclick="toggleCompare('${a.id}')">⚖️ ${isCmp?'In compare':'Compare'}</button>
+        <button class="${calledAt?'on':''}" onclick="STORE.markCalled('${a.id}');selectApt('${a.id}')">📞 ${calledAt?'Called '+new Date(calledAt).toLocaleDateString():'Mark called'}</button>
+        <button class="${touredAt?'on':''}" onclick="STORE.markToured('${a.id}');selectApt('${a.id}')">👀 ${touredAt?'Toured '+new Date(touredAt).toLocaleDateString():'Mark toured'}</button>
+      </div>
       ${petWarn}
       <div class="photos">${photosHtml}</div>
+      <div class="fit-bar"><div class="fit-bar-fill" style="width:${fit.score}%;background:${fitColor}"></div></div>
+      <details style="margin:6px 0;font-size:12px">
+        <summary style="cursor:pointer;color:var(--muted)">Fit Score breakdown (${fit.score}/100)</summary>
+        <table class="cost-table" style="margin-top:6px">${fitBreakdown}</table>
+      </details>
       <div class="stats">
         <div class="stat"><div class="k">Rent (1-bed)</div><div class="v">${rentDisplay(a)}</div></div>
         <div class="stat"><div class="k">Sqft</div><div class="v">${a.sqft_low ? a.sqft_low + '–' + a.sqft_high : a.sqft_high || '—'}</div></div>
@@ -368,6 +636,9 @@
         <div class="stat"><div class="k">Pets</div><div class="v">${a.pets}</div></div>
         <div class="stat"><div class="k">Promo</div><div class="v">${a.promo || '—'}</div></div>
       </div>
+      ${costHtml}
+      ${reviewHtml}
+      ${zoneHtml}
       <h3>🏃 Running</h3>
       <p>${a.running}</p>
       <h3>🚆 Transit</h3>
@@ -376,6 +647,8 @@
       ${a.pros && a.pros.length ? `<h3>✅ Pros</h3><ul class="pros">${a.pros.map(p=>`<li>${p}</li>`).join('')}</ul>` : ''}
       ${a.cons && a.cons.length ? `<h3>❌ Cons</h3><ul class="cons">${a.cons.map(p=>`<li>${p}</li>`).join('')}</ul>` : ''}
       ${a.red_flags ? `<h3>⚠️ Red flags / notes</h3><p class="red">${a.red_flags}</p>` : ''}
+      <h3>📝 My notes</h3>
+      <textarea class="notes-area" placeholder="Type your observations from calls, tours, gut reactions…" oninput="STORE.setNote('${a.id}', this.value)">${STORE.getNote(a.id).replace(/</g,'&lt;')}</textarea>
       <div class="external">
         <a href="${a.listing_url}" target="_blank">📄 Listing</a>
         <a href="${gmapsAddrUrl}" target="_blank">📍 Maps</a>
@@ -385,6 +658,7 @@
         <a href="${stravaHeatmapUrl}" target="_blank">🔥 Strava heatmap</a>
         <a href="${allTrailsUrl}" target="_blank">🥾 AllTrails nearby</a>
         <a href="https://www.google.com/search?q=${encodeURIComponent(a.address + ' reviews reddit')}" target="_blank">🔍 Reddit</a>
+        ${review?.google_reviews_url ? `<a href="${review.google_reviews_url}" target="_blank">📝 Google reviews</a>` : ''}
       </div>
     `;
     document.querySelectorAll('.card').forEach(c => c.classList.toggle('selected', c.dataset.id === id));
@@ -477,9 +751,144 @@
     `;
     document.getElementById('shortlist-modal').style.display = 'block';
   }
-  document.getElementById('show-shortlist').onclick = e => { e.preventDefault(); showShortlist(); };
-  document.getElementById('close-shortlist').onclick = () => document.getElementById('shortlist-modal').style.display = 'none';
-  document.getElementById('shortlist-modal').onclick = e => { if (e.target.id === 'shortlist-modal') e.target.style.display = 'none'; };
+  document.getElementById('show-shortlist').onclick = e => { e.preventDefault(); showShortlist(); document.getElementById('shortlist-modal').classList.add('show'); };
+
+  // Modal close (delegate)
+  document.querySelectorAll('[data-close]').forEach(b => b.onclick = () => document.getElementById(b.dataset.close).classList.remove('show'));
+  document.querySelectorAll('.modal').forEach(m => m.addEventListener('click', e => { if (e.target === m) m.classList.remove('show'); }));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') document.querySelectorAll('.modal.show').forEach(m => m.classList.remove('show')); });
+
+  // ===== FAVORITES MODAL =====
+  document.getElementById('show-favorites').onclick = e => {
+    e.preventDefault();
+    const favs = STORE.favorites().map(id => APARTMENTS.find(a => a.id === id)).filter(Boolean);
+    const c = document.getElementById('favorites-content');
+    if (!favs.length) {
+      c.innerHTML = '<p style="color:var(--muted)">No favorites yet. Click ❤️ on any building card to save it here.</p>';
+    } else {
+      c.innerHTML = `<p style="color:var(--muted);font-size:12px">${favs.length} saved · click to open detail · ⚖️ to add to compare</p>` +
+        favs.map(a => {
+          const fit = computeFitScore(a, window.COSTS||{});
+          const photo = (photoMap[a.id]||[])[0] || '';
+          const isCmp = compareList.includes(a.id);
+          return `
+            <div style="display:grid;grid-template-columns:80px 1fr auto auto;gap:12px;padding:10px;border:1px solid var(--border);border-radius:6px;margin-bottom:8px;align-items:center;">
+              ${photo?`<img src="${photo}" style="width:80px;height:60px;object-fit:cover;border-radius:4px">`:'<div style="width:80px;height:60px;background:var(--bg);border-radius:4px"></div>'}
+              <div>
+                <div style="font-weight:600">${a.name}</div>
+                <div style="color:var(--muted);font-size:11px">${a.address}</div>
+                <div style="font-size:11px;color:var(--accent-text)">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()} · FIT ${fit.score} · ${a.drive_to_cvh_km}km CVH</div>
+              </div>
+              <button onclick="document.getElementById('favorites-modal').classList.remove('show');selectApt('${a.id}')" style="background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:4px;cursor:pointer">Open →</button>
+              <button onclick="toggleCompare('${a.id}');this.textContent=compareList.includes('${a.id}')?'⚖️ added':'⚖️ add';this.style.color=compareList.includes('${a.id}')?'var(--accent)':'var(--text)'" style="background:var(--bg);border:1px solid var(--border);color:${isCmp?'var(--accent)':'var(--text)'};padding:6px 10px;border-radius:4px;cursor:pointer;font-size:11px">${isCmp?'⚖️ added':'⚖️ add'}</button>
+            </div>
+          `;
+        }).join('');
+    }
+    document.getElementById('favorites-modal').classList.add('show');
+  };
+
+  // ===== COMPARE MODAL =====
+  document.getElementById('show-compare').onclick = e => {
+    e.preventDefault();
+    renderCompareModal();
+    document.getElementById('compare-modal').classList.add('show');
+  };
+  function renderCompareModal() {
+    const c = document.getElementById('compare-content');
+    if (!compareList.length) {
+      c.innerHTML = `<p style="color:var(--muted)">No buildings in compare yet. Click ⚖️ on any card or detail panel to add (max 4).</p>`;
+      return;
+    }
+    const apts = compareList.map(id => APARTMENTS.find(a => a.id === id)).filter(Boolean);
+    const rows = [
+      ['Photo', a => { const p = (photoMap[a.id]||[])[0]; return p?`<img src="${p}">`:''; }],
+      ['Address', a => a.address],
+      ['Zone', a => a.zone],
+      ['Fit Score', a => { const f=computeFitScore(a,window.COSTS||{}); return `<b style="color:${fitScoreColor(f.score)}">${f.score}/100</b>`; }],
+      ['Rent', a => `$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}${a.rent_1bed_high&&a.rent_1bed_high!==a.rent_1bed_low?'–'+a.rent_1bed_high.toLocaleString():''}`],
+      ['Sqft', a => a.sqft_low?a.sqft_low+'–'+a.sqft_high:(a.sqft_high||'—')],
+      ['$/sqft', a => { const r=a.rent_1bed_low||a.rent_2bed||0; const s=a.sqft_high||a.sqft_low||0; return s?'$'+(r/s).toFixed(2):'—'; }],
+      ['Est. all-in/mo', a => { const c=(window.COSTS||{})[a.id]; return c?'$'+((c.estimated_monthly_total_1bed||(a.rent_1bed_low||0)+100).toLocaleString()):'—'; }],
+      ['CVH peak', a => `${a.drive_to_cvh_min_peak} min`],
+      ['CVH off-peak', a => `${a.drive_to_cvh_min_offpeak} min`],
+      ['→ Union', a => a.drive_to_union_min_offpeak?a.drive_to_union_min_offpeak+' min':'—'],
+      ['Pet status', a => a.pet_status||'—'],
+      ['Promo', a => a.promo||'—'],
+      ['Google rating', a => { const r=(window.REVIEWS||{})[a.id]; return r?.google_rating?'⭐ '+r.google_rating:'—'; }],
+      ['Reddit', a => { const r=(window.REVIEWS||{})[a.id]; return r?.reddit_sentiment||'—'; }],
+      ['Walk Score', a => { const z=(window.ZONES||{})[a.zone]; return z?.walk_score||'—'; }],
+      ['Transit Score', a => { const z=(window.ZONES||{})[a.zone]; return z?.transit_score||'—'; }],
+      ['Running', a => a.running||'—'],
+      ['Top con', a => (a.cons||[])[0]||'—'],
+      ['', a => `<button onclick="document.getElementById('compare-modal').classList.remove('show');selectApt('${a.id}')" style="background:var(--bg);border:1px solid var(--border);color:var(--text);padding:4px 8px;border-radius:4px;cursor:pointer;font-size:11px">Open</button> <button onclick="toggleCompare('${a.id}');renderCompareModal()" style="background:var(--bg);border:1px solid var(--bad);color:var(--bad);padding:4px 8px;border-radius:4px;cursor:pointer;font-size:11px">Remove</button>`],
+    ];
+    c.innerHTML = `<table class="cmp-table">
+      <thead><tr><th></th>${apts.map(a=>`<th>${a.name}</th>`).join('')}</tr></thead>
+      <tbody>${rows.map(([label,fn])=>`<tr><td style="font-weight:600;color:var(--muted)">${label}</td>${apts.map(a=>`<td>${fn(a)}</td>`).join('')}</tr>`).join('')}</tbody>
+    </table>`;
+  }
+
+  // ===== TIMELINE MODAL =====
+  document.getElementById('show-timeline').onclick = e => {
+    e.preventDefault();
+    renderTimelineModal();
+    document.getElementById('timeline-modal').classList.add('show');
+  };
+  function renderTimelineModal() {
+    const t = window.TIMELINE;
+    const c = document.getElementById('timeline-content');
+    if (!t) { c.innerHTML = '<p style="color:var(--muted)">Timeline still loading…</p>'; return; }
+    const done = STORE.timelineDone();
+    const totalItems = t.phases.reduce((s,p)=>s+p.items.length,0);
+    const doneCount = Object.keys(done).filter(k => k.startsWith('tl-')).length;
+    const pct = totalItems ? Math.round(100*doneCount/totalItems) : 0;
+    let html = `
+      <div style="display:flex;gap:16px;margin-bottom:16px;font-size:13px;flex-wrap:wrap;">
+        <div><b>Today:</b> ${t.today}</div>
+        <div><b>Move:</b> ${t.move_in_target}</div>
+        <div><b>1st shift:</b> ${t.first_shift}</div>
+        <div><b>Progress:</b> ${doneCount}/${totalItems} (${pct}%)</div>
+      </div>
+      <div style="background:var(--bg);height:8px;border-radius:4px;overflow:hidden;margin-bottom:20px"><div style="background:var(--accent);height:100%;width:${pct}%;transition:width .3s"></div></div>
+    `;
+    if (t.critical_deadlines?.length) {
+      html += `<div style="background:rgba(248,113,113,.08);border:1px solid var(--bad);border-radius:6px;padding:10px;margin-bottom:16px;">
+        <b style="color:var(--bad)">⛔ Critical deadlines:</b>
+        <ul style="margin:6px 0 0;padding-left:20px;font-size:12px">
+          ${t.critical_deadlines.map(d=>`<li><b>${d.date}</b> — ${d.label} <span style="color:var(--muted)">(${d.reason})</span></li>`).join('')}
+        </ul>
+      </div>`;
+    }
+    html += t.phases.map((phase, pi) => {
+      const items = phase.items.map((item, ii) => {
+        const itemId = `tl-${pi}-${ii}`;
+        const isDone = !!done[itemId];
+        return `<div class="tl-item ${isDone?'done':''}">
+          <input type="checkbox" id="${itemId}" ${isDone?'checked':''} onchange="STORE.toggleTimelineItem('${itemId}');renderTimelineModal()">
+          <span class="when">${item.date||''}</span>
+          <span class="what">
+            <span class="urg-${item.urgency||'normal'}">${item.urgency||'normal'}</span> · <b>${item.action}</b>
+            ${item.why?`<div style="color:var(--muted);font-size:11px;margin-top:2px">${item.why}</div>`:''}
+            ${item.est_minutes?`<span style="color:var(--muted);font-size:10px;margin-left:4px">~${item.est_minutes}min</span>`:''}
+            ${item.category?`<span style="color:var(--muted);font-size:10px;margin-left:4px">[${item.category}]</span>`:''}
+          </span>
+        </div>`;
+      }).join('');
+      return `<div class="tl-phase">
+        <h3>${phase.phase}</h3>
+        <div class="range">${phase.date_range}</div>
+        ${items}
+      </div>`;
+    }).join('');
+    c.innerHTML = html;
+  }
+
+  // ===== HELP MODAL =====
+  document.getElementById('show-help').onclick = e => { e.preventDefault(); document.getElementById('help-modal').classList.add('show'); };
+
+  // Wait for optional data, then re-render
+  window.DATA_READY.then(() => { renderCards(); if (selectedId) selectApt(selectedId); });
 </script>
 </body>
 </html>

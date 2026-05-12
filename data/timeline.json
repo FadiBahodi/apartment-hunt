@@ -1,0 +1,157 @@
+{
+  "today": "2026-05-11",
+  "move_in_target": "2026-07-01",
+  "first_shift": "2026-07-03",
+  "weeks_remaining": 7,
+  "location_from": "Brandon, MB",
+  "location_to": "Mississauga, ON",
+  "household": {
+    "people": ["Fadi (ER physician)", "Nomi (girlfriend)"],
+    "pets": ["1 dog"]
+  },
+  "phases": [
+    {
+      "phase": "Phase 1: Shortlist + virtual tours + book travel",
+      "date_range": "May 11 - May 17",
+      "focus": "Lock down candidates, get FaceTime tours, book GTA trip before flights spike",
+      "items": [
+        {"date": "2026-05-11", "action": "Confirm CPSO independent practice status — call registration line if any pending CCFP-EM verification", "why": "Cannot work July 3 shift without active CPSO certificate. Often the longest pole.", "urgency": "critical", "category": "admin", "est_minutes": 45},
+        {"date": "2026-05-11", "action": "Confirm CMPA membership active for ON Type 5 (EM) coverage — call to switch from MB province code", "why": "Province-specific fee structure; coverage gap = uninsurable shift", "urgency": "critical", "category": "admin", "est_minutes": 30},
+        {"date": "2026-05-12", "action": "Email/call Credit Valley Hospital (Trillium Health Partners) HR + ED Chief's office: confirm onboarding timeline, IT ticket, badge appointment, Epic/Meditech training dates", "why": "THP uses Epic — training slots fill; badge office requires in-person ID verification", "urgency": "critical", "category": "admin", "est_minutes": 60},
+        {"date": "2026-05-12", "action": "Build shortlist of 15 buildings within 15-min drive of Credit Valley (Erin Mills, Streetsville, Sheridan, Mississauga Rd corridor) — pet-friendly only", "why": "Commute matters for night shifts; pet-friendly cuts inventory ~60%", "urgency": "critical", "category": "research", "est_minutes": 120},
+        {"date": "2026-05-12", "action": "Call all 15 leasing offices: confirm July 1 availability, pet policy, deposit, parking, in-suite laundry", "why": "July 1 is peak demand in GTA; desirable units gone within days of listing", "urgency": "critical", "category": "research", "est_minutes": 180},
+        {"date": "2026-05-13", "action": "Narrow to 8-10 finalists; request floorplans + utility cost averages", "why": "Need to compare apples-to-apples before viewing trip", "urgency": "high", "category": "research", "est_minutes": 90},
+        {"date": "2026-05-13", "action": "Schedule FaceTime/virtual tours for all 8-10 finalists this week", "why": "Pre-screens out duds before paying for flights", "urgency": "high", "category": "viewing", "est_minutes": 60},
+        {"date": "2026-05-14", "action": "Book flights Brandon (YBR/YWG) to Toronto (YYZ) for May 25-28 viewing trip", "why": "Flight prices climb ~30% inside 14-day window", "urgency": "critical", "category": "move-logistics", "est_minutes": 30},
+        {"date": "2026-05-14", "action": "Book hotel/Airbnb in Mississauga for May 25-28 (near Square One or Erin Mills)", "why": "Need a base for back-to-back viewings", "urgency": "high", "category": "move-logistics", "est_minutes": 30},
+        {"date": "2026-05-15", "action": "Conduct 4-5 FaceTime tours; take notes on natural light, noise, elevator wait, hallway smell", "why": "Things photos hide", "urgency": "high", "category": "viewing", "est_minutes": 180},
+        {"date": "2026-05-15", "action": "Get 3 cross-Canada mover quotes (Atlas Van Lines, Two Small Men, AMJ Campbell, Real Canadian Movers) for Brandon -> Mississauga", "why": "1500km moves book 4+ weeks out for July 1 — peak season", "urgency": "critical", "category": "move-logistics", "est_minutes": 120},
+        {"date": "2026-05-16", "action": "Build pet resume for dog (vaccination history, breed, weight, temperament, references from current landlord/vet)", "why": "GTA buildings increasingly require pet interviews + resumes", "urgency": "high", "category": "pet-docs", "est_minutes": 45},
+        {"date": "2026-05-16", "action": "Pull current vet records, rabies cert, recent fecal/heartworm test", "why": "Some buildings require proof; new ON vet will want intake history", "urgency": "high", "category": "pet-docs", "est_minutes": 30},
+        {"date": "2026-05-17", "action": "Finalize 6-8 in-person viewing slots for May 25-28 trip; confirm with leasing agents", "why": "Peak season agents overbook; need written confirmation", "urgency": "high", "category": "viewing", "est_minutes": 60}
+      ]
+    },
+    {
+      "phase": "Phase 2: GTA viewing trip + lease decision",
+      "date_range": "May 18 - May 28",
+      "focus": "Boots on ground, drive routes, sign lease before month-end",
+      "items": [
+        {"date": "2026-05-18", "action": "Prepare rental application packet: last 2 paystubs (or signed THP offer letter), credit report (Equifax pull), 2 references, void cheque, photo ID", "why": "Can submit same-day after a viewing — wins units in competitive market", "urgency": "critical", "category": "application", "est_minutes": 90},
+        {"date": "2026-05-19", "action": "Pull Equifax + TransUnion credit reports", "why": "Landlords ask; correcting errors takes 30+ days", "urgency": "high", "category": "application", "est_minutes": 30},
+        {"date": "2026-05-19", "action": "Get THP offer letter / employment verification letter on letterhead with start date and salary", "why": "Best income proof for an attending with no ON pay history yet", "urgency": "critical", "category": "application", "est_minutes": 30},
+        {"date": "2026-05-20", "action": "Order certified cheque/draft for first+last month + key deposit (~$8-10K float)", "why": "Cannot e-transfer that amount; bank drafts take 1-2 days", "urgency": "high", "category": "application", "est_minutes": 30},
+        {"date": "2026-05-21", "action": "Final FaceTime backup tours of any new listings posted this week", "why": "Inventory turns over weekly; safety net if trip viewings fall through", "urgency": "normal", "category": "viewing", "est_minutes": 90},
+        {"date": "2026-05-22", "action": "Research Mississauga dog daycares/walkers near shortlisted buildings (Camp Bow Wow Erin Mills, Dogtopia, Pawsh)", "why": "ED night shifts = need backup. Visit during trip.", "urgency": "normal", "category": "lifestyle", "est_minutes": 45},
+        {"date": "2026-05-22", "action": "Shortlist 3 vet clinics near top 3 buildings (VCA, Erin Mills Animal Hospital, Mississauga Animal Hospital)", "why": "Want to call/visit during trip — vet relationships hard to establish remotely", "urgency": "normal", "category": "lifestyle", "est_minutes": 30},
+        {"date": "2026-05-25", "action": "TRIP DAY 1: Fly to YYZ, pick up rental car, drive each shortlisted building's commute to Credit Valley at shift-change times (7am, 3pm, 11pm)", "why": "Mississauga traffic is non-linear; QEW/403 can add 25 min unpredictably", "urgency": "critical", "category": "viewing", "est_minutes": 240},
+        {"date": "2026-05-26", "action": "TRIP DAY 2: 4-5 in-person viewings; check cell signal in unit, water pressure, elevator at peak", "why": "Things you only catch in person", "urgency": "critical", "category": "viewing", "est_minutes": 480},
+        {"date": "2026-05-26", "action": "Walk/run candidate routes (Credit River trail, UTM trails, Erindale Park) at top 2-3 buildings", "why": "Run-route quality is a quality-of-life multiplier for shift workers", "urgency": "normal", "category": "lifestyle", "est_minutes": 90},
+        {"date": "2026-05-27", "action": "TRIP DAY 3: 2-3 follow-up viewings on top contenders; meet leasing agent in person to negotiate", "why": "In-person negotiation gets parking/locker thrown in", "urgency": "high", "category": "viewing", "est_minutes": 240},
+        {"date": "2026-05-27", "action": "Drop in at top vet clinic + dog daycare to meet staff", "why": "Establishes you as a real local, not a transient", "urgency": "normal", "category": "lifestyle", "est_minutes": 60},
+        {"date": "2026-05-28", "action": "TRIP DAY 4: Submit Offer to Lease on #1 choice with backup #2 ready; fly back YYZ -> YWG -> Brandon", "why": "Submitting before leaving town signals commitment", "urgency": "critical", "category": "application", "est_minutes": 120},
+        {"date": "2026-05-29", "action": "Negotiate lease terms remotely: pet clause, parking spot #, locker, rent escalation, July 1 key handover time", "why": "Standard OREA Form 400 has gaps — riders matter", "urgency": "high", "category": "application", "est_minutes": 90},
+        {"date": "2026-05-30", "action": "Tenant insurance quotes (Square One, Sonnet, TD) — bind policy effective July 1", "why": "Required by 95% of GTA landlords as a condition of lease signing", "urgency": "critical", "category": "admin", "est_minutes": 45},
+        {"date": "2026-05-31", "action": "SIGN LEASE; wire/draft first+last; obtain signed copy + key handover instructions in writing", "why": "Locks unit; July 1 is 30 days out — landlord's notice window", "urgency": "critical", "category": "application", "est_minutes": 60}
+      ]
+    },
+    {
+      "phase": "Phase 3: Book the move + transfer the life",
+      "date_range": "Jun 1 - Jun 14",
+      "focus": "Movers locked, utilities scheduled, credentials finalized",
+      "items": [
+        {"date": "2026-06-01", "action": "Book cross-Canada movers (deposit + signed contract); confirm pickup window Jun 26-28, delivery Jun 30-Jul 1", "why": "Peak season; July 1 movers fill 4 weeks out", "urgency": "critical", "category": "move-logistics", "est_minutes": 60},
+        {"date": "2026-06-01", "action": "Book elevator at new building for July 1 move-in (every condo requires reservation + deposit)", "why": "July 1 elevator slots vanish first; no elevator = no move", "urgency": "critical", "category": "move-logistics", "est_minutes": 30},
+        {"date": "2026-06-02", "action": "Book elevator at Brandon residence for move-out (Jun 26-28)", "why": "Same problem on departure end", "urgency": "high", "category": "move-logistics", "est_minutes": 20},
+        {"date": "2026-06-02", "action": "Set up Alectra Utilities (Mississauga electricity) account; schedule start July 1", "why": "Mississauga is Alectra, NOT Hydro One. Common mistake.", "urgency": "high", "category": "admin", "est_minutes": 30},
+        {"date": "2026-06-03", "action": "Set up Enbridge Gas account (if unit has gas); schedule start July 1", "why": "Hot water/heat dependency", "urgency": "high", "category": "admin", "est_minutes": 30},
+        {"date": "2026-06-03", "action": "Set up Region of Peel water account if unit is townhouse/freehold (most condos include water)", "why": "Avoid surprise bill", "urgency": "normal", "category": "admin", "est_minutes": 20},
+        {"date": "2026-06-04", "action": "Internet install booking — Bell Fibe, Rogers Ignite, or Beanfield (check building) — schedule install July 1 or 2", "why": "Install windows are 2-week wait; need WiFi for on-call/charting", "urgency": "critical", "category": "admin", "est_minutes": 45},
+        {"date": "2026-06-04", "action": "Cell plan review — port number, confirm ON coverage, consider unlocking for THP paging", "why": "MB carrier may have weak GTA roaming patches", "urgency": "normal", "category": "admin", "est_minutes": 30},
+        {"date": "2026-06-05", "action": "Hospital onboarding: confirm Epic training date, NPI/MRP # in system, paging system enrollment, scrub/locker assignment", "why": "Cannot pick up first shift without active credentials in HIS", "urgency": "critical", "category": "admin", "est_minutes": 90},
+        {"date": "2026-06-06", "action": "Schedule THP occupational health visit (mandatory pre-employment: TB skin test, immunization review, N95 fit test) for week of Jun 29", "why": "Cannot start clinical work without OH clearance — hard stop", "urgency": "critical", "category": "admin", "est_minutes": 45},
+        {"date": "2026-06-07", "action": "Email College of Family Physicians of Canada to confirm CCFP-EM designation appears on CPSO public register", "why": "Locum/credentialing checks rely on public-facing data", "urgency": "high", "category": "admin", "est_minutes": 20},
+        {"date": "2026-06-08", "action": "Banking: notify TD/RBC/whoever of address change; order new cheques; update direct deposit for THP payroll", "why": "First paycheque ~mid-July; wrong account = delay", "urgency": "high", "category": "admin", "est_minutes": 45},
+        {"date": "2026-06-09", "action": "Vet transfer — request full chart from Brandon vet, send to chosen Mississauga vet; book first wellness appt for week of Jul 6", "why": "Continuity of care for dog; new vet wants chart before first visit", "urgency": "normal", "category": "pet-docs", "est_minutes": 30},
+        {"date": "2026-06-10", "action": "Find primary care MD for Fadi + Nomi — Health Care Connect Ontario registration + cold-call FHTs near Erin Mills", "why": "GTA family doc waitlist 12-18 months; start NOW", "urgency": "high", "category": "lifestyle", "est_minutes": 60},
+        {"date": "2026-06-11", "action": "Order packing supplies; start packing non-essentials (books, off-season clothes)", "why": "Movers charge by weight + hours; pre-packed = cheaper", "urgency": "normal", "category": "move-logistics", "est_minutes": 120},
+        {"date": "2026-06-12", "action": "Forward mail via Canada Post mail forwarding (start date Jun 28, 6 months)", "why": "Catches stragglers — CRA, banks, professional bodies", "urgency": "high", "category": "admin", "est_minutes": 20},
+        {"date": "2026-06-13", "action": "Cancel Brandon utilities effective Jun 28 (Manitoba Hydro, internet, water if applicable)", "why": "Avoid double-billing; Manitoba Hydro requires written notice", "urgency": "high", "category": "admin", "est_minutes": 45},
+        {"date": "2026-06-14", "action": "Notify Brandon landlord in writing of move-out date + forwarding address for damage deposit return", "why": "Required for deposit return under MB RTA", "urgency": "high", "category": "admin", "est_minutes": 20}
+      ]
+    },
+    {
+      "phase": "Phase 4: Pack, purge, prep",
+      "date_range": "Jun 15 - Jun 25",
+      "focus": "Final packing, professional admin tail, dog logistics",
+      "items": [
+        {"date": "2026-06-15", "action": "Hospital IT: confirm Epic login works, dictation system access, remote VPN credentials for chart catch-up", "why": "IT tickets that fail at this stage become a Day 1 disaster", "urgency": "critical", "category": "admin", "est_minutes": 60},
+        {"date": "2026-06-16", "action": "Confirm OH clearance booking for Jun 29-30; collect immunization records to bring", "why": "Avoid re-vaccination", "urgency": "high", "category": "admin", "est_minutes": 30},
+        {"date": "2026-06-17", "action": "Grocery delivery accounts: Voila (Sobeys), Instacart, Loblaws PC Express — set delivery to new address", "why": "Night shift recovery weeks = no time for grocery runs", "urgency": "normal", "category": "lifestyle", "est_minutes": 30},
+        {"date": "2026-06-18", "action": "Pharmacy transfer for any ongoing prescriptions (Fadi + Nomi)", "why": "Continuity, avoid lapse", "urgency": "normal", "category": "lifestyle", "est_minutes": 30},
+        {"date": "2026-06-19", "action": "Dog: refill all meds (NexGard, Heartgard, etc.) for 3-month supply to bridge vet transition", "why": "Bridges any gap before new vet appt", "urgency": "high", "category": "pet-docs", "est_minutes": 30},
+        {"date": "2026-06-20", "action": "Dog daycare interviews/trial day at top 2 Mississauga options (book remotely for week of Jul 6)", "why": "Need backup for first night shift block", "urgency": "high", "category": "lifestyle", "est_minutes": 60},
+        {"date": "2026-06-21", "action": "Pack essentials box: scrubs, stethoscope, badge clip, chargers, dog food x 1 week, coffee", "why": "Movers' truck may arrive 1-2 days late; need survival kit", "urgency": "critical", "category": "move-logistics", "est_minutes": 60},
+        {"date": "2026-06-22", "action": "Plan dog transport — fly with dog as cargo/in-cabin, OR drive cross-country; book accordingly", "why": "Air Canada cargo books out for July; if driving, plan 3-day route with pet-friendly hotels", "urgency": "critical", "category": "pet-docs", "est_minutes": 60},
+        {"date": "2026-06-23", "action": "Confirm with movers: pickup date, COI for both buildings, payment method, inventory list", "why": "Day-of changes = surcharges. Reconfirm 1 week out.", "urgency": "high", "category": "move-logistics", "est_minutes": 30},
+        {"date": "2026-06-24", "action": "Final walkthrough Brandon unit; document with photos for damage deposit", "why": "Evidence for any landlord disputes", "urgency": "high", "category": "move-logistics", "est_minutes": 45},
+        {"date": "2026-06-25", "action": "Pre-move sleep banking — Fadi gets 8h x 3 nights before drive/flight", "why": "First attending shift on residual sleep debt = bad for everyone", "urgency": "high", "category": "lifestyle", "est_minutes": 0}
+      ]
+    },
+    {
+      "phase": "Phase 5: Move week + landing",
+      "date_range": "Jun 26 - Jul 3",
+      "focus": "Execute the move, hit the ground running for July 3 shift",
+      "items": [
+        {"date": "2026-06-26", "action": "Movers pickup in Brandon; supervise inventory checklist + bill of lading", "why": "Disputes hinge on signed inventory", "urgency": "critical", "category": "move-logistics", "est_minutes": 480},
+        {"date": "2026-06-27", "action": "Depart Brandon (drive or fly) with dog + essentials box", "why": "Buffer days for delays", "urgency": "critical", "category": "move-logistics", "est_minutes": 0},
+        {"date": "2026-06-29", "action": "Arrive Mississauga; check into temp accommodation if unit not ready until July 1", "why": "Need a landing pad for the gap day", "urgency": "high", "category": "move-logistics", "est_minutes": 0},
+        {"date": "2026-06-29", "action": "THP Occupational Health appointment (TB, fit-test, immunization review)", "why": "Hard requirement before clinical shifts", "urgency": "critical", "category": "admin", "est_minutes": 120},
+        {"date": "2026-06-30", "action": "THP badge pickup + IT walkthrough + Epic super-user session if available", "why": "Live-system practice beats any training video", "urgency": "critical", "category": "admin", "est_minutes": 180},
+        {"date": "2026-07-01", "action": "MOVE-IN DAY: key pickup, elevator booking, movers deliver, unpack essentials only", "why": "July 3 shift = unpack later", "urgency": "critical", "category": "move-logistics", "est_minutes": 600},
+        {"date": "2026-07-01", "action": "Internet install today (if booked); test VPN to THP", "why": "Day 1 charting safety net", "urgency": "critical", "category": "admin", "est_minutes": 60},
+        {"date": "2026-07-02", "action": "Drive to Credit Valley, park where you'll park on shift day, locate ED entrance, locker, change room, breakroom", "why": "Eliminates Day-1 wayfinding stress", "urgency": "high", "category": "admin", "est_minutes": 90},
+        {"date": "2026-07-02", "action": "Stock fridge (Voila/Instacart delivery), set up dog crate + walker contact, test alarm clock x 2", "why": "Operational baseline for first attending shift", "urgency": "high", "category": "lifestyle", "est_minutes": 60},
+        {"date": "2026-07-02", "action": "Sleep 9pm; do not stay up unpacking", "why": "First attending shift demands a clear head", "urgency": "critical", "category": "lifestyle", "est_minutes": 0},
+        {"date": "2026-07-03", "action": "FIRST ATTENDING SHIFT — Credit Valley Hospital ED", "why": "The whole point", "urgency": "critical", "category": "admin", "est_minutes": 0}
+      ]
+    },
+    {
+      "phase": "Phase 6: Ontario residency tail (post-move, 60-day window)",
+      "date_range": "Jul 4 - Aug 30",
+      "focus": "Legal residency conversion, long-tail admin",
+      "items": [
+        {"date": "2026-07-06", "action": "OHIP application at ServiceOntario (3-month wait period waived for returning physicians under MOH agreement — bring CPSO + employment letter)", "why": "Coverage transition from MB Health", "urgency": "critical", "category": "admin", "est_minutes": 90},
+        {"date": "2026-07-08", "action": "Ontario driver's license transfer at ServiceOntario (within 60 days of permanent move — MB license surrendered)", "why": "Legal requirement HTA s.32; insurance also requires ON license", "urgency": "critical", "category": "admin", "est_minutes": 90},
+        {"date": "2026-07-10", "action": "Vehicle registration + Ontario plates + safety/emissions if applicable; auto insurance switch to ON carrier", "why": "ON auto insurance is province-locked; MB plates illegal after 30 days", "urgency": "critical", "category": "admin", "est_minutes": 120},
+        {"date": "2026-07-12", "action": "Update CMPA, CPSO, RCPSC (if applicable), CFPC with new ON address", "why": "Notices/renewals go to address on file", "urgency": "high", "category": "admin", "est_minutes": 45},
+        {"date": "2026-07-15", "action": "CRA address update (My Account); update direct deposit for tax refunds", "why": "T4 from THP comes early 2027 to address on file", "urgency": "normal", "category": "admin", "est_minutes": 20},
+        {"date": "2026-07-20", "action": "First wellness vet visit for dog; register with City of Mississauga animal services + dog license", "why": "Mandatory under Mississauga by-law 98-04", "urgency": "high", "category": "pet-docs", "est_minutes": 60},
+        {"date": "2026-08-01", "action": "Establish primary care relationship (first appt for Fadi + Nomi if accepted)", "why": "Don't be the doctor without a doctor", "urgency": "normal", "category": "lifestyle", "est_minutes": 90}
+      ]
+    }
+  ],
+  "critical_deadlines": [
+    {"date": "2026-05-12", "label": "Confirm CPSO + CMPA active", "reason": "Without these, July 3 shift cannot happen — these have the longest fix-time"},
+    {"date": "2026-05-14", "label": "Book GTA viewing trip flights", "reason": "Flight prices spike inside 14-day window"},
+    {"date": "2026-05-15", "label": "Get cross-Canada mover quotes", "reason": "Peak July 1 season books out 4+ weeks ahead"},
+    {"date": "2026-05-28", "label": "Submit Offer to Lease on #1 choice", "reason": "GTA July 1 inventory closes within days; backup option ready"},
+    {"date": "2026-05-31", "label": "Sign lease + pay first/last", "reason": "30-day landlord notice window; tenant insurance must be bound"},
+    {"date": "2026-06-01", "label": "Book movers (signed contract + deposit)", "reason": "July 1 is national peak; missing this = no movers"},
+    {"date": "2026-06-01", "label": "Book elevator at new building", "reason": "July 1 elevator slots are first to fill in any condo"},
+    {"date": "2026-06-04", "label": "Internet install scheduled for Jul 1-2", "reason": "2-week install lead time; need WiFi for charting/paging"},
+    {"date": "2026-06-06", "label": "THP Occupational Health booked", "reason": "Hard pre-clinical gate"},
+    {"date": "2026-06-15", "label": "Epic + IT credentials confirmed working", "reason": "Day-1 chart access"},
+    {"date": "2026-06-29", "label": "OH clearance complete", "reason": "Cannot start July 3 without it"},
+    {"date": "2026-06-30", "label": "Badge + IT walkthrough done", "reason": "Day-1 wayfinding"},
+    {"date": "2026-07-01", "label": "Move-in + internet install", "reason": "Operational baseline before first shift"},
+    {"date": "2026-07-03", "label": "FIRST ATTENDING SHIFT", "reason": "The terminal goal"},
+    {"date": "2026-07-08", "label": "ON driver's license transfer (within 60 days)", "reason": "Legal residency requirement HTA s.32"},
+    {"date": "2026-07-10", "label": "Vehicle registration + ON plates", "reason": "Auto insurance province-lock"}
+  ],
+  "totals": {
+    "total_items": 73,
+    "critical_items": 33,
+    "high_items": 27,
+    "normal_items": 13
+  }
+}
