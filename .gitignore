@@ -9,3 +9,4 @@ review_trigger.sh
 timer2.sh
 timer.sh
 photos_manifest.json
+data/__pycache__/
