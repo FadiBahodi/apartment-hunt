@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Build more_listings.jsonl with geocoded apartment data."""
 import json, time, urllib.request, urllib.parse, math, sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from coords_fallback import lookup as fallback_lookup
 
 CVH_LAT, CVH_LNG = 43.5594, -79.7037
 UNION_LAT, UNION_LNG = 43.6453, -79.3806
@@ -273,19 +275,39 @@ LISTINGS = [
 
 def main():
     out_path = "/Users/rawproductivity/apartment-hunt/data/more_listings.jsonl"
-    # Truncate
-    open(out_path, "w").close()
+    cache_path = "/Users/rawproductivity/apartment-hunt/data/geocode_cache.json"
+    # Load cache
+    cache = {}
+    if os.path.exists(cache_path):
+        try:
+            with open(cache_path) as f:
+                cache = json.load(f)
+        except: pass
+    # Build all rows in memory first, then write atomically
+    rows = []
     written = 0
     for L in LISTINGS:
         (lid, name, addr, zone, rl, rh, sl, sh, url, run, transit) = L
-        lat, lng = geocode(addr)
-        time.sleep(1.05)  # rate limit
-        if lat is None:
-            # fallback: approximate from postal/city — skip with placeholder near zone center
-            lat, lng = CVH_LAT, CVH_LNG
-            geocoded = False
-        else:
+        if addr in cache:
+            lat, lng = cache[addr]
             geocoded = True
+        else:
+            # Try fallback first (instant, no rate limit)
+            lat, lng = fallback_lookup(addr)
+            if lat is not None:
+                geocoded = True
+                cache[addr] = [lat, lng]
+            else:
+                lat, lng = geocode(addr)
+                time.sleep(1.05)
+                if lat is not None:
+                    cache[addr] = [lat, lng]
+                    geocoded = True
+                else:
+                    lat, lng = CVH_LAT, CVH_LNG
+                    geocoded = False
+            with open(cache_path, "w") as f:
+                json.dump(cache, f)
         km_cvh = round(haversine(lat, lng, CVH_LAT, CVH_LNG), 1)
         km_union = round(haversine(lat, lng, UNION_LAT, UNION_LNG), 1)
         # rough drive times: 1.5 min/km off-peak, 2.5 min/km peak (urban GTA average)
@@ -362,11 +384,15 @@ def main():
             "pros": pros,
             "cons": cons,
         }
-        with open(out_path, "a") as f:
-            f.write(json.dumps(obj) + "\n")
+        rows.append(obj)
         written += 1
-        print(f"[{written}] {lid} {km_cvh}km", flush=True)
-    print(f"DONE: {written} written")
+        if written % 20 == 0:
+            print(f"[{written}] {lid} {km_cvh}km", flush=True)
+    # Atomic write
+    with open(out_path, "w") as f:
+        for r in rows:
+            f.write(json.dumps(r) + "\n")
+    print(f"DONE: {written} written to {out_path}")
 
 if __name__ == "__main__":
     main()

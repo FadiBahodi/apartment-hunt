@@ -162,6 +162,21 @@
 
   .review-bar { display: inline-block; width: 60px; height: 6px; background: var(--bg); border-radius: 3px; vertical-align: middle; margin-left: 6px; overflow: hidden; }
   .review-bar-fill { height: 100%; background: var(--good); }
+
+  /* Print-friendly view */
+  @media print {
+    body { background: #fff; color: #000; }
+    header, .filters, #map-wrap, #detail-close, .actions, .modal { display: none !important; }
+    .layout { display: block; height: auto; }
+    #sidebar { border: none; padding: 0; }
+    .card { border-color: #ccc; box-shadow: none; }
+    .card .name, .card .rent { color: #000; }
+  }
+
+  /* Stats strip */
+  .stats-strip { display: flex; gap: 12px; padding: 8px 12px; background: var(--panel); border-bottom: 1px solid var(--border); font-size: 11px; color: var(--muted); flex-wrap: wrap; align-items: center; }
+  .stats-strip .pill { background: var(--bg); padding: 4px 10px; border-radius: 12px; border: 1px solid var(--border); }
+  .stats-strip .pill b { color: var(--accent-text); margin-left: 4px; }
 </style>
 </head>
 <body>
@@ -234,9 +249,10 @@
     </div>
   </div>
 </div>
+<div class="stats-strip" id="stats-strip"></div>
 <div class="layout">
   <aside id="sidebar">
-    <input type="search" id="search" placeholder="🔍 Search by name, address, zone…" style="width:100%;background:var(--panel);border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:6px;font-size:13px;margin-bottom:10px;">
+    <input type="search" id="search" placeholder="🔍 Search name/address/zone (or 'fit:60' for fit≥60)" style="width:100%;background:var(--panel);border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:6px;font-size:13px;margin-bottom:10px;">
     <div class="filters" id="filters"></div>
     <div class="sort-control">
       <span>Sort:</span>
@@ -436,10 +452,20 @@ window.DATA_READY = Promise.all([
   let searchTerm = '';
   function renderCards() {
     const q = searchTerm.toLowerCase().trim();
+    // Special syntax: "fit:60" → fit_score >= 60
+    let fitMin = 0;
+    let textQ = q;
+    const fitMatch = q.match(/fit[:>]?\s*(\d+)/);
+    if (fitMatch) { fitMin = parseInt(fitMatch[1]); textQ = q.replace(fitMatch[0], '').trim(); }
+    const rentMatch = q.match(/(?:rent|under|<)\s*\$?(\d+)/);
+    let rentMax = 99999;
+    if (rentMatch) { rentMax = parseInt(rentMatch[1]); textQ = textQ.replace(rentMatch[0], '').trim(); }
     const filtered = APARTMENTS.filter(a => {
-      if (q) {
-        const haystack = (a.name + ' ' + a.address + ' ' + a.zone + ' ' + (a.pros||[]).join(' ') + ' ' + (a.cons||[]).join(' ')).toLowerCase();
-        if (!haystack.includes(q)) return false;
+      if (fitMin && computeFitScore(a, window.COSTS||{}).score < fitMin) return false;
+      if (rentMax < 99999 && (a.rent_1bed_low||a.rent_2bed||9999) > rentMax) return false;
+      if (textQ) {
+        const haystack = (a.name + ' ' + a.address + ' ' + a.zone + ' ' + (a.pros||[]).join(' ') + ' ' + (a.cons||[]).join(' ') + ' ' + (a.running||'')).toLowerCase();
+        if (!haystack.includes(textQ)) return false;
       }
       if (activeFilters.has('all') || activeFilters.size === 0) return true;
       // AND-combine all active filters
@@ -465,6 +491,25 @@ window.DATA_READY = Promise.all([
     });
 
     document.getElementById('count').textContent = `${sorted.length} of ${APARTMENTS.length} buildings`;
+    // Stats strip
+    const allPet = APARTMENTS.filter(a => a.pet_status === 'verified' || a.pet_status === 'verified-large-pets');
+    const cheap = APARTMENTS.filter(a => (a.rent_1bed_low||a.rent_2bed||9999) <= 2000);
+    const tier1 = APARTMENTS.filter(a => a.drive_to_cvh_min_peak <= 15);
+    const fits = APARTMENTS.map(a => computeFitScore(a, window.COSTS||{}).score);
+    const bestFit = Math.max(...fits);
+    const medianRent = (() => {
+      const r = APARTMENTS.map(a => a.rent_1bed_low||a.rent_2bed||0).filter(Boolean).sort((a,b)=>a-b);
+      return r[Math.floor(r.length/2)];
+    })();
+    document.getElementById('stats-strip').innerHTML = `
+      <span class="pill">Total<b>${APARTMENTS.length}</b></span>
+      <span class="pill">Pet ✓<b>${allPet.length}</b></span>
+      <span class="pill">≤$2,000<b>${cheap.length}</b></span>
+      <span class="pill">CVH ≤15min<b>${tier1.length}</b></span>
+      <span class="pill">Median rent<b>$${medianRent?.toLocaleString()||'—'}</b></span>
+      <span class="pill">Best fit<b>${bestFit}</b></span>
+      <span class="pill">My favs<b>${STORE.favorites().length}</b></span>
+    `;
     const html = sorted.map(a => {
       const cls = ratingClass(a.rating);
       const photos = photoMap[a.id] || [];
@@ -663,6 +708,7 @@ window.DATA_READY = Promise.all([
       <textarea class="notes-area" placeholder="Type your observations from calls, tours, gut reactions…" oninput="STORE.setNote('${a.id}', this.value)">${STORE.getNote(a.id).replace(/</g,'&lt;')}</textarea>
       <div class="external">
         <a href="${a.listing_url}" target="_blank">📄 Listing</a>
+        <a href="#" onclick="openInquiry('${a.id}');return false;">✉️ Inquiry email</a>
         <a href="${gmapsAddrUrl}" target="_blank">📍 Maps</a>
         <a href="${gmapsUrl}" target="_blank">🚗 Drive→CVH</a>
         <a href="${transitUrl}" target="_blank">🚇 Transit→Union</a>
@@ -778,7 +824,7 @@ window.DATA_READY = Promise.all([
     if (!favs.length) {
       c.innerHTML = '<p style="color:var(--muted)">No favorites yet. Click ❤️ on any building card to save it here.</p>';
     } else {
-      c.innerHTML = `<p style="color:var(--muted);font-size:12px">${favs.length} saved · click to open detail · ⚖️ to add to compare</p>` +
+      c.innerHTML = `<p style="color:var(--muted);font-size:12px">${favs.length} saved · <button onclick="emailFavorites()" style="background:var(--bg);border:1px solid var(--border);color:var(--accent-text);padding:4px 10px;border-radius:4px;cursor:pointer;font-size:11px;margin-left:8px">✉️ Email me this list</button></p>` +
         favs.map(a => {
           const fit = computeFitScore(a, window.COSTS||{});
           const photo = (photoMap[a.id]||[])[0] || '';
@@ -898,6 +944,34 @@ window.DATA_READY = Promise.all([
 
   // ===== HELP MODAL =====
   document.getElementById('show-help').onclick = e => { e.preventDefault(); document.getElementById('help-modal').classList.add('show'); };
+
+  // ===== EMAIL FAVORITES =====
+  window.emailFavorites = function() {
+    const favs = STORE.favorites().map(id => APARTMENTS.find(a => a.id === id)).filter(Boolean);
+    if (!favs.length) { alert('No favorites to email yet'); return; }
+    let body = `My apartment shortlist (${favs.length} buildings) — ${new Date().toLocaleDateString()}\n\n`;
+    favs.forEach((a, i) => {
+      const fit = computeFitScore(a, window.COSTS||{});
+      const note = STORE.getNote(a.id);
+      body += `${i+1}. ${a.name}\n`;
+      body += `   ${a.address}\n`;
+      body += `   $${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()} · FIT ${fit.score}/100 · ${a.drive_to_cvh_km}km CVH · ${a.zone}\n`;
+      body += `   ${a.listing_url}\n`;
+      if (note) body += `   📝 ${note}\n`;
+      body += '\n';
+    });
+    const subject = `Apartment shortlist — ${favs.length} buildings`;
+    window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
+  // ===== INQUIRY EMAIL TEMPLATE =====
+  window.openInquiry = function(id) {
+    const a = APARTMENTS.find(x => x.id === id);
+    if (!a) return;
+    const subject = `Inquiry — 1-bed availability for July 1, 2026 (${a.name})`;
+    const body = `Hi,\n\nI'm interested in a 1-bedroom suite at ${a.name} (${a.address}) for occupancy July 1, 2026.\n\nA few quick questions before I book a viewing:\n\n1. What 1-bed inventory is available for July 1?\n2. Pet policy specifics — small/medium dog accepted? Any breed/weight restrictions?\n3. Parking — underground availability + monthly cost?\n4. Are heat/water/hydro included or extra?\n5. What promotions are currently running?\n6. Earliest viewing window — I'm flying in from Brandon, MB the weekend of May 23-25.\n\nQuick context: I'm a physician starting at Credit Valley Hospital July 3. Strong rental references available.\n\nThanks,\nFadi`;
+    window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
 
   // Wait for optional data, then re-render
   window.DATA_READY.then(() => { renderCards(); if (selectedId) selectApt(selectedId); });
