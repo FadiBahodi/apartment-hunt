@@ -8,53 +8,101 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <style>
   :root {
-    --bg: #0f1115;
-    --panel: #161a22;
-    --border: #262b36;
-    --text: #e6e8eb;
-    --muted: #8a94a6;
-    --accent: #ff6b35;
-    --accent-text: #ff8a5c;
+    /* Surfaces */
+    --bg: #0a0c10;
+    --panel: #12151c;
+    --panel-2: #1a1e27;
+    --border: #232834;
+    --border-strong: #2e3442;
+    /* Type */
+    --text: #ecedf0;
+    --muted: #8b94a3;
+    --dim: #5a6171;
+    /* Accent — refined orange, less candy */
+    --accent: #ff7a45;
+    --accent-text: #ff9866;
+    --accent-soft: rgba(255,122,69,.08);
     --focus: #ffd166;
+    /* Semantic */
     --good: #4ade80;
+    --good-soft: rgba(74,222,128,.10);
     --warn: #fbbf24;
+    --warn-soft: rgba(251,191,36,.10);
     --bad: #f87171;
-    --link: #60a5fa;
+    --bad-soft: rgba(248,113,113,.10);
+    --link: #82b6ff;
+    /* Scale */
+    --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px; --space-6: 32px;
+    --radius-sm: 4px; --radius: 6px; --radius-lg: 10px;
+    --t-fast: .12s ease; --t-base: .18s ease;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; font-feature-settings: "ss01", "cv11"; }
-  header { padding: 16px 24px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
-  header h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
-  header .meta { color: var(--muted); font-size: 13px; }
-  .layout { display: grid; grid-template-columns: 380px 1fr 460px; gap: 0; height: calc(100vh - 60px); position: relative; }
+  html, body { font-feature-settings: "ss01","cv11","tnum"; }
+  body { margin: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; font-size: 14px; }
+  ::selection { background: var(--accent-soft); color: var(--accent-text); }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--border-strong); }
+
+  /* Inline icon spec */
+  .icn { display: inline-block; width: 14px; height: 14px; vertical-align: -2px; flex-shrink: 0; }
+  .icn-sm { width: 12px; height: 12px; vertical-align: -1px; }
+
+  header { padding: var(--space-3) var(--space-5); border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; background: linear-gradient(180deg, rgba(255,122,69,.02) 0%, transparent 100%); }
+  header h1 { margin: 0; font-size: 18px; font-weight: 700; letter-spacing: -0.02em; }
+  header h1 .wordmark { color: var(--accent-text); }
+  header .meta { color: var(--muted); font-size: 12px; }
+  header .meta b { color: var(--text); font-weight: 600; }
+  .layout { display: grid; grid-template-columns: 400px 1fr 480px; gap: 0; height: calc(100vh - 56px); position: relative; }
   @media (max-width: 1400px) { .layout { grid-template-columns: 360px 1fr; } #detail { position: absolute; right: 0; top: 0; bottom: 0; width: 460px; max-width: 90vw; background: var(--panel); z-index: 500; border-left: 1px solid var(--border); transform: translateX(100%); transition: transform .2s; box-shadow: -8px 0 24px rgba(0,0,0,.4); } #detail.show { transform: translateX(0); } #detail-close { display: block; } }
   @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } #map { height: 50vh; } }
   #detail-close { display: none; position: absolute; top: 8px; right: 12px; background: var(--bg); border: 1px solid var(--border); color: var(--text); width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 18px; z-index: 10; }
 
-  #sidebar { overflow-y: auto; border-right: 1px solid var(--border); padding: 12px; }
-  .filters { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
-  .filters button { background: var(--panel); border: 1px solid var(--border); color: var(--text); padding: 6px 10px; border-radius: 6px; cursor: pointer; font-size: 12px; transition: all .12s; }
-  .filters button:hover { border-color: var(--accent); }
-  .filters button.active { background: rgba(255,107,53,.12); border-color: var(--accent); color: var(--accent); }
-  .sort-control { display: flex; align-items: center; gap: 6px; margin-bottom: 12px; font-size: 12px; color: var(--muted); }
-  .sort-control select { background: var(--panel); color: var(--text); border: 1px solid var(--border); padding: 4px 8px; border-radius: 4px; }
+  #sidebar { overflow-y: auto; border-right: 1px solid var(--border); padding: var(--space-3); }
+  #search { width: 100%; background: var(--panel); border: 1px solid var(--border); color: var(--text); padding: 8px 12px 8px 32px; border-radius: var(--radius); font-size: 13px; margin-bottom: var(--space-3); transition: border-color var(--t-fast); }
+  #search:focus { outline: none; border-color: var(--accent); }
+  .search-wrap { position: relative; }
+  .search-wrap::before { content: ''; position: absolute; left: 10px; top: 50%; transform: translateY(-50%); width: 14px; height: 14px; background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b94a3' stroke-width='2.5' stroke-linecap='round'><circle cx='11' cy='11' r='7'/><path d='m21 21-4.3-4.3'/></svg>") no-repeat center / contain; }
+  .filters { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: var(--space-3); }
+  .filters button { background: var(--panel); border: 1px solid var(--border); color: var(--muted); padding: 4px 9px; border-radius: var(--radius); cursor: pointer; font-size: 11px; font-weight: 500; transition: all var(--t-fast); }
+  .filters button:hover { border-color: var(--border-strong); color: var(--text); }
+  .filters button.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text); }
+  .sort-control { display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-3); font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+  .sort-control select { background: var(--panel); color: var(--text); border: 1px solid var(--border); padding: 4px 8px; border-radius: var(--radius-sm); font-size: 12px; text-transform: none; letter-spacing: 0; }
 
-  .card { display: grid; grid-template-columns: 56px 1fr auto; gap: 10px; align-items: start; background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; cursor: pointer; transition: all .15s; }
-  .card:hover { border-color: var(--accent); transform: translateY(-1px); }
-  .card.selected { border-color: var(--accent); background: rgba(255,107,53,.04); }
-  .card .thumb { width: 56px; height: 56px; border-radius: 6px; background-size: cover; background-position: center; background-color: #1f2530; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; }
+  .card { display: grid; grid-template-columns: 64px 1fr auto; gap: var(--space-3); align-items: start; background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: var(--space-3); margin-bottom: 6px; cursor: pointer; transition: all var(--t-fast); position: relative; }
+  .card:hover { border-color: var(--border-strong); background: var(--panel-2); }
+  .card.selected { border-color: var(--accent); background: var(--accent-soft); }
+  .card .thumb { width: 64px; height: 64px; border-radius: var(--radius-sm); background-size: cover; background-position: center; background-color: var(--panel-2); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; color: var(--muted); flex-shrink: 0; position: relative; overflow: hidden; }
+  .card .thumb::after { content: ''; position: absolute; inset: 0; box-shadow: inset 0 0 0 1px rgba(255,255,255,.04); border-radius: inherit; pointer-events: none; }
   .card .body { min-width: 0; }
-  .card .name { font-weight: 600; font-size: 15px; margin-bottom: 1px; letter-spacing: -0.01em; line-height: 1.2; }
-  .card .zone { color: var(--muted); font-size: 11px; margin-bottom: 4px; }
-  .card .meta { font-size: 12px; color: var(--muted); margin-top: 2px; display: flex; gap: 10px; flex-wrap: wrap; }
-  .card .rent-col { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
-  .card .rent { color: var(--accent); font-weight: 700; font-size: 17px; font-variant-numeric: tabular-nums; letter-spacing: -0.01em; }
-  .card .rent .sub { color: var(--muted); font-size: 10px; font-weight: 500; }
-  .badge { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; font-weight: 600; text-transform: uppercase; }
-  .badge.good { background: rgba(74,222,128,.15); color: var(--good); }
-  .badge.warn { background: rgba(251,191,36,.15); color: var(--warn); }
-  .badge.bad { background: rgba(248,113,113,.15); color: var(--bad); }
-  .badge.fine { background: rgba(96,165,250,.15); color: var(--link); }
+  .card .name { font-weight: 600; font-size: 14px; margin-bottom: 2px; letter-spacing: -0.01em; line-height: 1.25; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card .zone { color: var(--muted); font-size: 11px; margin-bottom: 6px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .card .meta { font-size: 11px; color: var(--muted); display: flex; gap: var(--space-3); flex-wrap: wrap; align-items: center; }
+  .card .meta .metric { display: inline-flex; align-items: center; gap: 4px; font-variant-numeric: tabular-nums; }
+  .card .meta .metric .label { color: var(--dim); font-size: 10px; text-transform: uppercase; letter-spacing: .04em; }
+  .card .meta .metric .val { color: var(--text); font-weight: 500; }
+  .card .rent-col { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
+  .card .rent { color: var(--text); font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; line-height: 1; }
+  .card .rent .sub { color: var(--dim); font-size: 10px; font-weight: 400; margin-top: 2px; display: block; }
+  .badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 7px; border-radius: 3px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; line-height: 1.4; }
+  .badge .dot { width: 6px; height: 6px; border-radius: 50%; }
+  .badge.good { background: var(--good-soft); color: var(--good); }
+  .badge.good .dot { background: var(--good); }
+  .badge.warn { background: var(--warn-soft); color: var(--warn); }
+  .badge.warn .dot { background: var(--warn); }
+  .badge.bad { background: var(--bad-soft); color: var(--bad); }
+  .badge.bad .dot { background: var(--bad); }
+  .badge.fine { background: rgba(130,182,255,.10); color: var(--link); }
+  .badge.fine .dot { background: var(--link); }
+  /* Status pip — small colored circle as data indicator (no emoji) */
+  .pip { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 4px; vertical-align: 1px; }
+  .pip.good { background: var(--good); }
+  .pip.warn { background: var(--warn); }
+  .pip.bad { background: var(--bad); }
+  .pip.fine { background: var(--link); }
+  .pip.dim { background: var(--dim); }
 
   #map-wrap { position: relative; }
   #map { height: 100%; }
@@ -83,9 +131,10 @@
   .red { color: var(--bad); }
   .warn-banner { background: rgba(248,113,113,.1); border: 1px solid var(--bad); padding: 8px 10px; border-radius: 6px; font-size: 12px; margin: 8px 0; color: var(--bad); }
 
-  .legend { position: absolute; top: 12px; right: 12px; background: rgba(22,26,34,.75); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border: 1px solid var(--border); padding: 8px 12px; border-radius: 6px; font-size: 12px; z-index: 1000; }
-  .legend .row { display: flex; align-items: center; gap: 6px; margin: 2px 0; }
-  .legend .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .legend { position: absolute; top: 12px; right: 12px; background: rgba(18,21,28,.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); padding: 10px 12px; border-radius: var(--radius); font-size: 11px; z-index: 1000; line-height: 1.6; }
+  .legend-head { font-size: 9px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
+  .legend .row { display: flex; align-items: center; gap: 6px; }
+  .legend .dot { width: 8px; height: 8px; border-radius: 50%; }
 
   /* Keyboard accessibility — visible focus rings on all interactives */
   :focus { outline: none; }
@@ -101,9 +150,10 @@
   #detail .external a { color: #82b6ff; }
 
   /* Nav buttons */
-  .nav-btn { color: var(--accent-text); text-decoration: none; border: 1px solid var(--border); padding: 5px 10px; border-radius: 5px; font-size: 12px; font-weight: 600; transition: all .12s; }
-  .nav-btn:hover { border-color: var(--accent); background: rgba(255,107,53,.08); }
-  .nav-btn .badge-count { background: var(--accent); color: #000; padding: 1px 5px; border-radius: 8px; font-size: 10px; margin-left: 3px; }
+  .nav-btn { color: var(--text); text-decoration: none; border: 1px solid var(--border); padding: 5px 11px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 500; transition: all var(--t-fast); display: inline-flex; align-items: center; gap: 6px; }
+  .nav-btn:hover { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-text); }
+  .nav-btn.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent-text); }
+  .nav-btn .badge-count { background: var(--accent); color: #000; padding: 0 6px; border-radius: 8px; font-size: 10px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 16px; min-width: 16px; text-align: center; }
 
   /* Fit score badge */
   .fit-badge { display: inline-flex; align-items: center; gap: 3px; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 700; font-variant-numeric: tabular-nums; }
@@ -174,22 +224,21 @@
   }
 
   /* Stats strip */
-  .stats-strip { display: flex; gap: 12px; padding: 8px 12px; background: var(--panel); border-bottom: 1px solid var(--border); font-size: 11px; color: var(--muted); flex-wrap: wrap; align-items: center; }
-  .stats-strip .pill { background: var(--bg); padding: 4px 10px; border-radius: 12px; border: 1px solid var(--border); }
-  .stats-strip .pill b { color: var(--accent-text); margin-left: 4px; }
+  .stats-strip { display: flex; gap: var(--space-2); padding: 8px var(--space-4); background: var(--bg); border-bottom: 1px solid var(--border); font-size: 11px; color: var(--muted); flex-wrap: wrap; align-items: center; }
+  .stats-strip .pill { background: var(--panel); padding: 3px 9px; border-radius: 4px; border: 1px solid var(--border); text-transform: uppercase; letter-spacing: .05em; font-size: 10px; font-weight: 500; }
+  .stats-strip .pill b { color: var(--text); margin-left: 5px; font-weight: 700; text-transform: none; font-size: 12px; font-variant-numeric: tabular-nums; }
 </style>
 </head>
 <body>
 <header>
-  <h1>🏠 Apartment Hunt</h1>
-  <span class="meta">Fadi & Nomi · CVH-anchored · Move-in <b style="color:var(--text)">July 1, 2026</b> · <span id="days-to-move" style="color:var(--accent-text);font-weight:700"></span></span>
-  <span class="meta" id="count"></span>
-  <span class="nav-spacer" style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;">
-    <a href="#" id="show-shortlist" class="nav-btn">⭐ Top picks</a>
-    <a href="#" id="show-favorites" class="nav-btn">❤️ <span id="fav-count">0</span></a>
-    <a href="#" id="show-compare" class="nav-btn">⚖️ Compare <span id="cmp-count">0</span></a>
-    <a href="#" id="show-timeline" class="nav-btn">📅 Timeline</a>
-    <a href="#" id="show-help" class="nav-btn" title="How to use this site">?</a>
+  <h1><span class="wordmark">apartment</span><span style="color:var(--muted);font-weight:400">/</span>hunt</h1>
+  <span class="meta">Move-in <b>Jul 1 2026</b> · <span id="days-to-move" style="color:var(--accent-text);font-weight:600"></span> · <b id="count">—</b></span>
+  <span class="nav-spacer" style="margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;">
+    <a href="#" id="show-shortlist" class="nav-btn">Top picks</a>
+    <a href="#" id="show-favorites" class="nav-btn">Saved <span id="fav-count" class="badge-count">0</span></a>
+    <a href="#" id="show-compare" class="nav-btn">Compare <span id="cmp-count" class="badge-count" style="display:none">0</span></a>
+    <a href="#" id="show-timeline" class="nav-btn">Timeline</a>
+    <a href="#" id="show-help" class="nav-btn" title="How to use" style="padding:5px 9px;font-weight:500">?</a>
   </span>
 </header>
 <div id="shortlist-modal" class="modal">
@@ -252,7 +301,7 @@
 <div class="stats-strip" id="stats-strip"></div>
 <div class="layout">
   <aside id="sidebar">
-    <input type="search" id="search" placeholder="🔍 Search name/address/zone (or 'fit:60' for fit≥60)" style="width:100%;background:var(--panel);border:1px solid var(--border);color:var(--text);padding:8px 10px;border-radius:6px;font-size:13px;margin-bottom:10px;">
+    <div class="search-wrap"><input type="search" id="search" placeholder="Search name, address, zone… (try fit:60 or rent:2000)"></div>
     <div class="filters" id="filters"></div>
     <div class="sort-control">
       <span>Sort:</span>
@@ -274,13 +323,15 @@
   <main id="map-wrap">
     <div id="map"></div>
     <div class="legend">
-      <div class="row"><span class="dot" style="background: var(--accent)"></span> CVH (work anchor)</div>
-      <div class="row"><span class="dot" style="background: var(--good)"></span> Good rating</div>
-      <div class="row"><span class="dot" style="background: var(--warn)"></span> Verify pets / caution</div>
-      <div class="row"><span class="dot" style="background: var(--link)"></span> Fine / neutral</div>
-      <div class="row"><span class="dot" style="background: #10b981"></span> Trail (winter cleared)</div>
+      <div class="legend-head">Legend</div>
+      <div class="row"><span class="dot" style="background: var(--accent)"></span> CVH</div>
+      <div class="row"><span class="dot" style="background: var(--good)"></span> Good</div>
+      <div class="row"><span class="dot" style="background: var(--warn)"></span> Caution</div>
+      <div class="row"><span class="dot" style="background: var(--bad)"></span> Avoid</div>
+      <div class="row"><span class="dot" style="background: var(--link)"></span> Fine</div>
+      <div class="row" style="border-top:1px solid var(--border);margin-top:4px;padding-top:4px;"><span class="dot" style="background: #10b981"></span> Trail (winter)</div>
       <div class="row"><span class="dot" style="background: #a855f7"></span> Trail (3-season)</div>
-      <div class="row"><span class="dot" style="background: #22c55e"></span> Park</div>
+      <div class="row"><span class="dot" style="background: #22c55e"></span> Park (OSM)</div>
     </div>
   </main>
   <aside id="detail">
@@ -308,8 +359,14 @@ window.DATA_READY = Promise.all([
   fetch('data/reviews.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.REVIEWS=d),
   fetch('data/zones.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.ZONES=d),
   fetch('data/timeline.json').then(r=>r.ok?r.json():null).catch(()=>null).then(d=>window.TIMELINE=d),
-  fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>'').then(text=>{
-    if (!text) return;
+  fetch('data/visual_notes.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.VISUAL_NOTES=d),
+  fetch('data/osm_geo.json').then(r=>r.ok?r.json():null).catch(()=>null).then(d=>window.OSM=d),
+  Promise.all([
+    fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
+    fetch('data/wave2_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
+  ]).then(([t1,t2])=>{
+    const text = t1 + '\n' + t2;
+    if (!text.trim()) return;
     const existingIds = new Set(window.APARTMENTS.map(a => a.id));
     let added = 0;
     text.split('\n').filter(Boolean).forEach(line=>{
@@ -322,7 +379,7 @@ window.DATA_READY = Promise.all([
         }
       } catch{}
     });
-    console.log(`Loaded ${added} additional listings from more_listings.jsonl. Total: ${window.APARTMENTS.length}`);
+    console.log(`Loaded ${added} additional listings. Total: ${window.APARTMENTS.length}`);
   })
 ]);
 </script>
@@ -381,22 +438,35 @@ window.DATA_READY = Promise.all([
     })
   }).addTo(map).bindPopup('<b>11 Charlotte (old)</b>');
 
-  // === REAL TRAIL POLYLINES ===
-  if (window.TRAILS) {
-    window.TRAILS.forEach(t => {
-      const poly = L.polyline(t.coords, {
-        color: t.color, weight: 4, opacity: 0.7,
-        dashArray: t.winter_maintained ? null : '8 4'
-      }).addTo(map);
-      poly.bindPopup(`<b>🏃 ${t.name}</b><br><b>${t.length_km}km</b> · ${t.surface}<br>Winter: ${t.winter_maintained ? '✅ MAINTAINED' : '❌ not maintained'}<br><small>${t.note}</small>`);
+  // === OSM REAL TRAIL POLYLINES + PARK POLYGONS ===
+  let osmLayersAdded = false;
+  function addOsmLayers() {
+    if (osmLayersAdded || !window.OSM) return;
+    osmLayersAdded = true;
+    // Parks first (under trails)
+    window.OSM.parks.forEach(p => {
+      const ring = p.geometry.coordinates[0].map(c => [c[1], c[0]]); // GeoJSON [lng,lat] -> Leaflet [lat,lng]
+      L.polygon(ring, {
+        color: '#22c55e', fillColor: '#22c55e', fillOpacity: 0.18, weight: 1.5, opacity: 0.6
+      }).addTo(map).bindPopup(`<b>${p.name}</b><br><span style="color:#888">${p.area_acres} acres</span><br><small>${p.note}</small>`);
+    });
+    // Trails
+    window.OSM.trails.forEach(t => {
+      const lines = t.geometry.coordinates.map(line => line.map(c => [c[1], c[0]]));
+      const color = t.winter_maintained ? '#10b981' : '#a855f7';
+      L.polyline(lines, {
+        color, weight: 3.5, opacity: 0.75,
+        dashArray: t.winter_maintained ? null : '6 4'
+      }).addTo(map).bindPopup(`<b>${t.name}</b><br><span style="color:#888">${t.length_km}km · ${t.surface}</span><br>Winter: ${t.winter_maintained ? '<span style="color:#10b981;font-weight:600">Maintained</span>' : '<span style="color:#a855f7">Not maintained</span>'}<br><small>${t.note}</small>`);
     });
   }
-  // === PARKS ===
-  if (window.PARKS) {
-    window.PARKS.forEach(p => {
-      L.circleMarker([p.lat, p.lng], {
-        radius: 9, color: '#22c55e', fillColor: '#22c55e', fillOpacity: 0.4, weight: 2
-      }).addTo(map).bindPopup(`<b>🌲 ${p.name}</b><br>${p.area_acres} acres<br><small>${p.note}</small>`);
+  // Try immediate, retry on data load
+  addOsmLayers();
+  // Fallback to old TRAILS if OSM not loaded yet (legacy)
+  if (!window.OSM && window.TRAILS) {
+    window.TRAILS.forEach(t => {
+      const poly = L.polyline(t.coords, { color: t.color, weight: 3, opacity: 0.5, dashArray: t.winter_maintained ? null : '6 4' }).addTo(map);
+      poly.bindPopup(`<b>${t.name}</b><br>${t.length_km}km · ${t.surface}<br>Winter: ${t.winter_maintained ? 'Maintained' : 'Not maintained'}<br><small>${t.note}</small>`);
     });
   }
 
@@ -503,12 +573,12 @@ window.DATA_READY = Promise.all([
     })();
     document.getElementById('stats-strip').innerHTML = `
       <span class="pill">Total<b>${APARTMENTS.length}</b></span>
-      <span class="pill">Pet ✓<b>${allPet.length}</b></span>
-      <span class="pill">≤$2,000<b>${cheap.length}</b></span>
-      <span class="pill">CVH ≤15min<b>${tier1.length}</b></span>
+      <span class="pill">Pets verified<b>${allPet.length}</b></span>
+      <span class="pill">Under $2k<b>${cheap.length}</b></span>
+      <span class="pill">CVH ≤15m<b>${tier1.length}</b></span>
       <span class="pill">Median rent<b>$${medianRent?.toLocaleString()||'—'}</b></span>
-      <span class="pill">Best fit<b>${bestFit}</b></span>
-      <span class="pill">My favs<b>${STORE.favorites().length}</b></span>
+      <span class="pill">Best fit<b>${bestFit}/100</b></span>
+      <span class="pill">Saved<b>${STORE.favorites().length}</b></span>
     `;
     const html = sorted.map(a => {
       const cls = ratingClass(a.rating);
@@ -521,6 +591,13 @@ window.DATA_READY = Promise.all([
       const isFav = STORE.isFavorite(a.id);
       const isCmp = compareList.includes(a.id);
       const review = (window.REVIEWS||{})[a.id];
+      const petPip = a.pet_status === 'verified' || a.pet_status === 'verified-large-pets' ? 'good'
+                   : a.pet_status === 'conflicting' ? 'bad'
+                   : a.pet_status === 'verify-specifics' || a.pet_status === 'verify-condo-rules' ? 'warn' : 'dim';
+      const petLabel = a.pet_status === 'verified-large-pets' ? 'Pets / large OK'
+                    : a.pet_status === 'verified' ? 'Pets verified'
+                    : a.pet_status === 'conflicting' ? 'Pets conflict'
+                    : 'Pets unverified';
       return `
         <div class="card ${selectedId===a.id?'selected':''}" data-id="${a.id}" tabindex="0" role="button" aria-label="${a.name}, ${a.zone}" onclick="selectApt('${a.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectApt('${a.id}')}">
           <div class="thumb" style="${thumbStyle}">${thumbInner}</div>
@@ -528,21 +605,20 @@ window.DATA_READY = Promise.all([
             <div class="name">${a.name}</div>
             <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
             <div class="meta">
-              <span class="fit-badge" style="background:${fitColor}22;color:${fitColor};border:1px solid ${fitColor}77">FIT ${fit.score}</span>
-              <span>🏥 ${a.drive_to_cvh_km}km · ${a.drive_to_cvh_min_peak}min</span>
-              ${a.drive_to_union_min_offpeak ? `<span>🚆 ${a.drive_to_union_min_offpeak}min</span>` : ''}
-              <span>🐕 ${a.pet_status === 'verified' ? '✓' : a.pet_status === 'verified-large-pets' ? '✓ BIG' : a.pet_status === 'conflicting' ? '⚠️' : '?'}</span>
-              ${review?.google_rating ? `<span>⭐ ${review.google_rating}</span>` : ''}
-              ${photoCount ? `<span>📸 ${photoCount}</span>` : ''}
+              <span class="fit-badge" style="background:${fitColor}22;color:${fitColor};border:1px solid ${fitColor}55">FIT ${fit.score}</span>
+              <span class="metric"><span class="label">CVH</span><span class="val">${a.drive_to_cvh_min_peak}m</span></span>
+              ${a.drive_to_union_min_offpeak ? `<span class="metric"><span class="label">Union</span><span class="val">${a.drive_to_union_min_offpeak}m</span></span>` : ''}
+              <span class="metric" title="${petLabel}"><span class="pip ${petPip}"></span><span class="val">${a.pet_status === 'verified-large-pets' ? 'lg pet' : a.pet_status === 'verified' ? 'pet' : a.pet_status === 'conflicting' ? 'conflict' : '?'}</span></span>
+              ${review?.google_rating ? `<span class="metric"><span class="label">Rev</span><span class="val">${review.google_rating}</span></span>` : ''}
             </div>
           </div>
           <div class="rent-col">
-            <span class="badge ${cls}">${(a.rating || 'fine').split(' ')[0]}</span>
-            <div class="rent">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}<span class="sub">${a.rent_1bed_high && a.rent_1bed_high !== a.rent_1bed_low ? '–'+a.rent_1bed_high : ''}${a.sqft_high ? ' · '+a.sqft_high+'sf' : ''}</span></div>
+            <span class="badge ${cls}"><span class="dot"></span>${(a.rating || 'fine').split(' ')[0]}</span>
+            <div class="rent">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}<span class="sub">${a.rent_1bed_high && a.rent_1bed_high !== a.rent_1bed_low ? '– $'+a.rent_1bed_high.toLocaleString() : ''}${a.sqft_high ? '  ·  '+a.sqft_high+' sqft' : ''}</span></div>
           </div>
           <div class="actions" onclick="event.stopPropagation()">
-            <button class="${isFav?'on':''}" onclick="toggleFavorite('${a.id}')" title="Favorite" aria-label="Favorite">${isFav?'❤️':'🤍'}</button>
-            <button class="${isCmp?'on':''}" onclick="toggleCompare('${a.id}')" title="Add to compare" aria-label="Compare">⚖️</button>
+            <button class="${isFav?'on':''}" onclick="toggleFavorite('${a.id}')" title="Favorite" aria-label="Favorite">${isFav?'★':'☆'}</button>
+            <button class="${isCmp?'on':''}" onclick="toggleCompare('${a.id}')" title="Add to compare" aria-label="Compare">⇄</button>
           </div>
         </div>`;
     }).join('');
@@ -725,12 +801,13 @@ window.DATA_READY = Promise.all([
   // Filters (multi-select, AND-combined)
   const filterDefs = [
     { id: 'all', label: 'All' },
-    { id: 'cvh-tier1', label: '🏥 CVH ≤15min peak' },
-    { id: 'toronto-close', label: '🌆 Union ≤25min' },
-    { id: 'pet-verified', label: '🐕 Pet verified' },
-    { id: 'cheap', label: '💰 ≤$2,000' },
-    { id: 'has-photos', label: '📸 Has photos' },
-    { id: 'good-rating', label: '⭐ Good rating only' },
+    { id: 'cvh-tier1', label: 'CVH ≤15m' },
+    { id: 'toronto-close', label: 'Union ≤25m' },
+    { id: 'pet-verified', label: 'Pets verified' },
+    { id: 'cheap', label: '≤$2,000' },
+    { id: 'has-photos', label: 'Has photos' },
+    { id: 'good-rating', label: 'Good only' },
+    { id: 'top-fit', label: 'Fit ≥60' },
   ];
   function renderFilters() {
     document.getElementById('filters').innerHTML = filterDefs.map(f =>
@@ -974,7 +1051,7 @@ window.DATA_READY = Promise.all([
   };
 
   // Wait for optional data, then re-render
-  window.DATA_READY.then(() => { renderCards(); if (selectedId) selectApt(selectedId); });
+  window.DATA_READY.then(() => { addOsmLayers(); renderCards(); if (selectedId) selectApt(selectedId); });
 </script>
 </body>
 </html>

@@ -9,7 +9,9 @@ window.PHOTO_MANIFEST = {
     "photos/battleford_glen_erin_2.jpg",
     "photos/battleford_glen_erin_3.jpg",
     "photos/battleford_glen_erin_4.jpg",
-    "photos/battleford_glen_erin_5.jpg"
+    "photos/battleford_glen_erin_5.jpg",
+    "photos/battleford_glen_erin_6.jpg",
+    "photos/battleford_glen_erin_7.jpg"
   ],
   "dialogue": [
     "photos/dialogue_confederation_2.jpg",
@@ -74,7 +76,8 @@ window.PHOTO_MANIFEST = {
     "photos/lincoln_545_3.jpg",
     "photos/west_mall_545_1.png",
     "photos/west_mall_545_2.jpg",
-    "photos/west_mall_545_3.jpg"
+    "photos/west_mall_545_3.jpg",
+    "photos/lincoln_545_1.jpg"
   ],
   "markwood_4365": [
     "photos/markwood_4365_2.jpg",
@@ -132,5 +135,56 @@ window.PHOTO_MANIFEST = {
     "photos/walden_circle_3.jpg",
     "photos/walden_circle_4.jpg",
     "photos/walden_circle_5.jpg"
+  ],
+  "dialogue_confederation": [
+    "photos/dialogue_confederation_1.jpg",
+    "photos/dialogue_confederation_2.jpg",
+    "photos/dialogue_confederation_3.jpg",
+    "photos/dialogue_confederation_4.jpg",
+    "photos/dialogue_confederation_5.jpg"
+  ],
+  "elora_glen_erin": [
+    "photos/elora_glen_erin_1.png",
+    "photos/elora_glen_erin_2.png",
+    "photos/elora_glen_erin_3.png",
+    "photos/elora_glen_erin_4.png",
+    "photos/elora_glen_erin_5.png"
+  ],
+  "mimico_estates_official": [
+    "photos/mimico_estates_official_1.jpg"
+  ],
+  "miracle_4900_glen_erin": [
+    "photos/miracle_4900_glen_erin_1.jpg",
+    "photos/miracle_4900_glen_erin_2.jpg",
+    "photos/miracle_4900_glen_erin_3.jpg",
+    "photos/miracle_4900_glen_erin_4.jpg",
+    "photos/miracle_4900_glen_erin_5.jpg",
+    "photos/miracle_4900_glen_erin_6.jpg",
+    "photos/miracle_4900_glen_erin_7.jpg"
+  ],
+  "shoreline_2313": [
+    "photos/shoreline_2313_1.jpg",
+    "photos/shoreline_2313_2.jpg"
+  ],
+  "skyrise_ref": [
+    "photos/skyrise_ref_1.jpg",
+    "photos/skyrise_ref_2.jpg"
+  ],
+  "station_place_5249": [
+    "photos/station_place_5249_1.jpg"
+  ],
+  "the_collegeway_2285": [
+    "photos/the_collegeway_2285_1.jpg",
+    "photos/the_collegeway_2285_2.jpg",
+    "photos/the_collegeway_2285_3.jpg",
+    "photos/the_collegeway_2285_4.jpg",
+    "photos/the_collegeway_2285_5.jpg"
+  ],
+  "west_mall_545": [
+    "photos/west_mall_545_1.png",
+    "photos/west_mall_545_2.jpg",
+    "photos/west_mall_545_3.jpg",
+    "photos/west_mall_545_4.jpg",
+    "photos/west_mall_545_5.jpg"
   ]
 };

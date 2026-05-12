@@ -1,0 +1,232 @@
+{
+  "arc_erin_mills": {
+    "first_photo": "photos/arc_erin_mills_1.jpg",
+    "era": "2010s+ mid/high-rise (modern glass-curtain lobby visible through floor-to-ceiling windows)",
+    "interior": "Lobby shot only: large grey sectional, low coffee table on grey rug, dark navy perforated-metal feature wall, drum pendant lights, polished tile floor",
+    "ac_type": "not visible (lobby shot)",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "premium",
+    "honest_note": "This is a lobby/amenity photo, not a unit interior. Looks like a corporate-spec lobby in a newer Erin Mills mid-rise; unit finishes cannot be inferred from this image."
+  },
+  "battleford_glen_erin": {
+    "first_photo": "photos/battleford_glen_erin_1.jpg",
+    "era": "older low/mid-rise (interior is a refresh, exterior not shown)",
+    "interior": "Refreshed kitchen: glossy white upper cabinets, dark brown lower cabinets, light quartz/stone counters, stainless fridge/microwave/dishwasher, light wood-look plank floor, white walls, basic chrome single-handle faucet, no island visible",
+    "ac_type": "not visible (no AC unit/vent visible in this shot)",
+    "balcony": "not visible in this shot",
+    "promo_overlay": true,
+    "vibe": "refreshed utilitarian",
+    "honest_note": "Large 'ONE MONTH FREE!*' promo banner covers ~30% of the image. Behind the banner: a contemporary refresh (two-tone cabinets, stainless appliances, plank floor). Promo + bare kitchen = building is trying to fill vacancies. Faucet and sink look basic-builder-grade, not premium."
+  },
+  "dialogue": {
+    "first_photo": "photos/dialogue_confederation_2.jpg",
+    "era": "2020s new-build (finishes are current-generation)",
+    "interior": "Open-plan kitchen+living: light oak/wood-look plank floor, light-wood island with white quartz waterfall counter, two upholstered counter stools (cream boucle), stainless French-door fridge, white tile backsplash, track/recessed lights, wall-mounted TV in living area, light/white palette throughout",
+    "ac_type": "not visible in this shot (no wall head, no central vent obvious)",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "premium",
+    "honest_note": "Reads as a brand-new (or model-suite) condo: waterfall island, current-generation appliances, designer staging. If this is representative, finishes are top-tier for the cohort."
+  },
+  "eau_du_soleil": {
+    "first_photo": "photos/eau_du_soleil_1.jpg",
+    "era": "2010s+ glass condo towers (twisted-form supertall is the signature Eau du Soleil tower)",
+    "interior": "EXTERIOR ONLY: night skyline shot of Humber Bay Shores tower cluster on the lake, glass curtain-wall towers with red crown lighting, water reflection in foreground, parkland/trees",
+    "ac_type": "not applicable (exterior shot)",
+    "balcony": "not visible in this shot (towers have balconies but no unit shown)",
+    "promo_overlay": false,
+    "vibe": "premium",
+    "honest_note": "Marketing skyline shot, not a unit. Confirms lakefront/Humber Bay location but says nothing about unit condition, sqft, or finishes."
+  },
+  "elora": {
+    "first_photo": "photos/elora_1.png",
+    "era": "renovated interior (era of building not visible)",
+    "interior": "Small thumbnail: open-plan living/kitchen, light wood-look plank floor, white walls, white kitchen cabinets in background, dining table with light-wood chairs, low wood TV credenza, modern sofa, recessed lights",
+    "ac_type": "ductless mini-split (white wall-mounted head visible on wall above TV)",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "premium",
+    "honest_note": "Image is low resolution / thumbnail-sized so fine details are limited, but the mini-split head is clearly visible. Mini-split = unit-level cooling, typically lower hydro than central. Staging is current-generation."
+  },
+  "forty_second_45": {
+    "first_photo": "photos/forty_second_45_1.jpg",
+    "era": "not applicable (exterior nature shot)",
+    "interior": "OUTDOOR SCENE ONLY: sandy beach in foreground, Lake Ontario with small waves, clear blue sky, distant tree-lined shoreline (looks like Long Branch / west-end beach)",
+    "ac_type": "not applicable",
+    "balcony": "not applicable",
+    "promo_overlay": false,
+    "vibe": "charming (location-driven)",
+    "honest_note": "This is a neighborhood/beach photo, not the building. Confirms walk-to-beach location but tells us nothing about the building era, finishes, or unit condition. Need other photos to assess."
+  },
+  "james_90": {
+    "first_photo": "photos/james_90_2.jpg",
+    "era": "refreshed/renovated (era of building not visible)",
+    "interior": "Tight thumbnail of kitchen: white shaker cabinets, white tile backsplash, light counters, stainless fridge + microwave + stove, polished/glossy floor (looks like tile or polished concrete)",
+    "ac_type": "not visible in this shot",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "refreshed utilitarian",
+    "honest_note": "Very small image, hard to assess depth. Looks like a clean white-on-white refresh; cabinets read as shaker-style; appliances are full stainless set. No premium details visible (no quartz waterfall, no island)."
+  },
+  "lake_shore_155": {
+    "first_photo": "photos/lake_shore_155_1.jpg",
+    "era": "older building, post-2020 gut renovation (interior is fully modern)",
+    "interior": "Open-plan: light oak/maple plank floors, large kitchen with white flat-panel cabinets (handle-less upper, dark wood island base), white quartz counters, stainless slide-in range + over-range microwave + full-height fridge, in-suite stacked washer/dryer (white front-load), baseboard heaters visible on side walls, recessed pot lights throughout",
+    "ac_type": "not directly visible, but baseboard heaters + no central vents = likely wall/window AC or mini-split (not shown in this shot)",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "premium (post-reno)",
+    "honest_note": "Baseboard heaters indicate older bones (electric or hydronic baseboard). The kitchen is a high-quality reno: stacked W/D in-suite is a real differentiator. No AC unit visible in this frame — buyer should verify."
+  },
+  "lake_shore_2335": {
+    "first_photo": "photos/lake_shore_2335_2.jpg",
+    "era": "1960s-1970s mid-rise tower (8 storeys, modular concrete facade with painted panels)",
+    "interior": "EXTERIOR ONLY: 8-storey concrete-frame building, beige/buff painted panels, each unit has a small private balcony, covered porte-cochère entrance with curved arch supports painted orange/red, adjacent buff-brick low-rise to the right, surrounding lawn/grass",
+    "ac_type": "no central HVAC visible from exterior (no rooftop units evident); units likely have window AC or in-wall sleeves",
+    "balcony": "yes, every unit has a small recessed private balcony (visible all the way up)",
+    "promo_overlay": false,
+    "vibe": "utilitarian institutional",
+    "honest_note": "Classic vintage rental mid-rise. The orange arches under the porte-cochère are a charming retro detail. Building has not been re-cladded; expect original or lightly refreshed unit interiors unless explicitly noted. Balconies are small."
+  },
+  "lakeshore_760": {
+    "first_photo": "photos/lakeshore_760_1.jpg",
+    "era": "newer construction OR heritage-style new build (3-storey red-brick with neo-traditional/heritage detailing)",
+    "interior": "EXTERIOR ONLY: 3-storey red-brick building with white stone trim, ground-floor retail (pharmacy, 'Aleksic Realty', Integrative Interactive Health, etc.), residential windows above on floors 2-3, sidewalk with benches, decorative trees in planters, mid-block streetscape",
+    "ac_type": "not visible from exterior (no obvious window units or rooftop visible)",
+    "balcony": "no balconies visible on this facade (just punched windows)",
+    "promo_overlay": false,
+    "vibe": "boutique",
+    "honest_note": "Mixed-use main-street building. Brick coursing + cast-stone lintels look manufactured/recent rather than 100-year-old (mortar joints too clean, brick too uniform). Small boutique scale (~3 storeys, ~maybe 10-20 units). Walkable retail strip right at the door."
+  },
+  "lakewood_1257": {
+    "first_photo": "photos/lakewood_1257_1.jpg",
+    "era": "older building (parquet floors + soffit ceiling drops are classic 1960s-70s) with a light cosmetic refresh + virtual staging",
+    "interior": "Living + dining area: chevron/herringbone parquet wood floor, white walls, flat ceiling with a small dropped soffit at the dining nook, ceiling-mounted flush light fixture, virtually-staged furniture (grey sofa, white dining chairs, accent chair, rug), glimpse of a small galley kitchen with stainless fridge through a wide opening",
+    "ac_type": "not visible in this shot (no wall head, no vents — older building, likely window/portable AC)",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "charming (parquet) but institutional bones",
+    "honest_note": "The furniture is clearly virtually staged (perspective/scale slightly off, shadows soft). Real unit = parquet floors, white walls, small galley kitchen visible through opening. Parquet is original; reading 1970s vintage. No reno visible — refreshed paint at most."
+  },
+  "landmark_2493": {
+    "first_photo": "photos/landmark_2493_1.jpg",
+    "era": "older building (galley kitchen layout + dropped ceiling clues) with a recent kitchen reno",
+    "interior": "Renovated galley kitchen: white shaker cabinets top and bottom, white subway tile backsplash, dark grey/charcoal quartz counter, stainless slide-in electric range with over-range microwave, stainless fridge at far end, white tile floor in kitchen, designer espresso machine staged on counter, dining nook visible at end with bar-height table + grey curtains + window",
+    "ac_type": "not visible in this shot",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "refreshed",
+    "honest_note": "Solid kitchen reno (shaker + quartz + subway + stainless = standard 2020-era refresh). Galley layout is narrow, which is honest about the original floorplan being older/smaller. White tile floor in kitchen contrasts with rest of unit — likely vinyl or porcelain plank elsewhere (not visible here)."
+  },
+  "lincoln_545": {
+    "first_photo": "photos/lincoln_545_2.jpg",
+    "era": "1970s-1980s concrete tower (parquet floors + baseboard heaters + black-aluminum-frame fixed sliding windows = classic vintage)",
+    "interior": "Empty living room: oak parquet floor (small-tile herringbone-style), white walls, large floor-to-ceiling/floor-to-mid-window glazing with black aluminum frames in a sliding configuration, long baseboard heater under window, view to next building's brick exterior, hallway/foyer visible at right with door to outside hallway",
+    "ac_type": "no central AC visible; baseboard heater = electric baseboard heat; cooling is likely window AC (not present in this empty unit)",
+    "balcony": "no balcony visible in this shot (windows are fixed/sliding, not patio door)",
+    "promo_overlay": false,
+    "vibe": "institutional / dated",
+    "honest_note": "Unrenovated, completely original-condition unit. Parquet is real (not vinyl). Black-frame windows are single-pane or older double-pane vintage = expect drafts and high heating bills with baseboard electric. View is into the neighbouring building. Honest price-driven option, not a finish-driven one."
+  },
+  "markwood_4365": {
+    "first_photo": "photos/markwood_4365_2.jpg",
+    "era": "2020s new-build condo (current-generation finishes, no character cues of older era)",
+    "interior": "Galley kitchen: light-wood/grey laminate cabinets (flat-panel slab), white quartz counters, stacked-tile white backsplash, stainless French-door fridge + over-range microwave + slide-in range + stainless dishwasher, light-wood plank floor, white walls, recessed pot lights, decor staging at right (woven storage baskets)",
+    "ac_type": "not visible in this shot (no wall head — likely central forced-air or fan-coil typical of new condos)",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "premium (current-gen condo spec)",
+    "honest_note": "Looks like a model suite in a brand-new condo. Galley layout (narrow) suggests a small one-bedroom. Standard new-condo developer finishes — clean but not custom; appliances are full-stainless set."
+  },
+  "mill_road_340": {
+    "first_photo": "photos/mill_road_340_2.jpg",
+    "era": "1970s-1980s concrete tower (dark parquet/wood floor + recessed window wells + low ceiling = vintage tower)",
+    "interior": "Living room virtually staged: dark wood-tone floor (looks like dark parquet or plank), white walls, large window with grey drapes, glimpse of more windows around a corner (corner unit), staged cream sofa, white accent chair, glass coffee table, ottoman, abstract artwork; window view shows distant city/sky",
+    "ac_type": "not visible in this shot (no wall head, no vents in frame)",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "refreshed",
+    "honest_note": "Virtually-staged photo (perspective/shadow tells). Dark floor reads as either dark-stained parquet (original-with-refinish) or newer dark plank. Looks like a higher-floor corner unit given the wraparound windows + sky view."
+  },
+  "mimico_estates": {
+    "first_photo": "photos/mimico_estates_1.jpg",
+    "era": "1940s-1950s buff-brick walk-up (classic post-war Toronto rental low-rise)",
+    "interior": "EXTERIOR ONLY: two 3-storey buff-brick walk-up buildings flanking a manicured central courtyard with formal boxwood-hedge knot garden, stone path, small statue + flower bed in foreground; window AC units visible in several windows; mature trees",
+    "ac_type": "window AC units visible on multiple units (sticking out of windows)",
+    "balcony": "no balconies — these are walk-ups with punched windows, not towers",
+    "promo_overlay": false,
+    "vibe": "charming",
+    "honest_note": "Genuine vintage post-war rental community with a real garden courtyard (rare, charming). Window AC = no central HVAC; expect older unit interiors unless explicitly renovated. The garden is the selling feature."
+  },
+  "newholm_8": {
+    "first_photo": "photos/newholm_8_2.jpg",
+    "era": "older building (original parquet glimpse at bottom-left), recently reno'd",
+    "interior": "Kitchen wall: brand-new white shaker cabinets top and bottom (chrome bar pulls), white subway-style tile backsplash, white quartz counter, single-bowl undermount sink with gooseneck chrome faucet, large grey porcelain floor tile, glimpse of original oak parquet flooring just visible at bottom-left (so kitchen has been re-tiled but rest of unit retains parquet)",
+    "ac_type": "not visible in this shot",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "refreshed",
+    "honest_note": "Kitchen is empty/unfurnished (no appliances visible — fridge/stove area is out of frame or not installed yet). Crisp new shaker-+-subway reno over original parquet bones. Honest middle-of-the-road refresh."
+  },
+  "park_lawn_285": {
+    "first_photo": "photos/park_lawn_285_2.jpg",
+    "era": "older building (cast-iron radiator + small-pane casement window = pre-1970s) with a full kitchen gut renovation",
+    "interior": "L-shaped kitchen: light-oak/wood-grain flat-panel cabinets (lower) + white flat-panel uppers, white quartz counter, dark charcoal subway tile backsplash, stainless French-door bottom-freezer fridge + slide-in range + stainless dishwasher + over-range hood, light-wood plank floor, original cast-iron horizontal radiator on right wall under window (painted white), single small casement window above sink",
+    "ac_type": "no AC visible; cast-iron radiator confirms hydronic/steam heat (older building); cooling is likely window AC, not shown",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "boutique (vintage + modern reno mix)",
+    "honest_note": "Honest mix: full modern kitchen reno (light-wood + charcoal subway + stainless) layered onto vintage bones (cast-iron rad, small casement window). Heat is hydronic — comfortable and quiet, but cooling will be a window unit."
+  },
+  "promenade_2301": {
+    "first_photo": "photos/promenade_2301_1.jpg",
+    "era": "cannot determine from this image (tiny thumbnail)",
+    "interior": "Tiny thumbnail behind promo banner: dark wood-look plank floor, white walls, baseboard heater under a window at left, dark island/peninsula counter in middle-distance, glimpse of kitchen at right",
+    "ac_type": "not visible in this shot (baseboard heater confirms electric baseboard heat — cooling likely window AC, not shown)",
+    "balcony": "not visible in this shot",
+    "promo_overlay": true,
+    "vibe": "refreshed",
+    "honest_note": "Image is a small marketing tile with a large 'ONE MONTH FREE!*' purple banner covering ~half of it; the underlying photo is hard to assess. What is visible: baseboard heaters (= older building or electric heat) and dark plank floor (= recent refresh). Promo banner + small photo = limited diligence possible from this single image."
+  },
+  "reid_drive": {
+    "first_photo": "photos/reid_drive_1.jpg",
+    "era": "older building (oak parquet floor + horizontal radiator under window = 1950s-1970s) with a cosmetic refresh + virtual staging",
+    "interior": "Bedroom: small-tile oak parquet floor (real, with realistic wear pattern), white/cream walls, single hung window with painted-white horizontal radiator under sill, view to neighbouring building's columned facade with greenery, virtually-staged bed + nightstands + plant + dresser + framed art",
+    "ac_type": "no AC visible; horizontal radiator = hydronic heat; cooling likely window unit",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "charming",
+    "honest_note": "Real bones (parquet, rad, single window) + virtual staging. Parquet looks well-maintained. View is into neighbouring older building's classical facade. Honest vintage bones, lightly refreshed."
+  },
+  "shoreline_towers": {
+    "first_photo": "photos/shoreline_2313_2.jpg",
+    "era": "older tower (small baseboard heater under window + view to adjacent identical tower = classic concrete-rental cluster), recently refreshed",
+    "interior": "Open-plan living/dining: light-grey wood-look plank floor, cream/off-white walls, full-wall windows on right looking out to adjacent identical brick/concrete tower across courtyard, baseboard heater under window, wall-mounted TV between dining and living, virtually-staged dining table (marble-look) with cream chairs and table settings, large staged sectional sofa + coffee table",
+    "ac_type": "not visible directly; baseboard heater present (= electric baseboard); cooling likely window or wall sleeve, not shown",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "refreshed",
+    "honest_note": "Heavily virtually-staged. Real unit = plank floor + cream walls + baseboard heat + view onto twin tower across the way (= cluster of identical buildings, not lake view in this frame). Floor is plank, not parquet, so this unit has been re-floored."
+  },
+  "collegeway_2285": {
+    "first_photo": "photos/the_collegeway_2285_2.jpg",
+    "era": "older building (popcorn-textured ceiling visible + clean-but-spec layout) with a recent reno",
+    "interior": "Open-plan kitchen + sitting nook: light-oak/light-laminate plank floor, white walls, white flat-panel kitchen cabinets, grey quartz counter with peninsula/bar, white tile backsplash, stainless French-door bottom-freezer fridge + range, two backless wood-top bar stools at the peninsula, sitting nook at left with two grey accent chairs + small side table, hallway extending into the unit, popcorn/stippled ceiling texture (clue to older bones)",
+    "ac_type": "not visible in this shot",
+    "balcony": "not visible in this shot",
+    "promo_overlay": false,
+    "vibe": "refreshed",
+    "honest_note": "Honest mid-range refresh: kitchen + floors look new, but the popcorn ceiling and overall proportions suggest older building bones underneath. Open-concept reno with a peninsula counter rather than a full island."
+  },
+  "walden_circle": {
+    "first_photo": "photos/walden_circle_1.jpg",
+    "era": "1970s-1980s mid-rise (corner-window strip glazing) with a recent refresh",
+    "interior": "Empty open-plan living + kitchen: light-oak/laminate plank floor, white walls + ceiling, distinctive corner-window strip (multiple black-frame windows wrapping around the corner with a view to trees + neighbouring low-rise building), small white-flat-panel kitchen with stainless over-range microwave + stainless range + stainless fridge (just visible), light quartz counter, no island (galley/peninsula configuration)",
+    "ac_type": "not visible in this shot (no wall head, no vents visible in frame)",
+    "balcony": "not visible in this shot (corner windows do not appear to be patio doors)",
+    "promo_overlay": false,
+    "vibe": "refreshed",
+    "honest_note": "Empty unit, no staging — what you see is what you get. Corner-window strip is a real differentiator (lots of light, no neighbour directly across). Refreshed plank + paint + white kitchen on older bones. Small kitchen footprint."
+  }
+}
