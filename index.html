@@ -114,9 +114,12 @@
   #detail .placeholder { color: var(--muted); text-align: center; margin-top: 60px; font-size: 13px; }
   #detail h2 { margin: 0 0 6px; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; line-height: 1.15; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   #detail .addr { color: var(--muted); font-size: 12px; margin-bottom: var(--space-3); font-family: 'SF Mono', Menlo, monospace; }
-  #detail .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: var(--space-3); }
-  #detail .photos img { width: 100%; height: 120px; object-fit: cover; border-radius: var(--radius-sm); background: var(--panel-2); }
-  #detail .photos img.lg { grid-column: span 2; height: 220px; }
+  #detail .photos-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin-bottom: var(--space-3); }
+  #detail .photo { margin: 0; position: relative; }
+  #detail .photo img { width: 100%; height: 120px; object-fit: cover; border-radius: var(--radius-sm); background: var(--panel-2); display: block; }
+  #detail .photo.lg { grid-column: span 2; }
+  #detail .photo.lg img { height: 220px; }
+  #detail .photo figcaption { position: absolute; bottom: 4px; left: 4px; background: rgba(0,0,0,.65); color: #fff; padding: 2px 6px; border-radius: 3px; font-size: 9px; text-transform: uppercase; letter-spacing: .05em; font-weight: 600; backdrop-filter: blur(4px); }
   #detail .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: var(--space-3) 0; }
   #detail .stat { background: var(--panel); padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border); }
   #detail .stat .k { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .08em; font-weight: 500; }
@@ -674,9 +677,21 @@ window.DATA_READY = Promise.all([
       }).addTo(map).bindTooltip(`Real driving route: ${osrm.distance_km}km · ${osrm.duration_min}min off-peak (OSRM)`, {sticky: true});
     }
     const photos = photoMap[id] || [];
+    // Detect synthetic photos (satellite/map mosaics) by filename pattern
+    const REAL_KEYS = new Set(['elora','battleford_glen_erin','reid_drive','collegeway_2285','miracle_4900','arc_erin_mills','dialogue','lincoln_545','mill_road_340','markwood_4365','mimico_estates','walden_circle','lakewood_1257','forty_second_45','lakeshore_760','promenade_2301','park_lawn_285','newholm_8','james_90','shoreline_towers','lake_shore_155','landmark_2493','lake_shore_2335','eau_du_soleil','vita_on_the_lake']);
+    const isSynthetic = !REAL_KEYS.has(id);
+    function photoCaption(path, idx) {
+      if (!isSynthetic) return '';
+      if (path.endsWith('_1.jpg') || path.endsWith('_1.png')) return 'Satellite (Esri)';
+      if (path.endsWith('_2.jpg') || path.endsWith('_2.png')) return 'Street map (OSM)';
+      return '';
+    }
     const photosHtml = photos.length
-      ? photos.map((p, i) => `<img src="${p}" class="${i===0?'lg':''}" onerror="this.style.display='none'">`).join('')
-      : `<div style="grid-column:span 2;background:var(--bg);padding:24px;text-align:center;border:1px dashed var(--border);border-radius:6px;color:var(--muted)">📷 Photos still downloading or unavailable. Listing link below has full photos.</div>`;
+      ? `<div class="photos-wrap">` + photos.map((p, i) => {
+          const cap = photoCaption(p, i);
+          return `<figure class="photo${i===0?' lg':''}"><img src="${p}" onerror="this.parentNode.style.display='none'">${cap?`<figcaption>${cap}</figcaption>`:''}</figure>`;
+        }).join('') + `</div>${isSynthetic?'<div style="font-size:11px;color:var(--muted);margin-top:-4px;margin-bottom:8px;font-style:italic">No publisher photos for this building. Showing satellite + street map. Listing link has real photos when available.</div>':''}`
+      : `<div style="background:var(--panel);padding:24px;text-align:center;border:1px dashed var(--border);border-radius:6px;color:var(--muted);font-size:12px">Photos still downloading or unavailable. Listing link below has full photos.</div>`;
     const cls = ratingClass(a.rating);
     const petWarn = a.pet_status === 'conflicting' ? '<div class="warn-banner">⚠️ Pet policy CONFLICTS across listing sites — verify in writing before viewing.</div>' :
       a.pet_status === 'verify-condo-rules' ? '<div class="warn-banner">⚠️ CONDO unit — RTA s.14 does NOT protect pet rights if condo declaration bans pets. Demand declaration before signing.</div>' :
