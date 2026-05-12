@@ -326,15 +326,18 @@
   <main id="map-wrap">
     <div id="map"></div>
     <div class="legend">
-      <div class="legend-head">Legend</div>
-      <div class="row"><span class="dot" style="background: var(--accent)"></span> CVH</div>
+      <div class="legend-head">Pins</div>
+      <div class="row"><span class="dot" style="background: var(--accent);width:10px;height:10px;border-radius:50%;border:1.5px solid #fff"></span> CVH</div>
       <div class="row"><span class="dot" style="background: var(--good)"></span> Good</div>
       <div class="row"><span class="dot" style="background: var(--warn)"></span> Caution</div>
       <div class="row"><span class="dot" style="background: var(--bad)"></span> Avoid</div>
       <div class="row"><span class="dot" style="background: var(--link)"></span> Fine</div>
-      <div class="row" style="border-top:1px solid var(--border);margin-top:4px;padding-top:4px;"><span class="dot" style="background: #10b981"></span> Trail (winter)</div>
+      <div class="legend-head" style="margin-top:8px">Map</div>
+      <div class="row"><span class="dot" style="background: #10b981"></span> Trail (winter)</div>
       <div class="row"><span class="dot" style="background: #a855f7"></span> Trail (3-season)</div>
       <div class="row"><span class="dot" style="background: #22c55e"></span> Park (OSM)</div>
+      <div class="row"><span style="width:14px;height:0;border-top:2px dashed var(--accent)"></span> Route to CVH (OSRM)</div>
+      <div class="row"><span style="width:14px;height:0;border-top:1px dashed var(--accent)"></span> 15/25m radius (rough)</div>
     </div>
   </main>
   <aside id="detail">
@@ -424,9 +427,9 @@ window.DATA_READY = Promise.all([
     subdomains: 'abcd'
   }).addTo(map);
 
-  // CVH 15min and 25min drive radius (rough — straight-line equivalents)
-  L.circle([CVH.lat, CVH.lng], {radius: 8000, color: '#ff6b35', fillOpacity: 0.04, weight: 1, dashArray: '4 6'}).addTo(map).bindTooltip("~15min drive radius (off-peak)", {permanent: false});
-  L.circle([CVH.lat, CVH.lng], {radius: 14000, color: '#ff6b35', fillOpacity: 0.02, weight: 1, dashArray: '2 8'}).addTo(map).bindTooltip("~25min drive radius (off-peak)", {permanent: false});
+  // CVH approximate drive radius rings (real per-building routes via OSRM shown on selection)
+  L.circle([CVH.lat, CVH.lng], {radius: 8000, color: '#ff7a45', fillOpacity: 0.04, weight: 1, dashArray: '4 6', interactive: false}).addTo(map);
+  L.circle([CVH.lat, CVH.lng], {radius: 14000, color: '#ff7a45', fillOpacity: 0.02, weight: 1, dashArray: '2 8', interactive: false}).addTo(map);
   // CVH marker
   L.marker([CVH.lat, CVH.lng], {
     icon: L.divIcon({
@@ -491,7 +494,7 @@ window.DATA_READY = Promise.all([
   const markers = {};
   function pinColor(apt) {
     const c = ratingClass(apt.rating);
-    return c === 'good' ? '#4ade80' : c === 'warn' ? '#fbbf24' : c === 'bad' ? '#f87171' : '#60a5fa';
+    return c === 'good' ? '#4ade80' : c === 'warn' ? '#fbbf24' : c === 'bad' ? '#f87171' : '#82b6ff';
   }
   function pinGlyph(apt) {
     const c = ratingClass(apt.rating);

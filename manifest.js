@@ -7,9 +7,17 @@ window.PHOTO_MANIFEST = {
     "photos/ann_5_1.jpg",
     "photos/ann_5_2.png"
   ],
+  "annie_craig_38": [
+    "photos/annie_craig_38_1.jpg",
+    "photos/annie_craig_38_2.png"
+  ],
   "applewood_on_park": [
     "photos/applewood_on_park_1.jpg",
     "photos/applewood_on_park_2.png"
+  ],
+  "applewood_towers_1055": [
+    "photos/applewood_towers_1055_1.jpg",
+    "photos/applewood_towers_1055_2.png"
   ],
   "arc_erin_mills": [
     "photos/arc_erin_mills_1.jpg",
@@ -39,16 +47,29 @@ window.PHOTO_MANIFEST = {
     "photos/battleford_glen_erin_4.jpg",
     "photos/battleford_glen_erin_5.jpg"
   ],
+  "bloor_1475": [
+    "photos/bloor_1475_1.jpg",
+    "photos/bloor_1475_2.png"
+  ],
+  "bridgewood_1867": [
+    "photos/bridgewood_1867_1.jpg",
+    "photos/bridgewood_1867_2.png"
+  ],
   "brightstone_6570": [
     "photos/brightstone_6570_1.jpg",
     "photos/brightstone_6570_2.png"
+  ],
+  "bristol_arms_1745": [
+    "photos/bristol_arms_1745_1.jpg",
+    "photos/bristol_arms_1745_2.png"
   ],
   "bristol_court_6550": [
     "photos/bristol_court_6550_1.jpg",
     "photos/bristol_court_6550_2.png"
   ],
   "bromsgate_2150": [
-    "photos/bromsgate_2150_1.jpg"
+    "photos/bromsgate_2150_1.jpg",
+    "photos/bromsgate_2150_2.png"
   ],
   "camilla_2070": [
     "photos/camilla_2070_1.jpg",
@@ -123,6 +144,10 @@ window.PHOTO_MANIFEST = {
     "photos/embassy_99_agnes_1.jpg",
     "photos/embassy_99_agnes_2.png"
   ],
+  "forestview_2077": [
+    "photos/forestview_2077_1.jpg",
+    "photos/forestview_2077_2.png"
+  ],
   "forestwoods_1547": [
     "photos/forestwoods_1547_1.jpg",
     "photos/forestwoods_1547_2.png"
@@ -132,6 +157,10 @@ window.PHOTO_MANIFEST = {
     "photos/forty_second_45_2.jpg",
     "photos/forty_second_45_3.jpg",
     "photos/forty_second_45_4.jpg"
+  ],
+  "havenwood_3410": [
+    "photos/havenwood_3410_1.jpg",
+    "photos/havenwood_3410_2.png"
   ],
   "helene_28n": [
     "photos/helene_28n_1.jpg",
@@ -218,6 +247,10 @@ window.PHOTO_MANIFEST = {
     "photos/lincoln_545_3.jpg",
     "photos/west_mall_545_1.png",
     "photos/west_mall_545_2.jpg"
+  ],
+  "linwood_1785": [
+    "photos/linwood_1785_1.jpg",
+    "photos/linwood_1785_2.png"
   ],
   "lolita_620": [
     "photos/lolita_620_1.jpg",
@@ -377,12 +410,19 @@ window.PHOTO_MANIFEST = {
     "photos/sherobee_2170_1.jpg",
     "photos/sherobee_2170_2.png"
   ],
+  "shore_breeze_30": [
+    "photos/shore_breeze_30_1.jpg"
+  ],
   "shoreline_towers": [
     "photos/shoreline_2313_1.jpg",
     "photos/shoreline_2313_2.jpg"
   ],
   "station_place_5249": [
     "photos/station_place_5249_1.jpg"
+  ],
+  "strathroy_1470": [
+    "photos/strathroy_1470_1.jpg",
+    "photos/strathroy_1470_2.png"
   ],
   "collegeway_2285": [
     "photos/the_collegeway_2285_1.jpg",
@@ -417,5 +457,9 @@ window.PHOTO_MANIFEST = {
   "waterford_2645": [
     "photos/waterford_2645_1.jpg",
     "photos/waterford_2645_2.png"
+  ],
+  "westwood_1465": [
+    "photos/westwood_1465_1.jpg",
+    "photos/westwood_1465_2.png"
   ]
 };
