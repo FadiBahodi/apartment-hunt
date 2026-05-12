@@ -648,14 +648,14 @@ APARTMENTS.push(
     zone: "Cooksville",
     rent_1bed_low: 1850, rent_1bed_high: 2150,
     sqft_low: null, sqft_high: null,
-    pets: "yes — cats and dogs", pet_status: "verified",
+    pets: "CONFLICTING — Compten now lists NO PETS; verify in writing", pet_status: "conflicting",
     drive_to_cvh_km: 8, drive_to_cvh_min_offpeak: 12, drive_to_cvh_min_peak: 25,
     drive_to_union_min_offpeak: 28,
     running: "Cooksville Creek Trail + Burnhamthorpe Trail (winter-maintained!) accessible.",
     transit: "Cooksville GO 12 min walk; Hurontario LRT future stop",
     promo: null,
-    red_flags: "Hurontario LRT construction chaos through 2028",
-    rating: "POTENTIAL",
+    red_flags: "Hurontario LRT construction chaos through 2028. Pet policy now CONFLICTING per Compten.",
+    rating: "CAUTION — pet conflict",
     listing_url: "https://www.zumper.com/apartments-for-rent/mississauga-on/cooksville",
     lat: 43.5797, lng: -79.6090,
     pros: ["Pool + garage parking + concierge-style amenities", "Cooksville GO 12 min", "Burnhamthorpe winter trail"],
@@ -749,6 +749,16 @@ const AVOID = [
     name: "18 Reid Dr",
     why: "NO PETS",
     source: "Zumper listing"
+  },
+  {
+    name: "2170 Sherobee Rd (The Argosy)",
+    why: "2.0/5 reviews — roach infestations, rusty balconies, unhelpful management",
+    source: "CondoAdvisory; review aggregation 2026"
+  },
+  {
+    name: "1257 Lakeshore Rd E (Lakewood I)",
+    why: "2.8/5 — cockroaches/ants on upper floors, incomplete renos, broken bathroom exhaust",
+    source: "Birdeye 19 reviews"
   }
 ];
 
