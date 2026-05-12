@@ -197,15 +197,18 @@
   .tl-item .urg-normal { color: var(--muted); font-size: 10px; text-transform: uppercase; }
 
   /* Detail extras */
-  .cost-table { width: 100%; font-size: 12px; border-collapse: collapse; margin: 8px 0; }
-  .cost-table td { padding: 4px 6px; border-bottom: 1px solid var(--border); }
-  .cost-table td:last-child { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .cost-table { width: 100%; font-size: 12px; border-collapse: collapse; margin: 6px 0; }
+  .cost-table td { padding: 5px 6px; border-bottom: 1px solid var(--border); }
+  .cost-table td:first-child { color: var(--muted); }
+  .cost-table td:last-child { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; color: var(--text); }
   .cost-table tr.total td { border-top: 2px solid var(--accent); border-bottom: none; padding-top: 8px; color: var(--accent-text); font-weight: 700; font-size: 13px; }
-  .notes-area { width: 100%; min-height: 80px; background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 8px; border-radius: 6px; font-family: inherit; font-size: 12px; resize: vertical; }
-  .action-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
-  .action-row button { background: var(--bg); border: 1px solid var(--border); color: var(--text); padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; transition: all .12s; }
-  .action-row button.on { border-color: var(--accent); color: var(--accent); background: rgba(255,107,53,.08); }
-  .action-row button:hover { border-color: var(--accent); }
+  .cost-table tr.total td:first-child { color: var(--accent-text); }
+  .notes-area { width: 100%; min-height: 80px; background: var(--panel); border: 1px solid var(--border); color: var(--text); padding: 8px 10px; border-radius: var(--radius-sm); font-family: inherit; font-size: 12px; resize: vertical; line-height: 1.5; transition: border-color var(--t-fast); }
+  .notes-area:focus { outline: none; border-color: var(--accent); }
+  .action-row { display: flex; gap: 4px; flex-wrap: wrap; margin: var(--space-2) 0; }
+  .action-row button { background: var(--panel); border: 1px solid var(--border); color: var(--text); padding: 5px 10px; border-radius: var(--radius-sm); cursor: pointer; font-size: 11px; font-weight: 500; transition: all var(--t-fast); }
+  .action-row button.on { border-color: var(--accent); color: var(--accent-text); background: var(--accent-soft); }
+  .action-row button:hover { border-color: var(--border-strong); }
 
   .fit-bar { width: 100%; height: 8px; background: var(--bg); border-radius: 4px; overflow: hidden; margin: 6px 0; }
   .fit-bar-fill { height: 100%; transition: width .3s; }
@@ -315,8 +318,8 @@
       </select>
     </div>
     <div id="cards"></div>
-    <div style="margin-top: 24px; padding: 12px; border: 1px solid var(--bad); border-radius: 6px; background: rgba(248,113,113,.05);">
-      <h3 style="margin: 0 0 8px; font-size: 12px; color: var(--bad); text-transform: uppercase;">⛔ Hard avoid (documented)</h3>
+    <div style="margin-top: 24px; padding: 10px 12px; border: 1px solid var(--bad); border-radius: var(--radius); background: var(--bad-soft);">
+      <h3 style="margin: 0 0 8px; font-size: 10px; color: var(--bad); text-transform: uppercase; letter-spacing: .08em; font-weight: 600;">Hard avoid · documented</h3>
       <div id="avoid"></div>
     </div>
   </aside>
@@ -335,8 +338,12 @@
     </div>
   </main>
   <aside id="detail">
-    <button id="detail-close" onclick="document.getElementById('detail').classList.remove('show')" aria-label="Close detail">✕</button>
-    <div class="placeholder">Click a building or pin to see details, photos, drive times.</div>
+    <button id="detail-close" onclick="document.getElementById('detail').classList.remove('show')" aria-label="Close detail">×</button>
+    <div class="placeholder">
+      <div style="font-size:48px;color:var(--dim);margin-bottom:12px">◯</div>
+      <div style="font-weight:600;font-size:15px;color:var(--text);margin-bottom:6px">Select a building</div>
+      <div>Click a card, pin, or use search to open the detail panel with photos, cost decoder, reviews, fit breakdown, and notes.</div>
+    </div>
   </aside>
 </div>
 
@@ -608,7 +615,7 @@ window.DATA_READY = Promise.all([
             <div class="name">${a.name}</div>
             <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
             <div class="meta">
-              <span class="fit-badge" style="background:${fitColor}22;color:${fitColor};border:1px solid ${fitColor}55">FIT ${fit.score}</span>
+              <span class="fit-badge" style="background:${fitColor}1f;color:${fitColor};border:1px solid ${fitColor}3a">Fit ${fit.score}</span>
               <span class="metric"><span class="label">CVH</span><span class="val">${a.drive_to_cvh_min_peak}m</span></span>
               ${a.drive_to_union_min_offpeak ? `<span class="metric"><span class="label">Union</span><span class="val">${a.drive_to_union_min_offpeak}m</span></span>` : ''}
               <span class="metric" title="${petLabel}"><span class="pip ${petPip}"></span><span class="val">${a.pet_status === 'verified-large-pets' ? 'lg pet' : a.pet_status === 'verified' ? 'pet' : a.pet_status === 'conflicting' ? 'conflict' : '?'}</span></span>
@@ -759,7 +766,7 @@ window.DATA_READY = Promise.all([
 
     document.getElementById('detail').innerHTML = `
       <button id="detail-close" onclick="document.getElementById('detail').classList.remove('show')" aria-label="Close detail">✕</button>
-      <h2>${a.name} <span class="fit-badge" style="background:${fitColor}22;color:${fitColor};border:1px solid ${fitColor}">FIT ${fit.score}</span> <span class="badge ${cls}">${a.rating}</span></h2>
+      <h2>${a.name} <span class="fit-badge" style="background:${fitColor}1f;color:${fitColor};border:1px solid ${fitColor}55;font-size:12px;padding:3px 8px">Fit ${fit.score}</span> <span class="badge ${cls}"><span class="dot"></span>${a.rating}</span></h2>
       <div class="addr">${a.address}</div>
       <div class="action-row">
         <button class="${isFav?'on':''}" onclick="toggleFavorite('${a.id}')">${isFav?'★ Saved':'☆ Save'}</button>
@@ -861,7 +868,7 @@ window.DATA_READY = Promise.all([
   document.getElementById('search').oninput = e => { searchTerm = e.target.value; renderCards(); };
 
   document.getElementById('avoid').innerHTML = AVOID.map(a =>
-    `<div style="font-size:11px;margin-bottom:8px;"><b>${a.name}</b><br><span style="color:var(--muted)">${a.why}</span><br><small style="color:var(--muted);font-style:italic">${a.source}</small></div>`
+    `<div style="font-size:11px;margin-bottom:8px;line-height:1.45;"><b style="color:var(--text)">${a.name}</b><div style="color:var(--muted);margin-top:2px">${a.why}</div><div style="color:var(--dim);font-style:italic;margin-top:1px;font-size:10px">${a.source}</div></div>`
   ).join('');
 
   window.selectApt = selectApt;
