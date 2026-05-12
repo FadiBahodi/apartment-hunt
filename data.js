@@ -674,12 +674,12 @@ APARTMENTS.push(
     running: "Cooksville Creek 5 min walk; Burnhamthorpe Trail spine.",
     transit: "Cooksville GO 8 min walk",
     promo: null,
-    red_flags: null,
-    rating: "POTENTIAL",
+    red_flags: "AVOID — 2.0/5 reviews: roach infestations, rusty balconies, unhelpful management (CondoAdvisory). Documented in AVOID list.",
+    rating: "CAUTION — documented red flags",
     listing_url: "https://www.zumper.com/apartments-for-rent/mississauga-on/cooksville",
     lat: 43.5829, lng: -79.6147,
     pros: ["Pool + fitness", "Cooksville GO walkable", "Bus + future LRT"],
-    cons: ["LRT chaos until 2028"]
+    cons: ["DOCUMENTED ROACH INFESTATIONS", "Rusty balconies", "Unhelpful management", "LRT chaos until 2028"]
   },
   {
     id: "dixie_square_1750",
