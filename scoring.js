@@ -10,21 +10,29 @@
 //    7 — Building rating quality (good > caution > avoid)
 //    5 — Sqft vs price (value/space)
 
-window.computeFitScore = function(a, costs) {
+window.computeFitScore = function(a, costs, osrm) {
   let score = 0;
   const breakdown = [];
 
   // 1. CVH commute (30 pts max)
-  // <8min peak = 30, 8-12 = 25, 12-17 = 18, 17-25 = 10, 25-35 = 4, >35 = 0
-  const peak = a.drive_to_cvh_min_peak || 99;
+  // Prefer real OSRM off-peak minutes when available, scale +30% for "peak" estimation
+  const osrmRoute = (osrm || window.OSRM || {})[a.id];
+  let timeUsed, source;
+  if (osrmRoute) {
+    timeUsed = Math.round(osrmRoute.duration_min * 1.4); // off-peak → peak estimate
+    source = `${osrmRoute.duration_min}m OSRM off-peak (~${timeUsed}m peak)`;
+  } else {
+    timeUsed = a.drive_to_cvh_min_peak || 99;
+    source = `${timeUsed}m peak (est)`;
+  }
   let cvhPts = 0;
-  if (peak <= 8) cvhPts = 30;
-  else if (peak <= 12) cvhPts = 25;
-  else if (peak <= 17) cvhPts = 18;
-  else if (peak <= 25) cvhPts = 10;
-  else if (peak <= 35) cvhPts = 4;
+  if (timeUsed <= 8) cvhPts = 30;
+  else if (timeUsed <= 12) cvhPts = 25;
+  else if (timeUsed <= 17) cvhPts = 18;
+  else if (timeUsed <= 25) cvhPts = 10;
+  else if (timeUsed <= 35) cvhPts = 4;
   score += cvhPts;
-  breakdown.push({k: 'CVH commute', v: cvhPts, max: 30, note: `${peak}min peak`});
+  breakdown.push({k: 'CVH commute', v: cvhPts, max: 30, note: source});
 
   // 2. Running (20 pts) — proximity + winter access
   // Heuristic: zone-based for now; can be improved when zones.json arrives
