@@ -695,7 +695,7 @@ window.DATA_READY = Promise.all([
         ['Renter insurance', '~$25/mo (req)'],
       ].filter(Boolean);
       costHtml = `
-        <h3>💰 Cost decoder</h3>
+        <h3>Cost decoder</h3>
         <table class="cost-table">${rows.map(([k,v])=>`<tr><td>${k}</td><td>${v}</td></tr>`).join('')}
           <tr class="total"><td>Est. total/month</td><td>~$${total.toLocaleString()}</td></tr>
         </table>
@@ -711,9 +711,9 @@ window.DATA_READY = Promise.all([
       if (review.top_3_negative_themes?.length) themes.push(`<div><b style="color:var(--bad)">− Negative themes:</b> ${review.top_3_negative_themes.join(' · ')}</div>`);
       const quotes = (review.reddit_quotes||[]).slice(0,2).map(q=>`<blockquote style="border-left:2px solid var(--muted);padding-left:8px;margin:4px 0;color:var(--muted);font-style:italic;font-size:11px">"${q.text}" ${q.url?`<a href="${q.url}" target="_blank" style="color:var(--link)">↗</a>`:''}</blockquote>`).join('');
       reviewHtml = `
-        <h3>📊 Reviews & sentiment</h3>
+        <h3>Reviews & sentiment</h3>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:6px;">
-          ${review.google_rating ? `<div class="stat"><div class="k">Google</div><div class="v">⭐ ${review.google_rating} <span style="color:var(--muted);font-size:10px">(${review.google_review_count||0})</span></div></div>` : ''}
+          ${review.google_rating ? `<div class="stat"><div class="k">Google</div><div class="v">${review.google_rating} <span style="color:var(--muted);font-size:10px">(${review.google_review_count||0})</span></div></div>` : ''}
           ${review.rentsafeto_score ? `<div class="stat"><div class="k">RentSafeTO</div><div class="v">${review.rentsafeto_score}/100</div></div>` : ''}
           <div class="stat"><div class="k">Reddit sentiment</div><div class="v" style="color:${review.reddit_sentiment==='positive'?'var(--good)':review.reddit_sentiment==='negative'?'var(--bad)':'var(--muted)'}">${review.reddit_sentiment||'—'}</div></div>
         </div>
@@ -726,14 +726,14 @@ window.DATA_READY = Promise.all([
     let zoneHtml = '';
     if (zone) {
       zoneHtml = `
-        <h3>🏘 Zone: ${a.zone}</h3>
+        <h3>Zone — ${a.zone}</h3>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;font-size:11px;margin-bottom:6px;">
           <div class="stat"><div class="k">Walk</div><div class="v">${zone.walk_score||'—'}/100</div></div>
           <div class="stat"><div class="k">Transit</div><div class="v">${zone.transit_score||'—'}/100</div></div>
           <div class="stat"><div class="k">Bike</div><div class="v">${zone.bike_score||'—'}/100</div></div>
         </div>
-        ${zone.nearest_full_grocery ? `<div style="font-size:12px;color:var(--muted)">🛒 Grocery: <b style="color:var(--text)">${zone.nearest_full_grocery.name}</b> (~${zone.nearest_full_grocery.minutes_walk}min walk)</div>` : ''}
-        ${zone.nearest_running_club ? `<div style="font-size:12px;color:var(--muted)">🏃 Run club: ${zone.nearest_running_club}</div>` : ''}
+        ${zone.nearest_full_grocery ? `<div style="font-size:12px;color:var(--muted)">Grocery: <b style="color:var(--text)">${zone.nearest_full_grocery.name}</b> (~${zone.nearest_full_grocery.minutes_walk}m walk)</div>` : ''}
+        ${zone.nearest_running_club ? `<div style="font-size:12px;color:var(--muted)">Run club: ${zone.nearest_running_club}</div>` : ''}
         ${zone.vibe ? `<div style="font-size:12px;color:var(--muted);margin-top:4px;font-style:italic">${zone.vibe}</div>` : ''}
         ${zone.ideal_for ? `<div style="font-size:12px;color:var(--accent-text);margin-top:4px"><b>Best for:</b> ${zone.ideal_for}</div>` : ''}
       `;
@@ -749,10 +749,10 @@ window.DATA_READY = Promise.all([
       <h2>${a.name} <span class="fit-badge" style="background:${fitColor}22;color:${fitColor};border:1px solid ${fitColor}">FIT ${fit.score}</span> <span class="badge ${cls}">${a.rating}</span></h2>
       <div class="addr">${a.address}</div>
       <div class="action-row">
-        <button class="${isFav?'on':''}" onclick="toggleFavorite('${a.id}')">${isFav?'❤️ Saved':'🤍 Save'}</button>
-        <button class="${isCmp?'on':''}" onclick="toggleCompare('${a.id}')">⚖️ ${isCmp?'In compare':'Compare'}</button>
-        <button class="${calledAt?'on':''}" onclick="STORE.markCalled('${a.id}');selectApt('${a.id}')">📞 ${calledAt?'Called '+new Date(calledAt).toLocaleDateString():'Mark called'}</button>
-        <button class="${touredAt?'on':''}" onclick="STORE.markToured('${a.id}');selectApt('${a.id}')">👀 ${touredAt?'Toured '+new Date(touredAt).toLocaleDateString():'Mark toured'}</button>
+        <button class="${isFav?'on':''}" onclick="toggleFavorite('${a.id}')">${isFav?'★ Saved':'☆ Save'}</button>
+        <button class="${isCmp?'on':''}" onclick="toggleCompare('${a.id}')">⇄ ${isCmp?'In compare':'Compare'}</button>
+        <button class="${calledAt?'on':''}" onclick="STORE.markCalled('${a.id}');selectApt('${a.id}')">${calledAt?'✓ Called '+new Date(calledAt).toLocaleDateString():'Mark called'}</button>
+        <button class="${touredAt?'on':''}" onclick="STORE.markToured('${a.id}');selectApt('${a.id}')">${touredAt?'✓ Toured '+new Date(touredAt).toLocaleDateString():'Mark toured'}</button>
       </div>
       ${petWarn}
       <div class="photos">${photosHtml}</div>
@@ -772,27 +772,42 @@ window.DATA_READY = Promise.all([
       ${costHtml}
       ${reviewHtml}
       ${zoneHtml}
-      <h3>🏃 Running</h3>
+      <h3>Running</h3>
       <p>${a.running}</p>
-      <h3>🚆 Transit</h3>
+      <h3>Transit</h3>
       <p>${a.transit}</p>
-      ${a.visual_note ? `<h3>👁 What the photos actually show</h3><p style="background:rgba(96,165,250,.06);border-left:3px solid var(--link);padding:8px 10px;border-radius:4px;font-size:13px;">${a.visual_note}</p>` : ''}
-      ${a.pros && a.pros.length ? `<h3>✅ Pros</h3><ul class="pros">${a.pros.map(p=>`<li>${p}</li>`).join('')}</ul>` : ''}
-      ${a.cons && a.cons.length ? `<h3>❌ Cons</h3><ul class="cons">${a.cons.map(p=>`<li>${p}</li>`).join('')}</ul>` : ''}
-      ${a.red_flags ? `<h3>⚠️ Red flags / notes</h3><p class="red">${a.red_flags}</p>` : ''}
-      <h3>📝 My notes</h3>
+      ${(() => {
+        const vn = (window.VISUAL_NOTES||{})[a.id];
+        if (vn && !vn.error) {
+          return `<h3>Photo audit (AI-inspected)</h3>
+            <div style="background:rgba(130,182,255,.06);border-left:3px solid var(--link);padding:10px 12px;border-radius:4px;font-size:12px;line-height:1.55;">
+              <div><b>Era:</b> ${vn.era||'—'}</div>
+              ${vn.interior ? `<div><b>Interior:</b> ${vn.interior}</div>` : ''}
+              ${vn.ac_type ? `<div><b>AC:</b> ${vn.ac_type}</div>` : ''}
+              ${vn.balcony ? `<div><b>Balcony:</b> ${vn.balcony}</div>` : ''}
+              <div><b>Vibe:</b> ${vn.vibe||'—'}</div>
+              ${vn.honest_note ? `<div style="margin-top:6px;color:var(--accent-text)"><b>Honest call:</b> ${vn.honest_note}</div>` : ''}
+              ${vn.promo_overlay ? `<div style="margin-top:6px;color:var(--warn)"><b>Promo overlay:</b> photo obscured by marketing card — limited interior visibility</div>` : ''}
+            </div>`;
+        }
+        return a.visual_note ? `<h3>Photo audit</h3><p style="background:rgba(130,182,255,.06);border-left:3px solid var(--link);padding:8px 10px;border-radius:4px;font-size:12px;">${a.visual_note}</p>` : '';
+      })()}
+      ${a.pros && a.pros.length ? `<h3>Pros</h3><ul class="pros">${a.pros.map(p=>`<li>${p}</li>`).join('')}</ul>` : ''}
+      ${a.cons && a.cons.length ? `<h3>Cons</h3><ul class="cons">${a.cons.map(p=>`<li>${p}</li>`).join('')}</ul>` : ''}
+      ${a.red_flags ? `<h3>Red flags</h3><p class="red">${a.red_flags}</p>` : ''}
+      <h3>My notes</h3>
       <textarea class="notes-area" placeholder="Type your observations from calls, tours, gut reactions…" oninput="STORE.setNote('${a.id}', this.value)">${STORE.getNote(a.id).replace(/</g,'&lt;')}</textarea>
       <div class="external">
-        <a href="${a.listing_url}" target="_blank">📄 Listing</a>
-        <a href="#" onclick="openInquiry('${a.id}');return false;">✉️ Inquiry email</a>
-        <a href="${gmapsAddrUrl}" target="_blank">📍 Maps</a>
-        <a href="${gmapsUrl}" target="_blank">🚗 Drive→CVH</a>
-        <a href="${transitUrl}" target="_blank">🚇 Transit→Union</a>
-        <a href="${streetviewUrl}" target="_blank">👁 Street View</a>
-        <a href="${stravaHeatmapUrl}" target="_blank">🔥 Strava heatmap</a>
-        <a href="${allTrailsUrl}" target="_blank">🥾 AllTrails nearby</a>
-        <a href="https://www.google.com/search?q=${encodeURIComponent(a.address + ' reviews reddit')}" target="_blank">🔍 Reddit</a>
-        ${review?.google_reviews_url ? `<a href="${review.google_reviews_url}" target="_blank">📝 Google reviews</a>` : ''}
+        <a href="${a.listing_url}" target="_blank">Listing</a>
+        <a href="#" onclick="openInquiry('${a.id}');return false;">Inquiry email</a>
+        <a href="${gmapsAddrUrl}" target="_blank">Maps</a>
+        <a href="${gmapsUrl}" target="_blank">Drive → CVH</a>
+        <a href="${transitUrl}" target="_blank">Transit → Union</a>
+        <a href="${streetviewUrl}" target="_blank">Street View</a>
+        <a href="${stravaHeatmapUrl}" target="_blank">Strava heatmap</a>
+        <a href="${allTrailsUrl}" target="_blank">AllTrails</a>
+        <a href="https://www.google.com/search?q=${encodeURIComponent(a.address + ' reviews reddit')}" target="_blank">Reddit search</a>
+        ${review?.google_reviews_url ? `<a href="${review.google_reviews_url}" target="_blank">Google reviews</a>` : ''}
       </div>
     `;
     document.querySelectorAll('.card').forEach(c => c.classList.toggle('selected', c.dataset.id === id));
