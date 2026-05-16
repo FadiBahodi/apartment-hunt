@@ -924,6 +924,11 @@ setTimeout(scheduleRerender, 4000);
     const calledAt = STORE.called()[a.id];
     const touredAt = STORE.toured()[a.id];
 
+    // Drive matrix + premium index (also referenced in templates below)
+    const dm = (window.DRIVE_MATRIX||{})[a.id];
+    const premBadge = dm?.value_call;
+    const premBadgeColor = premBadge === 'below market' ? '#0E7C3A' : premBadge === 'market' ? '#1652F0' : premBadge === 'above market' ? '#B45309' : premBadge === 'premium' ? '#B91C1C' : null;
+
     document.getElementById('detail').innerHTML = `
       <button id="detail-close" onclick="document.getElementById('detail').classList.remove('show')" aria-label="Close detail">✕</button>
       <h2>${a.name} <span class="fit-badge" style="background:${fitColor}1f;color:${fitColor};border:1px solid ${fitColor}55;font-size:12px;padding:3px 8px">Fit ${fit.score}</span> <span class="badge ${cls}"><span class="dot"></span>${a.rating}</span></h2>
