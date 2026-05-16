@@ -424,50 +424,63 @@ function loadOptional(src) {
     document.head.appendChild(s);
   });
 }
-window.DATA_READY = Promise.all([
-  fetch('data/costs.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.COSTS=d),
-  fetch('data/reviews.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.REVIEWS=d),
-  fetch('data/zones.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.ZONES=d),
-  fetch('data/timeline.json').then(r=>r.ok?r.json():null).catch(()=>null).then(d=>window.TIMELINE=d),
-  fetch('data/visual_notes.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.VISUAL_NOTES=d),
-  fetch('data/osm_geo.json').then(r=>r.ok?r.json():null).catch(()=>null).then(d=>window.OSM=d),
-  fetch('data/osrm_routes.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.OSRM=d),
-  fetch('data/drive_matrix.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.DRIVE_MATRIX=d),
-  fetch('data/parking.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.PARKING=d),
-  fetch('data/run_routes.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.RUN_ROUTES=d),
-  fetch('data/avoid_audit.json').then(r=>r.ok?r.json():null).catch(()=>null).then(d=>window.AVOID_AUDIT=d),
-  Promise.all([
-    fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
-    fetch('data/wave2_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
-  ]).then(([t1,t2])=>{
-    const text = (t1||'') + '\n' + (t2||'');
-    const existingIds = new Set((window.APARTMENTS||[]).map(a => a.id));
-    let added = 0, errs = 0;
-    text.split('\n').forEach(line=>{
-      line = line.trim();
-      if (!line) return;
-      try {
-        const obj = JSON.parse(line);
-        if (obj && obj.id && !existingIds.has(obj.id) && obj.lat && obj.lng) {
-          window.APARTMENTS.push(obj);
-          existingIds.add(obj.id);
-          added++;
-        }
-      } catch(e) { errs++; }
-    });
-    console.log(`[apt-hunt] Loaded ${added} additional listings (${errs} parse errors). Total: ${window.APARTMENTS.length}`);
-    return added;
-  })
-]).then(()=>{
-  // After data ready: re-render with full dataset
-  if (typeof renderCards === 'function') {
-    try { if (typeof addOsmLayers === 'function') addOsmLayers(); } catch(e) { console.error('addOsmLayers failed:', e); }
-    try { renderCards(); } catch(e) { console.error('renderCards failed:', e); }
-    if (selectedId && typeof selectApt === 'function') { try { selectApt(selectedId); } catch(e) {} }
-  }
-}).catch(e=>console.error('[apt-hunt] DATA_READY failed:', e));
-// Belt-and-suspenders fallback: re-render after 3s no matter what
-setTimeout(()=>{ if (typeof renderCards === 'function' && window.APARTMENTS && window.APARTMENTS.length > 33) try { renderCards(); } catch(e) {} }, 3000);
+// Helper: re-render whenever any data lands (debounced)
+let _rerenderTimer = null;
+function scheduleRerender() {
+  clearTimeout(_rerenderTimer);
+  _rerenderTimer = setTimeout(() => {
+    if (typeof addOsmLayers === 'function') { try { addOsmLayers(); } catch(e) { console.error('addOsmLayers:', e); } }
+    if (typeof renderCards === 'function') { try { renderCards(); } catch(e) { console.error('renderCards:', e); } }
+    if (window.selectedId && typeof selectApt === 'function') { try { selectApt(window.selectedId); } catch(e) {} }
+  }, 100);
+}
+// JSON loaders — each fires scheduleRerender on success
+const _jsonLoaders = [
+  ['costs.json', 'COSTS', {}],
+  ['reviews.json', 'REVIEWS', {}],
+  ['zones.json', 'ZONES', {}],
+  ['timeline.json', 'TIMELINE', null],
+  ['visual_notes.json', 'VISUAL_NOTES', {}],
+  ['osm_geo.json', 'OSM', null],
+  ['osrm_routes.json', 'OSRM', {}],
+  ['drive_matrix.json', 'DRIVE_MATRIX', {}],
+  ['parking.json', 'PARKING', {}],
+  ['run_routes.json', 'RUN_ROUTES', {}],
+  ['avoid_audit.json', 'AVOID_AUDIT', null],
+];
+const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
+  fetch('data/' + fn)
+    .then(r => r.ok ? r.json() : def)
+    .catch(() => def)
+    .then(d => { window[k] = d; scheduleRerender(); })
+);
+// JSONL listings loader — merges into APARTMENTS, then re-renders
+const _listingsPromise = Promise.all([
+  fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
+  fetch('data/wave2_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
+]).then(([t1, t2]) => {
+  const text = (t1||'') + '\n' + (t2||'');
+  const existingIds = new Set((window.APARTMENTS||[]).map(a => a.id));
+  let added = 0, errs = 0;
+  text.split('\n').forEach(line => {
+    line = line.trim();
+    if (!line) return;
+    try {
+      const obj = JSON.parse(line);
+      if (obj && obj.id && !existingIds.has(obj.id) && obj.lat && obj.lng) {
+        window.APARTMENTS.push(obj);
+        existingIds.add(obj.id);
+        added++;
+      }
+    } catch(e) { errs++; }
+  });
+  console.log(`[apt-hunt] +${added} listings (${errs} errs). Total: ${window.APARTMENTS.length}`);
+  scheduleRerender();
+});
+window.DATA_READY = Promise.all([..._jsonPromises, _listingsPromise]);
+// Belt and suspenders
+setTimeout(scheduleRerender, 1500);
+setTimeout(scheduleRerender, 4000);
 </script>
 <script>
   const photoMap = window.PHOTO_MANIFEST || {};
