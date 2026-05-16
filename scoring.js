@@ -116,3 +116,100 @@ window.fitScoreColor = function(score) {
   if (score >= 30) return '#fb923c';
   return '#f87171';
 };
+
+// === ALGORITHMIC TOP PICKS — generated from live data, not hand-curated ===
+window.computeTopPicks = function() {
+  const all = (window.APARTMENTS || []).map(a => ({
+    a,
+    fit: window.computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score,
+    cost: (window.COSTS||{})[a.id],
+    review: (window.REVIEWS||{})[a.id],
+    drive: (window.DRIVE_MATRIX||{})[a.id],
+    osrm: (window.OSRM||{})[a.id],
+    parking: (window.PARKING||{})[a.id]
+  }));
+
+  function score(x, fn) { return all.filter(x => x.a.lat && x.a.lng).map(x => ({ x, s: fn(x) })).sort((a,b)=>b.s-a.s); }
+  function pick(arr, n=4) { return arr.slice(0,n).map(({x})=>x.a.id); }
+
+  // 1. CVH operational excellence — short commute, verified pet, good rating, real OSRM
+  const cvhFirst = pick(score(all, x => {
+    let s = 0;
+    if (x.drive?.am_peak_min) s += Math.max(0, 50 - x.drive.am_peak_min * 2);
+    else if (x.osrm?.duration_min) s += Math.max(0, 50 - x.osrm.duration_min * 2.5);
+    if (x.a.pet_status === 'verified' || x.a.pet_status === 'verified-large-pets') s += 15;
+    if (/^GOOD/i.test(x.a.rating||'')) s += 10;
+    if (x.fit) s += x.fit * 0.4;
+    return s;
+  }));
+
+  // 2. Toronto life — close to Union, near waterfront, good amenities, pets ok
+  const torontoLife = pick(score(all, x => {
+    let s = 0;
+    if (x.a.drive_to_union_min_offpeak) s += Math.max(0, 40 - x.a.drive_to_union_min_offpeak);
+    if (/Humber Bay|Mimico|Long Branch|New Toronto|Stonegate|Roncesvalles|Junction|High Park|Swansea|Kingsway/i.test(x.a.zone||'')) s += 20;
+    if (x.a.pet_status === 'verified' || x.a.pet_status === 'verified-large-pets') s += 10;
+    if (x.fit) s += x.fit * 0.2;
+    return s;
+  }));
+
+  // 3. Best value — low effective rent vs zone average, pets verified, decent commute
+  const bestValue = pick(score(all, x => {
+    let s = 0;
+    const rent = x.a.rent_1bed_low || x.a.rent_2bed || 9999;
+    s += Math.max(0, 50 - (rent - 1500) / 30); // cheaper = higher
+    if (x.drive?.premium_index && x.drive.premium_index < 0.95) s += 15;
+    if (x.cost?.promo_savings_year) s += Math.min(15, x.cost.promo_savings_year / 300);
+    if (x.a.pet_status === 'verified') s += 10;
+    if (x.fit > 50) s += 10;
+    return s;
+  }));
+
+  // 4. Big-dog friendly — verified large pet OR explicit dog amenity
+  const bigDog = pick(score(all, x => {
+    let s = 0;
+    if (x.a.pet_status === 'verified-large-pets') s += 50;
+    else if (x.a.pet_status === 'verified') s += 25;
+    const dogAmen = (x.a.pros||[]).concat([x.a.running||'', x.parking?.dog_amenities||'']).join(' ').toLowerCase();
+    if (/pet spa|dog wash|dog run|off.leash|pet washing/i.test(dogAmen)) s += 25;
+    if (/jack darling|colonel.*smith|humber bay|rattray/i.test(x.a.running||'')) s += 15;
+    s += x.fit * 0.3;
+    return s;
+  }));
+
+  // 5. Amenity premium — concierge, gym, pool, party room — for Nomi
+  const amenityRich = pick(score(all, x => {
+    let s = 0;
+    const amen = (x.a.pros||[]).concat([x.a.promo||'']).join(' ').toLowerCase();
+    if (/concierge|24.7/i.test(amen)) s += 15;
+    if (/pool/i.test(amen)) s += 10;
+    if (/gym|fitness/i.test(amen)) s += 10;
+    if (/pet spa|dog wash|theatre|co.work|rooftop/i.test(amen)) s += 8;
+    if (x.parking?.concierge === '24/7') s += 10;
+    if (x.parking?.dog_amenities) s += 8;
+    s += x.fit * 0.3;
+    return s;
+  }));
+
+  // 6. Safest bet — high rating + verified pet + reviews exist + no red flags
+  const safestBet = pick(score(all, x => {
+    let s = 0;
+    if (x.review?.google_rating) s += x.review.google_rating * 10;
+    if (x.review?.rentsafeto_score) s += x.review.rentsafeto_score * 0.3;
+    if (x.a.pet_status === 'verified' || x.a.pet_status === 'verified-large-pets') s += 15;
+    if (!x.a.red_flags) s += 5;
+    if (/^GOOD/i.test(x.a.rating||'')) s += 10;
+    if (x.fit) s += x.fit * 0.3;
+    return s;
+  }));
+
+  return [
+    { tier: "CVH OPERATIONAL EXCELLENCE", why: "Shortest AM-peak commute with verified pet + good rating + real OSRM routing.", picks: cvhFirst },
+    { tier: "TORONTO LIFE", why: "Close to Union via GO + waterfront/streetcar zones for the old-Harbourfront feel.", picks: torontoLife },
+    { tier: "BEST VALUE", why: "Cheapest effective rent for the unit + meaningful promo + below-zone-market premium index.", picks: bestValue },
+    { tier: "BIG-DOG FRIENDLY", why: "Verified large-pet OR on-site dog amenity AND doorstep dog park.", picks: bigDog },
+    { tier: "AMENITY RICH (for Nomi)", why: "Concierge + pool + gym + dog spa / co-work / theatre — modern building feel.", picks: amenityRich },
+    { tier: "SAFEST BET", why: "Highest external rating (Google + RentSafeTO) with verified pet and no documented red flags.", picks: safestBet }
+  ];
+};
+

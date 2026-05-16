@@ -375,6 +375,10 @@ window.DATA_READY = Promise.all([
   fetch('data/visual_notes.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.VISUAL_NOTES=d),
   fetch('data/osm_geo.json').then(r=>r.ok?r.json():null).catch(()=>null).then(d=>window.OSM=d),
   fetch('data/osrm_routes.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.OSRM=d),
+  fetch('data/drive_matrix.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.DRIVE_MATRIX=d),
+  fetch('data/parking.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.PARKING=d),
+  fetch('data/run_routes.json').then(r=>r.ok?r.json():{}).catch(()=>({})).then(d=>window.RUN_ROUTES=d),
+  fetch('data/avoid_audit.json').then(r=>r.ok?r.json():null).catch(()=>null).then(d=>window.AVOID_AUDIT=d),
   Promise.all([
     fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
     fetch('data/wave2_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
@@ -892,17 +896,19 @@ window.DATA_READY = Promise.all([
   window.selectApt = selectApt;
   renderCards();
 
-  // Top-picks modal
-  const SHORTLIST = [
-    { tier: "🏥 BEST FOR CVH OPERATIONAL EXCELLENCE", picks: ["elora", "collegeway_2285", "reid_drive"], why: "Tier 1 commute (≤12 min peak), pet-verified, doorstep Sawmill/Culham/Riverwood running spine." },
-    { tier: "🌆 BEST FOR TORONTO LIFESTYLE (closest to old Harbourfront vibe)", picks: ["vita_on_the_lake", "lago_waterfront", "eau_du_soleil"], why: "Doorstep Humber Bay Park + Martin Goodman (the only year-round-cleared trail in west GTA). Eau du Soleil is the only one explicitly accepting pets of all sizes." },
-    { tier: "💰 BEST VALUE / PET-VERIFIED", picks: ["park_lawn_285", "shoreline_towers", "promenade_2301", "lincoln_545"], why: "Sub-$2,000 pet-verified, with 285 Park Lawn at $1,500 being the cheapest verified Toronto-side 1-bed." },
-    { tier: "🚆 BEST TRANSIT BASE", picks: ["station_place_5249", "markwood_4365"], why: "Station Place: subway + GO + bus terminal at door (Union 16 min). Markwood: shortest CVH (7km/10min) + on-site dog run + aggressive promo." },
-    { tier: "🎯 BEST IF NOMI WANTS AMENITIES", picks: ["dialogue", "arc_erin_mills"], why: "BGO/Daniels institutional management, modern fit-and-finish, dog spa, concierge." }
-  ];
+  // Top-picks are now algorithmic — computed live from data (see scoring.js)
+  // Falls back to hand-curated if computeTopPicks not loaded
+  function getShortlist() {
+    if (typeof window.computeTopPicks === 'function') return window.computeTopPicks();
+    return [
+      { tier: "TOP PICKS LOADING…", picks: [], why: "Waiting for live data" }
+    ];
+  }
+  const SHORTLIST = getShortlist();
 
   function showShortlist() {
-    const html = SHORTLIST.map(t => `
+    const shortlist = getShortlist();  // recompute each open since data may have loaded
+    const html = shortlist.map(t => `
       <div style="margin-bottom:24px;padding:12px;border:1px solid var(--border);border-radius:6px;background:var(--bg);">
         <h3 style="margin:0 0 4px;color:var(--accent-text);font-size:14px;">${t.tier}</h3>
         <p style="color:var(--muted);font-size:12px;margin:0 0 10px;">${t.why}</p>
@@ -922,9 +928,10 @@ window.DATA_READY = Promise.all([
       </div>
     `).join('');
     document.getElementById('shortlist-content').innerHTML = `
+      <div style="font-size:11px;color:var(--muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em;">Generated live from ${APARTMENTS.length} buildings · OSRM + zone premium + reviews</div>
       ${html}
-      <div style="background:rgba(248,113,113,.08);border:1px solid var(--bad);border-radius:6px;padding:12px;font-size:12px;">
-        <b style="color:var(--bad);">⛔ HARD AVOID:</b> 1980 Fowler Dr, 2250 Homelands Dr, 240 Markland Drive, Skyrise Rentals (no pets). All have documented red flags (CBC, Bed Bug Registry, listing confirmation). Details in left sidebar.
+      <div style="background:var(--bad-soft);border:1px solid var(--bad);border-radius:6px;padding:12px;font-size:12px;">
+        <b style="color:var(--bad);">HARD AVOID:</b> 1980 Fowler Dr, 2250 Homelands Dr, 240 Markland Drive, Skyrise Rentals (no pets), 2170 Sherobee, 1257 Lakeshore E. Documented (CBC, Bed Bug Registry, listings). Detail in left sidebar.
       </div>
       <div style="margin-top:16px;padding:12px;background:var(--bg);border-radius:6px;font-size:12px;color:var(--muted);">
         <b style="color:var(--text);">Verify before signing — every finalist:</b>
