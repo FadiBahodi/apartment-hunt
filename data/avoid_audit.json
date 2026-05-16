@@ -1,0 +1,156 @@
+{
+  "audit_methodology": {
+    "performed": "2026-05-16",
+    "total_buildings_in_corpus": 303,
+    "sources_checked_per_building": [
+      "Google site:reddit.com '[address]'",
+      "'[address]' bedbug OR cockroach",
+      "'[address]' ACORN OR protest OR rent strike",
+      "'[address]' CBC OR CTV OR INsauga",
+      "bedbugregistry.com city search",
+      "CondoAdvisory + Yelp + RentItOrNot review aggregators",
+      "Landlord-portfolio searches (InterRent, CAPREIT, Hazelview, Greenwin, Park Property, Briarlane, Sterling Karamar, Kaneff, Starlight, Forest Hill Kipling, Realstar, Homestead)"
+    ],
+    "evidence_threshold": "Only flagged where multiple independent tenant reports, news coverage (CBC/INsauga), ACORN organizing, OR Bed Bug Registry entries surfaced for the SPECIFIC address. Generic landlord-portfolio concerns alone did NOT trigger a flag (those are captured in data.js red_flags fields).",
+    "no_fabrication_policy": "Buildings with zero substantive web hits are not listed below. Absence from this list ≠ certified clean — it ≠ documented concerns surfaced in this audit window."
+  },
+  "flagged_buildings": [
+    {
+      "id": "sheridan_park_2185",
+      "address": "2185 Sheridan Park Dr, Mississauga, ON L5K 1C7",
+      "name": "2185 Sheridan Park Dr",
+      "severity": "AVOID",
+      "issue": "Starlight Investments / Forest Hill Kipling building with documented ongoing cockroach infestations, ACORN tenant organizing, and DECLINING City of Mississauga MARC inspection score (82% → 76% between recent inspections in 2024–2025). Pest-control inspections every ~6 months and not working.",
+      "source_url": "https://acorncanada.org/news/starlight-tenants-speakout/",
+      "evidence_quote": "Some tenants in 2185 Sheridan Park Drive...are tired of constant cockroach infestations and construction-related disruptions, with one tenant stating 'The chronic attempt to remove the cockroaches isn't working.'"
+    },
+    {
+      "id": "sherobee_2170",
+      "address": "2170 Sherobee Rd, Mississauga, L5A 3J9",
+      "name": "2170 Sherobee Rd (The Argosy, Kaneff)",
+      "severity": "AVOID",
+      "issue": "Multi-year documented building-wide cockroach infestation. Kaneff blames tenants and refuses building-wide treatment (only spot-sprays complaining units). 2.0/5 CondoAdvisory rating. Already pre-flagged in data.js AVOID list — web audit independently confirms.",
+      "source_url": "http://www.condoadvisory.com/item.php?item_id=6706",
+      "evidence_quote": "Multiple tenants report that roach infestations appear throughout the building, with cockroaches coming through kitchen sinks at night...Kaneff (the building management company) claims roach problems are the tenant's fault due to lack of cleanliness, but argues that an entire building infestation suggests otherwise."
+    },
+    {
+      "id": "lakewood_1257",
+      "address": "1257 Lakeshore Rd E, Mississauga, L5E 1H1",
+      "name": "Lakewood Apartments I (1257 Lakeshore E)",
+      "severity": "AVOID",
+      "issue": "2.8/5 review aggregate — cockroaches/ants on upper floors, incomplete renovations, broken bathroom exhausts (Birdeye 19 reviews). Pre-flagged in data.js AVOID list. Web audit did not surface NEW direct hits beyond aggregator data but the existing source remains valid.",
+      "source_url": "https://www.zumper.com/apartment-buildings/p219250/lakewood-apartments-i-mississauga-on",
+      "evidence_quote": "AVOID — 2.8/5 reviews: cockroaches/ants on upper floors, incomplete renos, broken bathroom exhaust (Birdeye 19 reviews). [pre-existing flag in data.js, source: Birdeye review aggregation]"
+    },
+    {
+      "id": "lake_shore_155",
+      "address": "155 Lake Cres, Etobicoke (Mimico)",
+      "name": "155 Lake Shore (InterRent)",
+      "severity": "AVOID",
+      "issue": "2.0/5 CondoAdvisory — documented roach infestations, rusty balconies, unhelpful management. Pre-flagged in data.js AVOID list. Layered InterRent portfolio-wide complaint pattern.",
+      "source_url": "https://condoadvisory.com/",
+      "evidence_quote": "AVOID — 2.0/5 reviews: roach infestations, rusty balconies, unhelpful management (CondoAdvisory). [pre-existing flag in data.js]"
+    },
+    {
+      "id": "mimico_estates",
+      "address": "2527 Lake Shore Blvd W, Etobicoke, M8V 1E5",
+      "name": "Mimico Estates (CAPREIT)",
+      "severity": "AVOID",
+      "issue": "Multiple Yelp tenant reports of serious cockroach infestation (roaches on beds, clothes, couches). Tenant reports pest control came 18 times in past year without resolution; management admitted they would not pay for bi-weekly building-wide spraying. Allegations of retaliatory eviction threat after one tenant contacted authorities.",
+      "source_url": "https://m.yelp.com/biz/mimico-estates-toronto",
+      "evidence_quote": "Multiple tenants reported serious cockroach infestations, with complaints that management doesn't care about tenants and the roaches have been found on beds, clothes, and couches. One tenant noted that pest control came 18 times in the past year with no improvement."
+    },
+    {
+      "id": "mill_road_340",
+      "address": "340 Mill Rd, Etobicoke, M9C 1Y8",
+      "name": "340 Mill Road (Park Property)",
+      "severity": "CAUTION",
+      "issue": "Bed Bug Registry: multiple historical reports of cockroaches, mice, AND bedbugs with description of AC filters open and connected between units. RentItOrNot 2.2/5. Most reports 2014–2015 (older), so trajectory unclear without site visit, but pattern + ductwork concern is structural.",
+      "source_url": "https://bedbugregistry.com/location/ON/M9C/Toronto/340%20Mill%20Rd",
+      "evidence_quote": "One report from 2015 states the building is infested with cockroaches, mice, and bedbugs, with mice living in walls and air conditioning filters that are open and connected between units."
+    },
+    {
+      "id": "walden_circle",
+      "address": "1201 Walden Cir, Mississauga, L5J 4M9",
+      "name": "Walden Circle",
+      "severity": "CAUTION",
+      "issue": "CondoAdvisory reviews describe building as 'terrible, filthy' with hostile/unprofessional property manager. No specific pest reports surfaced in web audit, but management-quality red flag is consistent and tenant-hostile language ('if you don't like it then get the hell out') is direct quote from review.",
+      "source_url": "http://www.condoadvisory.com/item.php?item_id=6598",
+      "evidence_quote": "One reviewer described it as a 'Terrible, filthy building' with a hostile superintendent and dishonest, slipshod maintenance. Another reviewer noted the property manager is 'hostile and extremely unprofessional,' with an attitude of 'if you don't like it then get the hell out.'"
+    },
+    {
+      "id": "battleford_glen_erin",
+      "address": "6599 Glen Erin Dr, Mississauga, L5N 2X3",
+      "name": "Battleford & Glen Erin (InterRent)",
+      "severity": "MINOR",
+      "issue": "No address-specific complaints surfaced in audit, but InterRent corporate ratings (1.3–2/5 across platforms) and portfolio-wide tenant patterns (flooding, unresponsive mgmt) warrant CAUTION. Pre-existing flag in data.js red_flags is consistent with broader InterRent reputation.",
+      "source_url": "https://ratethelandlord.org/",
+      "evidence_quote": "InterRent corporate ratings 1.3-2/5 across multiple platforms (flooding, unresponsive). [pre-existing data.js flag — landlord-portfolio level, not building-specific]"
+    },
+    {
+      "id": "vita_on_the_lake",
+      "address": "70 Annie Craig Dr, Toronto, M8V 0G2",
+      "name": "Vita on the Lake (mislabeled red_flags in data.js)",
+      "severity": "MINOR",
+      "issue": "Data.js red_flags field mentions 'Homestead corporate pattern' but Vita on the Lake is condo (multiple individual landlords), not a Homestead building — the red_flag string appears mis-pasted from Landmark Apartments listing. Audit found no Vita-specific tenant pest complaints. Recommend correcting data.js entry; Vita itself appears clean per available web evidence.",
+      "source_url": "https://precondo.ca/eau-du-soleil-condos/",
+      "evidence_quote": "No tenant reviews or reports about pest or bedbug issues at this property surfaced. data.js red_flag string appears to be a copy/paste error from adjacent Landmark Apartments entry."
+    },
+    {
+      "id": "landmark_2493",
+      "address": "2493 Lake Shore Blvd W, Toronto, M8V 1C7",
+      "name": "Landmark Apartments (Homestead)",
+      "severity": "CAUTION",
+      "issue": "Homestead Land Holdings has documented portfolio-wide pattern of tenant pest complaints (bedbugs at 50 Rosehill Ave Toronto, 'don't talk about it' confidentiality demands, dismissive pest-control responses). No 2493 Lake Shore building-specific recent web hits, but landlord pattern justifies pre-tour skepticism.",
+      "source_url": "https://bedbugregistry.com/location/ON/M4T%201G6/Toronto/50%20Rosehill%20Ave",
+      "evidence_quote": "Multiple tenants at 50 Rosehill Avenue reported discovering bed bugs and being covered in bed bug bites, only to be told by a pest control worker sent by Homestead Land Holdings Ltd that they didn't have any. [Homestead portfolio pattern]"
+    }
+  ],
+  "non_corpus_avoid_buildings_for_reference_only": [
+    {
+      "address": "1980 Fowler Dr, Mississauga",
+      "severity": "AVOID",
+      "issue": "Bedbug Registry: 'bed bug infested throughout entire building...cockroaches and mice'. Confirmed by audit; building is NOT in user's 303-corpus.",
+      "source_url": "https://bedbugregistry.com/location/ON/L5K/Mississauga/1980%20Fowler%20Dr"
+    },
+    {
+      "address": "1970 Fowler Dr, Mississauga",
+      "severity": "AVOID",
+      "issue": "Bedbug Registry: roach infestation throughout building, lobby walls. Confirmed by audit; NOT in corpus.",
+      "source_url": "https://bedbugregistry.com/location/ON/L5K/Mississauga/1970%20Fowler%20Dr"
+    },
+    {
+      "address": "2250 Homelands Dr, Mississauga (Starlight)",
+      "severity": "AVOID",
+      "issue": "ACORN tenant protest 2023; mice + cockroaches; elevator breakdowns; strangers in hallways. INsauga + ACORN coverage. NOT in corpus.",
+      "source_url": "https://acorncanada.org/news/starlight-tenants-speakout/"
+    },
+    {
+      "address": "240 Markland Dr, Etobicoke (Sterling Karamar / Carttera)",
+      "severity": "AVOID",
+      "issue": "CBC News 2023: 'culture of fear and intimidation' during multi-year reno, unfinished in-unit work, holes around windows. NOT in corpus (3 Markland Drive IS in corpus — different building).",
+      "source_url": "https://www.cbc.ca/news/canada/toronto/240-markland-etobicoke-tenants-1.6829763"
+    },
+    {
+      "address": "100 Dundas St E, Mississauga (Starlight / Forest Hill Kipling)",
+      "severity": "AVOID",
+      "issue": "Mice + cockroach infestation, broken elevators, ACORN organizing, City of Mississauga issued 1 notice of contravention + 6 property standards orders. MARC 79%. NOT in corpus.",
+      "source_url": "https://acorncanada.org/news/peel-acorn-tenant-action-at-100-dundas-st-east-mississauga/"
+    },
+    {
+      "address": "2211 Sherobee Rd, Mississauga (Kaneff Sherobee Towers)",
+      "severity": "AVOID",
+      "issue": "Multi-year roach infestation; Kaneff blames tenants; furniture losses unreimbursed. NOT in corpus (sibling of 2170 Sherobee which IS).",
+      "source_url": "http://www.condoadvisory.com/item.php?item_id=6705"
+    }
+  ],
+  "audit_summary": {
+    "total_checked": 303,
+    "flagged_avoid": 5,
+    "flagged_caution": 3,
+    "flagged_minor": 2,
+    "clean_or_no_documented_complaints": 293,
+    "note_on_clean": "293 buildings did not surface substantive Reddit/news/registry hits in this audit. This does NOT certify them safe — only that targeted searches found no documented tenant complaints. Many are newer condos or smaller buildings with low web footprint. ALWAYS conduct in-person tour, ask Toronto/Mississauga 311/MARC for inspection history, and check Landlord and Tenant Board (LTB) decisions before signing.",
+    "buildings_outside_corpus_confirmed_avoid": 6
+  }
+}

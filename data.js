@@ -220,12 +220,12 @@ const APARTMENTS = [
     running: "MARTIN GOODMAN TRAIL — only year-round-cleared running surface in west GTA. Doorstep 30km long runs east to downtown.",
     transit: "Mimico GO 5 min walk; 17 min to Union",
     promo: "1.5 months free",
-    red_flags: "AM peak 35-50 min to CVH. No central AC, window units only. No balconies. 1950s-60s low-rise.",
-    rating: "STRETCH — best running, worst commute",
+    red_flags: "AVOID — DOCUMENTED ROACH INFESTATION. Yelp: roaches on beds, 18 failed pest visits in 1 year, retaliation allegations. Investigated by wave-3 AVOID audit.",
+    rating: "CAUTION — documented red flags",
     listing_url: "https://www.zumper.com/apartment-buildings/p288791/mimico-estates-mimico-toronto-on",
     lat: 43.6102238, lng: -79.4890189,
-    pros: ["788 sqft 1-bed (largest on list) for $1,830", "Martin Goodman Trail = year-round bare pavement", "Mimico GO 17 min to Union", "1.5 months free"],
-    cons: ["35-50 min AM peak to CVH", "No central AC, no balconies", "Old building"],
+    pros: ["788 sqft 1-bed for $1,830", "Martin Goodman Trail nearby", "Mimico GO 17 min to Union"],
+    cons: ["DOCUMENTED ROACH INFESTATION (Yelp + 18 failed pest treatments)", "Retaliation against tenants alleged", "35-50 min AM peak to CVH", "No central AC, no balconies", "1950s-60s building"],
     visual_note: "SURPRISING CHARM: courtyard photo shows mid-century buff-brick low-rise around manicured topiary garden + small fountain. Quiet, established, almost institutional/landscaped. Window AC units visible (no central). Unique vibe — felt more like a college quad than a rental."
   },
   {
@@ -416,13 +416,13 @@ const APARTMENTS = [
     running: "Lakefront block — direct access to Waterfront Trail; quieter side street vs Lake Shore frontage buildings.",
     transit: "Mimico GO ~7 min walk; 501 streetcar 2 min walk",
     promo: "24/7 emergency, controlled entrance",
-    red_flags: "Smaller InterRent portfolio building — InterRent corporate complaints exist. Verify pet size at application.",
-    rating: "GOOD VALUE — beautiful unit",
+    red_flags: "AVOID — DOCUMENTED ROACH INFESTATIONS (2.0/5 InterRent). Wave-3 AVOID audit flag.",
+    rating: "CAUTION — documented red flags",
     listing_url: "https://www.zumper.com/apartment-buildings/p1064024/155-lake-shore-mimico-toronto-on",
     lat: 43.6105, lng: -79.4900,
-    pros: ["Lakefront block — quieter side street vs Lake Shore frontage", "Mimico GO 7 min", "501 streetcar 2 min", "658 sqft for $2,049"],
-    cons: ["Smaller InterRent building", "Verify dog size"],
-    visual_note: "STAR FINDING: Photo shows GORGEOUS modern unit. Full white shaker kitchen, quartz waterfall island with dark wood base, SS appliances, IN-SUITE STACKED W/D, light wide-plank floors, tons of pot lights. Premium reno — visually competitive with the Erin Mills options at similar price."
+    pros: ["Lakefront block", "Mimico GO 7 min", "501 streetcar 2 min", "658 sqft for $2,049"],
+    cons: ["DOCUMENTED ROACH INFESTATIONS (2.0/5 reviews)", "Smaller InterRent building", "Verify dog size"],
+    visual_note: "Photo shows gorgeous modern reno — but DON'T LET STAGING FOOL YOU. Wave-3 AVOID audit surfaced 2.0/5 reviews citing roach infestations. The photo is real but the building has documented pest issues — verify in person before viewing."
   },
   {
     id: "shoreline_towers",
@@ -759,6 +759,21 @@ const AVOID = [
     name: "1257 Lakeshore Rd E (Lakewood I)",
     why: "2.8/5 — cockroaches/ants on upper floors, incomplete renos, broken bathroom exhaust",
     source: "Birdeye 19 reviews"
+  },
+  {
+    name: "2185 Sheridan Park Dr (Starlight)",
+    why: "ACORN-organized rent strike + cockroaches; MARC score 82% → 76% declining",
+    source: "wave-3 audit; INsauga"
+  },
+  {
+    name: "155 Lake Cres (Mimico)",
+    why: "DOCUMENTED ROACH INFESTATIONS (2.0/5 InterRent)",
+    source: "wave-3 audit"
+  },
+  {
+    name: "2527 Lake Shore Blvd W (Mimico Estates / CAPREIT)",
+    why: "Roaches on beds, 18 failed pest treatments in 1 year, retaliation alleged",
+    source: "wave-3 audit; Yelp"
   }
 ];
 

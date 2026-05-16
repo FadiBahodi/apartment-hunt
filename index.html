@@ -278,28 +278,54 @@
   </div>
 </div>
 <div id="help-modal" class="modal">
-  <div class="modal-inner" style="max-width:700px;">
-    <div class="modal-head"><h2 style="margin:0">? How to use this</h2><button class="modal-close" data-close="help-modal">✕</button></div>
-    <div style="font-size:13px;line-height:1.7;">
-      <h3 style="color:var(--accent-text);margin-top:0">The flow</h3>
+  <div class="modal-inner" style="max-width:780px;">
+    <div class="modal-head"><h2 style="margin:0">How to use this</h2><button class="modal-close" data-close="help-modal">×</button></div>
+    <div style="font-size:13px;line-height:1.65;">
+      <h3 style="color:var(--accent-text);margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);padding-bottom:4px">Flow</h3>
       <ol>
-        <li><b>Filter + sort</b> the list (CVH ≤15min, ≤$2,000, etc — multi-select).</li>
-        <li><b>Click a building</b> → detail panel opens with photos, cost breakdown, reviews, fit score.</li>
-        <li><b>Heart it</b> (❤️) to save to favorites. <b>Add to compare</b> (⚖️) to stack 2-4 side-by-side.</li>
-        <li><b>Mark called/toured</b> as you progress — saved locally so you don't lose track.</li>
-        <li><b>📅 Timeline</b> shows the week-by-week May 11 → July 1 plan (51 days).</li>
-        <li><b>Notes per building</b> — type your own observations; saved to localStorage.</li>
+        <li><b>Filter + sort</b>. Multi-select: CVH ≤15m, ≤$2k, Pet verified, etc. Search supports <code style="background:var(--panel);padding:1px 5px;border-radius:3px">fit:60</code> and <code style="background:var(--panel);padding:1px 5px;border-radius:3px">rent:2000</code>.</li>
+        <li><b>Click a card</b> → photos, drive matrix (5 time windows), cost decoder, reviews, run routes, fit breakdown.</li>
+        <li><b>Save (★)</b> and <b>Compare (⇄)</b> from any card. Up to 4 in compare.</li>
+        <li><b>Mark called / toured</b> — dates persist locally.</li>
+        <li><b>Timeline</b> — 73 to-dos May 11 → July 1, your progress saves.</li>
       </ol>
-      <h3 style="color:var(--accent-text)">Fit Score 0-100</h3>
-      <p>Weighted: CVH commute (30) · Running (20) · Pet (15) · Cost (15) · Toronto (8) · Building rep (7) · Value (5). Click a building to see the breakdown.</p>
-      <h3 style="color:var(--accent-text)">Map legend</h3>
-      <p>🟢 winter-cleared trail · 🟣 3-season trail · 🟢 park · 🟠 CVH (15/25min radius rings) · pin glyphs ✓!✕· = rating tier.</p>
-      <h3 style="color:var(--accent-text)">Critical reminders</h3>
-      <ul>
+
+      <h3 style="color:var(--accent-text);font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);padding-bottom:4px">Fit Score 0-100</h3>
+      <p>Weighted: CVH commute 30 · Running 20 · Pet 15 · Cost 15 · Toronto 8 · Building rep 7 · Value 5. Uses real OSRM time when available.</p>
+
+      <h3 style="color:var(--accent-text);font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);padding-bottom:4px">Drive matrix</h3>
+      <p>Real OSRM off-peak baseline × zone-aware multipliers for AM peak, PM peak, post-night-shift home (contraflow), and late night. Chokepoint named per route.</p>
+
+      <h3 style="color:var(--accent-text);font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);padding-bottom:4px">Ontario renter-rights cheatsheet</h3>
+      <ul style="margin:6px 0">
+        <li><b>RTA s.14:</b> "No-pet" clauses in residential tenancy agreements are <b>void</b>. Landlord cannot evict you solely for having a pet.</li>
+        <li><b>Condo carve-out:</b> If renting a <b>condo unit</b>, the <b>condo declaration</b> CAN restrict pets — and it binds you. Always demand the declaration + rules + status certificate before signing a condo unit.</li>
+        <li><b>Illegal fees:</b> Pet deposits, pet rent, "key money", and application fees beyond a credit-check cost are <b>illegal</b> under Ontario RTA. Pushback if asked.</li>
+        <li><b>Last month deposit:</b> 1 month max, applied to LAST month only. Landlord owes you interest (annually, ~2-5%).</li>
+        <li><b>Rent increase cap:</b> 2.5% for 2026 in buildings first occupied before Nov 15 2018. Newer = uncapped. Most Toronto/Mississauga purpose-built rentals built before 2018 = capped.</li>
+        <li><b>N12 / own use eviction:</b> Landlord must pay you 1 month rent if evicting for own use. They cannot do this for 1 year after they take occupancy.</li>
+      </ul>
+
+      <h3 style="color:var(--accent-text);font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);padding-bottom:4px">Verification checklist before signing</h3>
+      <ol style="margin:6px 0">
         <li>Run Google Maps at <b>your actual shift times</b> (5:15am, 7am, 1pm, 3:30pm, 11pm, 7am post-night). My drive times are priors, not posteriors.</li>
-        <li>Condo rentals: demand the <b>condo declaration</b> before signing. RTA s.14 doesn't override pet bans in the declaration.</li>
-        <li>Tour at <b>11pm and 7am</b>, not midday — different building entirely.</li>
-        <li>Avoid list (sidebar) is documented from CBC/Bed Bug Registry/listings — those buildings have real problems.</li>
+        <li>For any <b>condo</b>: demand declaration + rules + most recent status certificate.</li>
+        <li>Tour at <b>11pm AND 7am</b> — different building entirely from midday.</li>
+        <li>Walk the running route from the unit door — time it, inspect surface + lighting.</li>
+        <li>Pull the building's Mississauga MARC or Toronto RentSafeTO score (link in detail panel).</li>
+        <li>Ask for last 6 months of pest control logs (legitimate request).</li>
+        <li>Get pet policy <b>in writing</b> on the lease, not just "yeah it's fine" verbal.</li>
+        <li>Photograph the unit before signing — every wall, every appliance, every floor — date-stamped.</li>
+      </ol>
+
+      <h3 style="color:var(--accent-text);font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);padding-bottom:4px">Data provenance</h3>
+      <ul style="margin:6px 0;font-size:12px;color:var(--muted)">
+        <li><b>Lat/lng:</b> Nominatim OSM geocoding (real)</li>
+        <li><b>Trails / parks:</b> Overpass API (real OSM ways + relations)</li>
+        <li><b>Drive times:</b> OSRM real routing for off-peak + zone-aware multipliers for peak/late</li>
+        <li><b>Photo audit:</b> AI vision read of 23 buildings; fallback to satellite + street map for 280</li>
+        <li><b>Reviews:</b> ratings calibrated from Zumper Expert + tenant sentiment, not real-time Google API. Verify before signing.</li>
+        <li><b>Costs:</b> from listing pages where published; null where not</li>
       </ul>
     </div>
   </div>
