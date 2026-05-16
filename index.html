@@ -834,8 +834,23 @@ window.DATA_READY = Promise.all([
       ${costHtml}
       ${reviewHtml}
       ${zoneHtml}
-      <h3>Running</h3>
-      <p>${a.running}</p>
+      ${(() => {
+        const rr = (window.RUN_ROUTES||{})[a.id];
+        if (rr) {
+          const fmt = (r) => r ? `<div style="background:var(--panel);padding:8px 10px;border-radius:4px;margin-bottom:6px"><div style="font-weight:600;font-size:12px">${r.name||r.distance_km+'km'} <span style="color:var(--muted);font-weight:400">· ${r.distance_km}km · ${r.surface||''}</span></div><div style="font-size:11px;color:var(--muted);margin-top:3px">${r.lighting?'Lighting: '+r.lighting+'. ':''}${r.winter_ok===true?'Winter ✓.':r.winter_ok===false?'Not winter-maintained.':''} ${r.road_crossings!=null?'Crossings: '+r.road_crossings+'.':''} ${r.dog_friendly||''}</div>${r.scenery?`<div style="font-size:11px;color:var(--muted);margin-top:2px;font-style:italic">${r.scenery}</div>`:''}${r.starts_at_trail?`<div style="font-size:10px;color:var(--dim);margin-top:3px">Start: ${r.starts_at_trail}</div>`:''}</div>` : '';
+          return `
+            <h3>Running routes (generated from OSM)</h3>
+            <p style="font-size:11px;color:var(--muted);margin-bottom:6px">${rr.nearest_trail ? `Nearest OSM trail: <b>${rr.nearest_trail.name}</b> (${rr.nearest_trail.distance_km}km)` : ''}</p>
+            ${fmt(rr['5k'])}
+            ${fmt(rr['10k'])}
+            ${fmt(rr['20k_long_run'])}
+            ${rr.winter_alternative ? `<div style="font-size:11px;color:var(--good);margin-top:4px"><b>Winter alt:</b> ${rr.winter_alternative}</div>` : ''}
+            ${rr.best_for ? `<div style="font-size:11px;color:var(--accent-text);margin-top:2px"><b>Best for:</b> ${rr.best_for}</div>` : ''}
+            <p style="font-size:11px;color:var(--muted);margin-top:8px"><b>Original note:</b> ${a.running}</p>
+          `;
+        }
+        return `<h3>Running</h3><p>${a.running}</p>`;
+      })()}
       <h3>Transit</h3>
       <p>${a.transit}</p>
       ${(() => {
