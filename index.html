@@ -166,10 +166,10 @@
   .red { color: var(--bad); }
   .warn-banner { background: rgba(248,113,113,.1); border: 1px solid var(--bad); padding: 8px 10px; border-radius: 6px; font-size: 12px; margin: 8px 0; color: var(--bad); }
 
-  .legend { position: absolute; top: 12px; right: 12px; background: rgba(18,21,28,.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); padding: 10px 12px; border-radius: var(--radius); font-size: 11px; z-index: 1000; line-height: 1.6; }
-  .legend-head { font-size: 9px;  letter-spacing: .08em; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
-  .legend .row { display: flex; align-items: center; gap: 6px; }
-  .legend .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .legend { position: absolute; top: 12px; right: 12px; background: var(--map-overlay); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); padding: 10px 12px; border-radius: var(--radius); font-size: 11px; z-index: 1000; line-height: 1.7; color: var(--text); box-shadow: var(--shadow-md); }
+  .legend-head { font-size: 10px; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
+  .legend .row { display: flex; align-items: center; gap: 6px; color: var(--text); }
+  .legend .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
 
   /* Keyboard accessibility — visible focus rings on all interactives */
   :focus { outline: none; }
@@ -440,23 +440,34 @@ window.DATA_READY = Promise.all([
     fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
     fetch('data/wave2_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
   ]).then(([t1,t2])=>{
-    const text = t1 + '\n' + t2;
-    if (!text.trim()) return;
-    const existingIds = new Set(window.APARTMENTS.map(a => a.id));
-    let added = 0;
-    text.split('\n').filter(Boolean).forEach(line=>{
+    const text = (t1||'') + '\n' + (t2||'');
+    const existingIds = new Set((window.APARTMENTS||[]).map(a => a.id));
+    let added = 0, errs = 0;
+    text.split('\n').forEach(line=>{
+      line = line.trim();
+      if (!line) return;
       try {
         const obj = JSON.parse(line);
-        if (obj.id && !existingIds.has(obj.id)) {
+        if (obj && obj.id && !existingIds.has(obj.id) && obj.lat && obj.lng) {
           window.APARTMENTS.push(obj);
           existingIds.add(obj.id);
           added++;
         }
-      } catch{}
+      } catch(e) { errs++; }
     });
-    console.log(`Loaded ${added} additional listings. Total: ${window.APARTMENTS.length}`);
+    console.log(`[apt-hunt] Loaded ${added} additional listings (${errs} parse errors). Total: ${window.APARTMENTS.length}`);
+    return added;
   })
-]);
+]).then(()=>{
+  // After data ready: re-render with full dataset
+  if (typeof renderCards === 'function') {
+    try { if (typeof addOsmLayers === 'function') addOsmLayers(); } catch(e) { console.error('addOsmLayers failed:', e); }
+    try { renderCards(); } catch(e) { console.error('renderCards failed:', e); }
+    if (selectedId && typeof selectApt === 'function') { try { selectApt(selectedId); } catch(e) {} }
+  }
+}).catch(e=>console.error('[apt-hunt] DATA_READY failed:', e));
+// Belt-and-suspenders fallback: re-render after 3s no matter what
+setTimeout(()=>{ if (typeof renderCards === 'function' && window.APARTMENTS && window.APARTMENTS.length > 33) try { renderCards(); } catch(e) {} }, 3000);
 </script>
 <script>
   const photoMap = window.PHOTO_MANIFEST || {};
@@ -579,15 +590,17 @@ window.DATA_READY = Promise.all([
       const isSelected = selectedId === apt.id;
       const isFav = STORE.isFavorite(apt.id);
       const sz = isSelected ? 22 : (isFav ? 18 : 14);
-      const ring = isSelected ? ',0 0 0 4px rgba(255,122,69,.35)' : '';
+      const ring = isSelected ? ',0 0 0 4px rgba(22,82,240,.35)' : '';
+      const favRing = isFav ? 'outline:1.5px solid #1652F0;outline-offset:1px;' : '';
       const m = L.marker([apt.lat, apt.lng], {
         icon: L.divIcon({
           className: '',
-          html: `<div style="background:${pinColor(apt)};width:${sz}px;height:${sz}px;border-radius:50%;border:1.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.6)${ring};cursor:pointer;transition:all .15s;${isFav?'outline:1.5px solid #ff7a45;outline-offset:1px;':''}"></div>`,
+          html: `<div style="background:${pinColor(apt)};width:${sz}px;height:${sz}px;border-radius:50%;border:1.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)${ring};cursor:pointer;transition:all .15s;${favRing}"></div>`,
           iconSize: [sz, sz], iconAnchor: [sz/2, sz/2]
         }),
         zIndexOffset: isSelected ? 2000 : (isFav ? 500 : 0)
-      }).addTo(map).bindPopup(`<b>${apt.name}</b><br>$${(apt.rent_1bed_low||apt.rent_2bed||0).toLocaleString()}+ · ${apt.drive_to_cvh_km} km to CVH<br><small style="color:#888">Click marker to open detail</small>`);
+      }).addTo(map);
+      // No popup — click goes straight to detail panel
       m.on('click', () => selectApt(apt.id));
       markers[apt.id] = m;
     });
@@ -734,12 +747,11 @@ window.DATA_READY = Promise.all([
   function selectApt(id) {
     selectedId = id;
     const a = APARTMENTS.find(x => x.id === id);
-    if (!a) return;
-    map.setView([a.lat, a.lng], 13);
+    if (!a) { console.warn('[apt-hunt] selectApt: no apt for id', id); return; }
+    map.setView([a.lat, a.lng], 14);
     document.getElementById('detail').classList.add('show');
     // Re-render markers with new selection state
-    renderCards();
-    if (markers[id]) markers[id].openPopup();
+    try { renderCards(); } catch(e) { console.error('renderCards failed in selectApt:', e); }
     // Draw OSRM driving route to CVH if available
     if (routeLayer) map.removeLayer(routeLayer);
     const osrm = (window.OSRM||{})[id];
