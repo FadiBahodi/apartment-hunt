@@ -606,11 +606,15 @@ window.DATA_READY = Promise.all([
       const photoCount = photos.length;
       const thumbStyle = photos[0] ? `background-image:url('${photos[0]}')` : `background:${pinColor(a)};color:#000;`;
       const thumbInner = photos[0] ? '' : (a.rating || 'F').charAt(0);
-      const fit = computeFitScore(a, window.COSTS||{});
+      const fit = computeFitScore(a, window.COSTS||{}, window.OSRM||{});
       const fitColor = fitScoreColor(fit.score);
       const isFav = STORE.isFavorite(a.id);
       const isCmp = compareList.includes(a.id);
       const review = (window.REVIEWS||{})[a.id];
+      const dm = (window.DRIVE_MATRIX||{})[a.id];
+      const amPeak = dm?.am_peak_min ?? a.drive_to_cvh_min_peak;
+      const premBadge = dm?.value_call;
+      const premBadgeColor = premBadge === 'below market' ? '#4ade80' : premBadge === 'market' ? '#82b6ff' : premBadge === 'above market' ? '#fbbf24' : premBadge === 'premium' ? '#f87171' : null;
       const petPip = a.pet_status === 'verified' || a.pet_status === 'verified-large-pets' ? 'good'
                    : a.pet_status === 'conflicting' ? 'bad'
                    : a.pet_status === 'verify-specifics' || a.pet_status === 'verify-condo-rules' ? 'warn' : 'dim';
@@ -626,10 +630,11 @@ window.DATA_READY = Promise.all([
             <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
             <div class="meta">
               <span class="fit-badge" style="background:${fitColor}1f;color:${fitColor};border:1px solid ${fitColor}3a">Fit ${fit.score}</span>
-              <span class="metric"><span class="label">CVH</span><span class="val">${a.drive_to_cvh_min_peak}m</span></span>
+              <span class="metric"${dm ? ' title="Real drive time — OSRM × zone-aware peak multiplier"' : ''}><span class="label">CVH${dm?'*':''}</span><span class="val">${amPeak}m</span></span>
               ${a.drive_to_union_min_offpeak ? `<span class="metric"><span class="label">Union</span><span class="val">${a.drive_to_union_min_offpeak}m</span></span>` : ''}
               <span class="metric" title="${petLabel}"><span class="pip ${petPip}"></span><span class="val">${a.pet_status === 'verified-large-pets' ? 'lg pet' : a.pet_status === 'verified' ? 'pet' : a.pet_status === 'conflicting' ? 'conflict' : '?'}</span></span>
               ${review?.google_rating ? `<span class="metric"><span class="label">Rev</span><span class="val">${review.google_rating}</span></span>` : ''}
+              ${premBadge ? `<span class="metric" style="color:${premBadgeColor}" title="vs zone avg 1-bed"><span class="label">vs mkt</span><span class="val">${premBadge.replace(' market','').replace('below','below').replace('above','above')}</span></span>` : ''}
             </div>
           </div>
           <div class="rent-col">
@@ -806,11 +811,26 @@ window.DATA_READY = Promise.all([
       <div class="stats">
         <div class="stat"><div class="k">Rent (1-bed)</div><div class="v">${rentDisplay(a)}</div></div>
         <div class="stat"><div class="k">Sqft</div><div class="v">${a.sqft_low ? a.sqft_low + '–' + a.sqft_high : a.sqft_high || '—'}</div></div>
-        <div class="stat"><div class="k">Drive to CVH ${(window.OSRM||{})[a.id]?'<span style="color:var(--good);font-size:8px;font-weight:700">OSRM</span>':''}</div><div class="v">${(window.OSRM||{})[a.id] ? `${(window.OSRM||{})[a.id].distance_km}km · ${(window.OSRM||{})[a.id].duration_min}m off-peak` : `${a.drive_to_cvh_km} km · ~${a.drive_to_cvh_min_peak}m peak (est)`}</div></div>
         <div class="stat"><div class="k">→ Union</div><div class="v">${a.drive_to_union_min_offpeak ? a.drive_to_union_min_offpeak+' min' : '—'}</div></div>
         <div class="stat"><div class="k">Pets</div><div class="v">${a.pets}</div></div>
         <div class="stat"><div class="k">Promo</div><div class="v">${a.promo || '—'}</div></div>
+        ${premBadgeColor ? `<div class="stat"><div class="k">vs market</div><div class="v" style="color:${premBadgeColor}">${dm.value_call} · ${(dm.premium_index*100).toFixed(0)}%</div></div>` : ''}
       </div>
+      ${dm ? `
+        <h3>Drive matrix to CVH</h3>
+        <table class="cost-table">
+          <tr><td>Off-peak (5am / 11pm)</td><td>${dm.off_peak_min} min</td></tr>
+          <tr><td>AM peak (6:30-9:30am)</td><td><b style="color:${dm.am_peak_min<=15?'var(--good)':dm.am_peak_min<=25?'var(--warn)':'var(--bad)'}">${dm.am_peak_min} min</b></td></tr>
+          <tr><td>PM peak (4-7pm)</td><td>${dm.pm_peak_min} min</td></tr>
+          <tr><td>Post-night home (7-8am reverse)</td><td>${dm.post_night_home_min} min</td></tr>
+          <tr><td>Late night (10pm-2am)</td><td>${dm.late_night_min} min</td></tr>
+          <tr><td>Distance</td><td>${dm.distance_km} km</td></tr>
+          <tr><td>Tier (AM peak)</td><td>${dm.tier} of 5</td></tr>
+          <tr><td>Risk score</td><td>${dm.commute_risk_score}/100</td></tr>
+        </table>
+        ${dm.primary_chokepoint ? `<p style="font-size:11px;color:var(--muted);margin-top:4px"><b>Chokepoint:</b> ${dm.primary_chokepoint}</p>` : ''}
+        ${dm.notes ? `<p style="font-size:11px;color:var(--muted)">${dm.notes}</p>` : ''}
+      ` : ''}
       ${costHtml}
       ${reviewHtml}
       ${zoneHtml}
