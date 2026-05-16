@@ -261,9 +261,9 @@
   }
 
   /* Stats strip */
-  .stats-strip { display: flex; gap: var(--space-2); padding: 8px var(--space-4); background: var(--bg); border-bottom: 1px solid var(--border); font-size: 11px; color: var(--muted); flex-wrap: wrap; align-items: center; }
-  .stats-strip .pill { background: var(--panel); padding: 3px 9px; border-radius: 4px; border: 1px solid var(--border);  letter-spacing: .05em; font-size: 10px; font-weight: 500; }
-  .stats-strip .pill b { color: var(--text); margin-left: 5px; font-weight: 700; text-transform: none; font-size: 12px; font-variant-numeric: tabular-nums; }
+  .stats-strip { display: flex; gap: var(--space-2); padding: 8px var(--space-4); background: var(--panel); border-bottom: 1px solid var(--border); font-size: 11px; color: var(--muted); flex-wrap: wrap; align-items: center; }
+  .stats-strip .pill { background: var(--bg); padding: 4px 10px; border-radius: 999px; border: 1px solid var(--border); font-size: 11px; font-weight: 500; }
+  .stats-strip .pill b { color: var(--text); margin-left: 5px; font-weight: 600; font-size: 12px; font-variant-numeric: tabular-nums; font-family: 'Geist Mono', monospace; }
 </style>
 </head>
 <body>
@@ -666,7 +666,9 @@ setTimeout(()=>{ if (typeof renderCards === 'function' && window.APARTMENTS && w
       }
     });
 
-    document.getElementById('count').textContent = `${sorted.length} of ${APARTMENTS.length} buildings`;
+    document.getElementById('count').textContent = APARTMENTS.length <= 33
+      ? `${sorted.length} of ${APARTMENTS.length}  ·  loading 303 total…`
+      : `${sorted.length} of ${APARTMENTS.length} buildings`;
     // Stats strip
     const allPet = APARTMENTS.filter(a => a.pet_status === 'verified' || a.pet_status === 'verified-large-pets');
     const cheap = APARTMENTS.filter(a => (a.rent_1bed_low||a.rent_2bed||9999) <= 2000);
