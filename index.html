@@ -759,18 +759,33 @@ setTimeout(()=>{ if (typeof renderCards === 'function' && window.APARTMENTS && w
     selectedId = id;
     const a = APARTMENTS.find(x => x.id === id);
     if (!a) { console.warn('[apt-hunt] selectApt: no apt for id', id); return; }
+    const detailEl = document.getElementById('detail');
+    detailEl.classList.add('show');
+    // Wrap entire panel build in try/catch so a single data hiccup never leaves the panel blank
+    try {
+      _renderDetailPanel(a);
+    } catch (e) {
+      console.error('[apt-hunt] detail render failed:', e);
+      detailEl.innerHTML = `<button onclick="document.getElementById('detail').classList.remove('show')" style="float:right">×</button>
+        <h2 style="margin-top:0">${a.name}</h2>
+        <p style="color:var(--muted)">${a.address}</p>
+        <p style="color:var(--bad);font-size:12px;background:var(--bad-soft);padding:8px;border-radius:4px">Detail panel hit an error: ${e.message}. Listing link still works.</p>
+        <a href="${a.listing_url}" target="_blank" style="color:var(--accent-text)">Open listing →</a>`;
+    }
     map.setView([a.lat, a.lng], 14);
-    document.getElementById('detail').classList.add('show');
-    // Re-render markers with new selection state
     try { renderCards(); } catch(e) { console.error('renderCards failed in selectApt:', e); }
     // Draw OSRM driving route to CVH if available
+  }
+  // Detail panel render — separated so selectApt can wrap in try/catch
+  function _renderDetailPanel(a) {
+    const id = a.id;
     if (routeLayer) map.removeLayer(routeLayer);
     const osrm = (window.OSRM||{})[id];
     if (osrm && osrm.geometry) {
       const coords = osrm.geometry.coordinates.map(c => [c[1], c[0]]);
       routeLayer = L.polyline(coords, {
-        color: '#ff7a45', weight: 4, opacity: 0.85, dashArray: '2 4'
-      }).addTo(map).bindTooltip(`Real driving route: ${osrm.distance_km}km · ${osrm.duration_min}min off-peak (OSRM)`, {sticky: true});
+        color: '#1652F0', weight: 4, opacity: 0.85, dashArray: '4 6'
+      }).addTo(map).bindTooltip(`OSRM route: ${osrm.distance_km}km · ${osrm.duration_min}min off-peak`, {sticky: true});
     }
     const photos = photoMap[id] || [];
     // Detect synthetic photos (satellite/map mosaics) by filename pattern
