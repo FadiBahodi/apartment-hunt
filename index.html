@@ -393,9 +393,9 @@
       <div class="row"><span class="dot" style="background: var(--bad)"></span> Avoid</div>
       <div class="row"><span class="dot" style="background: var(--link)"></span> Fine</div>
       <div class="legend-head" style="margin-top:8px">Map</div>
-      <div class="row"><span class="dot" style="background: #10b981"></span> Trail (winter)</div>
-      <div class="row"><span class="dot" style="background: #a855f7"></span> Trail (3-season)</div>
-      <div class="row"><span class="dot" style="background: #22c55e"></span> Park (OSM)</div>
+      <div class="row"><span class="dot" style="background: #0E7C3A"></span> Trail (winter)</div>
+      <div class="row"><span class="dot" style="background: #7c3aed"></span> Trail (3-season)</div>
+      <div class="row"><span class="dot" style="background: #0E7C3A;opacity:.5"></span> Park (OSM)</div>
       <div class="row"><span style="width:14px;height:0;border-top:2px dashed var(--accent)"></span> Route to CVH (OSRM)</div>
       <div class="row"><span style="width:14px;height:0;border-top:1px dashed var(--accent)"></span> 15/25m radius (rough)</div>
     </div>
@@ -535,25 +535,42 @@ setTimeout(()=>{ if (typeof renderCards === 'function' && window.APARTMENTS && w
 
   // === OSM REAL TRAIL POLYLINES + PARK POLYGONS ===
   let osmLayersAdded = false;
+  let trailLayerGroup = L.layerGroup();
   function addOsmLayers() {
     if (osmLayersAdded || !window.OSM) return;
     osmLayersAdded = true;
-    // Parks first (under trails)
+    // Parks — softer green, low opacity so building pins read first
     window.OSM.parks.forEach(p => {
-      const ring = p.geometry.coordinates[0].map(c => [c[1], c[0]]); // GeoJSON [lng,lat] -> Leaflet [lat,lng]
+      const ring = p.geometry.coordinates[0].map(c => [c[1], c[0]]);
       L.polygon(ring, {
-        color: '#22c55e', fillColor: '#22c55e', fillOpacity: 0.18, weight: 1.5, opacity: 0.6
-      }).addTo(map).bindPopup(`<b>${p.name}</b><br><span style="color:#888">${p.area_acres} acres</span><br><small>${p.note}</small>`);
+        color: '#0E7C3A', fillColor: '#0E7C3A', fillOpacity: 0.10, weight: 1, opacity: 0.45, interactive: false
+      }).addTo(map);
     });
-    // Trails
+    // Park labels as small markers (clickable for info)
+    window.OSM.parks.forEach(p => {
+      // Polygon centroid (rough)
+      const ring = p.geometry.coordinates[0];
+      const cx = ring.reduce((s,c)=>s+c[0],0)/ring.length;
+      const cy = ring.reduce((s,c)=>s+c[1],0)/ring.length;
+      L.circleMarker([cy, cx], {
+        radius: 4, color: '#0E7C3A', fillColor: '#0E7C3A', fillOpacity: 0.7, weight: 0
+      }).addTo(map).bindTooltip(`${p.name} · ${p.area_acres}ac`, {direction: 'top', offset: [0, -4]});
+    });
+    // Trails — single thin line per trail (not multi-segment dashed mess)
     window.OSM.trails.forEach(t => {
       const lines = t.geometry.coordinates.map(line => line.map(c => [c[1], c[0]]));
-      const color = t.winter_maintained ? '#10b981' : '#a855f7';
-      L.polyline(lines, {
-        color, weight: 3.5, opacity: 0.75,
-        dashArray: t.winter_maintained ? null : '6 4'
-      }).addTo(map).bindPopup(`<b>${t.name}</b><br><span style="color:#888">${t.length_km}km · ${t.surface}</span><br>Winter: ${t.winter_maintained ? '<span style="color:#10b981;font-weight:600">Maintained</span>' : '<span style="color:#a855f7">Not maintained</span>'}<br><small>${t.note}</small>`);
+      const color = t.winter_maintained ? '#0E7C3A' : '#7c3aed';
+      const layer = L.polyline(lines, {
+        color, weight: 2.5, opacity: 0.55,
+        smoothFactor: 2,
+        interactive: true
+      });
+      layer.on('mouseover', e => e.target.setStyle({weight: 4, opacity: 0.9}));
+      layer.on('mouseout', e => e.target.setStyle({weight: 2.5, opacity: 0.55}));
+      layer.bindTooltip(`${t.name} · ${t.length_km}km · ${t.winter_maintained?'winter ✓':'3-season'}`, {sticky: true, direction: 'top'});
+      trailLayerGroup.addLayer(layer);
     });
+    trailLayerGroup.addTo(map);
   }
   // Try immediate, retry on data load
   addOsmLayers();
@@ -761,19 +778,20 @@ setTimeout(()=>{ if (typeof renderCards === 'function' && window.APARTMENTS && w
     if (!a) { console.warn('[apt-hunt] selectApt: no apt for id', id); return; }
     const detailEl = document.getElementById('detail');
     detailEl.classList.add('show');
-    // Wrap entire panel build in try/catch so a single data hiccup never leaves the panel blank
+    // IMMEDIATELY write a basic header so user gets feedback even if data render fails
+    detailEl.innerHTML = `<button id="detail-close" onclick="document.getElementById('detail').classList.remove('show')" aria-label="Close">×</button>
+      <h2 style="margin:0 0 4px">${a.name}</h2>
+      <div class="addr">${a.address}</div>
+      <p style="color:var(--muted);font-size:12px">Loading detail…</p>`;
+    map.setView([a.lat, a.lng], 14);
+    // Build the full panel — wrapped in try/catch as safety
     try {
       _renderDetailPanel(a);
     } catch (e) {
       console.error('[apt-hunt] detail render failed:', e);
-      detailEl.innerHTML = `<button onclick="document.getElementById('detail').classList.remove('show')" style="float:right">×</button>
-        <h2 style="margin-top:0">${a.name}</h2>
-        <p style="color:var(--muted)">${a.address}</p>
-        <p style="color:var(--bad);font-size:12px;background:var(--bad-soft);padding:8px;border-radius:4px">Detail panel hit an error: ${e.message}. Listing link still works.</p>
-        <a href="${a.listing_url}" target="_blank" style="color:var(--accent-text)">Open listing →</a>`;
+      detailEl.innerHTML += `<p style="color:var(--bad);font-size:12px;background:var(--bad-soft);padding:8px;border-radius:4px">Detail rendering hit an error: ${e.message}<br><a href="${a.listing_url}" target="_blank" style="color:var(--link)">Open listing →</a></p>`;
     }
-    map.setView([a.lat, a.lng], 14);
-    try { renderCards(); } catch(e) { console.error('renderCards failed in selectApt:', e); }
+    try { renderCards(); } catch(e) { console.error('renderCards failed:', e); }
     // Draw OSRM driving route to CVH if available
   }
   // Detail panel render — separated so selectApt can wrap in try/catch
