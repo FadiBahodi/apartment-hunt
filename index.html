@@ -673,8 +673,8 @@ setTimeout(()=>{ if (typeof renderCards === 'function' && window.APARTMENTS && w
     const allPet = APARTMENTS.filter(a => a.pet_status === 'verified' || a.pet_status === 'verified-large-pets');
     const cheap = APARTMENTS.filter(a => (a.rent_1bed_low||a.rent_2bed||9999) <= 2000);
     const tier1 = APARTMENTS.filter(a => a.drive_to_cvh_min_peak <= 15);
-    const fits = APARTMENTS.map(a => computeFitScore(a, window.COSTS||{}).score);
-    const bestFit = Math.max(...fits);
+    const fits = APARTMENTS.map(a => { try { return computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score; } catch(e) { return 0; } });
+    const bestFit = fits.length ? Math.max(...fits) : 0;
     const medianRent = (() => {
       const r = APARTMENTS.map(a => a.rent_1bed_low||a.rent_2bed||0).filter(Boolean).sort((a,b)=>a-b);
       return r[Math.floor(r.length/2)];
