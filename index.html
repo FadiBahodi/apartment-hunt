@@ -557,10 +557,17 @@ window.DATA_READY = Promise.all([
 
   const markers = {};
   function pinColor(apt) {
+    // Check avoid_audit first for hard overrides
+    const audit = (window.AVOID_AUDIT && window.AVOID_AUDIT.flagged_buildings || []).find(f => f.id === apt.id);
+    if (audit?.severity === 'AVOID') return '#B91C1C';
+    if (audit?.severity === 'CAUTION') return '#B45309';
     const c = ratingClass(apt.rating);
-    return c === 'good' ? '#4ade80' : c === 'warn' ? '#fbbf24' : c === 'bad' ? '#f87171' : '#82b6ff';
+    return c === 'good' ? '#0E7C3A' : c === 'warn' ? '#B45309' : c === 'bad' ? '#B91C1C' : '#1652F0';
   }
   function pinGlyph(apt) {
+    const audit = (window.AVOID_AUDIT && window.AVOID_AUDIT.flagged_buildings || []).find(f => f.id === apt.id);
+    if (audit?.severity === 'AVOID') return '✕';
+    if (audit?.severity === 'CAUTION') return '!';
     const c = ratingClass(apt.rating);
     return c === 'good' ? '✓' : c === 'warn' ? '!' : c === 'bad' ? '✕' : '·';
   }
@@ -851,6 +858,20 @@ window.DATA_READY = Promise.all([
     document.getElementById('detail').innerHTML = `
       <button id="detail-close" onclick="document.getElementById('detail').classList.remove('show')" aria-label="Close detail">✕</button>
       <h2>${a.name} <span class="fit-badge" style="background:${fitColor}1f;color:${fitColor};border:1px solid ${fitColor}55;font-size:12px;padding:3px 8px">Fit ${fit.score}</span> <span class="badge ${cls}"><span class="dot"></span>${a.rating}</span></h2>
+      ${(() => {
+        const audit = ((window.AVOID_AUDIT||{}).flagged_buildings||[]).find(f => f.id === a.id);
+        if (audit) {
+          const sev = audit.severity;
+          const sevColor = sev === 'AVOID' ? 'var(--bad)' : sev === 'CAUTION' ? 'var(--warn)' : 'var(--muted)';
+          return `<div style="background:${sev==='AVOID'?'var(--bad-soft)':sev==='CAUTION'?'var(--warn-soft)':'var(--panel-2)'};border:1px solid ${sevColor};border-radius:6px;padding:10px 12px;margin:8px 0;">
+            <div style="color:${sevColor};font-weight:700;font-size:12px;margin-bottom:4px">${sev} — documented red flag</div>
+            <div style="font-size:12px">${audit.issue}</div>
+            ${audit.evidence_quote?`<div style="font-size:11px;color:var(--muted);font-style:italic;margin-top:4px">"${audit.evidence_quote}"</div>`:''}
+            ${audit.source_url?`<a href="${audit.source_url}" target="_blank" style="font-size:11px;color:var(--link)">Source</a>`:''}
+          </div>`;
+        }
+        return '';
+      })()}
       <div class="addr">${a.address}</div>
       <div class="action-row">
         <button class="${isFav?'on':''}" onclick="toggleFavorite('${a.id}')">${isFav?'★ Saved':'☆ Save'}</button>
@@ -889,6 +910,28 @@ window.DATA_READY = Promise.all([
         ${dm.notes ? `<p style="font-size:11px;color:var(--muted)">${dm.notes}</p>` : ''}
       ` : ''}
       ${costHtml}
+      ${(() => {
+        const pk = (window.PARKING||{})[a.id];
+        if (!pk) return '';
+        const painColor = pk.parking_pain === 'easy' ? 'var(--good)' : pk.parking_pain === 'moderate' ? 'var(--warn)' : pk.parking_pain === 'difficult' || pk.parking_pain === 'nightmare' ? 'var(--bad)' : 'var(--muted)';
+        return `<h3>Parking + amenities</h3>
+        <table class="cost-table">
+          <tr><td>Parking type</td><td>${pk.parking_type||'—'}</td></tr>
+          <tr><td>Availability</td><td>${pk.parking_availability||'—'}</td></tr>
+          ${pk.parking_cost_breakdown?.underground?`<tr><td>Underground</td><td>$${pk.parking_cost_breakdown.underground}/mo</td></tr>`:''}
+          ${pk.parking_cost_breakdown?.outdoor?`<tr><td>Outdoor</td><td>$${pk.parking_cost_breakdown.outdoor}/mo</td></tr>`:''}
+          <tr><td>Visitor parking</td><td>${pk.visitor_parking||'—'}</td></tr>
+          <tr><td>Parking pain</td><td><b style="color:${painColor}">${pk.parking_pain||'—'}</b></td></tr>
+          <tr><td>Street overnight legal?</td><td>${pk.street_parking_overnight_legal===true?'Yes':pk.street_parking_overnight_legal===false?'No':'—'}</td></tr>
+          ${pk.ev_charging?'<tr><td>EV charging</td><td>Yes</td></tr>':''}
+          ${pk.bike_storage?`<tr><td>Bike storage</td><td>${pk.bike_storage}</td></tr>`:''}
+          ${pk.package_room?'<tr><td>Package room</td><td>Yes</td></tr>':''}
+          ${pk.concierge?`<tr><td>Concierge</td><td>${pk.concierge}</td></tr>`:''}
+          ${pk.gym?'<tr><td>Gym</td><td>Yes</td></tr>':''}
+          ${pk.dog_amenities?`<tr><td>Dog amenity</td><td><b style="color:var(--accent)">${pk.dog_amenities}</b></td></tr>`:''}
+        </table>
+        ${pk.notes?`<p style="font-size:11px;color:var(--muted);margin-top:4px">${pk.notes}</p>`:''}`;
+      })()}
       ${reviewHtml}
       ${zoneHtml}
       ${(() => {
