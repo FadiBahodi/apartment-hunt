@@ -1,4 +1,4 @@
-// Apartment hunt data — Fadi & Nomi
+// Apartment hunt data — Fadi
 // Anchor: Credit Valley Hospital, 2200 Eglinton Ave W, Mississauga
 // Move-in: July 2026
 // Generated: 2026-04-27
@@ -739,16 +739,6 @@ const AVOID = [
     name: "240 Markland Drive (Renaissance)",
     why: "CBC: 'culture of fear and intimidation' during multi-year construction; power/water/elevator outages",
     source: "CBC News 2023"
-  },
-  {
-    name: "Skyrise Rentals (2550 Eglinton W)",
-    why: "NO PETS confirmed",
-    source: "Zumper listing"
-  },
-  {
-    name: "18 Reid Dr",
-    why: "NO PETS",
-    source: "Zumper listing"
   },
   {
     name: "2170 Sherobee Rd (The Argosy)",

@@ -2,11 +2,10 @@
 // 0-100 score based on weighted axes that matter for HIM
 //
 // Axes (weights sum to 100):
-//   30 — CVH commute (peak min)        // job reliability
-//   20 — Running (winter trail access) // 100km/wk identity
-//   15 — Pet quality (verified, large)  // dog
-//   15 — Cost vs budget (effective rent)
-//    8 — Toronto access (Union min)    // social/Nomi
+//   35 — CVH commute (peak min)        // job reliability
+//   25 — Running (winter trail access) // 100km/wk identity
+//   18 — Cost vs budget (effective rent)
+//   10 — Toronto access (Union min)    // social access
 //    7 — Building rating quality (good > caution > avoid)
 //    5 — Sqft vs price (value/space)
 
@@ -26,64 +25,53 @@ window.computeFitScore = function(a, costs, osrm) {
     source = `${timeUsed}m peak (est)`;
   }
   let cvhPts = 0;
-  if (timeUsed <= 8) cvhPts = 30;
-  else if (timeUsed <= 12) cvhPts = 25;
-  else if (timeUsed <= 17) cvhPts = 18;
-  else if (timeUsed <= 25) cvhPts = 10;
-  else if (timeUsed <= 35) cvhPts = 4;
+  if (timeUsed <= 8) cvhPts = 35;
+  else if (timeUsed <= 12) cvhPts = 29;
+  else if (timeUsed <= 17) cvhPts = 21;
+  else if (timeUsed <= 25) cvhPts = 12;
+  else if (timeUsed <= 35) cvhPts = 5;
   score += cvhPts;
-  breakdown.push({k: 'CVH commute', v: cvhPts, max: 30, note: source});
+  breakdown.push({k: 'CVH commute', v: cvhPts, max: 35, note: source});
 
-  // 2. Running (20 pts) — proximity + winter access
-  // Heuristic: zone-based for now; can be improved when zones.json arrives
-  let runPts = 8; // baseline
+  // 2. Running (25 pts) — proximity + winter access
+  let runPts = 10; // baseline
   const zone = (a.zone || '').toLowerCase();
   const running = (a.running || '').toLowerCase();
-  if (running.includes('martin goodman') || running.includes('humber bay')) runPts = 20;
-  else if (running.includes('sawmill') || running.includes('culham') || running.includes('riverwood')) runPts = 17;
-  else if (running.includes('lakefront') || running.includes('rattray') || running.includes('jack darling')) runPts = 16;
-  else if (running.includes('etobicoke creek') || running.includes('centennial')) runPts = 13;
-  else if (running.includes('burnhamthorpe') || running.includes('applewood')) runPts = 14; // winter cleared
-  else if (running.includes('cooksville')) runPts = 9;
+  if (running.includes('martin goodman') || running.includes('humber bay')) runPts = 25;
+  else if (running.includes('sawmill') || running.includes('culham') || running.includes('riverwood')) runPts = 22;
+  else if (running.includes('lakefront') || running.includes('rattray') || running.includes('jack darling')) runPts = 20;
+  else if (running.includes('etobicoke creek') || running.includes('centennial')) runPts = 17;
+  else if (running.includes('burnhamthorpe') || running.includes('applewood')) runPts = 18; // winter cleared
+  else if (running.includes('cooksville')) runPts = 12;
   score += runPts;
-  breakdown.push({k: 'Running', v: runPts, max: 20, note: 'Trail proximity + winter access'});
+  breakdown.push({k: 'Running', v: runPts, max: 25, note: 'Trail proximity + winter access'});
 
-  // 3. Pet (15 pts)
-  let petPts = 0;
-  if (a.pet_status === 'verified-large-pets') petPts = 15;
-  else if (a.pet_status === 'verified') petPts = 13;
-  else if (a.pet_status === 'verify-specifics') petPts = 8;
-  else if (a.pet_status === 'verify-condo-rules') petPts = 6;
-  else if (a.pet_status === 'conflicting') petPts = 3;
-  score += petPts;
-  breakdown.push({k: 'Pet policy', v: petPts, max: 15, note: a.pet_status || 'unknown'});
-
-  // 4. Cost vs budget (15 pts) — sweet spot $1,800-$2,200
+  // 3. Cost vs budget (18 pts)
   const rent = a.rent_1bed_low || a.rent_2bed || 9999;
   const c = costs && costs[a.id];
   const effectiveRent = c?.net_effective_1bed || rent;
-  const totalEst = c?.estimated_monthly_total_1bed || (rent + 100); // assume +100 utilities
+  const totalEst = c?.estimated_monthly_total_1bed || (rent + 100);
   let costPts = 0;
-  if (totalEst <= 1900) costPts = 15;
-  else if (totalEst <= 2100) costPts = 13;
-  else if (totalEst <= 2300) costPts = 10;
-  else if (totalEst <= 2500) costPts = 7;
+  if (totalEst <= 1900) costPts = 18;
+  else if (totalEst <= 2100) costPts = 15;
+  else if (totalEst <= 2300) costPts = 12;
+  else if (totalEst <= 2500) costPts = 8;
   else if (totalEst <= 2700) costPts = 4;
   else costPts = 1;
   score += costPts;
-  breakdown.push({k: 'Cost', v: costPts, max: 15, note: `~$${totalEst}/mo all-in`});
+  breakdown.push({k: 'Cost', v: costPts, max: 18, note: `~$${totalEst}/mo all-in`});
 
-  // 5. Toronto access (8 pts)
+  // 4. Toronto access (10 pts)
   const u = a.drive_to_union_min_offpeak || 99;
   let torPts = 0;
-  if (u <= 16) torPts = 8;
-  else if (u <= 22) torPts = 6;
-  else if (u <= 28) torPts = 4;
+  if (u <= 16) torPts = 10;
+  else if (u <= 22) torPts = 8;
+  else if (u <= 28) torPts = 5;
   else if (u <= 35) torPts = 2;
   score += torPts;
-  breakdown.push({k: 'Toronto access', v: torPts, max: 8, note: `${u}min Union`});
+  breakdown.push({k: 'Toronto access', v: torPts, max: 10, note: `${u}min Union`});
 
-  // 6. Building rating (7 pts)
+  // 5. Building rating (7 pts)
   let bldgPts = 3;
   const r = (a.rating || '').toUpperCase();
   if (r.startsWith('GOOD')) bldgPts = 7;
@@ -93,7 +81,7 @@ window.computeFitScore = function(a, costs, osrm) {
   score += bldgPts;
   breakdown.push({k: 'Building rep', v: bldgPts, max: 7, note: a.rating || 'unknown'});
 
-  // 7. Value (5 pts) — sqft per dollar
+  // 6. Value (5 pts) — sqft per dollar
   const sqft = a.sqft_high || a.sqft_low || 600;
   const sqftPerDollar = sqft / Math.max(rent, 1);
   let valPts = 0;
@@ -165,19 +153,20 @@ window.computeTopPicks = function() {
     return s;
   }));
 
-  // 4. Big-dog friendly — verified large pet OR explicit dog amenity
-  const bigDog = pick(score(all, x => {
+  // 4. Runner-first — closest to high-quality + winter-cleared trails
+  const runnerFirst = pick(score(all, x => {
     let s = 0;
-    if (x.a.pet_status === 'verified-large-pets') s += 50;
-    else if (x.a.pet_status === 'verified') s += 25;
-    const dogAmen = (x.a.pros||[]).concat([x.a.running||'', x.parking?.dog_amenities||'']).join(' ').toLowerCase();
-    if (/pet spa|dog wash|dog run|off.leash|pet washing/i.test(dogAmen)) s += 25;
-    if (/jack darling|colonel.*smith|humber bay|rattray/i.test(x.a.running||'')) s += 15;
+    const r = (x.a.running||'').toLowerCase();
+    if (/martin goodman|humber bay/.test(r)) s += 35;
+    else if (/sawmill|culham|riverwood/.test(r)) s += 28;
+    else if (/lakefront|rattray|jack darling|waterfront/.test(r)) s += 22;
+    else if (/burnhamthorpe|applewood/.test(r)) s += 18; // winter-cleared
+    if (x.osrm?.duration_min) s += Math.max(0, 25 - x.osrm.duration_min);
     s += x.fit * 0.3;
     return s;
   }));
 
-  // 5. Amenity premium — concierge, gym, pool, party room — for Nomi
+  // 5. Amenity premium — concierge, gym, pool, party room
   const amenityRich = pick(score(all, x => {
     let s = 0;
     const amen = (x.a.pros||[]).concat([x.a.promo||'']).join(' ').toLowerCase();
@@ -207,8 +196,8 @@ window.computeTopPicks = function() {
     { tier: "CVH OPERATIONAL EXCELLENCE", why: "Shortest AM-peak commute with verified pet + good rating + real OSRM routing.", picks: cvhFirst },
     { tier: "TORONTO LIFE", why: "Close to Union via GO + waterfront/streetcar zones for the old-Harbourfront feel.", picks: torontoLife },
     { tier: "BEST VALUE", why: "Cheapest effective rent for the unit + meaningful promo + below-zone-market premium index.", picks: bestValue },
-    { tier: "BIG-DOG FRIENDLY", why: "Verified large-pet OR on-site dog amenity AND doorstep dog park.", picks: bigDog },
-    { tier: "AMENITY RICH (for Nomi)", why: "Concierge + pool + gym + dog spa / co-work / theatre — modern building feel.", picks: amenityRich },
+    { tier: "RUNNER-FIRST", why: "Closest building to top-tier trail (winter-cleared bonus) with manageable CVH commute.", picks: runnerFirst },
+    { tier: "AMENITY RICH", why: "Concierge + pool + gym + co-work / theatre — modern building feel.", picks: amenityRich },
     { tier: "SAFEST BET", why: "Highest external rating (Google + RentSafeTO) with verified pet and no documented red flags.", picks: safestBet }
   ];
 };

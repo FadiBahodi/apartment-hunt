@@ -1,4 +1,4 @@
-# Apartment Hunt — Fadi & Nomi (July 2026)
+# Apartment Hunt — Fadi (July 2026)
 
 Interactive map + 26 verified pet-friendly rental candidates near Credit Valley Hospital (Mississauga) and west Etobicoke / Toronto.
 

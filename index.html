@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Apartment Hunt — Fadi & Nomi — July 2026</title>
+<title>Apartment Hunt — Fadi — July 2026</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -314,7 +314,7 @@
     <div style="font-size:13px;line-height:1.65;">
       <h3 style="color:var(--accent-text);margin-top:0;font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);padding-bottom:4px">Flow</h3>
       <ol>
-        <li><b>Filter + sort</b>. Multi-select: CVH ≤15m, ≤$2k, Pet verified, etc. Search supports <code style="background:var(--panel);padding:1px 5px;border-radius:3px">fit:60</code> and <code style="background:var(--panel);padding:1px 5px;border-radius:3px">rent:2000</code>.</li>
+        <li><b>Filter + sort</b>. Multi-select: CVH ≤15m, ≤$2k, Good only, Fit ≥60, etc. Search supports <code style="background:var(--panel);padding:1px 5px;border-radius:3px">fit:60</code> and <code style="background:var(--panel);padding:1px 5px;border-radius:3px">rent:2000</code>.</li>
         <li><b>Click a card</b> → photos, drive matrix (5 time windows), cost decoder, reviews, run routes, fit breakdown.</li>
         <li><b>Save (★)</b> and <b>Compare (⇄)</b> from any card. Up to 4 in compare.</li>
         <li><b>Mark called / toured</b> — dates persist locally.</li>
@@ -322,7 +322,7 @@
       </ol>
 
       <h3 style="color:var(--accent-text);font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);padding-bottom:4px">Fit Score 0-100</h3>
-      <p>Weighted: CVH commute 30 · Running 20 · Pet 15 · Cost 15 · Toronto 8 · Building rep 7 · Value 5. Uses real OSRM time when available.</p>
+      <p>Weighted: CVH commute 35 · Running 25 · Cost 18 · Toronto 10 · Building rep 7 · Value 5. Uses real OSRM time when available.</p>
 
       <h3 style="color:var(--accent-text);font-size:13px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid var(--border);padding-bottom:4px">Drive matrix</h3>
       <p>Real OSRM off-peak baseline × zone-aware multipliers for AM peak, PM peak, post-night-shift home (contraflow), and late night. Chokepoint named per route.</p>
@@ -700,9 +700,9 @@ setTimeout(scheduleRerender, 4000);
       ? `${sorted.length} of ${APARTMENTS.length}  ·  loading 303 total…`
       : `${sorted.length} of ${APARTMENTS.length} buildings`;
     // Stats strip
-    const allPet = APARTMENTS.filter(a => a.pet_status === 'verified' || a.pet_status === 'verified-large-pets');
     const cheap = APARTMENTS.filter(a => (a.rent_1bed_low||a.rent_2bed||9999) <= 2000);
     const tier1 = APARTMENTS.filter(a => a.drive_to_cvh_min_peak <= 15);
+    const good = APARTMENTS.filter(a => /^GOOD/i.test(a.rating || ''));
     const fits = APARTMENTS.map(a => { try { return computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score; } catch(e) { return 0; } });
     const bestFit = fits.length ? Math.max(...fits) : 0;
     const medianRent = (() => {
@@ -711,7 +711,7 @@ setTimeout(scheduleRerender, 4000);
     })();
     document.getElementById('stats-strip').innerHTML = `
       <span class="pill">Total<b>${APARTMENTS.length}</b></span>
-      <span class="pill">Pets verified<b>${allPet.length}</b></span>
+      <span class="pill">Good rated<b>${good.length}</b></span>
       <span class="pill">Under $2k<b>${cheap.length}</b></span>
       <span class="pill">CVH ≤15m<b>${tier1.length}</b></span>
       <span class="pill">Median rent<b>$${medianRent?.toLocaleString()||'—'}</b></span>
@@ -733,13 +733,6 @@ setTimeout(scheduleRerender, 4000);
       const amPeak = dm?.am_peak_min ?? a.drive_to_cvh_min_peak;
       const premBadge = dm?.value_call;
       const premBadgeColor = premBadge === 'below market' ? '#4ade80' : premBadge === 'market' ? '#82b6ff' : premBadge === 'above market' ? '#fbbf24' : premBadge === 'premium' ? '#f87171' : null;
-      const petPip = a.pet_status === 'verified' || a.pet_status === 'verified-large-pets' ? 'good'
-                   : a.pet_status === 'conflicting' ? 'bad'
-                   : a.pet_status === 'verify-specifics' || a.pet_status === 'verify-condo-rules' ? 'warn' : 'dim';
-      const petLabel = a.pet_status === 'verified-large-pets' ? 'Pets / large OK'
-                    : a.pet_status === 'verified' ? 'Pets verified'
-                    : a.pet_status === 'conflicting' ? 'Pets conflict'
-                    : 'Pets unverified';
       return `
         <div class="card ${selectedId===a.id?'selected':''}" data-id="${a.id}" tabindex="0" role="button" aria-label="${a.name}, ${a.zone}" onclick="selectApt('${a.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectApt('${a.id}')}">
           <div class="thumb" style="${thumbStyle}">${thumbInner}</div>
@@ -750,7 +743,7 @@ setTimeout(scheduleRerender, 4000);
               <span class="fit-badge" style="background:${fitColor}1f;color:${fitColor};border:1px solid ${fitColor}3a">Fit ${fit.score}</span>
               <span class="metric"${dm ? ' title="Real drive time — OSRM × zone-aware peak multiplier"' : ''}><span class="label">CVH${dm?'*':''}</span><span class="val">${amPeak}m</span></span>
               ${a.drive_to_union_min_offpeak ? `<span class="metric"><span class="label">Union</span><span class="val">${a.drive_to_union_min_offpeak}m</span></span>` : ''}
-              <span class="metric" title="${petLabel}"><span class="pip ${petPip}"></span><span class="val">${a.pet_status === 'verified-large-pets' ? 'lg pet' : a.pet_status === 'verified' ? 'pet' : a.pet_status === 'conflicting' ? 'conflict' : '?'}</span></span>
+              ${a.sqft_high ? `<span class="metric"><span class="label">sqft</span><span class="val">${a.sqft_high}</span></span>` : ''}
               ${review?.google_rating ? `<span class="metric"><span class="label">Rev</span><span class="val">${review.google_rating}</span></span>` : ''}
               ${premBadge ? `<span class="metric" style="color:${premBadgeColor}" title="vs zone avg 1-bed"><span class="label">vs mkt</span><span class="val">${premBadge.replace(' market','').replace('below','below').replace('above','above')}</span></span>` : ''}
             </div>
@@ -835,9 +828,7 @@ setTimeout(scheduleRerender, 4000);
         }).join('') + `</div>${isSynthetic?'<div style="font-size:11px;color:var(--muted);margin-top:-4px;margin-bottom:8px;font-style:italic">No publisher photos for this building. Showing satellite + street map. Listing link has real photos when available.</div>':''}`
       : `<div style="background:var(--panel);padding:24px;text-align:center;border:1px dashed var(--border);border-radius:6px;color:var(--muted);font-size:12px">Photos still downloading or unavailable. Listing link below has full photos.</div>`;
     const cls = ratingClass(a.rating);
-    const petWarn = a.pet_status === 'conflicting' ? '<div class="warn-banner">⚠️ Pet policy CONFLICTS across listing sites — verify in writing before viewing.</div>' :
-      a.pet_status === 'verify-condo-rules' ? '<div class="warn-banner">⚠️ CONDO unit — RTA s.14 does NOT protect pet rights if condo declaration bans pets. Demand declaration before signing.</div>' :
-      a.pet_status === 'verify-specifics' ? '<div class="warn-banner">⚠️ Verify dog size/breed limits with leasing.</div>' : '';
+    const petWarn = '';
 
     const gmapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${a.lat},${a.lng}&destination=${CVH.lat},${CVH.lng}`;
     const gmapsAddrUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.address)}`;
@@ -964,7 +955,6 @@ setTimeout(scheduleRerender, 4000);
         <div class="stat"><div class="k">Rent (1-bed)</div><div class="v">${rentDisplay(a)}</div></div>
         <div class="stat"><div class="k">Sqft</div><div class="v">${a.sqft_low ? a.sqft_low + '–' + a.sqft_high : a.sqft_high || '—'}</div></div>
         <div class="stat"><div class="k">→ Union</div><div class="v">${a.drive_to_union_min_offpeak ? a.drive_to_union_min_offpeak+' min' : '—'}</div></div>
-        <div class="stat"><div class="k">Pets</div><div class="v">${a.pets}</div></div>
         <div class="stat"><div class="k">Promo</div><div class="v">${a.promo || '—'}</div></div>
         ${premBadgeColor ? `<div class="stat"><div class="k">vs market</div><div class="v" style="color:${premBadgeColor}">${dm.value_call} · ${(dm.premium_index*100).toFixed(0)}%</div></div>` : ''}
       </div>
@@ -1002,7 +992,6 @@ setTimeout(scheduleRerender, 4000);
           ${pk.package_room?'<tr><td>Package room</td><td>Yes</td></tr>':''}
           ${pk.concierge?`<tr><td>Concierge</td><td>${pk.concierge}</td></tr>`:''}
           ${pk.gym?'<tr><td>Gym</td><td>Yes</td></tr>':''}
-          ${pk.dog_amenities?`<tr><td>Dog amenity</td><td><b style="color:var(--accent)">${pk.dog_amenities}</b></td></tr>`:''}
         </table>
         ${pk.notes?`<p style="font-size:11px;color:var(--muted);margin-top:4px">${pk.notes}</p>`:''}`;
       })()}
@@ -1069,7 +1058,6 @@ setTimeout(scheduleRerender, 4000);
     { id: 'all', label: 'All' },
     { id: 'cvh-tier1', label: 'CVH ≤15m' },
     { id: 'toronto-close', label: 'Union ≤25m' },
-    { id: 'pet-verified', label: 'Pets verified' },
     { id: 'cheap', label: '≤$2,000' },
     { id: 'has-photos', label: 'Has photos' },
     { id: 'good-rating', label: 'Good only' },
@@ -1217,7 +1205,6 @@ setTimeout(scheduleRerender, 4000);
       ['CVH peak', a => `${a.drive_to_cvh_min_peak} min`],
       ['CVH off-peak', a => `${a.drive_to_cvh_min_offpeak} min`],
       ['→ Union', a => a.drive_to_union_min_offpeak?a.drive_to_union_min_offpeak+' min':'—'],
-      ['Pet status', a => a.pet_status||'—'],
       ['Promo', a => a.promo||'—'],
       ['Google rating', a => { const r=(window.REVIEWS||{})[a.id]; return r?.google_rating?'⭐ '+r.google_rating:'—'; }],
       ['Reddit', a => { const r=(window.REVIEWS||{})[a.id]; return r?.reddit_sentiment||'—'; }],
@@ -1315,7 +1302,7 @@ setTimeout(scheduleRerender, 4000);
     const a = APARTMENTS.find(x => x.id === id);
     if (!a) return;
     const subject = `Inquiry — 1-bed availability for July 1, 2026 (${a.name})`;
-    const body = `Hi,\n\nI'm interested in a 1-bedroom suite at ${a.name} (${a.address}) for occupancy July 1, 2026.\n\nA few quick questions before I book a viewing:\n\n1. What 1-bed inventory is available for July 1?\n2. Pet policy specifics — small/medium dog accepted? Any breed/weight restrictions?\n3. Parking — underground availability + monthly cost?\n4. Are heat/water/hydro included or extra?\n5. What promotions are currently running?\n6. Earliest viewing window — I'm flying in from Brandon, MB the weekend of May 23-25.\n\nQuick context: I'm a physician starting at Credit Valley Hospital July 3. Strong rental references available.\n\nThanks,\nFadi`;
+    const body = `Hi,\n\nI'm interested in a 1-bedroom suite at ${a.name} (${a.address}) for occupancy July 1, 2026.\n\nA few quick questions before I book a viewing:\n\n1. What 1-bed inventory is available for July 1?\n2. Parking — underground availability + monthly cost?\n3. Are heat/water/hydro included or extra?\n4. What promotions are currently running?\n5. Earliest viewing window — I'm flying in from Brandon, MB the weekend of May 23-25.\n\nQuick context: I'm a physician starting at Credit Valley Hospital July 3. Strong rental references available.\n\nThanks,\nFadi`;
     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
