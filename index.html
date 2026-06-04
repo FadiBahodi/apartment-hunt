@@ -277,6 +277,8 @@
     <a href="#" id="show-playbook" class="nav-btn" style="background:var(--accent-soft);color:var(--accent-text);border-color:var(--accent)">Start here</a>
     <a href="#" id="show-timeline" class="nav-btn">Timeline</a>
     <a href="#" id="show-runclubs" class="nav-btn">Run clubs</a>
+    <a href="#" id="show-tradeoff" class="nav-btn" style="background:#fff3cd;color:#664400;border-color:#d4a900">A vs B tradeoff</a>
+    <a href="#" id="show-refresh" class="nav-btn" style="background:#dcedc8;color:#1b5e20;border-color:#8bc34a">June 4 refresh</a>
     <a href="#" id="show-help" class="nav-btn" title="How to use" style="padding:5px 9px;font-weight:500">?</a>
   </span>
 </header>
@@ -320,6 +322,18 @@
   <div class="modal-inner" style="max-width:900px;">
     <div class="modal-head"><h2 style="margin:0">Run clubs · the social entry mechanism</h2><button class="modal-close" data-close="runclubs-modal">×</button></div>
     <div id="runclubs-content" style="font-size:13px;line-height:1.6"></div>
+  </div>
+</div>
+<div id="tradeoff-modal" class="modal">
+  <div class="modal-inner" style="max-width:1100px;">
+    <div class="modal-head"><h2 style="margin:0">Mississauga vs Not-Mississauga · the real tradeoff</h2><button class="modal-close" data-close="tradeoff-modal">×</button></div>
+    <div id="tradeoff-content" style="font-size:13px;line-height:1.65"></div>
+  </div>
+</div>
+<div id="refresh-modal" class="modal">
+  <div class="modal-inner" style="max-width:1000px;">
+    <div class="modal-head"><h2 style="margin:0">What changed · June 4 market refresh</h2><button class="modal-close" data-close="refresh-modal">×</button></div>
+    <div id="refresh-content" style="font-size:13px;line-height:1.6"></div>
   </div>
 </div>
 <div id="help-modal" class="modal">
@@ -464,6 +478,7 @@ const _jsonLoaders = [
   ['dating_scene.json', 'DATING_SCENE', null],
   ['run_clubs.json', 'RUN_CLUBS', null],
   ['refresh_june4.json', 'REFRESH', null],
+  ['destinations.json', 'DESTINATIONS', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
   fetch('data/' + fn)
@@ -1013,6 +1028,25 @@ setTimeout(scheduleRerender, 4000);
         ${dm.primary_chokepoint ? `<p style="font-size:11px;color:var(--muted);margin-top:4px"><b>Chokepoint:</b> ${dm.primary_chokepoint}</p>` : ''}
         ${dm.notes ? `<p style="font-size:11px;color:var(--muted)">${dm.notes}</p>` : ''}
       ` : ''}
+      ${(() => {
+        const dst = (window.DESTINATIONS && window.DESTINATIONS.routes && window.DESTINATIONS.routes[a.id]) || null;
+        if (!dst) return '';
+        const rows = [
+          ['→ King West (date night, bars)', dst.king_west],
+          ['→ Yorkville (brunch, high-end)', dst.yorkville],
+          ['→ Harbourfront (old life)', dst.harbourfront],
+          ['→ Pearson YYZ (US trips)', dst.yyz_pearson],
+          ['→ Trillium Mississauga Hospital', dst.trillium_mississauga_hospital],
+          ['→ Toronto General (downtown med)', dst.toronto_general],
+        ].filter(([_,v])=>v);
+        if (!rows.length) return '';
+        return `<h3>Drive times · other destinations</h3>
+          <table class="cost-table">
+            ${rows.map(([label,v])=>`<tr><td>${label}</td><td>${v.duration_min.toFixed(0)} min · ${v.distance_km.toFixed(1)} km</td></tr>`).join('')}
+          </table>
+          <p style="font-size:11px;color:var(--muted);margin-top:4px">OSRM off-peak driving. Add ~40-60% for AM rush, subtract ~5% for late-night.</p>
+        `;
+      })()}
       ${costHtml}
       ${(() => {
         const pk = (window.PARKING||{})[a.id];
@@ -1417,6 +1451,179 @@ setTimeout(scheduleRerender, 4000);
       </details>
     `;
     document.getElementById('runclubs-modal').classList.add('show');
+  };
+
+  // ===== A vs B TRADEOFF MODAL =====
+  document.getElementById('show-tradeoff').onclick = e => {
+    e.preventDefault();
+    const dests = (window.DESTINATIONS && window.DESTINATIONS.routes) || {};
+    const osrm = window.OSRM || {};
+    const row = (label, bid, opts={}) => {
+      const a = APARTMENTS.find(x => x.id === bid);
+      const cvh = (osrm[bid]||{}).duration_min;
+      const d = dests[bid] || {};
+      const kw = d.king_west && d.king_west.duration_min;
+      const yk = d.yorkville && d.yorkville.duration_min;
+      const hb = d.harbourfront && d.harbourfront.duration_min;
+      const yyz = d.yyz_pearson && d.yyz_pearson.duration_min;
+      const rent = a ? (a.rent_1bed_low||a.rent_2bed) : null;
+      const peakEst = cvh ? Math.round(cvh * 1.55) : null;
+      return `<tr>
+        <td style="padding:6px 8px;border-bottom:1px solid var(--border)"><b style="color:var(--accent-text);cursor:pointer" onclick="document.getElementById('tradeoff-modal').classList.remove('show');selectApt('${bid}')">${label}</b><div style="font-size:10px;color:var(--muted)">${a?a.address:''}</div></td>
+        <td style="padding:6px 8px;border-bottom:1px solid var(--border);text-align:right;font-variant-numeric:tabular-nums">${cvh?cvh.toFixed(0)+' / '+peakEst:'—'}</td>
+        <td style="padding:6px 8px;border-bottom:1px solid var(--border);text-align:right;font-variant-numeric:tabular-nums">${kw?kw.toFixed(0):'—'}</td>
+        <td style="padding:6px 8px;border-bottom:1px solid var(--border);text-align:right;font-variant-numeric:tabular-nums">${yk?yk.toFixed(0):'—'}</td>
+        <td style="padding:6px 8px;border-bottom:1px solid var(--border);text-align:right;font-variant-numeric:tabular-nums">${hb?hb.toFixed(0):'—'}</td>
+        <td style="padding:6px 8px;border-bottom:1px solid var(--border);text-align:right;font-variant-numeric:tabular-nums">${yyz?yyz.toFixed(0):'—'}</td>
+        <td style="padding:6px 8px;border-bottom:1px solid var(--border);text-align:right;font-variant-numeric:tabular-nums">${rent?'$'+rent.toLocaleString():'—'}</td>
+      </tr>`;
+    };
+    const html = `
+      <div style="background:var(--accent-soft);border-left:4px solid var(--accent);padding:12px 14px;border-radius:6px;margin-bottom:14px;font-size:13px">
+        <b>The question:</b> live in the singles-cluster (Humber Bay/Mimico) and absorb the 23-26 min CVH commute, or live near work (Markwood/Erin Mills/Collegeway) at 2-17 min CVH and pay the 22-min cost every time you go downtown?
+        <br><br><b>The honest answer for Year 1, post-breakup, youngest attending:</b> Strategy A — let the environment do social work for you while you're still in clinical-confidence mode. Re-decide at month 11 with real data.
+      </div>
+
+      <h3 style="font-size:13px;color:var(--muted);margin:0 0 8px">Drive times (off-peak / est. peak), per building</h3>
+      <div style="overflow-x:auto"><table style="width:100%;border-collapse:collapse;font-size:12px">
+        <thead><tr style="background:var(--panel-2)">
+          <th style="padding:8px;text-align:left">Building</th>
+          <th style="padding:8px;text-align:right">CVH</th>
+          <th style="padding:8px;text-align:right">King W</th>
+          <th style="padding:8px;text-align:right">Yorkville</th>
+          <th style="padding:8px;text-align:right">Harbourfront</th>
+          <th style="padding:8px;text-align:right">YYZ</th>
+          <th style="padding:8px;text-align:right">Rent</th>
+        </tr></thead>
+        <tbody>
+        <tr><td colspan="7" style="padding:6px 8px;background:#fff3cd;font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase">Strategy A · live in the singles cluster</td></tr>
+        ${row('Eau du Soleil', 'eau_du_soleil')}
+        ${row('Vita on the Lake', 'vita_on_the_lake')}
+        ${row('Lago Waterfront', 'lago_waterfront')}
+        ${row('Park Lawn 285', 'park_lawn_285')}
+        ${row('Shoreline Towers', 'shoreline_towers')}
+        ${row('Promenade 2301', 'promenade_2301')}
+        ${row('Lakewood II (NEW)', 'lakewood_ii_1285')}
+        ${row('2335 Lake Shore W (NEW)', 'lakeshore_2230')}
+        <tr><td colspan="7" style="padding:6px 8px;background:#dcedc8;font-weight:700;font-size:11px;letter-spacing:.04em;text-transform:uppercase">Strategy B · live near work</td></tr>
+        ${row('The Markwood 4365', 'markwood_4365')}
+        ${row('Arc Erin Mills', 'arc_erin_mills')}
+        ${row('Collegeway 2285', 'collegeway_2285')}
+        ${row('Collegeway 2375', 'collegeway_2375')}
+        ${row('The Landmark', 'landmark_2493')}
+        </tbody>
+      </table></div>
+
+      <h3 style="font-size:13px;color:var(--muted);margin:18px 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">A typical week — mental model</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;font-size:12.5px">
+        <div style="padding:12px;border:1px solid #d4a900;background:#fffbe6;border-radius:8px">
+          <div style="font-weight:700;color:#664400;margin-bottom:6px">A · Humber Bay (Eau du Soleil-class)</div>
+          <ul style="margin:0;padding-left:18px;line-height:1.7">
+            <li><b>Mon 7am shift:</b> leave 6:00am, QEW pre-rush, ~25 min. Coffee at hospital.</li>
+            <li><b>Mon 7pm post-shift:</b> against traffic, ~25 min. Home by 7:30. Walk lakeshore, run club Tue/Wed.</li>
+            <li><b>Wed off-day:</b> walk to Eden Trattoria or Cawthra patio — single-density walkable. Hinge match radius hits Liberty Village, King West, Roncesvalles.</li>
+            <li><b>Fri night:</b> 11 min to King West, Uber back $25. Or stay local — Birds &amp; Beans, Eden, Sanremo crowd.</li>
+            <li><b>Sat AM:</b> Humber Bay Run Club 8:45am, post-run brunch at Birds &amp; Beans. Recurring social anchor.</li>
+            <li><b>Sun:</b> Trillium Park run (15min east). Groceries Sobeys Marine Pkwy.</li>
+            <li><b>Real cost:</b> +25-50 min commute on shift days × 4 shifts/wk = +2-3 hrs/wk vs Markwood. ~$2,300/mo rent. QEW closure risk = 1-2 brutal commutes/mo.</li>
+            <li><b>What you BUY:</b> ambient density of 25-35yo singles. The environment recruits dating-pool exposure for you when you're tired from clinical.</li>
+          </ul>
+        </div>
+        <div style="padding:12px;border:1px solid #8bc34a;background:#f4fbe8;border-radius:8px">
+          <div style="font-weight:700;color:#1b5e20;margin-bottom:6px">B · The Markwood (4365 Bloor)</div>
+          <ul style="margin:0;padding-left:18px;line-height:1.7">
+            <li><b>Mon 7am shift:</b> leave 6:40am, Burnhamthorpe → Erin Mills Pkwy, ~17 min off-peak.</li>
+            <li><b>Mon 7pm post-shift:</b> 17 min direct. Home by 7:15.</li>
+            <li><b>Wed off-day:</b> Etobicoke Creek trail at door (run), but neighborhood is family-suburb quiet. Bloor West Village 15 min east for cafe/single-bar density. Hinge radius reaches Bloor West, Junction, Roncesvalles.</li>
+            <li><b>Fri night:</b> 22 min to King West (driving each way + parking $20). Less spontaneous.</li>
+            <li><b>Sat AM:</b> Etobicoke Creek run (door-to-door) or drive to Toronto West Athletics (15min). Social cadence requires planning.</li>
+            <li><b>Sun:</b> Quiet. Markland Mall, run, study CCFP-EM.</li>
+            <li><b>Real cost:</b> social requires intentionality. If you're depleted post-shift you'll DEFAULT to staying home. ~$2,150/mo rent. Calm/quiet is the gift and the trap.</li>
+            <li><b>What you BUY:</b> ~400 commute hours saved over 5 years; brand new building; aggressive promo stack; calm recovery space; very fast post-night-shift home (no QEW).</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="font-size:13px;color:var(--muted);margin:18px 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">Risk-benefit, the part most people miss</h3>
+      <div style="font-size:12.5px;line-height:1.7;background:var(--panel-2);padding:12px;border-radius:8px">
+        <p style="margin:0 0 8px"><b>The commute is smaller than it sounds.</b> Strategy A is 23-26 min off-peak, Strategy B (Markwood) is 17 min. The off-peak gap is <b>6-9 min</b>. The peak gap is bigger (~15-20 min worse) — BUT ER shifts deliberately avoid 8am rush. You'll do this commute at 6am, 10am, 2pm, 11pm — never the worst hour. Real lived-experience gap ≈ <b>8-12 min each way</b>, not 25.</p>
+        <p style="margin:0 0 8px"><b>The dating radius is bigger than it sounds.</b> Strategy A puts you 11 min from King West vs 22 min for Markwood. Each downtown date saves you 22 min round-trip. If you go downtown 2x/wk, that's <b>~7 hrs/month</b> reclaimed — and downtown becomes feasible spontaneously, not just on planned nights.</p>
+        <p style="margin:0 0 8px"><b>Environmental nudge matters most when depleted.</b> Post-breakup + first year of attending = the moments you'll be most tempted to retreat. Strategy A makes "show up by default" the path of least resistance. Strategy B requires you to push out the door — fine in theory, brutal in practice on a Tuesday after a bad shift.</p>
+        <p style="margin:0 0 8px"><b>The hospital pool is real but slow.</b> Nurses, RTs, rotating residents, allied health — present, but you can't act on it the first 3-6 months (you're being credentialed, you're proving competence, dating the staff right out of the gate looks bad). External pool needs to be primed in parallel.</p>
+        <p style="margin:0"><b>What this means:</b> Strategy A is a <i>front-loaded</i> bet — you pay the commute tax in year 1 in exchange for fastest path back into dating life. Strategy B is a <i>back-loaded</i> bet — calm + savings + clinical excellence now, social rebuild later from a stable base. Both work. Strategy A is better for the specific post-breakup, post-NYC, youngest-attending Fadi of June 2026.</p>
+      </div>
+
+      <h3 style="font-size:13px;color:var(--muted);margin:18px 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">The hidden third option</h3>
+      <div style="padding:12px;border:1px dashed var(--accent);background:var(--accent-soft);border-radius:8px;font-size:12.5px;line-height:1.65">
+        <b>Strategy C · Long Branch/New Toronto budget hybrid.</b> Lakewood II ($1,845), 2335 Lake Shore ($1,975), 2495 Lake Shore ($1,749-1,849) — same QEW commute as Humber Bay, $300-500/mo cheaper, lakeshore walkable, near Etobicoke Creek + Long Branch streetcar. Less polish than Humber Bay, more upside / dollar. <b>If cash flow matters at all, this is the right pick.</b> You can save $4-6k year 1 and route it into US-trip flexibility or a downtown condo down payment if you decide to relocate.
+      </div>
+    `;
+    document.getElementById('tradeoff-content').innerHTML = html;
+    document.getElementById('tradeoff-modal').classList.add('show');
+  };
+
+  // ===== JUNE 4 REFRESH MODAL =====
+  document.getElementById('show-refresh').onclick = e => {
+    e.preventDefault();
+    const r = window.REFRESH;
+    if (!r) { document.getElementById('refresh-content').innerHTML = '<p style="color:var(--muted)">Refresh data still loading…</p>'; document.getElementById('refresh-modal').classList.add('show'); return; }
+    const sig = r.market_signal || {};
+    const sum = r.summary || {};
+    const status = r.existing_buildings_status || [];
+    const newL = r.new_listings || [];
+    const dropped = (status||[]).filter(s => /drop|fell|down|reduced/i.test(s.price_signal||'') || (s.current_rent_low && s.previous_rent_low && s.current_rent_low < s.previous_rent_low));
+    const raised = (status||[]).filter(s => s.current_rent_low && s.previous_rent_low && s.current_rent_low > s.previous_rent_low);
+    const fmtBld = s => {
+      const a = APARTMENTS.find(x => x.id === s.id);
+      const name = a ? a.name : s.id;
+      return `<div style="display:flex;justify-content:space-between;padding:6px 10px;border-bottom:1px solid var(--border);font-size:12.5px;cursor:pointer" onclick="document.getElementById('refresh-modal').classList.remove('show');selectApt('${s.id}')">
+        <div><b>${name}</b><div style="color:var(--muted);font-size:11px">${s.price_signal||s.availability||''}</div></div>
+        <div style="text-align:right;font-variant-numeric:tabular-nums">${s.current_rent_low?'$'+s.current_rent_low.toLocaleString():''}${s.previous_rent_low?' <span style=\"color:var(--muted);font-size:10px\">was $'+s.previous_rent_low.toLocaleString()+'</span>':''}</div>
+      </div>`;
+    };
+    const fmtNew = n => `<div style="padding:8px 10px;border:1px solid var(--good);background:var(--good-soft);border-radius:6px;margin-bottom:6px;font-size:12.5px">
+      <div style="display:flex;justify-content:space-between"><b>${n.name||n.id}</b><span style="font-weight:700">${n.rent_low?'$'+n.rent_low.toLocaleString():'—'}${n.rent_high&&n.rent_high!==n.rent_low?'-$'+n.rent_high.toLocaleString():''}</span></div>
+      <div style="color:var(--muted);font-size:11px">${n.address||''} · ${n.zone||''}</div>
+      ${n.notes?`<div style="font-size:11.5px;margin-top:4px;line-height:1.5">${n.notes}</div>`:''}
+      ${n.promo?`<div style="font-size:11px;color:var(--accent-text);margin-top:3px"><b>Promo:</b> ${n.promo}</div>`:''}
+      ${n.listing_url?`<div style="margin-top:4px"><a href="${n.listing_url}" target="_blank" style="font-size:11px;color:var(--accent-text)">Listing →</a></div>`:''}
+    </div>`;
+    document.getElementById('refresh-content').innerHTML = `
+      <div style="background:var(--accent-soft);border-left:4px solid var(--accent);padding:12px 14px;border-radius:6px;margin-bottom:14px">
+        <div style="font-weight:700;font-size:14px;margin-bottom:4px">${r.refresh_date||'June 4'} · Market signal</div>
+        <div style="font-size:12.5px;line-height:1.65">${sig.overall||''}</div>
+        <div style="font-size:12px;color:var(--accent-text);margin-top:6px"><b>Implication:</b> ${sig.implication||''}</div>
+      </div>
+
+      <h3 style="font-size:13px;color:var(--muted);margin:0 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">By zone (1-bed rent, YoY %)</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:6px;margin-bottom:18px;font-size:12px">
+        ${Object.entries(sig.by_zone||{}).map(([z,v])=>`<div style="padding:6px 10px;border:1px solid var(--border);border-radius:4px"><b>${z.replace(/_/g,' ')}</b><br><span style="color:var(--muted);font-size:11px">${v}</span></div>`).join('')}
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:18px">
+        <div>
+          <h3 style="font-size:13px;color:var(--muted);margin:0 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">Price drops</h3>
+          ${dropped.length?dropped.map(fmtBld).join(''):'<div style="color:var(--muted);font-size:12px">None tracked</div>'}
+        </div>
+        <div>
+          <h3 style="font-size:13px;color:var(--muted);margin:0 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">Price increases</h3>
+          ${raised.length?raised.map(fmtBld).join(''):'<div style="color:var(--muted);font-size:12px">None tracked</div>'}
+        </div>
+      </div>
+
+      <h3 style="font-size:13px;color:var(--muted);margin:0 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">New listings found (${newL.length})</h3>
+      ${newL.map(fmtNew).join('')}
+
+      <h3 style="font-size:13px;color:var(--muted);margin:18px 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">Watch-outs</h3>
+      <ul style="font-size:12.5px;line-height:1.7;margin:0;padding-left:18px">
+        ${(sum.watch_outs||[]).map(w=>`<li>${w}</li>`).join('')}
+      </ul>
+
+      <div style="background:var(--good-soft);border:1px solid var(--good);border-radius:8px;padding:12px;margin-top:14px;font-size:12.5px;line-height:1.6">
+        <b>Strategy for July 1:</b> ${sum.july_1_strategy||''}
+      </div>
+    `;
+    document.getElementById('refresh-modal').classList.add('show');
   };
 
   // ===== EMAIL FAVORITES =====
