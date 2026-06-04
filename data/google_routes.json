@@ -1,0 +1,6305 @@
+{
+  "meta": {
+    "updated": "2026-06-04T14:49:32.833616",
+    "destinations": {
+      "cvh": {
+        "name": "Credit Valley Hospital",
+        "lat": 43.5594,
+        "lng": -79.7037
+      },
+      "king_west": {
+        "name": "King West / Wellington",
+        "lat": 43.6437,
+        "lng": -79.403
+      },
+      "yorkville": {
+        "name": "Yorkville / Bay-Bloor",
+        "lat": 43.6705,
+        "lng": -79.394
+      },
+      "harbourfront": {
+        "name": "Harbourfront",
+        "lat": 43.6432,
+        "lng": -79.4006
+      },
+      "yyz_pearson": {
+        "name": "Pearson YYZ T1",
+        "lat": 43.6777,
+        "lng": -79.6248
+      },
+      "trillium_mississauga_hospital": {
+        "name": "Trillium MS Hospital",
+        "lat": 43.5891,
+        "lng": -79.595
+      },
+      "toronto_general": {
+        "name": "Toronto General",
+        "lat": 43.6589,
+        "lng": -79.3892
+      }
+    },
+    "time_variants": [
+      "mon_7am",
+      "sat_10am",
+      "offpeak"
+    ]
+  },
+  "routes": {
+    "elora": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.8,
+          "distance_km": 6.83
+        },
+        "sat_10am": {
+          "duration_min": 12.6,
+          "distance_km": 8.08
+        },
+        "offpeak": {
+          "duration_min": 10.2,
+          "distance_km": 8.08
+        }
+      }
+    },
+    "battleford_glen_erin": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.1,
+          "distance_km": 5.83
+        },
+        "sat_10am": {
+          "duration_min": 10.2,
+          "distance_km": 5.83
+        },
+        "offpeak": {
+          "duration_min": 8.0,
+          "distance_km": 5.86
+        }
+      }
+    },
+    "reid_drive": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 4.7,
+          "distance_km": 2.4
+        },
+        "sat_10am": {
+          "duration_min": 4.6,
+          "distance_km": 2.4
+        },
+        "offpeak": {
+          "duration_min": 4.3,
+          "distance_km": 2.4
+        }
+      }
+    },
+    "collegeway_2285": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 7.7,
+          "distance_km": 3.32
+        },
+        "sat_10am": {
+          "duration_min": 8.0,
+          "distance_km": 3.32
+        },
+        "offpeak": {
+          "duration_min": 5.7,
+          "distance_km": 3.32
+        }
+      }
+    },
+    "miracle_4900": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 3.3,
+          "distance_km": 1.24
+        },
+        "sat_10am": {
+          "duration_min": 3.4,
+          "distance_km": 1.24
+        },
+        "offpeak": {
+          "duration_min": 3.4,
+          "distance_km": 1.24
+        }
+      }
+    },
+    "arc_erin_mills": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 2.5,
+          "distance_km": 0.68
+        },
+        "sat_10am": {
+          "duration_min": 2.4,
+          "distance_km": 0.68
+        },
+        "offpeak": {
+          "duration_min": 2.6,
+          "distance_km": 0.68
+        }
+      }
+    },
+    "dialogue": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 9.8,
+          "distance_km": 7.42
+        },
+        "sat_10am": {
+          "duration_min": 9.8,
+          "distance_km": 7.42
+        },
+        "offpeak": {
+          "duration_min": 7.5,
+          "distance_km": 7.42
+        }
+      }
+    },
+    "lincoln_545": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.2,
+          "distance_km": 25.18
+        },
+        "sat_10am": {
+          "duration_min": 19.7,
+          "distance_km": 25.18
+        },
+        "offpeak": {
+          "duration_min": 17.4,
+          "distance_km": 25.18
+        }
+      }
+    },
+    "mill_road_340": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.5,
+          "distance_km": 15.31
+        },
+        "sat_10am": {
+          "duration_min": 18.8,
+          "distance_km": 15.31
+        },
+        "offpeak": {
+          "duration_min": 14.9,
+          "distance_km": 15.43
+        }
+      }
+    },
+    "mimico_estates": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.5,
+          "distance_km": 26.33
+        },
+        "sat_10am": {
+          "duration_min": 31.5,
+          "distance_km": 26.33
+        },
+        "offpeak": {
+          "duration_min": 21.9,
+          "distance_km": 26.33
+        }
+      }
+    },
+    "walden_circle": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.4,
+          "distance_km": 8.68
+        },
+        "sat_10am": {
+          "duration_min": 16.8,
+          "distance_km": 8.68
+        },
+        "offpeak": {
+          "duration_min": 11.3,
+          "distance_km": 8.68
+        }
+      }
+    },
+    "lakewood_1257": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.3,
+          "distance_km": 18.52
+        },
+        "sat_10am": {
+          "duration_min": 24.6,
+          "distance_km": 18.52
+        },
+        "offpeak": {
+          "duration_min": 18.3,
+          "distance_km": 18.52
+        }
+      }
+    },
+    "forty_second_45": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.8,
+          "distance_km": 19.97
+        },
+        "sat_10am": {
+          "duration_min": 26.8,
+          "distance_km": 19.97
+        },
+        "offpeak": {
+          "duration_min": 20.1,
+          "distance_km": 19.92
+        }
+      }
+    },
+    "vita_on_the_lake": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.6,
+          "distance_km": 24.62
+        },
+        "sat_10am": {
+          "duration_min": 26.9,
+          "distance_km": 24.62
+        },
+        "offpeak": {
+          "duration_min": 19.5,
+          "distance_km": 24.62
+        }
+      }
+    },
+    "lago_waterfront": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.9,
+          "distance_km": 24.61
+        },
+        "sat_10am": {
+          "duration_min": 27.5,
+          "distance_km": 24.61
+        },
+        "offpeak": {
+          "duration_min": 19.5,
+          "distance_km": 24.61
+        }
+      }
+    },
+    "eau_du_soleil": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.9,
+          "distance_km": 24.86
+        },
+        "sat_10am": {
+          "duration_min": 27.5,
+          "distance_km": 24.86
+        },
+        "offpeak": {
+          "duration_min": 20.4,
+          "distance_km": 24.86
+        }
+      }
+    },
+    "promenade_2301": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.7,
+          "distance_km": 26.36
+        },
+        "sat_10am": {
+          "duration_min": 30.3,
+          "distance_km": 34.89
+        },
+        "offpeak": {
+          "duration_min": 22.1,
+          "distance_km": 26.36
+        }
+      }
+    },
+    "landmark_2493": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 28.0,
+          "distance_km": 24.32
+        },
+        "sat_10am": {
+          "duration_min": 29.3,
+          "distance_km": 24.32
+        },
+        "offpeak": {
+          "duration_min": 22.0,
+          "distance_km": 24.32
+        }
+      }
+    },
+    "lake_shore_155": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.1,
+          "distance_km": 26.25
+        },
+        "sat_10am": {
+          "duration_min": 31.1,
+          "distance_km": 26.25
+        },
+        "offpeak": {
+          "duration_min": 22.6,
+          "distance_km": 26.25
+        }
+      }
+    },
+    "shoreline_towers": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.4,
+          "distance_km": 26.29
+        },
+        "sat_10am": {
+          "duration_min": 31.4,
+          "distance_km": 26.29
+        },
+        "offpeak": {
+          "duration_min": 21.8,
+          "distance_km": 26.29
+        }
+      }
+    },
+    "park_lawn_285": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.6,
+          "distance_km": 25.48
+        },
+        "sat_10am": {
+          "duration_min": 28.6,
+          "distance_km": 25.48
+        },
+        "offpeak": {
+          "duration_min": 21.9,
+          "distance_km": 25.48
+        }
+      }
+    },
+    "newholm_8": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.3,
+          "distance_km": 24.58
+        },
+        "sat_10am": {
+          "duration_min": 25.8,
+          "distance_km": 24.58
+        },
+        "offpeak": {
+          "duration_min": 19.4,
+          "distance_km": 24.58
+        }
+      }
+    },
+    "markwood_4365": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.4,
+          "distance_km": 15.57
+        },
+        "sat_10am": {
+          "duration_min": 19.8,
+          "distance_km": 15.57
+        },
+        "offpeak": {
+          "duration_min": 15.9,
+          "distance_km": 15.57
+        }
+      }
+    },
+    "station_place_5249": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.1,
+          "distance_km": 27.51
+        },
+        "sat_10am": {
+          "duration_min": 23.1,
+          "distance_km": 27.51
+        },
+        "offpeak": {
+          "duration_min": 19.9,
+          "distance_km": 27.51
+        }
+      }
+    },
+    "james_90": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.3,
+          "distance_km": 23.16
+        },
+        "sat_10am": {
+          "duration_min": 26.6,
+          "distance_km": 23.16
+        },
+        "offpeak": {
+          "duration_min": 19.4,
+          "distance_km": 23.16
+        }
+      }
+    },
+    "lakeshore_760": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.3,
+          "distance_km": 19.39
+        },
+        "sat_10am": {
+          "duration_min": 28.7,
+          "distance_km": 19.39
+        },
+        "offpeak": {
+          "duration_min": 21.3,
+          "distance_km": 19.45
+        }
+      }
+    },
+    "applewood_on_park": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.1,
+          "distance_km": 13.5
+        },
+        "sat_10am": {
+          "duration_min": 16.8,
+          "distance_km": 13.5
+        },
+        "offpeak": {
+          "duration_min": 13.5,
+          "distance_km": 13.5
+        }
+      }
+    },
+    "sheridan_crossing": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.7,
+          "distance_km": 6.23
+        },
+        "sat_10am": {
+          "duration_min": 11.6,
+          "distance_km": 6.23
+        },
+        "offpeak": {
+          "duration_min": 8.4,
+          "distance_km": 6.23
+        }
+      }
+    },
+    "sheridan_manor": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.9,
+          "distance_km": 7.61
+        },
+        "sat_10am": {
+          "duration_min": 14.3,
+          "distance_km": 7.61
+        },
+        "offpeak": {
+          "duration_min": 10.1,
+          "distance_km": 7.61
+        }
+      }
+    },
+    "embassy_99_agnes": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.5,
+          "distance_km": 12.31
+        },
+        "sat_10am": {
+          "duration_min": 19.9,
+          "distance_km": 12.31
+        },
+        "offpeak": {
+          "duration_min": 14.9,
+          "distance_km": 13.9
+        }
+      }
+    },
+    "sherobee_2170": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.9,
+          "distance_km": 11.4
+        },
+        "sat_10am": {
+          "duration_min": 17.6,
+          "distance_km": 11.47
+        },
+        "offpeak": {
+          "duration_min": 12.7,
+          "distance_km": 11.47
+        }
+      }
+    },
+    "dixie_square_1750": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.8,
+          "distance_km": 13.3
+        },
+        "sat_10am": {
+          "duration_min": 16.4,
+          "distance_km": 13.3
+        },
+        "offpeak": {
+          "duration_min": 13.2,
+          "distance_km": 13.3
+        }
+      }
+    },
+    "1011_lorne_park": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.1,
+          "distance_km": 8.95
+        },
+        "sat_10am": {
+          "duration_min": 16.9,
+          "distance_km": 9.42
+        },
+        "offpeak": {
+          "duration_min": 12.7,
+          "distance_km": 9.42
+        }
+      }
+    },
+    "camilla_2070": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.1,
+          "distance_km": 13.07
+        },
+        "sat_10am": {
+          "duration_min": 18.2,
+          "distance_km": 13.07
+        },
+        "offpeak": {
+          "duration_min": 13.7,
+          "distance_km": 13.07
+        }
+      }
+    },
+    "paisley_95": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.5,
+          "distance_km": 11.45
+        },
+        "sat_10am": {
+          "duration_min": 17.0,
+          "distance_km": 11.45
+        },
+        "offpeak": {
+          "duration_min": 12.4,
+          "distance_km": 11.45
+        }
+      }
+    },
+    "the_huron_2475": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.8,
+          "distance_km": 11.69
+        },
+        "sat_10am": {
+          "duration_min": 18.4,
+          "distance_km": 11.57
+        },
+        "offpeak": {
+          "duration_min": 13.3,
+          "distance_km": 10.86
+        }
+      }
+    },
+    "seville_75": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 13.7,
+          "distance_km": 9.46
+        },
+        "sat_10am": {
+          "duration_min": 14.1,
+          "distance_km": 9.46
+        },
+        "offpeak": {
+          "duration_min": 10.7,
+          "distance_km": 10.06
+        }
+      }
+    },
+    "royal_tower_121": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.1,
+          "distance_km": 10.34
+        },
+        "sat_10am": {
+          "duration_min": 15.7,
+          "distance_km": 10.34
+        },
+        "offpeak": {
+          "duration_min": 12.7,
+          "distance_km": 10.2
+        }
+      }
+    },
+    "argyle_2590": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.0,
+          "distance_km": 10.63
+        },
+        "sat_10am": {
+          "duration_min": 15.3,
+          "distance_km": 10.63
+        },
+        "offpeak": {
+          "duration_min": 11.9,
+          "distance_km": 9.92
+        }
+      }
+    },
+    "argyle_2570": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.2,
+          "distance_km": 10.65
+        },
+        "sat_10am": {
+          "duration_min": 15.4,
+          "distance_km": 10.65
+        },
+        "offpeak": {
+          "duration_min": 11.5,
+          "distance_km": 10.65
+        }
+      }
+    },
+    "nsr_275": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.6,
+          "distance_km": 13.35
+        },
+        "sat_10am": {
+          "duration_min": 18.7,
+          "distance_km": 13.35
+        },
+        "offpeak": {
+          "duration_min": 13.6,
+          "distance_km": 13.35
+        }
+      }
+    },
+    "nsr_535": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.0,
+          "distance_km": 10.68
+        },
+        "sat_10am": {
+          "duration_min": 15.3,
+          "distance_km": 10.68
+        },
+        "offpeak": {
+          "duration_min": 12.5,
+          "distance_km": 10.78
+        }
+      }
+    },
+    "dundas_120e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.5,
+          "distance_km": 10.15
+        },
+        "sat_10am": {
+          "duration_min": 14.9,
+          "distance_km": 10.15
+        },
+        "offpeak": {
+          "duration_min": 11.6,
+          "distance_km": 10.15
+        }
+      }
+    },
+    "hurontario_2247": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.7,
+          "distance_km": 7.84
+        },
+        "sat_10am": {
+          "duration_min": 11.7,
+          "distance_km": 7.84
+        },
+        "offpeak": {
+          "duration_min": 9.2,
+          "distance_km": 7.84
+        }
+      }
+    },
+    "promenade_court": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.8,
+          "distance_km": 7.71
+        },
+        "sat_10am": {
+          "duration_min": 12.0,
+          "distance_km": 7.71
+        },
+        "offpeak": {
+          "duration_min": 9.3,
+          "distance_km": 7.71
+        }
+      }
+    },
+    "kaneff_3575": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.7,
+          "distance_km": 8.2
+        },
+        "sat_10am": {
+          "duration_min": 12.0,
+          "distance_km": 8.2
+        },
+        "offpeak": {
+          "duration_min": 9.2,
+          "distance_km": 8.2
+        }
+      }
+    },
+    "one_eighty_five": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.9,
+          "distance_km": 8.05
+        },
+        "sat_10am": {
+          "duration_min": 11.6,
+          "distance_km": 8.05
+        },
+        "offpeak": {
+          "duration_min": 9.8,
+          "distance_km": 8.05
+        }
+      }
+    },
+    "the_omeath_30": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.6,
+          "distance_km": 8.29
+        },
+        "sat_10am": {
+          "duration_min": 12.2,
+          "distance_km": 8.29
+        },
+        "offpeak": {
+          "duration_min": 9.3,
+          "distance_km": 8.29
+        }
+      }
+    },
+    "lolita_620": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.2,
+          "distance_km": 10.03
+        },
+        "sat_10am": {
+          "duration_min": 14.9,
+          "distance_km": 10.03
+        },
+        "offpeak": {
+          "duration_min": 11.3,
+          "distance_km": 10.03
+        }
+      }
+    },
+    "kaneff_3620": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.4,
+          "distance_km": 8.14
+        },
+        "sat_10am": {
+          "duration_min": 11.9,
+          "distance_km": 8.14
+        },
+        "offpeak": {
+          "duration_min": 9.2,
+          "distance_km": 8.14
+        }
+      }
+    },
+    "valleywoods_1423": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.1,
+          "distance_km": 10.0
+        },
+        "sat_10am": {
+          "duration_min": 15.9,
+          "distance_km": 10.0
+        },
+        "offpeak": {
+          "duration_min": 12.4,
+          "distance_km": 10.0
+        }
+      }
+    },
+    "forestwoods_1547": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 13.8,
+          "distance_km": 9.56
+        },
+        "sat_10am": {
+          "duration_min": 14.4,
+          "distance_km": 9.56
+        },
+        "offpeak": {
+          "duration_min": 11.1,
+          "distance_km": 9.56
+        }
+      }
+    },
+    "maplewoods_1477": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.1,
+          "distance_km": 9.68
+        },
+        "sat_10am": {
+          "duration_min": 14.7,
+          "distance_km": 9.68
+        },
+        "offpeak": {
+          "duration_min": 11.6,
+          "distance_km": 10.76
+        }
+      }
+    },
+    "elmwoods_30": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.0,
+          "distance_km": 8.18
+        },
+        "sat_10am": {
+          "duration_min": 11.8,
+          "distance_km": 8.18
+        },
+        "offpeak": {
+          "duration_min": 10.0,
+          "distance_km": 9.61
+        }
+      }
+    },
+    "arista_3665": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.4,
+          "distance_km": 10.05
+        },
+        "sat_10am": {
+          "duration_min": 15.9,
+          "distance_km": 10.05
+        },
+        "offpeak": {
+          "duration_min": 12.5,
+          "distance_km": 10.05
+        }
+      }
+    },
+    "collegeway_2375": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 5.7,
+          "distance_km": 2.68
+        },
+        "sat_10am": {
+          "duration_min": 6.3,
+          "distance_km": 3.1
+        },
+        "offpeak": {
+          "duration_min": 5.1,
+          "distance_km": 2.68
+        }
+      }
+    },
+    "collegeway_2445": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 5.7,
+          "distance_km": 2.78
+        },
+        "sat_10am": {
+          "duration_min": 6.0,
+          "distance_km": 2.78
+        },
+        "offpeak": {
+          "duration_min": 4.8,
+          "distance_km": 2.61
+        }
+      }
+    },
+    "daniels_gateway_5625": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 7.0,
+          "distance_km": 3.79
+        },
+        "sat_10am": {
+          "duration_min": 6.8,
+          "distance_km": 3.67
+        },
+        "offpeak": {
+          "duration_min": 5.8,
+          "distance_km": 3.67
+        }
+      }
+    },
+    "daniels_gateway_2900": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.5,
+          "distance_km": 3.43
+        },
+        "sat_10am": {
+          "duration_min": 6.7,
+          "distance_km": 3.43
+        },
+        "offpeak": {
+          "duration_min": 5.7,
+          "distance_km": 3.43
+        }
+      }
+    },
+    "roche_2150": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.0,
+          "distance_km": 6.6
+        },
+        "sat_10am": {
+          "duration_min": 12.9,
+          "distance_km": 6.6
+        },
+        "offpeak": {
+          "duration_min": 9.5,
+          "distance_km": 6.6
+        }
+      }
+    },
+    "sheridan_park_2215": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.7,
+          "distance_km": 6.45
+        },
+        "sat_10am": {
+          "duration_min": 12.5,
+          "distance_km": 6.45
+        },
+        "offpeak": {
+          "duration_min": 8.8,
+          "distance_km": 6.45
+        }
+      }
+    },
+    "sheridan_park_2185": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.7,
+          "distance_km": 6.47
+        },
+        "sat_10am": {
+          "duration_min": 12.5,
+          "distance_km": 6.47
+        },
+        "offpeak": {
+          "duration_min": 9.3,
+          "distance_km": 6.47
+        }
+      }
+    },
+    "brightstone_6570": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.2,
+          "distance_km": 6.84
+        },
+        "sat_10am": {
+          "duration_min": 11.3,
+          "distance_km": 6.84
+        },
+        "offpeak": {
+          "duration_min": 8.8,
+          "distance_km": 6.84
+        }
+      }
+    },
+    "bristol_court_6550": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.8,
+          "distance_km": 6.77
+        },
+        "sat_10am": {
+          "duration_min": 11.1,
+          "distance_km": 6.77
+        },
+        "offpeak": {
+          "duration_min": 8.3,
+          "distance_km": 6.77
+        }
+      }
+    },
+    "waterford_2645": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.5,
+          "distance_km": 6.99
+        },
+        "sat_10am": {
+          "duration_min": 11.5,
+          "distance_km": 6.99
+        },
+        "offpeak": {
+          "duration_min": 9.3,
+          "distance_km": 7.01
+        }
+      }
+    },
+    "lakeside_place_2699": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.1,
+          "distance_km": 6.86
+        },
+        "sat_10am": {
+          "duration_min": 11.0,
+          "distance_km": 6.86
+        },
+        "offpeak": {
+          "duration_min": 8.7,
+          "distance_km": 6.86
+        }
+      }
+    },
+    "lakeview_place_2770": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.8,
+          "distance_km": 7.55
+        },
+        "sat_10am": {
+          "duration_min": 11.8,
+          "distance_km": 7.55
+        },
+        "offpeak": {
+          "duration_min": 9.6,
+          "distance_km": 7.55
+        }
+      }
+    },
+    "battleford_2797": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.8,
+          "distance_km": 7.03
+        },
+        "sat_10am": {
+          "duration_min": 11.9,
+          "distance_km": 7.03
+        },
+        "offpeak": {
+          "duration_min": 9.6,
+          "distance_km": 7.06
+        }
+      }
+    },
+    "meadowvale_gardens_2869": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.4,
+          "distance_km": 7.07
+        },
+        "sat_10am": {
+          "duration_min": 11.4,
+          "distance_km": 7.07
+        },
+        "offpeak": {
+          "duration_min": 8.9,
+          "distance_km": 7.07
+        }
+      }
+    },
+    "queen_south_190": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 7.7,
+          "distance_km": 3.95
+        },
+        "sat_10am": {
+          "duration_min": 7.5,
+          "distance_km": 3.95
+        },
+        "offpeak": {
+          "duration_min": 7.7,
+          "distance_km": 5.08
+        }
+      }
+    },
+    "ann_5": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.4,
+          "distance_km": 13.06
+        },
+        "sat_10am": {
+          "duration_min": 20.8,
+          "distance_km": 13.22
+        },
+        "offpeak": {
+          "duration_min": 14.3,
+          "distance_km": 13.06
+        }
+      }
+    },
+    "park_70e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.7,
+          "distance_km": 13.53
+        },
+        "sat_10am": {
+          "duration_min": 22.1,
+          "distance_km": 13.69
+        },
+        "offpeak": {
+          "duration_min": 15.2,
+          "distance_km": 13.53
+        }
+      }
+    },
+    "elizabeth_28n": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.6,
+          "distance_km": 13.16
+        },
+        "sat_10am": {
+          "duration_min": 19.8,
+          "distance_km": 13.16
+        },
+        "offpeak": {
+          "duration_min": 14.8,
+          "distance_km": 13.16
+        }
+      }
+    },
+    "rivergate_35": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.1,
+          "distance_km": 13.15
+        },
+        "sat_10am": {
+          "duration_min": 20.8,
+          "distance_km": 13.31
+        },
+        "offpeak": {
+          "duration_min": 15.4,
+          "distance_km": 13.15
+        }
+      }
+    },
+    "park_55e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.6,
+          "distance_km": 13.32
+        },
+        "sat_10am": {
+          "duration_min": 21.6,
+          "distance_km": 13.48
+        },
+        "offpeak": {
+          "duration_min": 15.0,
+          "distance_km": 13.32
+        }
+      }
+    },
+    "helene_28n": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.7,
+          "distance_km": 13.27
+        },
+        "sat_10am": {
+          "duration_min": 21.3,
+          "distance_km": 13.43
+        },
+        "offpeak": {
+          "duration_min": 14.9,
+          "distance_km": 13.27
+        }
+      }
+    },
+    "oakwood_8n": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.9,
+          "distance_km": 13.58
+        },
+        "sat_10am": {
+          "duration_min": 21.4,
+          "distance_km": 13.58
+        },
+        "offpeak": {
+          "duration_min": 15.3,
+          "distance_km": 13.58
+        }
+      }
+    },
+    "lakeshore_212e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.9,
+          "distance_km": 13.79
+        },
+        "sat_10am": {
+          "duration_min": 22.3,
+          "distance_km": 13.79
+        },
+        "offpeak": {
+          "duration_min": 15.3,
+          "distance_km": 13.63
+        }
+      }
+    },
+    "lakeshore_206e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.9,
+          "distance_km": 13.79
+        },
+        "sat_10am": {
+          "duration_min": 22.4,
+          "distance_km": 13.79
+        },
+        "offpeak": {
+          "duration_min": 15.3,
+          "distance_km": 13.62
+        }
+      }
+    },
+    "elizabeth_7n": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.5,
+          "distance_km": 13.15
+        },
+        "sat_10am": {
+          "duration_min": 20.9,
+          "distance_km": 13.31
+        },
+        "offpeak": {
+          "duration_min": 14.4,
+          "distance_km": 13.15
+        }
+      }
+    },
+    "high_30e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.7,
+          "distance_km": 13.22
+        },
+        "sat_10am": {
+          "duration_min": 20.0,
+          "distance_km": 13.22
+        },
+        "offpeak": {
+          "duration_min": 14.5,
+          "distance_km": 13.22
+        }
+      }
+    },
+    "park_52e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.8,
+          "distance_km": 13.54
+        },
+        "sat_10am": {
+          "duration_min": 22.1,
+          "distance_km": 13.7
+        },
+        "offpeak": {
+          "duration_min": 15.6,
+          "distance_km": 13.54
+        }
+      }
+    },
+    "elizabeth_20n": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.6,
+          "distance_km": 13.16
+        },
+        "sat_10am": {
+          "duration_min": 20.9,
+          "distance_km": 13.32
+        },
+        "offpeak": {
+          "duration_min": 14.8,
+          "distance_km": 13.16
+        }
+      }
+    },
+    "park_26e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.6,
+          "distance_km": 13.55
+        },
+        "sat_10am": {
+          "duration_min": 21.3,
+          "distance_km": 13.55
+        },
+        "offpeak": {
+          "duration_min": 15.6,
+          "distance_km": 13.55
+        }
+      }
+    },
+    "park_12e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.5,
+          "distance_km": 13.31
+        },
+        "sat_10am": {
+          "duration_min": 20.7,
+          "distance_km": 13.31
+        },
+        "offpeak": {
+          "duration_min": 15.4,
+          "distance_km": 13.31
+        }
+      }
+    },
+    "orchard_1015": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.1,
+          "distance_km": 18.9
+        },
+        "sat_10am": {
+          "duration_min": 26.6,
+          "distance_km": 18.9
+        },
+        "offpeak": {
+          "duration_min": 19.6,
+          "distance_km": 18.9
+        }
+      }
+    },
+    "lakewood_ii_1285": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.8,
+          "distance_km": 19.21
+        },
+        "sat_10am": {
+          "duration_min": 27.5,
+          "distance_km": 19.21
+        },
+        "offpeak": {
+          "duration_min": 21.0,
+          "distance_km": 19.21
+        }
+      }
+    },
+    "caven_1110": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.1,
+          "distance_km": 14.69
+        },
+        "sat_10am": {
+          "duration_min": 23.4,
+          "distance_km": 14.69
+        },
+        "offpeak": {
+          "duration_min": 17.2,
+          "distance_km": 14.69
+        }
+      }
+    },
+    "seneca_1051": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.9,
+          "distance_km": 17.5
+        },
+        "sat_10am": {
+          "duration_min": 23.1,
+          "distance_km": 17.5
+        },
+        "offpeak": {
+          "duration_min": 17.0,
+          "distance_km": 17.5
+        }
+      }
+    },
+    "inverhouse_920": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.7,
+          "distance_km": 8.63
+        },
+        "sat_10am": {
+          "duration_min": 16.8,
+          "distance_km": 8.63
+        },
+        "offpeak": {
+          "duration_min": 11.2,
+          "distance_km": 8.63
+        }
+      }
+    },
+    "park_royal_2360": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.5,
+          "distance_km": 7.24
+        },
+        "sat_10am": {
+          "duration_min": 13.6,
+          "distance_km": 7.24
+        },
+        "offpeak": {
+          "duration_min": 9.4,
+          "distance_km": 7.24
+        }
+      }
+    },
+    "bromsgate_2150": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.1,
+          "distance_km": 8.9
+        },
+        "sat_10am": {
+          "duration_min": 18.0,
+          "distance_km": 8.9
+        },
+        "offpeak": {
+          "duration_min": 12.6,
+          "distance_km": 8.9
+        }
+      }
+    },
+    "forestview_2077": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.5,
+          "distance_km": 7.91
+        },
+        "sat_10am": {
+          "duration_min": 15.8,
+          "distance_km": 7.91
+        },
+        "offpeak": {
+          "duration_min": 11.1,
+          "distance_km": 7.91
+        }
+      }
+    },
+    "linwood_1785": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.1,
+          "distance_km": 17.12
+        },
+        "sat_10am": {
+          "duration_min": 22.3,
+          "distance_km": 17.12
+        },
+        "offpeak": {
+          "duration_min": 17.0,
+          "distance_km": 17.12
+        }
+      }
+    },
+    "bristol_arms_1745": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.3,
+          "distance_km": 17.06
+        },
+        "sat_10am": {
+          "duration_min": 21.9,
+          "distance_km": 17.06
+        },
+        "offpeak": {
+          "duration_min": 16.9,
+          "distance_km": 17.06
+        }
+      }
+    },
+    "bridgewood_1867": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.8,
+          "distance_km": 20.84
+        },
+        "sat_10am": {
+          "duration_min": 24.8,
+          "distance_km": 18.22
+        },
+        "offpeak": {
+          "duration_min": 18.3,
+          "distance_km": 18.22
+        }
+      }
+    },
+    "havenwood_3410": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.9,
+          "distance_km": 17.41
+        },
+        "sat_10am": {
+          "duration_min": 22.9,
+          "distance_km": 17.41
+        },
+        "offpeak": {
+          "duration_min": 17.4,
+          "distance_km": 17.41
+        }
+      }
+    },
+    "westwood_1465": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.1,
+          "distance_km": 16.95
+        },
+        "sat_10am": {
+          "duration_min": 21.8,
+          "distance_km": 16.95
+        },
+        "offpeak": {
+          "duration_min": 16.3,
+          "distance_km": 16.95
+        }
+      }
+    },
+    "strathroy_1470": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.2,
+          "distance_km": 17.04
+        },
+        "sat_10am": {
+          "duration_min": 22.0,
+          "distance_km": 17.04
+        },
+        "offpeak": {
+          "duration_min": 16.5,
+          "distance_km": 17.04
+        }
+      }
+    },
+    "applewood_towers_1055": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.1,
+          "distance_km": 15.62
+        },
+        "sat_10am": {
+          "duration_min": 20.8,
+          "distance_km": 15.62
+        },
+        "offpeak": {
+          "duration_min": 15.9,
+          "distance_km": 15.6
+        }
+      }
+    },
+    "bloor_1475": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.6,
+          "distance_km": 16.39
+        },
+        "sat_10am": {
+          "duration_min": 20.5,
+          "distance_km": 16.39
+        },
+        "offpeak": {
+          "duration_min": 15.5,
+          "distance_km": 16.39
+        }
+      }
+    },
+    "annie_craig_38": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.2,
+          "distance_km": 25.6
+        },
+        "sat_10am": {
+          "duration_min": 30.7,
+          "distance_km": 25.6
+        },
+        "offpeak": {
+          "duration_min": 23.0,
+          "distance_km": 25.6
+        }
+      }
+    },
+    "shore_breeze_30": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.5,
+          "distance_km": 24.8
+        },
+        "sat_10am": {
+          "duration_min": 27.3,
+          "distance_km": 24.8
+        },
+        "offpeak": {
+          "duration_min": 20.9,
+          "distance_km": 24.8
+        }
+      }
+    },
+    "legion_185": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.8,
+          "distance_km": 25.5
+        },
+        "sat_10am": {
+          "duration_min": 28.0,
+          "distance_km": 34.03
+        },
+        "offpeak": {
+          "duration_min": 20.9,
+          "distance_km": 25.5
+        }
+      }
+    },
+    "legion_165": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.4,
+          "distance_km": 25.21
+        },
+        "sat_10am": {
+          "duration_min": 29.5,
+          "distance_km": 25.21
+        },
+        "offpeak": {
+          "duration_min": 20.8,
+          "distance_km": 25.21
+        }
+      }
+    },
+    "western_battery_15": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 33.2,
+          "distance_km": 30.38
+        },
+        "sat_10am": {
+          "duration_min": 32.1,
+          "distance_km": 38.91
+        },
+        "offpeak": {
+          "duration_min": 25.1,
+          "distance_km": 30.38
+        }
+      }
+    },
+    "lakeshore_2230": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.4,
+          "distance_km": 24.76
+        },
+        "sat_10am": {
+          "duration_min": 27.5,
+          "distance_km": 24.76
+        },
+        "offpeak": {
+          "duration_min": 20.7,
+          "distance_km": 24.76
+        }
+      }
+    },
+    "lakeshore_2212": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.8,
+          "distance_km": 24.57
+        },
+        "sat_10am": {
+          "duration_min": 27.3,
+          "distance_km": 24.57
+        },
+        "offpeak": {
+          "duration_min": 19.9,
+          "distance_km": 24.57
+        }
+      }
+    },
+    "marine_parade_58": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.5,
+          "distance_km": 24.8
+        },
+        "sat_10am": {
+          "duration_min": 27.3,
+          "distance_km": 24.8
+        },
+        "offpeak": {
+          "duration_min": 20.9,
+          "distance_km": 24.8
+        }
+      }
+    },
+    "marine_parade_15": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 28.9,
+          "distance_km": 25.5
+        },
+        "sat_10am": {
+          "duration_min": 30.4,
+          "distance_km": 25.5
+        },
+        "offpeak": {
+          "duration_min": 21.9,
+          "distance_km": 25.5
+        }
+      }
+    },
+    "marine_parade_3": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 28.8,
+          "distance_km": 25.54
+        },
+        "sat_10am": {
+          "duration_min": 30.8,
+          "distance_km": 25.54
+        },
+        "offpeak": {
+          "duration_min": 22.0,
+          "distance_km": 25.54
+        }
+      }
+    },
+    "park_lawn_36": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.9,
+          "distance_km": 24.93
+        },
+        "sat_10am": {
+          "duration_min": 28.1,
+          "distance_km": 24.93
+        },
+        "offpeak": {
+          "duration_min": 20.0,
+          "distance_km": 24.93
+        }
+      }
+    },
+    "palace_pier_1": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.7,
+          "distance_km": 26.94
+        },
+        "sat_10am": {
+          "duration_min": 27.6,
+          "distance_km": 26.94
+        },
+        "offpeak": {
+          "duration_min": 21.1,
+          "distance_km": 26.94
+        }
+      }
+    },
+    "lake_promenade_240": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.0,
+          "distance_km": 19.88
+        },
+        "sat_10am": {
+          "duration_min": 26.9,
+          "distance_km": 19.83
+        },
+        "offpeak": {
+          "duration_min": 20.3,
+          "distance_km": 19.83
+        }
+      }
+    },
+    "lake_promenade_220": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.4,
+          "distance_km": 19.77
+        },
+        "sat_10am": {
+          "duration_min": 26.3,
+          "distance_km": 19.77
+        },
+        "offpeak": {
+          "duration_min": 19.8,
+          "distance_km": 19.71
+        }
+      }
+    },
+    "lakeshore_3845": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.4,
+          "distance_km": 21.33
+        },
+        "sat_10am": {
+          "duration_min": 24.6,
+          "distance_km": 30.36
+        },
+        "offpeak": {
+          "duration_min": 21.1,
+          "distance_km": 20.43
+        }
+      }
+    },
+    "lakeshore_3650": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.9,
+          "distance_km": 30.25
+        },
+        "sat_10am": {
+          "duration_min": 25.0,
+          "distance_km": 30.25
+        },
+        "offpeak": {
+          "duration_min": 20.6,
+          "distance_km": 21.22
+        }
+      }
+    },
+    "long_branch_30": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.9,
+          "distance_km": 21.27
+        },
+        "sat_10am": {
+          "duration_min": 24.2,
+          "distance_km": 30.3
+        },
+        "offpeak": {
+          "duration_min": 19.7,
+          "distance_km": 21.27
+        }
+      }
+    },
+    "lakeshore_3590": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.3,
+          "distance_km": 20.27
+        },
+        "sat_10am": {
+          "duration_min": 22.6,
+          "distance_km": 29.3
+        },
+        "offpeak": {
+          "duration_min": 18.4,
+          "distance_km": 20.27
+        }
+      }
+    },
+    "lakeshore_3479": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.2,
+          "distance_km": 30.26
+        },
+        "sat_10am": {
+          "duration_min": 24.2,
+          "distance_km": 30.26
+        },
+        "offpeak": {
+          "duration_min": 20.4,
+          "distance_km": 21.23
+        }
+      }
+    },
+    "birmingham_45": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.6,
+          "distance_km": 22.86
+        },
+        "sat_10am": {
+          "duration_min": 25.9,
+          "distance_km": 22.86
+        },
+        "offpeak": {
+          "duration_min": 19.9,
+          "distance_km": 22.86
+        }
+      }
+    },
+    "eighth_24": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.1,
+          "distance_km": 23.73
+        },
+        "sat_10am": {
+          "duration_min": 27.2,
+          "distance_km": 23.73
+        },
+        "offpeak": {
+          "duration_min": 20.4,
+          "distance_km": 23.73
+        }
+      }
+    },
+    "kipling_50_s": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.9,
+          "distance_km": 23.0
+        },
+        "sat_10am": {
+          "duration_min": 26.0,
+          "distance_km": 23.0
+        },
+        "offpeak": {
+          "duration_min": 19.4,
+          "distance_km": 23.0
+        }
+      }
+    },
+    "park_lawn_15": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.4,
+          "distance_km": 24.84
+        },
+        "sat_10am": {
+          "duration_min": 24.9,
+          "distance_km": 24.84
+        },
+        "offpeak": {
+          "duration_min": 19.4,
+          "distance_km": 24.84
+        }
+      }
+    },
+    "queensway_955": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.9,
+          "distance_km": 22.88
+        },
+        "sat_10am": {
+          "duration_min": 25.3,
+          "distance_km": 22.88
+        },
+        "offpeak": {
+          "duration_min": 19.1,
+          "distance_km": 22.88
+        }
+      }
+    },
+    "queensway_1430": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.3,
+          "distance_km": 22.54
+        },
+        "sat_10am": {
+          "duration_min": 24.2,
+          "distance_km": 22.54
+        },
+        "offpeak": {
+          "duration_min": 18.2,
+          "distance_km": 22.54
+        }
+      }
+    },
+    "bloor_4001": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.3,
+          "distance_km": 26.35
+        },
+        "sat_10am": {
+          "duration_min": 21.9,
+          "distance_km": 26.35
+        },
+        "offpeak": {
+          "duration_min": 18.8,
+          "distance_km": 26.35
+        }
+      }
+    },
+    "kingsway_old_mill_2": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 31.8,
+          "distance_km": 29.2
+        },
+        "sat_10am": {
+          "duration_min": 33.0,
+          "distance_km": 29.2
+        },
+        "offpeak": {
+          "duration_min": 23.5,
+          "distance_km": 29.2
+        }
+      }
+    },
+    "bloor_3939": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.0,
+          "distance_km": 26.5
+        },
+        "sat_10am": {
+          "duration_min": 22.1,
+          "distance_km": 26.5
+        },
+        "offpeak": {
+          "duration_min": 19.1,
+          "distance_km": 26.5
+        }
+      }
+    },
+    "west_mall_400": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.7,
+          "distance_km": 17.46
+        },
+        "sat_10am": {
+          "duration_min": 22.1,
+          "distance_km": 17.46
+        },
+        "offpeak": {
+          "duration_min": 17.8,
+          "distance_km": 17.29
+        }
+      }
+    },
+    "west_mall_350": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.0,
+          "distance_km": 17.4
+        },
+        "sat_10am": {
+          "duration_min": 21.8,
+          "distance_km": 17.4
+        },
+        "offpeak": {
+          "duration_min": 17.3,
+          "distance_km": 17.4
+        }
+      }
+    },
+    "west_mall_320": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.0,
+          "distance_km": 17.48
+        },
+        "sat_10am": {
+          "duration_min": 22.6,
+          "distance_km": 17.48
+        },
+        "offpeak": {
+          "duration_min": 18.0,
+          "distance_km": 17.48
+        }
+      }
+    },
+    "west_mall_390": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.8,
+          "distance_km": 17.46
+        },
+        "sat_10am": {
+          "duration_min": 22.1,
+          "distance_km": 17.46
+        },
+        "offpeak": {
+          "duration_min": 17.8,
+          "distance_km": 17.29
+        }
+      }
+    },
+    "markland_dr_3": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.9,
+          "distance_km": 17.4
+        },
+        "sat_10am": {
+          "duration_min": 21.2,
+          "distance_km": 27.03
+        },
+        "offpeak": {
+          "duration_min": 18.1,
+          "distance_km": 17.4
+        }
+      }
+    },
+    "oak_speers_1276": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.6,
+          "distance_km": 18.26
+        },
+        "sat_10am": {
+          "duration_min": 16.3,
+          "distance_km": 18.26
+        },
+        "offpeak": {
+          "duration_min": 13.7,
+          "distance_km": 18.26
+        }
+      }
+    },
+    "oak_kerr_280": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.3,
+          "distance_km": 17.87
+        },
+        "sat_10am": {
+          "duration_min": 16.9,
+          "distance_km": 17.87
+        },
+        "offpeak": {
+          "duration_min": 14.2,
+          "distance_km": 17.87
+        }
+      }
+    },
+    "oak_kerr_339": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.5,
+          "distance_km": 17.91
+        },
+        "sat_10am": {
+          "duration_min": 17.6,
+          "distance_km": 17.91
+        },
+        "offpeak": {
+          "duration_min": 14.6,
+          "distance_km": 17.91
+        }
+      }
+    },
+    "oak_rebecca_410": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.6,
+          "distance_km": 17.07
+        },
+        "sat_10am": {
+          "duration_min": 17.4,
+          "distance_km": 18.67
+        },
+        "offpeak": {
+          "duration_min": 13.8,
+          "distance_km": 17.07
+        }
+      }
+    },
+    "oak_chartwell_1500": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.1,
+          "distance_km": 18.23
+        },
+        "sat_10am": {
+          "duration_min": 16.4,
+          "distance_km": 18.23
+        },
+        "offpeak": {
+          "duration_min": 12.9,
+          "distance_km": 18.23
+        }
+      }
+    },
+    "oak_third_line_295": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.9,
+          "distance_km": 22.18
+        },
+        "sat_10am": {
+          "duration_min": 18.9,
+          "distance_km": 22.18
+        },
+        "offpeak": {
+          "duration_min": 15.5,
+          "distance_km": 22.18
+        }
+      }
+    },
+    "oak_marlborough_415": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.1,
+          "distance_km": 17.84
+        },
+        "sat_10am": {
+          "duration_min": 17.8,
+          "distance_km": 17.84
+        },
+        "offpeak": {
+          "duration_min": 14.6,
+          "distance_km": 15.21
+        }
+      }
+    },
+    "oak_trafalgar_165": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.8,
+          "distance_km": 16.41
+        },
+        "sat_10am": {
+          "duration_min": 15.9,
+          "distance_km": 16.41
+        },
+        "offpeak": {
+          "duration_min": 12.5,
+          "distance_km": 16.41
+        }
+      }
+    },
+    "oak_dunn_2069": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.4,
+          "distance_km": 23.58
+        },
+        "sat_10am": {
+          "duration_min": 21.6,
+          "distance_km": 23.58
+        },
+        "offpeak": {
+          "duration_min": 17.6,
+          "distance_km": 23.58
+        }
+      }
+    },
+    "oak_woodside_2511": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.7,
+          "distance_km": 22.1
+        },
+        "sat_10am": {
+          "duration_min": 19.5,
+          "distance_km": 22.1
+        },
+        "offpeak": {
+          "duration_min": 16.4,
+          "distance_km": 22.1
+        }
+      }
+    },
+    "bram_kennedy_50": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.4,
+          "distance_km": 24.21
+        },
+        "sat_10am": {
+          "duration_min": 22.0,
+          "distance_km": 24.21
+        },
+        "offpeak": {
+          "duration_min": 18.8,
+          "distance_km": 24.21
+        }
+      }
+    },
+    "bram_main_295": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.0,
+          "distance_km": 25.28
+        },
+        "sat_10am": {
+          "duration_min": 21.5,
+          "distance_km": 25.28
+        },
+        "offpeak": {
+          "duration_min": 18.6,
+          "distance_km": 25.28
+        }
+      }
+    },
+    "bram_queen_24": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.3,
+          "distance_km": 25.62
+        },
+        "sat_10am": {
+          "duration_min": 22.4,
+          "distance_km": 25.62
+        },
+        "offpeak": {
+          "duration_min": 18.4,
+          "distance_km": 25.62
+        }
+      }
+    },
+    "bram_steeles_215": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.8,
+          "distance_km": 21.8
+        },
+        "sat_10am": {
+          "duration_min": 17.5,
+          "distance_km": 21.8
+        },
+        "offpeak": {
+          "duration_min": 15.1,
+          "distance_km": 21.8
+        }
+      }
+    },
+    "bram_chinguacousy_60": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.4,
+          "distance_km": 17.05
+        },
+        "sat_10am": {
+          "duration_min": 25.8,
+          "distance_km": 17.05
+        },
+        "offpeak": {
+          "duration_min": 20.2,
+          "distance_km": 17.05
+        }
+      }
+    },
+    "bram_kennedy_345": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.2,
+          "distance_km": 23.72
+        },
+        "sat_10am": {
+          "duration_min": 18.4,
+          "distance_km": 23.72
+        },
+        "offpeak": {
+          "duration_min": 16.3,
+          "distance_km": 23.72
+        }
+      }
+    },
+    "bram_centre_45": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.2,
+          "distance_km": 25.64
+        },
+        "sat_10am": {
+          "duration_min": 22.6,
+          "distance_km": 25.64
+        },
+        "offpeak": {
+          "duration_min": 18.6,
+          "distance_km": 25.64
+        }
+      }
+    },
+    "bram_mountainash_115": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.2,
+          "distance_km": 27.86
+        },
+        "sat_10am": {
+          "duration_min": 20.8,
+          "distance_km": 27.86
+        },
+        "offpeak": {
+          "duration_min": 18.5,
+          "distance_km": 27.86
+        }
+      }
+    },
+    "bram_williams_25": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.7,
+          "distance_km": 22.76
+        },
+        "sat_10am": {
+          "duration_min": 19.4,
+          "distance_km": 22.76
+        },
+        "offpeak": {
+          "duration_min": 17.0,
+          "distance_km": 22.76
+        }
+      }
+    },
+    "bram_clark_24": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.3,
+          "distance_km": 23.54
+        },
+        "sat_10am": {
+          "duration_min": 20.8,
+          "distance_km": 23.54
+        },
+        "offpeak": {
+          "duration_min": 17.8,
+          "distance_km": 23.54
+        }
+      }
+    },
+    "bram_charolais_1": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.3,
+          "distance_km": 25.71
+        },
+        "sat_10am": {
+          "duration_min": 24.5,
+          "distance_km": 18.14
+        },
+        "offpeak": {
+          "duration_min": 19.6,
+          "distance_km": 18.14
+        }
+      }
+    },
+    "bram_mclaughlin_215": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.7,
+          "distance_km": 18.19
+        },
+        "sat_10am": {
+          "duration_min": 24.7,
+          "distance_km": 18.19
+        },
+        "offpeak": {
+          "duration_min": 18.8,
+          "distance_km": 18.19
+        }
+      }
+    },
+    "bram_lisa_60": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.6,
+          "distance_km": 23.44
+        },
+        "sat_10am": {
+          "duration_min": 19.6,
+          "distance_km": 23.44
+        },
+        "offpeak": {
+          "duration_min": 17.2,
+          "distance_km": 23.44
+        }
+      }
+    },
+    "bram_lisa_75": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.6,
+          "distance_km": 23.85
+        },
+        "sat_10am": {
+          "duration_min": 20.4,
+          "distance_km": 23.85
+        },
+        "offpeak": {
+          "duration_min": 18.0,
+          "distance_km": 23.85
+        }
+      }
+    },
+    "bram_central_40": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.3,
+          "distance_km": 23.11
+        },
+        "sat_10am": {
+          "duration_min": 19.6,
+          "distance_km": 23.11
+        },
+        "offpeak": {
+          "duration_min": 16.9,
+          "distance_km": 23.11
+        }
+      }
+    },
+    "bram_balmoral_15": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.1,
+          "distance_km": 23.1
+        },
+        "sat_10am": {
+          "duration_min": 19.1,
+          "distance_km": 23.1
+        },
+        "offpeak": {
+          "duration_min": 16.8,
+          "distance_km": 23.1
+        }
+      }
+    },
+    "bram_dixie_700": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.4,
+          "distance_km": 24.18
+        },
+        "sat_10am": {
+          "duration_min": 22.3,
+          "distance_km": 24.18
+        },
+        "offpeak": {
+          "duration_min": 19.4,
+          "distance_km": 24.18
+        }
+      }
+    },
+    "erin_burnhamthorpe_1750": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.4,
+          "distance_km": 6.73
+        },
+        "sat_10am": {
+          "duration_min": 11.7,
+          "distance_km": 6.73
+        },
+        "offpeak": {
+          "duration_min": 9.4,
+          "distance_km": 6.73
+        }
+      }
+    },
+    "erin_dundas_3170": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 9.1,
+          "distance_km": 5.71
+        },
+        "sat_10am": {
+          "duration_min": 9.4,
+          "distance_km": 5.71
+        },
+        "offpeak": {
+          "duration_min": 7.6,
+          "distance_km": 5.22
+        }
+      }
+    },
+    "erin_meadowood_3700": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 9.8,
+          "distance_km": 5.31
+        },
+        "sat_10am": {
+          "duration_min": 10.4,
+          "distance_km": 5.31
+        },
+        "offpeak": {
+          "duration_min": 8.0,
+          "distance_km": 5.31
+        }
+      }
+    },
+    "ec_eglinton_3025": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 9.1,
+          "distance_km": 5.59
+        },
+        "sat_10am": {
+          "duration_min": 9.7,
+          "distance_km": 5.59
+        },
+        "offpeak": {
+          "duration_min": 7.6,
+          "distance_km": 5.59
+        }
+      }
+    },
+    "ec_burnhamthorpe_1530": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.8,
+          "distance_km": 15.82
+        },
+        "sat_10am": {
+          "duration_min": 19.8,
+          "distance_km": 15.82
+        },
+        "offpeak": {
+          "duration_min": 15.0,
+          "distance_km": 15.82
+        }
+      }
+    },
+    "ec_eglinton_2470": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.3,
+          "distance_km": 3.49
+        },
+        "sat_10am": {
+          "duration_min": 6.5,
+          "distance_km": 3.49
+        },
+        "offpeak": {
+          "duration_min": 5.6,
+          "distance_km": 3.49
+        }
+      }
+    },
+    "ec_hurontario_4090": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.0,
+          "distance_km": 8.37
+        },
+        "sat_10am": {
+          "duration_min": 12.1,
+          "distance_km": 8.37
+        },
+        "offpeak": {
+          "duration_min": 9.7,
+          "distance_km": 10.03
+        }
+      }
+    },
+    "ec_robert_speck_4080": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.0,
+          "distance_km": 8.38
+        },
+        "sat_10am": {
+          "duration_min": 12.2,
+          "distance_km": 8.38
+        },
+        "offpeak": {
+          "duration_min": 10.1,
+          "distance_km": 8.38
+        }
+      }
+    },
+    "malt_morningstar_3050": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.8,
+          "distance_km": 22.75
+        },
+        "sat_10am": {
+          "duration_min": 21.4,
+          "distance_km": 22.75
+        },
+        "offpeak": {
+          "duration_min": 17.9,
+          "distance_km": 22.75
+        }
+      }
+    },
+    "malt_morningstar_3100": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.1,
+          "distance_km": 22.72
+        },
+        "sat_10am": {
+          "duration_min": 21.6,
+          "distance_km": 22.72
+        },
+        "offpeak": {
+          "duration_min": 17.9,
+          "distance_km": 22.72
+        }
+      }
+    },
+    "malt_goreway_7340": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.1,
+          "distance_km": 28.59
+        },
+        "sat_10am": {
+          "duration_min": 24.0,
+          "distance_km": 24.12
+        },
+        "offpeak": {
+          "duration_min": 20.3,
+          "distance_km": 24.12
+        }
+      }
+    },
+    "malt_finch_7177": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.3,
+          "distance_km": 28.37
+        },
+        "sat_10am": {
+          "duration_min": 22.9,
+          "distance_km": 23.58
+        },
+        "offpeak": {
+          "duration_min": 19.6,
+          "distance_km": 23.58
+        }
+      }
+    },
+    "malt_brandon_3170": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.3,
+          "distance_km": 28.26
+        },
+        "sat_10am": {
+          "duration_min": 22.6,
+          "distance_km": 23.54
+        },
+        "offpeak": {
+          "duration_min": 19.5,
+          "distance_km": 23.54
+        }
+      }
+    },
+    "malt_darcel_3170": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.1,
+          "distance_km": 27.97
+        },
+        "sat_10am": {
+          "duration_min": 22.2,
+          "distance_km": 23.94
+        },
+        "offpeak": {
+          "duration_min": 19.8,
+          "distance_km": 23.94
+        }
+      }
+    },
+    "sq_burnhamthorpe_4185": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.0,
+          "distance_km": 7.88
+        },
+        "sat_10am": {
+          "duration_min": 11.3,
+          "distance_km": 7.88
+        },
+        "offpeak": {
+          "duration_min": 8.5,
+          "distance_km": 7.88
+        }
+      }
+    },
+    "sq_grand_park_3985": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.9,
+          "distance_km": 8.4
+        },
+        "sat_10am": {
+          "duration_min": 12.2,
+          "distance_km": 8.4
+        },
+        "offpeak": {
+          "duration_min": 9.4,
+          "distance_km": 8.4
+        }
+      }
+    },
+    "sq_kingsbridge_4080": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.6,
+          "distance_km": 11.46
+        },
+        "sat_10am": {
+          "duration_min": 10.5,
+          "distance_km": 11.46
+        },
+        "offpeak": {
+          "duration_min": 8.8,
+          "distance_km": 11.46
+        }
+      }
+    },
+    "sq_eglinton_55": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.3,
+          "distance_km": 8.9
+        },
+        "sat_10am": {
+          "duration_min": 10.5,
+          "distance_km": 8.9
+        },
+        "offpeak": {
+          "duration_min": 8.5,
+          "distance_km": 8.9
+        }
+      }
+    },
+    "sq_eglinton_25": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.6,
+          "distance_km": 8.69
+        },
+        "sat_10am": {
+          "duration_min": 10.9,
+          "distance_km": 9.05
+        },
+        "offpeak": {
+          "duration_min": 9.0,
+          "distance_km": 8.69
+        }
+      }
+    },
+    "dixie_dundas_701": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.6,
+          "distance_km": 14.4
+        },
+        "sat_10am": {
+          "duration_min": 17.3,
+          "distance_km": 14.4
+        },
+        "offpeak": {
+          "duration_min": 13.1,
+          "distance_km": 14.4
+        }
+      }
+    },
+    "dixie_atwater_1310": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.7,
+          "distance_km": 16.4
+        },
+        "sat_10am": {
+          "duration_min": 21.1,
+          "distance_km": 16.4
+        },
+        "offpeak": {
+          "duration_min": 15.7,
+          "distance_km": 16.46
+        }
+      }
+    },
+    "dixie_bloor_2055": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.6,
+          "distance_km": 17.32
+        },
+        "sat_10am": {
+          "duration_min": 22.6,
+          "distance_km": 17.32
+        },
+        "offpeak": {
+          "duration_min": 17.7,
+          "distance_km": 17.32
+        }
+      }
+    },
+    "dixie_dundas_790": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.4,
+          "distance_km": 15.62
+        },
+        "sat_10am": {
+          "duration_min": 19.3,
+          "distance_km": 15.62
+        },
+        "offpeak": {
+          "duration_min": 14.5,
+          "distance_km": 15.68
+        }
+      }
+    },
+    "etob_dundas_3845": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 28.8,
+          "distance_km": 29.41
+        },
+        "sat_10am": {
+          "duration_min": 27.8,
+          "distance_km": 28.05
+        },
+        "offpeak": {
+          "duration_min": 23.4,
+          "distance_km": 29.41
+        }
+      }
+    },
+    "etob_bloor_4225": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.3,
+          "distance_km": 24.6
+        },
+        "sat_10am": {
+          "duration_min": 19.1,
+          "distance_km": 24.6
+        },
+        "offpeak": {
+          "duration_min": 16.8,
+          "distance_km": 24.6
+        }
+      }
+    },
+    "etob_kipling_1900": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.2,
+          "distance_km": 24.41
+        },
+        "sat_10am": {
+          "duration_min": 20.1,
+          "distance_km": 24.41
+        },
+        "offpeak": {
+          "duration_min": 17.4,
+          "distance_km": 24.41
+        }
+      }
+    },
+    "etob_kipling_240n": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.9,
+          "distance_km": 23.0
+        },
+        "sat_10am": {
+          "duration_min": 26.0,
+          "distance_km": 23.0
+        },
+        "offpeak": {
+          "duration_min": 19.4,
+          "distance_km": 23.0
+        }
+      }
+    },
+    "etob_bloor_3501": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 28.9,
+          "distance_km": 29.18
+        },
+        "sat_10am": {
+          "duration_min": 28.8,
+          "distance_km": 28.17
+        },
+        "offpeak": {
+          "duration_min": 24.4,
+          "distance_km": 27.46
+        }
+      }
+    },
+    "etob_dundas_3501": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 31.9,
+          "distance_km": 30.92
+        },
+        "sat_10am": {
+          "duration_min": 31.1,
+          "distance_km": 29.42
+        },
+        "offpeak": {
+          "duration_min": 25.4,
+          "distance_km": 29.42
+        }
+      }
+    },
+    "etob_islington_4646": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.2,
+          "distance_km": 26.06
+        },
+        "sat_10am": {
+          "duration_min": 21.4,
+          "distance_km": 26.06
+        },
+        "offpeak": {
+          "duration_min": 18.3,
+          "distance_km": 26.06
+        }
+      }
+    },
+    "etob_islington_25": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.6,
+          "distance_km": 27.7
+        },
+        "sat_10am": {
+          "duration_min": 23.4,
+          "distance_km": 27.7
+        },
+        "offpeak": {
+          "duration_min": 20.8,
+          "distance_km": 24.46
+        }
+      }
+    },
+    "etob_islington_15": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.6,
+          "distance_km": 27.62
+        },
+        "sat_10am": {
+          "duration_min": 24.1,
+          "distance_km": 27.62
+        },
+        "offpeak": {
+          "duration_min": 20.4,
+          "distance_km": 27.62
+        }
+      }
+    },
+    "etob_kipling_15": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.2,
+          "distance_km": 24.16
+        },
+        "sat_10am": {
+          "duration_min": 18.8,
+          "distance_km": 24.16
+        },
+        "offpeak": {
+          "duration_min": 16.1,
+          "distance_km": 24.16
+        }
+      }
+    },
+    "etob_bloor_4759": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.0,
+          "distance_km": 24.04
+        },
+        "sat_10am": {
+          "duration_min": 18.1,
+          "distance_km": 24.04
+        },
+        "offpeak": {
+          "duration_min": 15.6,
+          "distance_km": 24.04
+        }
+      }
+    },
+    "etob_dunbloor_1": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.2,
+          "distance_km": 27.53
+        },
+        "sat_10am": {
+          "duration_min": 23.9,
+          "distance_km": 27.53
+        },
+        "offpeak": {
+          "duration_min": 21.2,
+          "distance_km": 24.61
+        }
+      }
+    },
+    "etob_eva_36": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.4,
+          "distance_km": 17.14
+        },
+        "sat_10am": {
+          "duration_min": 20.6,
+          "distance_km": 25.2
+        },
+        "offpeak": {
+          "duration_min": 17.4,
+          "distance_km": 17.14
+        }
+      }
+    },
+    "etob_capri_50": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.3,
+          "distance_km": 22.42
+        },
+        "sat_10am": {
+          "duration_min": 18.2,
+          "distance_km": 22.58
+        },
+        "offpeak": {
+          "duration_min": 16.1,
+          "distance_km": 22.58
+        }
+      }
+    },
+    "etob_islington_350s": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 28.7,
+          "distance_km": 24.18
+        },
+        "sat_10am": {
+          "duration_min": 27.4,
+          "distance_km": 32.72
+        },
+        "offpeak": {
+          "duration_min": 22.1,
+          "distance_km": 24.18
+        }
+      }
+    },
+    "etob_islington_625s": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.4,
+          "distance_km": 22.64
+        },
+        "sat_10am": {
+          "duration_min": 25.4,
+          "distance_km": 22.64
+        },
+        "offpeak": {
+          "duration_min": 19.0,
+          "distance_km": 22.64
+        }
+      }
+    },
+    "hp_bloor_2901": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 30.0,
+          "distance_km": 30.01
+        },
+        "sat_10am": {
+          "duration_min": 29.5,
+          "distance_km": 28.61
+        },
+        "offpeak": {
+          "duration_min": 24.7,
+          "distance_km": 29.29
+        }
+      }
+    },
+    "hp_bloor_2095": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 30.2,
+          "distance_km": 28.01
+        },
+        "sat_10am": {
+          "duration_min": 31.8,
+          "distance_km": 28.01
+        },
+        "offpeak": {
+          "duration_min": 24.2,
+          "distance_km": 28.01
+        }
+      }
+    },
+    "hp_armadale_141": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 30.0,
+          "distance_km": 27.86
+        },
+        "sat_10am": {
+          "duration_min": 30.5,
+          "distance_km": 27.86
+        },
+        "offpeak": {
+          "duration_min": 24.1,
+          "distance_km": 27.86
+        }
+      }
+    },
+    "hp_runnymede_295": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.7,
+          "distance_km": 27.88
+        },
+        "sat_10am": {
+          "duration_min": 31.1,
+          "distance_km": 27.88
+        },
+        "offpeak": {
+          "duration_min": 23.6,
+          "distance_km": 27.88
+        }
+      }
+    },
+    "hp_quebec_320": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.3,
+          "distance_km": 29.73
+        },
+        "sat_10am": {
+          "duration_min": 34.6,
+          "distance_km": 29.73
+        },
+        "offpeak": {
+          "duration_min": 26.2,
+          "distance_km": 29.73
+        }
+      }
+    },
+    "hp_humberside_330": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.3,
+          "distance_km": 29.73
+        },
+        "sat_10am": {
+          "duration_min": 34.6,
+          "distance_km": 29.73
+        },
+        "offpeak": {
+          "duration_min": 26.2,
+          "distance_km": 29.73
+        }
+      }
+    },
+    "ron_roncesvalles_211": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 31.3,
+          "distance_km": 28.63
+        },
+        "sat_10am": {
+          "duration_min": 31.1,
+          "distance_km": 37.16
+        },
+        "offpeak": {
+          "duration_min": 24.2,
+          "distance_km": 28.63
+        }
+      }
+    },
+    "ron_roncesvalles_120": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 32.0,
+          "distance_km": 28.66
+        },
+        "sat_10am": {
+          "duration_min": 30.9,
+          "distance_km": 37.19
+        },
+        "offpeak": {
+          "duration_min": 24.5,
+          "distance_km": 28.66
+        }
+      }
+    },
+    "ron_garden_2": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 31.7,
+          "distance_km": 28.76
+        },
+        "sat_10am": {
+          "duration_min": 32.8,
+          "distance_km": 28.76
+        },
+        "offpeak": {
+          "duration_min": 24.9,
+          "distance_km": 28.76
+        }
+      }
+    },
+    "jun_keele_2603": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.1,
+          "distance_km": 31.21
+        },
+        "sat_10am": {
+          "duration_min": 24.2,
+          "distance_km": 31.21
+        },
+        "offpeak": {
+          "duration_min": 20.6,
+          "distance_km": 31.21
+        }
+      }
+    },
+    "jun_dundas_3000": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 35.8,
+          "distance_km": 30.28
+        },
+        "sat_10am": {
+          "duration_min": 35.8,
+          "distance_km": 30.28
+        },
+        "offpeak": {
+          "duration_min": 26.7,
+          "distance_km": 30.28
+        }
+      }
+    },
+    "gw_lakeshore_1900e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.3,
+          "distance_km": 34.31
+        },
+        "sat_10am": {
+          "duration_min": 30.9,
+          "distance_km": 34.31
+        },
+        "offpeak": {
+          "duration_min": 24.8,
+          "distance_km": 34.31
+        }
+      }
+    },
+    "gw_jane_55": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 30.3,
+          "distance_km": 28.11
+        },
+        "sat_10am": {
+          "duration_min": 31.6,
+          "distance_km": 28.11
+        },
+        "offpeak": {
+          "duration_min": 23.3,
+          "distance_km": 28.11
+        }
+      }
+    },
+    "gw_west_mall_555": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.0,
+          "distance_km": 17.4
+        },
+        "sat_10am": {
+          "duration_min": 20.2,
+          "distance_km": 25.67
+        },
+        "offpeak": {
+          "duration_min": 17.4,
+          "distance_km": 17.4
+        }
+      }
+    },
+    "gw_west_mall_565": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.1,
+          "distance_km": 17.41
+        },
+        "sat_10am": {
+          "duration_min": 20.2,
+          "distance_km": 25.67
+        },
+        "offpeak": {
+          "duration_min": 17.5,
+          "distance_km": 17.41
+        }
+      }
+    },
+    "gw_west_mall_575": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.4,
+          "distance_km": 17.41
+        },
+        "sat_10am": {
+          "duration_min": 21.9,
+          "distance_km": 17.41
+        },
+        "offpeak": {
+          "duration_min": 17.5,
+          "distance_km": 17.41
+        }
+      }
+    },
+    "cap_kingsbridge_3700": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.2,
+          "distance_km": 8.09
+        },
+        "sat_10am": {
+          "duration_min": 11.7,
+          "distance_km": 8.09
+        },
+        "offpeak": {
+          "duration_min": 8.7,
+          "distance_km": 8.09
+        }
+      }
+    },
+    "cap_kingsbridge_2737": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.6,
+          "distance_km": 27.26
+        },
+        "sat_10am": {
+          "duration_min": 24.9,
+          "distance_km": 27.26
+        },
+        "offpeak": {
+          "duration_min": 21.5,
+          "distance_km": 27.26
+        }
+      }
+    },
+    "cap_dixon_340": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.1,
+          "distance_km": 25.85
+        },
+        "sat_10am": {
+          "duration_min": 24.1,
+          "distance_km": 25.85
+        },
+        "offpeak": {
+          "duration_min": 20.6,
+          "distance_km": 25.85
+        }
+      }
+    },
+    "cap_lakeshore_2627": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.6,
+          "distance_km": 25.08
+        },
+        "sat_10am": {
+          "duration_min": 28.6,
+          "distance_km": 33.61
+        },
+        "offpeak": {
+          "duration_min": 22.9,
+          "distance_km": 25.08
+        }
+      }
+    },
+    "rs_legion_115": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.8,
+          "distance_km": 25.5
+        },
+        "sat_10am": {
+          "duration_min": 28.0,
+          "distance_km": 34.03
+        },
+        "offpeak": {
+          "duration_min": 20.9,
+          "distance_km": 25.5
+        }
+      }
+    },
+    "sky_main_104": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.9,
+          "distance_km": 24.84
+        },
+        "sat_10am": {
+          "duration_min": 22.2,
+          "distance_km": 24.84
+        },
+        "offpeak": {
+          "duration_min": 19.8,
+          "distance_km": 22.92
+        }
+      }
+    },
+    "sky_central_30": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.1,
+          "distance_km": 25.26
+        },
+        "sat_10am": {
+          "duration_min": 23.2,
+          "distance_km": 25.26
+        },
+        "offpeak": {
+          "duration_min": 20.6,
+          "distance_km": 23.34
+        }
+      }
+    },
+    "kil_brock_2200": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.5,
+          "distance_km": 8.1
+        },
+        "sat_10am": {
+          "duration_min": 15.6,
+          "distance_km": 8.1
+        },
+        "offpeak": {
+          "duration_min": 10.6,
+          "distance_km": 8.1
+        }
+      }
+    },
+    "mv_aquitaine_2825": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.9,
+          "distance_km": 7.3
+        },
+        "sat_10am": {
+          "duration_min": 12.1,
+          "distance_km": 7.3
+        },
+        "offpeak": {
+          "duration_min": 9.5,
+          "distance_km": 7.3
+        }
+      }
+    },
+    "mv_aquitaine_2855": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.0,
+          "distance_km": 7.47
+        },
+        "sat_10am": {
+          "duration_min": 12.1,
+          "distance_km": 7.47
+        },
+        "offpeak": {
+          "duration_min": 9.7,
+          "distance_km": 7.47
+        }
+      }
+    },
+    "mv_aquitaine_2885": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.4,
+          "distance_km": 7.56
+        },
+        "sat_10am": {
+          "duration_min": 12.4,
+          "distance_km": 7.56
+        },
+        "offpeak": {
+          "duration_min": 10.1,
+          "distance_km": 7.56
+        }
+      }
+    },
+    "mv_winston_6750": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 13.7,
+          "distance_km": 8.62
+        },
+        "sat_10am": {
+          "duration_min": 13.2,
+          "distance_km": 8.62
+        },
+        "offpeak": {
+          "duration_min": 10.5,
+          "distance_km": 8.62
+        }
+      }
+    },
+    "mv_montevideo_2630": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.1,
+          "distance_km": 6.84
+        },
+        "sat_10am": {
+          "duration_min": 11.1,
+          "distance_km": 6.84
+        },
+        "offpeak": {
+          "duration_min": 9.2,
+          "distance_km": 6.86
+        }
+      }
+    },
+    "cm_thomas_3175": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.8,
+          "distance_km": 6.32
+        },
+        "sat_10am": {
+          "duration_min": 11.1,
+          "distance_km": 6.32
+        },
+        "offpeak": {
+          "duration_min": 8.5,
+          "distance_km": 6.32
+        }
+      }
+    },
+    "cm_ninth_3060": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.6,
+          "distance_km": 7.84
+        },
+        "sat_10am": {
+          "duration_min": 14.8,
+          "distance_km": 7.84
+        },
+        "offpeak": {
+          "duration_min": 11.8,
+          "distance_km": 7.84
+        }
+      }
+    },
+    "cem_glenerin_5800": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 8.6,
+          "distance_km": 4.75
+        },
+        "sat_10am": {
+          "duration_min": 8.2,
+          "distance_km": 4.42
+        },
+        "offpeak": {
+          "duration_min": 7.0,
+          "distance_km": 4.42
+        }
+      }
+    },
+    "cem_eglinton_3325": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.7,
+          "distance_km": 3.44
+        },
+        "sat_10am": {
+          "duration_min": 6.8,
+          "distance_km": 3.44
+        },
+        "offpeak": {
+          "duration_min": 6.0,
+          "distance_km": 3.47
+        }
+      }
+    },
+    "cem_credit_2500": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 5.4,
+          "distance_km": 2.5
+        },
+        "sat_10am": {
+          "duration_min": 5.5,
+          "distance_km": 2.5
+        },
+        "offpeak": {
+          "duration_min": 4.8,
+          "distance_km": 2.53
+        }
+      }
+    },
+    "sh_truscott_2155": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.9,
+          "distance_km": 7.18
+        },
+        "sat_10am": {
+          "duration_min": 14.3,
+          "distance_km": 7.18
+        },
+        "offpeak": {
+          "duration_min": 9.9,
+          "distance_km": 7.18
+        }
+      }
+    },
+    "sh_meadowwood_1455": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.1,
+          "distance_km": 8.16
+        },
+        "sat_10am": {
+          "duration_min": 15.4,
+          "distance_km": 8.16
+        },
+        "offpeak": {
+          "duration_min": 11.0,
+          "distance_km": 8.16
+        }
+      }
+    },
+    "sh_southdown_1240": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.0,
+          "distance_km": 8.22
+        },
+        "sat_10am": {
+          "duration_min": 15.4,
+          "distance_km": 8.22
+        },
+        "offpeak": {
+          "duration_min": 11.3,
+          "distance_km": 8.22
+        }
+      }
+    },
+    "sh_lakeshore_1535w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.1,
+          "distance_km": 8.88
+        },
+        "sat_10am": {
+          "duration_min": 17.3,
+          "distance_km": 8.88
+        },
+        "offpeak": {
+          "duration_min": 13.0,
+          "distance_km": 8.92
+        }
+      }
+    },
+    "aw_bloor_1525": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.0,
+          "distance_km": 16.96
+        },
+        "sat_10am": {
+          "duration_min": 21.9,
+          "distance_km": 16.96
+        },
+        "offpeak": {
+          "duration_min": 16.9,
+          "distance_km": 16.96
+        }
+      }
+    },
+    "aw_dixie_1140n": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.7,
+          "distance_km": 15.7
+        },
+        "sat_10am": {
+          "duration_min": 19.6,
+          "distance_km": 15.7
+        },
+        "offpeak": {
+          "duration_min": 15.2,
+          "distance_km": 15.7
+        }
+      }
+    },
+    "aw_dixie_1340n": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.8,
+          "distance_km": 15.95
+        },
+        "sat_10am": {
+          "duration_min": 21.1,
+          "distance_km": 15.95
+        },
+        "offpeak": {
+          "duration_min": 15.6,
+          "distance_km": 15.95
+        }
+      }
+    },
+    "aw_burnhamthorpe_1170e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.2,
+          "distance_km": 14.53
+        },
+        "sat_10am": {
+          "duration_min": 18.3,
+          "distance_km": 14.53
+        },
+        "offpeak": {
+          "duration_min": 13.6,
+          "distance_km": 14.53
+        }
+      }
+    },
+    "st_queen_240s": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.7,
+          "distance_km": 3.64
+        },
+        "sat_10am": {
+          "duration_min": 6.7,
+          "distance_km": 3.64
+        },
+        "offpeak": {
+          "duration_min": 6.3,
+          "distance_km": 3.64
+        }
+      }
+    },
+    "st_main_140": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 7.4,
+          "distance_km": 3.95
+        },
+        "sat_10am": {
+          "duration_min": 7.5,
+          "distance_km": 3.95
+        },
+        "offpeak": {
+          "duration_min": 7.0,
+          "distance_km": 3.95
+        }
+      }
+    },
+    "st_pearl_240": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.5,
+          "distance_km": 3.57
+        },
+        "sat_10am": {
+          "duration_min": 6.5,
+          "distance_km": 3.57
+        },
+        "offpeak": {
+          "duration_min": 6.2,
+          "distance_km": 3.57
+        }
+      }
+    },
+    "st_britannia_3050w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 8.8,
+          "distance_km": 4.93
+        },
+        "sat_10am": {
+          "duration_min": 8.9,
+          "distance_km": 4.9
+        },
+        "offpeak": {
+          "duration_min": 7.0,
+          "distance_km": 4.9
+        }
+      }
+    },
+    "pc_hurontario_60s": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.1,
+          "distance_km": 13.33
+        },
+        "sat_10am": {
+          "duration_min": 22.1,
+          "distance_km": 13.49
+        },
+        "offpeak": {
+          "duration_min": 16.0,
+          "distance_km": 13.33
+        }
+      }
+    },
+    "pc_stavebank_55": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.4,
+          "distance_km": 13.39
+        },
+        "sat_10am": {
+          "duration_min": 21.6,
+          "distance_km": 13.55
+        },
+        "offpeak": {
+          "duration_min": 15.4,
+          "distance_km": 13.39
+        }
+      }
+    },
+    "pc_mineola_43e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.0,
+          "distance_km": 14.52
+        },
+        "sat_10am": {
+          "duration_min": 23.4,
+          "distance_km": 14.93
+        },
+        "offpeak": {
+          "duration_min": 16.6,
+          "distance_km": 14.93
+        }
+      }
+    },
+    "pc_lakeshore_75e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.6,
+          "distance_km": 13.15
+        },
+        "sat_10am": {
+          "duration_min": 21.0,
+          "distance_km": 13.31
+        },
+        "offpeak": {
+          "duration_min": 14.4,
+          "distance_km": 13.15
+        }
+      }
+    },
+    "pc_lakeshore_165e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.7,
+          "distance_km": 13.53
+        },
+        "sat_10am": {
+          "duration_min": 22.2,
+          "distance_km": 13.7
+        },
+        "offpeak": {
+          "duration_min": 15.5,
+          "distance_km": 13.53
+        }
+      }
+    },
+    "lv_dixie_990s": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.8,
+          "distance_km": 16.85
+        },
+        "sat_10am": {
+          "duration_min": 21.9,
+          "distance_km": 16.85
+        },
+        "offpeak": {
+          "duration_min": 16.2,
+          "distance_km": 16.91
+        }
+      }
+    },
+    "lv_atwater_2160": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.1,
+          "distance_km": 15.56
+        },
+        "sat_10am": {
+          "duration_min": 19.4,
+          "distance_km": 14.94
+        },
+        "offpeak": {
+          "duration_min": 14.5,
+          "distance_km": 14.94
+        }
+      }
+    },
+    "lv_lakeshore_1300e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.5,
+          "distance_km": 19.15
+        },
+        "sat_10am": {
+          "duration_min": 27.6,
+          "distance_km": 19.15
+        },
+        "offpeak": {
+          "duration_min": 20.5,
+          "distance_km": 19.15
+        }
+      }
+    },
+    "lv_lakeshore_1077e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.0,
+          "distance_km": 18.24
+        },
+        "sat_10am": {
+          "duration_min": 24.8,
+          "distance_km": 18.24
+        },
+        "offpeak": {
+          "duration_min": 18.1,
+          "distance_km": 18.24
+        }
+      }
+    },
+    "cv_camilla_2090": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.1,
+          "distance_km": 14.98
+        },
+        "sat_10am": {
+          "duration_min": 19.2,
+          "distance_km": 14.98
+        },
+        "offpeak": {
+          "duration_min": 14.7,
+          "distance_km": 14.98
+        }
+      }
+    },
+    "cv_dundas_125e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.3,
+          "distance_km": 10.12
+        },
+        "sat_10am": {
+          "duration_min": 14.8,
+          "distance_km": 10.12
+        },
+        "offpeak": {
+          "duration_min": 11.6,
+          "distance_km": 10.12
+        }
+      }
+    },
+    "cv_hurontario_2585": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.7,
+          "distance_km": 7.82
+        },
+        "sat_10am": {
+          "duration_min": 10.8,
+          "distance_km": 7.82
+        },
+        "offpeak": {
+          "duration_min": 8.4,
+          "distance_km": 7.82
+        }
+      }
+    },
+    "cv_dundas_212e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.4,
+          "distance_km": 10.38
+        },
+        "sat_10am": {
+          "duration_min": 15.9,
+          "distance_km": 10.38
+        },
+        "offpeak": {
+          "duration_min": 12.5,
+          "distance_km": 10.24
+        }
+      }
+    },
+    "mv_central_1240w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 9.3,
+          "distance_km": 7.15
+        },
+        "sat_10am": {
+          "duration_min": 9.7,
+          "distance_km": 7.15
+        },
+        "offpeak": {
+          "duration_min": 7.7,
+          "distance_km": 7.15
+        }
+      }
+    },
+    "mv_central_1265w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 9.3,
+          "distance_km": 7.07
+        },
+        "sat_10am": {
+          "duration_min": 9.3,
+          "distance_km": 7.07
+        },
+        "offpeak": {
+          "duration_min": 7.4,
+          "distance_km": 7.07
+        }
+      }
+    },
+    "mv_burnhamthorpe_660w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.6,
+          "distance_km": 8.16
+        },
+        "sat_10am": {
+          "duration_min": 12.0,
+          "distance_km": 8.16
+        },
+        "offpeak": {
+          "duration_min": 9.1,
+          "distance_km": 8.16
+        }
+      }
+    },
+    "sg_queensway_1185": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.4,
+          "distance_km": 22.39
+        },
+        "sat_10am": {
+          "duration_min": 25.0,
+          "distance_km": 22.39
+        },
+        "offpeak": {
+          "duration_min": 18.2,
+          "distance_km": 22.39
+        }
+      }
+    },
+    "sg_queensway_1535": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.9,
+          "distance_km": 21.41
+        },
+        "sat_10am": {
+          "duration_min": 23.9,
+          "distance_km": 21.41
+        },
+        "offpeak": {
+          "duration_min": 18.2,
+          "distance_km": 21.41
+        }
+      }
+    },
+    "sg_islington_140s": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.8,
+          "distance_km": 24.03
+        },
+        "sat_10am": {
+          "duration_min": 28.1,
+          "distance_km": 24.03
+        },
+        "offpeak": {
+          "duration_min": 21.3,
+          "distance_km": 24.03
+        }
+      }
+    },
+    "sg_royal_york_90s": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.0,
+          "distance_km": 24.81
+        },
+        "sat_10am": {
+          "duration_min": 29.2,
+          "distance_km": 24.81
+        },
+        "offpeak": {
+          "duration_min": 22.3,
+          "distance_km": 24.81
+        }
+      }
+    },
+    "sg_park_lawn_25": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.8,
+          "distance_km": 24.9
+        },
+        "sat_10am": {
+          "duration_min": 27.6,
+          "distance_km": 24.9
+        },
+        "offpeak": {
+          "duration_min": 20.0,
+          "distance_km": 24.9
+        }
+      }
+    },
+    "hbs_lakeshore_2240": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.9,
+          "distance_km": 24.79
+        },
+        "sat_10am": {
+          "duration_min": 27.4,
+          "distance_km": 24.79
+        },
+        "offpeak": {
+          "duration_min": 20.1,
+          "distance_km": 24.79
+        }
+      }
+    },
+    "hbs_marine_2200": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.1,
+          "distance_km": 24.51
+        },
+        "sat_10am": {
+          "duration_min": 27.0,
+          "distance_km": 24.51
+        },
+        "offpeak": {
+          "duration_min": 19.9,
+          "distance_km": 24.51
+        }
+      }
+    },
+    "hbs_marine_2167": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.5,
+          "distance_km": 24.53
+        },
+        "sat_10am": {
+          "duration_min": 27.0,
+          "distance_km": 24.53
+        },
+        "offpeak": {
+          "duration_min": 20.4,
+          "distance_km": 24.53
+        }
+      }
+    },
+    "hbs_legion_2230": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 28.2,
+          "distance_km": 25.56
+        },
+        "sat_10am": {
+          "duration_min": 28.1,
+          "distance_km": 34.09
+        },
+        "offpeak": {
+          "duration_min": 21.2,
+          "distance_km": 25.56
+        }
+      }
+    },
+    "en_eglinton_500w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.2,
+          "distance_km": 21.99
+        },
+        "sat_10am": {
+          "duration_min": 17.0,
+          "distance_km": 21.99
+        },
+        "offpeak": {
+          "duration_min": 14.8,
+          "distance_km": 21.99
+        }
+      }
+    },
+    "en_renforth_44": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.8,
+          "distance_km": 16.03
+        },
+        "sat_10am": {
+          "duration_min": 20.1,
+          "distance_km": 16.03
+        },
+        "offpeak": {
+          "duration_min": 16.4,
+          "distance_km": 16.03
+        }
+      }
+    },
+    "en_renforth_120": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.9,
+          "distance_km": 21.9
+        },
+        "sat_10am": {
+          "duration_min": 19.5,
+          "distance_km": 21.9
+        },
+        "offpeak": {
+          "duration_min": 16.5,
+          "distance_km": 21.9
+        }
+      }
+    },
+    "en_renforth_220": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.1,
+          "distance_km": 21.89
+        },
+        "sat_10am": {
+          "duration_min": 19.8,
+          "distance_km": 21.89
+        },
+        "offpeak": {
+          "duration_min": 17.2,
+          "distance_km": 21.89
+        }
+      }
+    },
+    "pc_park_60e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.7,
+          "distance_km": 13.53
+        },
+        "sat_10am": {
+          "duration_min": 21.3,
+          "distance_km": 13.53
+        },
+        "offpeak": {
+          "duration_min": 15.2,
+          "distance_km": 13.53
+        }
+      }
+    },
+    "pc_high_15e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.7,
+          "distance_km": 13.21
+        },
+        "sat_10am": {
+          "duration_min": 21.1,
+          "distance_km": 13.37
+        },
+        "offpeak": {
+          "duration_min": 14.8,
+          "distance_km": 13.21
+        }
+      }
+    },
+    "rw_rathburn_3145e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.0,
+          "distance_km": 17.12
+        },
+        "sat_10am": {
+          "duration_min": 22.6,
+          "distance_km": 17.12
+        },
+        "offpeak": {
+          "duration_min": 17.0,
+          "distance_km": 17.12
+        }
+      }
+    },
+    "rw_rathburn_3415e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.3,
+          "distance_km": 18.85
+        },
+        "sat_10am": {
+          "duration_min": 23.1,
+          "distance_km": 18.85
+        },
+        "offpeak": {
+          "duration_min": 16.5,
+          "distance_km": 18.85
+        }
+      }
+    },
+    "rw_bough_1735": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.8,
+          "distance_km": 15.77
+        },
+        "sat_10am": {
+          "duration_min": 21.4,
+          "distance_km": 15.77
+        },
+        "offpeak": {
+          "duration_min": 16.6,
+          "distance_km": 15.77
+        }
+      }
+    },
+    "ch_truscott_2300": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.5,
+          "distance_km": 7.03
+        },
+        "sat_10am": {
+          "duration_min": 13.8,
+          "distance_km": 7.03
+        },
+        "offpeak": {
+          "duration_min": 9.5,
+          "distance_km": 7.03
+        }
+      }
+    },
+    "ch_southdown_1135": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.5,
+          "distance_km": 7.89
+        },
+        "sat_10am": {
+          "duration_min": 15.8,
+          "distance_km": 7.89
+        },
+        "offpeak": {
+          "duration_min": 11.0,
+          "distance_km": 7.89
+        }
+      }
+    },
+    "ok_upper_middle_2484": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.4,
+          "distance_km": 18.44
+        },
+        "sat_10am": {
+          "duration_min": 18.6,
+          "distance_km": 18.44
+        },
+        "offpeak": {
+          "duration_min": 15.7,
+          "distance_km": 15.62
+        }
+      }
+    },
+    "ok_glenashton_2400": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.7,
+          "distance_km": 13.85
+        },
+        "sat_10am": {
+          "duration_min": 14.4,
+          "distance_km": 13.85
+        },
+        "offpeak": {
+          "duration_min": 11.9,
+          "distance_km": 13.85
+        }
+      }
+    },
+    "ok_north_service_290": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.7,
+          "distance_km": 16.09
+        },
+        "sat_10am": {
+          "duration_min": 15.7,
+          "distance_km": 16.09
+        },
+        "offpeak": {
+          "duration_min": 12.7,
+          "distance_km": 16.09
+        }
+      }
+    },
+    "bram_sandalwood_695": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.1,
+          "distance_km": 26.49
+        },
+        "sat_10am": {
+          "duration_min": 21.1,
+          "distance_km": 26.49
+        },
+        "offpeak": {
+          "duration_min": 18.4,
+          "distance_km": 26.49
+        }
+      }
+    },
+    "bram_bovaird_50w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.1,
+          "distance_km": 26.3
+        },
+        "sat_10am": {
+          "duration_min": 19.9,
+          "distance_km": 26.3
+        },
+        "offpeak": {
+          "duration_min": 16.9,
+          "distance_km": 26.3
+        }
+      }
+    },
+    "ic_islington_277": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.8,
+          "distance_km": 24.03
+        },
+        "sat_10am": {
+          "duration_min": 28.1,
+          "distance_km": 24.03
+        },
+        "offpeak": {
+          "duration_min": 21.3,
+          "distance_km": 24.03
+        }
+      }
+    },
+    "sp_bloor_3380": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 30.5,
+          "distance_km": 27.1
+        },
+        "sat_10am": {
+          "duration_min": 29.6,
+          "distance_km": 28.56
+        },
+        "offpeak": {
+          "duration_min": 23.5,
+          "distance_km": 27.1
+        }
+      }
+    },
+    "sp_aukland_60": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.1,
+          "distance_km": 22.18
+        },
+        "sat_10am": {
+          "duration_min": 24.7,
+          "distance_km": 22.18
+        },
+        "offpeak": {
+          "duration_min": 19.0,
+          "distance_km": 22.18
+        }
+      }
+    },
+    "hu_hurontario_3300": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.9,
+          "distance_km": 7.12
+        },
+        "sat_10am": {
+          "duration_min": 7.0,
+          "distance_km": 7.12
+        },
+        "offpeak": {
+          "duration_min": 5.7,
+          "distance_km": 7.12
+        }
+      }
+    },
+    "hu_hurontario_2855": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.4,
+          "distance_km": 7.9
+        },
+        "sat_10am": {
+          "duration_min": 10.8,
+          "distance_km": 7.77
+        },
+        "offpeak": {
+          "duration_min": 8.6,
+          "distance_km": 7.77
+        }
+      }
+    },
+    "hu_dundas_55e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.1,
+          "distance_km": 10.33
+        },
+        "sat_10am": {
+          "duration_min": 15.7,
+          "distance_km": 10.33
+        },
+        "offpeak": {
+          "duration_min": 11.9,
+          "distance_km": 10.33
+        }
+      }
+    },
+    "cm_eglinton_3650": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 9.1,
+          "distance_km": 5.04
+        },
+        "sat_10am": {
+          "duration_min": 9.6,
+          "distance_km": 5.04
+        },
+        "offpeak": {
+          "duration_min": 7.6,
+          "distance_km": 5.04
+        }
+      }
+    },
+    "wot_dundas_3400w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.7,
+          "distance_km": 19.65
+        },
+        "sat_10am": {
+          "duration_min": 18.8,
+          "distance_km": 19.65
+        },
+        "offpeak": {
+          "duration_min": 14.8,
+          "distance_km": 19.65
+        }
+      }
+    },
+    "sg_park_lawn_2200": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.7,
+          "distance_km": 24.51
+        },
+        "sat_10am": {
+          "duration_min": 26.4,
+          "distance_km": 24.51
+        },
+        "offpeak": {
+          "duration_min": 19.9,
+          "distance_km": 24.51
+        }
+      }
+    },
+    "etob_west_mall_500": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.7,
+          "distance_km": 17.46
+        },
+        "sat_10am": {
+          "duration_min": 22.1,
+          "distance_km": 17.46
+        },
+        "offpeak": {
+          "duration_min": 18.1,
+          "distance_km": 17.29
+        }
+      }
+    },
+    "etob_west_mall_435": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.8,
+          "distance_km": 17.46
+        },
+        "sat_10am": {
+          "duration_min": 22.2,
+          "distance_km": 17.46
+        },
+        "offpeak": {
+          "duration_min": 17.8,
+          "distance_km": 17.29
+        }
+      }
+    },
+    "etob_west_mall_415": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.8,
+          "distance_km": 17.46
+        },
+        "sat_10am": {
+          "duration_min": 22.2,
+          "distance_km": 17.46
+        },
+        "offpeak": {
+          "duration_min": 17.8,
+          "distance_km": 17.29
+        }
+      }
+    },
+    "etob_west_mall_445": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.8,
+          "distance_km": 17.46
+        },
+        "sat_10am": {
+          "duration_min": 22.2,
+          "distance_km": 17.46
+        },
+        "offpeak": {
+          "duration_min": 17.8,
+          "distance_km": 17.29
+        }
+      }
+    },
+    "etob_kipling_36s": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.6,
+          "distance_km": 27.69
+        },
+        "sat_10am": {
+          "duration_min": 24.5,
+          "distance_km": 27.69
+        },
+        "offpeak": {
+          "duration_min": 20.4,
+          "distance_km": 24.39
+        }
+      }
+    },
+    "etob_cordova_25": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.9,
+          "distance_km": 27.74
+        },
+        "sat_10am": {
+          "duration_min": 24.8,
+          "distance_km": 27.74
+        },
+        "offpeak": {
+          "duration_min": 20.3,
+          "distance_km": 24.34
+        }
+      }
+    },
+    "ok_speers_1140": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.4,
+          "distance_km": 18.16
+        },
+        "sat_10am": {
+          "duration_min": 17.2,
+          "distance_km": 18.16
+        },
+        "offpeak": {
+          "duration_min": 14.5,
+          "distance_km": 18.16
+        }
+      }
+    },
+    "tomken_place_935_dundas_st_e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.3,
+          "distance_km": 14.03
+        },
+        "sat_10am": {
+          "duration_min": 16.3,
+          "distance_km": 14.03
+        },
+        "offpeak": {
+          "duration_min": 13.2,
+          "distance_km": 14.03
+        }
+      }
+    },
+    "2177_sherobee_road_2177_sherobee_rd": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.4,
+          "distance_km": 12.98
+        },
+        "sat_10am": {
+          "duration_min": 18.5,
+          "distance_km": 12.98
+        },
+        "offpeak": {
+          "duration_min": 13.4,
+          "distance_km": 12.98
+        }
+      }
+    },
+    "2211_sherobee_road_2211_sherobee_rd": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.4,
+          "distance_km": 12.87
+        },
+        "sat_10am": {
+          "duration_min": 18.3,
+          "distance_km": 12.87
+        },
+        "offpeak": {
+          "duration_min": 13.3,
+          "distance_km": 12.87
+        }
+      }
+    },
+    "2300_confederation_parkway_2300_confeder": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.7,
+          "distance_km": 11.82
+        },
+        "sat_10am": {
+          "duration_min": 17.1,
+          "distance_km": 11.82
+        },
+        "offpeak": {
+          "duration_min": 13.6,
+          "distance_km": 11.09
+        }
+      }
+    },
+    "1315_bough_beeches_boulevard_1315_bough_": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.9,
+          "distance_km": 12.84
+        },
+        "sat_10am": {
+          "duration_min": 14.9,
+          "distance_km": 12.84
+        },
+        "offpeak": {
+          "duration_min": 12.3,
+          "distance_km": 12.84
+        }
+      }
+    },
+    "aquitaine_avenue_apartments_2700_aquitai": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.4,
+          "distance_km": 7.21
+        },
+        "sat_10am": {
+          "duration_min": 12.5,
+          "distance_km": 7.21
+        },
+        "offpeak": {
+          "duration_min": 9.6,
+          "distance_km": 7.21
+        }
+      }
+    },
+    "fieldgate_apartments_3450_fieldgate_dr": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.1,
+          "distance_km": 14.52
+        },
+        "sat_10am": {
+          "duration_min": 18.6,
+          "distance_km": 14.52
+        },
+        "offpeak": {
+          "duration_min": 14.5,
+          "distance_km": 14.52
+        }
+      }
+    },
+    "havenwood_apartments_3370_havenwood_dr": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.5,
+          "distance_km": 14.4
+        },
+        "sat_10am": {
+          "duration_min": 17.9,
+          "distance_km": 14.4
+        },
+        "offpeak": {
+          "duration_min": 13.7,
+          "distance_km": 14.24
+        }
+      }
+    },
+    "elder_gardens_7555_goreway_dr": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.1,
+          "distance_km": 28.75
+        },
+        "sat_10am": {
+          "duration_min": 23.4,
+          "distance_km": 28.75
+        },
+        "offpeak": {
+          "duration_min": 20.4,
+          "distance_km": 28.75
+        }
+      }
+    },
+    "2335_lake_shore_blvd_west_2335_lake_shor": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.6,
+          "distance_km": 25.59
+        },
+        "sat_10am": {
+          "duration_min": 29.4,
+          "distance_km": 25.59
+        },
+        "offpeak": {
+          "duration_min": 21.6,
+          "distance_km": 25.59
+        }
+      }
+    },
+    "4397_trail_blazer_way_4397_trail_blazer_": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 9.2,
+          "distance_km": 6.88
+        },
+        "sat_10am": {
+          "duration_min": 9.5,
+          "distance_km": 6.88
+        },
+        "offpeak": {
+          "duration_min": 8.5,
+          "distance_km": 5.71
+        }
+      }
+    },
+    "8_nahani_way_8_nahani_way": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.0,
+          "distance_km": 8.87
+        },
+        "sat_10am": {
+          "duration_min": 11.4,
+          "distance_km": 8.87
+        },
+        "offpeak": {
+          "duration_min": 8.2,
+          "distance_km": 8.87
+        }
+      }
+    },
+    "65_pinnacle_uptown_65_pinnacle_uptown": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.3,
+          "distance_km": 6.79
+        },
+        "sat_10am": {
+          "duration_min": 11.6,
+          "distance_km": 6.79
+        },
+        "offpeak": {
+          "duration_min": 9.2,
+          "distance_km": 6.79
+        }
+      }
+    },
+    "5481_wilderness_trail_5481_wilderness_tr": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.9,
+          "distance_km": 9.73
+        },
+        "sat_10am": {
+          "duration_min": 14.9,
+          "distance_km": 12.7
+        },
+        "offpeak": {
+          "duration_min": 13.1,
+          "distance_km": 9.73
+        }
+      }
+    },
+    "75_eglinton_avenue_west_75_eglinton_ave_": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.1,
+          "distance_km": 6.79
+        },
+        "sat_10am": {
+          "duration_min": 11.6,
+          "distance_km": 6.79
+        },
+        "offpeak": {
+          "duration_min": 9.2,
+          "distance_km": 6.79
+        }
+      }
+    },
+    "25_trailwood_drive_25_trailwood_dr": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.4,
+          "distance_km": 9.25
+        },
+        "sat_10am": {
+          "duration_min": 12.0,
+          "distance_km": 9.25
+        },
+        "offpeak": {
+          "duration_min": 8.7,
+          "distance_km": 9.25
+        }
+      }
+    },
+    "5025_four_springs_avenue_5025_four_sprin": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.0,
+          "distance_km": 6.81
+        },
+        "sat_10am": {
+          "duration_min": 12.9,
+          "distance_km": 6.81
+        },
+        "offpeak": {
+          "duration_min": 9.9,
+          "distance_km": 6.81
+        }
+      }
+    },
+    "lake_promenade_21_park_21_park_blvd": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.9,
+          "distance_km": 31.02
+        },
+        "sat_10am": {
+          "duration_min": 26.2,
+          "distance_km": 31.02
+        },
+        "offpeak": {
+          "duration_min": 22.7,
+          "distance_km": 21.99
+        }
+      }
+    },
+    "lake_promenade_230_230_lake_promenade": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.4,
+          "distance_km": 31.17
+        },
+        "sat_10am": {
+          "duration_min": 26.7,
+          "distance_km": 31.17
+        },
+        "offpeak": {
+          "duration_min": 22.9,
+          "distance_km": 22.14
+        }
+      }
+    },
+    "lake_promenade_31_park_31_park_blvd": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.8,
+          "distance_km": 21.85
+        },
+        "sat_10am": {
+          "duration_min": 26.1,
+          "distance_km": 30.88
+        },
+        "offpeak": {
+          "duration_min": 21.2,
+          "distance_km": 21.85
+        }
+      }
+    },
+    "2_erskine_road_unit_2706_2_erskine_rd": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.6,
+          "distance_km": 9.4
+        },
+        "sat_10am": {
+          "duration_min": 12.0,
+          "distance_km": 9.4
+        },
+        "offpeak": {
+          "duration_min": 9.3,
+          "distance_km": 9.4
+        }
+      }
+    },
+    "limelight_north_tower_360_square_one_360": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.7,
+          "distance_km": 8.62
+        },
+        "sat_10am": {
+          "duration_min": 11.9,
+          "distance_km": 8.62
+        },
+        "offpeak": {
+          "duration_min": 10.2,
+          "distance_km": 8.62
+        }
+      }
+    },
+    "avia_condos_430_square_one_430_square_on": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.2,
+          "distance_km": 8.72
+        },
+        "sat_10am": {
+          "duration_min": 10.6,
+          "distance_km": 8.72
+        },
+        "offpeak": {
+          "duration_min": 8.4,
+          "distance_km": 8.72
+        }
+      }
+    },
+    "stak36_395_square_one_district_395_squar": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.6,
+          "distance_km": 8.62
+        },
+        "sat_10am": {
+          "duration_min": 12.1,
+          "distance_km": 8.62
+        },
+        "offpeak": {
+          "duration_min": 10.2,
+          "distance_km": 8.62
+        }
+      }
+    },
+    "tanu_condos_21_park_st_e_21_park_st_e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.1,
+          "distance_km": 13.38
+        },
+        "sat_10am": {
+          "duration_min": 20.9,
+          "distance_km": 13.38
+        },
+        "offpeak": {
+          "duration_min": 15.1,
+          "distance_km": 13.22
+        }
+      }
+    },
+    "westerly_condos_60_central_park_roadway_": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.6,
+          "distance_km": 26.64
+        },
+        "sat_10am": {
+          "duration_min": 23.2,
+          "distance_km": 26.64
+        },
+        "offpeak": {
+          "duration_min": 19.3,
+          "distance_km": 26.64
+        }
+      }
+    },
+    "402_east_mall_drive_402_the_east_mall": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.0,
+          "distance_km": 23.74
+        },
+        "sat_10am": {
+          "duration_min": 17.3,
+          "distance_km": 23.74
+        },
+        "offpeak": {
+          "duration_min": 15.2,
+          "distance_km": 23.74
+        }
+      }
+    },
+    "1037_the_queensway_1037_the_queensway": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.5,
+          "distance_km": 22.36
+        },
+        "sat_10am": {
+          "duration_min": 24.4,
+          "distance_km": 22.36
+        },
+        "offpeak": {
+          "duration_min": 19.1,
+          "distance_km": 22.36
+        }
+      }
+    },
+    "1835_bloor_street_1835_bloor_st": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.9,
+          "distance_km": 15.37
+        },
+        "sat_10am": {
+          "duration_min": 19.3,
+          "distance_km": 15.37
+        },
+        "offpeak": {
+          "duration_min": 15.6,
+          "distance_km": 15.45
+        }
+      }
+    },
+    "riverside_tower_2757_kipling": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.1,
+          "distance_km": 28.35
+        },
+        "sat_10am": {
+          "duration_min": 25.0,
+          "distance_km": 27.21
+        },
+        "offpeak": {
+          "duration_min": 21.3,
+          "distance_km": 27.21
+        }
+      }
+    },
+    "mcmurchy_53n": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.7,
+          "distance_km": 25.62
+        },
+        "sat_10am": {
+          "duration_min": 22.8,
+          "distance_km": 25.62
+        },
+        "offpeak": {
+          "duration_min": 18.6,
+          "distance_km": 25.62
+        }
+      }
+    },
+    "westdale_dundas_erindale": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 8.8,
+          "distance_km": 4.65
+        },
+        "sat_10am": {
+          "duration_min": 8.8,
+          "distance_km": 4.65
+        },
+        "offpeak": {
+          "duration_min": 7.2,
+          "distance_km": 4.65
+        }
+      }
+    },
+    "queen_south_190_streetsville": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 8.1,
+          "distance_km": 4.87
+        },
+        "sat_10am": {
+          "duration_min": 8.2,
+          "distance_km": 4.87
+        },
+        "offpeak": {
+          "duration_min": 7.2,
+          "distance_km": 4.87
+        }
+      }
+    },
+    "hurontario_dundas_kj": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.3,
+          "distance_km": 10.59
+        },
+        "sat_10am": {
+          "duration_min": 16.6,
+          "distance_km": 10.59
+        },
+        "offpeak": {
+          "duration_min": 13.2,
+          "distance_km": 10.45
+        }
+      }
+    },
+    "kirwin_apartments_msga": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.1,
+          "distance_km": 11.91
+        },
+        "sat_10am": {
+          "duration_min": 18.2,
+          "distance_km": 11.89
+        },
+        "offpeak": {
+          "duration_min": 13.6,
+          "distance_km": 11.89
+        }
+      }
+    },
+    "queensway_reina_stonegate": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.5,
+          "distance_km": 24.86
+        },
+        "sat_10am": {
+          "duration_min": 24.9,
+          "distance_km": 24.86
+        },
+        "offpeak": {
+          "duration_min": 20.0,
+          "distance_km": 24.86
+        }
+      }
+    },
+    "alba_fairview_1e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.6,
+          "distance_km": 8.3
+        },
+        "sat_10am": {
+          "duration_min": 11.9,
+          "distance_km": 8.3
+        },
+        "offpeak": {
+          "duration_min": 9.2,
+          "distance_km": 8.3
+        }
+      }
+    },
+    "brickstone_4011": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.7,
+          "distance_km": 8.07
+        },
+        "sat_10am": {
+          "duration_min": 11.3,
+          "distance_km": 8.07
+        },
+        "offpeak": {
+          "duration_min": 9.3,
+          "distance_km": 8.07
+        }
+      }
+    },
+    "east_mall_townhouse_etob": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.3,
+          "distance_km": 17.51
+        },
+        "sat_10am": {
+          "duration_min": 23.0,
+          "distance_km": 17.51
+        },
+        "offpeak": {
+          "duration_min": 18.3,
+          "distance_km": 17.51
+        }
+      }
+    },
+    "bexhill_kingsway": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 27.9,
+          "distance_km": 27.14
+        },
+        "sat_10am": {
+          "duration_min": 26.4,
+          "distance_km": 27.14
+        },
+        "offpeak": {
+          "duration_min": 22.6,
+          "distance_km": 28.95
+        }
+      }
+    },
+    "edenbridge_humber_valley_1bed": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.6,
+          "distance_km": 26.55
+        },
+        "sat_10am": {
+          "duration_min": 24.9,
+          "distance_km": 26.55
+        },
+        "offpeak": {
+          "duration_min": 21.0,
+          "distance_km": 26.55
+        }
+      }
+    },
+    "mimico_estates_2527": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 28.2,
+          "distance_km": 24.62
+        },
+        "sat_10am": {
+          "duration_min": 28.9,
+          "distance_km": 24.62
+        },
+        "offpeak": {
+          "duration_min": 21.9,
+          "distance_km": 24.62
+        }
+      }
+    },
+    "newholm_2_etob": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.1,
+          "distance_km": 23.02
+        },
+        "sat_10am": {
+          "duration_min": 24.6,
+          "distance_km": 31.55
+        },
+        "offpeak": {
+          "duration_min": 19.0,
+          "distance_km": 23.02
+        }
+      }
+    },
+    "alderwood_apt_etob": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.6,
+          "distance_km": 28.79
+        },
+        "sat_10am": {
+          "duration_min": 21.8,
+          "distance_km": 28.79
+        },
+        "offpeak": {
+          "duration_min": 18.5,
+          "distance_km": 19.67
+        }
+      }
+    },
+    "samuel_wood_30_eccc": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.7,
+          "distance_km": 27.71
+        },
+        "sat_10am": {
+          "duration_min": 23.7,
+          "distance_km": 27.71
+        },
+        "offpeak": {
+          "duration_min": 20.8,
+          "distance_km": 23.37
+        }
+      }
+    },
+    "queensway_1007_eccc": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.8,
+          "distance_km": 21.35
+        },
+        "sat_10am": {
+          "duration_min": 22.4,
+          "distance_km": 29.88
+        },
+        "offpeak": {
+          "duration_min": 17.9,
+          "distance_km": 21.35
+        }
+      }
+    },
+    "james_90_etob": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 28.8,
+          "distance_km": 24.56
+        },
+        "sat_10am": {
+          "duration_min": 28.8,
+          "distance_km": 24.56
+        },
+        "offpeak": {
+          "duration_min": 22.7,
+          "distance_km": 24.56
+        }
+      }
+    },
+    "seneca_1017_lakeview": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.9,
+          "distance_km": 19.2
+        },
+        "sat_10am": {
+          "duration_min": 28.0,
+          "distance_km": 19.2
+        },
+        "offpeak": {
+          "duration_min": 20.9,
+          "distance_km": 19.27
+        }
+      }
+    },
+    "port_credit_lake_1750": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 18.6,
+          "distance_km": 13.31
+        },
+        "sat_10am": {
+          "duration_min": 20.4,
+          "distance_km": 13.31
+        },
+        "offpeak": {
+          "duration_min": 15.0,
+          "distance_km": 13.31
+        }
+      }
+    },
+    "port_credit_pc_1905": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.0,
+          "distance_km": 13.32
+        },
+        "sat_10am": {
+          "duration_min": 21.8,
+          "distance_km": 13.48
+        },
+        "offpeak": {
+          "duration_min": 15.4,
+          "distance_km": 13.32
+        }
+      }
+    },
+    "stavebank_15n": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 21.2,
+          "distance_km": 14.32
+        },
+        "sat_10am": {
+          "duration_min": 21.0,
+          "distance_km": 14.32
+        },
+        "offpeak": {
+          "duration_min": 15.4,
+          "distance_km": 14.32
+        }
+      }
+    },
+    "brickstone_4065": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.6,
+          "distance_km": 8.3
+        },
+        "sat_10am": {
+          "duration_min": 11.9,
+          "distance_km": 8.3
+        },
+        "offpeak": {
+          "duration_min": 9.4,
+          "distance_km": 8.3
+        }
+      }
+    },
+    "glen_erin_4900": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.6,
+          "distance_km": 2.92
+        },
+        "sat_10am": {
+          "duration_min": 7.3,
+          "distance_km": 2.92
+        },
+        "offpeak": {
+          "duration_min": 6.0,
+          "distance_km": 2.92
+        }
+      }
+    },
+    "ann_28_1501": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.0,
+          "distance_km": 13.32
+        },
+        "sat_10am": {
+          "duration_min": 21.5,
+          "distance_km": 13.48
+        },
+        "offpeak": {
+          "duration_min": 15.4,
+          "distance_km": 13.32
+        }
+      }
+    },
+    "parkside_village_4130": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 9.9,
+          "distance_km": 7.82
+        },
+        "sat_10am": {
+          "duration_min": 10.6,
+          "distance_km": 7.82
+        },
+        "offpeak": {
+          "duration_min": 8.6,
+          "distance_km": 7.82
+        }
+      }
+    },
+    "confederation_3900": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.1,
+          "distance_km": 8.37
+        },
+        "sat_10am": {
+          "duration_min": 12.6,
+          "distance_km": 8.37
+        },
+        "offpeak": {
+          "duration_min": 10.5,
+          "distance_km": 9.68
+        }
+      }
+    },
+    "elm_30w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.9,
+          "distance_km": 8.17
+        },
+        "sat_10am": {
+          "duration_min": 12.1,
+          "distance_km": 8.17
+        },
+        "offpeak": {
+          "duration_min": 10.0,
+          "distance_km": 8.17
+        }
+      }
+    },
+    "missinnihe_220": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.9,
+          "distance_km": 13.64
+        },
+        "sat_10am": {
+          "duration_min": 21.9,
+          "distance_km": 13.81
+        },
+        "offpeak": {
+          "duration_min": 15.8,
+          "distance_km": 13.64
+        }
+      }
+    },
+    "bristol_117e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.6,
+          "distance_km": 6.23
+        },
+        "sat_10am": {
+          "duration_min": 10.8,
+          "distance_km": 6.23
+        },
+        "offpeak": {
+          "duration_min": 8.6,
+          "distance_km": 6.23
+        }
+      }
+    },
+    "thomas_3075": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 9.8,
+          "distance_km": 5.64
+        },
+        "sat_10am": {
+          "duration_min": 11.2,
+          "distance_km": 5.64
+        },
+        "offpeak": {
+          "duration_min": 7.8,
+          "distance_km": 5.64
+        }
+      }
+    },
+    "elm_30e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.2,
+          "distance_km": 9.65
+        },
+        "sat_10am": {
+          "duration_min": 13.4,
+          "distance_km": 8.88
+        },
+        "offpeak": {
+          "duration_min": 10.1,
+          "distance_km": 9.65
+        }
+      }
+    },
+    "the_kay_3610_dixie": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.2,
+          "distance_km": 17.28
+        },
+        "sat_10am": {
+          "duration_min": 22.9,
+          "distance_km": 17.28
+        },
+        "offpeak": {
+          "duration_min": 17.4,
+          "distance_km": 17.28
+        }
+      }
+    },
+    "lakewood_1257_lakeshore_e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.0,
+          "distance_km": 18.72
+        },
+        "sat_10am": {
+          "duration_min": 26.0,
+          "distance_km": 18.72
+        },
+        "offpeak": {
+          "duration_min": 19.1,
+          "distance_km": 18.72
+        }
+      }
+    },
+    "glen_erin_4655": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.5,
+          "distance_km": 3.14
+        },
+        "sat_10am": {
+          "duration_min": 7.4,
+          "distance_km": 3.14
+        },
+        "offpeak": {
+          "duration_min": 6.2,
+          "distance_km": 3.14
+        }
+      }
+    },
+    "erin_mills_pkwy_3170": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.6,
+          "distance_km": 3.33
+        },
+        "sat_10am": {
+          "duration_min": 7.0,
+          "distance_km": 3.33
+        },
+        "offpeak": {
+          "duration_min": 5.8,
+          "distance_km": 2.9
+        }
+      }
+    },
+    "glen_erin_4850": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.0,
+          "distance_km": 2.67
+        },
+        "sat_10am": {
+          "duration_min": 6.5,
+          "distance_km": 2.67
+        },
+        "offpeak": {
+          "duration_min": 5.2,
+          "distance_km": 2.67
+        }
+      }
+    },
+    "eglinton_2560_w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 3.9,
+          "distance_km": 1.54
+        },
+        "sat_10am": {
+          "duration_min": 4.1,
+          "distance_km": 1.54
+        },
+        "offpeak": {
+          "duration_min": 3.8,
+          "distance_km": 1.54
+        }
+      }
+    },
+    "eglinton_2520_w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 4.7,
+          "distance_km": 1.2
+        },
+        "sat_10am": {
+          "duration_min": 4.6,
+          "distance_km": 1.2
+        },
+        "offpeak": {
+          "duration_min": 4.4,
+          "distance_km": 1.2
+        }
+      }
+    },
+    "eglinton_2485_w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 3.0,
+          "distance_km": 1.1
+        },
+        "sat_10am": {
+          "duration_min": 2.9,
+          "distance_km": 1.1
+        },
+        "offpeak": {
+          "duration_min": 2.8,
+          "distance_km": 1.1
+        }
+      }
+    },
+    "reid_drive_streetsville": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.3,
+          "distance_km": 3.36
+        },
+        "sat_10am": {
+          "duration_min": 6.1,
+          "distance_km": 3.36
+        },
+        "offpeak": {
+          "duration_min": 5.9,
+          "distance_km": 3.36
+        }
+      }
+    },
+    "ellen_9_streetsville": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 6.8,
+          "distance_km": 3.57
+        },
+        "sat_10am": {
+          "duration_min": 6.8,
+          "distance_km": 3.57
+        },
+        "offpeak": {
+          "duration_min": 6.5,
+          "distance_km": 3.57
+        }
+      }
+    },
+    "tannery_32_streetsville": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 7.8,
+          "distance_km": 3.93
+        },
+        "sat_10am": {
+          "duration_min": 7.9,
+          "distance_km": 3.93
+        },
+        "offpeak": {
+          "duration_min": 7.5,
+          "distance_km": 5.2
+        }
+      }
+    },
+    "square_one_dr_430": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.3,
+          "distance_km": 8.0
+        },
+        "sat_10am": {
+          "duration_min": 12.1,
+          "distance_km": 8.0
+        },
+        "offpeak": {
+          "duration_min": 10.2,
+          "distance_km": 8.0
+        }
+      }
+    },
+    "square_one_dr_360": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.3,
+          "distance_km": 8.0
+        },
+        "sat_10am": {
+          "duration_min": 11.8,
+          "distance_km": 8.0
+        },
+        "offpeak": {
+          "duration_min": 10.2,
+          "distance_km": 8.0
+        }
+      }
+    },
+    "square_one_dr_395": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.4,
+          "distance_km": 9.01
+        },
+        "sat_10am": {
+          "duration_min": 11.9,
+          "distance_km": 8.56
+        },
+        "offpeak": {
+          "duration_min": 10.1,
+          "distance_km": 9.01
+        }
+      }
+    },
+    "webb_drive_msga": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.1,
+          "distance_km": 7.91
+        },
+        "sat_10am": {
+          "duration_min": 11.2,
+          "distance_km": 7.91
+        },
+        "offpeak": {
+          "duration_min": 8.8,
+          "distance_km": 7.91
+        }
+      }
+    },
+    "burnhamthorpe_confederation": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 10.7,
+          "distance_km": 8.0
+        },
+        "sat_10am": {
+          "duration_min": 11.4,
+          "distance_km": 8.0
+        },
+        "offpeak": {
+          "duration_min": 9.6,
+          "distance_km": 8.0
+        }
+      }
+    },
+    "arc_erin_mills_2520": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 3.8,
+          "distance_km": 1.31
+        },
+        "sat_10am": {
+          "duration_min": 3.8,
+          "distance_km": 1.32
+        },
+        "offpeak": {
+          "duration_min": 3.4,
+          "distance_km": 1.32
+        }
+      }
+    },
+    "southdown_1035": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.2,
+          "distance_km": 9.32
+        },
+        "sat_10am": {
+          "duration_min": 18.1,
+          "distance_km": 9.62
+        },
+        "offpeak": {
+          "duration_min": 13.0,
+          "distance_km": 9.32
+        }
+      }
+    },
+    "southdown_1055": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 17.2,
+          "distance_km": 9.86
+        },
+        "sat_10am": {
+          "duration_min": 18.4,
+          "distance_km": 9.86
+        },
+        "offpeak": {
+          "duration_min": 13.1,
+          "distance_km": 9.86
+        }
+      }
+    },
+    "craftsman_1575_lakeshore_w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.5,
+          "distance_km": 8.64
+        },
+        "sat_10am": {
+          "duration_min": 16.6,
+          "distance_km": 8.64
+        },
+        "offpeak": {
+          "duration_min": 11.7,
+          "distance_km": 8.64
+        }
+      }
+    },
+    "dundas_86e_arte": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.9,
+          "distance_km": 11.87
+        },
+        "sat_10am": {
+          "duration_min": 18.3,
+          "distance_km": 11.81
+        },
+        "offpeak": {
+          "duration_min": 13.3,
+          "distance_km": 11.81
+        }
+      }
+    },
+    "hillcrest_145": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.4,
+          "distance_km": 10.44
+        },
+        "sat_10am": {
+          "duration_min": 15.7,
+          "distance_km": 10.44
+        },
+        "offpeak": {
+          "duration_min": 11.3,
+          "distance_km": 10.44
+        }
+      }
+    },
+    "hillcrest_115": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.5,
+          "distance_km": 10.44
+        },
+        "sat_10am": {
+          "duration_min": 15.7,
+          "distance_km": 10.44
+        },
+        "offpeak": {
+          "duration_min": 11.3,
+          "distance_km": 10.44
+        }
+      }
+    },
+    "novar_3009_arte": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.6,
+          "distance_km": 8.3
+        },
+        "sat_10am": {
+          "duration_min": 11.9,
+          "distance_km": 8.3
+        },
+        "offpeak": {
+          "duration_min": 9.4,
+          "distance_km": 8.3
+        }
+      }
+    },
+    "nsr_65": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 20.6,
+          "distance_km": 14.15
+        },
+        "sat_10am": {
+          "duration_min": 21.1,
+          "distance_km": 14.15
+        },
+        "offpeak": {
+          "duration_min": 14.8,
+          "distance_km": 14.15
+        }
+      }
+    },
+    "paisley_45w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.7,
+          "distance_km": 11.1
+        },
+        "sat_10am": {
+          "duration_min": 17.4,
+          "distance_km": 11.1
+        },
+        "offpeak": {
+          "duration_min": 12.5,
+          "distance_km": 11.1
+        }
+      }
+    },
+    "kith_2475_eglinton": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 4.7,
+          "distance_km": 1.2
+        },
+        "sat_10am": {
+          "duration_min": 4.6,
+          "distance_km": 1.2
+        },
+        "offpeak": {
+          "duration_min": 4.4,
+          "distance_km": 1.2
+        }
+      }
+    }
+  }
+}
