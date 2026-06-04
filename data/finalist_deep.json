@@ -150,6 +150,318 @@
     "honest_call": "Shoreline is the dark-horse pick \u2014 purpose-built rental means you're dealing with professional landlord (not random condo investor), pet policy is genuinely the friendliest, and Mimico's walkable food scene (Birds & Beans, San Remo Bakery, Tipsy Toad) beats sterile HBS lakefront condo retail. Trade-off: 1970s building, smaller gym, no pool, dated common spaces. For a 27yo who wants community over amenities and a $700/mo savings to redirect to investments, this is the most underrated option.",
     "verified_date": "2026-06-04"
   },
+  "markwood_4365": {
+    "building_name": "The Markwood",
+    "address": "4365 Bloor Street West, Etobicoke, ON M9C 0E2",
+    "neighborhood": "Markland Wood (south Etobicoke)",
+    "manager": "Sterling Karamar Property Management",
+    "year_built": 2024,
+    "commute_to_cvh_min": 17,
+    "commute_notes": "17 min drive via Hwy 427 S \u2192 QEW W \u2192 Erin Mills Pkwy N; 14 min off-peak. No transit option (suburban to suburban).",
+    "live_status": {
+      "available_now": true,
+      "units_available": 8,
+      "verified_date": "2026-06-04",
+      "source": "Zumper listing accessed 2026-06-04 + themarkwoodliving.com"
+    },
+    "pricing": {
+      "1br_low": 2295,
+      "1br_high": 2355,
+      "1br_sqft": "483-501",
+      "1br_den_low": 2407,
+      "1br_den_high": 2820,
+      "1br_den_sqft": "518-761",
+      "2br_low": 2935,
+      "2br_high": 3237,
+      "2br_sqft": "721-793",
+      "3br_low": 3765,
+      "3br_high": 4100,
+      "3br_sqft": "895-981",
+      "currency": "CAD",
+      "parking_extra_per_month": "included in promo first 3 months, ~$150-180 after",
+      "locker_extra_per_month": "included in promo first 6 months",
+      "verified_date": "2026-06-04"
+    },
+    "promo": {
+      "active": true,
+      "description": "Up to 2 months FREE rent on 14-month lease + 3 months free parking + 6 months free locker",
+      "expires": "ongoing as of June 2026 (new building lease-up)",
+      "effective_net_rent_1br": "approx $1968/mo after 2mo free on 14mo (2295 * 12/14)",
+      "verified_date": "2026-06-04"
+    },
+    "pet": {
+      "allowed": true,
+      "cats": true,
+      "dogs": true,
+      "restrictions": "no breed/size restrictions noted in listing; deposit may apply"
+    },
+    "fresh_reviews": {
+      "expert_rating": "8.8/10 Zumper expert rating",
+      "reddit_2025_2026": "Sparse \u2014 building is too new (opened 2024) for organic Reddit chatter. Markland Wood neighborhood is quiet established family suburb; no nightlife discussion threads found.",
+      "concerns": "Lease-up building, limited resident feedback available. New construction = some teething issues likely (elevator wait times, amenity completion).",
+      "verified_date": "2026-06-04"
+    },
+    "real_photo_urls": [
+      "https://www.themarkwoodliving.com/suites (3D Matterport tours: 1BR, 1BR+Den, 2BR apartments, 2BR/3BR townhomes)",
+      "https://www.zumper.com/apartment-buildings/p1333582/the-markwood-toronto-on (37 photos via img.zumpercdn.com)",
+      "https://www.padmapper.com/buildings/p1333582/the-markwood-apartments-at-4365-bloor-st-w-etobicoke-on-m9c-0e2",
+      "https://rentals.ca/etobicoke/the-markwood"
+    ],
+    "day_in_life": {
+      "mon_7am": "Quiet. Bloor St W has light commuter traffic west toward Mississauga. Sun coming up over Centennial Park to the south. You drive ~17 min via 427 S \u2192 QEW W \u2192 Erin Mills Pkwy to CVH. No coffee shop in walking distance worth mentioning \u2014 Markland Wood Plaza across the street (4335 Bloor) has a Tim Hortons. Grab there or brew at home.",
+      "friday_night": "Dead. Markland Wood is family-detached-house territory south of Bloor. Nearest real bar/restaurant scene is 15+ min east toward Kipling Station or 20 min west into Port Credit / Mississauga. You'd drive somewhere or stay in. Honest: this is the trade-off.",
+      "saturday_run": "Etobicoke Creek trail. Trail entrance at Bloor/Markland or via Mill Rd just south. 6 km flat ravine loop south to Marie Curtis Park on Lake Ontario, or north to Eringate. Beautiful mature trees, low traffic, dog-friendly. This is the BEST feature of this address for a runner.",
+      "dating_density": "LOW. Markland Wood demographics skew 35-55+ family households (per Toronto Open Data census tract 5350350). For a 27-year-old single attending, the dating pool here is essentially zero in walking distance. You drive to King West / Liberty Village (25-35 min) or Port Credit (15 min) for any social scene."
+    },
+    "honest_call": "Brand-new building, aggressive promo (2 free months = effective ~$1968/mo for 1BR), 17-min clean drive to CVH, geothermal/LEED Silver = low utility bills, Etobicoke Creek trail at your door for runs. BUT: Markland Wood is a family-suburb dead zone for a single 27yo. Friday night you're driving somewhere or staying in. Dating density essentially zero in the walkshed. Pick this ONLY if you accept the Strategy-B trade: save 15 min/day commute, lose 100% of ambient social density. Better for years 2-3 of attending when you're cooked from shifts and want quiet. Worse for year 1 when you still want to meet people. Compared to Mississauga options closer to CVH, this is the LONGEST commute of the 5 (17 min vs 2-10 min), so you get fewer of the Strategy-B benefits.",
+    "verified_date": "2026-06-04"
+  },
+  "arc_erin_mills": {
+    "building_name": "The Arc at Erin Mills",
+    "address": "2520 Eglinton Avenue West, Mississauga, ON L5M 0Y4",
+    "neighborhood": "Central Erin Mills",
+    "manager": "Daniels Gateway (Daniels Corporation rental arm)",
+    "year_built": 2019,
+    "commute_to_cvh_min": 2,
+    "commute_notes": "LITERALLY ACROSS THE STREET from Credit Valley Hospital. 2 min walk door-to-door. This is the shortest commute possible.",
+    "live_status": {
+      "available_now": true,
+      "units_available": "4 listed via Apartments.com (units 316, 810, 1816, 1514); 5 active on condos.ca",
+      "verified_date": "2026-06-04",
+      "source": "Apartments.com + condos.ca + danielsgateway.com",
+      "leasing_phone": "905-502-7900"
+    },
+    "pricing": {
+      "note": "Daniels does not publish rents publicly. Based on Central Erin Mills average $2,616 (condos.ca neighborhood avg June 2026) and building's premium hospital-adjacent location:",
+      "studio_estimate": "$1950-2150",
+      "1br_estimate": "$2300-2600",
+      "1br_sqft": "~510-580",
+      "2br_estimate": "$2900-3400",
+      "2br_sqft": "946-968 (units 316, 810 confirmed sizes)",
+      "3br_estimate": "$3800-4800",
+      "3br_sqft": "1605-2462 (units 1816, 1514 confirmed sizes)",
+      "parking_extra_per_month": "~$150-200",
+      "locker_extra_per_month": "~$50-75",
+      "currency": "CAD",
+      "confidence": "MEDIUM \u2014 must call leasing office for live numbers",
+      "verified_date": "2026-06-04"
+    },
+    "promo": {
+      "active": "unknown \u2014 call to confirm",
+      "description": "Daniels Gateway occasionally runs 1 month free for new leases but not advertised publicly",
+      "verified_date": "2026-06-04"
+    },
+    "pet": {
+      "allowed": true,
+      "cats": true,
+      "dogs": true,
+      "restrictions": "Standard condo board pet rules apply (typically max 2 pets, weight limits may apply per individual unit owner)"
+    },
+    "fresh_reviews": {
+      "expert_rating": "Not aggregated",
+      "reddit_2025_2026": "r/mississauga occasional mentions \u2014 Arc is the go-to for healthcare workers at CVH because of literal proximity. Concierge praised. Complaints: thin walls (common Daniels build issue 2019-era), elevator wait at shift change times because of resident density of nurses/residents/staff.",
+      "condo_board_strata": "Mixed \u2014 building is well-maintained but condo fees increasing; some unit owners renting to families = noise from kids on weekends.",
+      "concerns": "Rental units mixed with owner-occupied = inconsistent neighbor quality. Some short-term rental issues. Wait for unit availability \u2014 turnover is moderate.",
+      "verified_date": "2026-06-04"
+    },
+    "real_photo_urls": [
+      "https://danielsgateway.com/wp-content/uploads/2020/02/0005_Layer-1.jpg",
+      "https://danielsgateway.com/wp-content/uploads/2020/02/0003_Layer-3.jpg",
+      "https://danielsgateway.com/wp-content/uploads/2020/02/0004_Layer-2.jpg",
+      "https://danielsgateway.com/wp-content/uploads/2020/02/0002_Layer-4.jpg",
+      "https://danielsgateway.com/wp-content/uploads/2020/02/0001_Layer-5.jpg",
+      "https://www.apartments.com/building/arc-erin-mills-mississauga-on/mrrh70k/",
+      "https://condos.ca/mississauga/arc-erin-mills-2520-eglinton-ave-w"
+    ],
+    "day_in_life": {
+      "mon_7am": "Walk out front door, cross Eglinton at the signal at Erin Mills Parkway, walk into CVH ER entrance. 2 minutes. You can sleep until 6:45am and still be on shift at 7. This is the unmatched advantage.",
+      "friday_night": "Erin Mills Town Centre is across the parkway \u2014 mall food court, Cineplex, chain restaurants (Jack Astor's, Moxies). NO actual nightlife / cocktail bar / live music. For real social you drive 20 min to Port Credit (Lakeshore strip) or 30 min to King West. The mall closes 9pm.",
+      "saturday_run": "Sawmill Valley Trail entrance is 8 min walk south at Burnhamthorpe & The Collegeway. Beautiful 12 km ravine system connecting to Hewick's Meadow and the Credit River. Excellent runner's network. Also Erin Mills Park trails 5 min north.",
+      "dating_density": "VERY LOW. Central Erin Mills demographics: 28.3% South Asian, 20.3% Chinese, 8.2% Arab, median age skews older than Mississauga average (per areavibes/StatsCan 2021). Heavily family-oriented community with multi-generational households. For a 27yo single attending: dating density in walkshed is essentially zero. You'd be on apps and driving to Toronto for dates. The CVH staff demographic does help \u2014 you WILL meet colleagues who live in the building."
+    },
+    "honest_call": "THIS is the strongest pure-Strategy-B play. 2 min walk to CVH crushes every other option on commute. You can do a 8am shift on 7 hours sleep without rushing. Building is 2019 Daniels \u2014 solid, well-managed, has concierge + gym + party room. BUT: trade-off is brutal \u2014 you're living in a family-oriented South-Asian/Chinese suburb where the loudest social scene is the Erin Mills Town Centre food court at 7pm. Dating density in walkshed = essentially zero. Friday nights you're driving to Port Credit (20 min) or staying in. Saving grace = many CVH colleagues live here, so you'll have a built-in social circle of other residents/nurses/staff who get the trade-off. Best for: single attending who values sleep + zero commute stress above all else, plans to date primarily on apps with weekend drives to Toronto, accepts year 1 will be socially quiet. Worst for: someone who needs ambient urban energy to recharge. Compared to Markwood: Arc wins on commute by 15 min/day, loses on Etobicoke Creek trails (Sawmill Valley is comparable though).",
+    "verified_date": "2026-06-04"
+  },
+  "collegeway_2285": {
+    "building_name": "2285 The Collegeway",
+    "address": "2285 The Collegeway, Mississauga, ON L5L 2M3",
+    "neighborhood": "Erin Mills (south Erin Mills, near UTM)",
+    "manager": "Hazelview Properties (formerly Timbercreek)",
+    "year_built": "1980s, freshly renovated suites (post-2020)",
+    "commute_to_cvh_min": 8,
+    "commute_notes": "8 min drive: north on The Collegeway \u2192 right on Burnhamthorpe \u2192 left on Erin Mills Pkwy \u2192 CVH. No major traffic bottlenecks. Bus 13 also serves the route (~25 min) for snow days.",
+    "live_status": {
+      "available_now": true,
+      "units_available": "2+ confirmed (Studio + 2BR via Zumper; 1BR/3BR pricing on hazelview)",
+      "verified_date": "2026-06-04",
+      "source": "Zumper + hazelviewproperties.com",
+      "leasing_phone": "289-401-9832 / 647-957-6925"
+    },
+    "pricing": {
+      "studio_low": 1789,
+      "studio_sqft": 472,
+      "1br_estimate": "approx $1950-2100 (call to confirm)",
+      "2br_low": 2190,
+      "2br_high": 2529,
+      "2br_sqft": "791-916",
+      "3br_low": 2949,
+      "3br_sqft": 1244,
+      "parking_extra_per_month": "~$80-120 (typical Hazelview)",
+      "utilities_included": "Hydro typically extra; check per suite. Heat/water usually included.",
+      "currency": "CAD",
+      "verified_date": "2026-06-04"
+    },
+    "promo": {
+      "active": "None advertised June 2026",
+      "description": "Hazelview occasionally runs '$500 move-in credit' or 1 month free on long leases \u2014 call to ask",
+      "verified_date": "2026-06-04"
+    },
+    "pet": {
+      "allowed": true,
+      "cats": true,
+      "dogs": true,
+      "restrictions": "Pet-friendly suites available (not all units); call to confirm specific unit. May require pet deposit."
+    },
+    "fresh_reviews": {
+      "expert_rating": "Zumper 9.3/10 (Excellent)",
+      "reddit_2025_2026": "Very limited dedicated discussion. r/mississauga general comments on Hazelview: mixed \u2014 solid building maintenance, slow response on minor work orders, professional management overall. Better than competitor Realstar in the area.",
+      "concerns": "1980s build = older elevators, potential plumbing quirks. Renovation quality varies by unit (ask to see actual unit, not model). Quiet building, mostly long-term tenants.",
+      "verified_date": "2026-06-04"
+    },
+    "real_photo_urls": [
+      "https://www.hazelviewproperties.com/properties/2285-the-collegeway",
+      "https://www.zumper.com/apartment-buildings/p410524/2285-the-collegeway-erin-mills-mississauga-on (12 photos via img.zumpercdn.com)",
+      "https://www.apartments.com/2285-the-collegeway-mississauga-on/cl4nkpe/",
+      "https://www.zillow.com/apartments/mississauga-on/2285-the-collegeway/CJGnhD/"
+    ],
+    "day_in_life": {
+      "mon_7am": "Quiet residential strip. The Collegeway is a tree-lined parkway with the Credit River ravine to the west. Drive 8 min north up to CVH \u2014 no traffic at 7am. There's a Tim Hortons at South Common Mall 4 min south for coffee.",
+      "friday_night": "Dead zone. The Collegeway is a parkway through ravine + UTM campus buffer. Nearest dining: South Common Mall (4 min south, chain food) or Erin Mills Town Centre (10 min north, mall food). For real Friday night: 25 min to Port Credit or 35 min to Toronto. UTM students hang at the UTM Blind Duck Pub (2 min drive) \u2014 cheap beer, 20-year-olds, not your scene.",
+      "saturday_run": "Sawmill Valley Trail entrance is 2 min walk west off The Collegeway. This is the BEST runner's address of the 5 finalists \u2014 direct access to 12 km of ravine trails along the Credit River. Connects to UTM trails, Hewick's Meadow, Mississaugua Golf Club ravine.",
+      "dating_density": "VERY LOW. Demographics are family-oriented and student-heavy (UTM 0.5 km away). The student demographic skews 18-22, not relevant. Permanent residents skew family. As a 27yo attending: dating pool in walkshed is essentially zero. UTM grad students closer to your age but a small demographic."
+    },
+    "honest_call": "Best Sawmill Valley trail access of all 5 (literally across the street). 8-min clean commute to CVH. Studio at $1,789 is the cheapest live option in the entire Strategy-B set. Solid Hazelview management, 9.3/10 expert rating. BUT: 1980s building means older bones \u2014 even renovated units have plumbing/elevator quirks. Dating density essentially zero (suburban + UTM student-dominated). Friday night you're either driving 25+ min or staying in. Best for: runner who wants ravine access daily + lowest rent + accepts social desert. Worse than Arc on commute (8 vs 2 min) but cheaper rent by ~$500/mo on equivalent unit. Worse than Markwood on building age but cheaper and closer to CVH. Strong utility play if you're treating year 1 as 'pay down debt, study for CCFP-EM oral, run a lot, date on apps' \u2014 bad if you need ambient energy.",
+    "verified_date": "2026-06-04"
+  },
+  "collegeway_2375": {
+    "building_name": "2375 The Collegeway",
+    "address": "2375 The Collegeway, Mississauga, ON L5L 2E8",
+    "neighborhood": "Erin Mills (south Erin Mills, near UTM)",
+    "manager": "Kipling Residential Management Inc",
+    "year_built": 1985,
+    "commute_to_cvh_min": 8,
+    "commute_notes": "Same commute as 2285 The Collegeway \u2014 8 min north on The Collegeway \u2192 Burnhamthorpe \u2192 Erin Mills Pkwy \u2192 CVH. Buildings are ~400m apart.",
+    "live_status": {
+      "available_now": true,
+      "units_available": "1 confirmed (2BR via Zumper); 2BR/3BR range on building site",
+      "verified_date": "2026-06-04",
+      "source": "Zumper + 2375thecollegeway.com",
+      "leasing_phone": "647-696-5125 / 647-370-6546"
+    },
+    "pricing": {
+      "2br_low": 2199,
+      "2br_high": 2498,
+      "2br_sqft": 880,
+      "3br_low": 2449,
+      "3br_high": "TBD (call for current)",
+      "parking_extra_per_month": "assigned parking additional fee, ~$75-100",
+      "utilities_included": "Gas, electricity, heat, water/sewer, trash all included per Apartments.com listing (Kipling all-in model)",
+      "currency": "CAD",
+      "verified_date": "2026-06-04"
+    },
+    "promo": {
+      "active": true,
+      "description": "$500 gift card on approved 13-month lease application (select units)",
+      "verified_date": "2026-06-04"
+    },
+    "pet": {
+      "allowed": true,
+      "cats": true,
+      "dogs": true,
+      "restrictions": "Pet-friendly \u2014 confirm size/breed restrictions with Kipling. Standard pet deposit typical."
+    },
+    "fresh_reviews": {
+      "expert_rating": "Zumper 9.2/10 (Excellent); 10/10 on Price specifically (best value flag)",
+      "reddit_2025_2026": "Sparse direct discussion. Kipling Residential general reputation: smaller portfolio than Hazelview/Realstar, more personal management, slower to modernize amenities but lower rent. Smoke-free building.",
+      "concerns": "1985 build (older than 2285), only 96 units across 10 storeys (low-rise feel), no fitness center listed (vs 2285 which has gym). All-utilities-included is a real win for predictable monthly cost.",
+      "verified_date": "2026-06-04"
+    },
+    "real_photo_urls": [
+      "https://www.2375thecollegeway.com/",
+      "https://www.zumper.com/apartment-buildings/p946928/2375-the-collegeway-erin-mills-mississauga-on (50 photos via img.zumpercdn.com)",
+      "https://www.apartments.com/2375-the-collegeway-mississauga-on/xkwtv5q/",
+      "https://condos.ca/mississauga/2375-the-collegeway-apartments-2375-the-collegeway"
+    ],
+    "day_in_life": {
+      "mon_7am": "Identical to 2285 \u2014 quiet parkway, Tim Hortons at South Common Mall 4 min south, 8-min drive to CVH with no traffic at 7am.",
+      "friday_night": "Same dead-zone problem as 2285. UTM Blind Duck Pub close but undergrad scene. Real social = 25 min to Port Credit or 35 min to Toronto.",
+      "saturday_run": "Sawmill Valley Trail entrance walking distance west \u2014 same as 2285. Direct access to Credit River ravine system.",
+      "dating_density": "VERY LOW. Same demographic profile as 2285 \u2014 family-oriented + UTM students. Smaller building (96 units) = even less in-building social density than 2285."
+    },
+    "honest_call": "Cheaper than 2285 on 2BR (~$200-300/mo less), all utilities included (real $150-200/mo value over hydro-extra buildings), $500 move-in promo active. Best 'total cost of occupancy' play of the 5 finalists for a 2BR. BUT: 1985 build = oldest of the 5 (no gym, no concierge, basic amenities only). 96-unit low-rise = quietest but lowest density of other residents to meet. Smoke-free is a plus. Same dating/social desert as 2285 (literally next door). Best for: tightest budget play, 2BR for home office + bedroom setup, all-inclusive utilities for predictability, low-amenity tolerance, you don't need a gym in the building (CVH staff gym likely free + run Sawmill Valley). Compared to 2285: cheaper, all-inclusive utilities, but no gym, no rooftop lounge, smaller building. Compared to Arc: $700-1000/mo cheaper but 6 min more commute and zero amenities. This is the budget-maximalist Strategy-B pick.",
+    "verified_date": "2026-06-04"
+  },
+  "reid_drive": {
+    "building_name": "Reid Drive Apartments (10 & 14 Reid Drive)",
+    "address": "10 & 14 Reid Drive, Mississauga, ON L5M 2A7",
+    "neighborhood": "Streetsville Village (NOT Central Erin Mills as briefed \u2014 Streetsville is a distinct historic village ~3km north of Erin Mills proper)",
+    "manager": "InterRent REIT (also listed historically under CLV Group)",
+    "year_built": "Older mid-rise (1970s, fully renovated post-2020)",
+    "commute_to_cvh_min": 10,
+    "commute_notes": "10 min drive south on Mississauga Rd \u2192 Burnhamthorpe \u2192 Erin Mills Pkwy \u2192 CVH. Slightly longer than the other Erin Mills picks but Streetsville is the most 'village-like' walkable option of the 5. MiWay bus 21 also runs the route. 5-min walk to Streetsville GO station (Kitchener line) = direct downtown Toronto access for dates/weekends.",
+    "live_status": {
+      "available_now": true,
+      "units_available": "Multiple 1BR and 2BR; confirmed 2BR 890sqft available now",
+      "verified_date": "2026-06-04",
+      "source": "InterRent + Zumper + Apartments.com + Birdeye",
+      "leasing_phone": "647-483-2661"
+    },
+    "pricing": {
+      "starting_low": 2399,
+      "2br_confirmed": 2499,
+      "2br_sqft": 890,
+      "1br_estimate": "approx $1950-2200 (call to confirm)",
+      "studio_estimate": "approx $1800-1950",
+      "parking_per_month": 75,
+      "parking_note": "iRent says $75/mo; some sources claim free parking \u2014 verify on tour",
+      "utilities_included": "Heat and water included; hydro extra",
+      "currency": "CAD",
+      "verified_date": "2026-06-04"
+    },
+    "promo": {
+      "active": "None advertised June 2026",
+      "description": "InterRent occasionally runs 1 month free or move-in credits; ask leasing",
+      "verified_date": "2026-06-04"
+    },
+    "pet": {
+      "allowed": true,
+      "cats": true,
+      "dogs": true,
+      "restrictions": "InterRent/iRent listing says pet friendly. (Zumper third-party listing shows 'no pets' \u2014 this contradicts. Call leasing directly to confirm for your specific unit. Pet deposit likely.)",
+      "data_conflict": "Zumper shows no pets, iRent shows pet friendly. iRent is the building's actual leasing site \u2014 trust that one, but verify."
+    },
+    "fresh_reviews": {
+      "expert_rating": "Birdeye 4.8/5 stars across 65 reviews \u2014 highest review score of all 5 finalists",
+      "reddit_2025_2026": "r/mississauga: Streetsville generally praised as 'the cute walkable village within Mississauga.' Reid Drive specifically not heavily discussed. Superintendent Judy frequently praised by name in reviews \u2014 strong local management presence.",
+      "concerns": "Smaller older building, possibly older HVAC/elevator. Lower walk score (4/10 per Zumper) but Streetsville core is 8 min walk = decent for the area. Trust the Birdeye 4.8 stars over the Zumper score.",
+      "verified_date": "2026-06-04"
+    },
+    "real_photo_urls": [
+      "https://www.irent.com/communities/reid-drive-apartments",
+      "https://www.zumper.com/apartment-buildings/p224787/10-14-reid-drive-streetsville-mississauga-on (12 photos)",
+      "https://www.apartments.com/reid-drive-mississauga-on/50qtycp/",
+      "https://rentals.ca/mississauga/reid-drive",
+      "https://reviews.birdeye.com/10-14-reid-clv-group-173504431584104"
+    ],
+    "day_in_life": {
+      "mon_7am": "Walk through quiet residential Streetsville streets. Drive 10 min to CVH south on Mississauga Rd \u2192 Burnhamthorpe \u2192 Erin Mills Pkwy. Or grab coffee on Queen St S (Streetsville main strip) at Tre Sorelle Bakery or Symposium Cafe \u2014 both within 5 min walk. This is the ONLY one of the 5 finalists where you can WALK to a real coffee shop strip.",
+      "friday_night": "Best of the 5 by a margin. Streetsville Queen St S has actual bars/restaurants in walking distance: Franks Pizza House (institution), The Franklin House (pub with patio), Belgian Beer Cafe, Ten Restaurant (Italian), Una Pizza. Not King West but actually walkable to a beer Friday night. Bonus: Bread Bar (one of the GTA's better casual brunch spots).",
+      "saturday_run": "Credit River Heritage Trail along the river edge \u2014 8 min walk west to access. Run south along the river through Streetsville Memorial Park toward Erindale Park (3 km one way), or north into Meadowvale. Beautiful river trail, less ravine than Sawmill Valley but more variety with bridges/parks.",
+      "dating_density": "MEDIUM-LOW (highest of the 5 finalists). Streetsville Village attracts more mixed demographics than Central Erin Mills \u2014 younger professionals choose Streetsville specifically for the village walkability + GO train to Toronto. Still not Liberty Village density, but you'll actually see 25-35yo singles on Queen St S on a Saturday night. The Franklin House pub patio is the unofficial Streetsville singles spot. Plus: GO train to Union Station in 35 min = realistic to date Toronto people without a 1hr drive each way."
+    },
+    "honest_call": "STRONGEST OVERALL Strategy-B PICK for a 27yo single attending who wants to preserve some social life. Streetsville is the rare Mississauga suburb with actual walkable village character \u2014 Queen St S has 6+ legitimate restaurants/bars within 5 min walk. The GO train is the killer feature: Streetsville GO \u2192 Union Station 35 min direct = you can realistically date someone living in Toronto without 1hr drives. Highest review score of the 5 (Birdeye 4.8/5). Heat+water included. 10-min commute to CVH (only 8 min longer than Arc's 2-min walk, but you get a real life). BUT: building itself is older (1970s, renovated), no fancy concierge or rooftop, smaller unit options. Verify pet policy \u2014 sources conflict. Best for: someone who knows year 1 of attending will be brutal and wants the ONE Strategy-B option that still lets them walk to a Friday pint and take a train to Toronto. Worse than Arc on pure commute (10 vs 2 min) but the ONLY finalist where the walkshed is meaningfully social. This wins on quality-of-life-per-dollar.",
+    "verified_date": "2026-06-04"
+  },
   "lakewood_ii_1285": {
     "building_name": "Lakewood Apartments II",
     "address": "1285 Lakeshore Road East, Mississauga, ON L5E 1G4",
@@ -399,137 +711,5 @@
     ],
     "fit_for_fadi": "Mid-pack Strategy-C: bundled utilities + short CVH commute + cat/dog friendly are real advantages, but Hazelview ownership + redevelopment-sale overhang are real downsides. The 'right next to Markwood' positioning means similar tradeoffs to Markwood with slightly more bundled inclusion.",
     "score_estimate": "6.5/10 \u2014 utilities bundle and commute push it up; Hazelview + redevelopment risk pull it down."
-  },
-  "markwood_4365": {
-    "building_name": "The Markwood",
-    "address": "4365 Bloor Street West, Etobicoke, ON M9C 0E2",
-    "neighborhood": "Markland Wood (south Etobicoke)",
-    "manager": "Sterling Karamar Property Management",
-    "year_built": 2024,
-    "commute_to_cvh_min": 17,
-    "commute_notes": "17 min drive via Hwy 427 S \u2192 QEW W \u2192 Erin Mills Pkwy N; 14 min off-peak. No transit option (suburban to suburban).",
-    "live_status": {
-      "available_now": true,
-      "units_available": 8,
-      "verified_date": "2026-06-04",
-      "source": "Zumper listing accessed 2026-06-04 + themarkwoodliving.com"
-    },
-    "pricing": {
-      "1br_low": 2295,
-      "1br_high": 2355,
-      "1br_sqft": "483-501",
-      "1br_den_low": 2407,
-      "1br_den_high": 2820,
-      "1br_den_sqft": "518-761",
-      "2br_low": 2935,
-      "2br_high": 3237,
-      "2br_sqft": "721-793",
-      "3br_low": 3765,
-      "3br_high": 4100,
-      "3br_sqft": "895-981",
-      "currency": "CAD",
-      "parking_extra_per_month": "included in promo first 3 months, ~$150-180 after",
-      "locker_extra_per_month": "included in promo first 6 months",
-      "verified_date": "2026-06-04"
-    },
-    "promo": {
-      "active": true,
-      "description": "Up to 2 months FREE rent on 14-month lease + 3 months free parking + 6 months free locker",
-      "expires": "ongoing as of June 2026 (new building lease-up)",
-      "effective_net_rent_1br": "approx $1968/mo after 2mo free on 14mo (2295 * 12/14)",
-      "verified_date": "2026-06-04"
-    },
-    "pet": {
-      "allowed": true,
-      "cats": true,
-      "dogs": true,
-      "restrictions": "no breed/size restrictions noted in listing; deposit may apply"
-    },
-    "fresh_reviews": {
-      "expert_rating": "8.8/10 Zumper expert rating",
-      "reddit_2025_2026": "Sparse \u2014 building is too new (opened 2024) for organic Reddit chatter. Markland Wood neighborhood is quiet established family suburb; no nightlife discussion threads found.",
-      "concerns": "Lease-up building, limited resident feedback available. New construction = some teething issues likely (elevator wait times, amenity completion).",
-      "verified_date": "2026-06-04"
-    },
-    "real_photo_urls": [
-      "https://www.themarkwoodliving.com/suites (3D Matterport tours: 1BR, 1BR+Den, 2BR apartments, 2BR/3BR townhomes)",
-      "https://www.zumper.com/apartment-buildings/p1333582/the-markwood-toronto-on (37 photos via img.zumpercdn.com)",
-      "https://www.padmapper.com/buildings/p1333582/the-markwood-apartments-at-4365-bloor-st-w-etobicoke-on-m9c-0e2",
-      "https://rentals.ca/etobicoke/the-markwood"
-    ],
-    "day_in_life": {
-      "mon_7am": "Quiet. Bloor St W has light commuter traffic west toward Mississauga. Sun coming up over Centennial Park to the south. You drive ~17 min via 427 S \u2192 QEW W \u2192 Erin Mills Pkwy to CVH. No coffee shop in walking distance worth mentioning \u2014 Markland Wood Plaza across the street (4335 Bloor) has a Tim Hortons. Grab there or brew at home.",
-      "friday_night": "Dead. Markland Wood is family-detached-house territory south of Bloor. Nearest real bar/restaurant scene is 15+ min east toward Kipling Station or 20 min west into Port Credit / Mississauga. You'd drive somewhere or stay in. Honest: this is the trade-off.",
-      "saturday_run": "Etobicoke Creek trail. Trail entrance at Bloor/Markland or via Mill Rd just south. 6 km flat ravine loop south to Marie Curtis Park on Lake Ontario, or north to Eringate. Beautiful mature trees, low traffic, dog-friendly. This is the BEST feature of this address for a runner.",
-      "dating_density": "LOW. Markland Wood demographics skew 35-55+ family households (per Toronto Open Data census tract 5350350). For a 27-year-old single attending, the dating pool here is essentially zero in walking distance. You drive to King West / Liberty Village (25-35 min) or Port Credit (15 min) for any social scene."
-    },
-    "honest_call": "Brand-new building, aggressive promo (2 free months = effective ~$1968/mo for 1BR), 17-min clean drive to CVH, geothermal/LEED Silver = low utility bills, Etobicoke Creek trail at your door for runs. BUT: Markland Wood is a family-suburb dead zone for a single 27yo. Friday night you're driving somewhere or staying in. Dating density essentially zero in the walkshed. Pick this ONLY if you accept the Strategy-B trade: save 15 min/day commute, lose 100% of ambient social density. Better for years 2-3 of attending when you're cooked from shifts and want quiet. Worse for year 1 when you still want to meet people. Compared to Mississauga options closer to CVH, this is the LONGEST commute of the 5 (17 min vs 2-10 min), so you get fewer of the Strategy-B benefits.",
-    "verified_date": "2026-06-04"
-  },
-  "arc_erin_mills": {
-    "building_name": "The Arc at Erin Mills",
-    "address": "2520 Eglinton Avenue West, Mississauga, ON L5M 0Y4",
-    "neighborhood": "Central Erin Mills",
-    "manager": "Daniels Gateway (Daniels Corporation rental arm)",
-    "year_built": 2019,
-    "commute_to_cvh_min": 2,
-    "commute_notes": "LITERALLY ACROSS THE STREET from Credit Valley Hospital. 2 min walk door-to-door. This is the shortest commute possible.",
-    "live_status": {
-      "available_now": true,
-      "units_available": "4 listed via Apartments.com (units 316, 810, 1816, 1514); 5 active on condos.ca",
-      "verified_date": "2026-06-04",
-      "source": "Apartments.com + condos.ca + danielsgateway.com",
-      "leasing_phone": "905-502-7900"
-    },
-    "pricing": {
-      "note": "Daniels does not publish rents publicly. Based on Central Erin Mills average $2,616 (condos.ca neighborhood avg June 2026) and building's premium hospital-adjacent location:",
-      "studio_estimate": "$1950-2150",
-      "1br_estimate": "$2300-2600",
-      "1br_sqft": "~510-580",
-      "2br_estimate": "$2900-3400",
-      "2br_sqft": "946-968 (units 316, 810 confirmed sizes)",
-      "3br_estimate": "$3800-4800",
-      "3br_sqft": "1605-2462 (units 1816, 1514 confirmed sizes)",
-      "parking_extra_per_month": "~$150-200",
-      "locker_extra_per_month": "~$50-75",
-      "currency": "CAD",
-      "confidence": "MEDIUM \u2014 must call leasing office for live numbers",
-      "verified_date": "2026-06-04"
-    },
-    "promo": {
-      "active": "unknown \u2014 call to confirm",
-      "description": "Daniels Gateway occasionally runs 1 month free for new leases but not advertised publicly",
-      "verified_date": "2026-06-04"
-    },
-    "pet": {
-      "allowed": true,
-      "cats": true,
-      "dogs": true,
-      "restrictions": "Standard condo board pet rules apply (typically max 2 pets, weight limits may apply per individual unit owner)"
-    },
-    "fresh_reviews": {
-      "expert_rating": "Not aggregated",
-      "reddit_2025_2026": "r/mississauga occasional mentions \u2014 Arc is the go-to for healthcare workers at CVH because of literal proximity. Concierge praised. Complaints: thin walls (common Daniels build issue 2019-era), elevator wait at shift change times because of resident density of nurses/residents/staff.",
-      "condo_board_strata": "Mixed \u2014 building is well-maintained but condo fees increasing; some unit owners renting to families = noise from kids on weekends.",
-      "concerns": "Rental units mixed with owner-occupied = inconsistent neighbor quality. Some short-term rental issues. Wait for unit availability \u2014 turnover is moderate.",
-      "verified_date": "2026-06-04"
-    },
-    "real_photo_urls": [
-      "https://danielsgateway.com/wp-content/uploads/2020/02/0005_Layer-1.jpg",
-      "https://danielsgateway.com/wp-content/uploads/2020/02/0003_Layer-3.jpg",
-      "https://danielsgateway.com/wp-content/uploads/2020/02/0004_Layer-2.jpg",
-      "https://danielsgateway.com/wp-content/uploads/2020/02/0002_Layer-4.jpg",
-      "https://danielsgateway.com/wp-content/uploads/2020/02/0001_Layer-5.jpg",
-      "https://www.apartments.com/building/arc-erin-mills-mississauga-on/mrrh70k/",
-      "https://condos.ca/mississauga/arc-erin-mills-2520-eglinton-ave-w"
-    ],
-    "day_in_life": {
-      "mon_7am": "Walk out front door, cross Eglinton at the signal at Erin Mills Parkway, walk into CVH ER entrance. 2 minutes. You can sleep until 6:45am and still be on shift at 7. This is the unmatched advantage.",
-      "friday_night": "Erin Mills Town Centre is across the parkway \u2014 mall food court, Cineplex, chain restaurants (Jack Astor's, Moxies). NO actual nightlife / cocktail bar / live music. For real social you drive 20 min to Port Credit (Lakeshore strip) or 30 min to King West. The mall closes 9pm.",
-      "saturday_run": "Sawmill Valley Trail entrance is 8 min walk south at Burnhamthorpe & The Collegeway. Beautiful 12 km ravine system connecting to Hewick's Meadow and the Credit River. Excellent runner's network. Also Erin Mills Park trails 5 min north.",
-      "dating_density": "VERY LOW. Central Erin Mills demographics: 28.3% South Asian, 20.3% Chinese, 8.2% Arab, median age skews older than Mississauga average (per areavibes/StatsCan 2021). Heavily family-oriented community with multi-generational households. For a 27yo single attending: dating density in walkshed is essentially zero. You'd be on apps and driving to Toronto for dates. The CVH staff demographic does help \u2014 you WILL meet colleagues who live in the building."
-    },
-    "honest_call": "THIS is the strongest pure-Strategy-B play. 2 min walk to CVH crushes every other option on commute. You can do a 8am shift on 7 hours sleep without rushing. Building is 2019 Daniels \u2014 solid, well-managed, has concierge + gym + party room. BUT: trade-off is brutal \u2014 you're living in a family-oriented South-Asian/Chinese suburb where the loudest social scene is the Erin Mills Town Centre food court at 7pm. Dating density in walkshed = essentially zero. Friday nights you're driving to Port Credit (20 min) or staying in. Saving grace = many CVH colleagues live here, so you'll have a built-in social circle of other residents/nurses/staff who get the trade-off. Best for: single attending who values sleep + zero commute stress above all else, plans to date primarily on apps with weekend drives to Toronto, accepts year 1 will be socially quiet. Worst for: someone who needs ambient urban energy to recharge. Compared to Markwood: Arc wins on commute by 15 min/day, loses on Etobicoke Creek trails (Sawmill Valley is comparable though).",
-    "verified_date": "2026-06-04"
   }
 }
