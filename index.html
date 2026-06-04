@@ -274,7 +274,9 @@
     <a href="#" id="show-shortlist" class="nav-btn">Top picks</a>
     <a href="#" id="show-favorites" class="nav-btn">Saved <span id="fav-count" class="badge-count">0</span></a>
     <a href="#" id="show-compare" class="nav-btn">Compare <span id="cmp-count" class="badge-count" style="display:none">0</span></a>
+    <a href="#" id="show-playbook" class="nav-btn" style="background:var(--accent-soft);color:var(--accent-text);border-color:var(--accent)">Start here</a>
     <a href="#" id="show-timeline" class="nav-btn">Timeline</a>
+    <a href="#" id="show-runclubs" class="nav-btn">Run clubs</a>
     <a href="#" id="show-help" class="nav-btn" title="How to use" style="padding:5px 9px;font-weight:500">?</a>
   </span>
 </header>
@@ -306,6 +308,18 @@
   <div class="modal-inner" style="max-width:1000px;">
     <div class="modal-head"><h2 style="margin:0">📅 Timeline · May 11 → July 1</h2><button class="modal-close" data-close="timeline-modal">✕ Close</button></div>
     <div id="timeline-content">Loading…</div>
+  </div>
+</div>
+<div id="playbook-modal" class="modal">
+  <div class="modal-inner" style="max-width:900px;">
+    <div class="modal-head"><h2 style="margin:0">The Playbook · what to actually do</h2><button class="modal-close" data-close="playbook-modal">×</button></div>
+    <div id="playbook-content" style="font-size:14px;line-height:1.65"></div>
+  </div>
+</div>
+<div id="runclubs-modal" class="modal">
+  <div class="modal-inner" style="max-width:900px;">
+    <div class="modal-head"><h2 style="margin:0">Run clubs · the social entry mechanism</h2><button class="modal-close" data-close="runclubs-modal">×</button></div>
+    <div id="runclubs-content" style="font-size:13px;line-height:1.6"></div>
   </div>
 </div>
 <div id="help-modal" class="modal">
@@ -1304,6 +1318,106 @@ setTimeout(scheduleRerender, 4000);
 
   // ===== HELP MODAL =====
   document.getElementById('show-help').onclick = e => { e.preventDefault(); document.getElementById('help-modal').classList.add('show'); };
+
+  // ===== PLAYBOOK MODAL — the "what should I do" answer =====
+  document.getElementById('show-playbook').onclick = e => {
+    e.preventDefault();
+    const top = (typeof computeTopPicks === 'function') ? computeTopPicks() : [];
+    const singlesTier = top.find(t => /SINGLES/i.test(t.tier));
+    const cvhTier = top.find(t => /CVH OPERATIONAL/i.test(t.tier));
+    const valueTier = top.find(t => /VALUE/i.test(t.tier));
+    const card = id => {
+      const a = APARTMENTS.find(x => x.id === id);
+      if (!a) return '';
+      const fit = computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score;
+      const photo = (photoMap[id]||[])[0] || '';
+      return `<div onclick="document.getElementById('playbook-modal').classList.remove('show');selectApt('${id}')" style="display:grid;grid-template-columns:80px 1fr auto;gap:12px;padding:10px;border:1px solid var(--border);border-radius:8px;margin-bottom:6px;cursor:pointer;align-items:center;">
+        ${photo?`<img src="${photo}" style="width:80px;height:60px;object-fit:cover;border-radius:4px">`:'<div style="width:80px;height:60px;background:var(--panel-2);border-radius:4px"></div>'}
+        <div><div style="font-weight:600">${a.name}</div><div style="color:var(--muted);font-size:11px">${a.address}</div><div style="font-size:11px;color:var(--accent-text);margin-top:2px">${a.zone} · Fit ${fit}/100</div></div>
+        <div style="text-align:right;font-weight:700;font-size:15px;color:var(--text);font-variant-numeric:tabular-nums">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}</div>
+      </div>`;
+    };
+    const playbook = `
+      <div style="background:var(--accent-soft);border-left:4px solid var(--accent);padding:14px 16px;border-radius:6px;margin-bottom:18px">
+        <div style="font-weight:700;font-size:15px;margin-bottom:6px">Persona we're optimizing for</div>
+        <ul style="margin:0;padding-left:18px;font-size:12.5px">
+          <li>27yo, single (recent breakup), <b>youngest attending at CVH</b> — peer-attendings won't be the dating pool</li>
+          <li>100km/wk runner — daily training is identity-level, not a hobby</li>
+          <li>Downtown-curious post-NYC trip — Sauga-only living will compound the soured taste</li>
+          <li>Type: white / Asian / Jewish; relocation-flexible partners preferred</li>
+          <li>Hospital social is real (nurses ~30-40% single 26-35; rotating residents; allied health) — not a desert</li>
+        </ul>
+      </div>
+
+      <h3 style="font-size:13px;color:var(--muted);margin:0 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">The two strategies (pick one consciously)</h3>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px">
+        <div style="padding:12px;border:1px solid var(--border);border-radius:8px">
+          <div style="font-weight:700;color:var(--accent-text)">A · Live in the singles cluster</div>
+          <div style="color:var(--muted);font-size:11px;margin-bottom:6px">Humber Bay Shores / Mimico</div>
+          <div style="font-size:12px;line-height:1.55">Environmental nudge. Bars, gym, run club at your door. 25-40 min AM peak to CVH. Best if you're rebuilding post-breakup and need showing-up-by-default. Rent $2,100-2,500.</div>
+        </div>
+        <div style="padding:12px;border:1px solid var(--border);border-radius:8px">
+          <div style="font-weight:700;color:var(--accent-text)">B · Live near work, drive to social</div>
+          <div style="color:var(--muted);font-size:11px;margin-bottom:6px">Markwood (4365 Bloor) / Erin Mills GOOD picks</div>
+          <div style="font-size:12px;line-height:1.55">Tier 1 commute, brand new building, aggressive promo. App radius still hits downtown. Requires intentionality: must go OUT 3-4 nights/wk. Rent $2,150-2,250.</div>
+        </div>
+      </div>
+
+      <h3 style="font-size:13px;color:var(--muted);margin:0 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">Top 3 buildings for Strategy A (singles cluster)</h3>
+      ${(singlesTier?.picks||[]).slice(0,3).map(card).join('')}
+
+      <h3 style="font-size:13px;color:var(--muted);margin:18px 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">Top 3 buildings for Strategy B (work-first)</h3>
+      ${(cvhTier?.picks||[]).slice(0,3).map(card).join('')}
+
+      <h3 style="font-size:13px;color:var(--muted);margin:18px 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">Best value picks (cooling market, June 2026)</h3>
+      ${(valueTier?.picks||[]).slice(0,3).map(card).join('')}
+
+      <div style="background:var(--panel-2);border-radius:8px;padding:12px;margin-top:18px;font-size:12.5px;line-height:1.6">
+        <div style="font-weight:700;font-size:13px;margin-bottom:6px">This week (June 4-11):</div>
+        <ol style="margin:0;padding-left:18px">
+          <li>Call <b>Lakewood II</b> (1285 Lakeshore Rd E, $1,845 newly listed) and <b>2335 Lake Shore</b> ($1,975, 1 mo free).</li>
+          <li>Call <b>The Markwood</b> (4365 Bloor) — confirm the 2mo+3mo+6mo promo stack is still live.</li>
+          <li>If you lean Strategy A: tour <b>Mimico Estates competitor</b>, <b>Promenade 2301</b>, <b>Lake Shore 155</b>. NOTE: skip Mimico Estates itself (roach audit) and 155 Lake Cres (roach audit).</li>
+          <li>If you lean Strategy B: tour <b>The Markwood</b>, <b>Reid Drive</b>, <b>Elora</b>.</li>
+          <li>Join 1 run club this week. Closest social-coded: <b>Humber Bay Run Club</b> (Tue/Wed/Thu 7pm + Sat 8:45am at Humber Bay Shores Park).</li>
+        </ol>
+      </div>
+
+      <div style="background:var(--good-soft);border:1px solid var(--good);border-radius:8px;padding:12px;margin-top:14px;font-size:12px;line-height:1.6">
+        <b>Market context (June 4):</b> Cooksville 1-bed −10% YoY, Mimico −4.5%, Lakeview −8.5%, Erin Mills −25% (verify). Stonegate +2.3% MoM. <b>It's a renter's market.</b> Negotiate above advertised promos.
+      </div>
+    `;
+    document.getElementById('playbook-content').innerHTML = playbook;
+    document.getElementById('playbook-modal').classList.add('show');
+  };
+
+  // ===== RUN CLUBS MODAL =====
+  document.getElementById('show-runclubs').onclick = e => {
+    e.preventDefault();
+    const data = window.RUN_CLUBS;
+    if (!data) { document.getElementById('runclubs-content').innerHTML = '<p style="color:var(--muted)">Run clubs data still loading…</p>'; document.getElementById('runclubs-modal').classList.add('show'); return; }
+    const clubs = (data.clubs||[]).slice().sort((a,b)=>(b.relevance_score||0)-(a.relevance_score||0));
+    const top = clubs.slice(0,8);
+    const rest = clubs.slice(8);
+    const fmt = c => `<div style="padding:10px 12px;border:1px solid var(--border);border-radius:6px;margin-bottom:6px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><b>${c.name}</b><span style="color:var(--accent-text);font-size:11px">relevance ${c.relevance_score||'?'}/10</span></div>
+      <div style="color:var(--muted);font-size:11px;margin:2px 0">${c.area} · ${c.meet_days||'?'} · ${c.size_estimate||''} ppl · ${c.demographics_age_skew||''}</div>
+      ${c.social_signal?`<div style="font-size:12px;font-style:italic;color:var(--text)">${c.social_signal}</div>`:''}
+      <div style="font-size:11px;color:var(--dim);margin-top:2px">${c.how_to_join||''}</div>
+    </div>`;
+    document.getElementById('runclubs-content').innerHTML = `
+      <div style="background:var(--accent-soft);border-left:3px solid var(--accent);padding:10px 12px;border-radius:6px;margin-bottom:14px;font-size:12.5px">
+        The hospital won't deliver peer-attendings (you're the youngest). Run clubs are the highest-leverage social entry — same energy, same effort tolerance, recurring weekly cadence, post-run pub culture in Toronto.
+      </div>
+      <h3 style="font-size:13px;color:var(--muted);margin:0 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px">Top 8 for you</h3>
+      ${top.map(fmt).join('')}
+      <details style="margin-top:14px"><summary style="cursor:pointer;color:var(--muted);font-size:12px">All ${clubs.length} clubs catalogued</summary>
+      <div style="margin-top:10px">${rest.map(fmt).join('')}</div>
+      </details>
+    `;
+    document.getElementById('runclubs-modal').classList.add('show');
+  };
 
   // ===== EMAIL FAVORITES =====
   window.emailFavorites = function() {
