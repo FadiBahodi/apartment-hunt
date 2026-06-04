@@ -1,0 +1,3130 @@
+{
+  "_summary": {
+    "total_buildings": 312,
+    "tier1_real": 23,
+    "tier2_synthetic": 120,
+    "tier3_none": 169
+  },
+  "_buildings": {
+    "1011_lorne_park": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "ann_5": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "annie_craig_38": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "applewood_on_park": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "applewood_towers_1055": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "arc_erin_mills": {
+      "n_real_interior": 3,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/arc_erin_mills_1.jpg"
+    },
+    "argyle_2570": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "argyle_2590": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "arista_3665": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "aw_bloor_1525": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "aw_burnhamthorpe_1170e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "aw_dixie_1140n": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "aw_dixie_1340n": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "battleford_2797": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "battleford_glen_erin": {
+      "n_real_interior": 6,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 1,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/battleford_glen_erin_2.jpg"
+    },
+    "birmingham_45": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "bloor_1475": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "bloor_3939": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "bloor_4001": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "bram_balmoral_15": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_bovaird_50w": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_central_40": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_centre_45": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_charolais_1": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_chinguacousy_60": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_clark_24": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_dixie_700": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_kennedy_345": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_kennedy_50": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_lisa_60": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_lisa_75": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_main_295": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_mclaughlin_215": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_mountainash_115": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_queen_24": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_sandalwood_695": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_steeles_215": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bram_williams_25": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "bridgewood_1867": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "brightstone_6570": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "bristol_arms_1745": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "bristol_court_6550": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "bromsgate_2150": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "camilla_2070": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "cap_dixon_340": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "cap_kingsbridge_2737": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "cap_kingsbridge_3700": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "cap_lakeshore_2627": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "caven_1110": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "cem_credit_2500": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "cem_eglinton_3325": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "cem_glenerin_5800": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "ch_southdown_1135": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "ch_truscott_2300": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "cm_eglinton_3650": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "cm_ninth_3060": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "cm_thomas_3175": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "collegeway_2285": {
+      "n_real_interior": 5,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/the_collegeway_2285_2.jpg"
+    },
+    "collegeway_2375": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "collegeway_2445": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "cv_camilla_2090": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "cv_dundas_125e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "cv_dundas_212e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "cv_hurontario_2585": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "daniels_gateway_2900": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "daniels_gateway_5625": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "dialogue": {
+      "n_real_interior": 4,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 1,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/dialogue_confederation_2.jpg"
+    },
+    "dialogue_confederation": {
+      "n_real_interior": 4,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 1,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/dialogue_confederation_2.jpg"
+    },
+    "dixie_atwater_1310": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "dixie_bloor_2055": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "dixie_dundas_701": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "dixie_dundas_790": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "dixie_square_1750": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "dundas_120e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "eau_du_soleil": {
+      "n_real_interior": 4,
+      "n_real_exterior": 1,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/eau_du_soleil_2.jpg"
+    },
+    "ec_burnhamthorpe_1530": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "ec_eglinton_2470": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "ec_eglinton_3025": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "ec_hurontario_4090": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "ec_robert_speck_4080": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "eighth_24": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "elizabeth_20n": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "elizabeth_28n": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "elizabeth_7n": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "elmwoods_30": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "elora": {
+      "n_real_interior": 0,
+      "n_real_exterior": 5,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/elora_1.png"
+    },
+    "elora_glen_erin": {
+      "n_real_interior": 0,
+      "n_real_exterior": 5,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/elora_glen_erin_1.png"
+    },
+    "embassy_99_agnes": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "en_eglinton_500w": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "en_renforth_120": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "en_renforth_220": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "en_renforth_44": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "erin_burnhamthorpe_1750": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "erin_dundas_3170": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "erin_meadowood_3700": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_bloor_3501": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_bloor_4225": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_bloor_4759": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_capri_50": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_cordova_25": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_dunbloor_1": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_dundas_3501": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_dundas_3845": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_eva_36": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_islington_15": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_islington_25": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_islington_350s": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_islington_4646": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_islington_625s": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_kipling_15": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_kipling_1900": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_kipling_240n": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_kipling_36s": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_west_mall_415": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_west_mall_435": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_west_mall_445": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "etob_west_mall_500": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "forestview_2077": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "forestwoods_1547": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "forty_second_45": {
+      "n_real_interior": 4,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/forty_second_45_1.jpg"
+    },
+    "gw_jane_55": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "gw_lakeshore_1900e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "gw_west_mall_555": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "gw_west_mall_565": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "gw_west_mall_575": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "havenwood_3410": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "hbs_lakeshore_2240": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hbs_legion_2230": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hbs_marine_2167": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hbs_marine_2200": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "helene_28n": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "high_30e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "hp_armadale_141": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hp_bloor_2095": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hp_bloor_2901": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hp_humberside_330": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hp_quebec_320": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hp_runnymede_295": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hu_dundas_55e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hu_hurontario_2855": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hu_hurontario_3300": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "hurontario_2247": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "ic_islington_277": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "inverhouse_920": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "james_90": {
+      "n_real_interior": 1,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 1,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/james_90_2.jpg"
+    },
+    "jun_dundas_3000": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "jun_keele_2603": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "kaneff_3575": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "kaneff_3620": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "kil_brock_2200": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "kingsway_old_mill_2": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "kipling_50_s": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lago_waterfront": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lake_promenade_220": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lake_promenade_240": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lake_shore_155": {
+      "n_real_interior": 5,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/lake_shore_155_1.jpg"
+    },
+    "lake_shore_2335": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lakeshore_206e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lakeshore_212e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lakeshore_2212": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lakeshore_2230": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lakeshore_3479": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lakeshore_3590": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lakeshore_3650": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lakeshore_3845": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lakeshore_760": {
+      "n_real_interior": 3,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/lakeshore_760_1.jpg"
+    },
+    "lakeside_place_2699": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lakeview_place_2770": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lakewood_1257": {
+      "n_real_interior": 5,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/lakewood_1257_1.jpg"
+    },
+    "lakewood_ii_1285": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "landmark_2493": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "legion_165": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "legion_185": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lincoln_545": {
+      "n_real_interior": 5,
+      "n_real_exterior": 1,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/lincoln_545_2.jpg"
+    },
+    "linwood_1785": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lolita_620": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "long_branch_30": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "lv_atwater_2160": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "lv_dixie_990s": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "lv_lakeshore_1077e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "lv_lakeshore_1300e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "malt_brandon_3170": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "malt_darcel_3170": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "malt_finch_7177": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "malt_goreway_7340": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "malt_morningstar_3050": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "malt_morningstar_3100": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "maplewoods_1477": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "marine_parade_15": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "marine_parade_3": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "marine_parade_58": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "markland_dr_3": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "markwood_4365": {
+      "n_real_interior": 3,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/markwood_4365_2.jpg"
+    },
+    "meadowvale_gardens_2869": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "mill_road_340": {
+      "n_real_interior": 4,
+      "n_real_exterior": 1,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/mill_road_340_2.jpg"
+    },
+    "mimico_estates": {
+      "n_real_interior": 5,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/mimico_estates_1.jpg"
+    },
+    "mimico_estates_official": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "miracle_4900": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "miracle_4900_glen_erin": {
+      "n_real_interior": 7,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/miracle_4900_glen_erin_1.jpg"
+    },
+    "mv_aquitaine_2825": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "mv_aquitaine_2855": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "mv_aquitaine_2885": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "mv_burnhamthorpe_660w": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "mv_central_1240w": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "mv_central_1265w": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "mv_montevideo_2630": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "mv_winston_6750": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "newholm_8": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "nsr_275": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "nsr_535": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "oak_chartwell_1500": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "oak_dunn_2069": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "oak_kerr_280": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "oak_kerr_339": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "oak_marlborough_415": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "oak_rebecca_410": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "oak_speers_1276": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "oak_third_line_295": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "oak_trafalgar_165": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "oak_woodside_2511": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "oakwood_8n": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "ok_glenashton_2400": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "ok_north_service_290": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "ok_speers_1140": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "ok_upper_middle_2484": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "one_eighty_five": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "orchard_1015": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "paisley_95": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "palace_pier_1": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "park_12e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "park_26e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "park_52e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "park_55e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "park_70e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "park_lawn_15": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "park_lawn_285": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "park_lawn_36": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "park_royal_2360": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "pc_high_15e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "pc_hurontario_60s": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "pc_lakeshore_165e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "pc_lakeshore_75e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "pc_mineola_43e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "pc_park_60e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "pc_stavebank_55": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "promenade_2301": {
+      "n_real_interior": 3,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/promenade_2301_1.jpg"
+    },
+    "promenade_court": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "queen_south_190": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "queensway_1430": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "queensway_955": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "reid_drive": {
+      "n_real_interior": 4,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 1,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/reid_drive_2.jpg"
+    },
+    "rivergate_35": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "roche_2150": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "ron_garden_2": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "ron_roncesvalles_120": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "ron_roncesvalles_211": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "royal_tower_121": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "rs_legion_115": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "rw_bough_1735": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "rw_rathburn_3145e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "rw_rathburn_3415e": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "seneca_1051": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "seville_75": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "sg_islington_140s": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sg_park_lawn_2200": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sg_park_lawn_25": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sg_queensway_1185": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sg_queensway_1535": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sg_royal_york_90s": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sh_lakeshore_1535w": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sh_meadowwood_1455": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sh_southdown_1240": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sh_truscott_2155": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sheridan_crossing": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "sheridan_manor": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "sheridan_park_2185": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "sheridan_park_2215": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "sherobee_2170": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "shore_breeze_30": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "shoreline_2313": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "shoreline_towers": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "sky_central_30": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sky_main_104": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "skyrise_ref": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 1,
+      "primary_source": "promo",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "sp_aukland_60": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sp_bloor_3380": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sq_burnhamthorpe_4185": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sq_eglinton_25": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sq_eglinton_55": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sq_grand_park_3985": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "sq_kingsbridge_4080": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "st_britannia_3050w": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "st_main_140": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "st_pearl_240": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "st_queen_240s": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    },
+    "station_place_5249": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "strathroy_1470": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "the_collegeway_2285": {
+      "n_real_interior": 5,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/the_collegeway_2285_1.jpg"
+    },
+    "the_huron_2475": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "the_omeath_30": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "valleywoods_1423": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "vita_on_the_lake": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "walden_circle": {
+      "n_real_interior": 5,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/walden_circle_1.jpg"
+    },
+    "waterford_2645": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "west_mall_320": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "west_mall_350": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "west_mall_390": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "west_mall_400": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "west_mall_545": {
+      "n_real_interior": 4,
+      "n_real_exterior": 1,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "listing",
+      "quality_tier": "tier1_real",
+      "primary_photo": "photos/west_mall_545_2.jpg"
+    },
+    "western_battery_15": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "westwood_1465": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 1,
+      "n_streetmap": 1,
+      "n_promo_card": 0,
+      "primary_source": "satellite",
+      "quality_tier": "tier2_synthetic",
+      "primary_photo": null
+    },
+    "wot_dundas_3400w": {
+      "n_real_interior": 0,
+      "n_real_exterior": 0,
+      "n_satellite": 0,
+      "n_streetmap": 0,
+      "n_promo_card": 0,
+      "primary_source": "none",
+      "quality_tier": "tier3_none",
+      "primary_photo": null
+    }
+  }
+}

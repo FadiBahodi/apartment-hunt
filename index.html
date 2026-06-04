@@ -114,6 +114,11 @@
   .card .meta .metric { display: inline-flex; align-items: center; gap: 4px; font-variant-numeric: tabular-nums; }
   .card .meta .metric .label { color: var(--dim); font-size: 10px;  letter-spacing: .04em; }
   .card .meta .metric .val { color: var(--text); font-weight: 500; }
+  .card .axes { margin: 6px 0 4px; }
+  .card .vibe { font-size: 11px; color: var(--muted); font-style: italic; line-height: 1.35; margin-top: 4px; padding-top: 4px; border-top: 1px dashed var(--border); }
+  .card .badges-row { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+  .card .badges-row .tinybadge { font-size: 9px; letter-spacing: .03em; text-transform: uppercase; padding: 1px 6px; border-radius: 999px; font-weight: 600; }
+  .card .warning-pill { display: inline-block; margin-left: 6px; padding: 1px 6px; font-size: 9px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; border-radius: 3px; color: #fff; vertical-align: middle; }
   .card .rent-col { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
   .card .rent { color: var(--text); font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; line-height: 1; }
   .card .rent .sub { color: var(--dim); font-size: 10px; font-weight: 400; margin-top: 2px; display: block; }
@@ -479,6 +484,8 @@ const _jsonLoaders = [
   ['run_clubs.json', 'RUN_CLUBS', null],
   ['refresh_june4.json', 'REFRESH', null],
   ['destinations.json', 'DESTINATIONS', null],
+  ['photo_index.json', 'PHOTO_INDEX', null],
+  ['finalist_deep.json', 'FINALIST_DEEP', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
   fetch('data/' + fn)
@@ -489,9 +496,10 @@ const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
 // JSONL listings loader — merges into APARTMENTS, then re-renders
 const _listingsPromise = Promise.all([
   fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
-  fetch('data/wave2_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
-]).then(([t1, t2]) => {
-  const text = (t1||'') + '\n' + (t2||'');
+  fetch('data/wave2_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
+  fetch('data/wave3_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
+]).then(([t1, t2, t3]) => {
+  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'');
   const existingIds = new Set((window.APARTMENTS||[]).map(a => a.id));
   let added = 0, errs = 0;
   text.split('\n').forEach(line => {
@@ -773,40 +781,36 @@ setTimeout(scheduleRerender, 4000);
     const html = sorted.map(a => {
       const cls = ratingClass(a.rating);
       const photos = photoMap[a.id] || [];
-      const photoCount = photos.length;
-      const thumbStyle = photos[0] ? `background-image:url('${photos[0]}')` : `background:repeating-linear-gradient(45deg,var(--panel-2) 0,var(--panel-2) 6px,var(--panel) 6px,var(--panel) 12px);color:var(--muted);font-size:9px;text-align:center;line-height:1.2;display:flex;align-items:center;justify-content:center;padding:4px;`;
-      const thumbInner = photos[0] ? '' : 'no<br>photo<br>yet';
-      const fit = computeFitScore(a, window.COSTS||{}, window.OSRM||{});
-      const fitColor = fitScoreColor(fit.score);
+      const photoIdx = (window.PHOTO_INDEX && window.PHOTO_INDEX._buildings && window.PHOTO_INDEX._buildings[a.id]) || null;
+      const photoTier = photoIdx?.quality_tier || (photos[0] ? 'tier2_synthetic' : 'tier3_none');
+      const photoBadge = photoTier === 'tier1_real' ? {label:'✓ Real', color:'#16a34a', bg:'#dcfce7'}
+                       : photoTier === 'tier2_synthetic' ? {label:'◌ Synth', color:'#a16207', bg:'#fef3c7'}
+                       : {label:'✗ None', color:'#dc2626', bg:'#fee2e2'};
+      const thumbStyle = photos[0] ? `background-image:url('${photos[0]}')` : `background:repeating-linear-gradient(45deg,var(--panel-2) 0,var(--panel-2) 6px,var(--panel) 6px,var(--panel) 12px);color:var(--muted);font-size:8px;text-align:center;line-height:1.2;display:flex;align-items:center;justify-content:center;padding:3px;`;
+      const thumbInner = photos[0] ? '' : 'no<br>photo';
+      const profile = computeAxisProfile(a);
       const isFav = STORE.isFavorite(a.id);
       const isCmp = compareList.includes(a.id);
-      const review = (window.REVIEWS||{})[a.id];
-      const dm = (window.DRIVE_MATRIX||{})[a.id];
-      const amPeak = dm?.am_peak_min ?? a.drive_to_cvh_min_peak;
-      const premBadge = dm?.value_call;
-      const premBadgeColor = premBadge === 'below market' ? '#4ade80' : premBadge === 'market' ? '#82b6ff' : premBadge === 'above market' ? '#fbbf24' : premBadge === 'premium' ? '#f87171' : null;
+      const warn = profile.qualitative.warning;
       return `
         <div class="card ${selectedId===a.id?'selected':''}" data-id="${a.id}" tabindex="0" role="button" aria-label="${a.name}, ${a.zone}" onclick="selectApt('${a.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectApt('${a.id}')}">
           <div class="thumb" style="${thumbStyle}">${thumbInner}</div>
           <div class="body">
-            <div class="name">${a.name}</div>
-            <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
-            <div class="meta">
-              <span class="fit-badge" style="background:${fitColor}1f;color:${fitColor};border:1px solid ${fitColor}3a">Fit ${fit.score}</span>
-              <span class="metric"${dm ? ' title="Real drive time — OSRM × zone-aware peak multiplier"' : ''}><span class="label">CVH${dm?'*':''}</span><span class="val">${amPeak}m</span></span>
-              ${a.drive_to_union_min_offpeak ? `<span class="metric"><span class="label">Union</span><span class="val">${a.drive_to_union_min_offpeak}m</span></span>` : ''}
-              ${a.sqft_high ? `<span class="metric"><span class="label">sqft</span><span class="val">${a.sqft_high}</span></span>` : ''}
-              ${review?.google_rating ? `<span class="metric"><span class="label">Rev</span><span class="val">${review.google_rating}</span></span>` : ''}
-              ${premBadge ? `<span class="metric" style="color:${premBadgeColor}" title="vs zone avg 1-bed"><span class="label">vs mkt</span><span class="val">${premBadge.replace(' market','').replace('below','below').replace('above','above')}</span></span>` : ''}
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:6px">
+              <div class="name" style="flex:1">${a.name}${warn?`<span class="warning-pill" style="background:${warn.color}">${warn.label}</span>`:''}</div>
+              <span class="tinybadge" style="background:${photoBadge.bg};color:${photoBadge.color};flex-shrink:0">${photoBadge.label}</span>
             </div>
+            <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
+            <div class="axes">${window.renderAxisProfile(profile, {compact:true})}</div>
+            ${profile.qualitative.zone_vibe ? `<div class="vibe">${profile.qualitative.zone_vibe}</div>` : ''}
           </div>
           <div class="rent-col">
             <span class="badge ${cls}"><span class="dot"></span>${(a.rating || 'fine').split(' ')[0]}</span>
             <div class="rent">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}<span class="sub">${a.rent_1bed_high && a.rent_1bed_high !== a.rent_1bed_low ? '– $'+a.rent_1bed_high.toLocaleString() : ''}${a.sqft_high ? '  ·  '+a.sqft_high+' sqft' : ''}</span></div>
-          </div>
-          <div class="actions" onclick="event.stopPropagation()">
-            <button class="${isFav?'on':''}" onclick="toggleFavorite('${a.id}')" title="Favorite" aria-label="Favorite">${isFav?'★':'☆'}</button>
-            <button class="${isCmp?'on':''}" onclick="toggleCompare('${a.id}')" title="Add to compare" aria-label="Compare">⇄</button>
+            <div class="actions" onclick="event.stopPropagation()">
+              <button class="${isFav?'on':''}" onclick="toggleFavorite('${a.id}')" title="Favorite" aria-label="Favorite">${isFav?'★':'☆'}</button>
+              <button class="${isCmp?'on':''}" onclick="toggleCompare('${a.id}')" title="Add to compare" aria-label="Compare">⇄</button>
+            </div>
           </div>
         </div>`;
     }).join('');

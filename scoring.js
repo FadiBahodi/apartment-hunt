@@ -125,6 +125,128 @@ window.fitScoreColor = function(score) {
   return '#f87171';
 };
 
+// ============================================================
+// AXIS PROFILE — five independent 0-100 axes + qualitative narrative.
+// This replaces the single Fit Score on cards. Each axis is independently
+// interpretable: you can be commute-good AND singles-bad at the same time,
+// which is the actual Mississauga vs Toronto tradeoff.
+// ============================================================
+window.computeAxisProfile = function(a) {
+  const osrm = (window.OSRM||{})[a.id];
+  const dest = ((window.DESTINATIONS && window.DESTINATIONS.routes) || {})[a.id];
+  const costs = (window.COSTS||{})[a.id];
+  const visual = (window.VISUAL_NOTES||{})[a.id];
+  const zones = (window.DATING_SCENE && window.DATING_SCENE.zones) || {};
+  const zoneKey = Object.keys(zones).find(k => k.toLowerCase() === (a.zone||'').toLowerCase())
+              || Object.keys(zones).find(k => (a.zone||'').toLowerCase().includes(k.split('/')[0].trim().toLowerCase()));
+  const zone = zoneKey ? zones[zoneKey] : null;
+
+  // ===== AXES (0-100 each, independent) =====
+
+  // 1. CVH commute — piecewise: 5min=100, 15min=90, 20min=75, 25min=60, 30min=40, 35min=25, 45min=0
+  const cvhMin = osrm ? osrm.duration_min : (a.drive_to_cvh_min_peak || 30);
+  let cvh;
+  if (cvhMin <= 5) cvh = 100;
+  else if (cvhMin <= 15) cvh = 100 - (cvhMin - 5) * 1.0;       // 5→100, 15→90
+  else if (cvhMin <= 25) cvh = 90 - (cvhMin - 15) * 3;          // 15→90, 25→60
+  else if (cvhMin <= 35) cvh = 60 - (cvhMin - 25) * 3.5;        // 25→60, 35→25
+  else if (cvhMin <= 45) cvh = Math.max(0, 25 - (cvhMin - 35) * 2.5);
+  else cvh = 0;
+  cvh = Math.round(cvh);
+
+  // 2. Singles density — directly from zone dating score
+  let singles = zone ? zone.single_density_score : 30; // baseline if unknown
+  singles = Math.round(singles);
+
+  // 3. Running — proximity + trail quality
+  const r = (a.running || '').toLowerCase();
+  let running;
+  if (/martin goodman|humber bay shores park/.test(r)) running = 95;       // gold standard waterfront
+  else if (/lakefront promenade|marie curtis|jack darling|rattray/.test(r)) running = 85;
+  else if (/sawmill|culham|riverwood|burnhamthorpe/.test(r)) running = 80;
+  else if (/etobicoke creek|centennial park/.test(r)) running = 75;
+  else if (/applewood|cooksville creek/.test(r)) running = 60;
+  else if (/sherway|west deane|cooksville/.test(r)) running = 50;
+  else running = 35;
+
+  // 4. Cost — lower = better; based on all-in monthly
+  const rent = a.rent_1bed_low || a.rent_2bed || 9999;
+  const allIn = costs?.estimated_monthly_total_1bed || (rent + 100);
+  let cost;
+  if (allIn <= 1700) cost = 100;
+  else if (allIn <= 2000) cost = 100 - (allIn - 1700) / 300 * 15;   // 1700→100, 2000→85
+  else if (allIn <= 2300) cost = 85 - (allIn - 2000) / 300 * 20;    // 2000→85, 2300→65
+  else if (allIn <= 2700) cost = 65 - (allIn - 2300) / 400 * 30;    // 2300→65, 2700→35
+  else if (allIn <= 3200) cost = 35 - (allIn - 2700) / 500 * 25;
+  else cost = Math.max(0, 10 - (allIn - 3200) / 500 * 10);
+  cost = Math.round(cost);
+
+  // 5. Toronto access — King West drive time (real OSRM via destinations)
+  const kwMin = dest?.king_west?.duration_min || a.drive_to_union_min_offpeak || 35;
+  let toronto;
+  if (kwMin <= 10) toronto = 100;
+  else if (kwMin <= 15) toronto = 100 - (kwMin - 10) * 2;            // 10→100, 15→90
+  else if (kwMin <= 25) toronto = 90 - (kwMin - 15) * 4;             // 15→90, 25→50
+  else if (kwMin <= 35) toronto = 50 - (kwMin - 25) * 3;             // 25→50, 35→20
+  else toronto = Math.max(0, 20 - (kwMin - 35) * 2);
+  toronto = Math.round(toronto);
+
+  // ===== QUALITATIVE =====
+  const ratingUp = (a.rating || '').toUpperCase();
+  const warningBadge = ratingUp.startsWith('AVOID') ? {label:'AVOID', color:'#dc2626'}
+                     : ratingUp.startsWith('CAUTION') ? {label:'CAUTION', color:'#ea580c'}
+                     : /pending\s+condo\s+declaration/i.test(a.rating||'') ? {label:'UNVERIFIED CONDO', color:'#ca8a04'}
+                     : null;
+
+  // Zone vibe — one-liner from dating_scene.json honest_vibe (truncated)
+  let zoneVibe = zone?.honest_vibe || '';
+  if (zoneVibe.length > 140) zoneVibe = zoneVibe.slice(0, 137).replace(/\s\S*$/, '') + '…';
+
+  // Building-specific honest note (AI photo audit)
+  const buildingNote = visual?.honest_note || '';
+
+  return {
+    axes: { cvh, singles, running, cost, toronto },
+    raw: { cvh_min: Math.round(cvhMin), singles_score: zone?.single_density_score, rent, kw_min: Math.round(kwMin), all_in: allIn },
+    qualitative: { zone_vibe: zoneVibe, building_note: buildingNote, warning: warningBadge, zone_label: zoneKey || a.zone },
+    total: Math.round((cvh + singles + running + cost + toronto) / 5),
+  };
+};
+
+// Color for an axis bar (red→amber→green)
+window.axisColor = function(v) {
+  if (v >= 80) return '#22c55e';     // green
+  if (v >= 65) return '#84cc16';     // lime
+  if (v >= 50) return '#eab308';     // amber
+  if (v >= 35) return '#f97316';     // orange
+  return '#ef4444';                  // red
+};
+
+// Render the 5-bar profile inline (compact, for cards)
+window.renderAxisProfile = function(profile, opts) {
+  opts = opts || {};
+  const compact = opts.compact !== false;
+  const labelW = compact ? 52 : 80;
+  const barW = compact ? 90 : 160;
+  const barH = compact ? 5 : 8;
+  const axes = [
+    {k: 'CVH', v: profile.axes.cvh, suffix: profile.raw.cvh_min + 'm'},
+    {k: 'Single', v: profile.axes.singles, suffix: profile.raw.singles_score != null ? profile.raw.singles_score : '?'},
+    {k: 'Run', v: profile.axes.running, suffix: ''},
+    {k: 'Cost', v: profile.axes.cost, suffix: '$' + (profile.raw.rent || '?').toLocaleString()},
+    {k: 'Toronto', v: profile.axes.toronto, suffix: profile.raw.kw_min + 'm'},
+  ];
+  const rows = axes.map(ax => `
+    <div style="display:grid;grid-template-columns:${labelW}px ${barW}px 32px;gap:6px;align-items:center;font-size:${compact?'10px':'12px'};line-height:1.2;color:var(--muted)">
+      <span style="text-align:right">${ax.k}</span>
+      <span style="background:var(--panel-2);border-radius:2px;height:${barH}px;display:block;overflow:hidden;position:relative">
+        <span style="background:${window.axisColor(ax.v)};height:100%;width:${ax.v}%;display:block;border-radius:2px"></span>
+      </span>
+      <span style="font-variant-numeric:tabular-nums;color:var(--text);font-weight:500;text-align:right">${ax.suffix}</span>
+    </div>`).join('');
+  return `<div style="display:flex;flex-direction:column;gap:${compact?'2px':'4px'}">${rows}</div>`;
+};
+
 // === ALGORITHMIC TOP PICKS — generated from live data, not hand-curated ===
 window.computeTopPicks = function() {
   const all = (window.APARTMENTS || []).map(a => ({
