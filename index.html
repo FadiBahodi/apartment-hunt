@@ -1025,11 +1025,42 @@ setTimeout(scheduleRerender, 4000);
       </div>
       ${petWarn}
       <div class="photos">${photosHtml}</div>
-      <div class="fit-bar"><div class="fit-bar-fill" style="width:${fit.score}%;background:${fitColor}"></div></div>
-      <details style="margin:6px 0;font-size:12px">
-        <summary style="cursor:pointer;color:var(--muted)">Fit Score breakdown (${fit.score}/100)</summary>
-        <table class="cost-table" style="margin-top:6px">${fitBreakdown}</table>
-      </details>
+      ${(() => {
+        const profile = computeAxisProfile(a);
+        const fdeep = (window.FINALIST_DEEP||{})[a.id];
+        let narrative = '';
+        if (profile.qualitative.zone_vibe) {
+          narrative += `<div style="background:var(--panel-2);border-left:3px solid var(--accent);padding:10px 12px;border-radius:6px;margin:8px 0;font-size:12.5px;line-height:1.55"><b style="color:var(--accent-text);font-size:11px;text-transform:uppercase;letter-spacing:.04em">${profile.qualitative.zone_label} · honest vibe</b><br>${profile.qualitative.zone_vibe}</div>`;
+        }
+        if (profile.qualitative.building_note) {
+          narrative += `<div style="background:rgba(245,158,11,.08);border-left:3px solid #f59e0b;padding:10px 12px;border-radius:6px;margin:8px 0;font-size:12.5px;line-height:1.55"><b style="color:#b45309;font-size:11px;text-transform:uppercase;letter-spacing:.04em">Photo audit</b><br>${profile.qualitative.building_note}</div>`;
+        }
+        if (fdeep && fdeep.honest_call) {
+          narrative += `<div style="background:var(--accent-soft);border:1px solid var(--accent);border-radius:6px;padding:10px 12px;margin:8px 0;font-size:12.5px;line-height:1.55"><b style="color:var(--accent-text);font-size:11px;text-transform:uppercase;letter-spacing:.04em">Honest call</b><br>${fdeep.honest_call}</div>`;
+        }
+        let dayInLife = '';
+        if (fdeep && fdeep.day_in_life) {
+          const dil = fdeep.day_in_life;
+          dayInLife = `<h3 style="margin-top:14px">A day in the life</h3>
+          <div style="display:grid;gap:8px;font-size:12.5px;line-height:1.55">
+            ${dil.monday_7am_shift?`<div style="padding:10px 12px;background:var(--panel-2);border-radius:6px"><b style="color:var(--muted);font-size:11px;letter-spacing:.04em">Mon 7am shift</b><br>${dil.monday_7am_shift}</div>`:''}
+            ${dil.friday_night?`<div style="padding:10px 12px;background:var(--panel-2);border-radius:6px"><b style="color:var(--muted);font-size:11px;letter-spacing:.04em">Friday night</b><br>${dil.friday_night}</div>`:''}
+            ${dil.saturday_run?`<div style="padding:10px 12px;background:var(--panel-2);border-radius:6px"><b style="color:var(--muted);font-size:11px;letter-spacing:.04em">Saturday run</b><br>${dil.saturday_run}</div>`:''}
+          </div>`;
+        }
+        return `
+          <div style="background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin:10px 0">
+            <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px">5-axis profile</div>
+            ${window.renderAxisProfile(profile, {compact:false})}
+          </div>
+          ${narrative}
+          ${dayInLife}
+          <details style="margin:6px 0;font-size:11px;color:var(--muted)">
+            <summary style="cursor:pointer">Legacy Fit Score (${fit.score}/100) breakdown</summary>
+            <table class="cost-table" style="margin-top:6px">${fitBreakdown}</table>
+          </details>
+        `;
+      })()}
       <div class="stats">
         <div class="stat"><div class="k">Rent (1-bed)</div><div class="v">${rentDisplay(a)}</div></div>
         <div class="stat"><div class="k">Sqft</div><div class="v">${a.sqft_low ? a.sqft_low + '–' + a.sqft_high : a.sqft_high || '—'}</div></div>
