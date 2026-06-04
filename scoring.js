@@ -1,13 +1,18 @@
 // Fit Score algorithm — tailored to Fadi's golden path
 // 0-100 score based on weighted axes that matter for HIM
 //
+// Context: 27yo, YOUNGEST attending at CVH (peers won't come from work),
+// 100km/wk runner, single (just out of LTR), downtown-curious post-NYC,
+// type: white/Asian/Jewish women, open to US relocation partners.
+//
 // Axes (weights sum to 100):
-//   35 — CVH commute (peak min)        // job reliability
-//   25 — Running (winter trail access) // 100km/wk identity
-//   18 — Cost vs budget (effective rent)
-//   10 — Toronto access (Union min)    // social access
-//    7 — Building rating quality (good > caution > avoid)
-//    5 — Sqft vs price (value/space)
+//   30 — CVH commute (peak min)        // job — but reverse-commute friendly
+//   22 — Singles-scene zone density    // YOU WON'T FIND PEERS AT CVH (youngest attending) — env matters
+//   20 — Running (winter trail access) // 100km/wk identity
+//   13 — Cost vs budget                 // important but #4
+//    8 — Toronto access (Union/King W) // dating + social — but Singles-scene captures most
+//    4 — Building rating quality
+//    3 — Sqft vs price
 
 window.computeFitScore = function(a, costs, osrm) {
   let score = 0;
@@ -25,73 +30,85 @@ window.computeFitScore = function(a, costs, osrm) {
     source = `${timeUsed}m peak (est)`;
   }
   let cvhPts = 0;
-  if (timeUsed <= 8) cvhPts = 35;
-  else if (timeUsed <= 12) cvhPts = 29;
-  else if (timeUsed <= 17) cvhPts = 21;
-  else if (timeUsed <= 25) cvhPts = 12;
+  if (timeUsed <= 8) cvhPts = 30;
+  else if (timeUsed <= 12) cvhPts = 25;
+  else if (timeUsed <= 17) cvhPts = 18;
+  else if (timeUsed <= 25) cvhPts = 11;
   else if (timeUsed <= 35) cvhPts = 5;
   score += cvhPts;
-  breakdown.push({k: 'CVH commute', v: cvhPts, max: 35, note: source});
+  breakdown.push({k: 'CVH commute', v: cvhPts, max: 30, note: source});
 
-  // 2. Running (25 pts) — proximity + winter access
-  let runPts = 10; // baseline
+  // 2. Singles-scene zone density (22 pts) — YOU WON'T FIND PEERS AT CVH (youngest attending)
+  let singlesPts = 6; // baseline (no data)
+  const ds = (window.DATING_SCENE && window.DATING_SCENE.zones) || {};
+  const dsKey = Object.keys(ds).find(k => k.toLowerCase() === (a.zone||'').toLowerCase()) || Object.keys(ds).find(k => (a.zone||'').toLowerCase().includes(k.split('/')[0].trim().toLowerCase()));
+  const datingScore = dsKey ? ds[dsKey].single_density_score : null;
+  if (datingScore !== null && datingScore !== undefined) {
+    // Map 0-100 dating score → 0-22 pts
+    singlesPts = Math.round(datingScore * 0.22);
+  }
+  score += singlesPts;
+  breakdown.push({k: 'Singles scene', v: singlesPts, max: 22, note: dsKey ? `${dsKey} = ${datingScore}/100` : 'no zone data'});
+
+  // 3. Running (20 pts) — proximity + winter access
+  let runPts = 8; // baseline
   const zone = (a.zone || '').toLowerCase();
   const running = (a.running || '').toLowerCase();
-  if (running.includes('martin goodman') || running.includes('humber bay')) runPts = 25;
-  else if (running.includes('sawmill') || running.includes('culham') || running.includes('riverwood')) runPts = 22;
-  else if (running.includes('lakefront') || running.includes('rattray') || running.includes('jack darling')) runPts = 20;
-  else if (running.includes('etobicoke creek') || running.includes('centennial')) runPts = 17;
-  else if (running.includes('burnhamthorpe') || running.includes('applewood')) runPts = 18; // winter cleared
-  else if (running.includes('cooksville')) runPts = 12;
+  if (running.includes('martin goodman') || running.includes('humber bay')) runPts = 20;
+  else if (running.includes('sawmill') || running.includes('culham') || running.includes('riverwood')) runPts = 18;
+  else if (running.includes('lakefront') || running.includes('rattray') || running.includes('jack darling')) runPts = 16;
+  else if (running.includes('etobicoke creek') || running.includes('centennial')) runPts = 14;
+  else if (running.includes('burnhamthorpe') || running.includes('applewood')) runPts = 15;
+  else if (running.includes('cooksville')) runPts = 10;
   score += runPts;
-  breakdown.push({k: 'Running', v: runPts, max: 25, note: 'Trail proximity + winter access'});
+  breakdown.push({k: 'Running', v: runPts, max: 20, note: 'Trail proximity + winter access'});
 
-  // 3. Cost vs budget (18 pts)
+  // 4. Cost (13 pts)
   const rent = a.rent_1bed_low || a.rent_2bed || 9999;
   const c = costs && costs[a.id];
   const effectiveRent = c?.net_effective_1bed || rent;
   const totalEst = c?.estimated_monthly_total_1bed || (rent + 100);
   let costPts = 0;
-  if (totalEst <= 1900) costPts = 18;
-  else if (totalEst <= 2100) costPts = 15;
-  else if (totalEst <= 2300) costPts = 12;
-  else if (totalEst <= 2500) costPts = 8;
-  else if (totalEst <= 2700) costPts = 4;
+  if (totalEst <= 1900) costPts = 13;
+  else if (totalEst <= 2100) costPts = 11;
+  else if (totalEst <= 2300) costPts = 8;
+  else if (totalEst <= 2500) costPts = 5;
+  else if (totalEst <= 2700) costPts = 3;
   else costPts = 1;
   score += costPts;
-  breakdown.push({k: 'Cost', v: costPts, max: 18, note: `~$${totalEst}/mo all-in`});
+  breakdown.push({k: 'Cost', v: costPts, max: 13, note: `~$${totalEst}/mo all-in`});
 
-  // 4. Toronto access (10 pts)
-  const u = a.drive_to_union_min_offpeak || 99;
+  // 5. Toronto access (8 pts) — King West / Union
+  const dest = (window.DESTINATIONS_ROUTES || {})[a.id];
+  const kwMin = dest?.king_west?.duration_min;
+  const u = kwMin || a.drive_to_union_min_offpeak || 99;
   let torPts = 0;
-  if (u <= 16) torPts = 10;
-  else if (u <= 22) torPts = 8;
-  else if (u <= 28) torPts = 5;
-  else if (u <= 35) torPts = 2;
+  if (u <= 18) torPts = 8;
+  else if (u <= 25) torPts = 6;
+  else if (u <= 32) torPts = 4;
+  else if (u <= 40) torPts = 2;
   score += torPts;
-  breakdown.push({k: 'Toronto access', v: torPts, max: 10, note: `${u}min Union`});
+  breakdown.push({k: 'Toronto access', v: torPts, max: 8, note: kwMin?`${kwMin}m to King West (OSRM)`:`${u}m Union`});
 
-  // 5. Building rating (7 pts)
-  let bldgPts = 3;
+  // 6. Building rating (4 pts)
+  let bldgPts = 2;
   const r = (a.rating || '').toUpperCase();
-  if (r.startsWith('GOOD')) bldgPts = 7;
-  else if (r.startsWith('FINE') || r.startsWith('POTENTIAL') || r.startsWith('STRETCH')) bldgPts = 4;
-  else if (r.startsWith('CAUTION')) bldgPts = 1;
+  if (r.startsWith('GOOD')) bldgPts = 4;
+  else if (r.startsWith('FINE') || r.startsWith('POTENTIAL') || r.startsWith('STRETCH')) bldgPts = 2;
+  else if (r.startsWith('CAUTION')) bldgPts = 0;
   else if (r.startsWith('AVOID')) bldgPts = 0;
   score += bldgPts;
-  breakdown.push({k: 'Building rep', v: bldgPts, max: 7, note: a.rating || 'unknown'});
+  breakdown.push({k: 'Building rep', v: bldgPts, max: 4, note: a.rating || 'unknown'});
 
-  // 6. Value (5 pts) — sqft per dollar
+  // 7. Value (3 pts)
   const sqft = a.sqft_high || a.sqft_low || 600;
   const sqftPerDollar = sqft / Math.max(rent, 1);
   let valPts = 0;
-  if (sqftPerDollar > 0.40) valPts = 5;
-  else if (sqftPerDollar > 0.32) valPts = 4;
-  else if (sqftPerDollar > 0.27) valPts = 3;
-  else if (sqftPerDollar > 0.22) valPts = 2;
+  if (sqftPerDollar > 0.40) valPts = 3;
+  else if (sqftPerDollar > 0.32) valPts = 2;
   else valPts = 1;
   score += valPts;
-  breakdown.push({k: 'Value (sqft/$)', v: valPts, max: 5, note: `${sqft}sf @ $${rent}`});
+  breakdown.push({k: 'Value (sqft/$)', v: valPts, max: 3, note: `${sqft}sf @ $${rent}`});
 
   return {score: Math.round(score), breakdown};
 };
