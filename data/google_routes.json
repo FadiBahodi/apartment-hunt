@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-06-04T14:49:32.833616",
+    "updated": "2026-06-04T14:53:21.001217",
     "destinations": {
       "cvh": {
         "name": "Credit Valley Hospital",
@@ -58,6 +58,14 @@
         "offpeak": {
           "duration_min": 10.2,
           "distance_km": 8.08
+        },
+        "pm_2pm": {
+          "duration_min": 9.8,
+          "distance_km": 5.62
+        },
+        "pm_5pm": {
+          "duration_min": 11.8,
+          "distance_km": 5.82
         }
       }
     },
@@ -74,6 +82,14 @@
         "offpeak": {
           "duration_min": 8.0,
           "distance_km": 5.86
+        },
+        "pm_2pm": {
+          "duration_min": 10.3,
+          "distance_km": 5.79
+        },
+        "pm_5pm": {
+          "duration_min": 11.9,
+          "distance_km": 5.79
         }
       }
     },
@@ -89,6 +105,14 @@
         },
         "offpeak": {
           "duration_min": 4.3,
+          "distance_km": 2.4
+        },
+        "pm_2pm": {
+          "duration_min": 5.0,
+          "distance_km": 2.4
+        },
+        "pm_5pm": {
+          "duration_min": 5.5,
           "distance_km": 2.4
         }
       }
@@ -106,6 +130,14 @@
         "offpeak": {
           "duration_min": 5.7,
           "distance_km": 3.32
+        },
+        "pm_2pm": {
+          "duration_min": 8.2,
+          "distance_km": 3.32
+        },
+        "pm_5pm": {
+          "duration_min": 9.4,
+          "distance_km": 3.32
         }
       }
     },
@@ -122,6 +154,14 @@
         "offpeak": {
           "duration_min": 3.4,
           "distance_km": 1.24
+        },
+        "pm_2pm": {
+          "duration_min": 5.1,
+          "distance_km": 1.29
+        },
+        "pm_5pm": {
+          "duration_min": 5.7,
+          "distance_km": 1.29
         }
       }
     },
@@ -138,6 +178,14 @@
         "offpeak": {
           "duration_min": 2.6,
           "distance_km": 0.68
+        },
+        "pm_2pm": {
+          "duration_min": 2.3,
+          "distance_km": 0.52
+        },
+        "pm_5pm": {
+          "duration_min": 2.5,
+          "distance_km": 0.52
         }
       }
     },
@@ -154,6 +202,14 @@
         "offpeak": {
           "duration_min": 7.5,
           "distance_km": 7.42
+        },
+        "pm_2pm": {
+          "duration_min": 11.3,
+          "distance_km": 8.12
+        },
+        "pm_5pm": {
+          "duration_min": 14.4,
+          "distance_km": 8.12
         }
       }
     },
@@ -170,6 +226,14 @@
         "offpeak": {
           "duration_min": 17.4,
           "distance_km": 25.18
+        },
+        "pm_2pm": {
+          "duration_min": 18.4,
+          "distance_km": 23.75
+        },
+        "pm_5pm": {
+          "duration_min": 27.4,
+          "distance_km": 23.75
         }
       }
     },
@@ -186,6 +250,14 @@
         "offpeak": {
           "duration_min": 14.9,
           "distance_km": 15.43
+        },
+        "pm_2pm": {
+          "duration_min": 20.8,
+          "distance_km": 16.09
+        },
+        "pm_5pm": {
+          "duration_min": 24.6,
+          "distance_km": 16.09
         }
       }
     },
@@ -202,6 +274,14 @@
         "offpeak": {
           "duration_min": 21.9,
           "distance_km": 26.33
+        },
+        "pm_2pm": {
+          "duration_min": 30.8,
+          "distance_km": 25.33
+        },
+        "pm_5pm": {
+          "duration_min": 45.1,
+          "distance_km": 25.5
         }
       }
     },
@@ -218,6 +298,14 @@
         "offpeak": {
           "duration_min": 11.3,
           "distance_km": 8.68
+        },
+        "pm_2pm": {
+          "duration_min": 17.8,
+          "distance_km": 8.75
+        },
+        "pm_5pm": {
+          "duration_min": 21.5,
+          "distance_km": 8.75
         }
       }
     },
@@ -234,6 +322,14 @@
         "offpeak": {
           "duration_min": 18.3,
           "distance_km": 18.52
+        },
+        "pm_2pm": {
+          "duration_min": 25.1,
+          "distance_km": 18.6
+        },
+        "pm_5pm": {
+          "duration_min": 33.3,
+          "distance_km": 18.76
         }
       }
     },
@@ -250,6 +346,14 @@
         "offpeak": {
           "duration_min": 20.1,
           "distance_km": 19.92
+        },
+        "pm_2pm": {
+          "duration_min": 27.5,
+          "distance_km": 20.05
+        },
+        "pm_5pm": {
+          "duration_min": 35.8,
+          "distance_km": 20.21
         }
       }
     },
@@ -266,6 +370,14 @@
         "offpeak": {
           "duration_min": 19.5,
           "distance_km": 24.62
+        },
+        "pm_2pm": {
+          "duration_min": 27.0,
+          "distance_km": 25.12
+        },
+        "pm_5pm": {
+          "duration_min": 38.8,
+          "distance_km": 25.28
         }
       }
     },
@@ -282,6 +394,14 @@
         "offpeak": {
           "duration_min": 19.5,
           "distance_km": 24.61
+        },
+        "pm_2pm": {
+          "duration_min": 26.9,
+          "distance_km": 25.11
+        },
+        "pm_5pm": {
+          "duration_min": 38.7,
+          "distance_km": 25.27
         }
       }
     },
@@ -298,6 +418,14 @@
         "offpeak": {
           "duration_min": 20.4,
           "distance_km": 24.86
+        },
+        "pm_2pm": {
+          "duration_min": 27.9,
+          "distance_km": 25.33
+        },
+        "pm_5pm": {
+          "duration_min": 39.1,
+          "distance_km": 33.59
         }
       }
     },
@@ -314,6 +442,14 @@
         "offpeak": {
           "duration_min": 22.1,
           "distance_km": 26.36
+        },
+        "pm_2pm": {
+          "duration_min": 30.9,
+          "distance_km": 25.37
+        },
+        "pm_5pm": {
+          "duration_min": 41.5,
+          "distance_km": 33.62
         }
       }
     },
@@ -330,6 +466,14 @@
         "offpeak": {
           "duration_min": 22.0,
           "distance_km": 24.32
+        },
+        "pm_2pm": {
+          "duration_min": 28.6,
+          "distance_km": 24.52
+        },
+        "pm_5pm": {
+          "duration_min": 39.6,
+          "distance_km": 24.68
         }
       }
     },
@@ -346,6 +490,14 @@
         "offpeak": {
           "duration_min": 22.6,
           "distance_km": 26.25
+        },
+        "pm_2pm": {
+          "duration_min": 30.0,
+          "distance_km": 25.25
+        },
+        "pm_5pm": {
+          "duration_min": 41.4,
+          "distance_km": 25.41
         }
       }
     },
@@ -362,6 +514,14 @@
         "offpeak": {
           "duration_min": 21.8,
           "distance_km": 26.29
+        },
+        "pm_2pm": {
+          "duration_min": 30.1,
+          "distance_km": 25.29
+        },
+        "pm_5pm": {
+          "duration_min": 41.5,
+          "distance_km": 25.45
         }
       }
     },
