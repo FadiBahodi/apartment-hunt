@@ -447,6 +447,9 @@ const _jsonLoaders = [
   ['parking.json', 'PARKING', {}],
   ['run_routes.json', 'RUN_ROUTES', {}],
   ['avoid_audit.json', 'AVOID_AUDIT', null],
+  ['dating_scene.json', 'DATING_SCENE', null],
+  ['run_clubs.json', 'RUN_CLUBS', null],
+  ['refresh_june4.json', 'REFRESH', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
   fetch('data/' + fn)
@@ -893,6 +896,29 @@ setTimeout(scheduleRerender, 4000);
       `;
     }
 
+    // Dating scene block (new)
+    const ds = window.DATING_SCENE?.zones || {};
+    const dsKey = Object.keys(ds).find(k => k.toLowerCase() === (a.zone||'').toLowerCase()) || Object.keys(ds).find(k => (a.zone||'').toLowerCase().includes(k.split('/')[0].trim().toLowerCase()));
+    const datingZone = dsKey ? ds[dsKey] : null;
+    let datingHtml = '';
+    if (datingZone) {
+      const dsScore = datingZone.single_density_score || 0;
+      const dsColor = dsScore >= 70 ? 'var(--good)' : dsScore >= 50 ? 'var(--warn)' : 'var(--bad)';
+      const dsVerdict = datingZone.best_for_dating || '';
+      datingHtml = `<h3>Singles scene — ${dsKey}</h3>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px;">
+          <div class="stat"><div class="k">Single density</div><div class="v" style="color:${dsColor}">${dsScore}/100</div></div>
+          <div class="stat"><div class="k">Verdict</div><div class="v" style="color:${dsColor}">${dsVerdict}</div></div>
+          <div class="stat"><div class="k">% age 25-34</div><div class="v">${datingZone.pct_25_34||'—'}%</div></div>
+          <div class="stat"><div class="k">% single never married</div><div class="v">${datingZone.pct_single_never_married||'—'}%</div></div>
+          <div class="stat"><div class="k">% bachelor+</div><div class="v">${datingZone.pct_bachelor_plus||'—'}%</div></div>
+          <div class="stat"><div class="k">Transit → King W</div><div class="v">${datingZone.transit_to_king_west_min||'—'} min</div></div>
+        </div>
+        ${datingZone.honest_vibe ? `<p style="font-size:12px;color:var(--muted);margin-top:4px;font-style:italic">${datingZone.honest_vibe}</p>` : ''}
+        ${datingZone.predominant_ethnicity ? `<p style="font-size:11px;color:var(--dim);margin-top:2px">Demographics: ${datingZone.predominant_ethnicity}</p>` : ''}
+      `;
+    }
+
     const zone = (window.ZONES||{})[a.zone];
     let zoneHtml = '';
     if (zone) {
@@ -995,6 +1021,7 @@ setTimeout(scheduleRerender, 4000);
         </table>
         ${pk.notes?`<p style="font-size:11px;color:var(--muted);margin-top:4px">${pk.notes}</p>`:''}`;
       })()}
+      ${datingHtml}
       ${reviewHtml}
       ${zoneHtml}
       ${(() => {

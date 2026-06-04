@@ -192,13 +192,28 @@ window.computeTopPicks = function() {
     return s;
   }));
 
+  // 7. Singles-scene optimized — high-dating-density zone × reasonable CVH commute
+  const singlesScene = pick(score(all, x => {
+    let s = 0;
+    const z = (window.DATING_SCENE?.zones || {});
+    // Try zone-string match
+    const zoneKey = Object.keys(z).find(k => k.toLowerCase() === (x.a.zone||'').toLowerCase()) || Object.keys(z).find(k => (x.a.zone||'').toLowerCase().includes(k.split('/')[0].trim().toLowerCase()));
+    const datingScore = zoneKey ? z[zoneKey].single_density_score : null;
+    if (datingScore) s += datingScore * 0.7; // 0-70
+    if (x.osrm?.duration_min) s += Math.max(0, 25 - x.osrm.duration_min); // commute bonus 0-25
+    if (x.a.pet_status !== 'no') s += 0; // neutralized
+    s += x.fit * 0.15;
+    return s;
+  }));
+
   return [
-    { tier: "CVH OPERATIONAL EXCELLENCE", why: "Shortest AM-peak commute with verified pet + good rating + real OSRM routing.", picks: cvhFirst },
+    { tier: "SINGLES-SCENE OPTIMIZED", why: "Highest zone single-density score × reasonable CVH commute. Where 25-35 single professionals actually cluster.", picks: singlesScene },
+    { tier: "CVH OPERATIONAL EXCELLENCE", why: "Shortest AM-peak commute + good rating + real OSRM routing.", picks: cvhFirst },
     { tier: "TORONTO LIFE", why: "Close to Union via GO + waterfront/streetcar zones for the old-Harbourfront feel.", picks: torontoLife },
-    { tier: "BEST VALUE", why: "Cheapest effective rent for the unit + meaningful promo + below-zone-market premium index.", picks: bestValue },
+    { tier: "BEST VALUE", why: "Cheapest effective rent + meaningful promo + below-zone-market premium index.", picks: bestValue },
     { tier: "RUNNER-FIRST", why: "Closest building to top-tier trail (winter-cleared bonus) with manageable CVH commute.", picks: runnerFirst },
     { tier: "AMENITY RICH", why: "Concierge + pool + gym + co-work / theatre — modern building feel.", picks: amenityRich },
-    { tier: "SAFEST BET", why: "Highest external rating (Google + RentSafeTO) with verified pet and no documented red flags.", picks: safestBet }
+    { tier: "SAFEST BET", why: "Highest external rating (Google + RentSafeTO) with no documented red flags.", picks: safestBet }
   ];
 };
 
