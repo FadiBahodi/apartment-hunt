@@ -131,6 +131,34 @@ window.fitScoreColor = function(score) {
 // interpretable: you can be commute-good AND singles-bad at the same time,
 // which is the actual Mississauga vs Toronto tradeoff.
 // ============================================================
+// Peak multipliers per zone — these convert OSRM off-peak → realistic Mon 7am drive
+// Calibrated against Google Maps Mon 7am observations: Humber Bay 23→38min (×1.65), Markwood 17→22min (×1.30), Long Branch 22→36 (×1.65), Erin Mills 5→8 (×1.55)
+window.PEAK_MULTIPLIER = function(a) {
+  const z = (a.zone || '').toLowerCase();
+  // QEW-bound zones (Humber Bay, Mimico, Long Branch, New Toronto) — heavy westbound rush
+  if (/humber bay|mimico|long branch|new toronto|stonegate|swansea|queensway|lakeshore east|lakeshore w|alderwood/.test(z)) return 1.65;
+  // Lake Shore Etobicoke (intermediate)
+  if (/lakeshore|lake shore|park lawn/.test(z)) return 1.60;
+  // Bloor West / Junction / High Park (Bloor + Burnhamthorpe)
+  if (/bloor|junction|roncesvalles|high park|kingsway/.test(z)) return 1.45;
+  // Markland Wood (Burnhamthorpe → Erin Mills Pkwy) — moderate
+  if (/markland|west mall|eringate/.test(z)) return 1.32;
+  // Cooksville / Mississauga central (Hurontario/QEW)
+  if (/cooksville|mississauga valley|hospital|fairview|square one|city centre/.test(z)) return 1.45;
+  // Central Erin Mills (very close, mostly arterial)
+  if (/erin mills|collegeway|sawmill|streetsville|meadowvale/.test(z)) return 1.30;
+  // Port Credit / Clarkson / Lakeview (QEW + Lakeshore)
+  if (/port credit|clarkson|lorne park|lakeview|mineola/.test(z)) return 1.55;
+  // Applewood / Dixie / Rathwood
+  if (/applewood|dixie|rathwood|east mississauga/.test(z)) return 1.40;
+  // Oakville / further west (401 + QEW)
+  if (/oakville|burlington|bronte/.test(z)) return 1.50;
+  // Brampton / north (407/410)
+  if (/brampton|caledon|northwest/.test(z)) return 1.50;
+  // Default
+  return 1.45;
+};
+
 window.computeAxisProfile = function(a) {
   const osrm = (window.OSRM||{})[a.id];
   const dest = ((window.DESTINATIONS && window.DESTINATIONS.routes) || {})[a.id];
@@ -143,14 +171,18 @@ window.computeAxisProfile = function(a) {
 
   // ===== AXES (0-100 each, independent) =====
 
-  // 1. CVH commute — piecewise: 5min=100, 15min=90, 20min=75, 25min=60, 30min=40, 35min=25, 45min=0
-  const cvhMin = osrm ? osrm.duration_min : (a.drive_to_cvh_min_peak || 30);
+  // 1. CVH commute — prefer Google Maps Mon 7am if available (real live+historical traffic),
+  // fallback to OSRM off-peak × per-zone peak multiplier (calibrated against Google observations)
+  const cvhOffPeak = osrm ? osrm.duration_min : (a.drive_to_cvh_min_peak || 30);
+  const peakMult = window.PEAK_MULTIPLIER(a);
+  const googleCvh = (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.mon_7am?.duration_min);
+  const cvhMin = googleCvh != null ? googleCvh : cvhOffPeak * peakMult;
   let cvh;
-  if (cvhMin <= 5) cvh = 100;
-  else if (cvhMin <= 15) cvh = 100 - (cvhMin - 5) * 1.0;       // 5→100, 15→90
-  else if (cvhMin <= 25) cvh = 90 - (cvhMin - 15) * 3;          // 15→90, 25→60
-  else if (cvhMin <= 35) cvh = 60 - (cvhMin - 25) * 3.5;        // 25→60, 35→25
-  else if (cvhMin <= 45) cvh = Math.max(0, 25 - (cvhMin - 35) * 2.5);
+  if (cvhMin <= 8) cvh = 100;
+  else if (cvhMin <= 15) cvh = 100 - (cvhMin - 8) * 1.4;          // 8→100, 15→90
+  else if (cvhMin <= 25) cvh = 90 - (cvhMin - 15) * 3;             // 15→90, 25→60
+  else if (cvhMin <= 35) cvh = 60 - (cvhMin - 25) * 3.5;           // 25→60, 35→25
+  else if (cvhMin <= 50) cvh = Math.max(0, 25 - (cvhMin - 35) * 1.7);
   else cvh = 0;
   cvh = Math.round(cvh);
 
@@ -207,7 +239,7 @@ window.computeAxisProfile = function(a) {
 
   return {
     axes: { cvh, singles, running, cost, toronto },
-    raw: { cvh_min: Math.round(cvhMin), singles_score: zone?.single_density_score, rent, kw_min: Math.round(kwMin), all_in: allIn },
+    raw: { cvh_min: Math.round(cvhMin), cvh_offpeak: Math.round(cvhOffPeak), peak_mult: peakMult.toFixed(2), cvh_source: googleCvh!=null ? 'google_mon_7am' : 'osrm_×peak', singles_score: zone?.single_density_score, rent, kw_min: Math.round(kwMin), all_in: allIn },
     qualitative: { zone_vibe: zoneVibe, building_note: buildingNote, warning: warningBadge, zone_label: zoneKey || a.zone },
     total: Math.round((cvh + singles + running + cost + toronto) / 5),
   };

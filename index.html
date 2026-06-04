@@ -496,6 +496,7 @@ const _jsonLoaders = [
   ['destinations.json', 'DESTINATIONS', null],
   ['photo_index.json', 'PHOTO_INDEX', null],
   ['finalist_deep.json', 'FINALIST_DEEP', null],
+  ['google_routes.json', 'GOOGLE_ROUTES', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
   fetch('data/' + fn)
