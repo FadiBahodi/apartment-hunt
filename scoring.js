@@ -19,22 +19,23 @@ window.computeFitScore = function(a, costs, osrm) {
   const breakdown = [];
 
   // 1. CVH commute (30 pts max)
-  // Prefer real OSRM off-peak minutes when available, scale +30% for "peak" estimation
+  // ER attending shifts deliberately avoid 8am rush (start 7/11am/3pm/7pm/11pm).
+  // Use OSRM off-peak directly with a smaller (×1.15) multiplier for realistic lived experience.
   const osrmRoute = (osrm || window.OSRM || {})[a.id];
   let timeUsed, source;
   if (osrmRoute) {
-    timeUsed = Math.round(osrmRoute.duration_min * 1.4); // off-peak → peak estimate
-    source = `${osrmRoute.duration_min}m OSRM off-peak (~${timeUsed}m peak)`;
+    timeUsed = Math.round(osrmRoute.duration_min * 1.15);
+    source = `${osrmRoute.duration_min}m OSRM off-peak (~${timeUsed}m lived)`;
   } else {
     timeUsed = a.drive_to_cvh_min_peak || 99;
     source = `${timeUsed}m peak (est)`;
   }
   let cvhPts = 0;
-  if (timeUsed <= 8) cvhPts = 30;
-  else if (timeUsed <= 12) cvhPts = 25;
-  else if (timeUsed <= 17) cvhPts = 18;
-  else if (timeUsed <= 25) cvhPts = 11;
-  else if (timeUsed <= 35) cvhPts = 5;
+  if (timeUsed <= 10) cvhPts = 30;       // walking/very close
+  else if (timeUsed <= 18) cvhPts = 26;  // tier-1 commute (Markwood lives here)
+  else if (timeUsed <= 25) cvhPts = 20;  // acceptable (Humber Bay lives here)
+  else if (timeUsed <= 32) cvhPts = 12;  // long
+  else if (timeUsed <= 45) cvhPts = 5;
   score += cvhPts;
   breakdown.push({k: 'CVH commute', v: cvhPts, max: 30, note: source});
 
@@ -78,25 +79,27 @@ window.computeFitScore = function(a, costs, osrm) {
   score += costPts;
   breakdown.push({k: 'Cost', v: costPts, max: 13, note: `~$${totalEst}/mo all-in`});
 
-  // 5. Toronto access (8 pts) — King West / Union
-  const dest = (window.DESTINATIONS_ROUTES || {})[a.id];
+  // 5. Toronto access (8 pts) — King West / Union (real OSRM via destinations.json)
+  const dest = ((window.DESTINATIONS && window.DESTINATIONS.routes) || {})[a.id];
   const kwMin = dest?.king_west?.duration_min;
   const u = kwMin || a.drive_to_union_min_offpeak || 99;
   let torPts = 0;
-  if (u <= 18) torPts = 8;
-  else if (u <= 25) torPts = 6;
-  else if (u <= 32) torPts = 4;
+  if (u <= 15) torPts = 8;
+  else if (u <= 22) torPts = 6;
+  else if (u <= 30) torPts = 4;
   else if (u <= 40) torPts = 2;
   score += torPts;
-  breakdown.push({k: 'Toronto access', v: torPts, max: 8, note: kwMin?`${kwMin}m to King West (OSRM)`:`${u}m Union`});
+  breakdown.push({k: 'Toronto access', v: torPts, max: 8, note: kwMin?`${kwMin.toFixed(0)}m to King West (OSRM)`:`${u}m Union (est)`});
 
-  // 6. Building rating (4 pts)
+  // 6. Building rating (4 pts) — PUNISH unverified condos (declaration pending), AVOIDs, CAUTIONs
   let bldgPts = 2;
   const r = (a.rating || '').toUpperCase();
-  if (r.startsWith('GOOD')) bldgPts = 4;
+  const isUnverifiedCondo = /pending\s+condo\s+declaration|pending\s+declaration|condo.*unverified/i.test(a.rating || '');
+  if (isUnverifiedCondo) bldgPts = -8; // we can't recommend a unit when we don't know if pets allowed, fees, rent vs sale
+  else if (r.startsWith('GOOD')) bldgPts = 4;
   else if (r.startsWith('FINE') || r.startsWith('POTENTIAL') || r.startsWith('STRETCH')) bldgPts = 2;
-  else if (r.startsWith('CAUTION')) bldgPts = 0;
-  else if (r.startsWith('AVOID')) bldgPts = 0;
+  else if (r.startsWith('CAUTION')) bldgPts = -10;
+  else if (r.startsWith('AVOID')) bldgPts = -25;
   score += bldgPts;
   breakdown.push({k: 'Building rep', v: bldgPts, max: 4, note: a.rating || 'unknown'});
 
