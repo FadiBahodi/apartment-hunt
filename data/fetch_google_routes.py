@@ -67,9 +67,15 @@ def next_sunday_5am():
     return next_weekday(calendar.SUNDAY, 5)
 
 TIME_VARIANTS = {
-    "mon_7am":  lambda: next_weekday(calendar.MONDAY, 7),
-    "sat_10am": lambda: next_saturday(10),
-    "offpeak":  lambda: next_sunday_5am(),
+    "mon_7am":  lambda: next_weekday(calendar.MONDAY, 7),       # AM shift start, AGAINST rush from Toronto-side
+    "sat_10am": lambda: next_saturday(10),                      # Weekend leisure
+    "offpeak":  lambda: next_sunday_5am(),                      # Sun 5am baseline
+}
+# Reverse-direction PM commute — these query CVH → home at end-of-shift times.
+# This is the painful direction for Strategy-A folks (driving EAST into PM rush)
+TIME_VARIANTS_PM = {
+    "pm_2pm":   lambda: next_weekday(calendar.MONDAY, 14),      # Day shift end, PM peak STARTING
+    "pm_5pm":   lambda: next_weekday(calendar.FRIDAY, 17),      # Worst case
 }
 
 def fetch_route(origin_lat, origin_lng, dest_lat, dest_lng, departure_time):
@@ -131,8 +137,14 @@ def main():
 
     dests = list(DESTINATIONS.keys())
     times = list(TIME_VARIANTS.keys())
+    pm_mode = False
     if mode == 'cvh_only':
         dests = ['cvh']
+    elif mode == 'cvh_pm':
+        # Reverse-direction: CVH → home at PM commute times. Fetches PM commute pain.
+        dests = ['cvh']
+        times = list(TIME_VARIANTS_PM.keys())
+        pm_mode = True
     elif mode in TIME_VARIANTS:
         times = [mode]
 
@@ -155,8 +167,13 @@ def main():
             for tkey in times:
                 if tkey in out["routes"][a["id"]][dkey]:
                     continue  # already cached
-                departure = TIME_VARIANTS[tkey]()
-                dur, dist, status = fetch_route(a["lat"], a["lng"], dest["lat"], dest["lng"], departure)
+                # PM mode flips direction (CVH origin, building destination)
+                tv_map = TIME_VARIANTS_PM if pm_mode else TIME_VARIANTS
+                departure = tv_map[tkey]()
+                if pm_mode:
+                    dur, dist, status = fetch_route(dest["lat"], dest["lng"], a["lat"], a["lng"], departure)
+                else:
+                    dur, dist, status = fetch_route(a["lat"], a["lng"], dest["lat"], dest["lng"], departure)
                 if dur is not None:
                     out["routes"][a["id"]][dkey][tkey] = {"duration_min": dur, "distance_km": dist}
                     count += 1

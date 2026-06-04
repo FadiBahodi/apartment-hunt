@@ -537,6 +537,20 @@ setTimeout(scheduleRerender, 4000);
   const photoMap = window.PHOTO_MANIFEST || {};
   // VIABLE CANDIDATES default — hides noise (no-rent-data, no-OSRM, AVOID, unverified condos, far-flung Brampton/Oakville)
   let viableOnly = true;
+  // QUALITY TIER default — only show buildings with real photos OR finalist deep-dive
+  // Otherwise 227 wave3 'leads' dilute the experience (no photos, no reviews, just address+rent)
+  let qualityFilter = 'verified';  // 'verified' | 'all' | 'leads_only'
+  function dataQualityTier(a) {
+    const finalist = (window.FINALIST_DEEP || {})[a.id];
+    const photoIdx = (window.PHOTO_INDEX && window.PHOTO_INDEX._buildings && window.PHOTO_INDEX._buildings[a.id]) || null;
+    const hasRealPhoto = photoIdx?.quality_tier === 'tier1_real';
+    const hasReviews = !!((window.REVIEWS || {})[a.id]);
+    const hasCurated = a.pros && a.pros.length >= 2 && !a.pros.some(p => /verify in-person|verify trails on visit|wave3 web-aggregated/i.test(p));
+    if (finalist) return 'finalist';
+    if (hasRealPhoto && hasCurated) return 'verified';
+    if (hasRealPhoto || hasReviews || hasCurated) return 'partial';
+    return 'lead';
+  }
   let activeFilters = new Set(['all']);
   let activeSort = 'fit';
   let selectedId = null;
@@ -733,6 +747,9 @@ setTimeout(scheduleRerender, 4000);
     if (rentMatch) { rentMax = parseInt(rentMatch[1]); textQ = textQ.replace(rentMatch[0], '').trim(); }
     const filtered = APARTMENTS.filter(a => {
       if (viableOnly && !isViableCandidate(a)) return false;
+      const tier = dataQualityTier(a);
+      if (qualityFilter === 'verified' && tier === 'lead') return false;
+      if (qualityFilter === 'leads_only' && tier !== 'lead') return false;
       if (fitMin && computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score < fitMin) return false;
       if (rentMax < 99999 && (a.rent_1bed_low||a.rent_2bed||9999) > rentMax) return false;
       if (textQ) {
@@ -776,12 +793,19 @@ setTimeout(scheduleRerender, 4000);
       return r[Math.floor(r.length/2)];
     })();
     const hidden = APARTMENTS.length - sorted.length;
+    // Count by tier for the filter UI
+    const tierCounts = {finalist:0, verified:0, partial:0, lead:0};
+    APARTMENTS.forEach(a => { if (isViableCandidate(a)) tierCounts[dataQualityTier(a)]++; });
     document.getElementById('stats-strip').innerHTML = `
       <label class="pill" style="cursor:pointer;background:${viableOnly?'var(--accent-soft)':'var(--bg)'};border-color:${viableOnly?'var(--accent)':'var(--border)'}">
         <input type="checkbox" ${viableOnly?'checked':''} onchange="viableOnly=this.checked;renderCards()" style="margin-right:6px;vertical-align:middle">
         Candidates only <b>${sorted.length}</b>
-        ${viableOnly?`<span style="color:var(--muted);margin-left:6px;font-weight:400">(${hidden} hidden: no-OSRM/AVOID/condo-unverified/&gt;32min)</span>`:''}
       </label>
+      <span class="pill" style="background:var(--panel);padding:3px 4px">
+        <button onclick="qualityFilter='verified';renderCards()" style="border:0;padding:3px 8px;border-radius:999px;font-size:11px;cursor:pointer;background:${qualityFilter==='verified'?'var(--accent-soft)':'transparent'};color:${qualityFilter==='verified'?'var(--accent-text)':'var(--muted)'};font-weight:${qualityFilter==='verified'?'600':'400'}">Verified <b>${tierCounts.finalist+tierCounts.verified+tierCounts.partial}</b></button>
+        <button onclick="qualityFilter='all';renderCards()" style="border:0;padding:3px 8px;border-radius:999px;font-size:11px;cursor:pointer;background:${qualityFilter==='all'?'var(--accent-soft)':'transparent'};color:${qualityFilter==='all'?'var(--accent-text)':'var(--muted)'};font-weight:${qualityFilter==='all'?'600':'400'}">All <b>${tierCounts.finalist+tierCounts.verified+tierCounts.partial+tierCounts.lead}</b></button>
+        <button onclick="qualityFilter='leads_only';renderCards()" style="border:0;padding:3px 8px;border-radius:999px;font-size:11px;cursor:pointer;background:${qualityFilter==='leads_only'?'var(--accent-soft)':'transparent'};color:${qualityFilter==='leads_only'?'var(--accent-text)':'var(--muted)'};font-weight:${qualityFilter==='leads_only'?'600':'400'}">Leads only <b>${tierCounts.lead}</b></button>
+      </span>
       <span class="pill">Good rated<b>${good.length}</b></span>
       <span class="pill">Under $2k<b>${cheap.length}</b></span>
       <span class="pill">CVH ≤15m<b>${tier1.length}</b></span>
@@ -803,14 +827,20 @@ setTimeout(scheduleRerender, 4000);
       const isFav = STORE.isFavorite(a.id);
       const isCmp = compareList.includes(a.id);
       const warn = profile.qualitative.warning;
+      const tier = dataQualityTier(a);
+      const tierBadge = tier === 'finalist' ? {label:'★ FINALIST', color:'#fff', bg:'#1652F0'}
+                      : tier === 'verified' ? {label:'✓ Verified', color:'#16a34a', bg:'#dcfce7'}
+                      : tier === 'partial'  ? {label:'~ Partial', color:'#a16207', bg:'#fef3c7'}
+                      : {label:'? Lead', color:'#6b7280', bg:'#f3f4f6'};
       return `
         <div class="card ${selectedId===a.id?'selected':''}" data-id="${a.id}" tabindex="0" role="button" aria-label="${a.name}, ${a.zone}" onclick="selectApt('${a.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectApt('${a.id}')}">
           <div class="thumb" style="${thumbStyle}">${thumbInner}</div>
           <div class="body">
             <div style="display:flex;align-items:baseline;justify-content:space-between;gap:6px">
               <div class="name" style="flex:1">${a.name}${warn?`<span class="warning-pill" style="background:${warn.color}">${warn.label}</span>`:''}</div>
-              <span class="tinybadge" style="background:${photoBadge.bg};color:${photoBadge.color};flex-shrink:0">${photoBadge.label}</span>
+              <span class="tinybadge" style="background:${tierBadge.bg};color:${tierBadge.color};flex-shrink:0">${tierBadge.label}</span>
             </div>
+            <div style="font-size:10px;color:var(--dim);margin-top:-2px;margin-bottom:2px">${photoBadge.label}</div>
             <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
             <div class="axes">${window.renderAxisProfile(profile, {compact:true})}</div>
             ${profile.qualitative.zone_vibe ? `<div class="vibe">${profile.qualitative.zone_vibe}</div>` : ''}
@@ -1094,6 +1124,14 @@ setTimeout(scheduleRerender, 4000);
         ${dm.primary_chokepoint ? `<p style="font-size:11px;color:var(--muted);margin-top:4px"><b>Chokepoint:</b> ${dm.primary_chokepoint}</p>` : ''}
         ${dm.notes ? `<p style="font-size:11px;color:var(--muted)">${dm.notes}</p>` : ''}
       ` : ''}
+      ${(() => {
+        // Embed live Google Maps directions — free, gives the user the actual GMaps repositioning UI
+        const origin = encodeURIComponent(a.address);
+        const dest = encodeURIComponent('2200 Eglinton Ave W, Mississauga, ON');
+        return `<h3>Live Google Maps · ${a.name} → CVH</h3>
+          <iframe src="https://www.google.com/maps?saddr=${origin}&daddr=${dest}&dirflg=d&output=embed" width="100%" height="320" frameborder="0" style="border:1px solid var(--border);border-radius:6px"></iframe>
+          <div style="font-size:11px;color:var(--muted);margin-top:4px">Live traffic, alternate routes, zoom + drag like normal Google Maps. <a href="https://www.google.com/maps/dir/${origin}/${dest}" target="_blank" style="color:var(--accent-text)">Open in Google Maps →</a></div>`;
+      })()}
       ${(() => {
         const dst = (window.DESTINATIONS && window.DESTINATIONS.routes && window.DESTINATIONS.routes[a.id]) || null;
         if (!dst) return '';
