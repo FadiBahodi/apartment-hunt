@@ -777,3 +777,12 @@ const RUNNING = [
   { name: "Centennial Park + Etobicoke Creek", lat: 43.6505, lng: -79.5870, type: "trail-3season", note: "Markland Wood golf breaks creek continuity, no clean 20km" },
   { name: "Burnhamthorpe Trail (winter spine)", lat: 43.5923, lng: -79.6420, type: "trail-allyear", note: "11 km paved, winter-maintained" },
 ];
+
+// Expose top-level consts to window. `const` in a <script> tag does NOT auto-attach to
+// window the way `var` does. Without these, window.APARTMENTS.push(...) in the JSONL
+// loader fails silently inside try/catch and 0 listings get merged.
+window.APARTMENTS = APARTMENTS;
+window.AVOID = AVOID;
+window.RUNNING = RUNNING;
+window.CVH = CVH;
+window.OLD_HOME = OLD_HOME;
