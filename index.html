@@ -123,9 +123,9 @@
   .card .badges-row { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
   .card .badges-row .tinybadge { font-size: 9px; letter-spacing: .03em; text-transform: uppercase; padding: 1px 6px; border-radius: 999px; font-weight: 600; }
   .card .warning-pill { display: inline-block; margin-left: 6px; padding: 1px 6px; font-size: 9px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; border-radius: 3px; color: #fff; vertical-align: middle; }
-  /* Override default markercluster styling — keep our custom divIcon visible */
-  .marker-cluster, .marker-cluster div, .marker-cluster span { background: transparent !important; color: #fff !important; border: 0 !important; }
-  .leaflet-marker-icon { background: transparent !important; }
+  /* Override ONLY cluster default styling. Leave individual markers alone. */
+  .marker-cluster { background: transparent !important; border: 0 !important; }
+  .marker-cluster > div { background: transparent !important; box-shadow: none !important; }
   .card .rent-col { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
   .card .rent { color: var(--text); font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; line-height: 1; }
   .card .rent .sub { color: var(--dim); font-size: 10px; font-weight: 400; margin-top: 2px; display: block; }
