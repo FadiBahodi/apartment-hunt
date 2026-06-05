@@ -239,7 +239,16 @@ window.computeAxisProfile = function(a) {
 
   return {
     axes: { cvh, singles, running, cost, toronto },
-    raw: { cvh_min: Math.round(cvhMin), cvh_offpeak: Math.round(cvhOffPeak), peak_mult: peakMult.toFixed(2), cvh_source: googleCvh!=null ? 'google_mon_7am' : 'osrm_×peak', singles_score: zone?.single_density_score, rent, kw_min: Math.round(kwMin), all_in: allIn },
+    raw: {
+      cvh_min: Math.round(cvhMin),
+      cvh_offpeak: Math.round(cvhOffPeak),
+      peak_mult: peakMult.toFixed(2),
+      cvh_source: googleCvh!=null ? 'google_mon_7am' : 'osrm_×peak',
+      cvh_pm_2pm: (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.pm_2pm?.duration_min),  // CVH→home Mon 2pm (day shift end)
+      cvh_pm_5pm: (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.pm_5pm?.duration_min),  // CVH→home Fri 5pm (worst case)
+      singles_score: zone?.single_density_score,
+      rent, kw_min: Math.round(kwMin), all_in: allIn,
+    },
     qualitative: { zone_vibe: zoneVibe, building_note: buildingNote, warning: warningBadge, zone_label: zoneKey || a.zone },
     total: Math.round((cvh + singles + running + cost + toronto) / 5),
   };

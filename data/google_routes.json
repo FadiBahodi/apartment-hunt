@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-06-04T15:10:41.040822",
+    "updated": "2026-06-04T20:06:54.606256",
     "destinations": {
       "cvh": {
         "name": "Credit Valley Hospital",
@@ -8322,6 +8322,14 @@
         "offpeak": {
           "duration_min": 6.0,
           "distance_km": 2.92
+        },
+        "pm_2pm": {
+          "duration_min": 8.7,
+          "distance_km": 2.93
+        },
+        "pm_5pm": {
+          "duration_min": 8.2,
+          "distance_km": 2.93
         }
       }
     },
@@ -8514,6 +8522,14 @@
         "offpeak": {
           "duration_min": 5.8,
           "distance_km": 2.9
+        },
+        "pm_2pm": {
+          "duration_min": 7.9,
+          "distance_km": 2.9
+        },
+        "pm_5pm": {
+          "duration_min": 7.2,
+          "distance_km": 2.9
         }
       }
     },
@@ -8530,6 +8546,14 @@
         "offpeak": {
           "duration_min": 5.2,
           "distance_km": 2.67
+        },
+        "pm_2pm": {
+          "duration_min": 8.3,
+          "distance_km": 2.76
+        },
+        "pm_5pm": {
+          "duration_min": 7.9,
+          "distance_km": 2.93
         }
       }
     },
@@ -8546,6 +8570,14 @@
         "offpeak": {
           "duration_min": 3.8,
           "distance_km": 1.54
+        },
+        "pm_2pm": {
+          "duration_min": 6.3,
+          "distance_km": 2.0
+        },
+        "pm_5pm": {
+          "duration_min": 6.0,
+          "distance_km": 2.0
         }
       }
     },
@@ -8562,6 +8594,14 @@
         "offpeak": {
           "duration_min": 4.4,
           "distance_km": 1.2
+        },
+        "pm_2pm": {
+          "duration_min": 4.4,
+          "distance_km": 1.27
+        },
+        "pm_5pm": {
+          "duration_min": 4.4,
+          "distance_km": 1.27
         }
       }
     },
@@ -8578,6 +8618,14 @@
         "offpeak": {
           "duration_min": 2.8,
           "distance_km": 1.1
+        },
+        "pm_2pm": {
+          "duration_min": 4.4,
+          "distance_km": 1.16
+        },
+        "pm_5pm": {
+          "duration_min": 4.2,
+          "distance_km": 1.16
         }
       }
     },
@@ -8721,6 +8769,14 @@
         },
         "offpeak": {
           "duration_min": 3.4,
+          "distance_km": 1.32
+        },
+        "pm_2pm": {
+          "duration_min": 4.7,
+          "distance_km": 1.32
+        },
+        "pm_5pm": {
+          "duration_min": 4.6,
           "distance_km": 1.32
         }
       }
@@ -8882,6 +8938,14 @@
         "offpeak": {
           "duration_min": 4.4,
           "distance_km": 1.2
+        },
+        "pm_2pm": {
+          "duration_min": 4.4,
+          "distance_km": 1.27
+        },
+        "pm_5pm": {
+          "duration_min": 4.4,
+          "distance_km": 1.27
         }
       }
     },
@@ -9074,7 +9138,16 @@
       "cvh": {}
     },
     "81_thomas_street_81_thomas_st": {
-      "cvh": {}
+      "cvh": {
+        "pm_2pm": {
+          "duration_min": 6.5,
+          "distance_km": 3.06
+        },
+        "pm_5pm": {
+          "duration_min": 6.3,
+          "distance_km": 3.06
+        }
+      }
     },
     "212_queen_street_south_212_queen_st_s": {
       "cvh": {}
@@ -9173,7 +9246,16 @@
       "cvh": {}
     },
     "4879_kimbermount_avenue_4879_kimbermount": {
-      "cvh": {}
+      "cvh": {
+        "pm_2pm": {
+          "duration_min": 4.9,
+          "distance_km": 1.5
+        },
+        "pm_5pm": {
+          "duration_min": 4.7,
+          "distance_km": 1.5
+        }
+      }
     },
     "880_dundas_street_west_880_dundas_st_w": {
       "cvh": {}
@@ -9257,7 +9339,16 @@
       "cvh": {}
     },
     "5535_glen_erin_drive_5535_glen_erin_dr": {
-      "cvh": {}
+      "cvh": {
+        "pm_2pm": {
+          "duration_min": 8.8,
+          "distance_km": 2.97
+        },
+        "pm_5pm": {
+          "duration_min": 8.2,
+          "distance_km": 2.97
+        }
+      }
     },
     "aberdeen_on_the_kingsway_299_299_the_kin": {
       "cvh": {}
@@ -9377,7 +9468,16 @@
       "cvh": {}
     },
     "ridgeway_3401": {
-      "cvh": {}
+      "cvh": {
+        "pm_2pm": {
+          "duration_min": 7.9,
+          "distance_km": 2.9
+        },
+        "pm_5pm": {
+          "duration_min": 7.2,
+          "distance_km": 2.9
+        }
+      }
     },
     "collegeway_1800": {
       "cvh": {}
