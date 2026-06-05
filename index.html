@@ -6,6 +6,9 @@
 <title>Apartment Hunt — Fadi — July 2026</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -593,7 +596,7 @@ setTimeout(scheduleRerender, 4000);
     return true;
   }
   const filterMatchers = {
-    'pet-verified': a => a.pet_status === 'verified' || a.pet_status === 'verified-large-pets',
+    // pet-verified filter removed — pet axis dropped per user (post-breakup, no longer a constraint)
     'cvh-tier1': a => { const o = (window.OSRM||{})[a.id]; return o ? o.duration_min <= 12 : (a.drive_to_cvh_min_peak||99) <= 15; },
     'toronto-close': a => { const d = (window.DESTINATIONS && window.DESTINATIONS.routes && window.DESTINATIONS.routes[a.id]); return d?.king_west?.duration_min <= 18 || (a.drive_to_union_min_offpeak||99) <= 25; },
     'cheap': a => (a.rent_1bed_low || a.rent_2bed || 9999) <= 2000,
@@ -663,27 +666,28 @@ setTimeout(scheduleRerender, 4000);
       const poly = L.polygon(ring, {
         color: props.color,
         fillColor: props.color,
-        fillOpacity: 0.18,
-        weight: 1.5,
-        opacity: 0.65,
-        smoothFactor: 1.5,
+        fillOpacity: 0.06,            // very subtle by default (was 0.18 — too loud)
+        weight: 1,                    // thin outline (was 1.5)
+        opacity: 0.35,                // muted outline (was 0.65)
+        smoothFactor: 2,
+        interactive: true,
+        bubblingMouseEvents: false,   // don't let polygon swallow pin clicks
       });
       poly.on('mouseover', e => {
-        e.target.setStyle({ fillOpacity: 0.35, weight: 2.5, opacity: 1.0 });
+        e.target.setStyle({ fillOpacity: 0.22, weight: 2, opacity: 0.85 });
       });
       poly.on('mouseout', e => {
-        e.target.setStyle({ fillOpacity: 0.18, weight: 1.5, opacity: 0.65 });
+        e.target.setStyle({ fillOpacity: 0.06, weight: 1, opacity: 0.35 });
       });
       poly.bindTooltip(`<b>${props.name}</b>${props.vibe?'<br><span style="font-size:11px">'+props.vibe+'</span>':''}`, { sticky: true, direction: 'top', className: 'nh-tooltip' });
       poly.on('click', () => {
-        // Filter cards to this neighborhood + zoom map
         const term = (props.zone_key || props.name).toLowerCase();
         document.getElementById('search').value = term;
         renderCards();
         map.fitBounds(poly.getBounds(), { padding: [20, 20], maxZoom: 14 });
       });
       neighborhoodsLayer.addLayer(poly);
-      // Always-on label at centroid using divIcon
+      // Always-on label at centroid — bigger, cleaner Google-Maps-style
       const [lat, lng] = props.label_position || [
         ring.reduce((s,c)=>s+c[0],0)/ring.length,
         ring.reduce((s,c)=>s+c[1],0)/ring.length,
@@ -691,7 +695,7 @@ setTimeout(scheduleRerender, 4000);
       const label = L.marker([lat, lng], {
         icon: L.divIcon({
           className: 'nh-label',
-          html: `<div style="background:rgba(255,255,255,.78);padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;color:#444;white-space:nowrap;font-family:Geist,sans-serif;letter-spacing:.01em;box-shadow:0 1px 2px rgba(0,0,0,.08)">${props.name}</div>`,
+          html: `<div style="font-size:11px;font-weight:600;color:rgba(40,40,40,.85);white-space:nowrap;font-family:Geist,sans-serif;letter-spacing:.02em;text-shadow:0 0 3px rgba(255,255,255,.95),0 0 6px rgba(255,255,255,.7),0 0 9px rgba(255,255,255,.5);transform:translate(-50%,-50%);pointer-events:none">${props.name}</div>`,
           iconSize: null,
           iconAnchor: [0, 0],
         }),
@@ -779,8 +783,25 @@ setTimeout(scheduleRerender, 4000);
     return c === 'good' ? '✓' : c === 'warn' ? '!' : c === 'bad' ? '✕' : '·';
   }
 
+  // Cluster group — collapses dense pins into bubbles at low zoom; click cluster zooms in
+  let markerCluster = null;
   function renderMarkers(list) {
-    Object.values(markers).forEach(m => map.removeLayer(m));
+    if (markerCluster) { map.removeLayer(markerCluster); markerCluster = null; }
+    markers = {};
+    markerCluster = L.markerClusterGroup({
+      maxClusterRadius: 45,
+      spiderfyOnMaxZoom: true,
+      showCoverageOnHover: false,
+      iconCreateFunction: (cluster) => {
+        const n = cluster.getChildCount();
+        const sz = n < 10 ? 32 : n < 50 ? 40 : 48;
+        return L.divIcon({
+          className: '',
+          html: `<div style="background:rgba(22,82,240,.85);color:#fff;width:${sz}px;height:${sz}px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:${n<100?13:11}px;font-family:Geist,sans-serif">${n}</div>`,
+          iconSize: [sz, sz],
+        });
+      }
+    });
     list.forEach(apt => {
       if (!apt.lat || !apt.lng) return;
       const isSelected = selectedId === apt.id;
@@ -795,11 +816,12 @@ setTimeout(scheduleRerender, 4000);
           iconSize: [sz, sz], iconAnchor: [sz/2, sz/2]
         }),
         zIndexOffset: isSelected ? 2000 : (isFav ? 500 : 0)
-      }).addTo(map);
-      // No popup — click goes straight to detail panel
+      });
       m.on('click', () => selectApt(apt.id));
       markers[apt.id] = m;
+      markerCluster.addLayer(m);
     });
+    map.addLayer(markerCluster);
   }
 
   function rentDisplay(apt) {
