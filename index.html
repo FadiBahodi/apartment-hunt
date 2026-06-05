@@ -123,6 +123,9 @@
   .card .badges-row { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
   .card .badges-row .tinybadge { font-size: 9px; letter-spacing: .03em; text-transform: uppercase; padding: 1px 6px; border-radius: 999px; font-weight: 600; }
   .card .warning-pill { display: inline-block; margin-left: 6px; padding: 1px 6px; font-size: 9px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; border-radius: 3px; color: #fff; vertical-align: middle; }
+  /* Override default markercluster styling — keep our custom divIcon visible */
+  .marker-cluster, .marker-cluster div, .marker-cluster span { background: transparent !important; color: #fff !important; border: 0 !important; }
+  .leaflet-marker-icon { background: transparent !important; }
   .card .rent-col { text-align: right; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
   .card .rent { color: var(--text); font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; line-height: 1; }
   .card .rent .sub { color: var(--dim); font-size: 10px; font-weight: 400; margin-top: 2px; display: block; }
@@ -672,18 +675,18 @@ setTimeout(scheduleRerender, 4000);
       const poly = L.polygon(ring, {
         color: props.color,
         fillColor: props.color,
-        fillOpacity: 0.06,            // very subtle by default (was 0.18 — too loud)
-        weight: 1,                    // thin outline (was 1.5)
-        opacity: 0.35,                // muted outline (was 0.65)
+        fillOpacity: 0.30,            // Google-Maps-NYC visibility level
+        weight: 2,
+        opacity: 0.85,
         smoothFactor: 2,
         interactive: true,
-        bubblingMouseEvents: false,   // don't let polygon swallow pin clicks
+        bubblingMouseEvents: false,
       });
       poly.on('mouseover', e => {
-        e.target.setStyle({ fillOpacity: 0.22, weight: 2, opacity: 0.85 });
+        e.target.setStyle({ fillOpacity: 0.45, weight: 3, opacity: 1.0 });
       });
       poly.on('mouseout', e => {
-        e.target.setStyle({ fillOpacity: 0.06, weight: 1, opacity: 0.35 });
+        e.target.setStyle({ fillOpacity: 0.30, weight: 2, opacity: 0.85 });
       });
       poly.bindTooltip(`<b>${props.name}</b>${props.vibe?'<br><span style="font-size:11px">'+props.vibe+'</span>':''}`, { sticky: true, direction: 'top', className: 'nh-tooltip' });
       poly.on('click', () => {
