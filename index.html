@@ -792,26 +792,9 @@ setTimeout(scheduleRerender, 4000);
     return c === 'good' ? '✓' : c === 'warn' ? '!' : c === 'bad' ? '✕' : '·';
   }
 
-  // Cluster group — collapses dense pins into bubbles at low zoom; click cluster zooms in
-  let markerCluster = null;
   function renderMarkers(list) {
-    if (markerCluster) { map.removeLayer(markerCluster); markerCluster = null; }
+    Object.values(markers).forEach(m => map.removeLayer(m));
     markers = {};
-    markerCluster = L.markerClusterGroup({
-      maxClusterRadius: 25,
-      disableClusteringAtZoom: 12,
-      spiderfyOnMaxZoom: true,
-      showCoverageOnHover: false,
-      iconCreateFunction: (cluster) => {
-        const n = cluster.getChildCount();
-        const sz = n < 10 ? 32 : n < 50 ? 40 : 48;
-        return L.divIcon({
-          className: '',
-          html: `<div style="background:rgba(22,82,240,.85);color:#fff;width:${sz}px;height:${sz}px;border-radius:50%;border:2px solid #fff;box-shadow:0 2px 6px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:${n<100?13:11}px;font-family:Geist,sans-serif">${n}</div>`,
-          iconSize: [sz, sz],
-        });
-      }
-    });
     list.forEach(apt => {
       if (!apt.lat || !apt.lng) return;
       const isSelected = selectedId === apt.id;
@@ -821,17 +804,15 @@ setTimeout(scheduleRerender, 4000);
       const favRing = isFav ? 'outline:1.5px solid #1652F0;outline-offset:1px;' : '';
       const m = L.marker([apt.lat, apt.lng], {
         icon: L.divIcon({
-          className: '',
-          html: `<div style="background:${pinColor(apt)};width:${sz}px;height:${sz}px;border-radius:50%;border:1.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)${ring};cursor:pointer;transition:all .15s;${favRing}"></div>`,
+          className: 'apt-pin',
+          html: `<div style="background:${pinColor(apt)};width:${sz}px;height:${sz}px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.5)${ring};cursor:pointer;${favRing}"></div>`,
           iconSize: [sz, sz], iconAnchor: [sz/2, sz/2]
         }),
-        zIndexOffset: isSelected ? 2000 : (isFav ? 500 : 0)
-      });
+        zIndexOffset: isSelected ? 2000 : (isFav ? 500 : 100)
+      }).addTo(map);
       m.on('click', () => selectApt(apt.id));
       markers[apt.id] = m;
-      markerCluster.addLayer(m);
     });
-    map.addLayer(markerCluster);
   }
 
   function rentDisplay(apt) {
