@@ -279,13 +279,9 @@
   <span class="nav-spacer" style="margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;">
     <a href="#" id="show-playbook" class="nav-btn" style="background:var(--accent-soft);color:var(--accent-text);border-color:var(--accent);font-weight:600">Start here · the answer</a>
     <a href="#" id="show-explorer" class="nav-btn" style="background:#fef3c7;color:#92400e;border-color:#f59e0b;font-weight:600">📊 Explorer</a>
-    <a href="#" id="show-tradeoff" class="nav-btn">A vs B</a>
-    <a href="#" id="show-refresh" class="nav-btn">June 4</a>
     <a href="#" id="show-shortlist" class="nav-btn">Top picks</a>
     <a href="#" id="show-favorites" class="nav-btn">Saved <span id="fav-count" class="badge-count">0</span></a>
     <a href="#" id="show-compare" class="nav-btn">Compare <span id="cmp-count" class="badge-count" style="display:none">0</span></a>
-    <a href="#" id="show-timeline" class="nav-btn">Timeline</a>
-    <a href="#" id="show-runclubs" class="nav-btn">Run clubs</a>
     <a href="#" id="show-help" class="nav-btn" title="How to use" style="padding:5px 9px;font-weight:500">?</a>
   </span>
 </header>
@@ -313,36 +309,14 @@
     <div id="compare-content"></div>
   </div>
 </div>
-<div id="timeline-modal" class="modal">
-  <div class="modal-inner" style="max-width:1000px;">
-    <div class="modal-head"><h2 style="margin:0">📅 Timeline · May 11 → July 1</h2><button class="modal-close" data-close="timeline-modal">✕ Close</button></div>
-    <div id="timeline-content">Loading…</div>
-  </div>
-</div>
 <div id="playbook-modal" class="modal">
-  <div class="modal-inner" style="max-width:900px;">
-    <div class="modal-head"><h2 style="margin:0">The Playbook · what to actually do</h2><button class="modal-close" data-close="playbook-modal">×</button></div>
+  <div class="modal-inner" style="max-width:1000px;">
+    <div class="modal-head"><h2 style="margin:0">The Playbook · the answer</h2><button class="modal-close" data-close="playbook-modal">×</button></div>
     <div id="playbook-content" style="font-size:14px;line-height:1.65"></div>
   </div>
 </div>
-<div id="runclubs-modal" class="modal">
-  <div class="modal-inner" style="max-width:900px;">
-    <div class="modal-head"><h2 style="margin:0">Run clubs · the social entry mechanism</h2><button class="modal-close" data-close="runclubs-modal">×</button></div>
-    <div id="runclubs-content" style="font-size:13px;line-height:1.6"></div>
-  </div>
-</div>
-<div id="tradeoff-modal" class="modal">
-  <div class="modal-inner" style="max-width:1100px;">
-    <div class="modal-head"><h2 style="margin:0">Mississauga vs Not-Mississauga · the real tradeoff</h2><button class="modal-close" data-close="tradeoff-modal">×</button></div>
-    <div id="tradeoff-content" style="font-size:13px;line-height:1.65"></div>
-  </div>
-</div>
-<div id="refresh-modal" class="modal">
-  <div class="modal-inner" style="max-width:1000px;">
-    <div class="modal-head"><h2 style="margin:0">What changed · June 4 market refresh</h2><button class="modal-close" data-close="refresh-modal">×</button></div>
-    <div id="refresh-content" style="font-size:13px;line-height:1.6"></div>
-  </div>
-</div>
+<!-- Hidden div retained as renderable container for legacy code paths (content absorbed into Playbook) -->
+<div id="_unused1" style="display:none"><div id="refresh-content"></div><div id="runclubs-content"></div><div id="tradeoff-content"></div><div id="timeline-content"></div></div>
 <div id="explorer-modal" class="modal">
   <div class="modal-inner" style="max-width:1200px;height:88vh;display:flex;flex-direction:column">
     <div class="modal-head"><h2 style="margin:0">Strategy Explorer · the tradeoff visualized</h2><button class="modal-close" data-close="explorer-modal">×</button></div>
@@ -504,7 +478,8 @@ const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
     .catch(() => def)
     .then(d => { window[k] = d; scheduleRerender(); })
 );
-// JSONL listings loader — merges into APARTMENTS, then re-renders
+// JSONL listings loader — merges into APARTMENTS + cross-references AVOID list so wave3 can't sneak through
+window.LISTINGS_LOADED = false;
 const _listingsPromise = Promise.all([
   fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave2_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
@@ -512,20 +487,46 @@ const _listingsPromise = Promise.all([
 ]).then(([t1, t2, t3]) => {
   const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'');
   const existingIds = new Set((window.APARTMENTS||[]).map(a => a.id));
-  let added = 0, errs = 0;
+  // Build AVOID-address lookup from data.js AVOID list (substring match on street address)
+  const avoidList = (window.AVOID || []).map(av => ({
+    addr: (av.address||'').toLowerCase().split(',')[0].trim(),  // e.g. '1257 lakeshore rd e'
+    reason: av.reason || av.issue || 'documented red flags',
+  })).filter(av => av.addr.length >= 6);
+  // Also collect AVOID-rated buildings from data.js APARTMENTS (rating starts with AVOID, or red_flags begins with 'AVOID —')
+  (window.APARTMENTS||[]).forEach(a => {
+    const rating = (a.rating||'').toUpperCase();
+    const rf = (a.red_flags||'');
+    if (rating.startsWith('AVOID') || /^AVOID\s*—/.test(rf)) {
+      avoidList.push({ addr: (a.address||'').toLowerCase().split(',')[0].trim(), reason: rf || a.rating });
+    }
+  });
+  let added = 0, errs = 0, avoidFlagged = 0;
   text.split('\n').forEach(line => {
     line = line.trim();
     if (!line) return;
     try {
       const obj = JSON.parse(line);
       if (obj && obj.id && !existingIds.has(obj.id) && obj.lat && obj.lng) {
+        const addrLower = (obj.address||'').toLowerCase();
+        // AVOID cross-reference: if address contains any AVOID street address, propagate the flag
+        const av = avoidList.find(a => a.addr && addrLower.includes(a.addr));
+        if (av) {
+          obj.rating = 'AVOID — pre-flagged from manual audit';
+          obj.red_flags = `AVOID — ${av.reason}`;
+          avoidFlagged++;
+        }
+        // Postal-centroid flag: surfaces as 'approx location' badge on the card
+        if ((obj.cons||[]).some(c => /postal-area centroid|approx.*location|wave3 web-aggregated/i.test(c))) {
+          obj._approx_location = true;
+        }
         window.APARTMENTS.push(obj);
         existingIds.add(obj.id);
         added++;
       }
     } catch(e) { errs++; }
   });
-  console.log(`[apt-hunt] +${added} listings (${errs} errs). Total: ${window.APARTMENTS.length}`);
+  window.LISTINGS_LOADED = true;
+  console.log(`[apt-hunt] +${added} listings (${errs} errs, ${avoidFlagged} AVOID-flagged). Total: ${window.APARTMENTS.length}`);
   scheduleRerender();
 });
 window.DATA_READY = Promise.all([..._jsonPromises, _listingsPromise]);
@@ -779,9 +780,9 @@ setTimeout(scheduleRerender, 4000);
       }
     });
 
-    document.getElementById('count').textContent = APARTMENTS.length <= 33
-      ? `${sorted.length} of ${APARTMENTS.length}  ·  loading 303 total…`
-      : `${sorted.length} of ${APARTMENTS.length} buildings`;
+    document.getElementById('count').textContent = window.LISTINGS_LOADED
+      ? `${sorted.length} of ${APARTMENTS.length} buildings`
+      : `${sorted.length} of ${APARTMENTS.length}  ·  loading more…`;
     // Stats strip
     const cheap = APARTMENTS.filter(a => (a.rent_1bed_low||a.rent_2bed||9999) <= 2000);
     const tier1 = APARTMENTS.filter(a => { const o = (window.OSRM||{})[a.id]; return o && o.duration_min <= 12; });
@@ -837,7 +838,7 @@ setTimeout(scheduleRerender, 4000);
           <div class="thumb" style="${thumbStyle}">${thumbInner}</div>
           <div class="body">
             <div style="display:flex;align-items:baseline;justify-content:space-between;gap:6px">
-              <div class="name" style="flex:1">${a.name}${warn?`<span class="warning-pill" style="background:${warn.color}">${warn.label}</span>`:''}</div>
+              <div class="name" style="flex:1">${a.name}${warn?`<span class="warning-pill" style="background:${warn.color}">${warn.label}</span>`:''}${a._approx_location?'<span class="warning-pill" style="background:#ca8a04" title="Location may be off by ±200m (postal-area centroid)">~approx</span>':''}</div>
               <span class="tinybadge" style="background:${tierBadge.bg};color:${tierBadge.color};flex-shrink:0">${tierBadge.label}</span>
             </div>
             <div style="font-size:10px;color:var(--dim);margin-top:-2px;margin-bottom:2px">${photoBadge.label}</div>
@@ -1400,7 +1401,7 @@ setTimeout(scheduleRerender, 4000);
   }
 
   // ===== TIMELINE MODAL =====
-  document.getElementById('show-timeline').onclick = e => {
+  const _btn_show_timeline = document.getElementById('show-timeline'); if (_btn_show_timeline) _btn_show_timeline.onclick = e => {
     e.preventDefault();
     renderTimelineModal();
     document.getElementById('timeline-modal').classList.add('show');
@@ -1525,13 +1526,84 @@ setTimeout(scheduleRerender, 4000);
       <div style="background:var(--good-soft);border:1px solid var(--good);border-radius:8px;padding:12px;margin-top:14px;font-size:12px;line-height:1.6">
         <b>Market context (June 4):</b> Cooksville 1-bed −10% YoY, Mimico −4.5%, Lakeview −8.5%, Erin Mills −25% (verify). Stonegate +2.3% MoM. <b>It's a renter's market.</b> Negotiate above advertised promos.
       </div>
+
+      <details style="margin-top:18px;border:1px solid var(--border);border-radius:8px;padding:12px">
+        <summary style="cursor:pointer;font-weight:600;font-size:13px;color:var(--accent-text)">📅 Timeline · May 11 → July 1 (73 to-dos)</summary>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6">
+          <p>Open the Timeline view via <code style="background:var(--panel-2);padding:1px 5px;border-radius:3px">window.__renderTimeline()</code> in the console, or in priority order this week:</p>
+          <ol style="padding-left:18px;line-height:1.7;font-size:12px">
+            <li><b>Call top 5 buildings</b> (this week): Lakewood II, 2335 Lake Shore, Markwood, Reid Drive, 206 Lakeshore E Port Credit</li>
+            <li><b>Confirm pet policy in writing</b> for any condo (Vita, Lago, Eau du Soleil) — RTA s.14 doesn't protect condo-bylaw bans</li>
+            <li><b>Book 3 tours</b> minimum 14 days before July 1</li>
+            <li><b>Pre-approve credit + reference letter</b> from current landlord</li>
+            <li><b>Verify drive time</b> by actual Google Maps run at Tue 6:45am AND Tue 3pm AND Wed 7:15am for each finalist (post-night, AM peak, PM peak)</li>
+            <li><b>Pull MARC score (Mississauga) / RentSafeTO (Toronto)</b> for any building before signing</li>
+            <li><b>Tour at 11pm and 7am</b> not just midday</li>
+            <li><b>U-Haul / pod booking</b> 21 days before move</li>
+          </ol>
+          <p style="color:var(--muted);font-size:11px;font-style:italic">Full 73-item Timeline data exists in data/timeline.json — moved to Todoist project "Residency → Attending (May–Jul 2026)" id <code>6gXFGmxX9M6GVxxH</code></p>
+        </div>
+      </details>
+
+      <details style="margin-top:8px;border:1px solid var(--border);border-radius:8px;padding:12px">
+        <summary style="cursor:pointer;font-weight:600;font-size:13px;color:var(--accent-text)">🏃 Run clubs · the social entry mechanism (51 catalogued)</summary>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.65">
+          <p style="margin-top:0">The hospital won't deliver peer-attendings (you're the youngest). Run clubs are the highest-leverage social entry — same energy, same effort tolerance, recurring weekly cadence, post-run pub culture.</p>
+          <p><b style="color:var(--text)">Top 5 for you:</b></p>
+          <ul style="padding-left:18px;line-height:1.7">
+            <li><b>Humber Bay Run Club</b> — Tue/Wed/Thu 7pm + Sat 8:45am at Humber Bay Shores Park. 25-35 age skew. Strategy A killer feature.</li>
+            <li><b>Parkdale Roadrunners</b> — Mon/Wed 7pm + Sat 9am at Sorauren Park. Brewery culture, social signal 10/10. ~30 min from Markwood.</li>
+            <li><b>High Park Rogue Runners</b> — Tue 6:30pm + Sun 8am. Trail focus.</li>
+            <li><b>Toronto West Athletics</b> — coached track Tue/Thu evenings at Birchmount. Performance-focused, less social but high-talent.</li>
+            <li><b>Midnight Runners Toronto</b> — Thu 8pm. Bootcamp + run hybrid. Very social, 25-35 demographic.</li>
+          </ul>
+          <p style="color:var(--muted);font-size:11px;font-style:italic;margin-bottom:0">Full 51-club catalog with demographics + meet times in data/run_clubs.json</p>
+        </div>
+      </details>
+
+      <details style="margin-top:8px;border:1px solid var(--border);border-radius:8px;padding:12px">
+        <summary style="cursor:pointer;font-weight:600;font-size:13px;color:var(--accent-text)">📊 A vs B · the lived-experience comparison</summary>
+        <div style="font-size:12px;margin-top:8px;line-height:1.65">
+          <p>Real OSRM drive times (corrected with Google live-traffic data where available):</p>
+          <table style="width:100%;border-collapse:collapse;font-size:11.5px;margin-top:6px">
+            <thead><tr style="background:var(--panel-2)"><th style="padding:6px;text-align:left">Building</th><th style="text-align:right;padding:6px">→ CVH Mon 7am</th><th style="text-align:right;padding:6px">→ King W</th><th style="text-align:right;padding:6px">CVH→home Fri 5pm</th></tr></thead>
+            <tbody>
+              <tr><td colspan="4" style="background:#fff3cd;padding:5px 6px;font-weight:700;font-size:10px;letter-spacing:.04em;text-transform:uppercase">Strategy A · singles cluster</td></tr>
+              <tr><td style="padding:5px 6px">Eau du Soleil</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">26 min</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">11 min</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">~38 min</td></tr>
+              <tr><td style="padding:5px 6px">Vita 70 Annie Craig</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">26 min</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">11 min</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">~38 min</td></tr>
+              <tr><td colspan="4" style="background:#dcedc8;padding:5px 6px;font-weight:700;font-size:10px;letter-spacing:.04em;text-transform:uppercase">Strategy B · near work</td></tr>
+              <tr><td style="padding:5px 6px">The Markwood</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">20 min</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">22 min</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">~28 min</td></tr>
+              <tr><td style="padding:5px 6px">Reid Drive</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">7 min</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">30 min</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">~8 min</td></tr>
+              <tr><td style="padding:5px 6px">Arc Erin Mills</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">2 min</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">33 min</td><td style="padding:5px 6px;text-align:right;font-variant-numeric:tabular-nums">~2 min</td></tr>
+            </tbody>
+          </table>
+          <p style="color:var(--muted);font-size:11px;margin-top:8px">KEY INSIGHT: AM commute Humber Bay→CVH is REVERSE direction (against rush), only 26 min. The painful direction is CVH→home Fri 5pm (~38 min) for Strategy A.</p>
+        </div>
+      </details>
+
+      <details style="margin-top:8px;border:1px solid var(--border);border-radius:8px;padding:12px">
+        <summary style="cursor:pointer;font-weight:600;font-size:13px;color:var(--accent-text)">📈 June 4 market refresh · price drops + new listings</summary>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px;line-height:1.65">
+          <p><b style="color:var(--text)">Market signal:</b> GTA-west rentals cooling 4-25% YoY since April. Renter's market for July 1 occupancy. Negotiate above advertised promos.</p>
+          <p><b style="color:var(--text)">Price drops worth chasing:</b> Mimico Estates $1,750 (but AVOID — roaches), Landmark $1,799 (CAUTION), Sherobee $1,599 (AVOID — pests).</p>
+          <p><b style="color:var(--text)">Best new finds:</b></p>
+          <ul style="padding-left:18px;line-height:1.7">
+            <li><b>Lakewood II 1285 Lakeshore E</b> — $1,845, sister to bad Lakewood I but separately managed, 9.4/10 rated, pet OK</li>
+            <li><b>2335 Lake Shore W</b> — Park Property, fully reno, $1,975 + 1mo free, pet OK</li>
+            <li><b>206 Lakeshore Rd E Port Credit</b> — $1,649 verified real (studio), 14-18 min CVH, 1mo free + 6mo parking</li>
+            <li><b>The Bloordale 4340 Bloor W</b> — Hazelview, $2,099, but redevelopment risk (construction noise 1-3 yrs)</li>
+            <li><b>Rathburn (CAPREIT) + Morning Star</b> — confirmed July 1 2026 1BR availability matching your start date</li>
+          </ul>
+          <p><b style="color:var(--text)">Watch-outs:</b> Reid Drive, 285 Park Lawn, Promenade 2301, 340 Mill Rd, Arc Erin Mills all show NO 1-bed inventory currently (likely leased for July). 2285 Collegeway still waitlist.</p>
+        </div>
+      </details>
     `;
     document.getElementById('playbook-content').innerHTML = playbook;
     document.getElementById('playbook-modal').classList.add('show');
   };
 
   // ===== RUN CLUBS MODAL =====
-  document.getElementById('show-runclubs').onclick = e => {
+  const _btn_show_runclubs = document.getElementById('show-runclubs'); if (_btn_show_runclubs) _btn_show_runclubs.onclick = e => {
     e.preventDefault();
     const data = window.RUN_CLUBS;
     if (!data) { document.getElementById('runclubs-content').innerHTML = '<p style="color:var(--muted)">Run clubs data still loading…</p>'; document.getElementById('runclubs-modal').classList.add('show'); return; }
@@ -1647,7 +1719,7 @@ setTimeout(scheduleRerender, 4000);
   }
 
   // ===== A vs B TRADEOFF MODAL =====
-  document.getElementById('show-tradeoff').onclick = e => {
+  const _btn_show_tradeoff = document.getElementById('show-tradeoff'); if (_btn_show_tradeoff) _btn_show_tradeoff.onclick = e => {
     e.preventDefault();
     const dests = (window.DESTINATIONS && window.DESTINATIONS.routes) || {};
     const osrm = window.OSRM || {};
@@ -1756,7 +1828,7 @@ setTimeout(scheduleRerender, 4000);
   };
 
   // ===== JUNE 4 REFRESH MODAL =====
-  document.getElementById('show-refresh').onclick = e => {
+  const _btn_show_refresh = document.getElementById('show-refresh'); if (_btn_show_refresh) _btn_show_refresh.onclick = e => {
     e.preventDefault();
     const r = window.REFRESH;
     if (!r) { document.getElementById('refresh-content').innerHTML = '<p style="color:var(--muted)">Refresh data still loading…</p>'; document.getElementById('refresh-modal').classList.add('show'); return; }
