@@ -499,9 +499,10 @@ window.LISTINGS_LOADED = false;
 const _listingsPromise = Promise.all([
   fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave2_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
-  fetch('data/wave3_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
-]).then(([t1, t2, t3]) => {
-  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'');
+  fetch('data/wave3_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
+  fetch('data/wave4_zones.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
+]).then(([t1, t2, t3, t4]) => {
+  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'') + '\n' + (t4||'');
   const existingIds = new Set((window.APARTMENTS||[]).map(a => a.id));
   // Build AVOID-address lookup from data.js AVOID list. Entries use {name, why} where
   // `name` is "1257 Lakeshore Rd E (Lakewood I)" — split on '(' or ',' to get street address.
@@ -574,8 +575,13 @@ setTimeout(scheduleRerender, 4000);
     const hasRealPhoto = photoIdx?.quality_tier === 'tier1_real';
     const hasReviews = !!((window.REVIEWS || {})[a.id]);
     const hasCurated = a.pros && a.pros.length >= 2 && !a.pros.some(p => /verify in-person|verify trails on visit|wave3 web-aggregated/i.test(p));
+    // Wave G: agent-vetted with axis_* + why_strong + why_weak + listing_url + photo_urls
+    const isWaveG = a.why_strong && a.why_weak && a.axis_cvh_min != null;
+    const hasRealPhotosWaveG = isWaveG && Array.isArray(a.photo_urls) && a.photo_urls.length >= 2;
     if (finalist) return 'finalist';
     if (hasRealPhoto && hasCurated) return 'verified';
+    if (isWaveG && hasRealPhotosWaveG) return 'verified';
+    if (isWaveG) return 'partial';                 // Wave G without photos = partial (still vetted by agent)
     if (hasRealPhoto || hasReviews || hasCurated) return 'partial';
     return 'lead';
   }

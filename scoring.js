@@ -171,12 +171,14 @@ window.computeAxisProfile = function(a) {
 
   // ===== AXES (0-100 each, independent) =====
 
-  // 1. CVH commute — prefer Google Maps Mon 7am if available (real live+historical traffic),
-  // fallback to OSRM off-peak × per-zone peak multiplier (calibrated against Google observations)
-  const cvhOffPeak = osrm ? osrm.duration_min : (a.drive_to_cvh_min_peak || 30);
+  // 1. CVH commute — Wave G buildings have axis_cvh_min pre-computed (live OSRM by agent).
+  // For others: prefer Google Mon 7am, fallback OSRM × peak multiplier.
+  const cvhOffPeak = osrm ? osrm.duration_min : (a.axis_cvh_min != null ? a.axis_cvh_min : (a.drive_to_cvh_min_peak || 30));
   const peakMult = window.PEAK_MULTIPLIER(a);
   const googleCvh = (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.mon_7am?.duration_min);
-  const cvhMin = googleCvh != null ? googleCvh : cvhOffPeak * peakMult;
+  const cvhMin = googleCvh != null ? googleCvh
+              : (a.axis_cvh_min != null ? a.axis_cvh_min * peakMult
+              : cvhOffPeak * peakMult);
   let cvh;
   if (cvhMin <= 8) cvh = 100;
   else if (cvhMin <= 15) cvh = 100 - (cvhMin - 8) * 1.4;          // 8→100, 15→90
@@ -186,14 +188,24 @@ window.computeAxisProfile = function(a) {
   else cvh = 0;
   cvh = Math.round(cvh);
 
-  // 2. Singles density — directly from zone dating score
-  let singles = zone ? zone.single_density_score : 30; // baseline if unknown
+  // 2. Singles density — Wave G has per-building axis_singles_pct (0-100). Else zone-level.
+  let singles = a.axis_singles_pct != null ? a.axis_singles_pct
+              : (zone ? zone.single_density_score : 30);
   singles = Math.round(singles);
 
   // 3. Running — proximity + trail quality
+  // Wave G buildings have axis_trail_m (meters to nearest year-round trail) — use that directly
   const r = (a.running || '').toLowerCase();
   let running;
-  if (/martin goodman|humber bay shores park/.test(r)) running = 95;       // gold standard waterfront
+  if (a.axis_trail_m != null) {
+    const m = a.axis_trail_m;
+    if (m <= 100) running = 95;       // at the door
+    else if (m <= 300) running = 85;
+    else if (m <= 600) running = 75;
+    else if (m <= 1000) running = 60;
+    else if (m <= 1500) running = 45;
+    else running = 30;
+  } else if (/martin goodman|humber bay shores park/.test(r)) running = 95;
   else if (/lakefront promenade|marie curtis|jack darling|rattray/.test(r)) running = 85;
   else if (/sawmill|culham|riverwood|burnhamthorpe/.test(r)) running = 80;
   else if (/etobicoke creek|centennial park/.test(r)) running = 75;
@@ -213,8 +225,11 @@ window.computeAxisProfile = function(a) {
   else cost = Math.max(0, 10 - (allIn - 3200) / 500 * 10);
   cost = Math.round(cost);
 
-  // 5. Toronto access — King West drive time (real OSRM via destinations)
-  const kwMin = dest?.king_west?.duration_min || a.drive_to_union_min_offpeak || 35;
+  // 5. Toronto access — King West drive time (real OSRM via destinations) — Wave G has axis_downtown_min
+  const kwMin = dest?.king_west?.duration_min
+             || a.axis_downtown_min
+             || a.drive_to_union_min_offpeak
+             || 35;
   let toronto;
   if (kwMin <= 10) toronto = 100;
   else if (kwMin <= 15) toronto = 100 - (kwMin - 10) * 2;            // 10→100, 15→90
@@ -234,8 +249,14 @@ window.computeAxisProfile = function(a) {
   let zoneVibe = zone?.honest_vibe || '';
   if (zoneVibe.length > 140) zoneVibe = zoneVibe.slice(0, 137).replace(/\s\S*$/, '') + '…';
 
-  // Building-specific honest note (AI photo audit)
-  const buildingNote = visual?.honest_note || '';
+  // Building-specific honest note. Wave G has why_strong + why_weak; prefer those over photo audit.
+  let buildingNote = '';
+  if (a.why_strong || a.why_weak) {
+    buildingNote = (a.why_strong ? `<b style="color:#16a34a">+</b> ${a.why_strong}<br>` : '') +
+                   (a.why_weak ? `<b style="color:#dc2626">−</b> ${a.why_weak}` : '');
+  } else if (visual?.honest_note) {
+    buildingNote = visual.honest_note;
+  }
 
   return {
     axes: { cvh, singles, running, cost, toronto },
