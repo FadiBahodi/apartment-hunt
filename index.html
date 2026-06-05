@@ -413,8 +413,13 @@
       <div class="row"><span class="dot" style="background: #0E7C3A"></span> Trail (winter)</div>
       <div class="row"><span class="dot" style="background: #7c3aed"></span> Trail (3-season)</div>
       <div class="row"><span class="dot" style="background: #0E7C3A;opacity:.5"></span> Park (OSM)</div>
-      <div class="row"><span style="width:14px;height:0;border-top:2px dashed var(--accent)"></span> Route to CVH (OSRM)</div>
-      <div class="row"><span style="width:14px;height:0;border-top:1px dashed var(--accent)"></span> 15/25m radius (rough)</div>
+      <div class="row"><span style="width:14px;height:3px;background:var(--accent);border-radius:1px"></span> Route to CVH (click building)</div>
+      <div class="row" style="margin-top:6px;border-top:1px solid var(--border);padding-top:6px">
+        <label style="cursor:pointer;display:flex;align-items:center;gap:6px;font-size:11px">
+          <input type="checkbox" id="toggle-neighborhoods" checked onchange="neighborhoodsVisible=this.checked; if(this.checked){neighborhoodsLayer.addTo(map)}else{map.removeLayer(neighborhoodsLayer)}" style="margin:0">
+          Neighborhood overlay
+        </label>
+      </div>
     </div>
   </main>
   <aside id="detail">
@@ -471,12 +476,20 @@ const _jsonLoaders = [
   ['photo_index.json', 'PHOTO_INDEX', null],
   ['finalist_deep.json', 'FINALIST_DEEP', null],
   ['google_routes.json', 'GOOGLE_ROUTES', null],
+  ['neighborhoods.geojson', 'NEIGHBORHOODS', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
   fetch('data/' + fn)
     .then(r => r.ok ? r.json() : def)
     .catch(() => def)
-    .then(d => { window[k] = d; scheduleRerender(); })
+    .then(d => {
+      window[k] = d;
+      // Neighborhood polygons need to be re-rendered after data loads
+      if (k === 'NEIGHBORHOODS' && typeof addNeighborhoodLayer === 'function') {
+        try { addNeighborhoodLayer(); } catch(e) { console.warn('neighborhood render', e); }
+      }
+      scheduleRerender();
+    })
 );
 // JSONL listings loader — merges into APARTMENTS + cross-references AVOID list so wave3 can't sneak through
 window.LISTINGS_LOADED = false;
@@ -625,6 +638,59 @@ setTimeout(scheduleRerender, 4000);
       iconSize: [16, 16], iconAnchor: [8, 8]
     })
   }).addTo(map).bindPopup('<b>11 Charlotte (old)</b>');
+
+  // === NEIGHBORHOOD POLYGONS (Google-Maps-NYC style) ===
+  // 16 hand-curated polygons with soft pastels, always-labeled, click-to-filter
+  let neighborhoodsLayer = L.layerGroup();
+  let neighborhoodsVisible = true;
+  function addNeighborhoodLayer() {
+    if (!window.NEIGHBORHOODS) return;
+    neighborhoodsLayer.clearLayers();
+    window.NEIGHBORHOODS.features.forEach(f => {
+      const props = f.properties;
+      const ring = f.geometry.coordinates[0].map(c => [c[1], c[0]]);
+      const poly = L.polygon(ring, {
+        color: props.color,
+        fillColor: props.color,
+        fillOpacity: 0.18,
+        weight: 1.5,
+        opacity: 0.65,
+        smoothFactor: 1.5,
+      });
+      poly.on('mouseover', e => {
+        e.target.setStyle({ fillOpacity: 0.35, weight: 2.5, opacity: 1.0 });
+      });
+      poly.on('mouseout', e => {
+        e.target.setStyle({ fillOpacity: 0.18, weight: 1.5, opacity: 0.65 });
+      });
+      poly.bindTooltip(`<b>${props.name}</b>${props.vibe?'<br><span style="font-size:11px">'+props.vibe+'</span>':''}`, { sticky: true, direction: 'top', className: 'nh-tooltip' });
+      poly.on('click', () => {
+        // Filter cards to this neighborhood + zoom map
+        const term = (props.zone_key || props.name).toLowerCase();
+        document.getElementById('search').value = term;
+        renderCards();
+        map.fitBounds(poly.getBounds(), { padding: [20, 20], maxZoom: 14 });
+      });
+      neighborhoodsLayer.addLayer(poly);
+      // Always-on label at centroid using divIcon
+      const [lat, lng] = props.label_position || [
+        ring.reduce((s,c)=>s+c[0],0)/ring.length,
+        ring.reduce((s,c)=>s+c[1],0)/ring.length,
+      ];
+      const label = L.marker([lat, lng], {
+        icon: L.divIcon({
+          className: 'nh-label',
+          html: `<div style="background:rgba(255,255,255,.78);padding:1px 6px;border-radius:3px;font-size:10px;font-weight:600;color:#444;white-space:nowrap;font-family:Geist,sans-serif;letter-spacing:.01em;box-shadow:0 1px 2px rgba(0,0,0,.08)">${props.name}</div>`,
+          iconSize: null,
+          iconAnchor: [0, 0],
+        }),
+        interactive: false,
+        keyboard: false,
+      });
+      neighborhoodsLayer.addLayer(label);
+    });
+    if (neighborhoodsVisible) neighborhoodsLayer.addTo(map);
+  }
 
   // === OSM REAL TRAIL POLYLINES + PARK POLYGONS ===
   let osmLayersAdded = false;
@@ -905,9 +971,12 @@ setTimeout(scheduleRerender, 4000);
     const osrm = (window.OSRM||{})[id];
     if (osrm && osrm.geometry) {
       const coords = osrm.geometry.coordinates.map(c => [c[1], c[0]]);
-      routeLayer = L.polyline(coords, {
-        color: '#1652F0', weight: 4, opacity: 0.85, dashArray: '4 6'
-      }).addTo(map).bindTooltip(`OSRM route: ${osrm.distance_km}km · ${osrm.duration_min}min off-peak`, {sticky: true});
+      // Two-layer polyline: white halo underneath for contrast, solid blue on top
+      const halo = L.polyline(coords, { color: '#fff', weight: 8, opacity: 0.9 });
+      const main = L.polyline(coords, { color: '#1652F0', weight: 4, opacity: 1.0 })
+        .bindTooltip(`Driving route → CVH<br>${osrm.distance_km}km · ${osrm.duration_min}min off-peak`, {sticky: true, direction: 'top'});
+      routeLayer = L.layerGroup([halo, main]).addTo(map);
+      main.bringToFront();
     }
     const photos = photoMap[id] || [];
     // Detect synthetic photos (satellite/map mosaics) by filename pattern
@@ -1920,7 +1989,7 @@ setTimeout(scheduleRerender, 4000);
   };
 
   // Wait for optional data, then re-render
-  window.DATA_READY.then(() => { addOsmLayers(); renderCards(); if (selectedId) selectApt(selectedId); });
+  window.DATA_READY.then(() => { addOsmLayers(); addNeighborhoodLayer(); renderCards(); if (selectedId) selectApt(selectedId); });
 </script>
 </body>
 </html>

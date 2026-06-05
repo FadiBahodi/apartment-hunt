@@ -1,0 +1,394 @@
+{
+  "type": "FeatureCollection",
+  "_note": "Hand-curated 16 GTA-west neighborhoods. Polygons are simplified outlines (12-30 coords each) — not survey-accurate, designed for visual region labeling like Google Maps NYC overlay. Colors are soft pastels, distinct per neighborhood within a cluster.",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Humber Bay Shores",
+        "cluster": "etobicoke_south",
+        "color": "#fbbcbc",
+        "vibe": "Dense waterfront condo cluster, 25-40yo singles, Martin Goodman Trail at door",
+        "zone_key": "Humber Bay Shores",
+        "label_position": [43.6230, -79.4810]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.493, 43.621],
+          [-79.484, 43.617],
+          [-79.473, 43.617],
+          [-79.469, 43.622],
+          [-79.471, 43.629],
+          [-79.478, 43.633],
+          [-79.488, 43.635],
+          [-79.494, 43.629],
+          [-79.493, 43.621]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mimico",
+        "cluster": "etobicoke_south",
+        "color": "#fbd0bc",
+        "vibe": "Walkable village strip on Lake Shore, mid-density rentals, good food scene",
+        "zone_key": "Mimico",
+        "label_position": [43.6080, -79.4970]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.515, 43.601],
+          [-79.498, 43.598],
+          [-79.485, 43.603],
+          [-79.484, 43.615],
+          [-79.495, 43.617],
+          [-79.510, 43.616],
+          [-79.518, 43.612],
+          [-79.519, 43.605],
+          [-79.515, 43.601]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Long Branch · New Toronto",
+        "cluster": "etobicoke_south",
+        "color": "#fcecbc",
+        "vibe": "Streetcar-served lakeshore strip, $1,650-2,000 value plays, lower density",
+        "zone_key": "Long Branch / New Toronto",
+        "label_position": [43.5905, -79.5325]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.555, 43.584],
+          [-79.520, 43.582],
+          [-79.510, 43.587],
+          [-79.510, 43.599],
+          [-79.518, 43.604],
+          [-79.540, 43.603],
+          [-79.560, 43.598],
+          [-79.563, 43.589],
+          [-79.555, 43.584]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stonegate · Queensway",
+        "cluster": "etobicoke_south",
+        "color": "#e3fbbc",
+        "vibe": "Quieter family-coded between Queensway + Park Lawn, rising rents 2.3% MoM",
+        "zone_key": "Stonegate-Queensway",
+        "label_position": [43.6320, -79.4970]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.515, 43.625],
+          [-79.493, 43.629],
+          [-79.484, 43.635],
+          [-79.487, 43.643],
+          [-79.500, 43.647],
+          [-79.520, 43.642],
+          [-79.521, 43.633],
+          [-79.515, 43.625]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bloor West Village",
+        "cluster": "west_toronto",
+        "color": "#bcfbe7",
+        "vibe": "Subway + village strip, 40s+ couples, brunch culture, walkable charm",
+        "zone_key": "Old Mill / Kingsway / Bloor West edge",
+        "label_position": [43.6510, -79.4855]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.500, 43.644],
+          [-79.480, 43.641],
+          [-79.467, 43.647],
+          [-79.467, 43.657],
+          [-79.478, 43.661],
+          [-79.495, 43.658],
+          [-79.503, 43.652],
+          [-79.500, 43.644]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Junction · Roncesvalles",
+        "cluster": "west_toronto",
+        "color": "#bcd9fb",
+        "vibe": "Walkable + 25-35 trendy, Parkdale Roadrunners base, indie cafés",
+        "zone_key": "High Park / Roncesvalles / Junction",
+        "label_position": [43.6610, -79.4540]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.480, 43.652],
+          [-79.450, 43.650],
+          [-79.440, 43.655],
+          [-79.440, 43.669],
+          [-79.455, 43.673],
+          [-79.477, 43.668],
+          [-79.482, 43.660],
+          [-79.480, 43.652]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kingsway",
+        "cluster": "west_toronto",
+        "color": "#d2bcfb",
+        "vibe": "Old-money quiet residential, low rental supply, big trees",
+        "zone_key": "Old Mill / Kingsway",
+        "label_position": [43.6505, -79.5085]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.521, 43.644],
+          [-79.505, 43.642],
+          [-79.497, 43.647],
+          [-79.498, 43.658],
+          [-79.510, 43.661],
+          [-79.525, 43.658],
+          [-79.527, 43.650],
+          [-79.521, 43.644]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Markland Wood",
+        "cluster": "etobicoke_central",
+        "color": "#fbe5bc",
+        "vibe": "1960s family suburb, very few singles, Etobicoke Creek trail, Markwood at edge",
+        "zone_key": "Markland Wood / Centennial Park",
+        "label_position": [43.6260, -79.5750]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.595, 43.616],
+          [-79.572, 43.612],
+          [-79.555, 43.617],
+          [-79.550, 43.625],
+          [-79.558, 43.636],
+          [-79.572, 43.640],
+          [-79.595, 43.637],
+          [-79.600, 43.628],
+          [-79.595, 43.616]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "West Mall · Eringate",
+        "cluster": "etobicoke_central",
+        "color": "#bcfbc9",
+        "vibe": "Quieter pockets between West Mall and Eringate, mixed rental quality",
+        "zone_key": "West Mall / Eringate",
+        "label_position": [43.6420, -79.5780]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.598, 43.638],
+          [-79.572, 43.640],
+          [-79.555, 43.645],
+          [-79.556, 43.658],
+          [-79.572, 43.663],
+          [-79.595, 43.660],
+          [-79.605, 43.652],
+          [-79.598, 43.638]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sherway · Eatonville",
+        "cluster": "etobicoke_central",
+        "color": "#bcfbf3",
+        "vibe": "Mall-adjacent, suburban-feel, low walkability but cheap rents",
+        "zone_key": "Sherway Gardens",
+        "label_position": [43.6090, -79.5560]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.580, 43.598],
+          [-79.555, 43.600],
+          [-79.540, 43.605],
+          [-79.540, 43.615],
+          [-79.555, 43.620],
+          [-79.575, 43.618],
+          [-79.585, 43.611],
+          [-79.580, 43.598]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Credit",
+        "cluster": "miss_lakeshore",
+        "color": "#fbbce0",
+        "vibe": "Lakeshore walkable village, Marina Del Rey, GO + Hurontario LRT coming",
+        "zone_key": "Port Credit",
+        "label_position": [43.5560, -79.5870]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.610, 43.550],
+          [-79.585, 43.548],
+          [-79.565, 43.553],
+          [-79.565, 43.562],
+          [-79.580, 43.567],
+          [-79.605, 43.564],
+          [-79.615, 43.559],
+          [-79.610, 43.550]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lakeview Mississauga",
+        "cluster": "miss_lakeshore",
+        "color": "#fbbcd0",
+        "vibe": "Quieter lakeshore strip east of Port Credit, mix of rentals + older condos",
+        "zone_key": "Lakeview",
+        "label_position": [43.5650, -79.5530]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.563, 43.555],
+          [-79.545, 43.555],
+          [-79.530, 43.560],
+          [-79.530, 43.572],
+          [-79.545, 43.577],
+          [-79.560, 43.573],
+          [-79.566, 43.565],
+          [-79.563, 43.555]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Clarkson · Lorne Park",
+        "cluster": "miss_lakeshore",
+        "color": "#bcfbd5",
+        "vibe": "Family-suburban, Rattray Marsh trail, lower rental density",
+        "zone_key": "Clarkson / Lorne Park",
+        "label_position": [43.5210, -79.6190]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.650, 43.510],
+          [-79.625, 43.510],
+          [-79.605, 43.518],
+          [-79.605, 43.530],
+          [-79.625, 43.536],
+          [-79.648, 43.533],
+          [-79.660, 43.525],
+          [-79.650, 43.510]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cooksville · Square One",
+        "cluster": "miss_central",
+        "color": "#dffbbc",
+        "vibe": "Dense Hurontario corridor, high-rise condo cluster, malls, MiWay hub",
+        "zone_key": "Cooksville / Square One",
+        "label_position": [43.5810, -79.6390]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.660, 43.570],
+          [-79.625, 43.568],
+          [-79.610, 43.575],
+          [-79.610, 43.595],
+          [-79.625, 43.602],
+          [-79.658, 43.598],
+          [-79.668, 43.585],
+          [-79.660, 43.570]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Central Erin Mills",
+        "cluster": "miss_west",
+        "color": "#fbe7bc",
+        "vibe": "Family suburbia at CVH doorstep, Daniels Gateway cluster, Sawmill Valley trail",
+        "zone_key": "Central Erin Mills / Sawmill Valley",
+        "label_position": [43.5610, -79.7160]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.745, 43.546],
+          [-79.715, 43.544],
+          [-79.690, 43.549],
+          [-79.690, 43.575],
+          [-79.715, 43.582],
+          [-79.745, 43.578],
+          [-79.755, 43.560],
+          [-79.745, 43.546]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Streetsville Village",
+        "cluster": "miss_west",
+        "color": "#fbcebc",
+        "vibe": "Only walkable village in Mississauga west, Reid Drive cluster, Streetsville GO",
+        "zone_key": "Streetsville",
+        "label_position": [43.5840, -79.7170]
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-79.745, 43.580],
+          [-79.715, 43.580],
+          [-79.690, 43.585],
+          [-79.690, 43.605],
+          [-79.715, 43.612],
+          [-79.745, 43.608],
+          [-79.760, 43.595],
+          [-79.745, 43.580]
+        ]]
+      }
+    }
+  ]
+}
