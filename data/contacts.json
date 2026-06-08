@@ -1,1 +1,182 @@
-{}
+{
+  "eau_du_soleil": {
+    "leasing_phone": "416-296-7368",
+    "leasing_email": "info@firstservice.com",
+    "book_tour_url": "https://eaudusoleil.ca/",
+    "office_hours": "FirstService corporate Mon-Fri 9-5; individual unit tours scheduled via listing agents",
+    "current_promo": "varies by individual landlord (condo, unit-by-unit rentals)",
+    "next_open_house": "n/a",
+    "honest_note": "Condo building - no central leasing office. Best path: search Condos.ca rentals at 20 or 30 Shore Breeze Dr and call the listing realtor directly. FirstService 416-296-7368 only handles building services."
+  },
+  "vita_on_the_lake": {
+    "leasing_phone": "647-496-4074",
+    "leasing_email": "sls_vitaonthelake@mattamycorp.com",
+    "book_tour_url": "https://vitaonthelake.com/",
+    "office_hours": "Building concierge 24/7; Mattamy sales centre 416-630-8282 Mon-Fri 10-6",
+    "current_promo": "Condo - varies by unit",
+    "next_open_house": "n/a",
+    "honest_note": "Condo (70 Annie Craig). Like Eau du Soleil, individual unit rentals - find listing on Condos.ca and call the listing agent. Building number 647-496-4074 reaches concierge."
+  },
+  "lago_waterfront": {
+    "leasing_phone": "416-495-3544",
+    "leasing_email": "n/a (FirstService Residential)",
+    "book_tour_url": "https://lagocondos.ca/",
+    "office_hours": "FirstService corporate Mon-Fri 9-5",
+    "current_promo": "varies by unit",
+    "next_open_house": "n/a",
+    "honest_note": "Condo at 56 Annie Craig managed by FirstService. Best to browse listings on Condos.ca and book viewings with individual realtors. No single leasing office for the building."
+  },
+  "markwood_4365": {
+    "leasing_phone": "647-956-9141",
+    "leasing_email": "leasing@themarkwoodliving.com",
+    "book_tour_url": "https://www.themarkwoodliving.com/",
+    "office_hours": "Mon-Fri 11AM-7PM, Sat-Sun 10AM-6PM",
+    "current_promo": "Check website (purpose-built rental, frequent move-in incentives)",
+    "next_open_house": "Walk-in tours during office hours",
+    "honest_note": "BEST FOR ER SCHEDULE - weekend hours 10-6 both Sat and Sun, weekday evenings till 7. Direct leasing line. Just call 647-956-9141 or email."
+  },
+  "arc_erin_mills": {
+    "leasing_phone": "905-273-9333",
+    "leasing_email": "info@danielsgateway.com",
+    "book_tour_url": "https://danielsgateway.com/communities/arc-condos-erin-mills/",
+    "office_hours": "Mon-Fri 9-6, Sat 10-5 (Daniels Gateway leasing office)",
+    "current_promo": "Skyrise Rental Residences from ~$2,950 (Daniels Corporation purpose-built rentals)",
+    "next_open_house": "Book individual tours via website",
+    "honest_note": "Daniels Gateway is a proper purpose-built rental program. Use the danielsgateway.com 'Book a tour' form or call Daniels rental hotline at 905-273-9333."
+  },
+  "reid_drive": {
+    "leasing_phone": "1-866-803-5169",
+    "leasing_email": "info@irent.com",
+    "book_tour_url": "https://www.irent.com/communities/reid-drive-apartments",
+    "office_hours": "InterRent leasing Mon-Fri 9-6, Sat 10-4",
+    "current_promo": "Check listing portal (InterRent runs rotating concessions)",
+    "next_open_house": "Book online via irent.com listing",
+    "honest_note": "InterRent corporate leasing - use the 'Book a Tour' button on irent.com. Site has a chat widget that gets faster responses than the 1-866 line."
+  },
+  "lakewood_ii_1285": {
+    "leasing_phone": "905-278-9405",
+    "leasing_email": "leasing@homestead.ca",
+    "book_tour_url": "https://www.homestead.ca/apartments/lakewood-apartments-ii",
+    "office_hours": "Mon-Fri 9-5 (Homestead Land Holdings - typical weekday only)",
+    "current_promo": "Check homestead.ca listings page",
+    "next_open_house": "By appointment only",
+    "honest_note": "Direct on-site number. Homestead is a large institutional landlord with limited evening/weekend availability - book early in the day."
+  },
+  "lakeshore_2335": {
+    "leasing_phone": "416-256-7368",
+    "leasing_email": "info@parkproperty.ca",
+    "book_tour_url": "https://www.parkproperty.ca/apartments/2335-lake-shore-blvd-west",
+    "office_hours": "Park Property Mon-Fri 9-5",
+    "current_promo": "1 Month Free + $1000 Move-In Bonus (active per latest listing)",
+    "next_open_house": "By appointment",
+    "honest_note": "Park Property Management head office at 416-256-7368. Active move-in promo right now - good time to call. Weekday hours only."
+  },
+  "lakeshore_2495": {
+    "leasing_phone": "226-639-5234",
+    "leasing_email": "leasing-2495lakeshore@metcap.com",
+    "book_tour_url": "https://www.metcap.com/property/2495-lake-shore-boulevard-west-etobicoke-on-m8v-1c5/",
+    "office_hours": "Mon-Fri 9AM-8PM, Sat 10AM-5PM, Sun 12PM-5PM",
+    "current_promo": "Check MetCap listing - frequent first-month-free deals",
+    "next_open_house": "By appointment, all 7 days",
+    "honest_note": "GREAT HOURS for ER schedule - open 7 days, evenings until 8pm. BUT - MetCap is ACORN's 2025 Worst Landlord. Treat tour as a recon mission, not a commitment."
+  },
+  "lakeshore_206e": {
+    "leasing_phone": "905-278-2700",
+    "leasing_email": "leasing@signetgroup.com",
+    "book_tour_url": "https://www.206lakeshoreroad.com/contact",
+    "office_hours": "Signet Group Mon-Fri 9-5",
+    "current_promo": "1BR/2BR $1,685-$2,418 (verify on website)",
+    "next_open_house": "Private tours only - book via website form",
+    "honest_note": "Signet Group manages. Use the website 'Schedule a tour' form - they respond same-day during weekdays. Office is small, no walk-ins."
+  },
+  "waterford_tower_2645": {
+    "leasing_phone": "905-822-1840",
+    "leasing_email": "waterford@quadreal.com",
+    "book_tour_url": "https://www.rentcafe.com/apartments/on/mississauga/waterford-tower-3/default.aspx",
+    "office_hours": "Mon-Fri 9-5, Sat by appointment",
+    "current_promo": "Check RentCafe listing",
+    "next_open_house": "Schedule via RentCafe portal (online self-serve)",
+    "honest_note": "ADDRESS NOTE - this is 2645 Battleford Rd Mississauga (not 2645 Kipling). QuadReal-managed = institutional, well-run. Use RentCafe 'Schedule a Tour' button for fastest booking - bypasses phone tag."
+  },
+  "143_stephen_drive": {
+    "leasing_phone": "226-407-0984",
+    "leasing_email": "lead-mes-100431-media-174@leadmanaging.com",
+    "book_tour_url": "https://www.metcap.com/property/143-stephen-drive-etobicoke-on-m8y-3n5/",
+    "office_hours": "Mon-Fri 9AM-8PM, Sat 10AM-5PM, Sun 12PM-5PM",
+    "current_promo": "Check MetCap listings",
+    "next_open_house": "By appointment, 7 days/week",
+    "honest_note": "GREAT 7-day evening hours for ER schedule. BUT MetCap is flagged AVOID by ACORN. Tour with skepticism - ask current tenants about pests and response times before signing."
+  },
+  "65_windermere": {
+    "leasing_phone": "647-692-1426",
+    "leasing_email": "leasing@greenwin.ca",
+    "book_tour_url": "https://www.greenwin.ca/apartments-for-rent/65-windermere-ave",
+    "office_hours": "Mon-Fri 9-6, Sat 10-4",
+    "current_promo": "1 MONTH FREE RENT (per Greenwin social media)",
+    "next_open_house": "Use Greenwin 'Book a Tour' web form",
+    "honest_note": "Greenwin has rotating 1-month-free deal. Direct on-site line. CAUTION - Greenwin reputation mixed on pest control. Tour and ask current residents."
+  },
+  "60_mountview": {
+    "leasing_phone": "416-762-2454",
+    "leasing_email": "beauxrentals@gmail.com",
+    "book_tour_url": "https://beauxproperties.ca/category/60-mountview-ave/",
+    "office_hours": "Mon-Fri 9-5, Sat by appointment",
+    "current_promo": "1 month free at end of first year lease",
+    "next_open_house": "Email beauxrentals@gmail.com to book",
+    "honest_note": "Small private landlord (Beaux Properties / High Park Property Management). Email is fastest - personal owner responds within a day. Also try 647-501-RENT (7368)."
+  },
+  "70_high_park_ave": {
+    "leasing_phone": "905-502-7900",
+    "leasing_email": "n/a (Brookfield Condo Services)",
+    "book_tour_url": "https://condos.ca/toronto/high-park-condominiums-70-high-park-ave",
+    "office_hours": "Brookfield concierge 24/7; individual realtors set their own hours",
+    "current_promo": "Condo - varies by individual unit owner",
+    "next_open_house": "n/a",
+    "honest_note": "Condo building (no central leasing office). Browse Condos.ca / Zumper / Padmapper rentals at 70 High Park Ave and call the listing agent directly. Brookfield 647-351-6075 only for building services."
+  },
+  "grenadier_square_40_high_park": {
+    "leasing_phone": "833-330-7030",
+    "leasing_email": "grenadiersquare@gwlra.com",
+    "book_tour_url": "https://www.gwlraresidential.com/apartments/on/toronto/grenadier-square/",
+    "office_hours": "Mon-Fri 9-6, Sat 10-5 (GWLRA leasing centre at 65 High Park)",
+    "current_promo": "Studios from $1,885 / 1BR from $2,025 / 2BR from $2,892 (verify on website)",
+    "next_open_house": "Book tour via gwlraresidential.com 'Schedule a Tour' button",
+    "honest_note": "Toll-free leasing line, on-site dedicated office at 65 High Park (next door). Easiest path: use the website tour form. GWLRA is institutional and responsive."
+  },
+  "the_campbell_299_campbell": {
+    "leasing_phone": "833-660-4195",
+    "leasing_email": "info@rentthecampbell.com",
+    "book_tour_url": "https://www.rentthecampbell.com/contact",
+    "office_hours": "Mon 9-5; Tue-Thu 11-7; Fri-Sat 10-6; Sun closed",
+    "current_promo": "2 MONTHS FREE on eligible suites; rent from $2,025",
+    "next_open_house": "Tours by appointment via rentthecampbell.com",
+    "honest_note": "BEST 6-DAY HOURS for ER schedule - evenings to 7pm Tue-Thu, Saturday until 6pm. Active 2-months-free promo. Call 833-660-4195 or use online form."
+  },
+  "old_mill_station_2675_bloor": {
+    "leasing_phone": "416-296-7368",
+    "leasing_email": "info@delrentals.com",
+    "book_tour_url": "https://www.delrentals.com/condos-for-rent/downtown/old-mill/1-old-mill-drive",
+    "office_hours": "Del Condo Rentals Mon-Fri 9-5",
+    "current_promo": "Varies by unit (condo, unit-by-unit)",
+    "next_open_house": "Schedule via listing agent",
+    "honest_note": "ADDRESS UNCERTAIN - 2675 Bloor W does not match a known building; the Old Mill Station condos cluster is 1 Old Mill Dr and 2 Old Mill Dr. Use Del Condominium Rentals or browse Condos.ca for these addresses."
+  },
+  "concord_canada_house": {
+    "leasing_phone": "416-883-3888",
+    "leasing_email": "info@welcometorent.com",
+    "book_tour_url": "https://welcometorent.com/home",
+    "office_hours": "Mon-Fri 10-6, Sat 11-5 (Concord on-site rental office at 357 Front St W)",
+    "current_promo": "Concord 'Now Leasing' incentives - verify on welcometorent.com",
+    "next_open_house": "Book tour via welcometorent.com",
+    "honest_note": "Concord has a DEDICATED on-site rental office (rare for a condo). 416-883-3888 reaches their leasing staff directly. Skip Del Rentals (416-296-7368) - go straight to Concord's own program."
+  },
+  "liberty_house_15_solidarity": {
+    "leasing_phone": "647-956-0520",
+    "leasing_email": "leasing@rentlibertyhouse.ca",
+    "book_tour_url": "https://www.rentlibertyhouse.ca/contactus",
+    "office_hours": "Mon-Fri 10AM-7PM, Sat-Sun 10AM-5PM",
+    "current_promo": "Check rentlibertyhouse.ca for current concessions",
+    "next_open_house": "Walk-in tours during office hours",
+    "honest_note": "EXCELLENT 7-DAY hours, weeknight to 7pm. Direct on-site leasing line. Professional purpose-built rental in Liberty Village."
+  }
+}

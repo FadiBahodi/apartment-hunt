@@ -434,6 +434,12 @@
           Neighborhood overlay
         </label>
       </div>
+      <div class="row">
+        <label style="cursor:pointer;display:flex;align-items:center;gap:6px;font-size:11px">
+          <input type="checkbox" id="toggle-keylocs" onchange="keyLocationsVisible=this.checked; if(this.checked){keyLocationsLayer.addTo(map)}else{map.removeLayer(keyLocationsLayer)}" style="margin:0">
+          Key locations (run clubs / downtown anchors / subway termini)
+        </label>
+      </div>
     </div>
   </main>
   <aside id="detail">
@@ -685,6 +691,38 @@ setTimeout(scheduleRerender, 4000);
       iconSize: [16, 16], iconAnchor: [8, 8]
     })
   }).addTo(map).bindPopup('<b>11 Charlotte (old)</b>');
+
+  // === KEY LOCATIONS LAYER (toggleable: subway stations, run clubs, downtown anchors) ===
+  let keyLocationsLayer = L.layerGroup();
+  let keyLocationsVisible = false;  // off by default — opt in via legend
+  const KEY_LOCATIONS = [
+    // Downtown anchors (for dating reach)
+    {name:'King West / Wellington (dating anchor)', lat:43.6437, lng:-79.4030, icon:'🍸', color:'#dc2626'},
+    {name:'Yorkville / Bay-Bloor (high-end date)',  lat:43.6705, lng:-79.3940, icon:'🥂', color:'#dc2626'},
+    {name:'Harbourfront (old life base)',            lat:43.6432, lng:-79.4006, icon:'⚓', color:'#0284c7'},
+    {name:'Toronto General Hospital',                lat:43.6589, lng:-79.3892, icon:'🏥', color:'#7c3aed'},
+    {name:'Pearson YYZ T1 (US trips)',               lat:43.6777, lng:-79.6248, icon:'✈️', color:'#7c3aed'},
+    {name:'Trillium MS Hospital',                    lat:43.5891, lng:-79.5950, icon:'🏥', color:'#7c3aed'},
+    // Run club meet points (high-relevance)
+    {name:'Humber Bay Run Club · Tue/Wed/Thu 7pm + Sat 8:45am', lat:43.6220, lng:-79.4810, icon:'🏃', color:'#16a34a'},
+    {name:'Parkdale Roadrunners · Tue 7pm Stay Gold 124 Brock', lat:43.6395, lng:-79.4395, icon:'🏃', color:'#16a34a'},
+    {name:'High Park Rogue Runners · Tue 6:30pm + Sun 8am',      lat:43.6465, lng:-79.4640, icon:'🏃', color:'#16a34a'},
+    {name:'Midnight Runners Toronto · Thu 8pm',                  lat:43.6532, lng:-79.3832, icon:'🏃', color:'#16a34a'},
+    {name:'Toronto West Athletics · Tue/Thu eve Birchmount',     lat:43.6940, lng:-79.2600, icon:'🏃', color:'#16a34a'},
+    // Key subway termini for context
+    {name:'Union Station (downtown core)',                       lat:43.6453, lng:-79.3806, icon:'Ⓜ', color:'#1652F0'},
+    {name:'Kipling Station (westernmost BD)',                    lat:43.6376, lng:-79.5358, icon:'Ⓜ', color:'#1652F0'},
+  ];
+  KEY_LOCATIONS.forEach(k => {
+    keyLocationsLayer.addLayer(L.marker([k.lat, k.lng], {
+      icon: L.divIcon({
+        className: '',
+        html: `<div style="background:${k.color};width:24px;height:24px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;font-size:13px">${k.icon}</div>`,
+        iconSize: [28, 28], iconAnchor: [14, 14]
+      }),
+      zIndexOffset: 1500
+    }).bindPopup(`<b>${k.name}</b>`));
+  });
 
   // === NEIGHBORHOOD POLYGONS (Google-Maps-NYC style) ===
   // 16 hand-curated polygons with soft pastels, always-labeled, click-to-filter
