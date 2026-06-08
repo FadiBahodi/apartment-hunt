@@ -508,9 +508,10 @@ const _listingsPromise = Promise.all([
   fetch('data/wave3_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave4_zones.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave5_high_park.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
-  fetch('data/wave6_king_west.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
-]).then(([t1, t2, t3, t4, t5, t6]) => {
-  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'') + '\n' + (t4||'') + '\n' + (t5||'') + '\n' + (t6||'');
+  fetch('data/wave6_king_west.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
+  fetch('data/wave7_junction_depth.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
+]).then(([t1, t2, t3, t4, t5, t6, t7]) => {
+  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'') + '\n' + (t4||'') + '\n' + (t5||'') + '\n' + (t6||'') + '\n' + (t7||'');
   const existingIds = new Set((window.APARTMENTS||[]).map(a => a.id));
   // Build AVOID-address lookup from data.js AVOID list. Entries use {name, why} where
   // `name` is "1257 Lakeshore Rd E (Lakewood I)" — split on '(' or ',' to get street address.
@@ -595,6 +596,7 @@ setTimeout(scheduleRerender, 4000);
   }
   let activeFilters = new Set(['all']);
   let activeSort = 'fit';
+  let groupByZone = true;   // group cards by zone with section headers (kills flat 700-card list)
   let selectedId = null;
   let compareList = []; // ids
   function isViableCandidate(a) {
@@ -909,7 +911,7 @@ setTimeout(scheduleRerender, 4000);
       <span class="pill">Best fit<b>${bestFit}/100</b></span>
       <span class="pill">Saved<b>${STORE.favorites().length}</b></span>
     `;
-    const html = sorted.map(a => {
+    const htmlArr = sorted.map(a => {
       const cls = ratingClass(a.rating);
       const photos = photoMap[a.id] || [];
       const photoIdx = (window.PHOTO_INDEX && window.PHOTO_INDEX._buildings && window.PHOTO_INDEX._buildings[a.id]) || null;
@@ -965,7 +967,28 @@ setTimeout(scheduleRerender, 4000);
             </div>
           </div>
         </div>`;
-    }).join('');
+    });
+    const html = htmlArr.join('');
+    // GROUP BY ZONE so user can compare within-zone rather than flat 700-card list
+    function buildZoneGroupedHtml(rawHtmlList, sortedList) {
+      if (!groupByZone) return rawHtmlList.join('');
+      const byZone = {};
+      sortedList.forEach((a, i) => {
+        const z = (a.zone || 'Other').split(' / ')[0].split('·')[0].trim();
+        if (!byZone[z]) byZone[z] = [];
+        byZone[z].push({a, idx: i, html: rawHtmlList[i]});
+      });
+      // Sort zones by their best-fit building
+      const zoneOrder = Object.keys(byZone).sort((x, y) => {
+        const fx = computeAxisProfile(byZone[x][0].a).total;
+        const fy = computeAxisProfile(byZone[y][0].a).total;
+        return fy - fx;
+      });
+      return zoneOrder.map(z => {
+        const cards = byZone[z];
+        return `<div style="margin:14px 0 6px 0;padding:4px 8px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--border);display:flex;justify-content:space-between"><span>${z}</span><span style="color:var(--dim);font-weight:400;letter-spacing:0;text-transform:none">${cards.length} building${cards.length===1?'':'s'}</span></div>${cards.map(c => c.html).join('')}`;
+      }).join('');
+    }
     // TOP-10 HERO: composite-ranked across ALL viable, surfaces the "call this week" picks
     const top10Hero = (() => {
       const ranked = APARTMENTS
@@ -994,7 +1017,11 @@ setTimeout(scheduleRerender, 4000);
         ${ranked.map(row).join('')}
       </div>`;
     })();
-    document.getElementById('cards').innerHTML = top10Hero + (html || '<p style="color:var(--muted)">No matches.</p>');
+    // Per-zone grouping when enabled (default); else flat sorted list
+    const cardsHtml = (sorted.length === 0)
+      ? '<p style="color:var(--muted)">No matches.</p>'
+      : buildZoneGroupedHtml(htmlArr, sorted);
+    document.getElementById('cards').innerHTML = top10Hero + cardsHtml;
     renderMarkers(sorted);
     document.getElementById('fav-count').textContent = STORE.favorites().length;
     document.getElementById('cmp-count').textContent = compareList.length ? `(${compareList.length})` : '';
