@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-06-04T20:06:54.606256",
+    "updated": "2026-06-07T23:04:14.106691",
     "destinations": {
       "cvh": {
         "name": "Credit Valley Hospital",
@@ -9535,6 +9535,1410 @@
     },
     "hurontario_5105": {
       "cvh": {}
+    },
+    "reina-689-queensway": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 32.8,
+          "distance_km": 23.4
+        },
+        "pm_5pm": {
+          "duration_min": 40.8,
+          "distance_km": 32.76
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 25.3,
+          "distance_km": 10.44
+        }
+      }
+    },
+    "berry-162": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 33.0,
+          "distance_km": 24.49
+        },
+        "pm_5pm": {
+          "duration_min": 39.8,
+          "distance_km": 33.67
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 21.4,
+          "distance_km": 8.83
+        }
+      }
+    },
+    "berry-183": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 32.8,
+          "distance_km": 24.56
+        },
+        "pm_5pm": {
+          "duration_min": 40.1,
+          "distance_km": 33.74
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.9,
+          "distance_km": 8.78
+        }
+      }
+    },
+    "stephen-143": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 33.2,
+          "distance_km": 24.64
+        },
+        "pm_5pm": {
+          "duration_min": 40.2,
+          "distance_km": 33.82
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.7,
+          "distance_km": 9.45
+        }
+      }
+    },
+    "stephen-115": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 33.0,
+          "distance_km": 24.6
+        },
+        "pm_5pm": {
+          "duration_min": 40.1,
+          "distance_km": 33.78
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.7,
+          "distance_km": 9.42
+        }
+      }
+    },
+    "park-lawn-317": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.6,
+          "distance_km": 25.54
+        },
+        "pm_5pm": {
+          "duration_min": 42.2,
+          "distance_km": 34.72
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.8,
+          "distance_km": 9.51
+        }
+      }
+    },
+    "crown-hill-1": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 33.7,
+          "distance_km": 24.92
+        },
+        "pm_5pm": {
+          "duration_min": 40.8,
+          "distance_km": 34.1
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 21.7,
+          "distance_km": 9.19
+        }
+      }
+    },
+    "hill-heights-10": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.7,
+          "distance_km": 25.56
+        },
+        "pm_5pm": {
+          "duration_min": 42.2,
+          "distance_km": 34.74
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.9,
+          "distance_km": 9.53
+        }
+      }
+    },
+    "royal-heights-8": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.8,
+          "distance_km": 25.58
+        },
+        "pm_5pm": {
+          "duration_min": 42.3,
+          "distance_km": 34.76
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.9,
+          "distance_km": 9.54
+        }
+      }
+    },
+    "royal-york-1407": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.2,
+          "distance_km": 25.84
+        },
+        "pm_5pm": {
+          "duration_min": 33.5,
+          "distance_km": 26.31
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 35.2,
+          "distance_km": 14.46
+        }
+      }
+    },
+    "aberfoyle-1": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 30.3,
+          "distance_km": 27.45
+        },
+        "pm_5pm": {
+          "duration_min": 36.9,
+          "distance_km": 28.01
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 33.0,
+          "distance_km": 12.44
+        }
+      }
+    },
+    "royal-york-2": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 35.1,
+          "distance_km": 25.21
+        },
+        "pm_5pm": {
+          "duration_min": 40.6,
+          "distance_km": 33.93
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 25.1,
+          "distance_km": 9.48
+        }
+      }
+    },
+    "samuel-wood-20": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.2,
+          "distance_km": 27.64
+        },
+        "pm_5pm": {
+          "duration_min": 35.9,
+          "distance_km": 28.31
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 34.0,
+          "distance_km": 12.58
+        }
+      }
+    },
+    "james-club-1135": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 30.7,
+          "distance_km": 26.25
+        },
+        "pm_5pm": {
+          "duration_min": 36.1,
+          "distance_km": 27.64
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 32.2,
+          "distance_km": 12.75
+        }
+      }
+    },
+    "westlake_phase1_2220": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 36.5,
+          "distance_km": 25.51
+        },
+        "pm_5pm": {
+          "duration_min": 39.6,
+          "distance_km": 33.62
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.2,
+          "distance_km": 8.65
+        }
+      }
+    },
+    "westlake_phase2_2200": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 36.6,
+          "distance_km": 25.52
+        },
+        "pm_5pm": {
+          "duration_min": 40.1,
+          "distance_km": 33.77
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.2,
+          "distance_km": 8.66
+        }
+      }
+    },
+    "westlake_encore_10parklawn": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.0,
+          "distance_km": 24.73
+        },
+        "pm_5pm": {
+          "duration_min": 39.3,
+          "distance_km": 33.48
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.4,
+          "distance_km": 8.72
+        }
+      }
+    },
+    "beyond_the_sea_star": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 35.7,
+          "distance_km": 24.99
+        },
+        "pm_5pm": {
+          "duration_min": 40.4,
+          "distance_km": 33.69
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.3,
+          "distance_km": 8.98
+        }
+      }
+    },
+    "waterscapes_80marine": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 37.1,
+          "distance_km": 25.72
+        },
+        "pm_5pm": {
+          "duration_min": 39.0,
+          "distance_km": 33.41
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.7,
+          "distance_km": 8.86
+        }
+      }
+    },
+    "explorer_58marine": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 37.0,
+          "distance_km": 25.66
+        },
+        "pm_5pm": {
+          "duration_min": 39.2,
+          "distance_km": 33.47
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.5,
+          "distance_km": 8.81
+        }
+      }
+    },
+    "voyager_ii_2119": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 36.6,
+          "distance_km": 25.57
+        },
+        "pm_5pm": {
+          "duration_min": 39.9,
+          "distance_km": 33.69
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.3,
+          "distance_km": 8.71
+        }
+      }
+    },
+    "voyager_i_2111": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 36.6,
+          "distance_km": 25.55
+        },
+        "pm_5pm": {
+          "duration_min": 40.5,
+          "distance_km": 33.95
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.3,
+          "distance_km": 8.7
+        }
+      }
+    },
+    "nautilus_16brookers": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 36.5,
+          "distance_km": 25.45
+        },
+        "pm_5pm": {
+          "duration_min": 40.3,
+          "distance_km": 33.82
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.1,
+          "distance_km": 8.6
+        }
+      }
+    },
+    "jade_waterfront_33": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 33.8,
+          "distance_km": 24.69
+        },
+        "pm_5pm": {
+          "duration_min": 39.3,
+          "distance_km": 33.42
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 23.8,
+          "distance_km": 8.96
+        }
+      }
+    },
+    "cove_at_waterways_39": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.0,
+          "distance_km": 24.79
+        },
+        "pm_5pm": {
+          "duration_min": 39.6,
+          "distance_km": 33.52
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.1,
+          "distance_km": 9.05
+        }
+      }
+    },
+    "grand_harbour_2285": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 33.2,
+          "distance_km": 24.45
+        },
+        "pm_5pm": {
+          "duration_min": 38.0,
+          "distance_km": 33.2
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.1,
+          "distance_km": 9.07
+        }
+      }
+    },
+    "marina_del_rey_2261": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 33.4,
+          "distance_km": 24.52
+        },
+        "pm_5pm": {
+          "duration_min": 39.8,
+          "distance_km": 33.55
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 25.4,
+          "distance_km": 9.93
+        }
+      }
+    },
+    "palace_pier_2045": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 35.8,
+          "distance_km": 26.79
+        },
+        "pm_5pm": {
+          "duration_min": 42.1,
+          "distance_km": 34.55
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 19.1,
+          "distance_km": 7.82
+        }
+      }
+    },
+    "palace_place_1ppc": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 35.7,
+          "distance_km": 25.86
+        },
+        "pm_5pm": {
+          "duration_min": 40.7,
+          "distance_km": 35.37
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.4,
+          "distance_km": 8.95
+        }
+      }
+    },
+    "shoreline_towers_2313": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 37.9,
+          "distance_km": 25.23
+        },
+        "pm_5pm": {
+          "duration_min": 40.8,
+          "distance_km": 33.77
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 32.3,
+          "distance_km": 12.54
+        }
+      }
+    },
+    "promenade_apts_2301": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 37.9,
+          "distance_km": 25.23
+        },
+        "pm_5pm": {
+          "duration_min": 40.8,
+          "distance_km": 33.77
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 32.3,
+          "distance_km": 12.54
+        }
+      }
+    },
+    "berkley_pm_2545": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 35.0,
+          "distance_km": 24.29
+        },
+        "pm_5pm": {
+          "duration_min": 39.4,
+          "distance_km": 33.24
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 31.4,
+          "distance_km": 13.55
+        }
+      }
+    },
+    "marina_view_2303": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 37.9,
+          "distance_km": 25.23
+        },
+        "pm_5pm": {
+          "duration_min": 40.8,
+          "distance_km": 33.77
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 32.3,
+          "distance_km": 12.54
+        }
+      }
+    },
+    "floriri_village_2305": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 37.9,
+          "distance_km": 25.23
+        },
+        "pm_5pm": {
+          "duration_min": 40.8,
+          "distance_km": 33.77
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 32.3,
+          "distance_km": 12.54
+        }
+      }
+    },
+    "245_lakeshore_drive": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.3,
+          "distance_km": 32.27
+        },
+        "pm_5pm": {
+          "duration_min": 39.4,
+          "distance_km": 32.33
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 35.8,
+          "distance_km": 15.51
+        }
+      }
+    },
+    "aquaview_3865": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 31.3,
+          "distance_km": 20.08
+        },
+        "pm_5pm": {
+          "duration_min": 36.0,
+          "distance_km": 31.01
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 38.0,
+          "distance_km": 19.67
+        }
+      }
+    },
+    "minto_longbranch_3580": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 30.4,
+          "distance_km": 30.78
+        },
+        "pm_5pm": {
+          "duration_min": 36.5,
+          "distance_km": 31.24
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 36.9,
+          "distance_km": 17.27
+        }
+      }
+    },
+    "120_long_branch_ave": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 30.4,
+          "distance_km": 30.74
+        },
+        "pm_5pm": {
+          "duration_min": 36.4,
+          "distance_km": 31.21
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 36.8,
+          "distance_km": 17.24
+        }
+      }
+    },
+    "45_forty_second_st": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 31.1,
+          "distance_km": 20.09
+        },
+        "pm_5pm": {
+          "duration_min": 35.9,
+          "distance_km": 30.97
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 37.9,
+          "distance_km": 19.62
+        }
+      }
+    },
+    "eau-du-soleil-water-tower": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 35.8,
+          "distance_km": 25.0
+        },
+        "pm_5pm": {
+          "duration_min": 40.3,
+          "distance_km": 33.68
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.4,
+          "distance_km": 9.0
+        }
+      }
+    },
+    "eau-du-soleil-sky-tower": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 37.0,
+          "distance_km": 25.68
+        },
+        "pm_5pm": {
+          "duration_min": 39.1,
+          "distance_km": 33.45
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.6,
+          "distance_km": 8.82
+        }
+      }
+    },
+    "jade-waterfront-condos": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.5,
+          "distance_km": 24.97
+        },
+        "pm_5pm": {
+          "duration_min": 39.6,
+          "distance_km": 33.72
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 21.6,
+          "distance_km": 8.47
+        }
+      }
+    },
+    "30-shore-breeze": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 33.6,
+          "distance_km": 24.56
+        },
+        "pm_5pm": {
+          "duration_min": 38.4,
+          "distance_km": 33.31
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.3,
+          "distance_km": 9.18
+        }
+      }
+    },
+    "ocean-club-2200": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 36.4,
+          "distance_km": 25.37
+        },
+        "pm_5pm": {
+          "duration_min": 40.0,
+          "distance_km": 33.76
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 19.9,
+          "distance_km": 8.51
+        }
+      }
+    },
+    "explorer-condos-2230": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.5,
+          "distance_km": 24.92
+        },
+        "pm_5pm": {
+          "duration_min": 41.5,
+          "distance_km": 34.18
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 23.9,
+          "distance_km": 9.19
+        }
+      }
+    },
+    "beyond-the-sea-2261": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 36.5,
+          "distance_km": 25.51
+        },
+        "pm_5pm": {
+          "duration_min": 39.6,
+          "distance_km": 33.62
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.2,
+          "distance_km": 8.65
+        }
+      }
+    },
+    "beyond-the-sea-star-2025": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 35.1,
+          "distance_km": 26.78
+        },
+        "pm_5pm": {
+          "duration_min": 41.9,
+          "distance_km": 34.63
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 19.1,
+          "distance_km": 7.86
+        }
+      }
+    },
+    "vita-on-the-lake-30-shore": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 32.7,
+          "distance_km": 24.37
+        },
+        "pm_5pm": {
+          "duration_min": 37.7,
+          "distance_km": 33.12
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.8,
+          "distance_km": 9.35
+        }
+      }
+    },
+    "mimico-39-newcastle": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 34.5,
+          "distance_km": 23.66
+        },
+        "pm_5pm": {
+          "duration_min": 37.9,
+          "distance_km": 32.13
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 25.2,
+          "distance_km": 10.69
+        }
+      }
+    },
+    "vita-two-2429-lakeshore": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 32.6,
+          "distance_km": 24.32
+        },
+        "pm_5pm": {
+          "duration_min": 37.5,
+          "distance_km": 33.07
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.7,
+          "distance_km": 9.3
+        }
+      }
+    },
+    "mimico-29-stanley": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 36.9,
+          "distance_km": 24.58
+        },
+        "pm_5pm": {
+          "duration_min": 39.9,
+          "distance_km": 33.15
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 28.1,
+          "distance_km": 10.74
+        }
+      }
+    },
+    "mimico-2417-lakeshore-rental": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 36.3,
+          "distance_km": 24.37
+        },
+        "pm_5pm": {
+          "duration_min": 39.7,
+          "distance_km": 33.3
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 30.7,
+          "distance_km": 13.14
+        }
+      }
+    },
+    "lakeshore-village-3865": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.6,
+          "distance_km": 30.39
+        },
+        "pm_5pm": {
+          "duration_min": 36.0,
+          "distance_km": 30.85
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 35.5,
+          "distance_km": 16.88
+        }
+      }
+    },
+    "lakeshore-3636": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 32.4,
+          "distance_km": 31.41
+        },
+        "pm_5pm": {
+          "duration_min": 38.7,
+          "distance_km": 31.88
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 34.8,
+          "distance_km": 15.05
+        }
+      }
+    },
+    "credit-village-square-150-lakeshore-w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.7,
+          "distance_km": 13.23
+        },
+        "pm_5pm": {
+          "duration_min": 26.1,
+          "distance_km": 13.45
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 47.5,
+          "distance_km": 25.71
+        }
+      }
+    },
+    "256-lakeshore-rd-e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.3,
+          "distance_km": 13.62
+        },
+        "pm_5pm": {
+          "duration_min": 29.1,
+          "distance_km": 13.59
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 46.0,
+          "distance_km": 22.62
+        }
+      }
+    },
+    "308-lakeshore-rd-e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.8,
+          "distance_km": 13.82
+        },
+        "pm_5pm": {
+          "duration_min": 29.8,
+          "distance_km": 13.79
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 46.5,
+          "distance_km": 22.82
+        }
+      }
+    },
+    "363-lakeshore-rd-e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 24.6,
+          "distance_km": 14.07
+        },
+        "pm_5pm": {
+          "duration_min": 29.9,
+          "distance_km": 14.04
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 44.1,
+          "distance_km": 22.42
+        }
+      }
+    },
+    "2070-camilla-rd": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.8,
+          "distance_km": 13.52
+        },
+        "pm_5pm": {
+          "duration_min": 25.5,
+          "distance_km": 12.57
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 40.9,
+          "distance_km": 20.43
+        }
+      }
+    },
+    "1130-melton-dr": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 29.5,
+          "distance_km": 18.4
+        },
+        "pm_5pm": {
+          "duration_min": 35.3,
+          "distance_km": 19.16
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 41.7,
+          "distance_km": 20.55
+        }
+      }
+    },
+    "north-shore-1-hurontario": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.7,
+          "distance_km": 13.37
+        },
+        "pm_5pm": {
+          "duration_min": 29.5,
+          "distance_km": 13.58
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 45.7,
+          "distance_km": 23.34
+        }
+      }
+    },
+    "125-lakeshore-rd-e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 23.3,
+          "distance_km": 13.55
+        },
+        "pm_5pm": {
+          "duration_min": 28.8,
+          "distance_km": 13.52
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 45.5,
+          "distance_km": 22.44
+        }
+      }
+    },
+    "1515-lakeshore-rd-e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 26.1,
+          "distance_km": 14.76
+        },
+        "pm_5pm": {
+          "duration_min": 31.3,
+          "distance_km": 14.72
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 43.8,
+          "distance_km": 21.95
+        }
+      }
+    },
+    "beechwood-480-lakeshore-e": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 25.3,
+          "distance_km": 14.28
+        },
+        "pm_5pm": {
+          "duration_min": 30.4,
+          "distance_km": 14.24
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 44.6,
+          "distance_km": 22.35
+        }
+      }
+    },
+    "nola-condos-8-ann": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 22.5,
+          "distance_km": 13.27
+        },
+        "pm_5pm": {
+          "duration_min": 29.1,
+          "distance_km": 13.49
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 45.8,
+          "distance_km": 23.35
+        }
+      }
+    },
+    "brightwater-i-215-lakeshore-w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 19.2,
+          "distance_km": 11.76
+        },
+        "pm_5pm": {
+          "duration_min": 20.3,
+          "distance_km": 11.73
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 45.5,
+          "distance_km": 24.24
+        }
+      }
+    },
+    "skyrise_2550_eglinton": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 7.8,
+          "distance_km": 3.92
+        },
+        "pm_5pm": {
+          "duration_min": 7.8,
+          "distance_km": 3.93
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 62.2,
+          "distance_km": 37.79
+        }
+      }
+    },
+    "eglinton_2485w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 8.2,
+          "distance_km": 3.89
+        },
+        "pm_5pm": {
+          "duration_min": 8.2,
+          "distance_km": 3.9
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 63.4,
+          "distance_km": 34.75
+        }
+      }
+    },
+    "kindred_2495_eglinton": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 8.2,
+          "distance_km": 4.05
+        },
+        "pm_5pm": {
+          "duration_min": 8.2,
+          "distance_km": 4.05
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 63.4,
+          "distance_km": 34.91
+        }
+      }
+    },
+    "waterford_2645_battleford": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 13.1,
+          "distance_km": 6.42
+        },
+        "pm_5pm": {
+          "duration_min": 13.1,
+          "distance_km": 6.37
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 59.8,
+          "distance_km": 37.61
+        }
+      }
+    },
+    "lakeside_2699_battleford": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 13.8,
+          "distance_km": 6.56
+        },
+        "pm_5pm": {
+          "duration_min": 13.8,
+          "distance_km": 6.56
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 60.6,
+          "distance_km": 37.83
+        }
+      }
+    },
+    "battleford_glen_erin_6599": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.3,
+          "distance_km": 6.23
+        },
+        "pm_5pm": {
+          "duration_min": 12.8,
+          "distance_km": 6.23
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 59.1,
+          "distance_km": 37.5
+        }
+      }
+    },
+    "elora_6515_glen_erin": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.0,
+          "distance_km": 6.36
+        },
+        "pm_5pm": {
+          "duration_min": 11.3,
+          "distance_km": 5.61
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 59.3,
+          "distance_km": 37.56
+        }
+      }
+    },
+    "park_2797_battleford": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.3,
+          "distance_km": 6.51
+        },
+        "pm_5pm": {
+          "duration_min": 13.2,
+          "distance_km": 6.52
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 59.5,
+          "distance_km": 37.54
+        }
+      }
+    },
+    "daniels_4975_southampton": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.1,
+          "distance_km": 5.17
+        },
+        "pm_5pm": {
+          "duration_min": 10.8,
+          "distance_km": 4.96
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 64.5,
+          "distance_km": 40.55
+        }
+      }
+    },
+    "queen_296s": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 7.8,
+          "distance_km": 3.2
+        },
+        "pm_5pm": {
+          "duration_min": 7.2,
+          "distance_km": 3.2
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 62.0,
+          "distance_km": 34.06
+        }
+      }
+    },
+    "queen_311s": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 7.8,
+          "distance_km": 3.2
+        },
+        "pm_5pm": {
+          "duration_min": 5.7,
+          "distance_km": 2.56
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 62.0,
+          "distance_km": 34.06
+        }
+      }
+    },
+    "daniels_3050_erin_centre": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 7.5,
+          "distance_km": 3.17
+        },
+        "pm_5pm": {
+          "duration_min": 7.1,
+          "distance_km": 3.16
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 64.7,
+          "distance_km": 40.88
+        }
+      }
     }
   }
 }

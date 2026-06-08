@@ -947,7 +947,35 @@ setTimeout(scheduleRerender, 4000);
           </div>
         </div>`;
     }).join('');
-    document.getElementById('cards').innerHTML = html || '<p style="color:var(--muted)">No matches.</p>';
+    // TOP-10 HERO: composite-ranked across ALL viable, surfaces the "call this week" picks
+    const top10Hero = (() => {
+      const ranked = APARTMENTS
+        .filter(a => isViableCandidate(a) && dataQualityTier(a) !== 'lead')
+        .map(a => ({ a, p: computeAxisProfile(a), tier: dataQualityTier(a) }))
+        .sort((x,y) => y.p.total - x.p.total)
+        .slice(0, 10);
+      if (!ranked.length) return '';
+      const row = ({a, p, tier}, i) => {
+        const tierEmoji = tier === 'finalist' ? '★' : tier === 'verified' ? '✓' : '~';
+        return `<div onclick="selectApt('${a.id}')" style="display:grid;grid-template-columns:22px 1fr auto auto;gap:8px;padding:7px 10px;border-bottom:1px solid var(--border);cursor:pointer;align-items:center;font-size:12px" onmouseover="this.style.background='var(--accent-soft)'" onmouseout="this.style.background='transparent'">
+          <span style="color:var(--muted);font-variant-numeric:tabular-nums;text-align:right">${i+1}.</span>
+          <div style="min-width:0">
+            <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${tierEmoji} ${a.name}</div>
+            <div style="color:var(--muted);font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${a.zone} · CVH ${p.raw.cvh_min}m · KW ${p.raw.kw_min}m</div>
+          </div>
+          <div style="font-weight:700;font-variant-numeric:tabular-nums">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}</div>
+          <div style="font-weight:600;color:${window.fitScoreColor(p.total)};font-variant-numeric:tabular-nums;font-size:13px;min-width:30px;text-align:right">${p.total}</div>
+        </div>`;
+      };
+      return `<div style="background:var(--accent-soft);border:1px solid var(--accent);border-radius:8px;margin-bottom:10px;overflow:hidden">
+        <div style="padding:8px 12px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--accent-text);border-bottom:1px solid var(--accent);background:var(--accent-soft);display:flex;justify-content:space-between;align-items:center">
+          <span>★ Top 10 across all zones</span>
+          <span style="color:var(--muted);font-weight:400;text-transform:none;letter-spacing:0">composite rank · click to open</span>
+        </div>
+        ${ranked.map(row).join('')}
+      </div>`;
+    })();
+    document.getElementById('cards').innerHTML = top10Hero + (html || '<p style="color:var(--muted)">No matches.</p>');
     renderMarkers(sorted);
     document.getElementById('fav-count').textContent = STORE.favorites().length;
     document.getElementById('cmp-count').textContent = compareList.length ? `(${compareList.length})` : '';
