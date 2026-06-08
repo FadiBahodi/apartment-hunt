@@ -214,7 +214,10 @@ window.computeAxisProfile = function(a) {
   else running = 35;
 
   // 4. Cost — lower = better; based on all-in monthly
-  const rent = a.rent_1bed_low || a.rent_2bed || 9999;
+  // Use VERIFIED actual_price_low from Wave I corrections when available (overrides stale data)
+  const corr = (window.LISTING_CORRECTIONS||{})[a.id];
+  const verifiedRent = corr?.actual_price_low;
+  const rent = verifiedRent || a.rent_1bed_low || a.rent_2bed || 9999;
   const allIn = costs?.estimated_monthly_total_1bed || (rent + 100);
   let cost;
   if (allIn <= 1700) cost = 100;

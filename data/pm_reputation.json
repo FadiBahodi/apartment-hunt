@@ -1,0 +1,377 @@
+{
+  "Greenwin": {
+    "reputation_score": 4,
+    "responsiveness": "slow",
+    "maintenance_quality": "poor",
+    "tenant_relations": "extractive",
+    "documented_issues": [
+      "Cockroach infestations reported across multiple buildings; site managers call them 'normal' (https://ratethelandlord.org/landlord/GREENWIN%20PROPERTY%20MANAGEMENT%20INC.)",
+      "Refuses building-wide pest spray, treats only individual units after complaint (https://rentalreport.ca/report/1359)",
+      "Tenants describe head office and onsite staff as 'lazy' and unequipped"
+    ],
+    "documented_strengths": [
+      "Long-established Toronto PM with deep portfolio across midtown/west end"
+    ],
+    "buildings_in_our_data": ["Marina View 2303 Lake Shore W", "65 Windermere"],
+    "fadi_recommendation": "verify",
+    "honest_note": "Mixed-to-negative reputation; pest control is a recurring red flag. For 2303 LSW (Marina View) and 65 Windermere, ask current tenants directly about pest history and response times before signing."
+  },
+  "GWL_Realty_Advisors": {
+    "reputation_score": 5,
+    "responsiveness": "moderate",
+    "maintenance_quality": "moderate",
+    "tenant_relations": "fair",
+    "documented_issues": [
+      "2.3/5 stars across 35-39 Birdeye reviews (https://reviews.birdeye.com/gwl-realty-advisors-residential-inc-171339184421689)",
+      "One complaint: unauthorized account withdrawals not returned",
+      "BBB profile shows mixed record (https://www.bbb.org/ca/on/toronto/profile/property-management/gwl-realty-advisors-residential-inc-0107-1155033)"
+    ],
+    "documented_strengths": [
+      "Institutional-grade owner (Canada Life subsidiary), generally well-capitalized buildings",
+      "Manages premium product (e.g. Grenadier Square 40 High Park is a desirable address)"
+    ],
+    "buildings_in_our_data": ["Grenadier Square 40 High Park"],
+    "fadi_recommendation": "verify",
+    "honest_note": "Institutional landlord with average reviews — not flagged by ACORN, no class-action news. Grenadier Square at 40 High Park is a flagship building; conditions are likely better than the company-wide score suggests."
+  },
+  "MetCap_Living": {
+    "reputation_score": 2,
+    "responsiveness": "terrible",
+    "maintenance_quality": "poor",
+    "tenant_relations": "adversarial",
+    "documented_issues": [
+      "ACORN 2025 'Worst Landlord of the Year' (Ottawa bus tour, Aug 2025) (https://x.com/ACORNCanada/status/1956808424299126881)",
+      "Dedicated ACORN MetCap Tenant Union active since 2004 (https://acorncanada.org/metcap-tenant-union/)",
+      "96 Jameson Ave Toronto: ongoing roach + mice infestations",
+      "Head office reportedly ignores emails and phone messages",
+      "AGI (above-guideline rent increase) applications repeatedly filed"
+    ],
+    "documented_strengths": [
+      "Large portfolio, established operator"
+    ],
+    "buildings_in_our_data": ["143 Stephen Drive", "2495 Lake Shore W"],
+    "fadi_recommendation": "avoid",
+    "honest_note": "Genuinely bad landlord by every external measure — ACORN named them 2025 Worst Landlord of the Year and runs a dedicated MetCap Tenant Union. Avoid both 143 Stephen and 2495 LSW unless inspection is exceptional and current tenants vouch."
+  },
+  "CAPREIT": {
+    "reputation_score": 3,
+    "responsiveness": "slow",
+    "maintenance_quality": "poor",
+    "tenant_relations": "extractive",
+    "documented_issues": [
+      "1.6-star rating on PissedConsumer with 'widespread service failures' (https://capreit.pissedconsumer.com/review.html)",
+      "Mimico Estates specifically has negative tenant reviews (https://ratethelandlord.org/landlord/CAPREIT%20MIMICO%20ESTATES)",
+      "Recurring grievances: mold, pests, unauthorized entries, deposit/refund delays",
+      "Major AGI filer in Ontario (CBC analysis identified CAPREIT as top rent-hike applicant) (https://www.cbc.ca/amp/1.7175254)",
+      "Wheelchair-accessibility blog warns 'don't ever move into a CAPREIT building'"
+    ],
+    "documented_strengths": [
+      "Largest publicly-traded apartment REIT in Canada; standardized processes"
+    ],
+    "buildings_in_our_data": ["Rathburn", "Morning Star", "Mimico Estates (AVOID flagged)"],
+    "fadi_recommendation": "avoid",
+    "honest_note": "Fadi's existing AVOID flag on Mimico Estates is well-supported by review data. CAPREIT corporate culture is extractive — heavy AGI use, slow maintenance, ignored repairs. Cross any CAPREIT building off unless rent is truly exceptional."
+  },
+  "QuadReal": {
+    "reputation_score": 7,
+    "responsiveness": "moderate",
+    "maintenance_quality": "good",
+    "tenant_relations": "fair",
+    "documented_issues": [
+      "No major tenant complaints surfaced in 2025 web search",
+      "Limited public tenant-side review data (most reviews are employee Glassdoor)"
+    ],
+    "documented_strengths": [
+      "Institutional owner (BCI pension fund); builds premium rentals like IMMIX Toronto",
+      "Employee-side reviews 4.1/5 (suggests internal culture/training)",
+      "No ACORN organizing alerts found"
+    ],
+    "buildings_in_our_data": ["Waterford Tower 2645 Battleford"],
+    "fadi_recommendation": "trust",
+    "honest_note": "QuadReal is a top-tier institutional landlord (BC pension fund money). Waterford Tower 2645 Battleford likely a well-run building. Lowest red-flag signal of any PM on this list."
+  },
+  "Park_Property_Management": {
+    "reputation_score": 5,
+    "responsiveness": "moderate",
+    "maintenance_quality": "moderate",
+    "tenant_relations": "fair",
+    "documented_issues": [
+      "Pest infestations (ants, cockroaches, bed bugs) reported at multiple Park buildings",
+      "Heating inadequacy in winter reported",
+      "Summer 2024 new management at one building reported as unresponsive",
+      "Promised renovations at 100 Spadina Rd not delivered"
+    ],
+    "documented_strengths": [
+      "Specific staff (Lucy, Pilar) praised by long-term tenants for responsiveness",
+      "Some tenants call it 'the best management' a building has had"
+    ],
+    "buildings_in_our_data": ["2335 Lake Shore W"],
+    "fadi_recommendation": "verify",
+    "honest_note": "Highly building-dependent — quality varies by site superintendent. For 2335 LSW, ask to meet the current superintendent and check building age / pest history before committing."
+  },
+  "Briarlane_Rental_Property_Mgmt": {
+    "reputation_score": 3,
+    "responsiveness": "slow",
+    "maintenance_quality": "poor",
+    "tenant_relations": "adversarial",
+    "documented_issues": [
+      "Lost deposit claims, bed bug + mouse infestations across multiple sites (https://www.yelp.ca/biz/briarlane-rental-property-mgmt-markham)",
+      "10+ units waited 8+ weeks for whole-building mouse treatment approval",
+      "Allegations of using legal team to send threatening eviction notices to push out good-standing tenants for rent hikes",
+      "One tenant: 6 months with broken radiator at 30C indoor temp, told 'not my job'",
+      "BBB: not accredited, failed to respond to complaints"
+    ],
+    "documented_strengths": [
+      "Some positive reviews on specific buildings (mixed)"
+    ],
+    "buildings_in_our_data": ["Shoreline Towers", "2897 Dundas"],
+    "fadi_recommendation": "avoid",
+    "honest_note": "Multiple serious red flags — pest neglect, eviction-bullying allegations, no BBB engagement. Shoreline Towers and 2897 Dundas should be deprioritized unless current tenant references actively contradict this pattern."
+  },
+  "Daniels": {
+    "reputation_score": 7,
+    "responsiveness": "moderate",
+    "maintenance_quality": "good",
+    "tenant_relations": "fair",
+    "documented_issues": [
+      "Mixed reviews on Daniels Corporation (HomeStars): some report rude/unprofessional property managers (https://www.homestars.com/profile/226969-the-daniels-corporation/reviews)",
+      "Polarized — some property managers unable to answer basic policy questions"
+    ],
+    "documented_strengths": [
+      "25+ years rental management, 4,000+ families in GTA (Daniels Gateway)",
+      "Strong amenity packages (gym, co-work, screening lounge, maker space)",
+      "Reputation for build quality and design — 27,000+ homes built",
+      "Consistent high build standards praised across reviewers"
+    ],
+    "buildings_in_our_data": ["Skyrise 2550 Eglinton", "Arc Erin Mills", "Daniels Gateway"],
+    "fadi_recommendation": "trust",
+    "honest_note": "Daniels has one of the best reputations on this list for build quality and amenity programming. Some site-manager variance, but corporate culture is tenant-oriented relative to peers. Strong choice for an attending-physician lifestyle."
+  },
+  "Akelius_former_buildings": {
+    "reputation_score": 6,
+    "responsiveness": "moderate",
+    "maintenance_quality": "moderate",
+    "tenant_relations": "fair",
+    "documented_issues": [
+      "Akelius sold 12 of 13 GTA buildings (19 buildings, 626 suites) to Starlight Investments for $176.8M in 2019 — NOT 2024 (https://renx.ca/index.php/starlight-buys-akelius-apartments-for-176-8-million)",
+      "Search returned no evidence of a separate 2024 Akelius portfolio sale — verify this premise",
+      "Starlight now owns/manages ~36,000 multi-residential units across Canada and US"
+    ],
+    "documented_strengths": [
+      "Starlight is a major institutional player ($11B AUM)",
+      "Akelius known for premium renovations in their core portfolio"
+    ],
+    "buildings_in_our_data": ["(verify which former Akelius buildings are in scope)"],
+    "fadi_recommendation": "verify",
+    "honest_note": "Major correction: the big Akelius GTA divestiture was 2019, not 2024 — buildings now belong to Starlight Investments. Re-check which specific addresses you're tracking and look up current PM. Starlight has its own mixed reviews but is institutional grade."
+  },
+  "InterRent_REIT": {
+    "reputation_score": 4,
+    "responsiveness": "slow",
+    "maintenance_quality": "poor",
+    "tenant_relations": "adversarial",
+    "documented_issues": [
+      "2018 Hamilton rent strike (80-100 tenants) claiming improvements were 'cosmetic only'",
+      "Reviews describe operator as 'dishonest and abusive'",
+      "Known repositioning strategy — buy older buildings, renovate, push rents (and AGIs)",
+      "Toronto ACORN 2026 State of Repair Report references frequent corporate-landlord patterns (https://acorncanada.org/news/toronto-acorn-launches-2026-state-of-repair-report-comparing-10-years-of-surveys-of-toronto-tenants/)"
+    ],
+    "documented_strengths": [
+      "Modernized building amenities post-repositioning"
+    ],
+    "buildings_in_our_data": ["Reid Drive"],
+    "fadi_recommendation": "verify",
+    "honest_note": "InterRent's REIT business model is value-add repositioning — that means renovations are nice but AGI risk is high. Reid Drive may be in a stable phase or active reposition; ask current tenants about recent AGI history."
+  },
+  "Realstar": {
+    "reputation_score": 3,
+    "responsiveness": "slow",
+    "maintenance_quality": "poor",
+    "tenant_relations": "extractive",
+    "documented_issues": [
+      "1.7/5 stars on 96 Birdeye reviews (https://reviews.birdeye.com/realstar-management-partnership-161099784751843)",
+      "Elevators out of service for weeks; constant unannounced drilling",
+      "Mold-causing washing machines, third-party laundry contractors ignore complaints",
+      "Scarborough tenant protests for bedbugs and break-ins (CBC, 2017) (https://www.cbc.ca/news/canada/toronto/realstar-tenant-protest-1.4227714)",
+      "Reports of double rent increases during COVID",
+      "District managers reportedly indifferent to escalations"
+    ],
+    "documented_strengths": [
+      "Large portfolio; some buildings well-maintained relative to others"
+    ],
+    "buildings_in_our_data": ["162 Berry Road"],
+    "fadi_recommendation": "avoid",
+    "honest_note": "Realstar is in the bottom quartile of GTA PMs by tenant feedback. 162 Berry Road might be an exception (Etobicoke waterfront), but default to skepticism and inspect personally."
+  },
+  "Hazelview": {
+    "reputation_score": 2,
+    "responsiveness": "terrible",
+    "maintenance_quality": "poor",
+    "tenant_relations": "adversarial",
+    "documented_issues": [
+      "ACORN 2025 'Worst Landlord of the Year' — co-winner with MetCap Living (https://acorncanada.org/news/acorns-2025-worst-landlord-bus-tour/)",
+      "Top filer of AGI applications in Ontario per CBC analysis (https://www.cbc.ca/amp/1.7175254)",
+      "FMTA LandlordWatch flags multiple Hazelview buildings (https://www.torontotenants.org/launching_landlordwatch_com_toronto_landlords_ranked_by_number_of_maintenance_violations)"
+    ],
+    "documented_strengths": [
+      "Large portfolio and capital — buildings physically maintained at minimum standard"
+    ],
+    "buildings_in_our_data": ["Bloordale 4340", "2285 Collegeway"],
+    "fadi_recommendation": "avoid",
+    "honest_note": "Tied with MetCap for ACORN's 2025 Worst Landlord. Heavy AGI use is the dominant complaint — even if entry rent is fine, expect aggressive year-over-year increases. Avoid both Bloordale 4340 and 2285 Collegeway."
+  },
+  "Sterling_Karamar": {
+    "reputation_score": 3,
+    "responsiveness": "slow",
+    "maintenance_quality": "poor",
+    "tenant_relations": "extractive",
+    "documented_issues": [
+      "Communication: management does not respond to emails or follow-ups (https://www.yelp.ca/biz/sterling-karamar-toronto-3)",
+      "Maintenance: windows washed twice in 6 years; one cleaner for 17 floors; stairwells uncleaned for 3 months",
+      "Rents reportedly doubled in 5 years without added value",
+      "Illegal $150/window-AC seasonal hydro charges reported",
+      "Customer service described as rude, argumentative, unreasonable"
+    ],
+    "documented_strengths": [
+      "Specific PM Cathy Jones praised by one reviewer (building-dependent)"
+    ],
+    "buildings_in_our_data": ["Markwood 4365", "240 Markland (AVOID flagged)"],
+    "fadi_recommendation": "avoid",
+    "honest_note": "Fadi's existing AVOID flag on 240 Markland is fully supported by the data. Sterling Karamar has a consistent extractive pattern. Also avoid Markwood 4365 unless something is materially different at that specific site."
+  },
+  "Minto_Apartments": {
+    "reputation_score": 7,
+    "responsiveness": "moderate",
+    "maintenance_quality": "good",
+    "tenant_relations": "fair",
+    "documented_issues": [
+      "Limited recent negative coverage in 2025 searches (only 4 reviews on Rate the Landlord)",
+      "No major ACORN alerts found"
+    ],
+    "documented_strengths": [
+      "Aquitaine Avenue Meadowvale: family + pet-friendly community, garden homes, renovated units (https://www.mintoapartments.com/gta/Mississauga-apartment-rentals/Aquitaine-Avenue/main.html)",
+      "All-in rent includes heat/water/hydro + AC + dishwasher + balcony at Aquitaine",
+      "Resident handbook well-documented and transparent",
+      "Established, publicly-traded developer with reputation to protect"
+    ],
+    "buildings_in_our_data": ["Aquitaine", "Elora Meadowvale"],
+    "fadi_recommendation": "trust",
+    "honest_note": "Minto is one of the more tenant-friendly large landlords — all-inclusive rents at Aquitaine, no ACORN heat, established Canadian developer. Strong option for Meadowvale (suburban Mississauga) commute to CVH."
+  },
+  "Beaux_Properties": {
+    "reputation_score": 4,
+    "responsiveness": "moderate",
+    "maintenance_quality": "poor",
+    "tenant_relations": "extractive",
+    "documented_issues": [
+      "Management described as 'over entitled and arrogant'; alleged miscellaneous charges beyond rent (https://ratethelandlord.org/landlord/BEAUX%20PROPERTIES%20INTERNATIONAL)",
+      "Elevators reportedly non-functional ~40% of the time over a decade-long tenancy",
+      "Hallways/stairs not regularly maintained; pest problems; old inefficient windows",
+      "Low water pressure complaints"
+    ],
+    "documented_strengths": [
+      "Family-owned (Birnboim family), three generations — long-term hold strategy",
+      "Smaller portfolio than the big REITs (less institutional churn)"
+    ],
+    "buildings_in_our_data": ["60 Mountview"],
+    "fadi_recommendation": "verify",
+    "honest_note": "Family-owned but with extractive practices reported. 60 Mountview is in the Junction — desirable location, but inspect elevators, windows, hallways in person before committing."
+  },
+  "Homestead_Land_Holdings": {
+    "reputation_score": 4,
+    "responsiveness": "slow",
+    "maintenance_quality": "poor",
+    "tenant_relations": "fair",
+    "documented_issues": [
+      "n49: 1/5 stars at 140 Erskine Ave Toronto (https://www.n49.com/biz/677836/homestead-land-holdings-ltd-on-toronto-140-erskine-ave-4/)",
+      "1.6/5 stars (48 reviews) at Kingston HQ",
+      "Failed maintenance follow-through; emergency requests not promptly answered",
+      "High staff turnover (4 PMs + 4 supers in 4 years at one building)",
+      "Construction scheduled early-morning without notice",
+      "Security issues — homeless individuals roaming halls/garages",
+      "Multiple reviewers explicitly say 'Do not move into a Homestead building'"
+    ],
+    "documented_strengths": [
+      "Some buildings praised for caring staff and quick repairs (building-dependent)",
+      "Large, established (Kingston HQ, multi-province operator)"
+    ],
+    "buildings_in_our_data": ["Lakewood II 1285"],
+    "fadi_recommendation": "verify",
+    "honest_note": "Reputation skews negative but is genuinely building-dependent. Lakewood II 1285 needs in-person verification — check the lobby/elevators/laundry and ask current tenants how long the current super has been there."
+  },
+  "Concord_Adex": {
+    "reputation_score": 4,
+    "responsiveness": "moderate",
+    "maintenance_quality": "poor",
+    "tenant_relations": "fair",
+    "documented_issues": [
+      "BBB C+ rating; failed to respond to complaints (https://www.bbb.org/ca/on/toronto/profile/property-management/concord-adex-developments-corp-0107-1164325)",
+      "Construction-quality lawsuits over CityPlace builds",
+      "RedFlagDeals/UrbanToronto threads: 'nice finishes but cheap underneath', cheap glass/exterior materials (https://forums.redflagdeals.com/buying-condo-cityplace-2288891/)",
+      "Featured in documentary on poor Toronto condo construction",
+      "CityPlace common complaints: homeless population around buildings, frequent false fire alarms, elevator outages"
+    ],
+    "documented_strengths": [
+      "Concord Canada House is a flagship build with full amenity stack",
+      "Central downtown CityPlace location"
+    ],
+    "buildings_in_our_data": ["Concord Canada House", "CityPlace cluster"],
+    "fadi_recommendation": "verify",
+    "honest_note": "Concord Canada House is newer and may avoid the build-quality issues older CityPlace towers face — but CityPlace as a neighborhood has documented issues (alarms, transient population). For an attending lifestyle, factor in the neighborhood vibe, not just the unit."
+  },
+  "Empire_Communities": {
+    "reputation_score": 6,
+    "responsiveness": "moderate",
+    "maintenance_quality": "moderate",
+    "tenant_relations": "fair",
+    "documented_issues": [
+      "Limited tenant-side review data found in 2025 search",
+      "Note: Eau du Soleil is in Etobicoke (Lake Shore W + Marine Parade), NOT Mississauga"
+    ],
+    "documented_strengths": [
+      "Beyond the Sea and Eau du Soleil are completed flagship lakefront communities (https://empirecommunities.com/completed_communities/eau-du-soleil/)",
+      "Empire builds quality is generally respected in GTA — no major scandals",
+      "Lake Shore Boulevard West + Marine Parade location is highly desirable (lakefront, Humber Bay)"
+    ],
+    "buildings_in_our_data": ["Beyond the Sea", "Eau du Soleil tower"],
+    "fadi_recommendation": "trust",
+    "honest_note": "Empire is a developer (not primarily a PM); units are individually owned and rented out by investors. PM quality varies by investor-landlord, not by Empire. Location at Humber Bay is excellent for both LSW corridor and CVH commute."
+  },
+  "Tridel_Del_Property_Management": {
+    "reputation_score": 8,
+    "responsiveness": "fast",
+    "maintenance_quality": "good",
+    "tenant_relations": "fair",
+    "documented_issues": [
+      "Few specific 2025 tenant complaints surfaced",
+      "Del Condominium Rentals is a rental management arm — varies by unit-owner relationship"
+    ],
+    "documented_strengths": [
+      "Del Property Management runs 90,000+ suites across 300+ communities — major scale (https://www.tridelgroup.com/company-profiles/del-property-management/)",
+      "Tridel is the leading luxury high-rise developer in GTA, family-operated since 1934",
+      "Strong reputation for build quality and customer care",
+      "Del Condominium Rentals has been the GTA condo-rental standard since 1986"
+    ],
+    "buildings_in_our_data": ["Ultra Ovation", "One Old Mill"],
+    "fadi_recommendation": "trust",
+    "honest_note": "Tridel/Del is the highest-reputation builder + condo manager in this list. One Old Mill especially has a strong rep. If renting from a Tridel-built condo via Del Condominium Rentals, expect professionalism. Individual unit landlords still vary."
+  },
+  "Mattamy_Homes": {
+    "reputation_score": 7,
+    "responsiveness": "moderate",
+    "maintenance_quality": "good",
+    "tenant_relations": "fair",
+    "documented_issues": [
+      "Limited tenant-specific review data — Mattamy is a builder, not primarily a PM",
+      "Vita Two on the Lake is in Etobicoke waterfront, not Mississauga (https://mattamyhomes.com/ontario/gta/etobicoke/vita-two)"
+    ],
+    "documented_strengths": [
+      "Strong reputation for quality construction and customer satisfaction across GTA",
+      "Vita Two on the Lake is a 16-storey boutique Etobicoke waterfront build — newer construction (https://condonow.com/Vita-on-the-Lake-2-Condos)",
+      "Final phase of established Vita on the Lake community"
+    ],
+    "buildings_in_our_data": ["Vita Two on the Lake"],
+    "fadi_recommendation": "trust",
+    "honest_note": "Like Empire, Mattamy is a builder — actual landlord is the unit owner. Build quality is well-regarded; Vita Two is a new boutique waterfront tower. Vet the specific unit owner's PM separately."
+  }
+}

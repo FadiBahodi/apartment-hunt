@@ -488,6 +488,9 @@ const _jsonLoaders = [
   ['nearest_run_clubs.json', 'NEAREST_RUN_CLUBS', null],
   ['transit_distances.json', 'TRANSIT_DISTANCES', null],
   ['real_photos.json', 'REAL_PHOTOS', null],
+  ['pm_reputation.json', 'PM_REPUTATION', null],
+  ['building_to_pm.json', 'BUILDING_TO_PM', null],
+  ['amenities.json', 'AMENITIES', null],
   ['neighborhoods.geojson', 'NEIGHBORHOODS', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
@@ -946,6 +949,14 @@ setTimeout(scheduleRerender, 4000);
       : corr.verdict === 'VERIFIED_LOW_END' ? {label:'~ Low-end', color:'#fff', bg:'#ca8a04'}
       : null
       ) : null;
+      // PM reputation badge — surface AVOID-tier property managers
+      const pmKey = (window.BUILDING_TO_PM?.mapping||{})[a.id];
+      const pmRep = pmKey && (window.PM_REPUTATION||{})[pmKey];
+      const pmBadge = pmRep ? (
+        pmRep.fadi_recommendation === 'avoid' ? {label:`✗ PM: ${pmKey.split('_')[0]}`, color:'#fff', bg:'#dc2626', tip:`AVOID landlord — ${pmRep.honest_note||''}`}
+      : pmRep.fadi_recommendation === 'trust' ? {label:`✓ PM: ${pmKey.split('_')[0]}`, color:'#fff', bg:'#16a34a', tip:pmRep.honest_note||''}
+      : null
+      ) : null;
       return `
         <div class="card ${selectedId===a.id?'selected':''}" data-id="${a.id}" tabindex="0" role="button" aria-label="${a.name}, ${a.zone}" onclick="selectApt('${a.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectApt('${a.id}')}">
           <div class="thumb" style="${thumbStyle}">${thumbInner}</div>
@@ -954,9 +965,10 @@ setTimeout(scheduleRerender, 4000);
               <div class="name" style="flex:1">${a.name}${warn?`<span class="warning-pill" style="background:${warn.color}">${warn.label}</span>`:''}${a._approx_location?'<span class="warning-pill" style="background:#ca8a04" title="Location may be off by ±200m (postal-area centroid)">~approx</span>':''}</div>
               <span class="tinybadge" style="background:${tierBadge.bg};color:${tierBadge.color};flex-shrink:0">${tierBadge.label}</span>
             </div>
-            <div style="font-size:10px;color:var(--dim);margin-top:-2px;margin-bottom:2px;display:flex;gap:6px;align-items:center">
+            <div style="font-size:10px;color:var(--dim);margin-top:-2px;margin-bottom:2px;display:flex;gap:4px;align-items:center;flex-wrap:wrap">
               <span>${photoBadge.label}</span>
               ${corrBadge?`<span class="tinybadge" style="background:${corrBadge.bg};color:${corrBadge.color};font-size:9px" title="${(corr.honest_note||'').replace(/"/g,'&quot;')}">${corrBadge.label}</span>`:''}
+              ${pmBadge?`<span class="tinybadge" style="background:${pmBadge.bg};color:${pmBadge.color};font-size:9px" title="${pmBadge.tip.replace(/"/g,'&quot;')}">${pmBadge.label}</span>`:''}
             </div>
             <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
             <div class="axes">${window.renderAxisProfile(profile, {compact:true})}</div>
@@ -1243,7 +1255,21 @@ setTimeout(scheduleRerender, 4000);
         const profile = computeAxisProfile(a);
         const fdeep = (window.FINALIST_DEEP||{})[a.id];
         const detailCorr = (window.LISTING_CORRECTIONS||{})[a.id];
+        const detailPmKey = (window.BUILDING_TO_PM?.mapping||{})[a.id];
+        const detailPmRep = detailPmKey && (window.PM_REPUTATION||{})[detailPmKey];
+        const detailAmenity = (window.AMENITIES||{})[a.id];
         let narrative = '';
+        // PROPERTY MANAGER REPUTATION — top alert
+        if (detailPmRep) {
+          const pmColor = detailPmRep.fadi_recommendation === 'avoid' ? {bg:'#fee2e2', border:'#dc2626', text:'#991b1b', icon:'✗'}
+                       : detailPmRep.fadi_recommendation === 'trust' ? {bg:'#dcfce7', border:'#16a34a', text:'#15803d', icon:'✓'}
+                       : {bg:'#fef3c7', border:'#ca8a04', text:'#854d0e', icon:'~'};
+          narrative += `<div style="background:${pmColor.bg};border:2px solid ${pmColor.border};border-radius:8px;padding:10px 14px;margin:10px 0;font-size:12.5px;line-height:1.55">
+            <div style="font-weight:700;color:${pmColor.text};text-transform:uppercase;letter-spacing:.04em;font-size:11px;margin-bottom:4px">${pmColor.icon} Property Manager: ${detailPmKey.replace(/_/g,' ')} · ${detailPmRep.fadi_recommendation?.toUpperCase()||'?'} (${detailPmRep.reputation_score}/10)</div>
+            <div style="color:${pmColor.text}">${detailPmRep.honest_note||''}</div>
+            ${detailPmRep.documented_issues && detailPmRep.documented_issues.length ? `<details style="margin-top:6px;font-size:11.5px"><summary style="cursor:pointer;color:${pmColor.text}">Issues documented</summary><ul style="margin:4px 0;padding-left:18px">${detailPmRep.documented_issues.slice(0,3).map(i => `<li>${i}</li>`).join('')}</ul></details>` : ''}
+          </div>`;
+        }
         // VERIFICATION CORRECTION — top of narrative, can't miss
         if (detailCorr && detailCorr.verdict) {
           const verdictColors = {
@@ -1320,12 +1346,29 @@ setTimeout(scheduleRerender, 4000);
               </div>
             </div>
           </div>` : '';
+        // Amenities mini-summary (from Wave O)
+        const amen = detailAmenity ? `
+          <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:12px;line-height:1.55">
+            <div style="font-weight:700;color:#15803d;text-transform:uppercase;letter-spacing:.04em;font-size:10px;margin-bottom:6px">Verified amenities</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 12px">
+              ${detailAmenity.year_built?`<div><b>Year built:</b> ${detailAmenity.year_built}</div>`:''}
+              ${detailAmenity.in_suite_laundry?`<div><b>In-suite laundry:</b> ${detailAmenity.in_suite_laundry}</div>`:''}
+              ${detailAmenity.ac_type?`<div><b>AC:</b> ${detailAmenity.ac_type}</div>`:''}
+              ${detailAmenity.balcony?`<div><b>Balcony:</b> ${detailAmenity.balcony}</div>`:''}
+              ${detailAmenity.parking_underground?`<div><b>Parking:</b> ${detailAmenity.parking_underground}</div>`:''}
+              ${detailAmenity.gym_quality?`<div><b>Gym:</b> ${detailAmenity.gym_quality}</div>`:''}
+              ${detailAmenity.concierge_24_7?`<div><b>Concierge:</b> ${detailAmenity.concierge_24_7}</div>`:''}
+              ${detailAmenity.soundproofing_issues?`<div style="color:${/major/.test(detailAmenity.soundproofing_issues)?'#dc2626':detailAmenity.soundproofing_issues==='some_complaints'?'#ea580c':'inherit'}"><b>Soundproofing:</b> ${detailAmenity.soundproofing_issues}</div>`:''}
+            </div>
+            ${detailAmenity.honest_amenity_note?`<div style="margin-top:6px;color:#15803d;font-style:italic">${detailAmenity.honest_amenity_note}</div>`:''}
+          </div>` : '';
         return `
           <div style="background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin:10px 0">
-            <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px">5-axis profile</div>
+            <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px">6-axis profile</div>
             ${window.renderAxisProfile(profile, {compact:false})}
           </div>
           ${pmRow}
+          ${amen}
           ${narrative}
           ${dayInLife}
           <details style="margin:6px 0;font-size:11px;color:var(--muted)">
