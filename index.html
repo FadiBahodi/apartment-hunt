@@ -285,6 +285,7 @@
   <span class="meta">Move-in <b>Jul 1 2026</b> · <span id="days-to-move" style="color:var(--accent-text);font-weight:600"></span> · <b id="count">—</b></span>
   <span class="nav-spacer" style="margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;">
     <a href="#" id="show-playbook" class="nav-btn" style="background:var(--accent-soft);color:var(--accent-text);border-color:var(--accent);font-weight:600">Start here · the answer</a>
+    <a href="#" id="show-callsheet" class="nav-btn" style="background:#fee2e2;color:#991b1b;border-color:#dc2626;font-weight:700">📞 Call this week</a>
     <a href="#" id="show-explorer" class="nav-btn" style="background:#fef3c7;color:#92400e;border-color:#f59e0b;font-weight:600">📊 Explorer</a>
     <a href="#" id="show-shortlist" class="nav-btn">Top picks</a>
     <a href="#" id="show-favorites" class="nav-btn">Saved <span id="fav-count" class="badge-count">0</span></a>
@@ -314,6 +315,12 @@
       </div>
     </div>
     <div id="compare-content"></div>
+  </div>
+</div>
+<div id="callsheet-modal" class="modal">
+  <div class="modal-inner" style="max-width:1100px">
+    <div class="modal-head"><h2 style="margin:0">📞 Call This Week · ranked action list</h2><button class="modal-close" data-close="callsheet-modal">×</button></div>
+    <div id="callsheet-content" style="font-size:13px;line-height:1.6"></div>
   </div>
 </div>
 <div id="playbook-modal" class="modal">
@@ -491,6 +498,8 @@ const _jsonLoaders = [
   ['pm_reputation.json', 'PM_REPUTATION', null],
   ['building_to_pm.json', 'BUILDING_TO_PM', null],
   ['amenities.json', 'AMENITIES', null],
+  ['reddit_sentiment.json', 'REDDIT_SENTIMENT', null],
+  ['contacts.json', 'CONTACTS', null],
   ['neighborhoods.geojson', 'NEIGHBORHOODS', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
@@ -1937,6 +1946,75 @@ setTimeout(scheduleRerender, 4000);
       </details>
     `;
     document.getElementById('runclubs-modal').classList.add('show');
+  };
+
+  // ===== CALL THIS WEEK (ranked action list with phone numbers when available) =====
+  document.getElementById('show-callsheet').onclick = e => {
+    e.preventDefault();
+    const contacts = window.CONTACTS || {};
+    // Rank: viable + verified/finalist + non-AVOID PM + no STALE correction
+    const ranked = APARTMENTS
+      .filter(a => isViableCandidate(a) && dataQualityTier(a) !== 'lead')
+      .map(a => {
+        const p = computeAxisProfile(a);
+        const pmKey = (window.BUILDING_TO_PM?.mapping||{})[a.id];
+        const pmRep = pmKey && (window.PM_REPUTATION||{})[pmKey];
+        const corr = (window.LISTING_CORRECTIONS||{})[a.id];
+        const ct = (window.CONTACTS||{})[a.id];
+        // Penalty: avoid PM = -20, STALE correction = -15, NET_AFTER_PROMO = -5
+        let penalty = 0;
+        if (pmRep?.fadi_recommendation === 'avoid') penalty -= 20;
+        if (pmRep?.fadi_recommendation === 'trust') penalty += 10;
+        if (corr?.verdict === 'STALE') penalty -= 15;
+        if (corr?.verdict?.includes('UNVERIFIED')) penalty -= 12;
+        if (corr?.verdict?.includes('NET_AFTER_PROMO')) penalty -= 5;
+        if (corr?.verdict === 'VERIFIED_AS_LISTED') penalty += 8;
+        return { a, p, pmKey, pmRep, corr, ct, score: p.total + penalty };
+      })
+      .sort((x, y) => y.score - x.score)
+      .slice(0, 10);
+
+    const html = `
+      <div style="background:var(--accent-soft);border-left:4px solid var(--accent);padding:12px 14px;border-radius:6px;margin-bottom:14px;font-size:12.5px">
+        <b>How this ranks:</b> 6-axis composite score (CVH/Walk/Single/Run/Cost/Toronto) + bonus for VERIFIED listings + TRUST property managers − penalty for STALE / AVOID-PM / NET-AFTER-PROMO listings.
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        ${ranked.map(({a, p, pmKey, pmRep, corr, ct, score}, i) => {
+          const phone = ct?.leasing_phone || '(call building)';
+          const url = ct?.book_tour_url || a.listing_url;
+          const pmIcon = pmRep?.fadi_recommendation === 'trust' ? '✓' : pmRep?.fadi_recommendation === 'avoid' ? '✗' : '~';
+          const corrTxt = corr?.verdict === 'VERIFIED_AS_LISTED' ? 'Price verified'
+                        : corr?.verdict === 'VERIFIED_DIFFERENT' ? 'Actual price: $'+corr.actual_price_low?.toLocaleString()
+                        : corr?.verdict === 'STALE' ? 'STALE — verify pricing'
+                        : corr?.verdict?.includes('NET_AFTER_PROMO') ? 'Net-after-promo only'
+                        : '';
+          return `<div style="display:grid;grid-template-columns:32px 1fr auto;gap:12px;padding:12px;border:1px solid var(--border);border-radius:8px;background:var(--panel);align-items:center">
+            <div style="font-size:22px;font-weight:700;color:var(--accent-text);text-align:center">${i+1}</div>
+            <div>
+              <div style="display:flex;align-items:baseline;gap:6px;flex-wrap:wrap">
+                <a href="#" onclick="document.getElementById('callsheet-modal').classList.remove('show');selectApt('${a.id}');return false" style="font-weight:700;font-size:14px;color:var(--text);text-decoration:none">${a.name}</a>
+                <span style="font-size:11px;color:var(--muted)">· ${a.zone}</span>
+              </div>
+              <div style="font-size:11.5px;color:var(--muted);margin-top:2px">
+                CVH ${p.raw.cvh_min}m · KW ${p.raw.kw_min}m · $${(p.raw.rent||0).toLocaleString()} · Score ${score}/100
+              </div>
+              ${pmRep ? `<div style="font-size:11px;margin-top:3px;color:${pmRep.fadi_recommendation==='avoid'?'#dc2626':pmRep.fadi_recommendation==='trust'?'#16a34a':'#ca8a04'}">${pmIcon} PM: ${pmKey.replace(/_/g,' ')} (${pmRep.reputation_score}/10) — ${pmRep.honest_note?.slice(0,90)||''}</div>` : ''}
+              ${corrTxt ? `<div style="font-size:11px;color:${corr.verdict==='STALE'?'#dc2626':'#ea580c'};margin-top:2px">⚠ ${corrTxt}</div>` : ''}
+              ${ct?.current_promo ? `<div style="font-size:11px;color:var(--good);margin-top:2px"><b>Promo:</b> ${ct.current_promo}</div>` : ''}
+            </div>
+            <div style="text-align:right;display:flex;flex-direction:column;gap:4px">
+              ${phone !== '(call building)' ? `<a href="tel:${phone.replace(/[^\d+]/g,'')}" style="background:var(--accent);color:#fff;padding:6px 12px;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600;white-space:nowrap">📞 ${phone}</a>` : ''}
+              ${url ? `<a href="${url}" target="_blank" style="background:var(--panel-2);color:var(--text);padding:5px 10px;border-radius:6px;text-decoration:none;font-size:11px;white-space:nowrap;border:1px solid var(--border)">Listing →</a>` : ''}
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+      <div style="margin-top:18px;font-size:11.5px;color:var(--muted);padding:10px;background:var(--panel-2);border-radius:6px">
+        <b>This week priorities:</b> top 3 ranked above should be your first 3 phone calls. Ask: "Is a 1-bedroom available for July 1 2026? What's the actual asking rent (not net-after-promo)? Can I tour Saturday?"
+      </div>
+    `;
+    document.getElementById('callsheet-content').innerHTML = html;
+    document.getElementById('callsheet-modal').classList.add('show');
   };
 
   // ===== STRATEGY EXPLORER (Pareto scatter) =====

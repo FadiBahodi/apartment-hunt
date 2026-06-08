@@ -1,0 +1,211 @@
+{
+  "_meta": {
+    "search_methodology": "WebSearch + WebFetch attempts. WebFetch to reddit.com is blocked at the harness layer ('Claude Code is unable to fetch from www.reddit.com'). WebSearch with site:reddit.com and direct reddit-targeted queries returned essentially zero indexed Reddit content for these specific buildings/PMs in 2024-2026.",
+    "honest_disclaimer": "NO building below has verifiable Reddit posts dated 2024-2026 that surfaced via the available search tools. Per the user's stale-content rejection rule, every building below is marked insufficient_data. Where third-party (non-Reddit) review-site signal surfaced incidentally, it is noted as 'adjacent_signal' but NOT counted as Reddit sentiment. Recommend a human pass with logged-in reddit.com search, or use Pushshift/Arctic Shift archive APIs that this harness cannot access.",
+    "date_filter_applied": "2024-01-01 to 2026-06-07",
+    "subreddits_targeted": ["r/TorontoRenting", "r/Toronto", "r/Mississauga", "r/AskTO"],
+    "tool_limitation": "BLOCKING - reddit.com WebFetch returns hard error; Google index of reddit content for these niche queries is sparse-to-empty.",
+    "queries_run": 20,
+    "queries_with_reddit_hits": 0
+  },
+  "eau_du_soleil": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. No Reddit posts 2024-2026 surfaced via available search. Adjacent (non-Reddit) signal: condoessentials and humberbayliving show generally positive amenity reviews but those are marketing-adjacent. Do not anchor decision on Reddit."
+  },
+  "vita_on_the_lake": {
+    "sentiment_score": -10,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": ["elevator wait times (adjacent sources, not Reddit)", "single concierge (adjacent sources, not Reddit)"],
+    "recurring_praise": ["stylish lobby (adjacent)", "good gym (adjacent)"],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT REDDIT DATA. Adjacent condoessentials reviews mention elevator wait and understaffed concierge as recurring gripes; building is new (2022) so review volume is light. Verify with a human Reddit search before deciding."
+  },
+  "markwood_4365": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. No Reddit hits. Sterling Karamar has limited Reddit presence; building is leasing-up so review base is thin."
+  },
+  "waterford_tower_2645": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. QuadReal Mississauga generates almost no Reddit chatter at the building level. No 2024-2026 hits."
+  },
+  "65_windermere": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. Greenwin/Windermere - no Reddit posts surfaced. Greenwin as a PM has occasional negative Reddit mentions historically but nothing building-specific 2024-2026 via this tooling."
+  },
+  "60_mountview": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. Beaux Properties is a small landlord with near-zero Reddit footprint."
+  },
+  "grenadier_square": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. GWL Realty Advisors managed; no Reddit hits 2024-2026. Building amenity list looks strong on marketing sites but that's not tenant Reddit signal."
+  },
+  "the_campbell": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. Bentall-managed; no Reddit hits 2024-2026."
+  },
+  "old_mill_station": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. Crestview Investment Corporation manages - no Reddit posts surfaced."
+  },
+  "143_stephen_drive": {
+    "sentiment_score": -15,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": ["MetCap as a PM has a generally poor Reddit reputation historically (not building-specific, not 2024-2026 verified)"],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT BUILDING-SPECIFIC REDDIT DATA for 2024-2026. MetCap Living broadly has a weak landlord reputation on tenant forums but I could not surface a 2024-2026 Reddit post tied to 143 Stephen. Treat the -15 as a soft PM-level prior, not a verified building signal."
+  },
+  "reid_drive": {
+    "sentiment_score": -5,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": ["InterRent PM has mixed-to-negative reputation generally (not Reddit-2024-2026-verified for this building)"],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT BUILDING-SPECIFIC REDDIT DATA. InterRent has Reddit chatter about above-guideline rent increases and renovation-eviction patterns at OTHER properties; nothing surfaced for Reid Drive specifically in 2024-2026."
+  },
+  "lakewood_ii_1285": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. Homestead Land Holdings - minimal Reddit footprint for this specific building."
+  },
+  "lakeshore_206e": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. No Reddit hits 2024-2026."
+  },
+  "beechwood_480_lakeshore": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. No Reddit hits 2024-2026."
+  },
+  "arc_erin_mills": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": ["Daniels brand has generally positive reputation (adjacent, not Reddit)"],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT REDDIT DATA. Daniels-built; strata.ca and marketing sources are favorable but no 2024-2026 Reddit signal accessible."
+  },
+  "pinnacle_grand_park_ii": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT REDDIT DATA. Google review avg 4.0/5 (adjacent, not Reddit). No 2024-2026 Reddit posts surfaced."
+  },
+  "concord_canada_house": {
+    "sentiment_score": -10,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": ["CityPlace neighborhood broadly criticized on r/Toronto historically (not building-2024-2026-verified)"],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT BUILDING-SPECIFIC DATA. r/Toronto has historical critique of CityPlace density/transit/feel but I could not surface a verified 2024-2026 Concord Canada House Reddit post. Soft negative prior only."
+  },
+  "liberty_house_15_solidarity": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. Briarlane Rental managed; no Reddit hits."
+  },
+  "m5v_condos": {
+    "sentiment_score": -5,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": ["'cheaply built' (condoessentials, adjacent, not Reddit, undated)"],
+    "recurring_praise": ["entertainment district location (adjacent)"],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT REDDIT DATA. Adjacent review site notes build-quality complaints but that is not Reddit and not date-verified."
+  },
+  "jade_waterfront_33_shore_breeze": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. No Reddit hits 2024-2026 for Jade or Phantom Developments in this building context."
+  },
+  "brightwater_i": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. Brand-new Port Credit master-plan; review base too thin and no Reddit hits surfaced."
+  },
+  "ultra_ovation": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": ["Tridel brand reputation is strong (adjacent)"],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT REDDIT DATA. Tridel build (2010) - generally good reputation but no 2024-2026 Reddit posts surfaced."
+  },
+  "junction_factory": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT DATA. No Reddit hits."
+  },
+  "70_high_park_ave": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": ["Daniels build (adjacent)"],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT REDDIT DATA. Daniels 2005 build; no 2024-2026 Reddit hits."
+  },
+  "sherwood_towers": {
+    "sentiment_score": 0,
+    "post_count_2024_2026": 0,
+    "recurring_complaints": [],
+    "recurring_praise": [],
+    "key_quotes": [],
+    "honest_note": "INSUFFICIENT REDDIT DATA. Google 3.9/5 (adjacent). Older 1983 build. No 2024-2026 Reddit signal."
+  }
+}
