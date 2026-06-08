@@ -500,6 +500,7 @@ const _jsonLoaders = [
   ['amenities.json', 'AMENITIES', null],
   ['reddit_sentiment.json', 'REDDIT_SENTIMENT', null],
   ['contacts.json', 'CONTACTS', null],
+  ['floor_plans.json', 'FLOOR_PLANS', null],
   ['neighborhoods.geojson', 'NEIGHBORHOODS', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
@@ -1500,6 +1501,21 @@ setTimeout(scheduleRerender, 4000);
           ${go ? `<div style="background:var(--good-soft);border-left:3px solid var(--good);padding:8px 10px;border-radius:4px;margin-bottom:6px;font-size:12.5px"><b>GO Train:</b> ${go.station} — <b>${go.walk_min} min walk</b> (${go.dist_km}km).</div>` : ''}
           <div style="font-size:11px;color:var(--muted);margin-top:4px">All transit (top 3 nearest): ${td.top3.map(t => `${t.station} ${t.walk_min}m`).join(' · ')}</div>
           ${a.transit?`<p style="font-size:11px;color:var(--muted);margin-top:6px">Original note: ${a.transit}</p>`:''}
+        `;
+      })()}
+      ${(() => {
+        const fp = (window.FLOOR_PLANS||{})[a.id];
+        if (!fp) return '';
+        const sppd = fp.sqft_per_dollar_realistic;
+        const sppdColor = sppd >= 0.40 ? '#16a34a' : sppd >= 0.32 ? '#84cc16' : sppd >= 0.25 ? '#eab308' : sppd >= 0.20 ? '#ea580c' : '#dc2626';
+        return `<h3>Floor plans + $/sqft reality check</h3>
+          <div style="background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:10px 12px;font-size:12px;line-height:1.55">
+            ${fp['1bed_sqft_actual_range']?`<div><b>1BR actual sqft range:</b> ${fp['1bed_sqft_actual_range']}</div>`:''}
+            ${fp.sqft_per_dollar_realistic!=null?`<div style="margin-top:3px"><b>Realistic $/sqft:</b> <span style="color:${sppdColor};font-weight:600">$${(1/fp.sqft_per_dollar_realistic).toFixed(2)}/sqft</span> ${sppd<0.20?'(micro-unit priced too high)':sppd>0.40?'(great value layout)':''}</div>`:''}
+            ${fp.verified_layouts && fp.verified_layouts.length?`<div style="margin-top:4px"><b>Layouts:</b> ${fp.verified_layouts.join(' · ')}</div>`:''}
+            ${fp.honest_note?`<div style="margin-top:6px;color:${sppdColor};font-style:italic">${fp.honest_note}</div>`:''}
+            ${fp.floor_plan_urls && fp.floor_plan_urls.length?`<div style="margin-top:6px"><a href="${fp.floor_plan_urls[0]}" target="_blank" style="color:var(--accent-text);font-size:11px">Floor plan ↗</a></div>`:''}
+          </div>
         `;
       })()}
       ${(() => {

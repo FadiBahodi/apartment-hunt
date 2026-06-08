@@ -1,0 +1,333 @@
+{
+  "eau_du_soleil": {
+    "floor_plan_urls": [
+      "https://condonow.com/30-Shore-Breeze-Dr-Toronto-Eau-Du-Soleil-Condos-Sky-Tower/Floor-Plan-Price",
+      "https://www.buzzbuzzhome.com/ca/eau-du-soleil/units/sky-tower/sky-13",
+      "https://humberbayliving.to/condos/eau-du-soleil-sky-tower/"
+    ],
+    "1bed_sqft_actual_range": "485-625",
+    "verified_layouts": ["Sky 13 1BR 485sqft", "Sky 6 1BR 560sqft", "Sky 8 1BR 625sqft", "1BR+den ~700sqft", "2BR 800+sqft"],
+    "sqft_per_dollar_realistic": 0.24,
+    "honest_note": "1BR at ~$2,400 gets you 485-560sqft realistically; the larger 625sqft Sky 8 typically rents higher ($2,600+). At our quoted price we'd land in the 500sqft range."
+  },
+  "vita_on_the_lake": {
+    "floor_plan_urls": [
+      "https://condonow.com/70-Annie-Craig-Dr-Toronto-Vita-on-the-Lake-Condos/Floor-Plan-Price",
+      "https://vitaonthelake.com/",
+      "https://condos.ca/toronto/vita-on-the-lake-70-annie-craig-dr"
+    ],
+    "1bed_sqft_actual_range": "390-620",
+    "verified_layouts": ["studio 390sqft", "1BR std 524-580sqft", "1BR large 620sqft", "1BR+den 680-750sqft", "2BR 800-1100sqft"],
+    "sqft_per_dollar_realistic": 0.23,
+    "honest_note": "Studios start at 390sqft (tiny); typical 1BR is 524-580sqft. At our budget we'd get a small-to-mid 1BR, not the spacious lake-view unit images suggest."
+  },
+  "lago_waterfront": {
+    "floor_plan_urls": [
+      "https://condonow.com/56-Annie-Craig-Dr-Toronto-Lago-at-the-Waterfront/Floor-Plan-Price",
+      "https://condos.ca/toronto/lago-at-the-waterfront-56-annie-craig-dr",
+      "https://humberbayliving.to/condos/lago-at-the-waterfront/"
+    ],
+    "1bed_sqft_actual_range": "366-663",
+    "verified_layouts": ["studio 366sqft", "1BR 552sqft (Suite 552 plan)", "1BR+den 663sqft", "2BR 800-1000sqft"],
+    "sqft_per_dollar_realistic": 0.24,
+    "honest_note": "Decent value: standard 1BR plan ~552sqft is mid-pack for Humber Bay; 1BR+den at 663sqft is good if budget stretches to $2,500-2,600."
+  },
+  "markwood_4365": {
+    "floor_plan_urls": [
+      "https://www.themarkwoodliving.com/floor-plans",
+      "https://www.zumper.com/apartment-buildings/p1333582/the-markwood-toronto-on",
+      "https://rentals.ca/etobicoke/the-markwood"
+    ],
+    "1bed_sqft_actual_range": "400-600",
+    "verified_layouts": ["studio ~400sqft", "1BR std 500-600sqft", "1BR+den 650-750sqft", "2BR 800-1000sqft"],
+    "sqft_per_dollar_realistic": 0.22,
+    "honest_note": "Brand-new 2024 PBR, 98 floor plans 400-1000sqft. 1BR starts $2,253 -- we'd be in 500sqft territory. With 2-months free promo effective rent is competitive but units are not large."
+  },
+  "arc_erin_mills": {
+    "floor_plan_urls": [
+      "https://www.danielsarccondos.com/features/",
+      "https://condonow.com/PDF/PlanAndPricing/Arc-Condos/Arc-Brochure.pdf",
+      "https://strata.ca/mississauga/2520-eglinton-avenue-west-arc-erin-mills",
+      "https://www.talkcondo.com/mississauga/arc-condos/"
+    ],
+    "1bed_sqft_actual_range": "473-650",
+    "verified_layouts": ["studio 473sqft", "1BR 520-620sqft", "1BR+den 670-750sqft", "2BR 800-1000sqft"],
+    "sqft_per_dollar_realistic": 0.27,
+    "honest_note": "Daniels 2019 build. 1BR likely 520-620sqft at our price. Solid value vs Humber Bay for Mississauga location near hospitals (15min to CVH)."
+  },
+  "reid_drive": {
+    "floor_plan_urls": [
+      "https://www.apartments.com/reid-drive-mississauga-on/50qtycp/",
+      "https://www.zumper.com/apartment-buildings/p224787/10-14-reid-drive-streetsville-mississauga-on",
+      "https://rentals.ca/mississauga/reid-drive"
+    ],
+    "1bed_sqft_actual_range": "400-650",
+    "verified_layouts": ["studio 400sqft @ $1,624", "1BR std 500-600sqft", "2BR 700-900sqft"],
+    "sqft_per_dollar_realistic": 0.30,
+    "honest_note": "MICRO ALERT: confirmed 400sqft 1BR at $1,624 ($4.06/sqft) -- extremely small for the price. Older building, no underground parking, basic amenities. Sqft/dollar is bad given quality."
+  },
+  "lakewood_ii_1285": {
+    "floor_plan_urls": [
+      "https://www.homestead.ca/residential/lakewood-apartments-ii",
+      "https://www.zumper.com/apartment-buildings/p448376/lakewood-apartments-ii-lakeview-mississauga-on",
+      "https://www.apartments.com/lakewood-apartments-ii-mississauga-on/88f18f2/"
+    ],
+    "1bed_sqft_actual_range": "600-800",
+    "verified_layouts": ["1BR 692sqft @ $1,795", "1BR larger 750-800sqft @ $1,945", "2BR 900-1100sqft"],
+    "sqft_per_dollar_realistic": 0.40,
+    "honest_note": "GREAT VALUE: 692sqft 1BR at $1,795 = $2.60/sqft -- best sqft/dollar in finalists. 1970s building so coin laundry + window AC, but suites are GENEROUSLY sized vs anything new-build."
+  },
+  "lakeshore_2335": {
+    "floor_plan_urls": [
+      "https://www.parkproperty.ca/apartments/2335-lake-shore-blvd-west",
+      "https://www.apartments.com/2335-lake-shore-blvd-w-toronto-on/g8fp2jy/",
+      "https://www.zumper.com/apartment-buildings/p375033/2335-lake-shore-blvd-west-mimico-toronto-on"
+    ],
+    "1bed_sqft_actual_range": "550-750",
+    "verified_layouts": ["1BR 550-700sqft @ $1,999-2,499", "2BR 800-1000sqft"],
+    "sqft_per_dollar_realistic": 0.30,
+    "honest_note": "Renovated 1967 suites, decent size. 1BR at $1,999 likely ~600sqft. With 1-month free + $1000 bonus the effective rent improves. Acceptable sqft/dollar for South Etobicoke."
+  },
+  "lakeshore_2495": {
+    "floor_plan_urls": [
+      "https://www.metcap.com/property/2495-lake-shore-boulevard-west-etobicoke-on-m8v-1c5/",
+      "https://www.2495lakeshoreblvd.com/",
+      "https://www.zumper.com/apartment-buildings/p521236/2495-lake-shore-boulevard-west-mimico-toronto-on"
+    ],
+    "1bed_sqft_actual_range": "550-700",
+    "verified_layouts": ["1BR std 550-650sqft", "2BR 750-900sqft"],
+    "sqft_per_dollar_realistic": 0.32,
+    "honest_note": "MetCap doesn't publish exact sqft. 1960s 1BR units typically 550-650sqft; reasonable for ~$1,800. Heat included. Sqft data not officially verified -- call to confirm."
+  },
+  "lakeshore_206e": {
+    "floor_plan_urls": [
+      "https://www.206lakeshoreroad.com/",
+      "https://www.apartments.com/206-lakeshore-rd-e-mississauga-on/279r448/",
+      "https://www.zumper.com/apartment-buildings/p449018/206-lakeshore-road-east-port-credit-mississauga-on"
+    ],
+    "1bed_sqft_actual_range": "435-645",
+    "verified_layouts": ["1BR junior 435sqft", "1BR std 550sqft", "1BR large 645sqft"],
+    "sqft_per_dollar_realistic": 0.28,
+    "honest_note": "Wide range: 435sqft junior is genuinely tiny; 645sqft unit is real value. Pricing $1,841-$2,150 -- at low end you get the micro 435sqft. Verify which size you're being quoted."
+  },
+  "waterford_tower_2645": {
+    "floor_plan_urls": [
+      "https://www.quadrealres.com/apartments/on/mississauga/waterford-tower-3/floorplans",
+      "https://quadrealresidential.com/mississauga/waterford-tower/floorplans/",
+      "https://www.rentcafe.com/apartments/on/mississauga/waterford-tower-3/default.aspx"
+    ],
+    "1bed_sqft_actual_range": "782-1097",
+    "verified_layouts": ["1BR std 782sqft", "1BR+solarium 850-950sqft", "2BR 1000-1097sqft"],
+    "sqft_per_dollar_realistic": 0.36,
+    "honest_note": "EXCELLENT VALUE: smallest unit is 782sqft starting at $2,250 = $2.88/sqft. 1989 build with central AC + in-suite laundry + solarium. Meadowvale location is the catch (far from CVH)."
+  },
+  "143_stephen_drive": {
+    "floor_plan_urls": [
+      "https://www.metcap.com/property/143-stephen-drive-etobicoke-on-m8y-3n5",
+      "https://www.143stephendrive.com/",
+      "https://www.zumper.com/apartment-buildings/p355243/143-stephen-drive-stonegate-queensway-toronto-on"
+    ],
+    "1bed_sqft_actual_range": "500-700",
+    "verified_layouts": ["bachelor 400-450sqft", "1BR std 550-650sqft", "2BR 750-900sqft"],
+    "sqft_per_dollar_realistic": 0.32,
+    "honest_note": "Small 1960s 4-storey walk-up; sqft not officially published. Typical 1960s 1BR ~600sqft. Cheap ($1,799) but no gym, coin laundry, no central AC."
+  },
+  "65_windermere": {
+    "floor_plan_urls": [
+      "https://www.greenwin.ca/apartments-for-rent/65-windermere-ave",
+      "https://www.zumper.com/apartment-buildings/p499971/65-75-windermere-ave-swansea-toronto-on",
+      "https://www.apartments.com/65-windermere-ave-toronto-on/fg4m7sv/"
+    ],
+    "1bed_sqft_actual_range": "500-650",
+    "verified_layouts": ["bachelor ~450sqft @ $1,549", "1BR 500-650sqft @ $1,625-1,799"],
+    "sqft_per_dollar_realistic": 0.34,
+    "honest_note": "1BR 500-650sqft at $1,625 starting = solid sqft/dollar for Swansea/High Park. Bachelor at $1,549 is what our memo had wrong. With 2 months free promo this is very competitive."
+  },
+  "60_mountview": {
+    "floor_plan_urls": [
+      "https://beauxproperties.ca/category/60-mountview-ave/",
+      "https://beauxproperties.ca/listing/junior-1-bedroom-apartment-60-mountview-ave-toronto-on-m6p-2l4/",
+      "https://www.zumper.com/apartment-buildings/p485609/60-mountview-ave-high-park-toronto-on"
+    ],
+    "1bed_sqft_actual_range": "515-700",
+    "verified_layouts": ["Junior 1BR 530sqft @ $1,925", "1BR std 515sqft (smaller layout) @ ~$1,850", "Large 1BR 650-700sqft higher"],
+    "sqft_per_dollar_realistic": 0.28,
+    "honest_note": "MICRO ALERT: our $1,850 gets us the 515sqft Junior 1BR -- small. Larger 1BR units exist but cost more. Good location (Junction subway) but not generous space."
+  },
+  "70_high_park_ave": {
+    "floor_plan_urls": [
+      "https://condos.ca/toronto/high-park-condominiums-70-high-park-ave",
+      "https://strata.ca/toronto/70-high-park-ave-high-park-condominiums",
+      "https://www.bigguidetocondos.com/communities/high-park/70-high-park-ave/"
+    ],
+    "1bed_sqft_actual_range": "448-700",
+    "verified_layouts": ["1BR small 448sqft", "1BR std 500-599sqft", "1BR+den 650-700sqft", "2BR 800-1235sqft"],
+    "sqft_per_dollar_realistic": 0.25,
+    "honest_note": "Daniels 2005. 1BR sublets typically 500-599sqft at $2,400-2,600. Good location but not roomy. 1BR+den is the sweet spot if budget allows."
+  },
+  "grenadier_square_40_high_park": {
+    "floor_plan_urls": [
+      "https://www.gwlraresidential.com/apartments/on/toronto/grenadier-square/",
+      "https://www.rentcafe.com/apartments/on/toronto/grenadier-square/default.aspx",
+      "https://www.gwlraresidential.com/apartments/on/toronto/grenadier-square-high-park-village/floorplans/1-bedroom-1-bath---zoom-floorplan"
+    ],
+    "1bed_sqft_actual_range": "406-700",
+    "verified_layouts": ["bachelor 406-500sqft", "1BR std 600-700sqft", "2BR 850-940sqft"],
+    "sqft_per_dollar_realistic": 0.31,
+    "honest_note": "1BR from $2,025 likely 600-700sqft (1960s generous footprints) -- decent value for High Park. NO in-suite laundry, that's the trade-off."
+  },
+  "the_campbell_299_campbell": {
+    "floor_plan_urls": [
+      "https://www.rentthecampbell.com/suites",
+      "https://www.apartments.com/the-campbell-toronto-on/pt1f8fs/",
+      "https://rentals.ca/toronto/299-campbell-avenue"
+    ],
+    "1bed_sqft_actual_range": "500-650",
+    "verified_layouts": ["1BR 500-599sqft from $2,025", "1BR+den 650-750sqft", "2BR 800-1000sqft"],
+    "sqft_per_dollar_realistic": 0.27,
+    "honest_note": "Brand-new 2023 PBR with library on ground floor. 1BR 500-599sqft at $2,025 = small-to-mid. Junction Triangle (far from CVH) is the location catch."
+  },
+  "old_mill_station_2675_bloor": {
+    "floor_plan_urls": [
+      "https://condos.ca/toronto/terraces-of-old-mill-2662-bloor-st-w",
+      "https://precondo.ca/one-old-mill-condos/",
+      "https://condos.ca/toronto/one-old-mill-1-old-mill-dr"
+    ],
+    "1bed_sqft_actual_range": "550-750",
+    "verified_layouts": ["1BR std 550-650sqft (Terraces of Old Mill 2002)", "1BR+den 700-800sqft", "Note: 'One Old Mill' new build is 1288+sqft luxury, different building"],
+    "sqft_per_dollar_realistic": 0.26,
+    "honest_note": "Address 2675 Bloor may not exist exactly; Terraces of Old Mill (2662 Bloor) is closest match. 1BR typically 550-650sqft at $2,300-2,500."
+  },
+  "concord_canada_house": {
+    "floor_plan_urls": [
+      "https://concordcanadahouse.ca/",
+      "https://condos.ca/toronto/concord-canada-house-23-spadina-ave-1-3-concord-cityplace-way",
+      "https://www.talkcondo.com/toronto/concord-canada-house-condos/"
+    ],
+    "1bed_sqft_actual_range": "485-650",
+    "verified_layouts": ["1BR std 485-550sqft", "1BR large 600sqft", "1BR+den 650sqft + 120sqft heated balcony", "2BR 800-1100sqft"],
+    "sqft_per_dollar_realistic": 0.27,
+    "honest_note": "MICRO ALERT: 1BR rentals seen at $1,800-$2,500 -- at low end you get the 485sqft entry unit. CityPlace = downtown, 45+min to CVH. Amenities are 5-star but unit sizes shrink."
+  },
+  "liberty_house_15_solidarity": {
+    "floor_plan_urls": [
+      "https://www.rentlibertyhouse.ca/",
+      "https://www.rentcafe.com/apartments/on/toronto/liberty-house0/default.aspx",
+      "https://www.apartments.com/liberty-house-toronto-on/q3g5emy/"
+    ],
+    "1bed_sqft_actual_range": "450-650",
+    "verified_layouts": ["studio 400-450sqft", "1BR std 500-600sqft from $2,239", "1BR+den 650-750sqft"],
+    "sqft_per_dollar_realistic": 0.24,
+    "honest_note": "Brand new 2024 GWL PBR. 1BR from $2,239 = ~500-550sqft typical for new builds. Liberty Village far from CVH. Premium price for amenities, not space."
+  },
+  "dna3_lofts": {
+    "floor_plan_urls": [
+      "https://condos.ca/toronto/dna3-1030-king-st-w",
+      "https://strata.ca/toronto/1030-king-st-w-dna-3-condos",
+      "https://www.talkcondo.com/toronto/dna3-condos/"
+    ],
+    "1bed_sqft_actual_range": "336-700",
+    "verified_layouts": ["studio 336sqft", "1BR std 500-599sqft", "1BR+den 600sqft + 100sqft balcony", "2BR 800-995sqft"],
+    "sqft_per_dollar_realistic": 0.24,
+    "honest_note": "MICRO ALERT: studios from 336sqft (tiny). 1BR 500-599sqft at $2,400+. Loft style with concrete ceilings = some sound transfer. Decent 1BR+den option."
+  },
+  "m5v_condos_375_king_w": {
+    "floor_plan_urls": [
+      "https://condos.ca/toronto/m5v-375-king-st-w",
+      "http://www.mym5vcondo.com/floor-plans/",
+      "https://condonow.com/375-King-Street-West-Toronto-M5V/Floor-Plan-Price"
+    ],
+    "1bed_sqft_actual_range": "617-1042",
+    "verified_layouts": ["1BR 617sqft", "1BR 682sqft", "1BR 753sqft", "1BR 766sqft", "1BR 881sqft", "1BR 905sqft", "1BR 1042sqft"],
+    "sqft_per_dollar_realistic": 0.28,
+    "honest_note": "VERY GOOD VALUE: 1BR minimum is 617sqft (unusually large for new downtown). At $2,400-$2,800 you get a genuinely roomy unit. King West nightlife noise is the catch."
+  },
+  "king_charlotte_11_charlotte": {
+    "floor_plan_urls": [
+      "https://condos.ca/toronto/king-charlotte-condos-11-charlotte-st",
+      "https://strata.ca/toronto/11-charlotte-st-king-charlotte-condos",
+      "https://newcondocentre.com/property/king-charlotte-condos-11-charlotte-street/"
+    ],
+    "1bed_sqft_actual_range": "422-650",
+    "verified_layouts": ["1BR small 422sqft (Unit 606)", "1BR 515sqft (Unit 2201)", "1BR+den 600-700sqft", "2BR 800-962sqft"],
+    "sqft_per_dollar_realistic": 0.21,
+    "honest_note": "MICRO ALERT + EXPENSIVE: 1BR units start at 422sqft (one of smallest in finalist set). At $2,400 = $5.69/sqft = WORST sqft/dollar in entire list. Pay a premium for King West address and shrink."
+  },
+  "pinnacle_grand_park_ii": {
+    "floor_plan_urls": [
+      "https://condos.ca/mississauga/pinnacle-grand-park-2-3975-grand-park-dr",
+      "https://strata.ca/mississauga/3975-grand-park-dr-pinnacle-grand-park-ii-condos",
+      "https://condonow.com/Pinnacle-Grand-Park-2/Floor-Plan-Price"
+    ],
+    "1bed_sqft_actual_range": "543-699",
+    "verified_layouts": ["1BR std 543-590sqft", "1BR Residence 06 590sqft", "1BR+den 600-699sqft", "2BR 800-1100sqft"],
+    "sqft_per_dollar_realistic": 0.30,
+    "honest_note": "Solid value: 1BR ~590sqft at ~$2,200 = $3.73/sqft. 2018 Pinnacle build with full amenities. Square One area, 20min to CVH."
+  },
+  "ultra_ovation_330_burnhamthorpe": {
+    "floor_plan_urls": [
+      "https://condos.ca/mississauga/ultra-ovation-at-city-centre-330-burnhamthorpe-rd-w",
+      "https://strata.ca/mississauga/330-burnhamthorpe-rd-w-ultra-ovation-at-city-centre-condos",
+      "https://www.mississaugacondominiums.ca/330-burnhamthorpe-road-west-ultra-ovation-condos.php"
+    ],
+    "1bed_sqft_actual_range": "580-992",
+    "verified_layouts": ["1BR small 580sqft", "1BR std 650-750sqft", "1BR+den 800-900sqft", "2BR 900-1313sqft"],
+    "sqft_per_dollar_realistic": 0.32,
+    "honest_note": "STRONG VALUE: 1BR starts at 580sqft (not 480sqft micros), goes up to 992sqft. Tridel 2010 with Ovation Club access. Mississauga City Centre = good for CVH commute."
+  },
+  "sherwood_towers_200_robert_speck": {
+    "floor_plan_urls": [
+      "https://condos.ca/mississauga/sherwood-towers-200-robert-speck-pkwy",
+      "https://strata.ca/mississauga/200-robert-speck-pkwy-sherwood-towers-condos",
+      "https://www.mississaugacondominiums.ca/200-robert-speck-parkway-sherwood-towers.php"
+    ],
+    "1bed_sqft_actual_range": "861-1100",
+    "verified_layouts": ["No true 1BR -- smallest unit is 861sqft 2BR+solarium", "2BR 900-1100sqft", "3BR 1100-1300sqft", "4BR up to 1475sqft"],
+    "sqft_per_dollar_realistic": 0.40,
+    "honest_note": "BEST sqft/dollar but WRONG UNIT TYPE: this building has NO 1BR units. Smallest is 861sqft 2BR+solarium. Skip if 1BR is the goal; consider only if 2BR-attending-with-Nomi is the plan."
+  },
+  "the_crossways": {
+    "floor_plan_urls": [
+      "https://rentals.ca/toronto/2350-2360-dundas-street-west",
+      "https://www.apartments.com/the-crossways-toronto-on/sf18345/",
+      "https://www.zumper.com/apartment-buildings/p479373/the-crossways-complex-high-park-toronto-on"
+    ],
+    "1bed_sqft_actual_range": "355-685",
+    "verified_layouts": ["bachelor 355-450sqft", "1BR small 498-500sqft", "1BR std 550-685sqft", "2BR 700-900sqft"],
+    "sqft_per_dollar_realistic": 0.33,
+    "honest_note": "Wide range. 1BR at $1,539-$2,000 = ~500sqft. Larger 685sqft units near top of range. 1977 twin tower with attached mall = convenient but aging."
+  },
+  "junction_factory": {
+    "floor_plan_urls": [
+      "https://www.realstar.ca/apartments/on/toronto/junction-factory-apartments/",
+      "https://www.rentcafe.com/apartments/on/toronto/junction-factory-apartments/default.aspx",
+      "https://junctionfactory.ca/the-suites"
+    ],
+    "1bed_sqft_actual_range": "524-700",
+    "verified_layouts": ["1BR std 524-600sqft from $2,195", "1BR+den 650-750sqft", "2BR 800-998sqft"],
+    "sqft_per_dollar_realistic": 0.25,
+    "honest_note": "2022 Realstar boutique. 1BR starts 524sqft at $2,195 -- small but new with quality finishes. Junction location good for cyclists, mediocre for CVH commute."
+  },
+  "beechwood_480_lakeshore_e": {
+    "floor_plan_urls": [
+      "https://www.apartments.com/beechwood-apartments-mississauga-on/ej9hlgp/",
+      "https://rentals.ca/mississauga/480-lakeshore-road-east-1",
+      "https://www.apartmenthomeliving.com/apartment-finder/Beechwood-Apartments-Mississauga-ON-20076639"
+    ],
+    "1bed_sqft_actual_range": "465-700",
+    "verified_layouts": ["studio 465sqft @ $1,700", "1BR std 550-650sqft", "2BR multiplex 700-909sqft up to $2,120"],
+    "sqft_per_dollar_realistic": 0.28,
+    "honest_note": "MICRO ALERT: 465sqft 'studio/1BR' is the floor at $1,700 -- genuinely small. Larger units exist. NO in-suite laundry, NO pets. All utilities included is the redeeming feature."
+  },
+  "brightwater_i_215_lakeshore_w": {
+    "floor_plan_urls": [
+      "https://condonow.com/215-Lakeshore-Rd-W-Mississauga-Brightwater-Condos/Floor-Plan-Price",
+      "https://condos.ca/mississauga/brightwater-1-215-lakeshore-rd-w",
+      "https://experiencebrightwater.ca/"
+    ],
+    "1bed_sqft_actual_range": "501-700",
+    "verified_layouts": ["1BR std 501-600sqft", "1BR+den 600-700sqft @ $2,150 (Unit 340)", "2BR 700-985sqft"],
+    "sqft_per_dollar_realistic": 0.28,
+    "honest_note": "Brand new 2024 Diamond Corp. 1BR+den at 600-700sqft for $2,150 is genuinely good value for Port Credit. Standard 1BR ~520sqft is small. Verify which size."
+  }
+}
