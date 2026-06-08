@@ -485,6 +485,7 @@ const _jsonLoaders = [
   ['google_routes.json', 'GOOGLE_ROUTES', null],
   ['google_ranges.json', 'GOOGLE_RANGES', null],
   ['listing_corrections.json', 'LISTING_CORRECTIONS', null],
+  ['nearest_run_clubs.json', 'NEAREST_RUN_CLUBS', null],
   ['neighborhoods.geojson', 'NEIGHBORHOODS', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
@@ -509,9 +510,10 @@ const _listingsPromise = Promise.all([
   fetch('data/wave4_zones.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave5_high_park.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave6_king_west.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
-  fetch('data/wave7_junction_depth.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
-]).then(([t1, t2, t3, t4, t5, t6, t7]) => {
-  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'') + '\n' + (t4||'') + '\n' + (t5||'') + '\n' + (t6||'') + '\n' + (t7||'');
+  fetch('data/wave7_junction_depth.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
+  fetch('data/wave8_square_one.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
+]).then(([t1, t2, t3, t4, t5, t6, t7, t8]) => {
+  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'') + '\n' + (t4||'') + '\n' + (t5||'') + '\n' + (t6||'') + '\n' + (t7||'') + '\n' + (t8||'');
   const existingIds = new Set((window.APARTMENTS||[]).map(a => a.id));
   // Build AVOID-address lookup from data.js AVOID list. Entries use {name, why} where
   // `name` is "1257 Lakeshore Rd E (Lakewood I)" — split on '(' or ',' to get street address.
@@ -1419,7 +1421,19 @@ setTimeout(scheduleRerender, 4000);
             <p style="font-size:11px;color:var(--muted);margin-top:8px"><b>Original note:</b> ${a.running}</p>
           `;
         }
-        return `<h3>Running</h3><p>${a.running}</p>`;
+        return `<h3>Running</h3><p>${a.running||''}</p>`;
+      })()}
+      ${(() => {
+        const nrc = (window.NEAREST_RUN_CLUBS||{})[a.id];
+        if (!nrc || !nrc.length) return '';
+        return `<h3>Nearest run clubs</h3>
+          ${nrc.map(c => `<div style="background:var(--panel);padding:8px 10px;border-radius:4px;margin-bottom:6px;font-size:12px">
+            <div style="display:flex;justify-content:space-between"><b>${c.name}</b><span style="color:var(--muted);font-variant-numeric:tabular-nums">${c.dist_km}km</span></div>
+            <div style="color:var(--muted);font-size:11px;margin-top:2px">${c.area} · ${c.meet_days||''}</div>
+            ${c.demographics?`<div style="font-size:11px;color:var(--accent-text);margin-top:2px">Age skew: ${c.demographics}</div>`:''}
+            ${c.social_signal?`<div style="font-size:11px;font-style:italic;color:var(--text);margin-top:2px">${c.social_signal}</div>`:''}
+          </div>`).join('')}
+        `;
       })()}
       <h3>Transit</h3>
       <p>${a.transit}</p>
