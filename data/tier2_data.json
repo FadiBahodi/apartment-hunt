@@ -1,0 +1,302 @@
+{
+  "sheridan_crossing_2225_erin_mills": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "2225 Erin Mills Pkwy in Sheridan/Erin Mills area; not in zone files — PM and amenities require direct listing lookup before call."
+  },
+  "dialogue_square_one": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "Dialogue not in any zone file; name is generic — likely a Square One area condo, but PM/year unverified. Call to identify exact address first."
+  },
+  "elora_6515_glen_erin": {
+    "property_manager": "Minto_Apartments",
+    "year_built": 2012,
+    "in_suite_laundry": "yes",
+    "ac_type": "central",
+    "parking_underground": "included",
+    "gym_quality": "full",
+    "soundproofing": "no_complaints",
+    "honest_note": "Minto-managed per pm_reputation.json (Aquitaine/Elora cluster); newer 2010s suburban build in Streetsville; TRUST PM and rare ACORN heat — strong call-this-week candidate."
+  },
+  "8_newholm": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "Not in zone files; likely small Mississauga complex — needs direct identification before adding to pool."
+  },
+  "james_90": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "Building name underspecified (90 James St? Where?). Cannot map PM without address resolution."
+  },
+  "sheridan_manor": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "coin",
+    "ac_type": "window",
+    "parking_underground": "unknown",
+    "gym_quality": "none",
+    "soundproofing": "unknown",
+    "honest_note": "Name suggests older Mississauga purpose-built rental (Sheridan area); typical of 1970s stock — assume coin laundry/window AC until verified."
+  },
+  "lincoln_545": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "545 Lincoln (Welland or Hamilton?) not Mississauga-typical address; needs verification before inclusion in commute pool."
+  },
+  "mill_road_340": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "coin",
+    "ac_type": "window",
+    "parking_underground": "unknown",
+    "gym_quality": "basic",
+    "soundproofing": "unknown",
+    "honest_note": "340 Mill Rd is Markland Wood area Etobicoke — typically 1970s high-rise stock; PM unknown but area dominated by Realstar/Sterling Karamar (both AVOID) — verify PM before calling."
+  },
+  "lakeshore_760_lakeview": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "760 Lakeshore Rd E (Lakeview Mississauga) — likely older 1970s rental; not in zone files; PM and amenities unverified."
+  },
+  "walden_circle_clarkson": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "Walden Circle in Clarkson is a townhome/low-rise enclave — likely investor-owned, individual landlord variance high. Not standard PM-managed building."
+  },
+  "applewood_on_park": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "Applewood Hills area Mississauga (Dixie/Bloor); name not in pm_reputation roster — needs listing-side ID before include/exclude."
+  },
+  "1011_lorne_park": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "Lorne Park is affluent Mississauga residential — 1011 Lorne Park Rd unlikely to be a rental tower; possibly luxury townhome rental. Verify before pool inclusion."
+  },
+  "forty_second_45": {
+    "property_manager": "Greenwin",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "included",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "45 Forty Second St Greenwin-managed (zone_long_branch.jsonl); 12 mo free parking + free utilities + portable AC promo; direct Marie Curtis Park access. AVOID per Greenwin pest-control reputation — verify in-person."
+  },
+  "station_place_5249": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "5249 not in zone files; building name and street unspecified — cannot map without address resolution."
+  },
+  "jade_waterfront_33_shore_breeze": {
+    "property_manager": "Tridel_Del_Property_Management",
+    "year_built": 2018,
+    "in_suite_laundry": "yes",
+    "ac_type": "central",
+    "parking_underground": "$175-200/mo",
+    "gym_quality": "full",
+    "soundproofing": "no_complaints",
+    "honest_note": "33 Shore Breeze Jade Waterfront — Phantom Devs 2018 build per zone_humber_bay.jsonl; Del Property Management typical for HBS condos; newest finishes, 400sqft balconies, golf sim, dog wash. TRUST-tier PM (assumed Del)."
+  },
+  "westlake_phase2_2200": {
+    "property_manager": "Tridel_Del_Property_Management",
+    "year_built": 2015,
+    "in_suite_laundry": "yes",
+    "ac_type": "central",
+    "parking_underground": "$200/mo",
+    "gym_quality": "full",
+    "soundproofing": "some",
+    "honest_note": "2200 Lake Shore W Onni 2015 48-storey; squash courts, indoor pool, sauna, 24h concierge; condo rental — individual landlord PM varies, Del often handles. Mega-scale 1352 units across phases."
+  },
+  "beyond_the_sea_star_2230": {
+    "property_manager": "Empire_Communities",
+    "year_built": 2012,
+    "in_suite_laundry": "yes",
+    "ac_type": "central",
+    "parking_underground": "$175-200/mo",
+    "gym_quality": "full",
+    "soundproofing": "some",
+    "honest_note": "2230 Lake Shore W Empire-built 2012 45-storey; wine tasting, cinema, yoga, rooftop BBQ. Empire is developer (TRUST per pm_reputation) but individual unit owner PM varies. Star Tower has limited 1BR availability."
+  },
+  "ocean_club_59_annie_craig": {
+    "property_manager": "Empire_Communities",
+    "year_built": 2010,
+    "in_suite_laundry": "yes",
+    "ac_type": "central",
+    "parking_underground": "$175/mo",
+    "gym_quality": "full",
+    "soundproofing": "some",
+    "honest_note": "Ocean Club Waterfront — zone file shows 2200 Lake Shore W address (not 59 Annie Craig); 2010 build, resort amenities, Loblaws across street. Older HBS dated finishes per zone_mimico.jsonl. Empire/Del PM likely. ADDRESS NEEDS RECONCILIATION."
+  },
+  "vita_two_65_annie_craig": {
+    "property_manager": "Mattamy_Homes",
+    "year_built": 2020,
+    "in_suite_laundry": "yes",
+    "ac_type": "central",
+    "parking_underground": "$200/mo",
+    "gym_quality": "full",
+    "soundproofing": "no_complaints",
+    "honest_note": "Vita Two Mattamy 2020 boutique waterfront 16-storey; well-reviewed soundproofing (rare per amenities.json); outdoor pool seasonal only. TRUST-tier builder per pm_reputation; individual unit owner PM varies."
+  },
+  "lakeshore_village_3865": {
+    "property_manager": "MetCap_Living",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "included",
+    "gym_quality": "basic",
+    "soundproofing": "unknown",
+    "honest_note": "3865 Lake Shore W MetCap-managed per zone_mimico.jsonl. AVOID — MetCap is ACORN 2025 Worst Landlord of the Year. Drop entirely from pool unless rent is exceptional."
+  },
+  "shoreline_towers_2313_2323": {
+    "property_manager": "Briarlane_Rental_Property_Mgmt",
+    "year_built": 1975,
+    "in_suite_laundry": "unknown",
+    "ac_type": "window",
+    "parking_underground": "included",
+    "gym_quality": "basic",
+    "soundproofing": "unknown",
+    "honest_note": "2313/2323 Lake Shore W Briarlane-managed per zone_long_branch.jsonl + pm_reputation.json. AVOID — Briarlane has documented pest neglect + eviction-bullying allegations. 2313 is older 1970s stock. Drop from pool."
+  },
+  "aquaview_3865_condo": {
+    "property_manager": "Unknown",
+    "year_built": 2012,
+    "in_suite_laundry": "yes",
+    "ac_type": "central",
+    "parking_underground": "$175/mo",
+    "gym_quality": "full",
+    "soundproofing": "unknown",
+    "honest_note": "3865 Lake Shore W Aquaview — zone_long_branch.jsonl confirms 2012 16-storey condo with outdoor pool, rooftop, concierge, BBQ. Condo = individual landlord PM varies. NOTE: address conflicts with Lakeshore Village 3865 MetCap entry — verify which building is which."
+  },
+  "lakeshore_2335_park_property": {
+    "property_manager": "Park_Property_Management",
+    "year_built": 1967,
+    "in_suite_laundry": "coin",
+    "ac_type": "window",
+    "parking_underground": "$100/mo",
+    "gym_quality": "none",
+    "soundproofing": "unknown",
+    "honest_note": "2335 Lake Shore W Park Property-managed; 132 units; renovated stone-counter suites; no gym/concierge; coin laundry. VERIFY-tier PM (building-dependent) — already in amenities.json."
+  },
+  "lakeshore_2495_metcap": {
+    "property_manager": "MetCap_Living",
+    "year_built": 1965,
+    "in_suite_laundry": "coin",
+    "ac_type": "window",
+    "parking_underground": "unknown",
+    "gym_quality": "none",
+    "soundproofing": "unknown",
+    "honest_note": "2495 Lake Shore W MetCap-managed — already AVOID-flagged in pm_reputation.json. ACORN 2025 Worst Landlord. Drop from pool entirely."
+  },
+  "marina_view_2303_2307": {
+    "property_manager": "Greenwin",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "window",
+    "parking_underground": "unknown",
+    "gym_quality": "none",
+    "soundproofing": "unknown",
+    "honest_note": "2303-2307 Lake Shore W Greenwin-managed per pm_reputation.json buildings_in_our_data. Small 400-600sqft units; deepest value play in zone ($1,400 1BR). AVOID — Greenwin pest neglect documented. Verify in-person before signing."
+  },
+  "363_lakeshore_e_port_credit": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "363 Lakeshore Rd E in zone_port_credit.jsonl; $1,500 1BR entry suspiciously low for PC — zone file warns 'either small basement unit or deferred maintenance — view in person'. PM not identified."
+  },
+  "credit_village_square_150_lakeshore_w": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "unknown",
+    "ac_type": "unknown",
+    "parking_underground": "unknown",
+    "gym_quality": "unknown",
+    "soundproofing": "unknown",
+    "honest_note": "150 Lakeshore Rd W Mississauga — older mid-rise on Credit River per zone_port_credit.jsonl; $1,900-2,300 1BR; PM not published, call required."
+  },
+  "heintzman_place_60": {
+    "property_manager": "Unknown",
+    "year_built": 2010,
+    "in_suite_laundry": "yes",
+    "ac_type": "central",
+    "parking_underground": "included",
+    "gym_quality": "full",
+    "soundproofing": "unknown",
+    "honest_note": "60 Heintzman Place Junction 16-storey 327 units (zone_junction_depth.jsonl); yoga/gym/library/kids/hobby; ~700m Keele subway. Condo = per-unit owner PM. Verify which side faces rail corridor."
+  },
+  "crossways_2350_dundas": {
+    "property_manager": "Unknown",
+    "year_built": 1972,
+    "in_suite_laundry": "coin",
+    "ac_type": "window",
+    "parking_underground": "unknown",
+    "gym_quality": "basic",
+    "soundproofing": "some",
+    "honest_note": "Crossways 2350-2360 Dundas W on top of Dundas West subway + GO + UP Express (zone_junction_depth.jsonl). Older 1970s dated finishes, dense complex. PM not published — likely institutional owner; call required."
+  },
+  "liberty_towers_59_east_liberty": {
+    "property_manager": "Unknown",
+    "year_built": null,
+    "in_suite_laundry": "yes",
+    "ac_type": "central",
+    "parking_underground": "$175-200/mo",
+    "gym_quality": "full",
+    "soundproofing": "unknown",
+    "honest_note": "59 East Liberty St Liberty Towers (zone_king_west.jsonl) — well-run condo board, generous layouts; condo = per-unit owner PM. $2,230 1BR is value play in Liberty Village. Verify individual landlord before signing."
+  }
+}

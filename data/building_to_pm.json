@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "note": "Hand-curated mapping of building_id → property_manager (key into pm_reputation.json). Used to surface PM warnings on cards.",
+    "note": "Hand-curated mapping of building_id → property_manager (key into pm_reputation.json). Updated with Wave T tier-2 findings 2026-06-07.",
     "updated": "2026-06-07"
   },
   "mapping": {
@@ -14,11 +14,13 @@
     "162_berry_road": "Realstar",
     "65_windermere": "Greenwin",
     "marina_view_2303": "Greenwin",
+    "marina_view_2303_lakeshore_w": "Greenwin",
     "60_mountview": "Beaux_Properties",
     "grenadier_square_40_high_park": "GWL_Realty_Advisors",
     "the_campbell_299_campbell": "Bentall_GreenOak",
     "old_mill_station_2675_bloor": "Crestview",
     "shoreline_towers": "Briarlane_Rental_Property_Mgmt",
+    "shoreline_towers_2313_2323": "Briarlane_Rental_Property_Mgmt",
     "2897_dundas_briarlane": "Briarlane_Rental_Property_Mgmt",
     "arc_erin_mills": "Daniels",
     "skyrise_2550_eglinton": "Daniels",
@@ -30,17 +32,26 @@
     "m5v_condos_375_king_w": "Concord_Adex",
     "vita_on_the_lake": "Mattamy_Homes",
     "vita_two_on_the_lake": "Mattamy_Homes",
+    "vita_two_65_annie_craig": "Mattamy_Homes",
     "lago_waterfront": "Mattamy_Homes",
     "eau_du_soleil": "Empire_Communities",
     "beyond_the_sea_star_tower": "Empire_Communities",
-    "westlake_phase_2": "Onni",
-    "jade_waterfront": "Phantom_Developments",
+    "beyond_the_sea_star_2230": "Empire_Communities",
+    "westlake_phase_2": "Tridel_Del_Property_Management",
+    "westlake_phase2_2200": "Tridel_Del_Property_Management",
+    "jade_waterfront": "Tridel_Del_Property_Management",
+    "jade_waterfront_33_shore_breeze": "Tridel_Del_Property_Management",
     "bloordale_4340": "Hazelview",
     "collegeway_2285": "Hazelview",
     "miracle_4900": "Pinnacle_International",
     "minto_aquitaine_2700": "Minto_Apartments",
     "elora": "Minto_Apartments",
+    "elora_6515_glen_erin": "Minto_Apartments",
     "mimico_estates": "CAPREIT",
-    "sherobee_2170": "Akelius_former_buildings"
+    "sherobee_2170": "Akelius_former_buildings",
+    "forty_second_45": "Greenwin",
+    "lakeshore_village_3865": "MetCap_Living",
+    "ocean_club_59_annie_craig": "Empire_Communities",
+    "ocean_club_waterfront": "Empire_Communities"
   }
 }
