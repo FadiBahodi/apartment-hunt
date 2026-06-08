@@ -504,9 +504,10 @@ const _listingsPromise = Promise.all([
   fetch('data/more_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave2_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave3_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
-  fetch('data/wave4_zones.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
-]).then(([t1, t2, t3, t4]) => {
-  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'') + '\n' + (t4||'');
+  fetch('data/wave4_zones.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
+  fetch('data/wave5_high_park.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
+]).then(([t1, t2, t3, t4, t5]) => {
+  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'') + '\n' + (t4||'') + '\n' + (t5||'');
   const existingIds = new Set((window.APARTMENTS||[]).map(a => a.id));
   // Build AVOID-address lookup from data.js AVOID list. Entries use {name, why} where
   // `name` is "1257 Lakeshore Rd E (Lakewood I)" — split on '(' or ',' to get street address.

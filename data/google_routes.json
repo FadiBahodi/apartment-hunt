@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-06-07T23:04:14.106691",
+    "updated": "2026-06-07T23:09:23.793790",
     "destinations": {
       "cvh": {
         "name": "Credit Valley Hospital",
@@ -10937,6 +10937,366 @@
         "mon_7am": {
           "duration_min": 64.7,
           "distance_km": 40.88
+        }
+      }
+    },
+    "385_jane_st_bloor_west": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 39.9,
+          "distance_km": 30.35
+        },
+        "pm_5pm": {
+          "duration_min": 46.7,
+          "distance_km": 30.92
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.0,
+          "distance_km": 9.7
+        }
+      }
+    },
+    "2010_bloor_st_w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 40.6,
+          "distance_km": 28.88
+        },
+        "pm_5pm": {
+          "duration_min": 48.0,
+          "distance_km": 31.56
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.6,
+          "distance_km": 9.07
+        }
+      }
+    },
+    "70_high_park_ave": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.5,
+          "distance_km": 28.92
+        },
+        "pm_5pm": {
+          "duration_min": 51.2,
+          "distance_km": 32.62
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 23.4,
+          "distance_km": 8.33
+        }
+      }
+    },
+    "17_rowland_st_high_park": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.8,
+          "distance_km": 29.7
+        },
+        "pm_5pm": {
+          "duration_min": 50.7,
+          "distance_km": 32.47
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.9,
+          "distance_km": 8.36
+        }
+      }
+    },
+    "60_mountview_ave": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.4,
+          "distance_km": 28.9
+        },
+        "pm_5pm": {
+          "duration_min": 51.0,
+          "distance_km": 32.45
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.1,
+          "distance_km": 8.57
+        }
+      }
+    },
+    "8_castleton_ave_syme": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 40.4,
+          "distance_km": 30.07
+        },
+        "pm_5pm": {
+          "duration_min": 47.2,
+          "distance_km": 30.63
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 26.9,
+          "distance_km": 9.62
+        }
+      }
+    },
+    "65_windermere_ave_swansea": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 37.8,
+          "distance_km": 27.58
+        },
+        "pm_5pm": {
+          "duration_min": 44.9,
+          "distance_km": 36.5
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.3,
+          "distance_km": 9.41
+        }
+      }
+    },
+    "150_fermanagh_ave_roncey": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.8,
+          "distance_km": 29.3
+        },
+        "pm_5pm": {
+          "duration_min": 48.8,
+          "distance_km": 37.56
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 17.1,
+          "distance_km": 4.12
+        }
+      }
+    },
+    "the_spoke_485_perth_ave": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 46.2,
+          "distance_km": 30.64
+        },
+        "pm_5pm": {
+          "duration_min": 56.0,
+          "distance_km": 32.55
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.4,
+          "distance_km": 6.31
+        }
+      }
+    },
+    "326_high_park_ave": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 42.9,
+          "distance_km": 30.1
+        },
+        "pm_5pm": {
+          "duration_min": 50.0,
+          "distance_km": 32.12
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 23.9,
+          "distance_km": 8.76
+        }
+      }
+    },
+    "80_quebec_ave": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.2,
+          "distance_km": 28.93
+        },
+        "pm_5pm": {
+          "duration_min": 50.3,
+          "distance_km": 32.38
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 23.1,
+          "distance_km": 8.4
+        }
+      }
+    },
+    "99_roncesvalles_ave": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 39.8,
+          "distance_km": 28.71
+        },
+        "pm_5pm": {
+          "duration_min": 55.0,
+          "distance_km": 30.11
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 19.6,
+          "distance_km": 4.84
+        }
+      }
+    },
+    "grenadier_square_40_high_park": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 40.0,
+          "distance_km": 28.64
+        },
+        "pm_5pm": {
+          "duration_min": 47.8,
+          "distance_km": 37.56
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 23.2,
+          "distance_km": 8.31
+        }
+      }
+    },
+    "heintzman_place_60_heintzman": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.6,
+          "distance_km": 29.25
+        },
+        "pm_5pm": {
+          "duration_min": 49.0,
+          "distance_km": 31.8
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 25.4,
+          "distance_km": 9.01
+        }
+      }
+    },
+    "the_campbell_299_campbell": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.2,
+          "distance_km": 30.59
+        },
+        "pm_5pm": {
+          "duration_min": 54.2,
+          "distance_km": 32.13
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 23.8,
+          "distance_km": 6.33
+        }
+      }
+    },
+    "118_roncesvalles": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 39.6,
+          "distance_km": 28.7
+        },
+        "pm_5pm": {
+          "duration_min": 54.6,
+          "distance_km": 30.19
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 19.3,
+          "distance_km": 4.9
+        }
+      }
+    },
+    "maya_mews_470_roncesvalles": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.4,
+          "distance_km": 30.11
+        },
+        "pm_5pm": {
+          "duration_min": 46.5,
+          "distance_km": 37.16
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 15.7,
+          "distance_km": 3.74
+        }
+      }
+    },
+    "7_high_park_blvd": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 39.3,
+          "distance_km": 28.61
+        },
+        "pm_5pm": {
+          "duration_min": 55.2,
+          "distance_km": 30.16
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 19.2,
+          "distance_km": 4.74
+        }
+      }
+    },
+    "old_mill_station_2675_bloor": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 37.8,
+          "distance_km": 30.26
+        },
+        "pm_5pm": {
+          "duration_min": 43.5,
+          "distance_km": 30.62
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 26.2,
+          "distance_km": 10.39
+        }
+      }
+    },
+    "one_old_mill_1_old_mill_dr": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 36.4,
+          "distance_km": 30.12
+        },
+        "pm_5pm": {
+          "duration_min": 41.7,
+          "distance_km": 30.39
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 25.0,
+          "distance_km": 10.03
         }
       }
     }
