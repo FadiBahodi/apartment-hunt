@@ -1,0 +1,974 @@
+{
+  "updated": "2026-06-07T23:39:43.904849",
+  "routes": {
+    "eau_du_soleil": {
+      "mon_7am": {
+        "optimistic": 23.6,
+        "best_guess": 34.1,
+        "pessimistic": 48.0
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.0,
+        "best_guess": 38.8,
+        "pessimistic": 48.5
+      },
+      "sat_10am": {
+        "optimistic": 21.1,
+        "best_guess": 29.6,
+        "pessimistic": 43.6
+      }
+    },
+    "vita_on_the_lake": {
+      "mon_7am": {
+        "optimistic": 23.2,
+        "best_guess": 33.8,
+        "pessimistic": 46.7
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.8,
+        "best_guess": 37.0,
+        "pessimistic": 47.5
+      },
+      "sat_10am": {
+        "optimistic": 21.6,
+        "best_guess": 27.4,
+        "pessimistic": 33.5
+      }
+    },
+    "lago_waterfront": {
+      "mon_7am": {
+        "optimistic": 23.2,
+        "best_guess": 33.8,
+        "pessimistic": 46.6
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.7,
+        "best_guess": 36.9,
+        "pessimistic": 47.4
+      },
+      "sat_10am": {
+        "optimistic": 21.5,
+        "best_guess": 27.4,
+        "pessimistic": 33.4
+      }
+    },
+    "park_lawn_285": {
+      "mon_7am": {
+        "optimistic": 25.2,
+        "best_guess": 35.1,
+        "pessimistic": 48.7
+      },
+      "mon_3pm_home": {
+        "optimistic": 30.0,
+        "best_guess": 41.0,
+        "pessimistic": 52.3
+      },
+      "sat_10am": {
+        "optimistic": 23.9,
+        "best_guess": 28.0,
+        "pessimistic": 34.1
+      }
+    },
+    "shoreline_towers": {
+      "mon_7am": {
+        "optimistic": 25.8,
+        "best_guess": 37.6,
+        "pessimistic": 53.3
+      },
+      "mon_3pm_home": {
+        "optimistic": 28.2,
+        "best_guess": 38.9,
+        "pessimistic": 50.9
+      },
+      "sat_10am": {
+        "optimistic": 24.7,
+        "best_guess": 31.5,
+        "pessimistic": 41.4
+      }
+    },
+    "markwood_4365": {
+      "mon_7am": {
+        "optimistic": 15.9,
+        "best_guess": 21.3,
+        "pessimistic": 28.1
+      },
+      "mon_3pm_home": {
+        "optimistic": 16.4,
+        "best_guess": 24.1,
+        "pessimistic": 34.9
+      },
+      "sat_10am": {
+        "optimistic": 15.4,
+        "best_guess": 20.4,
+        "pessimistic": 28.6
+      }
+    },
+    "arc_erin_mills": {
+      "mon_7am": {
+        "optimistic": 1.7,
+        "best_guess": 2.7,
+        "pessimistic": 3.6
+      },
+      "mon_3pm_home": {
+        "optimistic": 1.7,
+        "best_guess": 2.5,
+        "pessimistic": 3.2
+      },
+      "sat_10am": {
+        "optimistic": 1.6,
+        "best_guess": 2.5,
+        "pessimistic": 4.2
+      }
+    },
+    "collegeway_2285": {
+      "mon_7am": {
+        "optimistic": 5.9,
+        "best_guess": 9.0,
+        "pessimistic": 13.3
+      },
+      "mon_3pm_home": {
+        "optimistic": 5.8,
+        "best_guess": 9.2,
+        "pessimistic": 14.6
+      },
+      "sat_10am": {
+        "optimistic": 5.7,
+        "best_guess": 8.1,
+        "pessimistic": 12.9
+      }
+    },
+    "collegeway_2375": {
+      "mon_7am": {
+        "optimistic": 4.9,
+        "best_guess": 6.7,
+        "pessimistic": 8.5
+      },
+      "mon_3pm_home": {
+        "optimistic": 5.7,
+        "best_guess": 6.8,
+        "pessimistic": 8.5
+      },
+      "sat_10am": {
+        "optimistic": 5.0,
+        "best_guess": 6.0,
+        "pessimistic": 7.6
+      }
+    },
+    "reid_drive": {
+      "mon_7am": {
+        "optimistic": 4.0,
+        "best_guess": 5.5,
+        "pessimistic": 7.1
+      },
+      "mon_3pm_home": {
+        "optimistic": 3.8,
+        "best_guess": 5.5,
+        "pessimistic": 7.5
+      },
+      "sat_10am": {
+        "optimistic": 3.8,
+        "best_guess": 4.8,
+        "pessimistic": 6.6
+      }
+    },
+    "lakewood_ii_1285": {
+      "mon_7am": {
+        "optimistic": 22.3,
+        "best_guess": 31.3,
+        "pessimistic": 43.7
+      },
+      "mon_3pm_home": {
+        "optimistic": 23.5,
+        "best_guess": 33.9,
+        "pessimistic": 47.9
+      },
+      "sat_10am": {
+        "optimistic": 21.0,
+        "best_guess": 28.9,
+        "pessimistic": 42.2
+      }
+    },
+    "lakeshore_206e": {
+      "mon_7am": {
+        "optimistic": 18.4,
+        "best_guess": 23.7,
+        "pessimistic": 29.9
+      },
+      "mon_3pm_home": {
+        "optimistic": 18.8,
+        "best_guess": 25.8,
+        "pessimistic": 33.7
+      },
+      "sat_10am": {
+        "optimistic": 18.2,
+        "best_guess": 23.0,
+        "pessimistic": 30.2
+      }
+    },
+    "reina-689-queensway": {
+      "mon_7am": {
+        "optimistic": 22.6,
+        "best_guess": 32.8,
+        "pessimistic": 45.7
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.2,
+        "best_guess": 38.3,
+        "pessimistic": 51.5
+      },
+      "sat_10am": {
+        "optimistic": 21.6,
+        "best_guess": 27.3,
+        "pessimistic": 35.5
+      }
+    },
+    "berry-162": {
+      "mon_7am": {
+        "optimistic": 23.5,
+        "best_guess": 33.0,
+        "pessimistic": 46.2
+      },
+      "mon_3pm_home": {
+        "optimistic": 28.0,
+        "best_guess": 38.5,
+        "pessimistic": 49.4
+      },
+      "sat_10am": {
+        "optimistic": 22.0,
+        "best_guess": 26.0,
+        "pessimistic": 32.0
+      }
+    },
+    "berry-183": {
+      "mon_7am": {
+        "optimistic": 23.0,
+        "best_guess": 32.8,
+        "pessimistic": 45.8
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.0,
+        "best_guess": 36.8,
+        "pessimistic": 48.4
+      },
+      "sat_10am": {
+        "optimistic": 21.4,
+        "best_guess": 26.0,
+        "pessimistic": 31.5
+      }
+    },
+    "stephen-143": {
+      "mon_7am": {
+        "optimistic": 23.3,
+        "best_guess": 33.2,
+        "pessimistic": 46.0
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.5,
+        "best_guess": 36.6,
+        "pessimistic": 48.9
+      },
+      "sat_10am": {
+        "optimistic": 21.7,
+        "best_guess": 26.0,
+        "pessimistic": 31.4
+      }
+    },
+    "stephen-115": {
+      "mon_7am": {
+        "optimistic": 23.3,
+        "best_guess": 33.0,
+        "pessimistic": 45.9
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.5,
+        "best_guess": 36.7,
+        "pessimistic": 48.7
+      },
+      "sat_10am": {
+        "optimistic": 21.7,
+        "best_guess": 26.0,
+        "pessimistic": 31.3
+      }
+    },
+    "park-lawn-317": {
+      "mon_7am": {
+        "optimistic": 25.5,
+        "best_guess": 34.6,
+        "pessimistic": 49.1
+      },
+      "mon_3pm_home": {
+        "optimistic": 30.0,
+        "best_guess": 41.0,
+        "pessimistic": 52.1
+      },
+      "sat_10am": {
+        "optimistic": 24.3,
+        "best_guess": 28.1,
+        "pessimistic": 34.5
+      }
+    },
+    "crown-hill-1": {
+      "mon_7am": {
+        "optimistic": 23.6,
+        "best_guess": 33.7,
+        "pessimistic": 46.3
+      },
+      "mon_3pm_home": {
+        "optimistic": 28.2,
+        "best_guess": 39.4,
+        "pessimistic": 49.7
+      },
+      "sat_10am": {
+        "optimistic": 22.0,
+        "best_guess": 26.7,
+        "pessimistic": 31.9
+      }
+    },
+    "hill-heights-10": {
+      "mon_7am": {
+        "optimistic": 25.6,
+        "best_guess": 34.7,
+        "pessimistic": 49.2
+      },
+      "mon_3pm_home": {
+        "optimistic": 30.1,
+        "best_guess": 41.0,
+        "pessimistic": 52.2
+      },
+      "sat_10am": {
+        "optimistic": 24.3,
+        "best_guess": 28.1,
+        "pessimistic": 34.6
+      }
+    },
+    "royal-heights-8": {
+      "mon_7am": {
+        "optimistic": 25.6,
+        "best_guess": 34.8,
+        "pessimistic": 49.3
+      },
+      "mon_3pm_home": {
+        "optimistic": 30.1,
+        "best_guess": 41.1,
+        "pessimistic": 52.2
+      },
+      "sat_10am": {
+        "optimistic": 24.4,
+        "best_guess": 28.1,
+        "pessimistic": 34.6
+      }
+    },
+    "royal-york-1407": {
+      "mon_7am": {
+        "optimistic": 22.6,
+        "best_guess": 29.2,
+        "pessimistic": 38.2
+      },
+      "mon_3pm_home": {
+        "optimistic": 22.4,
+        "best_guess": 32.3,
+        "pessimistic": 47.3
+      },
+      "sat_10am": {
+        "optimistic": 19.9,
+        "best_guess": 25.1,
+        "pessimistic": 33.2
+      }
+    },
+    "aberfoyle-1": {
+      "mon_7am": {
+        "optimistic": 23.1,
+        "best_guess": 30.3,
+        "pessimistic": 38.4
+      },
+      "mon_3pm_home": {
+        "optimistic": 23.8,
+        "best_guess": 35.8,
+        "pessimistic": 51.7
+      },
+      "sat_10am": {
+        "optimistic": 20.7,
+        "best_guess": 26.4,
+        "pessimistic": 33.2
+      }
+    },
+    "royal-york-2": {
+      "mon_7am": {
+        "optimistic": 24.3,
+        "best_guess": 35.1,
+        "pessimistic": 49.6
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.7,
+        "best_guess": 39.5,
+        "pessimistic": 49.7
+      },
+      "sat_10am": {
+        "optimistic": 22.9,
+        "best_guess": 28.7,
+        "pessimistic": 36.3
+      }
+    },
+    "samuel-wood-20": {
+      "mon_7am": {
+        "optimistic": 23.0,
+        "best_guess": 29.2,
+        "pessimistic": 36.2
+      },
+      "mon_3pm_home": {
+        "optimistic": 23.8,
+        "best_guess": 34.8,
+        "pessimistic": 47.6
+      },
+      "sat_10am": {
+        "optimistic": 19.5,
+        "best_guess": 25.0,
+        "pessimistic": 31.9
+      }
+    },
+    "james-club-1135": {
+      "mon_7am": {
+        "optimistic": 24.7,
+        "best_guess": 30.7,
+        "pessimistic": 38.8
+      },
+      "mon_3pm_home": {
+        "optimistic": 23.6,
+        "best_guess": 35.3,
+        "pessimistic": 50.3
+      },
+      "sat_10am": {
+        "optimistic": 21.5,
+        "best_guess": 26.3,
+        "pessimistic": 32.5
+      }
+    },
+    "westlake_phase1_2220": {
+      "mon_7am": {
+        "optimistic": 26.1,
+        "best_guess": 36.5,
+        "pessimistic": 50.6
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.1,
+        "best_guess": 38.9,
+        "pessimistic": 47.8
+      },
+      "sat_10am": {
+        "optimistic": 25.1,
+        "best_guess": 30.8,
+        "pessimistic": 38.0
+      }
+    },
+    "westlake_phase2_2200": {
+      "mon_7am": {
+        "optimistic": 26.1,
+        "best_guess": 36.6,
+        "pessimistic": 50.7
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.7,
+        "best_guess": 39.4,
+        "pessimistic": 48.4
+      },
+      "sat_10am": {
+        "optimistic": 25.1,
+        "best_guess": 30.8,
+        "pessimistic": 38.1
+      }
+    },
+    "westlake_encore_10parklawn": {
+      "mon_7am": {
+        "optimistic": 23.4,
+        "best_guess": 34.0,
+        "pessimistic": 47.2
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.9,
+        "best_guess": 35.5,
+        "pessimistic": 48.2
+      },
+      "sat_10am": {
+        "optimistic": 20.8,
+        "best_guess": 29.5,
+        "pessimistic": 42.5
+      }
+    },
+    "beyond_the_sea_star": {
+      "mon_7am": {
+        "optimistic": 25.2,
+        "best_guess": 35.7,
+        "pessimistic": 49.4
+      },
+      "mon_3pm_home": {
+        "optimistic": 28.8,
+        "best_guess": 38.6,
+        "pessimistic": 50.0
+      },
+      "sat_10am": {
+        "optimistic": 23.9,
+        "best_guess": 29.2,
+        "pessimistic": 36.0
+      }
+    },
+    "waterscapes_80marine": {
+      "mon_7am": {
+        "optimistic": 26.4,
+        "best_guess": 37.1,
+        "pessimistic": 51.2
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.7,
+        "best_guess": 38.1,
+        "pessimistic": 47.4
+      },
+      "sat_10am": {
+        "optimistic": 25.5,
+        "best_guess": 31.4,
+        "pessimistic": 38.6
+      }
+    },
+    "explorer_58marine": {
+      "mon_7am": {
+        "optimistic": 26.3,
+        "best_guess": 37.0,
+        "pessimistic": 51.0
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.9,
+        "best_guess": 38.4,
+        "pessimistic": 47.5
+      },
+      "sat_10am": {
+        "optimistic": 25.4,
+        "best_guess": 31.2,
+        "pessimistic": 38.5
+      }
+    },
+    "voyager_ii_2119": {
+      "mon_7am": {
+        "optimistic": 26.1,
+        "best_guess": 36.6,
+        "pessimistic": 50.8
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.5,
+        "best_guess": 39.1,
+        "pessimistic": 48.1
+      },
+      "sat_10am": {
+        "optimistic": 25.2,
+        "best_guess": 30.9,
+        "pessimistic": 38.2
+      }
+    },
+    "voyager_i_2111": {
+      "mon_7am": {
+        "optimistic": 26.1,
+        "best_guess": 36.6,
+        "pessimistic": 50.8
+      },
+      "mon_3pm_home": {
+        "optimistic": 28.4,
+        "best_guess": 39.5,
+        "pessimistic": 49.1
+      },
+      "sat_10am": {
+        "optimistic": 25.2,
+        "best_guess": 30.9,
+        "pessimistic": 38.2
+      }
+    },
+    "nautilus_16brookers": {
+      "mon_7am": {
+        "optimistic": 25.9,
+        "best_guess": 36.5,
+        "pessimistic": 50.5
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.9,
+        "best_guess": 39.5,
+        "pessimistic": 48.5
+      },
+      "sat_10am": {
+        "optimistic": 25.0,
+        "best_guess": 30.6,
+        "pessimistic": 37.9
+      }
+    },
+    "jade_waterfront_33": {
+      "mon_7am": {
+        "optimistic": 23.4,
+        "best_guess": 33.8,
+        "pessimistic": 47.5
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.7,
+        "best_guess": 38.4,
+        "pessimistic": 47.8
+      },
+      "sat_10am": {
+        "optimistic": 20.9,
+        "best_guess": 29.0,
+        "pessimistic": 42.6
+      }
+    },
+    "cove_at_waterways_39": {
+      "mon_7am": {
+        "optimistic": 23.6,
+        "best_guess": 34.0,
+        "pessimistic": 47.9
+      },
+      "mon_3pm_home": {
+        "optimistic": 25.6,
+        "best_guess": 36.8,
+        "pessimistic": 47.9
+      },
+      "sat_10am": {
+        "optimistic": 21.0,
+        "best_guess": 29.4,
+        "pessimistic": 43.2
+      }
+    },
+    "grand_harbour_2285": {
+      "mon_7am": {
+        "optimistic": 23.2,
+        "best_guess": 33.2,
+        "pessimistic": 46.0
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.6,
+        "best_guess": 36.9,
+        "pessimistic": 46.5
+      },
+      "sat_10am": {
+        "optimistic": 21.6,
+        "best_guess": 26.4,
+        "pessimistic": 32.5
+      }
+    },
+    "marina_del_rey_2261": {
+      "mon_7am": {
+        "optimistic": 22.9,
+        "best_guess": 33.4,
+        "pessimistic": 46.0
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.2,
+        "best_guess": 39.0,
+        "pessimistic": 48.3
+      },
+      "sat_10am": {
+        "optimistic": 21.3,
+        "best_guess": 26.9,
+        "pessimistic": 32.6
+      }
+    },
+    "palace_pier_2045": {
+      "mon_7am": {
+        "optimistic": 24.5,
+        "best_guess": 35.8,
+        "pessimistic": 48.7
+      },
+      "mon_3pm_home": {
+        "optimistic": 28.0,
+        "best_guess": 40.8,
+        "pessimistic": 51.7
+      },
+      "sat_10am": {
+        "optimistic": 21.6,
+        "best_guess": 28.7,
+        "pessimistic": 41.6
+      }
+    },
+    "palace_place_1ppc": {
+      "mon_7am": {
+        "optimistic": 24.6,
+        "best_guess": 35.7,
+        "pessimistic": 49.6
+      },
+      "mon_3pm_home": {
+        "optimistic": 28.0,
+        "best_guess": 37.1,
+        "pessimistic": 48.9
+      },
+      "sat_10am": {
+        "optimistic": 22.1,
+        "best_guess": 31.2,
+        "pessimistic": 45.0
+      }
+    },
+    "shoreline_towers_2313": {
+      "mon_7am": {
+        "optimistic": 27.1,
+        "best_guess": 37.9,
+        "pessimistic": 51.7
+      },
+      "mon_3pm_home": {
+        "optimistic": 29.2,
+        "best_guess": 38.7,
+        "pessimistic": 51.3
+      },
+      "sat_10am": {
+        "optimistic": 26.4,
+        "best_guess": 32.2,
+        "pessimistic": 39.2
+      }
+    },
+    "promenade_apts_2301": {
+      "mon_7am": {
+        "optimistic": 27.1,
+        "best_guess": 37.9,
+        "pessimistic": 51.7
+      },
+      "mon_3pm_home": {
+        "optimistic": 29.2,
+        "best_guess": 38.7,
+        "pessimistic": 51.3
+      },
+      "sat_10am": {
+        "optimistic": 26.4,
+        "best_guess": 32.2,
+        "pessimistic": 39.2
+      }
+    },
+    "berkley_pm_2545": {
+      "mon_7am": {
+        "optimistic": 24.6,
+        "best_guess": 35.0,
+        "pessimistic": 48.4
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.6,
+        "best_guess": 39.5,
+        "pessimistic": 49.6
+      },
+      "sat_10am": {
+        "optimistic": 23.8,
+        "best_guess": 29.1,
+        "pessimistic": 43.6
+      }
+    },
+    "marina_view_2303": {
+      "mon_7am": {
+        "optimistic": 27.1,
+        "best_guess": 37.9,
+        "pessimistic": 51.7
+      },
+      "mon_3pm_home": {
+        "optimistic": 29.2,
+        "best_guess": 38.7,
+        "pessimistic": 51.3
+      },
+      "sat_10am": {
+        "optimistic": 26.4,
+        "best_guess": 32.2,
+        "pessimistic": 39.2
+      }
+    },
+    "floriri_village_2305": {
+      "mon_7am": {
+        "optimistic": 27.1,
+        "best_guess": 37.9,
+        "pessimistic": 51.7
+      },
+      "mon_3pm_home": {
+        "optimistic": 29.2,
+        "best_guess": 38.7,
+        "pessimistic": 54.0
+      },
+      "sat_10am": {
+        "optimistic": 26.4,
+        "best_guess": 32.2,
+        "pessimistic": 39.2
+      }
+    },
+    "245_lakeshore_drive": {
+      "mon_7am": {
+        "optimistic": 26.7,
+        "best_guess": 34.3,
+        "pessimistic": 42.7
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.9,
+        "best_guess": 37.5,
+        "pessimistic": 49.8
+      },
+      "sat_10am": {
+        "optimistic": 23.8,
+        "best_guess": 30.5,
+        "pessimistic": 38.3
+      }
+    },
+    "aquaview_3865": {
+      "mon_7am": {
+        "optimistic": 21.6,
+        "best_guess": 31.3,
+        "pessimistic": 44.0
+      },
+      "mon_3pm_home": {
+        "optimistic": 24.9,
+        "best_guess": 35.4,
+        "pessimistic": 47.0
+      },
+      "sat_10am": {
+        "optimistic": 20.0,
+        "best_guess": 28.3,
+        "pessimistic": 42.4
+      }
+    },
+    "minto_longbranch_3580": {
+      "mon_7am": {
+        "optimistic": 24.7,
+        "best_guess": 30.4,
+        "pessimistic": 37.4
+      },
+      "mon_3pm_home": {
+        "optimistic": 25.6,
+        "best_guess": 35.1,
+        "pessimistic": 46.4
+      },
+      "sat_10am": {
+        "optimistic": 21.6,
+        "best_guess": 26.9,
+        "pessimistic": 32.6
+      }
+    },
+    "120_long_branch_ave": {
+      "mon_7am": {
+        "optimistic": 24.6,
+        "best_guess": 30.4,
+        "pessimistic": 37.3
+      },
+      "mon_3pm_home": {
+        "optimistic": 25.4,
+        "best_guess": 35.1,
+        "pessimistic": 46.3
+      },
+      "sat_10am": {
+        "optimistic": 21.5,
+        "best_guess": 26.9,
+        "pessimistic": 32.5
+      }
+    },
+    "45_forty_second_st": {
+      "mon_7am": {
+        "optimistic": 20.9,
+        "best_guess": 31.1,
+        "pessimistic": 44.3
+      },
+      "mon_3pm_home": {
+        "optimistic": 24.9,
+        "best_guess": 35.2,
+        "pessimistic": 47.0
+      },
+      "sat_10am": {
+        "optimistic": 19.9,
+        "best_guess": 28.2,
+        "pessimistic": 42.2
+      }
+    },
+    "eau-du-soleil-water-tower": {
+      "mon_7am": {
+        "optimistic": 25.2,
+        "best_guess": 35.8,
+        "pessimistic": 49.5
+      },
+      "mon_3pm_home": {
+        "optimistic": 28.7,
+        "best_guess": 38.6,
+        "pessimistic": 50.0
+      },
+      "sat_10am": {
+        "optimistic": 23.9,
+        "best_guess": 29.3,
+        "pessimistic": 36.1
+      }
+    },
+    "eau-du-soleil-sky-tower": {
+      "mon_7am": {
+        "optimistic": 26.4,
+        "best_guess": 37.0,
+        "pessimistic": 51.0
+      },
+      "mon_3pm_home": {
+        "optimistic": 26.8,
+        "best_guess": 38.3,
+        "pessimistic": 47.5
+      },
+      "sat_10am": {
+        "optimistic": 25.4,
+        "best_guess": 31.3,
+        "pessimistic": 38.5
+      }
+    },
+    "jade-waterfront-condos": {
+      "mon_7am": {
+        "optimistic": 23.7,
+        "best_guess": 34.5,
+        "pessimistic": 48.0
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.3,
+        "best_guess": 38.0,
+        "pessimistic": 49.4
+      },
+      "sat_10am": {
+        "optimistic": 22.1,
+        "best_guess": 28.3,
+        "pessimistic": 35.0
+      }
+    },
+    "30-shore-breeze": {
+      "mon_7am": {
+        "optimistic": 23.5,
+        "best_guess": 33.6,
+        "pessimistic": 46.3
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.0,
+        "best_guess": 37.3,
+        "pessimistic": 46.8
+      },
+      "sat_10am": {
+        "optimistic": 22.0,
+        "best_guess": 26.7,
+        "pessimistic": 32.9
+      }
+    },
+    "ocean-club-2200": {
+      "mon_7am": {
+        "optimistic": 25.8,
+        "best_guess": 36.4,
+        "pessimistic": 50.4
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.4,
+        "best_guess": 39.1,
+        "pessimistic": 48.1
+      },
+      "sat_10am": {
+        "optimistic": 24.7,
+        "best_guess": 30.1,
+        "pessimistic": 37.6
+      }
+    },
+    "explorer-condos-2230": {
+      "mon_7am": {
+        "optimistic": 23.9,
+        "best_guess": 34.5,
+        "pessimistic": 47.8
+      },
+      "mon_3pm_home": {
+        "optimistic": 27.6,
+        "best_guess": 37.9,
+        "pessimistic": 49.5
+      },
+      "sat_10am": {
+        "optimistic": 21.5,
+        "best_guess": 30.2,
+        "pessimistic": 43.2
+      }
+    }
+  }
+}

@@ -265,8 +265,12 @@ window.computeAxisProfile = function(a) {
       cvh_offpeak: Math.round(cvhOffPeak),
       peak_mult: peakMult.toFixed(2),
       cvh_source: googleCvh!=null ? 'google_mon_7am' : 'osrm_×peak',
-      cvh_pm_2pm: (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.pm_2pm?.duration_min),  // CVH→home Mon 2pm (day shift end)
-      cvh_pm_5pm: (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.pm_5pm?.duration_min),  // CVH→home Fri 5pm (worst case)
+      cvh_pm_2pm: (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.pm_2pm?.duration_min),
+      cvh_pm_5pm: (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.pm_5pm?.duration_min),
+      // RANGES from Google (optimistic / best / pessimistic) when available
+      cvh_range_mon7: (window.GOOGLE_RANGES?.routes?.[a.id]?.mon_7am),
+      cvh_range_mon3_home: (window.GOOGLE_RANGES?.routes?.[a.id]?.mon_3pm_home),
+      cvh_range_sat10: (window.GOOGLE_RANGES?.routes?.[a.id]?.sat_10am),
       singles_score: zone?.single_density_score,
       rent, kw_min: Math.round(kwMin), all_in: allIn,
     },

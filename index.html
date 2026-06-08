@@ -483,6 +483,8 @@ const _jsonLoaders = [
   ['photo_index.json', 'PHOTO_INDEX', null],
   ['finalist_deep.json', 'FINALIST_DEEP', null],
   ['google_routes.json', 'GOOGLE_ROUTES', null],
+  ['google_ranges.json', 'GOOGLE_RANGES', null],
+  ['listing_corrections.json', 'LISTING_CORRECTIONS', null],
   ['neighborhoods.geojson', 'NEIGHBORHOODS', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
@@ -505,9 +507,10 @@ const _listingsPromise = Promise.all([
   fetch('data/wave2_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave3_listings.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave4_zones.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
-  fetch('data/wave5_high_park.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
-]).then(([t1, t2, t3, t4, t5]) => {
-  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'') + '\n' + (t4||'') + '\n' + (t5||'');
+  fetch('data/wave5_high_park.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
+  fetch('data/wave6_king_west.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
+]).then(([t1, t2, t3, t4, t5, t6]) => {
+  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'') + '\n' + (t4||'') + '\n' + (t5||'') + '\n' + (t6||'');
   const existingIds = new Set((window.APARTMENTS||[]).map(a => a.id));
   // Build AVOID-address lookup from data.js AVOID list. Entries use {name, why} where
   // `name` is "1257 Lakeshore Rd E (Lakewood I)" — split on '(' or ',' to get street address.
@@ -925,6 +928,18 @@ setTimeout(scheduleRerender, 4000);
                       : tier === 'verified' ? {label:'✓ Verified', color:'#16a34a', bg:'#dcfce7'}
                       : tier === 'partial'  ? {label:'~ Partial', color:'#a16207', bg:'#fef3c7'}
                       : {label:'? Lead', color:'#6b7280', bg:'#f3f4f6'};
+      // Verification correction badge (from Wave I human-eye-verified swarm)
+      const corr = (window.LISTING_CORRECTIONS||{})[a.id];
+      const corrBadge = corr ? (
+        corr.verdict === 'VERIFIED_AS_LISTED' ? {label:'✓✓ Confirmed', color:'#fff', bg:'#16a34a'}
+      : corr.verdict === 'VERIFIED_DIFFERENT' ? {label:'⚠ Price off', color:'#fff', bg:'#ea580c'}
+      : corr.verdict === 'STALE' ? {label:'✗ Stale', color:'#fff', bg:'#dc2626'}
+      : corr.verdict?.startsWith('UNVERIFIED') ? {label:'? Unverified', color:'#fff', bg:'#6b7280'}
+      : corr.verdict?.includes('NET_AFTER_PROMO') ? {label:'~ Promo price', color:'#fff', bg:'#ca8a04'}
+      : corr.verdict?.includes('NEEDS_CALL') ? {label:'☎ Call to verify', color:'#fff', bg:'#0284c7'}
+      : corr.verdict === 'VERIFIED_LOW_END' ? {label:'~ Low-end', color:'#fff', bg:'#ca8a04'}
+      : null
+      ) : null;
       return `
         <div class="card ${selectedId===a.id?'selected':''}" data-id="${a.id}" tabindex="0" role="button" aria-label="${a.name}, ${a.zone}" onclick="selectApt('${a.id}')" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectApt('${a.id}')}">
           <div class="thumb" style="${thumbStyle}">${thumbInner}</div>
@@ -933,7 +948,10 @@ setTimeout(scheduleRerender, 4000);
               <div class="name" style="flex:1">${a.name}${warn?`<span class="warning-pill" style="background:${warn.color}">${warn.label}</span>`:''}${a._approx_location?'<span class="warning-pill" style="background:#ca8a04" title="Location may be off by ±200m (postal-area centroid)">~approx</span>':''}</div>
               <span class="tinybadge" style="background:${tierBadge.bg};color:${tierBadge.color};flex-shrink:0">${tierBadge.label}</span>
             </div>
-            <div style="font-size:10px;color:var(--dim);margin-top:-2px;margin-bottom:2px">${photoBadge.label}</div>
+            <div style="font-size:10px;color:var(--dim);margin-top:-2px;margin-bottom:2px;display:flex;gap:6px;align-items:center">
+              <span>${photoBadge.label}</span>
+              ${corrBadge?`<span class="tinybadge" style="background:${corrBadge.bg};color:${corrBadge.color};font-size:9px" title="${(corr.honest_note||'').replace(/"/g,'&quot;')}">${corrBadge.label}</span>`:''}
+            </div>
             <div class="zone">${a.zone} · ${a.address.split(',')[0]}</div>
             <div class="axes">${window.renderAxisProfile(profile, {compact:true})}</div>
             ${profile.qualitative.zone_vibe ? `<div class="vibe">${profile.qualitative.zone_vibe}</div>` : ''}
@@ -1193,7 +1211,30 @@ setTimeout(scheduleRerender, 4000);
       ${(() => {
         const profile = computeAxisProfile(a);
         const fdeep = (window.FINALIST_DEEP||{})[a.id];
+        const detailCorr = (window.LISTING_CORRECTIONS||{})[a.id];
         let narrative = '';
+        // VERIFICATION CORRECTION — top of narrative, can't miss
+        if (detailCorr && detailCorr.verdict) {
+          const verdictColors = {
+            'VERIFIED_AS_LISTED': {bg:'#dcfce7', border:'#16a34a', text:'#15803d', label:'✓✓ VERIFIED AS LISTED'},
+            'VERIFIED_AS_TRUE_STUDIO': {bg:'#dcfce7', border:'#16a34a', text:'#15803d', label:'✓✓ VERIFIED (TRUE STUDIO)'},
+            'VERIFIED_DIFFERENT': {bg:'#ffedd5', border:'#ea580c', text:'#9a3412', label:'⚠ PRICE/UNIT OFF — see below'},
+            'STALE': {bg:'#fee2e2', border:'#dc2626', text:'#991b1b', label:'✗ STALE LISTING — actual price higher'},
+            'PARTIALLY_VERIFIED_NET_AFTER_PROMO': {bg:'#fef3c7', border:'#ca8a04', text:'#854d0e', label:'~ NET-AFTER-PROMO PRICE'},
+            'PARTIALLY_VERIFIED_NEEDS_CALL': {bg:'#dbeafe', border:'#0284c7', text:'#075985', label:'☎ NEEDS PHONE VERIFY'},
+            'UNVERIFIED_LIKELY_BASEMENT': {bg:'#f3f4f6', border:'#6b7280', text:'#374151', label:'? LIKELY BASEMENT SUITE (not building)'},
+            'VERIFIED_LOW_END': {bg:'#fef3c7', border:'#ca8a04', text:'#854d0e', label:'~ LOW-END PRICE OF A RANGE'},
+            'VERIFIED_NET_AFTER_PROMO_BUT_NO_UNITS': {bg:'#fee2e2', border:'#dc2626', text:'#991b1b', label:'⚠ NET-PRICE + NO UNITS AVAILABLE'},
+          };
+          const v = verdictColors[detailCorr.verdict] || {bg:'#f3f4f6', border:'#6b7280', text:'#374151', label: detailCorr.verdict};
+          narrative += `<div style="background:${v.bg};border:2px solid ${v.border};border-radius:8px;padding:12px 14px;margin:10px 0;font-size:12.5px;line-height:1.55">
+            <div style="font-weight:700;color:${v.text};text-transform:uppercase;letter-spacing:.04em;font-size:11px;margin-bottom:6px">${v.label}</div>
+            ${detailCorr.actual_price_low ? `<div style="margin-bottom:4px"><b>Our listed price:</b> $${detailCorr.our_price?.toLocaleString()||'?'} <b style="color:${v.text}">→ Actual:</b> $${detailCorr.actual_price_low.toLocaleString()}${detailCorr.actual_price_high?'-$'+detailCorr.actual_price_high.toLocaleString():''}</div>` : ''}
+            ${detailCorr.actual_unit_type ? `<div style="margin-bottom:4px"><b>Actual unit type:</b> ${detailCorr.actual_unit_type}</div>` : ''}
+            <div style="color:${v.text}">${detailCorr.honest_note||''}</div>
+            ${detailCorr.verified_listing ? `<div style="margin-top:4px"><a href="${detailCorr.verified_listing}" target="_blank" style="color:${v.text};font-size:11px">Source ↗</a></div>` : ''}
+          </div>`;
+        }
         if (profile.qualitative.zone_vibe) {
           narrative += `<div style="background:var(--panel-2);border-left:3px solid var(--accent);padding:10px 12px;border-radius:6px;margin:8px 0;font-size:12.5px;line-height:1.55"><b style="color:var(--accent-text);font-size:11px;text-transform:uppercase;letter-spacing:.04em">${profile.qualitative.zone_label} · honest vibe</b><br>${profile.qualitative.zone_vibe}</div>`;
         }
@@ -1213,13 +1254,39 @@ setTimeout(scheduleRerender, 4000);
             ${dil.saturday_run?`<div style="padding:10px 12px;background:var(--panel-2);border-radius:6px"><b style="color:var(--muted);font-size:11px;letter-spacing:.04em">Saturday run</b><br>${dil.saturday_run}</div>`:''}
           </div>`;
         }
-        const pmRow = (profile.raw.cvh_pm_2pm != null || profile.raw.cvh_pm_5pm != null) ? `
+        const fmtRange = (r, fallbackMin) => {
+          if (r && (r.optimistic != null || r.best_guess != null)) {
+            const lo = Math.round(r.optimistic ?? r.best_guess);
+            const hi = Math.round(r.pessimistic ?? r.best_guess);
+            const mid = Math.round(r.best_guess ?? ((r.optimistic + r.pessimistic) / 2));
+            return `<span style="font-weight:700">${lo}-${hi} min</span><br><span style="color:var(--muted);font-size:10px">(best guess ${mid}m)</span>`;
+          }
+          if (fallbackMin != null) return `<span style="font-weight:700">${fallbackMin} min</span><br><span style="color:var(--muted);font-size:10px">(single estimate)</span>`;
+          return '<span style="color:var(--muted)">no data</span>';
+        };
+        const r7  = profile.raw.cvh_range_mon7;
+        const r3h = profile.raw.cvh_range_mon3_home;
+        const rsat= profile.raw.cvh_range_sat10;
+        const hasAnyCommute = r7 || r3h || rsat || profile.raw.cvh_pm_2pm != null || profile.raw.cvh_pm_5pm != null;
+        const pmRow = hasAnyCommute ? `
           <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 14px;margin:10px 0;font-size:12.5px;line-height:1.55">
-            <div style="font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:.04em;font-size:10px;margin-bottom:4px">Two-direction commute (Google live traffic)</div>
-            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;font-variant-numeric:tabular-nums">
-              <div><b>Home → CVH</b><br><span style="color:#16a34a;font-weight:600">${profile.raw.cvh_min} min</span><br><span style="color:var(--muted);font-size:10px">Mon 7am · reverse rush</span></div>
-              ${profile.raw.cvh_pm_2pm != null ? `<div><b>CVH → Home</b><br><span style="color:#b45309;font-weight:600">${profile.raw.cvh_pm_2pm} min</span><br><span style="color:var(--muted);font-size:10px">Mon 2pm · day shift end</span></div>` : '<div style="color:var(--muted);font-size:11px">(no PM 2pm data)</div>'}
-              ${profile.raw.cvh_pm_5pm != null ? `<div><b>CVH → Home</b><br><span style="color:#dc2626;font-weight:600">${profile.raw.cvh_pm_5pm} min</span><br><span style="color:var(--muted);font-size:10px">Fri 5pm · WORST case</span></div>` : '<div style="color:var(--muted);font-size:11px">(no PM 5pm data)</div>'}
+            <div style="font-weight:700;color:#92400e;text-transform:uppercase;letter-spacing:.04em;font-size:10px;margin-bottom:6px">Commute · Google live-traffic range</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;font-variant-numeric:tabular-nums;font-size:11.5px">
+              <div style="border-right:1px solid #fde68a;padding-right:8px">
+                <div style="color:#92400e;font-weight:600;margin-bottom:2px">Mon 7am</div>
+                <div style="color:#15803d">${fmtRange(r7, profile.raw.cvh_min)}</div>
+                <div style="color:var(--muted);font-size:10px;margin-top:2px">Home → CVH · AM shift (REVERSE rush)</div>
+              </div>
+              <div style="border-right:1px solid #fde68a;padding-right:8px">
+                <div style="color:#92400e;font-weight:600;margin-bottom:2px">Mon 3pm</div>
+                <div style="color:#dc2626">${fmtRange(r3h, profile.raw.cvh_pm_2pm)}</div>
+                <div style="color:var(--muted);font-size:10px;margin-top:2px">CVH → Home · PM rush starting (BRUTAL)</div>
+              </div>
+              <div>
+                <div style="color:#92400e;font-weight:600;margin-bottom:2px">Sat 10am</div>
+                <div style="color:#15803d">${fmtRange(rsat)}</div>
+                <div style="color:var(--muted);font-size:10px;margin-top:2px">Home → CVH · weekend</div>
+              </div>
             </div>
           </div>` : '';
         return `

@@ -1,0 +1,103 @@
+{
+  "_meta": {
+    "verified_date": "2026-06-07",
+    "source": "Wave I verification swarm (3 agents, 15 buildings)",
+    "note": "VERIFIED_AS_LISTED = price + unit-type match. VERIFIED_DIFFERENT = building real but our price/unit-type wrong. STALE = our price doesn't match current listings."
+  },
+  "65_windermere": {
+    "verdict": "VERIFIED_DIFFERENT",
+    "our_price": 1549,
+    "actual_price_low": 1625,
+    "actual_unit_type": "1bed (BACHELOR is $1549)",
+    "honest_note": "Real Greenwin building + 2mo free promo, but our $1,549 is the BACHELOR price. Real 1BR starts at $1,625. Still a deal.",
+    "verified_listing": "https://www.greenwin.ca"
+  },
+  "marina_view_2303": {
+    "verdict": "VERIFIED_DIFFERENT",
+    "our_price": 1400,
+    "actual_price_low": 1650,
+    "actual_unit_type": "1bed (STUDIO is $1400)",
+    "honest_note": "Real Greenwin-style waterfront building. $1,400 is the STUDIO floor. 1BRs are $1,650-1,900. 1mo free promo active."
+  },
+  "363_lakeshore_e": {
+    "verdict": "STALE",
+    "our_price": 1500,
+    "actual_price_low": 1845,
+    "actual_price_high": 1925,
+    "honest_note": "Our $1,500 is NOT verifiable anywhere. Real 1BRs are posting $1,845-$1,925 (Realtor.ca, condos.ca). Do NOT anchor on $1,500."
+  },
+  "60_mountview": {
+    "verdict": "VERIFIED_AS_LISTED",
+    "our_price": 1850,
+    "actual_unit_type": "Junior 1BR (only 515sqft)",
+    "honest_note": "Beaux Properties, listing 1 day old, utilities INCLUDED. Worth calling (289) 819-7203 this week. Note: tiny 515sqft."
+  },
+  "beechwood_480_lakeshore_e": {
+    "verdict": "VERIFIED_AS_LISTED",
+    "our_price": 1700,
+    "actual_unit_type": "465sqft 1BR, no in-unit laundry, no pets",
+    "honest_note": "Real building, price matches. Utilities ALL included (gas/water/hydro/heat/internet/trash). Tradeoff: 465sqft tiny, no in-unit laundry."
+  },
+  "17_rowland_st": {
+    "verdict": "UNVERIFIED_LIKELY_BASEMENT",
+    "our_price": 2050,
+    "honest_note": "M6P 1M2 = semi/detached houses street. $2,050 with utilities+WiFi bundle = almost certainly a basement/secondary suite, NOT a building. No major-aggregator listing found."
+  },
+  "70_high_park_ave": {
+    "verdict": "VERIFIED_LOW_END",
+    "our_price": 1950,
+    "actual_price_range": "1950-2300",
+    "honest_note": "20-unit condo building, sublet model varies per unit. Our $1,950 is the floor. Recent comp $2,175 / 550sqft / Mar 2026."
+  },
+  "grenadier_square_40_high_park": {
+    "verdict": "PARTIALLY_VERIFIED_NET_AFTER_PROMO",
+    "our_price": 1906,
+    "actual_price_low": 2025,
+    "actual_price_high": 2044,
+    "honest_note": "$1,906 = NET-after-1-month-free rate ($2,079 × 11/12). Real ask $2,025-$2,044. GWLR professional management, utilities NOT included. Year-2 rent ~8% jump when promo ends."
+  },
+  "old_mill_station_2675_bloor": {
+    "verdict": "PARTIALLY_VERIFIED_NEEDS_CALL",
+    "our_price": 2290,
+    "honest_note": "PadMapper listing exists, location confirmed 2-min to Old Mill subway. 800sqft for $2,290 is large for area (luxury condos start $2,850) — suggests older mid-century low-rise. Phone verify."
+  },
+  "the_campbell_299_campbell": {
+    "verdict": "VERIFIED_NET_AFTER_PROMO_BUT_NO_UNITS",
+    "our_price": 2025,
+    "actual_price_low": 2070,
+    "actual_price_high": 2170,
+    "honest_note": "$2,025 = NET-after-1-month-free. Real ask $2,070-$2,170. CURRENTLY ZERO UNITS AVAILABLE — must call (844) 948-1836 + waitlist. July 1 move-in promo deadline imminent."
+  },
+  "143_stephen_drive": {
+    "verdict": "VERIFIED_AS_LISTED",
+    "our_price": 1784,
+    "actual_unit_type": "621sqft 1BR",
+    "honest_note": "MetCap-managed. Heat included only (not all utilities). Coin laundry, covered parking (cost unposted). $2.87/sqft best value in Stonegate zone."
+  },
+  "aquaview_3865_lake_shore_w": {
+    "verdict": "STALE",
+    "our_price_range": "1550-1750",
+    "actual_price_low": 2300,
+    "actual_price_high": 2695,
+    "honest_note": "STALE COMP from previous lease cycle. Current 1BR / 1BR+den $2,300-$2,695. DROP from short-list at our claimed price — at $2,300+ it's no longer a value play."
+  },
+  "waterford_tower_2645_battleford": {
+    "verdict": "VERIFIED_AS_LISTED",
+    "our_price": 2220,
+    "actual_unit_type": "782-867sqft 1BR (plans C1/C2/C3)",
+    "honest_note": "EXACT match. QuadReal-managed. Promo: 'Move In by July 1: 2 Months Free + 12 Months Free Parking + No LMR Upfront' on SELECT suites, new applicants only. Effective ~$1,850/mo year 1. JULY 1 DEADLINE imminent. Heat+A/C+water included, in-suite laundry."
+  },
+  "reid_drive": {
+    "verdict": "STALE",
+    "our_price": 2170,
+    "actual_price_low": 2399,
+    "actual_price_high": 2599,
+    "honest_note": "Our $2,170 not visible anywhere. Current asks $2,399 (rentals.ca) to $2,599+ (InterRent direct). 1BR may have zero availability. Parking $75/mo extra. Phone verify."
+  },
+  "lakeshore_206e": {
+    "verdict": "VERIFIED_AS_TRUE_STUDIO",
+    "our_price": 1649,
+    "actual_unit_type": "TRUE STUDIO 435sqft (no 1BR exists at this building)",
+    "honest_note": "Confirmed building only has studios + 2BRs. The $1,649 is a real 435sqft studio. Promo: 1mo free + 6mo parking on 13-mo lease. Effective ~$1,586/mo year 1 (~$200 extras: hydro, water, parking, locker)."
+  }
+}
