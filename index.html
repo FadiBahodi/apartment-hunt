@@ -1746,30 +1746,38 @@ setTimeout(scheduleRerender, 4000);
       return;
     }
     const apts = compareList.map(id => APARTMENTS.find(a => a.id === id)).filter(Boolean);
+    const profiles = apts.map(a => computeAxisProfile(a));
+    const corrs = apts.map(a => (window.LISTING_CORRECTIONS||{})[a.id]);
+    const pms = apts.map(a => {
+      const k = (window.BUILDING_TO_PM?.mapping||{})[a.id];
+      return k && (window.PM_REPUTATION||{})[k] ? {name: k.replace(/_/g,' '), ...(window.PM_REPUTATION||{})[k]} : null;
+    });
+    const amens = apts.map(a => (window.AMENITIES||{})[a.id]);
+    const fdeeps = apts.map(a => (window.FINALIST_DEEP||{})[a.id]);
+
     const rows = [
-      ['Photo', a => { const p = (photoMap[a.id]||[])[0]; return p?`<img src="${p}">`:''; }],
-      ['Address', a => a.address],
-      ['Zone', a => a.zone],
-      ['Fit Score', a => { const f=computeFitScore(a,window.COSTS||{}); return `<b style="color:${fitScoreColor(f.score)}">${f.score}/100</b>`; }],
-      ['Rent', a => `$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}${a.rent_1bed_high&&a.rent_1bed_high!==a.rent_1bed_low?'–'+a.rent_1bed_high.toLocaleString():''}`],
-      ['Sqft', a => a.sqft_low?a.sqft_low+'–'+a.sqft_high:(a.sqft_high||'—')],
-      ['$/sqft', a => { const r=a.rent_1bed_low||a.rent_2bed||0; const s=a.sqft_high||a.sqft_low||0; return s?'$'+(r/s).toFixed(2):'—'; }],
-      ['Est. all-in/mo', a => { const c=(window.COSTS||{})[a.id]; return c?'$'+((c.estimated_monthly_total_1bed||(a.rent_1bed_low||0)+100).toLocaleString()):'—'; }],
-      ['CVH peak', a => `${a.drive_to_cvh_min_peak} min`],
-      ['CVH off-peak', a => `${a.drive_to_cvh_min_offpeak} min`],
-      ['→ Union', a => a.drive_to_union_min_offpeak?a.drive_to_union_min_offpeak+' min':'—'],
-      ['Promo', a => a.promo||'—'],
-      ['Google rating', a => { const r=(window.REVIEWS||{})[a.id]; return r?.google_rating?'⭐ '+r.google_rating:'—'; }],
-      ['Reddit', a => { const r=(window.REVIEWS||{})[a.id]; return r?.reddit_sentiment||'—'; }],
-      ['Walk Score', a => { const z=(window.ZONES||{})[a.zone]; return z?.walk_score||'—'; }],
-      ['Transit Score', a => { const z=(window.ZONES||{})[a.zone]; return z?.transit_score||'—'; }],
-      ['Running', a => a.running||'—'],
-      ['Top con', a => (a.cons||[])[0]||'—'],
-      ['', a => `<button onclick="document.getElementById('compare-modal').classList.remove('show');selectApt('${a.id}')" style="background:var(--bg);border:1px solid var(--border);color:var(--text);padding:4px 8px;border-radius:4px;cursor:pointer;font-size:11px">Open</button> <button onclick="toggleCompare('${a.id}');renderCompareModal()" style="background:var(--bg);border:1px solid var(--bad);color:var(--bad);padding:4px 8px;border-radius:4px;cursor:pointer;font-size:11px">Remove</button>`],
+      ['Photo', (a, i) => { const rp = (window.REAL_PHOTOS||{})[a.id]; const url = rp?.real_interior?.[0] || rp?.real_exterior?.[0] || (photoMap[a.id]||[])[0]; return url?`<img src="${url}" style="width:100%;max-width:160px;height:90px;object-fit:cover;border-radius:4px">`:''; }],
+      ['Zone', (a, i) => a.zone],
+      ['<b>Composite (6-axis avg)</b>', (a, i) => `<b style="color:${window.fitScoreColor(profiles[i].total)};font-size:16px">${profiles[i].total}/100</b>`],
+      ['CVH (Mon 7am lived)', (a, i) => `${profiles[i].raw.cvh_min} min`],
+      ['CVH Fri 5pm worst', (a, i) => { const r = profiles[i].raw.cvh_range_mon3_home; return r?.pessimistic ? Math.round(r.pessimistic)+' min' : (profiles[i].raw.cvh_pm_5pm ? profiles[i].raw.cvh_pm_5pm+' min' : '—'); }],
+      ['Walkability', (a, i) => profiles[i].raw.walkable_count != null ? profiles[i].raw.walkable_count+' POI/800m' : '—'],
+      ['Singles density', (a, i) => profiles[i].raw.singles_score != null ? profiles[i].raw.singles_score+'/100' : '—'],
+      ['Run trail axis', (a, i) => profiles[i].axes.running+'/100'],
+      ['Rent (verified if avail)', (a, i) => `$${(profiles[i].raw.rent||0).toLocaleString()}`],
+      ['$/sqft', (a, i) => { const fp = (window.FLOOR_PLANS||{})[a.id]; return fp?.sqft_per_dollar_realistic ? '$'+(1/fp.sqft_per_dollar_realistic).toFixed(2) : '—'; }],
+      ['Year built', (a, i) => amens[i]?.year_built || '—'],
+      ['In-suite laundry', (a, i) => amens[i]?.in_suite_laundry || '—'],
+      ['AC', (a, i) => amens[i]?.ac_type || '—'],
+      ['Soundproofing', (a, i) => { const s = amens[i]?.soundproofing_issues; if (!s) return '—'; const col = /major/.test(s) ? '#dc2626' : s==='some_complaints' ? '#ea580c' : '#16a34a'; return `<span style="color:${col}">${s}</span>`; }],
+      ['<b>Property manager</b>', (a, i) => { const p = pms[i]; if (!p) return '—'; const col = p.fadi_recommendation==='avoid'?'#dc2626':p.fadi_recommendation==='trust'?'#16a34a':'#ca8a04'; return `<span style="color:${col};font-weight:600">${p.name} ${p.reputation_score}/10 (${p.fadi_recommendation})</span>`; }],
+      ['Verification', (a, i) => { const c = corrs[i]; if (!c) return '—'; const col = c.verdict==='VERIFIED_AS_LISTED'?'#16a34a':c.verdict==='STALE'?'#dc2626':'#ea580c'; return `<span style="color:${col}">${c.verdict}</span>`; }],
+      ['Honest call', (a, i) => fdeeps[i]?.honest_call ? fdeeps[i].honest_call.slice(0,180) : (a.cons||[])[0] || '—'],
+      ['', (a, i) => `<button onclick="document.getElementById('compare-modal').classList.remove('show');selectApt('${a.id}')" style="background:var(--accent);color:#fff;border:0;padding:5px 10px;border-radius:4px;cursor:pointer;font-size:11px">Open detail</button> <button onclick="toggleCompare('${a.id}');renderCompareModal()" style="background:transparent;border:1px solid var(--bad);color:var(--bad);padding:4px 8px;border-radius:4px;cursor:pointer;font-size:11px">Remove</button>`],
     ];
     c.innerHTML = `<table class="cmp-table">
-      <thead><tr><th></th>${apts.map(a=>`<th>${a.name}</th>`).join('')}</tr></thead>
-      <tbody>${rows.map(([label,fn])=>`<tr><td style="font-weight:600;color:var(--muted)">${label}</td>${apts.map(a=>`<td>${fn(a)}</td>`).join('')}</tr>`).join('')}</tbody>
+      <thead><tr><th style="width:120px"></th>${apts.map(a=>`<th style="font-size:13px">${a.name}<br><span style="font-weight:400;color:var(--muted);font-size:11px">${a.address.split(',')[0]}</span></th>`).join('')}</tr></thead>
+      <tbody>${rows.map(([label,fn])=>`<tr><td style="font-weight:600;color:var(--muted);font-size:11.5px">${label}</td>${apts.map((a,i)=>`<td style="font-size:12px">${fn(a,i)}</td>`).join('')}</tr>`).join('')}</tbody>
     </table>`;
   }
 
