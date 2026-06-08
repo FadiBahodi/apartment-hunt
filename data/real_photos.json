@@ -1,0 +1,527 @@
+{
+  "eau_du_soleil": {
+    "real_interior": [
+      "https://eaudusoleil.ca/images/eaudusoleil_suite1002_sold.jpg",
+      "https://eaudusoleil.ca/images/eaudusoleil_condos_amenities1.jpg?t=4",
+      "https://eaudusoleil.ca/images/eaudusoleil_condos_amenities2.jpg?t=4",
+      "https://eaudusoleil.ca/images/eaudusoleil_condos_amenities3.jpg?t=4",
+      "https://eaudusoleil.ca/images/eaudusoleil_condos_amenities4.jpg?t=4",
+      "https://eaudusoleil.ca/images/eaudusoleil_condos_amenities5.jpg?t=4",
+      "https://eaudusoleil.ca/images/eaudusoleil_condos_amenities12.jpg?t=4",
+      "https://eaudusoleil.ca/images/eaudusoleil_condos_amenities13.jpg?t=4",
+      "https://d2d56882uwwjpl.cloudfront.net/large_sky_1_a6e982be82.jpg",
+      "https://d2d56882uwwjpl.cloudfront.net/large_sky_2_f21bcd16f3.jpg",
+      "https://d2d56882uwwjpl.cloudfront.net/large_sky_3_d63e99b048.jpg",
+      "https://d2d56882uwwjpl.cloudfront.net/large_sky_5_0666d39bc5.jpg",
+      "https://d2d56882uwwjpl.cloudfront.net/large_sky_6_3e86be234a.jpg"
+    ],
+    "real_exterior": [
+      "https://eaudusoleil.ca/images/eaudusoleil_condos7.jpg?t=4",
+      "https://eaudusoleil.ca/images/eaudusoleil_condos8.jpg?t=4",
+      "https://d2d56882uwwjpl.cloudfront.net/large_2183_1_660b97af76.jpg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://eaudusoleil.ca/",
+    "verified_date": "2026-06-07"
+  },
+  "vita_on_the_lake": {
+    "real_interior": [
+      "https://vitaonthelake.com/images/gallery/vita-on-the-lake/vita-lobby.jpg",
+      "https://vitaonthelake.com/images/gallery/vita-on-the-lake/vita-lobby2.jpg",
+      "https://vitaonthelake.com/images/gallery/vita-on-the-lake/vita-gym.jpg",
+      "https://vitaonthelake.com/images/gallery/vita-on-the-lake/vita-cardio.jpg",
+      "https://vitaonthelake.com/images/gallery/vita-on-the-lake/vita-cycling.jpg",
+      "https://vitaonthelake.com/images/gallery/vita-on-the-lake/vita-outdoor-pool2.jpg",
+      "https://vitaonthelake.com/images/gallery/vita-on-the-lake/vita-outdoor-pool3.jpg",
+      "https://vitaonthelake.com/images/gallery/vita-on-the-lake/vita-yoga.jpg",
+      "https://img.zumpercdn.com/769576234/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/769576235/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/769576236/1280x960?dpr=1&fit=crop&h=542&q=76&w=991"
+    ],
+    "real_exterior": [
+      "https://vitaonthelake.com/images/vita-on-the-lake_4.jpg?t=6",
+      "https://vitaonthelake.com/images/vita-on-the-lake2.jpg?t=3",
+      "https://vitaonthelake.com/images/Vita-On-The-Lake4.jpg?t=3"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://vitaonthelake.com/",
+    "verified_date": "2026-06-07"
+  },
+  "lago_waterfront": {
+    "real_interior": [
+      "https://lagocondos.ca/images/amenities/lago-pool.jpg",
+      "https://lagocondos.ca/images/amenities/lago-sauna.jpg",
+      "https://lagocondos.ca/images/amenities/lago-cycling.jpg",
+      "https://lagocondos.ca/images/amenities/lago-gym.jpg",
+      "https://lagocondos.ca/images/amenities/lago-party-room.jpg",
+      "https://lagocondos.ca/images/amenities/lago-silver-screen-theatre.jpg",
+      "https://d2d56882uwwjpl.cloudfront.net/toronto/2019/05/F2E6D7B6-A408-4626-B16A-C4F2DA14FA49-1024x726.jpg",
+      "https://d2d56882uwwjpl.cloudfront.net/toronto/2019/05/D862FD01-1060-455B-9C88-3BEC427196CB-1024x682.jpg"
+    ],
+    "real_exterior": [
+      "https://lagocondos.ca/images/lago5.jpg?t=6",
+      "https://lagocondos.ca/images/lago1.jpg?t=3",
+      "https://lagocondos.ca/images/lago2_2.jpg?t=3",
+      "https://lagocondos.ca/images/lago3.jpg?t=3"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://lagocondos.ca/",
+    "verified_date": "2026-06-07"
+  },
+  "markwood_4365": {
+    "real_interior": [],
+    "real_exterior": [
+      "https://lirp.cdn-website.com/ff78ea06/dms3rep/multi/opt/016_004TT043-1091w.jpg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://www.themarkwoodliving.com/",
+    "verified_date": "2026-06-07",
+    "notes": "Official site renders gallery via JS/Matterport - only 1 jpg in static HTML. 33 Matterport 3D tours referenced but not extractable."
+  },
+  "arc_erin_mills": {
+    "real_interior": [],
+    "real_exterior": [],
+    "floor_plan": null,
+    "source_listing": "https://www.danielsarccondos.com/",
+    "verified_date": "2026-06-07",
+    "notes": "Daniels Arc site ECONNREFUSED; aggregators block. Sold-out pre-construction. Skyrise Erin Mills is related Daniels rental - use that for live photos."
+  },
+  "reid_drive": {
+    "real_interior": [
+      "https://img.zumpercdn.com/338548234/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/242376215/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/242376217/1280x960?dpr=1&fit=crop&h=542&q=76&w=991"
+    ],
+    "real_exterior": [],
+    "floor_plan": null,
+    "source_listing": "https://www.zumper.com/apartment-buildings/p224787/10-14-reid-drive-streetsville-mississauga-on",
+    "verified_date": "2026-06-07"
+  },
+  "lakewood_ii_1285": {
+    "real_interior": [
+      "https://s3.amazonaws.com/lws_lift/homestead/images/gallery/1152/1758221156311_Living_Room___Dining_final.JPG",
+      "https://s3.amazonaws.com/lws_lift/homestead/images/gallery/1152/1758221152704_Kitchen_final.jpg",
+      "https://s3.amazonaws.com/lws_lift/homestead/images/gallery/1152/1758221148857_Bedroom_final.jpg"
+    ],
+    "real_exterior": [],
+    "floor_plan": null,
+    "source_listing": "https://www.homestead.ca/residential/lakewood-apartments-ii",
+    "verified_date": "2026-06-07"
+  },
+  "lakeshore_2335": {
+    "real_interior": [
+      "https://assets.rentsync.com/park/images/gallery/full/1610675264_1597866201_tpm-mv-9812.jpg",
+      "https://assets.rentsync.com/park/images/gallery/full/1610675498_1597866584_tpm-mv-9825.jpg",
+      "https://assets.rentsync.com/park/images/gallery/full/1610675490_1597866580_tpm-mv-9823.jpg",
+      "https://assets.rentsync.com/park/images/gallery/full/1610675362_1597866222_tpm-mv-9854.jpg",
+      "https://assets.rentsync.com/park/images/gallery/full/1610675359_1597866224_tpm-mv-9855.jpg",
+      "https://assets.rentsync.com/park/images/gallery/full/1610675509_1597866604_tpm-mv-9833.jpg",
+      "https://assets.rentsync.com/park/images/gallery/full/1610675519_1597866622_tpm-mv-9840.jpg",
+      "https://assets.rentsync.com/park/images/gallery/full/1610675511_1597866601_tpm-mv-9832.jpg"
+    ],
+    "real_exterior": [
+      "https://assets.rentsync.com/park/images/gallery/full/1610675478_1597866561_tpm-mv-9815.jpg",
+      "https://assets.rentsync.com/park/images/gallery/full/1610675481_1597866563_tpm-mv-9816.jpg",
+      "https://assets.rentsync.com/park/images/gallery/full/1610675236_1560179441_12.jpg"
+    ],
+    "floor_plan": "https://assets.rentsync.com/park/images/floorplans/1610676661_1_br_-_1578424496_f2.png",
+    "source_listing": "https://www.parkproperty.ca/apartments/2335-lake-shore-blvd-west",
+    "verified_date": "2026-06-07"
+  },
+  "65_windermere": {
+    "real_interior": [
+      "https://assets.rentsync.com/greenwin/images/gallery/512/1594926532_kit_4.jpg",
+      "https://assets.rentsync.com/greenwin/images/gallery/512/1594926537_liv_din_kit.jpg",
+      "https://assets.rentsync.com/greenwin/images/gallery/512/1765314047488_186.jpg",
+      "https://assets.rentsync.com/greenwin/images/gallery/512/1765314041813_185.jpg",
+      "https://assets.rentsync.com/greenwin/images/gallery/512/1765314026493_181.jpg",
+      "https://assets.rentsync.com/greenwin/images/gallery/512/1765314031953_183.jpg",
+      "https://assets.rentsync.com/greenwin/images/gallery/512/1765314036919_184.jpg",
+      "https://assets.rentsync.com/greenwin/images/gallery/1152/1453476347_img_015.jpg",
+      "https://assets.rentsync.com/greenwin/images/gallery/1152/1453476339_img_011edit.jpg",
+      "https://assets.rentsync.com/greenwin/images/gallery/1152/1453476351_img_016.jpg",
+      "https://assets.rentsync.com/greenwin/images/gallery/1152/1453476344_img_012.jpg"
+    ],
+    "real_exterior": [
+      "https://assets.rentsync.com/greenwin/images/gallery/1152/1776355594051_65_WINDERMERE.png",
+      "https://assets.rentsync.com/greenwin/images/gallery/1152/1453474757_75windermere18.jpg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://www.greenwin.ca/apartments-for-rent/65-windermere-ave",
+    "verified_date": "2026-06-07"
+  },
+  "70_high_park": {
+    "real_interior": [],
+    "real_exterior": [],
+    "floor_plan": null,
+    "source_listing": "https://condos.ca/toronto/high-park-condominiums-70-high-park-ave",
+    "verified_date": "2026-06-07",
+    "notes": "Daniels-built 2005 luxury condo. Condos.ca/strata.ca/torontocondoteam.ca/zillow all return 403 to WebFetch. Vision360 virtual tour exists at tours.vision360tours.ca."
+  },
+  "grenadier_square": {
+    "real_interior": [
+      "https://cdngeneral.rentcafe.com/dmslivecafe/2/83880/GWL Realty Advisors - 77 Quebec - 2 Bed 2 Bath 1.jpeg?width=550&quality=80&height=450&mode=crop",
+      "https://cdngeneral.rentcafe.com/dmslivecafe/2/83880/GWL Realty Advisors - 77 Quebec - 2 Bed 2 Bath 4.jpg?width=550&quality=80&height=450&mode=crop",
+      "https://cdngeneral.rentcafe.com/dmslivecafe/2/83880/GWL Realty Advisors - 77 Quebec - 2 Bed 2 Bath 6.jpeg?width=550&quality=80&height=450&mode=crop",
+      "https://cdngeneral.rentcafe.com/dmslivecafe/2/83880/GWL-The-Livmore-High-Park-Amenity-Rooms-05032021_134051(1).jpg?width=550&quality=80&height=450&mode=crop"
+    ],
+    "real_exterior": [
+      "https://cdngeneral.rentcafe.com/dmslivecafe/2/83880/Grenadier Square - June 2026(1).jpg?width=550&quality=80&height=450&mode=crop"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://www.rentcafe.com/apartments/on/toronto/grenadier-square/default.aspx",
+    "verified_date": "2026-06-07"
+  },
+  "60_mountview": {
+    "real_interior": [
+      "https://img.zumpercdn.com/882551994/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/882551995/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/882551996/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/882551997/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/882551998/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/882551999/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/882552000/1280x960?dpr=1&fit=crop&h=542&q=76&w=991"
+    ],
+    "real_exterior": [],
+    "floor_plan": null,
+    "source_listing": "https://www.zumper.com/apartment-buildings/p485609/60-mountview-ave-high-park-toronto-on",
+    "verified_date": "2026-06-07"
+  },
+  "17_rowland": {
+    "real_interior": [],
+    "real_exterior": [],
+    "floor_plan": null,
+    "source_listing": "https://www.apartments.com/high-park-north-junction-toronto-on/under-3000/",
+    "verified_date": "2026-06-07",
+    "notes": "Small low-rise townhouse-style; no dedicated listing page with extractable images. Apartments.com aggregator blocks WebFetch."
+  },
+  "campbell_299": {
+    "real_interior": [
+      "https://assets.rentsync.com/bentall_299campbell/panels/homepage_content/files/768/1696961118377_The_Eatery.jpg",
+      "https://assets.rentsync.com/bentall_299campbell/panels/homepage_content/files/768/1671047130730_020.jpg",
+      "https://assets.rentsync.com/bentall_299campbell/panels/homepage_content/files/768/1667916045854_047.jpg",
+      "https://assets.rentsync.com/bentall_299campbell/panels/homepage_content/files/768/1696961118419_Social_Lounge.jpg",
+      "https://assets.rentsync.com/bentall_299campbell/panels/homepage-popup/files/512/1765916102233_The_Campbell.jpg"
+    ],
+    "real_exterior": [
+      "https://assets.rentsync.com/bentall_299campbell/images/pages/1152/1696961045032_The_Campbell__2023_09_19_-3.jpg",
+      "https://assets.rentsync.com/bentall_299campbell/panels/homepage_content/files/768/1667916046362_DJI_0830.jpg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://www.rentthecampbell.com/",
+    "verified_date": "2026-06-07"
+  },
+  "old_mill_station_2675": {
+    "real_interior": [
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1774274836821_1.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1774274839408_2.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1774274842218_3.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1774274844796_4.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1774274847114_5.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1774274849397_6.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1774274829991_7.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1774274832020_8.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1774274834391_9.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1774283105336_balcony.jpg",
+      "https://s3.amazonaws.com/lws_lift/crestview/images/gallery/full/1737562459991_cbedroom1.jpg",
+      "https://s3.amazonaws.com/lws_lift/crestview/images/gallery/full/1737562551174_dkitchen1.jpg",
+      "https://s3.amazonaws.com/lws_lift/crestview/images/gallery/full/1737562499585_flaundry.jpg"
+    ],
+    "real_exterior": [
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1325779966_070907Bloor02.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1325780759_IMG_1596.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1523374645_2645bloorw2645bloorw-hres017.jpg",
+      "https://assets.rentsync.com/crestview/images/gallery/1152/1523374642_2645bloorw2645bloorw-hres020.jpg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://www.crestview.ca/properties/riverview-plaza",
+    "verified_date": "2026-06-07",
+    "notes": "ID name says '2675 Bloor W' but actual named rental building at the Old Mill subway is Riverview Plaza at 2645 Bloor W (Crestview Investments). 2675 is a small mixed-use address with no rental gallery."
+  },
+  "206_lakeshore_pc": {
+    "real_interior": [],
+    "real_exterior": [],
+    "floor_plan": null,
+    "source_listing": "https://www.206lakeshoreroad.com/",
+    "verified_date": "2026-06-07",
+    "notes": "Official site uses only stock/unsplash images, not real building photos. Apartments.com/rentals.ca aggregators block WebFetch."
+  },
+  "beechwood_480": {
+    "real_interior": [],
+    "real_exterior": [],
+    "floor_plan": null,
+    "source_listing": "https://www.apartments.com/beechwood-apartments-mississauga-on/ej9hlgp/",
+    "verified_date": "2026-06-07",
+    "notes": "Apartments.com blocks WebFetch (403). No Matterport / 3D tours. No alt source with extractable images located."
+  },
+  "waterford_tower_2645": {
+    "real_interior": [
+      "https://quadrealresidential.com/wp-content/uploads/2025/10/quadreal-maria_waterford_tower_k.jpg",
+      "https://quadrealresidential.com/wp-content/uploads/2025/10/quadreal-maria_waterford_tower_b.jpg",
+      "https://quadrealresidential.com/wp-content/uploads/2025/10/quadreal-291-quadreal-waterford-1.jpg",
+      "https://quadrealresidential.com/wp-content/uploads/2025/10/134-Quadreal-Waterford-Tower.jpg",
+      "https://quadrealresidential.com/wp-content/uploads/2025/10/quadreal-283-quadreal-waterford.jpg",
+      "https://quadrealresidential.com/wp-content/uploads/2025/10/161-Quadreal-Waterford-Tower-2.jpg",
+      "https://quadrealresidential.com/wp-content/uploads/2025/10/020-Quadreal-Waterford-Tower.jpg",
+      "https://quadrealresidential.com/wp-content/uploads/2025/10/Maria_Waterford_Tower_Bedroom_staged-corrected_DS-scaled.jpg",
+      "https://quadrealresidential.com/wp-content/uploads/2025/10/quadreal-maria_waterford_tower_k-1.jpg",
+      "https://quadrealresidential.com/wp-content/uploads/2025/10/quadreal-134-quadreal-waterford.jpg"
+    ],
+    "real_exterior": [
+      "https://quadrealresidential.com/wp-content/uploads/2025/10/quadreal-303-quadreal-waterford.jpg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://quadrealresidential.com/mississauga/waterford-tower/",
+    "verified_date": "2026-06-07"
+  },
+  "143_stephen": {
+    "real_interior": [
+      "https://img.zumpercdn.com/882695118/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/882695119/1280x960?dpr=1&fit=crop&h=542&q=76&w=991",
+      "https://img.zumpercdn.com/882695120/1280x960?dpr=1&fit=crop&h=542&q=76&w=991"
+    ],
+    "real_exterior": [],
+    "floor_plan": null,
+    "source_listing": "https://www.zumper.com/apartment-buildings/p355243/143-stephen-drive-stonegate-queensway-toronto-on",
+    "verified_date": "2026-06-07",
+    "notes": "Zumper has 16-18 photos but only 3 in static HTML. MetCap official page has no embedded gallery (loads via 143stephendrive.com subdomain not crawled)."
+  },
+  "aquaview_3865": {
+    "real_interior": [
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-front-lobby-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-foyer-lobby-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-lobby-concierge-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-amenities-cardio-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-cardio-fitness-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-amenities-gym-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-gym-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-amenities-party-room-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-party-room-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-rooftop-terrace-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-rooftop-social-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-rooftop-hot-tub-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-rooftop-bbq-1150x711.jpg"
+    ],
+    "real_exterior": [
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-for-sale-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-driveway-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-entrance-driveway-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2021/08/aquaview-3865-lake-shore-blvd-w-etobicoke-condos-long-branch-motorcourt-1150x711.jpg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://unity.re/condos/aquaview/",
+    "verified_date": "2026-06-07"
+  },
+  "shoreline_towers_2313": {
+    "real_interior": [
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733772107209_living_and_dining_final.jpg",
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733340445834_HD-18.jpg",
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733772098738_kitchen_final.jpg",
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733772118094_living_and_dining2_final.jpg",
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733772083838_bedroom_final.jpg",
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733772091251_bedroom2_final.jpg",
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733772076540_bath_final.jpg"
+    ],
+    "real_exterior": [
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1776095108157_1_MONTH_RENT-FREE_12.jpg",
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733340385726_web_1-14.jpg",
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733340394242_web_1-18.jpg",
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733340396611_web_1-21.jpg",
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733340374853_web_1-4.jpg",
+      "https://assets.rentsync.com/briarlane/images/gallery/1152/1733340347248_web_1-13.jpg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://www.briarlane.ca/residential/2313-2323-lake-shore-boulevard-west",
+    "verified_date": "2026-06-07"
+  },
+  "marina_view_2303": {
+    "real_interior": [],
+    "real_exterior": [],
+    "floor_plan": null,
+    "source_listing": "https://www.apartments.com/marina-view-apartments-toronto-on/eh20yjq/",
+    "verified_date": "2026-06-07",
+    "notes": "Apartments.com (sole detailed source) blocks WebFetch. Matterport 3D tours referenced but not extractable as still images."
+  },
+  "lakeshore_363_pc": {
+    "real_interior": [],
+    "real_exterior": [],
+    "floor_plan": null,
+    "source_listing": "https://www.apartments.com/strathgowan-apartments-mississauga-on/b6j8fn9/",
+    "verified_date": "2026-06-07",
+    "notes": "Strathgowan Apartments. Apartments.com/condos.ca/zolo.ca all block WebFetch. No standalone listing site found with extractable images."
+  },
+  "skyrise_erin_mills_2550": {
+    "real_interior": [
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1739393077720_2550EglintonAveW-34.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1739304331143_2550EglintonAveW-32.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1739392958209_2550EglintonAveW-29.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1739393077606_2550EglintonAveW-23.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1739392958004_2550EglintonAveW-20.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1739392958420_2550EglintonAveW-15.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1739392958372_2550EglintonAveW-17.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1739392957973_2550EglintonAveW-19.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1740068774104_608-2550EglintonAveW-53_copy.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1740068837015_608-2550EglintonAveW-46_copy.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1740068909099_1010-2550EglintonAveW-49_copy.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1740068956498_1010-2550EglintonAveW-34_copy.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1740068999254_1010-2550EglintonAveW-54_copy.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1740069042997_1401-2550EglintonAveW-25_copy.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1740069117392_1401-2550EglintonAveW-37_copy.jpg",
+      "https://assets.rentsync.com/daniels_2550eglinton/panels/amenities-image-slider/files/768/1740069117333_1401-2550EglintonAveW-39_copy.jpg"
+    ],
+    "real_exterior": [
+      "https://assets.rentsync.com/daniels_2550eglinton/images/pages/512/1702324425736_AMZ_8033.jpg"
+    ],
+    "floor_plan": "https://assets.rentsync.com/madhouse/images/floorplans/1767818774261_ONE_BD_PLUS_DEN_-_1_A_-_The_Heights.jpg",
+    "source_listing": "https://www.skyriserentals.ca/",
+    "verified_date": "2026-06-07"
+  },
+  "jade_waterfront": {
+    "real_interior": [
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_005.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_006.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_007.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_008.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_009.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_010.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_011.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_012.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_013.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_014.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_015.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_016.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_017.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_018.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_019.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_020.jpg?t=5"
+    ],
+    "real_exterior": [
+      "https://jadecondos.ca/images/jade_condos2_2.jpg",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_001.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_002.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_003.jpg?t=5",
+      "https://jadecondos.ca/images/JadeCondos_33ShoreBreeze_004.jpg?t=5",
+      "https://jadecondos.ca/images/jade_condos3new2.jpg?t=4",
+      "https://jadecondos.ca/images/jade_condos4new.jpg?t=3",
+      "https://jadecondos.ca/images/jade_condos5_2.jpg?t=3"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://jadecondos.ca/",
+    "verified_date": "2026-06-07"
+  },
+  "westlake_phase_2": {
+    "real_interior": [
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Lobby-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Lobby-View-2-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Reception-Area-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Gym-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Swimming-Pool-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Library-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Recreational-Centre-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Excercise-Studion-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Children_s-Playroom-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Balcony-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Lakeview-1150x711.jpg"
+    ],
+    "real_exterior": [
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Exterior-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Entrance-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Court-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/WESTLAKE-PHASE-II-2200-Lake-Shore-Blvd-W-Landscape-Walking-Gardens-1150x711.jpg",
+      "https://www.thompsonsells.com/wp-content/smush-avif/2016/06/westlake-phase-2-2200-lake-shore-blvd-w-original-1.jpg.avif"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://unity.re/condos/westlake-ii/",
+    "verified_date": "2026-06-07"
+  },
+  "beyond_the_sea_star": {
+    "real_interior": [],
+    "real_exterior": [
+      "https://d2d56882uwwjpl.cloudfront.net/Beyond-the-Sea-Star-Tower-Condosbc94522d4bpng.png",
+      "https://d2d56882uwwjpl.cloudfront.net/toronto/2017/07/IMG_2327-1024x768.jpg",
+      "https://d2d56882uwwjpl.cloudfront.net/toronto/2017/03/syufpkht8b-1024x683.jpg",
+      "https://d2d56882uwwjpl.cloudfront.net/toronto/2017/03/rdcdk2pirv-1024x683.jpg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://rentitfurnished.com/toronto/building/beyond-sea-star-tower-condos",
+    "verified_date": "2026-06-07",
+    "notes": "Only 4 photos at rentitfurnished (all exterior/lobby). Strata.ca/condos.ca block WebFetch."
+  },
+  "ocean_club_waterfront": {
+    "real_interior": [
+      "https://condoinvestments.ca/wp-content/uploads/2017/07/2011_09_21_11_58_07_oceeanclubint1.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/07/2011_09_21_11_58_38_oceeanclubint4.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/07/2011_09_21_11_58_51_oceeanclubint5.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/07/2011_09_21_11_59_22_oceeanclubint6.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-3.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-4.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-5.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-6.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-7.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-8.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-9.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-10.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-11.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-12.jpg",
+      "https://www.southetobicoke.com/wp-content/smush-avif/2024/11/DSC02838.jpg.avif",
+      "https://www.southetobicoke.com/wp-content/smush-avif/2024/11/DSC02839.jpg.avif",
+      "https://www.southetobicoke.com/wp-content/smush-avif/2024/11/DSC02840.jpg.avif",
+      "https://www.southetobicoke.com/wp-content/smush-avif/2024/11/DSC02841-1-1.jpg.avif",
+      "https://www.southetobicoke.com/wp-content/smush-avif/2024/11/DSC02842.jpg.avif"
+    ],
+    "real_exterior": [
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-1.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-13.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-14.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-15.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-16.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-17.jpg",
+      "https://condoinvestments.ca/wp-content/uploads/2017/11/Ocean-Club-18.jpg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://condoinvestments.ca/property/ocean-club/",
+    "verified_date": "2026-06-07",
+    "notes": "Actual address is 59-60 Annie Craig Dr / Marine Parade Dr in Humber Bay Shores, not 11 Marine Parade as listed in source - that ID may be misidentified. These photos are for Ocean Club Waterfront at 59 Annie Craig."
+  },
+  "vita_two_on_the_lake": {
+    "real_interior": [
+      "https://condotrend.com/wp-content/uploads/2023/08/Vita-Two-lobby-image-min.jpg",
+      "https://condotrend.com/wp-content/uploads/2023/08/Vita-Two-suite-image-min.jpg",
+      "https://condotrend.com/wp-content/uploads/2023/08/Vita-Two-amenities-image-9-min.jpg",
+      "https://vitaonthelake.com/images/gallery/vita2/vita2-pool.jpg",
+      "https://vitaonthelake.com/images/gallery/vita2/vita2-gym.jpg",
+      "https://vitaonthelake.com/images/gallery/vita2/vita2-lobby.jpg",
+      "https://vitaonthelake.com/images/gallery/vita2/vita2-cycling.jpg"
+    ],
+    "real_exterior": [
+      "https://condotrend.com/wp-content/uploads/2023/08/Vita-Two-exterior-image-min.jpg",
+      "https://condotrend.com/wp-content/uploads/2023/08/Vita-Two-exterior-image-99-min.jpg",
+      "https://condotrend.com/wp-content/uploads/2023/08/Vita-Two-exterior-image-9-min.jpg",
+      "https://vitaonthelake.com/images/vita-two.jpg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://condotrend.com/vita-two-on-the-lake-condos/",
+    "verified_date": "2026-06-07",
+    "notes": "Vita Two address is 65 Annie Craig Dr / 2167 Lake Shore Blvd W (not '2 Edgewater Dr' - that address doesn't match). Photos shared with Vita One marketing site."
+  },
+  "brightwater_i": {
+    "real_interior": [
+      "https://unity.re/wp-content/uploads/2020/09/brightwater-i-condos-for-sale-port-credit-lobby-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/09/brightwater-i-condos-port-credit-for-sale-retail-1150x711.jpg"
+    ],
+    "real_exterior": [
+      "https://unity.re/wp-content/uploads/2020/09/brightwater-i-condos-for-sale-port-credit-exterior-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/09/brightwater-i-condos-port-credit-for-sale-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/brightwater-ii-condos-for-sale-port-credit-village-square-night-1150x711.jpg",
+      "https://unity.re/wp-content/uploads/2020/01/brightwater-condos-for-sale-port-credit-building-ii-1150x711.jpg",
+      "https://brightwatercondominiums.ca/wp-content/uploads/2023/11/brightwater-condos-towers.jpeg",
+      "https://brightwatercondominiums.ca/wp-content/uploads/2023/11/bridge-house-at-brightwater-condos.jpeg"
+    ],
+    "floor_plan": null,
+    "source_listing": "https://unity.re/condos/brightwater-i/",
+    "verified_date": "2026-06-07",
+    "notes": "Brightwater I (5-storey, 75 units, completed 2024) is heavily marketed via still-developing master plan visuals. Interior unit shots scarce; lobby+retail only."
+  }
+}

@@ -486,6 +486,8 @@ const _jsonLoaders = [
   ['google_ranges.json', 'GOOGLE_RANGES', null],
   ['listing_corrections.json', 'LISTING_CORRECTIONS', null],
   ['nearest_run_clubs.json', 'NEAREST_RUN_CLUBS', null],
+  ['transit_distances.json', 'TRANSIT_DISTANCES', null],
+  ['real_photos.json', 'REAL_PHOTOS', null],
   ['neighborhoods.geojson', 'NEIGHBORHOODS', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
@@ -1435,8 +1437,33 @@ setTimeout(scheduleRerender, 4000);
           </div>`).join('')}
         `;
       })()}
-      <h3>Transit</h3>
-      <p>${a.transit}</p>
+      <h3>Transit · subway / GO / LRT</h3>
+      ${(() => {
+        const td = (window.TRANSIT_DISTANCES||{})[a.id];
+        if (!td) return `<p>${a.transit||'—'}</p>`;
+        const subway = td.best_subway_walkable;
+        const go = td.best_go_walkable;
+        return `
+          ${subway ? `<div style="background:var(--accent-soft);border-left:3px solid var(--accent);padding:8px 10px;border-radius:4px;margin-bottom:6px;font-size:12.5px"><b>Subway:</b> ${subway.station} — <b>${subway.walk_min} min walk</b> (${subway.dist_km}km). Direct downtown.</div>` : '<div style="font-size:12px;color:var(--muted);margin-bottom:6px">No subway within 1.5km walk.</div>'}
+          ${go ? `<div style="background:var(--good-soft);border-left:3px solid var(--good);padding:8px 10px;border-radius:4px;margin-bottom:6px;font-size:12.5px"><b>GO Train:</b> ${go.station} — <b>${go.walk_min} min walk</b> (${go.dist_km}km).</div>` : ''}
+          <div style="font-size:11px;color:var(--muted);margin-top:4px">All transit (top 3 nearest): ${td.top3.map(t => `${t.station} ${t.walk_min}m`).join(' · ')}</div>
+          ${a.transit?`<p style="font-size:11px;color:var(--muted);margin-top:6px">Original note: ${a.transit}</p>`:''}
+        `;
+      })()}
+      ${(() => {
+        const rp = (window.REAL_PHOTOS||{})[a.id];
+        if (!rp) return '';
+        const interiorPhotos = rp.real_interior || [];
+        const exteriorPhotos = rp.real_exterior || [];
+        if (!interiorPhotos.length && !exteriorPhotos.length) return '';
+        const all = [...interiorPhotos, ...exteriorPhotos].slice(0, 8);
+        return `<h3>Real listing photos · agent-verified</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:6px">
+            ${all.map(url => `<a href="${url}" target="_blank"><img src="${url}" style="width:100%;height:90px;object-fit:cover;border-radius:4px;border:1px solid var(--border)" loading="lazy"/></a>`).join('')}
+          </div>
+          <div style="font-size:11px;color:var(--muted);margin-top:4px">${interiorPhotos.length} interior + ${exteriorPhotos.length} exterior · click to enlarge</div>
+        `;
+      })()}
       ${(() => {
         const vn = (window.VISUAL_NOTES||{})[a.id];
         if (vn && !vn.error) {
