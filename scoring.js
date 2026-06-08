@@ -299,6 +299,23 @@ window.computeAxisProfile = function(a) {
   };
 };
 
+// Unified scoring including PM weight + verification penalties.
+// Used by Top-10 hero AND Call This Week so they rank consistently.
+window.computeFinalScore = function(a) {
+  const p = window.computeAxisProfile(a);
+  const pmKey = (window.BUILDING_TO_PM?.mapping||{})[a.id];
+  const pmRep = pmKey && (window.PM_REPUTATION||{})[pmKey];
+  const corr = (window.LISTING_CORRECTIONS||{})[a.id];
+  let penalty = 0;
+  if (pmRep?.fadi_recommendation === 'avoid') penalty -= 20;
+  else if (pmRep?.fadi_recommendation === 'trust') penalty += 10;
+  if (corr?.verdict === 'STALE') penalty -= 15;
+  else if (corr?.verdict?.includes('UNVERIFIED')) penalty -= 12;
+  else if (corr?.verdict?.includes('NET_AFTER_PROMO')) penalty -= 5;
+  else if (corr?.verdict === 'VERIFIED_AS_LISTED') penalty += 8;
+  return { profile: p, pmRep, pmKey, corr, final: p.total + penalty, penalty };
+};
+
 // Color for an axis bar (red→amber→green)
 window.axisColor = function(v) {
   if (v >= 80) return '#22c55e';     // green

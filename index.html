@@ -1053,24 +1053,29 @@ setTimeout(scheduleRerender, 4000);
         return `<div style="margin:14px 0 6px 0;padding:4px 8px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);border-bottom:1px solid var(--border);display:flex;justify-content:space-between"><span>${z}</span><span style="color:var(--dim);font-weight:400;letter-spacing:0;text-transform:none">${cards.length} building${cards.length===1?'':'s'}</span></div>${cards.map(c => c.html).join('')}`;
       }).join('');
     }
-    // TOP-10 HERO: composite-ranked across ALL viable, surfaces the "call this week" picks
+    // TOP-10 HERO: ranked with PM weighting + verification penalties (same algo as Call This Week)
     const top10Hero = (() => {
       const ranked = APARTMENTS
         .filter(a => isViableCandidate(a) && dataQualityTier(a) !== 'lead')
-        .map(a => ({ a, p: computeAxisProfile(a), tier: dataQualityTier(a) }))
-        .sort((x,y) => y.p.total - x.p.total)
+        .map(a => {
+          const f = window.computeFinalScore(a);
+          return { a, p: f.profile, tier: dataQualityTier(a), final: f.final, pmRep: f.pmRep, corr: f.corr };
+        })
+        .sort((x,y) => y.final - x.final)
         .slice(0, 10);
       if (!ranked.length) return '';
-      const row = ({a, p, tier}, i) => {
+      const row = ({a, p, tier, final, pmRep, corr}, i) => {
         const tierEmoji = tier === 'finalist' ? '★' : tier === 'verified' ? '✓' : '~';
+        const pmIcon = pmRep?.fadi_recommendation === 'trust' ? '<span title="Trusted PM" style="color:#16a34a">✓PM</span> ' : pmRep?.fadi_recommendation === 'avoid' ? '<span title="AVOID PM" style="color:#dc2626">✗PM</span> ' : '';
+        const corrIcon = corr?.verdict === 'STALE' ? '<span title="STALE pricing" style="color:#dc2626">✗</span> ' : corr?.verdict?.includes('NET_AFTER_PROMO') ? '<span title="Net after promo" style="color:#ca8a04">~</span> ' : '';
         return `<div onclick="selectApt('${a.id}')" style="display:grid;grid-template-columns:22px 1fr auto auto;gap:8px;padding:7px 10px;border-bottom:1px solid var(--border);cursor:pointer;align-items:center;font-size:12px" onmouseover="this.style.background='var(--accent-soft)'" onmouseout="this.style.background='transparent'">
           <span style="color:var(--muted);font-variant-numeric:tabular-nums;text-align:right">${i+1}.</span>
           <div style="min-width:0">
-            <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${tierEmoji} ${a.name}</div>
+            <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${tierEmoji} ${a.name} ${pmIcon}${corrIcon}</div>
             <div style="color:var(--muted);font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${a.zone} · CVH ${p.raw.cvh_min}m · KW ${p.raw.kw_min}m</div>
           </div>
-          <div style="font-weight:700;font-variant-numeric:tabular-nums">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}</div>
-          <div style="font-weight:600;color:${window.fitScoreColor(p.total)};font-variant-numeric:tabular-nums;font-size:13px;min-width:30px;text-align:right">${p.total}</div>
+          <div style="font-weight:700;font-variant-numeric:tabular-nums">$${(p.raw.rent||a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}</div>
+          <div style="font-weight:600;color:${window.fitScoreColor(final)};font-variant-numeric:tabular-nums;font-size:13px;min-width:30px;text-align:right" title="6-axis composite ${p.total} ± PM/verification weight">${final}</div>
         </div>`;
       };
       return `<div style="background:var(--accent-soft);border:1px solid var(--accent);border-radius:8px;margin-bottom:10px;overflow:hidden">
@@ -2014,24 +2019,12 @@ setTimeout(scheduleRerender, 4000);
   document.getElementById('show-callsheet').onclick = e => {
     e.preventDefault();
     const contacts = window.CONTACTS || {};
-    // Rank: viable + verified/finalist + non-AVOID PM + no STALE correction
+    // Rank using unified computeFinalScore (same as Top-10 hero)
     const ranked = APARTMENTS
       .filter(a => isViableCandidate(a) && dataQualityTier(a) !== 'lead')
       .map(a => {
-        const p = computeAxisProfile(a);
-        const pmKey = (window.BUILDING_TO_PM?.mapping||{})[a.id];
-        const pmRep = pmKey && (window.PM_REPUTATION||{})[pmKey];
-        const corr = (window.LISTING_CORRECTIONS||{})[a.id];
-        const ct = (window.CONTACTS||{})[a.id];
-        // Penalty: avoid PM = -20, STALE correction = -15, NET_AFTER_PROMO = -5
-        let penalty = 0;
-        if (pmRep?.fadi_recommendation === 'avoid') penalty -= 20;
-        if (pmRep?.fadi_recommendation === 'trust') penalty += 10;
-        if (corr?.verdict === 'STALE') penalty -= 15;
-        if (corr?.verdict?.includes('UNVERIFIED')) penalty -= 12;
-        if (corr?.verdict?.includes('NET_AFTER_PROMO')) penalty -= 5;
-        if (corr?.verdict === 'VERIFIED_AS_LISTED') penalty += 8;
-        return { a, p, pmKey, pmRep, corr, ct, score: p.total + penalty };
+        const f = window.computeFinalScore(a);
+        return { a, p: f.profile, pmKey: f.pmKey, pmRep: f.pmRep, corr: f.corr, ct: (window.CONTACTS||{})[a.id], score: f.final };
       })
       .sort((x, y) => y.score - x.score)
       .slice(0, 10);
