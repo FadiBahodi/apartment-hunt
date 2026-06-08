@@ -258,8 +258,25 @@ window.computeAxisProfile = function(a) {
     buildingNote = visual.honest_note;
   }
 
+  // 6th axis — WALKABLE third spaces (POI count within 800m, scaled to 0-100)
+  // Wave G/H/J have axis_walkable_count from Overpass query (cafés/restaurants/bars/gyms)
+  let walkable;
+  if (a.axis_walkable_count != null) {
+    const w = a.axis_walkable_count;
+    // 0-15 POIs = poor (0-40), 15-40 = OK (40-70), 40-80 = great (70-90), 80+ = exceptional (90-100)
+    if (w >= 80) walkable = Math.min(100, 90 + (w - 80) / 4);
+    else if (w >= 40) walkable = 70 + (w - 40) / 40 * 20;
+    else if (w >= 15) walkable = 40 + (w - 15) / 25 * 30;
+    else walkable = w / 15 * 40;
+    walkable = Math.round(walkable);
+  } else {
+    // Fallback from zone walk_score in zones.json if available
+    const z = (window.ZONES||{})[zoneKey];
+    walkable = z?.walk_score ? Math.round(z.walk_score) : 50;
+  }
+
   return {
-    axes: { cvh, singles, running, cost, toronto },
+    axes: { cvh, singles, running, cost, toronto, walkable },
     raw: {
       cvh_min: Math.round(cvhMin),
       cvh_offpeak: Math.round(cvhOffPeak),
@@ -267,15 +284,15 @@ window.computeAxisProfile = function(a) {
       cvh_source: googleCvh!=null ? 'google_mon_7am' : 'osrm_×peak',
       cvh_pm_2pm: (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.pm_2pm?.duration_min),
       cvh_pm_5pm: (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.pm_5pm?.duration_min),
-      // RANGES from Google (optimistic / best / pessimistic) when available
       cvh_range_mon7: (window.GOOGLE_RANGES?.routes?.[a.id]?.mon_7am),
       cvh_range_mon3_home: (window.GOOGLE_RANGES?.routes?.[a.id]?.mon_3pm_home),
       cvh_range_sat10: (window.GOOGLE_RANGES?.routes?.[a.id]?.sat_10am),
       singles_score: zone?.single_density_score,
+      walkable_count: a.axis_walkable_count,
       rent, kw_min: Math.round(kwMin), all_in: allIn,
     },
     qualitative: { zone_vibe: zoneVibe, building_note: buildingNote, warning: warningBadge, zone_label: zoneKey || a.zone },
-    total: Math.round((cvh + singles + running + cost + toronto) / 5),
+    total: Math.round((cvh + singles + running + cost + toronto + walkable) / 6),
   };
 };
 
@@ -296,11 +313,12 @@ window.renderAxisProfile = function(profile, opts) {
   const barW = compact ? 90 : 160;
   const barH = compact ? 5 : 8;
   const axes = [
-    {k: 'CVH', v: profile.axes.cvh, suffix: profile.raw.cvh_min + 'm'},
-    {k: 'Single', v: profile.axes.singles, suffix: profile.raw.singles_score != null ? profile.raw.singles_score : '?'},
-    {k: 'Run', v: profile.axes.running, suffix: ''},
-    {k: 'Cost', v: profile.axes.cost, suffix: '$' + (profile.raw.rent || '?').toLocaleString()},
-    {k: 'Toronto', v: profile.axes.toronto, suffix: profile.raw.kw_min + 'm'},
+    {k: 'CVH',     v: profile.axes.cvh,      suffix: profile.raw.cvh_min + 'm'},
+    {k: 'Walk',    v: profile.axes.walkable, suffix: profile.raw.walkable_count != null ? profile.raw.walkable_count + ' POI' : '~'},
+    {k: 'Single',  v: profile.axes.singles,  suffix: profile.raw.singles_score != null ? profile.raw.singles_score : '?'},
+    {k: 'Run',     v: profile.axes.running,  suffix: ''},
+    {k: 'Cost',    v: profile.axes.cost,     suffix: '$' + (profile.raw.rent || '?').toLocaleString()},
+    {k: 'Toronto', v: profile.axes.toronto,  suffix: profile.raw.kw_min + 'm'},
   ];
   const rows = axes.map(ax => `
     <div style="display:grid;grid-template-columns:${labelW}px ${barW}px 32px;gap:6px;align-items:center;font-size:${compact?'10px':'12px'};line-height:1.2;color:var(--muted)">

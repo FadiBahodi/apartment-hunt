@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updated": "2026-06-07T23:48:51.956966",
+    "updated": "2026-06-07T23:55:06.125369",
     "destinations": {
       "cvh": {
         "name": "Credit Valley Hospital",
@@ -11297,6 +11297,1464 @@
         "mon_7am": {
           "duration_min": 25.0,
           "distance_km": 10.03
+        }
+      }
+    },
+    "king-charlotte-condos": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 47.5,
+          "distance_km": 33.81
+        },
+        "pm_5pm": {
+          "duration_min": 63.1,
+          "distance_km": 33.85
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 7.2,
+          "distance_km": 1.53
+        }
+      }
+    },
+    "festival-tower-80-john": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 47.3,
+          "distance_km": 34.66
+        },
+        "pm_5pm": {
+          "duration_min": 65.3,
+          "distance_km": 34.34
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 7.2,
+          "distance_km": 1.61
+        }
+      }
+    },
+    "the-mercer-8": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 44.1,
+          "distance_km": 33.4
+        },
+        "pm_5pm": {
+          "duration_min": 63.2,
+          "distance_km": 34.22
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 7.4,
+          "distance_km": 1.77
+        }
+      }
+    },
+    "m5v-condos-375-king": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 44.6,
+          "distance_km": 33.31
+        },
+        "pm_5pm": {
+          "duration_min": 63.3,
+          "distance_km": 33.84
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 7.4,
+          "distance_km": 1.59
+        }
+      }
+    },
+    "the-hudson-438-king": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 42.6,
+          "distance_km": 33.06
+        },
+        "pm_5pm": {
+          "duration_min": 65.0,
+          "distance_km": 34.55
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 7.2,
+          "distance_km": 1.58
+        }
+      }
+    },
+    "fashion-house-560-king": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.8,
+          "distance_km": 33.87
+        },
+        "pm_5pm": {
+          "duration_min": 70.0,
+          "distance_km": 35.15
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 4.7,
+          "distance_km": 0.9
+        }
+      }
+    },
+    "charlie-condos-8-charlotte": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 47.5,
+          "distance_km": 33.8
+        },
+        "pm_5pm": {
+          "duration_min": 63.0,
+          "distance_km": 33.84
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 7.1,
+          "distance_km": 1.52
+        }
+      }
+    },
+    "thompson-residences-55-stewart": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 46.7,
+          "distance_km": 33.94
+        },
+        "pm_5pm": {
+          "duration_min": 65.8,
+          "distance_km": 34.53
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 5.0,
+          "distance_km": 0.98
+        }
+      }
+    },
+    "portland-park-550-front": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 43.0,
+          "distance_km": 33.29
+        },
+        "pm_5pm": {
+          "duration_min": 65.4,
+          "distance_km": 34.52
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 6.0,
+          "distance_km": 1.2
+        }
+      }
+    },
+    "king-toronto-489": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 44.6,
+          "distance_km": 33.48
+        },
+        "pm_5pm": {
+          "duration_min": 70.7,
+          "distance_km": 35.27
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 5.3,
+          "distance_km": 1.04
+        }
+      }
+    },
+    "dna3-1030-king": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 42.7,
+          "distance_km": 31.72
+        },
+        "pm_5pm": {
+          "duration_min": 63.4,
+          "distance_km": 32.32
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 4.7,
+          "distance_km": 0.92
+        }
+      }
+    },
+    "massey-square-1000-king": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 43.6,
+          "distance_km": 31.88
+        },
+        "pm_5pm": {
+          "duration_min": 63.2,
+          "distance_km": 32.41
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 4.0,
+          "distance_km": 0.86
+        }
+      }
+    },
+    "kings-club-1100-king": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 43.8,
+          "distance_km": 31.83
+        },
+        "pm_5pm": {
+          "duration_min": 59.6,
+          "distance_km": 32.07
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 6.7,
+          "distance_km": 1.3
+        }
+      }
+    },
+    "liberty-market-tower-171-east": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 43.2,
+          "distance_km": 30.7
+        },
+        "pm_5pm": {
+          "duration_min": 57.9,
+          "distance_km": 31.69
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 9.6,
+          "distance_km": 2.03
+        }
+      }
+    },
+    "liberty-towers-59-east": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 42.5,
+          "distance_km": 30.75
+        },
+        "pm_5pm": {
+          "duration_min": 58.3,
+          "distance_km": 31.74
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 7.3,
+          "distance_km": 1.56
+        }
+      }
+    },
+    "liberty-central-by-lake-49": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 42.4,
+          "distance_km": 30.74
+        },
+        "pm_5pm": {
+          "duration_min": 58.2,
+          "distance_km": 31.72
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 7.3,
+          "distance_km": 1.54
+        }
+      }
+    },
+    "liberty-market-lofts-5-hanna": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.7,
+          "distance_km": 30.42
+        },
+        "pm_5pm": {
+          "duration_min": 52.9,
+          "distance_km": 39.51
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 8.6,
+          "distance_km": 1.84
+        }
+      }
+    },
+    "liberty-house-15-solidarity": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.6,
+          "distance_km": 30.82
+        },
+        "pm_5pm": {
+          "duration_min": 59.7,
+          "distance_km": 42.27
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 8.5,
+          "distance_km": 1.75
+        }
+      }
+    },
+    "sixty-lofts-60-bathurst": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 44.0,
+          "distance_km": 33.45
+        },
+        "pm_5pm": {
+          "duration_min": 67.0,
+          "distance_km": 33.01
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 3.6,
+          "distance_km": 0.65
+        }
+      }
+    },
+    "tableau-117-peter": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.1,
+          "distance_km": 33.71
+        },
+        "pm_5pm": {
+          "duration_min": 65.9,
+          "distance_km": 44.05
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 5.8,
+          "distance_km": 1.41
+        }
+      }
+    },
+    "39-niagara-minto": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.6,
+          "distance_km": 32.41
+        },
+        "pm_5pm": {
+          "duration_min": 66.3,
+          "distance_km": 32.91
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 2.5,
+          "distance_km": 0.42
+        }
+      }
+    },
+    "fourfifty-the-well-450-front": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.0,
+          "distance_km": 33.64
+        },
+        "pm_5pm": {
+          "duration_min": 70.3,
+          "distance_km": 35.3
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 3.6,
+          "distance_km": 0.68
+        }
+      }
+    },
+    "concord-canada-house-1": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.1,
+          "distance_km": 32.67
+        },
+        "pm_5pm": {
+          "duration_min": 55.8,
+          "distance_km": 41.65
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 7.8,
+          "distance_km": 1.44
+        }
+      }
+    },
+    "parade-cityplace-15-iceboat": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.0,
+          "distance_km": 32.66
+        },
+        "pm_5pm": {
+          "duration_min": 61.5,
+          "distance_km": 33.9
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 8.0,
+          "distance_km": 1.46
+        }
+      }
+    },
+    "luna-vista-25-capreol": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 40.8,
+          "distance_km": 32.61
+        },
+        "pm_5pm": {
+          "duration_min": 59.4,
+          "distance_km": 33.54
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 9.2,
+          "distance_km": 1.91
+        }
+      }
+    },
+    "apex-cityplace-381-front": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.6,
+          "distance_km": 32.8
+        },
+        "pm_5pm": {
+          "duration_min": 57.7,
+          "distance_km": 41.73
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 7.0,
+          "distance_km": 1.53
+        }
+      }
+    },
+    "spectra-85-queens-wharf": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 43.0,
+          "distance_km": 32.3
+        },
+        "pm_5pm": {
+          "duration_min": 57.4,
+          "distance_km": 43.02
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 9.0,
+          "distance_km": 1.73
+        }
+      }
+    },
+    "401-king-w": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 42.0,
+          "distance_km": 32.93
+        },
+        "pm_5pm": {
+          "duration_min": 69.3,
+          "distance_km": 34.91
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 7.3,
+          "distance_km": 1.67
+        }
+      }
+    },
+    "six50-king-650": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.4,
+          "distance_km": 33.68
+        },
+        "pm_5pm": {
+          "duration_min": 66.5,
+          "distance_km": 32.9
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 0.0,
+          "distance_km": 0.01
+        }
+      }
+    },
+    "westq-45-lisgar": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.6,
+          "distance_km": 31.39
+        },
+        "pm_5pm": {
+          "duration_min": 61.3,
+          "distance_km": 32.14
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 6.7,
+          "distance_km": 1.5
+        }
+      }
+    },
+    "marquee-55-lisgar": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.8,
+          "distance_km": 31.42
+        },
+        "pm_5pm": {
+          "duration_min": 61.1,
+          "distance_km": 32.11
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 6.8,
+          "distance_km": 1.53
+        }
+      }
+    },
+    "36-lisgar": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.6,
+          "distance_km": 31.37
+        },
+        "pm_5pm": {
+          "duration_min": 62.9,
+          "distance_km": 32.16
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 6.6,
+          "distance_km": 1.48
+        }
+      }
+    },
+    "junction-house-2720-dundas": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 44.1,
+          "distance_km": 30.24
+        },
+        "pm_5pm": {
+          "duration_min": 54.1,
+          "distance_km": 31.36
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.7,
+          "distance_km": 8.9
+        }
+      }
+    },
+    "duke-condos-2800-dundas": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 42.9,
+          "distance_km": 30.62
+        },
+        "pm_5pm": {
+          "duration_min": 54.2,
+          "distance_km": 31.56
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 25.8,
+          "distance_km": 9.23
+        }
+      }
+    },
+    "junction-point-2625-dundas": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 44.6,
+          "distance_km": 31.19
+        },
+        "pm_5pm": {
+          "duration_min": 52.5,
+          "distance_km": 31.76
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 23.5,
+          "distance_km": 6.34
+        }
+      }
+    },
+    "junction-factory-3385-dundas": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 37.4,
+          "distance_km": 29.17
+        },
+        "pm_5pm": {
+          "duration_min": 43.8,
+          "distance_km": 29.74
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 29.2,
+          "distance_km": 11.5
+        }
+      }
+    },
+    "westbend-residences-1660-bloor": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 40.9,
+          "distance_km": 29.41
+        },
+        "pm_5pm": {
+          "duration_min": 54.6,
+          "distance_km": 30.25
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 21.6,
+          "distance_km": 8.07
+        }
+      }
+    },
+    "junction-square-406-keele": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 43.2,
+          "distance_km": 30.76
+        },
+        "pm_5pm": {
+          "duration_min": 51.0,
+          "distance_km": 31.33
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.4,
+          "distance_km": 8.84
+        }
+      }
+    },
+    "the-crossways-2350-2360-dundas": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.1,
+          "distance_km": 30.42
+        },
+        "pm_5pm": {
+          "duration_min": 57.1,
+          "distance_km": 32.77
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 21.7,
+          "distance_km": 6.09
+        }
+      }
+    },
+    "lnx-2376-dundas": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.5,
+          "distance_km": 30.5
+        },
+        "pm_5pm": {
+          "duration_min": 56.5,
+          "distance_km": 32.7
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 21.9,
+          "distance_km": 6.16
+        }
+      }
+    },
+    "the-livmore-high-park-50": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.3,
+          "distance_km": 28.83
+        },
+        "pm_5pm": {
+          "duration_min": 52.0,
+          "distance_km": 29.61
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 23.3,
+          "distance_km": 8.23
+        }
+      }
+    },
+    "high-park-village-35-111": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 40.5,
+          "distance_km": 28.77
+        },
+        "pm_5pm": {
+          "duration_min": 51.9,
+          "distance_km": 29.6
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.8,
+          "distance_km": 8.17
+        }
+      }
+    },
+    "the-roncy-422-roncesvalles": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 41.8,
+          "distance_km": 29.31
+        },
+        "pm_5pm": {
+          "duration_min": 49.2,
+          "distance_km": 37.63
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 17.2,
+          "distance_km": 4.48
+        }
+      }
+    },
+    "howard-park-residences-60": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 40.1,
+          "distance_km": 28.82
+        },
+        "pm_5pm": {
+          "duration_min": 54.2,
+          "distance_km": 30.07
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 19.8,
+          "distance_km": 5.02
+        }
+      }
+    },
+    "howard-park-2-24": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 40.0,
+          "distance_km": 28.79
+        },
+        "pm_5pm": {
+          "duration_min": 54.3,
+          "distance_km": 30.1
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 19.6,
+          "distance_km": 4.99
+        }
+      }
+    },
+    "the-diamond-980-lansdowne": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 48.1,
+          "distance_km": 37.12
+        },
+        "pm_5pm": {
+          "duration_min": 59.9,
+          "distance_km": 36.79
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 21.3,
+          "distance_km": 6.28
+        }
+      }
+    },
+    "reunion-crossing-1808-st-clair": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 38.7,
+          "distance_km": 29.89
+        },
+        "pm_5pm": {
+          "duration_min": 45.8,
+          "distance_km": 30.36
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 29.6,
+          "distance_km": 10.47
+        }
+      }
+    },
+    "victoria-lofts-152-annette": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 44.1,
+          "distance_km": 30.3
+        },
+        "pm_5pm": {
+          "duration_min": 52.5,
+          "distance_km": 31.6
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.9,
+          "distance_km": 6.67
+        }
+      }
+    },
+    "wallace-station-lofts-371": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 46.0,
+          "distance_km": 30.84
+        },
+        "pm_5pm": {
+          "duration_min": 56.5,
+          "distance_km": 32.9
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 21.5,
+          "distance_km": 6.1
+        }
+      }
+    },
+    "wallace-walk-380-wallace": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 46.8,
+          "distance_km": 30.9
+        },
+        "pm_5pm": {
+          "duration_min": 58.0,
+          "distance_km": 32.84
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.0,
+          "distance_km": 6.17
+        }
+      }
+    },
+    "316-junction-campbell": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 44.9,
+          "distance_km": 30.42
+        },
+        "pm_5pm": {
+          "duration_min": 57.5,
+          "distance_km": 32.87
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 21.2,
+          "distance_km": 5.99
+        }
+      }
+    },
+    "house-of-assembly-158-sterling": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.4,
+          "distance_km": 30.74
+        },
+        "pm_5pm": {
+          "duration_min": 62.1,
+          "distance_km": 37.56
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 19.7,
+          "distance_km": 5.25
+        }
+      }
+    },
+    "the-gilmour-283-keele": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 43.0,
+          "distance_km": 30.71
+        },
+        "pm_5pm": {
+          "duration_min": 50.5,
+          "distance_km": 31.28
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 24.4,
+          "distance_km": 8.89
+        }
+      }
+    },
+    "dundas-mavety-2901": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 42.3,
+          "distance_km": 30.45
+        },
+        "pm_5pm": {
+          "duration_min": 49.0,
+          "distance_km": 31.02
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 26.7,
+          "distance_km": 9.44
+        }
+      }
+    },
+    "730-st-clarens": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 51.1,
+          "distance_km": 32.24
+        },
+        "pm_5pm": {
+          "duration_min": 60.3,
+          "distance_km": 33.32
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 20.5,
+          "distance_km": 5.66
+        }
+      }
+    },
+    "45-oakmount": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 40.3,
+          "distance_km": 28.78
+        },
+        "pm_5pm": {
+          "duration_min": 51.1,
+          "distance_km": 32.6
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 22.6,
+          "distance_km": 8.19
+        }
+      }
+    },
+    "sterling-studio-lofts-225": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 46.2,
+          "distance_km": 30.85
+        },
+        "pm_5pm": {
+          "duration_min": 62.5,
+          "distance_km": 37.67
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 19.9,
+          "distance_km": 5.25
+        }
+      }
+    },
+    "411-roncesvalles": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 40.0,
+          "distance_km": 28.8
+        },
+        "pm_5pm": {
+          "duration_min": 49.4,
+          "distance_km": 37.7
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 17.3,
+          "distance_km": 4.51
+        }
+      }
+    },
+    "387-roncesvalles": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 39.8,
+          "distance_km": 28.86
+        },
+        "pm_5pm": {
+          "duration_min": 55.6,
+          "distance_km": 30.23
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 18.0,
+          "distance_km": 4.82
+        }
+      }
+    },
+    "229-wallace-lofts": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 45.9,
+          "distance_km": 30.79
+        },
+        "pm_5pm": {
+          "duration_min": 56.9,
+          "distance_km": 32.85
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 21.2,
+          "distance_km": 6.06
+        }
+      }
+    },
+    "absolute-world-v-50": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.7,
+          "distance_km": 9.36
+        },
+        "pm_5pm": {
+          "duration_min": 18.3,
+          "distance_km": 8.51
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 51.4,
+          "distance_km": 24.8
+        }
+      }
+    },
+    "absolute-world-iv-60": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.8,
+          "distance_km": 9.42
+        },
+        "pm_5pm": {
+          "duration_min": 18.4,
+          "distance_km": 8.57
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 51.5,
+          "distance_km": 24.86
+        }
+      }
+    },
+    "absolute-iii-70": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 15.7,
+          "distance_km": 9.36
+        },
+        "pm_5pm": {
+          "duration_min": 18.3,
+          "distance_km": 8.51
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 51.4,
+          "distance_km": 24.8
+        }
+      }
+    },
+    "absolute-vision-80": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.0,
+          "distance_km": 9.51
+        },
+        "pm_5pm": {
+          "duration_min": 18.7,
+          "distance_km": 8.66
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 51.6,
+          "distance_km": 24.67
+        }
+      }
+    },
+    "absolute-i-90": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 16.0,
+          "distance_km": 9.54
+        },
+        "pm_5pm": {
+          "duration_min": 18.8,
+          "distance_km": 8.69
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 51.7,
+          "distance_km": 24.69
+        }
+      }
+    },
+    "onyx-condos-223-webb": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.7,
+          "distance_km": 7.92
+        },
+        "pm_5pm": {
+          "duration_min": 17.0,
+          "distance_km": 8.07
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 54.6,
+          "distance_km": 25.97
+        }
+      }
+    },
+    "solstice-condos-225-webb": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.5,
+          "distance_km": 7.89
+        },
+        "pm_5pm": {
+          "duration_min": 17.2,
+          "distance_km": 8.1
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 54.7,
+          "distance_km": 25.99
+        }
+      }
+    },
+    "citygate-ii-220-burnhamthorpe": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.0,
+          "distance_km": 7.91
+        },
+        "pm_5pm": {
+          "duration_min": 13.6,
+          "distance_km": 7.93
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 56.0,
+          "distance_km": 26.36
+        }
+      }
+    },
+    "ultra-ovation-330-burnhamthorpe": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 12.4,
+          "distance_km": 8.09
+        },
+        "pm_5pm": {
+          "duration_min": 14.4,
+          "distance_km": 8.13
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 55.8,
+          "distance_km": 25.85
+        }
+      }
+    },
+    "ovation-i-3880-duke-york": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.9,
+          "distance_km": 8.06
+        },
+        "pm_5pm": {
+          "duration_min": 14.2,
+          "distance_km": 8.1
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 56.0,
+          "distance_km": 26.32
+        }
+      }
+    },
+    "ovation-ii-3888-duke-york": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.7,
+          "distance_km": 8.04
+        },
+        "pm_5pm": {
+          "duration_min": 14.0,
+          "distance_km": 8.08
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 55.6,
+          "distance_km": 26.29
+        }
+      }
+    },
+    "city-gate-3939-duke-york": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.4,
+          "distance_km": 7.87
+        },
+        "pm_5pm": {
+          "duration_min": 13.3,
+          "distance_km": 7.9
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 56.5,
+          "distance_km": 26.3
+        }
+      }
+    },
+    "one-park-tower-388-prince-wales": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.5,
+          "distance_km": 8.01
+        },
+        "pm_5pm": {
+          "duration_min": 13.8,
+          "distance_km": 8.04
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 54.2,
+          "distance_km": 25.88
+        }
+      }
+    },
+    "chicago-condos-385-prince-wales": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 13.6,
+          "distance_km": 8.4
+        },
+        "pm_5pm": {
+          "duration_min": 13.8,
+          "distance_km": 8.03
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 53.9,
+          "distance_km": 25.79
+        }
+      }
+    },
+    "elle-3525-kariya": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 13.8,
+          "distance_km": 8.16
+        },
+        "pm_5pm": {
+          "duration_min": 16.7,
+          "distance_km": 8.83
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 54.1,
+          "distance_km": 25.52
+        }
+      }
+    },
+    "eve-3515-kariya": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 13.3,
+          "distance_km": 8.17
+        },
+        "pm_5pm": {
+          "duration_min": 16.0,
+          "distance_km": 8.65
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 53.7,
+          "distance_km": 25.52
+        }
+      }
+    },
+    "park-residences-4099-brickstone": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 14.6,
+          "distance_km": 8.24
+        },
+        "pm_5pm": {
+          "duration_min": 15.9,
+          "distance_km": 8.52
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 56.5,
+          "distance_km": 26.26
+        }
+      }
+    },
+    "capital-towers-i-4080-living-arts": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.5,
+          "distance_km": 7.7
+        },
+        "pm_5pm": {
+          "duration_min": 15.6,
+          "distance_km": 8.46
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 56.5,
+          "distance_km": 26.5
+        }
+      }
+    },
+    "capital-towers-ii-4090-living-arts": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.4,
+          "distance_km": 7.66
+        },
+        "pm_5pm": {
+          "duration_min": 15.8,
+          "distance_km": 8.51
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 56.4,
+          "distance_km": 26.45
+        }
+      }
+    },
+    "pinnacle-grand-park-ii-3975": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 11.2,
+          "distance_km": 7.32
+        },
+        "pm_5pm": {
+          "duration_min": 14.0,
+          "distance_km": 7.33
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 56.7,
+          "distance_km": 26.44
+        }
+      }
+    },
+    "sherwood-towers-200-robert-speck": {
+      "cvh": {
+        "mon_7am": {
+          "duration_min": 13.9,
+          "distance_km": 9.49
+        },
+        "pm_5pm": {
+          "duration_min": 16.1,
+          "distance_km": 9.57
+        }
+      },
+      "king_west": {
+        "mon_7am": {
+          "duration_min": 50.8,
+          "distance_km": 23.97
         }
       }
     }
