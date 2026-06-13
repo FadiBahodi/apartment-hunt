@@ -20,10 +20,14 @@ window.computeFitScore = function(a, costs, osrm) {
 
   // 1. CVH commute (30 pts max)
   // ER attending shifts deliberately avoid 8am rush (start 7/11am/3pm/7pm/11pm).
-  // Use OSRM off-peak directly with a smaller (×1.15) multiplier for realistic lived experience.
+  // Prefer normalized Google/axis/MLS commute data; fall back to OSRM off-peak with a smaller (×1.15) multiplier.
   const osrmRoute = (osrm || window.OSRM || {})[a.id];
+  const normalizedCvh = window.candidateCvhMinutes ? window.candidateCvhMinutes(a) : null;
   let timeUsed, source;
-  if (osrmRoute) {
+  if (normalizedCvh != null) {
+    timeUsed = Math.round(normalizedCvh);
+    source = `${timeUsed}m lived/Google/axis estimate`;
+  } else if (osrmRoute) {
     timeUsed = Math.round(osrmRoute.duration_min * 1.15);
     source = `${osrmRoute.duration_min}m OSRM off-peak (~${timeUsed}m lived)`;
   } else {
@@ -65,7 +69,7 @@ window.computeFitScore = function(a, costs, osrm) {
   breakdown.push({k: 'Running', v: runPts, max: 20, note: 'Trail proximity + winter access'});
 
   // 4. Cost (13 pts)
-  const rent = a.rent_1bed_low || a.rent_2bed || 9999;
+  const rent = (window.baseRent ? window.baseRent(a) : null) || a.rent_1bed_low || a.rent_studio || a.rent_2bed || 9999;
   const c = costs && costs[a.id];
   const effectiveRent = c?.net_effective_1bed || rent;
   const totalEst = c?.estimated_monthly_total_1bed || (rent + 100);
@@ -82,7 +86,7 @@ window.computeFitScore = function(a, costs, osrm) {
   // 5. Toronto access (8 pts) — King West / Union (real OSRM via destinations.json)
   const dest = ((window.DESTINATIONS && window.DESTINATIONS.routes) || {})[a.id];
   const kwMin = dest?.king_west?.duration_min;
-  const u = kwMin || a.drive_to_union_min_offpeak || 99;
+  const u = kwMin || (window.downtownMinutes ? window.downtownMinutes(a) : null) || a.axis_downtown_min || a.drive_to_union_min_offpeak || 99;
   let torPts = 0;
   if (u <= 15) torPts = 8;
   else if (u <= 22) torPts = 6;
@@ -171,14 +175,37 @@ window.computeAxisProfile = function(a) {
 
   // ===== AXES (0-100 each, independent) =====
 
-  // 1. CVH commute — Wave G buildings have axis_cvh_min pre-computed (live OSRM by agent).
-  // For others: prefer Google Mon 7am, fallback OSRM × peak multiplier.
-  const cvhOffPeak = osrm ? osrm.duration_min : (a.axis_cvh_min != null ? a.axis_cvh_min : (a.drive_to_cvh_min_peak || 30));
+  // 1. CVH commute — June waves already carry lived/Google/axis estimates.
+  // For older buildings: prefer Google Mon 7am, fallback OSRM × peak multiplier.
   const peakMult = window.PEAK_MULTIPLIER(a);
-  const googleCvh = (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.mon_7am?.duration_min);
-  const cvhMin = googleCvh != null ? googleCvh
-              : (a.axis_cvh_min != null ? a.axis_cvh_min * peakMult
-              : cvhOffPeak * peakMult);
+  const googleRangeCvh = window.GOOGLE_RANGES?.routes?.[a.id]?.mon_7am?.best_guess;
+  const googleRouteCvh = window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.mon_7am?.duration_min;
+  let cvhMin, cvhOffPeak, cvhSource;
+  if (googleRangeCvh != null) {
+    cvhMin = googleRangeCvh;
+    cvhOffPeak = osrm?.duration_min ?? googleRangeCvh;
+    cvhSource = 'google_range_mon_7am';
+  } else if (googleRouteCvh != null) {
+    cvhMin = googleRouteCvh;
+    cvhOffPeak = osrm?.duration_min ?? googleRouteCvh;
+    cvhSource = 'google_mon_7am';
+  } else if (a.axis_cvh_min != null) {
+    cvhMin = Number(a.axis_cvh_min);
+    cvhOffPeak = cvhMin;
+    cvhSource = 'axis_estimate';
+  } else if (osrm) {
+    cvhOffPeak = osrm.duration_min;
+    cvhMin = cvhOffPeak * peakMult;
+    cvhSource = 'osrm_×peak';
+  } else if (window.candidateCvhMinutes && window.candidateCvhMinutes(a) != null) {
+    cvhMin = window.candidateCvhMinutes(a);
+    cvhOffPeak = cvhMin;
+    cvhSource = 'zone_fallback';
+  } else {
+    cvhOffPeak = a.drive_to_cvh_min_peak || 30;
+    cvhMin = cvhOffPeak;
+    cvhSource = 'manual_peak';
+  }
   let cvh;
   if (cvhMin <= 8) cvh = 100;
   else if (cvhMin <= 15) cvh = 100 - (cvhMin - 8) * 1.4;          // 8→100, 15→90
@@ -217,7 +244,7 @@ window.computeAxisProfile = function(a) {
   // Use VERIFIED actual_price_low from Wave I corrections when available (overrides stale data)
   const corr = (window.LISTING_CORRECTIONS||{})[a.id];
   const verifiedRent = corr?.actual_price_low;
-  const rent = verifiedRent || a.rent_1bed_low || a.rent_2bed || 9999;
+  const rent = verifiedRent || (window.baseRent ? window.baseRent(a) : null) || a.rent_1bed_low || a.rent_studio || a.rent_2bed || 9999;
   const allIn = costs?.estimated_monthly_total_1bed || (rent + 100);
   let cost;
   if (allIn <= 1700) cost = 100;
@@ -230,6 +257,7 @@ window.computeAxisProfile = function(a) {
 
   // 5. Toronto access — King West drive time (real OSRM via destinations) — Wave G has axis_downtown_min
   const kwMin = dest?.king_west?.duration_min
+             || (window.downtownMinutes ? window.downtownMinutes(a) : null)
              || a.axis_downtown_min
              || a.drive_to_union_min_offpeak
              || 35;
@@ -284,7 +312,7 @@ window.computeAxisProfile = function(a) {
       cvh_min: Math.round(cvhMin),
       cvh_offpeak: Math.round(cvhOffPeak),
       peak_mult: peakMult.toFixed(2),
-      cvh_source: googleCvh!=null ? 'google_mon_7am' : 'osrm_×peak',
+      cvh_source: cvhSource,
       cvh_pm_2pm: (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.pm_2pm?.duration_min),
       cvh_pm_5pm: (window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.pm_5pm?.duration_min),
       cvh_range_mon7: (window.GOOGLE_RANGES?.routes?.[a.id]?.mon_7am),
@@ -356,6 +384,10 @@ window.computeTopPicks = function() {
   const all = (window.APARTMENTS || []).map(a => ({
     a,
     fit: window.computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score,
+    final: window.computeFinalScore ? window.computeFinalScore(a).final : 0,
+    cvhMin: window.candidateCvhMinutes ? window.candidateCvhMinutes(a) : null,
+    downtownMin: window.downtownMinutes ? window.downtownMinutes(a) : null,
+    rent: (window.baseRent ? window.baseRent(a) : null) || a.rent_1bed_low || a.rent_studio || a.rent_2bed || 9999,
     cost: (window.COSTS||{})[a.id],
     review: (window.REVIEWS||{})[a.id],
     drive: (window.DRIVE_MATRIX||{})[a.id],
@@ -363,39 +395,46 @@ window.computeTopPicks = function() {
     parking: (window.PARKING||{})[a.id]
   }));
 
-  function score(x, fn) { return all.filter(x => x.a.lat && x.a.lng).map(x => ({ x, s: fn(x) })).sort((a,b)=>b.s-a.s); }
+  function score(x, fn) {
+    return all
+      .filter(x => x.a.lat && x.a.lng && (!window.isViableCandidate || window.isViableCandidate(x.a)))
+      .map(x => ({ x, s: fn(x) }))
+      .sort((a,b)=>b.s-a.s);
+  }
   function pick(arr, n=4) { return arr.slice(0,n).map(({x})=>x.a.id); }
 
   // 1. CVH operational excellence — short commute, verified pet, good rating, real OSRM
   const cvhFirst = pick(score(all, x => {
     let s = 0;
     if (x.drive?.am_peak_min) s += Math.max(0, 50 - x.drive.am_peak_min * 2);
+    else if (x.cvhMin != null) s += Math.max(0, 50 - x.cvhMin * 2);
     else if (x.osrm?.duration_min) s += Math.max(0, 50 - x.osrm.duration_min * 2.5);
     if (x.a.pet_status === 'verified' || x.a.pet_status === 'verified-large-pets') s += 15;
     if (/^GOOD/i.test(x.a.rating||'')) s += 10;
-    if (x.fit) s += x.fit * 0.4;
+    if (x.final) s += x.final * 0.45;
+    else if (x.fit) s += x.fit * 0.4;
     return s;
   }));
 
   // 2. Toronto life — close to Union, near waterfront, good amenities, pets ok
   const torontoLife = pick(score(all, x => {
     let s = 0;
-    if (x.a.drive_to_union_min_offpeak) s += Math.max(0, 40 - x.a.drive_to_union_min_offpeak);
+    if (x.downtownMin != null) s += Math.max(0, 40 - x.downtownMin);
     if (/Humber Bay|Mimico|Long Branch|New Toronto|Stonegate|Roncesvalles|Junction|High Park|Swansea|Kingsway/i.test(x.a.zone||'')) s += 20;
     if (x.a.pet_status === 'verified' || x.a.pet_status === 'verified-large-pets') s += 10;
-    if (x.fit) s += x.fit * 0.2;
+    if (x.final) s += x.final * 0.3;
+    else if (x.fit) s += x.fit * 0.2;
     return s;
   }));
 
   // 3. Best value — low effective rent vs zone average, pets verified, decent commute
   const bestValue = pick(score(all, x => {
     let s = 0;
-    const rent = x.a.rent_1bed_low || x.a.rent_2bed || 9999;
-    s += Math.max(0, 50 - (rent - 1500) / 30); // cheaper = higher
+    s += Math.max(0, 50 - (x.rent - 1500) / 30); // cheaper = higher
     if (x.drive?.premium_index && x.drive.premium_index < 0.95) s += 15;
     if (x.cost?.promo_savings_year) s += Math.min(15, x.cost.promo_savings_year / 300);
     if (x.a.pet_status === 'verified') s += 10;
-    if (x.fit > 50) s += 10;
+    if (x.final > 50 || x.fit > 50) s += 10;
     return s;
   }));
 
@@ -407,8 +446,9 @@ window.computeTopPicks = function() {
     else if (/sawmill|culham|riverwood/.test(r)) s += 28;
     else if (/lakefront|rattray|jack darling|waterfront/.test(r)) s += 22;
     else if (/burnhamthorpe|applewood/.test(r)) s += 18; // winter-cleared
-    if (x.osrm?.duration_min) s += Math.max(0, 25 - x.osrm.duration_min);
-    s += x.fit * 0.3;
+    if (x.cvhMin != null) s += Math.max(0, 25 - x.cvhMin);
+    else if (x.osrm?.duration_min) s += Math.max(0, 25 - x.osrm.duration_min);
+    s += (x.final || x.fit) * 0.3;
     return s;
   }));
 
@@ -422,7 +462,7 @@ window.computeTopPicks = function() {
     if (/pet spa|dog wash|theatre|co.work|rooftop/i.test(amen)) s += 8;
     if (x.parking?.concierge === '24/7') s += 10;
     if (x.parking?.dog_amenities) s += 8;
-    s += x.fit * 0.3;
+    s += (x.final || x.fit) * 0.3;
     return s;
   }));
 
@@ -434,7 +474,8 @@ window.computeTopPicks = function() {
     if (x.a.pet_status === 'verified' || x.a.pet_status === 'verified-large-pets') s += 15;
     if (!x.a.red_flags) s += 5;
     if (/^GOOD/i.test(x.a.rating||'')) s += 10;
-    if (x.fit) s += x.fit * 0.3;
+    if (x.final) s += x.final * 0.35;
+    else if (x.fit) s += x.fit * 0.3;
     return s;
   }));
 
@@ -446,9 +487,10 @@ window.computeTopPicks = function() {
     const zoneKey = Object.keys(z).find(k => k.toLowerCase() === (x.a.zone||'').toLowerCase()) || Object.keys(z).find(k => (x.a.zone||'').toLowerCase().includes(k.split('/')[0].trim().toLowerCase()));
     const datingScore = zoneKey ? z[zoneKey].single_density_score : null;
     if (datingScore) s += datingScore * 0.7; // 0-70
-    if (x.osrm?.duration_min) s += Math.max(0, 25 - x.osrm.duration_min); // commute bonus 0-25
+    if (x.cvhMin != null) s += Math.max(0, 25 - x.cvhMin); // commute bonus 0-25
+    else if (x.osrm?.duration_min) s += Math.max(0, 25 - x.osrm.duration_min);
     if (x.a.pet_status !== 'no') s += 0; // neutralized
-    s += x.fit * 0.15;
+    s += (x.final || x.fit) * 0.15;
     return s;
   }));
 
@@ -462,4 +504,3 @@ window.computeTopPicks = function() {
     { tier: "SAFEST BET", why: "Highest external rating (Google + RentSafeTO) with no documented red flags.", picks: safestBet }
   ];
 };
-

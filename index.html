@@ -598,24 +598,112 @@ setTimeout(scheduleRerender, 4000);
 </script>
 <script>
   const photoMap = window.PHOTO_MANIFEST || {};
-  // VIABLE CANDIDATES default — hides noise (no-rent-data, no-OSRM, AVOID, unverified condos, far-flung Brampton/Oakville)
+  // VIABLE CANDIDATES default — hides noise while accepting all supported commute sources:
+  // Google ranges, Google routes, June axis fields, OSRM, and zone fallback for agent-sourced MLS units.
   let viableOnly = true;
   // QUALITY TIER default — only show buildings with real photos OR finalist deep-dive
   // Otherwise 227 wave3 'leads' dilute the experience (no photos, no reviews, just address+rent)
   let qualityFilter = 'verified';  // 'verified' | 'all' | 'leads_only'
+
+  function baseRent(a) {
+    const corr = (window.LISTING_CORRECTIONS || {})[a.id];
+    return corr?.actual_price_low || a.rent_1bed_low || a.rent_studio || a.rent_2bed || null;
+  }
+
+  function formatMoney(n) {
+    return n != null ? `$${Math.round(n).toLocaleString()}` : '—';
+  }
+
+  function realPhotoList(a) {
+    const rp = (window.REAL_PHOTOS || {})[a.id] || {};
+    return []
+      .concat(rp.real_interior || [])
+      .concat(rp.real_exterior || [])
+      .concat(rp.amenities || [])
+      .filter(Boolean);
+  }
+
+  function galleryPhotos(a) {
+    const real = realPhotoList(a);
+    const local = photoMap[a.id] || [];
+    return real.length ? real.concat(local.filter(p => !real.includes(p))) : local;
+  }
+
+  function photoQualityTier(a) {
+    const photoIdx = (window.PHOTO_INDEX && window.PHOTO_INDEX._buildings && window.PHOTO_INDEX._buildings[a.id]) || null;
+    if (photoIdx?.quality_tier === 'tier1_real' || realPhotoList(a).length) return 'tier1_real';
+    if ((photoMap[a.id] || []).length) return 'tier2_synthetic';
+    if (Array.isArray(a.photo_urls) && a.photo_urls.length) return 'tier2_listing_links';
+    return 'tier3_none';
+  }
+
+  function hasAnyPhoto(a) {
+    return photoQualityTier(a) !== 'tier3_none';
+  }
+
+  function isAgentSourced(a) {
+    return /mls_via_mario/i.test(a.source || '') || !!a.mls_number || !!a.agent;
+  }
+
+  function zoneFallbackCvhMinutes(a) {
+    const z = (a.zone || '').toLowerCase();
+    if (!z) return null;
+    if (/credit valley|hospital|erin mills|central erin|churchill|streetsville|meadowvale/.test(z)) return 12;
+    if (/square one|city centre|fairview|cooksville|mississauga valley/.test(z)) return 14;
+    if (/markland|eringate|west mall/.test(z)) return 19;
+    if (/applewood|dixie|rathwood|port credit|lakeview|mineola|clarkson|lorne park/.test(z)) return 24;
+    if (/bloor west|high park|junction|roncesvalles|swansea|kingsway/.test(z)) return 30;
+    if (/humber bay|mimico|long branch|new toronto|stonegate|queensway|sherway|alderwood|lakeshore/.test(z)) return 34;
+    if (/liberty|king west|entertainment|fort york|niagara|queen west|trinity|downtown/.test(z)) return 36;
+    if (/oakville|bronte|burlington|brampton|caledon/.test(z)) return 45;
+    return null;
+  }
+
+  function zoneFallbackDowntownMinutes(a) {
+    const z = (a.zone || '').toLowerCase();
+    if (!z) return null;
+    if (/king west|entertainment|fort york|liberty|niagara|queen west|trinity|downtown/.test(z)) return 6;
+    if (/roncesvalles|high park|bloor west|junction|swansea|kingsway/.test(z)) return 16;
+    if (/humber bay|mimico|long branch|new toronto|stonegate|queensway|sherway|lakeshore/.test(z)) return 18;
+    if (/port credit|lakeview|mineola|clarkson|lorne park/.test(z)) return 27;
+    if (/square one|city centre|cooksville|fairview|mississauga valley|applewood|dixie|rathwood/.test(z)) return 30;
+    if (/markland|eringate|west mall|erin mills|streetsville|meadowvale|oakville|brampton/.test(z)) return 36;
+    return null;
+  }
+
+  function candidateCvhMinutes(a) {
+    const range = window.GOOGLE_RANGES?.routes?.[a.id]?.mon_7am;
+    if (range?.best_guess != null) return range.best_guess;
+    const google = window.GOOGLE_ROUTES?.routes?.[a.id]?.cvh?.mon_7am?.duration_min;
+    if (google != null) return google;
+    if (a.axis_cvh_min != null) return Number(a.axis_cvh_min);
+    const osrm = (window.OSRM || {})[a.id];
+    if (osrm?.duration_min != null) return Math.round(osrm.duration_min * 1.15);
+    if (a.drive_to_cvh_min_peak != null) return Number(a.drive_to_cvh_min_peak);
+    return zoneFallbackCvhMinutes(a);
+  }
+
+  function downtownMinutes(a) {
+    const dest = window.DESTINATIONS?.routes?.[a.id];
+    if (dest?.king_west?.duration_min != null) return dest.king_west.duration_min;
+    if (a.axis_downtown_min != null) return Number(a.axis_downtown_min);
+    if (a.drive_to_union_min_offpeak != null) return Number(a.drive_to_union_min_offpeak);
+    return zoneFallbackDowntownMinutes(a);
+  }
+
   function dataQualityTier(a) {
     const finalist = (window.FINALIST_DEEP || {})[a.id];
-    const photoIdx = (window.PHOTO_INDEX && window.PHOTO_INDEX._buildings && window.PHOTO_INDEX._buildings[a.id]) || null;
-    const hasRealPhoto = photoIdx?.quality_tier === 'tier1_real';
+    const hasRealPhoto = photoQualityTier(a) === 'tier1_real';
     const hasReviews = !!((window.REVIEWS || {})[a.id]);
     const hasCurated = a.pros && a.pros.length >= 2 && !a.pros.some(p => /verify in-person|verify trails on visit|wave3 web-aggregated/i.test(p));
     // Wave G: agent-vetted with axis_* + why_strong + why_weak + listing_url + photo_urls
     const isWaveG = a.why_strong && a.why_weak && a.axis_cvh_min != null;
     const hasRealPhotosWaveG = isWaveG && Array.isArray(a.photo_urls) && a.photo_urls.length >= 2;
+    const hasJuneVerification = !!(a.verified_date || a.axis_cvh_min != null || a.axis_downtown_min != null || a.why_strong || a.why_weak);
     if (finalist) return 'finalist';
     if (hasRealPhoto && hasCurated) return 'verified';
     if (isWaveG && hasRealPhotosWaveG) return 'verified';
-    if (isWaveG) return 'partial';                 // Wave G without photos = partial (still vetted by agent)
+    if (isWaveG || isAgentSourced(a) || hasJuneVerification) return 'partial';
     if (hasRealPhoto || hasReviews || hasCurated) return 'partial';
     return 'lead';
   }
@@ -625,26 +713,26 @@ setTimeout(scheduleRerender, 4000);
   let selectedId = null;
   let compareList = []; // ids
   function isViableCandidate(a) {
-    const osrm = (window.OSRM||{})[a.id];
-    if (!osrm) return false;                                  // no commute data
-    if (!a.rent_1bed_low && !a.rent_2bed) return false;       // no rent data
+    const cvh = candidateCvhMinutes(a);
+    if (cvh == null) return false;                            // no commute signal at all
+    if (baseRent(a) == null) return false;                    // no rent data
     const r = (a.rating || '').toUpperCase();
     if (r.startsWith('AVOID') || r.startsWith('CAUTION')) return false; // documented issues
     if (/pending\s+condo\s+declaration|pending\s+declaration/i.test(a.rating || '')) return false;
     // Check red_flags for "AVOID — " marker
     if (/AVOID\s*—/i.test(a.red_flags || '')) return false;
-    if (osrm.duration_min > 28) return false;                 // realistic max daily commute
+    if (cvh > 55) return false;                               // includes intentional downtown/social-cluster options
     return true;
   }
   const filterMatchers = {
     // pet-verified filter removed — pet axis dropped per user (post-breakup, no longer a constraint)
-    'cvh-tier1': a => { const o = (window.OSRM||{})[a.id]; return o ? o.duration_min <= 12 : (a.drive_to_cvh_min_peak||99) <= 15; },
-    'toronto-close': a => { const d = (window.DESTINATIONS && window.DESTINATIONS.routes && window.DESTINATIONS.routes[a.id]); return d?.king_west?.duration_min <= 18 || (a.drive_to_union_min_offpeak||99) <= 25; },
-    'cheap': a => (a.rent_1bed_low || a.rent_2bed || 9999) <= 2000,
-    'has-photos': a => (photoMap[a.id] || []).length > 0,
+    'cvh-tier1': a => (candidateCvhMinutes(a) ?? 999) <= 15,
+    'toronto-close': a => (downtownMinutes(a) ?? 999) <= 25,
+    'cheap': a => (baseRent(a) ?? 9999) <= 2000,
+    'has-photos': a => hasAnyPhoto(a),
     'good-rating': a => /^GOOD/i.test(a.rating || ''),
     'favorites': a => STORE.isFavorite(a.id),
-    'top-fit': a => (window.computeFitScore ? computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score : 0) >= 60,
+    'top-fit': a => (window.computeFinalScore ? computeFinalScore(a).final : (window.computeFitScore ? computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score : 0)) >= 60,
   };
 
   // Days to move countdown
@@ -884,6 +972,9 @@ setTimeout(scheduleRerender, 4000);
   }
 
   function rentDisplay(apt) {
+    if (apt.rent_studio && !apt.rent_1bed_low) {
+      return `${formatMoney(apt.rent_studio)} (studio)`;
+    }
     if (apt.rent_1bed_low) {
       return apt.rent_1bed_high && apt.rent_1bed_high !== apt.rent_1bed_low
         ? `$${apt.rent_1bed_low.toLocaleString()}–$${apt.rent_1bed_high.toLocaleString()}`
@@ -910,7 +1001,7 @@ setTimeout(scheduleRerender, 4000);
       if (qualityFilter === 'verified' && tier === 'lead') return false;
       if (qualityFilter === 'leads_only' && tier !== 'lead') return false;
       if (fitMin && computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score < fitMin) return false;
-      if (rentMax < 99999 && (a.rent_1bed_low||a.rent_2bed||9999) > rentMax) return false;
+      if (rentMax < 99999 && (baseRent(a)||9999) > rentMax) return false;
       if (textQ) {
         const haystack = (a.name + ' ' + a.address + ' ' + a.zone + ' ' + (a.pros||[]).join(' ') + ' ' + (a.cons||[]).join(' ') + ' ' + (a.running||'')).toLowerCase();
         if (!haystack.includes(textQ)) return false;
@@ -927,10 +1018,10 @@ setTimeout(scheduleRerender, 4000);
     const sorted = filtered.slice().sort((a, b) => {
       switch (activeSort) {
         case 'fit': return (computeFitScore(b, window.COSTS||{}, window.OSRM||{}).score) - (computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score);
-        case 'cvh': return (a.drive_to_cvh_km||999) - (b.drive_to_cvh_km||999);
-        case 'rent': return (a.rent_1bed_low||a.rent_2bed||9999) - (b.rent_1bed_low||b.rent_2bed||9999);
+        case 'cvh': return (candidateCvhMinutes(a)||999) - (candidateCvhMinutes(b)||999);
+        case 'rent': return (baseRent(a)||9999) - (baseRent(b)||9999);
         case 'sqft': return (b.sqft_high||0) - (a.sqft_high||0);
-        case 'union': return (a.drive_to_union_min_offpeak||999) - (b.drive_to_union_min_offpeak||999);
+        case 'union': return (downtownMinutes(a)||999) - (downtownMinutes(b)||999);
         case 'rating': {
           const order = { 'GOOD': 0, 'FINE': 1, 'POTENTIAL': 2, 'STRETCH': 3, 'CAUTION': 4 };
           return (order[(a.rating||'FINE').split(' ')[0]] ?? 5) - (order[(b.rating||'FINE').split(' ')[0]] ?? 5);
@@ -942,13 +1033,13 @@ setTimeout(scheduleRerender, 4000);
       ? `${sorted.length} of ${APARTMENTS.length} buildings`
       : `${sorted.length} of ${APARTMENTS.length}  ·  loading more…`;
     // Stats strip
-    const cheap = APARTMENTS.filter(a => (a.rent_1bed_low||a.rent_2bed||9999) <= 2000);
-    const tier1 = APARTMENTS.filter(a => { const o = (window.OSRM||{})[a.id]; return o && o.duration_min <= 12; });
+    const cheap = APARTMENTS.filter(a => (baseRent(a)||9999) <= 2000);
+    const tier1 = APARTMENTS.filter(a => (candidateCvhMinutes(a)||999) <= 15);
     const good = APARTMENTS.filter(a => /^GOOD/i.test(a.rating || ''));
     const fits = APARTMENTS.map(a => { try { return computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score; } catch(e) { return 0; } });
     const bestFit = fits.length ? Math.max(...fits) : 0;
     const medianRent = (() => {
-      const r = APARTMENTS.map(a => a.rent_1bed_low||a.rent_2bed||0).filter(Boolean).sort((a,b)=>a-b);
+      const r = APARTMENTS.map(a => baseRent(a)||0).filter(Boolean).sort((a,b)=>a-b);
       return r[Math.floor(r.length/2)];
     })();
     const hidden = APARTMENTS.length - sorted.length;
@@ -974,10 +1065,10 @@ setTimeout(scheduleRerender, 4000);
     `;
     const htmlArr = sorted.map(a => {
       const cls = ratingClass(a.rating);
-      const photos = photoMap[a.id] || [];
-      const photoIdx = (window.PHOTO_INDEX && window.PHOTO_INDEX._buildings && window.PHOTO_INDEX._buildings[a.id]) || null;
-      const photoTier = photoIdx?.quality_tier || (photos[0] ? 'tier2_synthetic' : 'tier3_none');
+      const photos = galleryPhotos(a);
+      const photoTier = photoQualityTier(a);
       const photoBadge = photoTier === 'tier1_real' ? {label:'✓ Real', color:'#16a34a', bg:'#dcfce7'}
+                       : photoTier === 'tier2_listing_links' ? {label:'↗ Listing', color:'#2563eb', bg:'#dbeafe'}
                        : photoTier === 'tier2_synthetic' ? {label:'◌ Synth', color:'#a16207', bg:'#fef3c7'}
                        : {label:'✗ None', color:'#dc2626', bg:'#fee2e2'};
       const thumbStyle = photos[0] ? `background-image:url('${photos[0]}')` : `background:repeating-linear-gradient(45deg,var(--panel-2) 0,var(--panel-2) 6px,var(--panel) 6px,var(--panel) 12px);color:var(--muted);font-size:8px;text-align:center;line-height:1.2;display:flex;align-items:center;justify-content:center;padding:3px;`;
@@ -1030,7 +1121,7 @@ setTimeout(scheduleRerender, 4000);
           </div>
           <div class="rent-col">
             <span class="badge ${cls}"><span class="dot"></span>${(a.rating || 'fine').split(' ')[0]}</span>
-            <div class="rent">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}<span class="sub">${a.rent_1bed_high && a.rent_1bed_high !== a.rent_1bed_low ? '– $'+a.rent_1bed_high.toLocaleString() : ''}${a.sqft_high ? '  ·  '+a.sqft_high+' sqft' : ''}</span></div>
+            <div class="rent">${rentDisplay(a)}<span class="sub">${a.sqft_high ? '  ·  '+a.sqft_high+' sqft' : ''}</span></div>
             <div class="actions" onclick="event.stopPropagation()">
               <button class="${isFav?'on':''}" onclick="toggleFavorite('${a.id}')" title="Favorite" aria-label="Favorite">${isFav?'★':'☆'}</button>
               <button class="${isCmp?'on':''}" onclick="toggleCompare('${a.id}')" title="Add to compare" aria-label="Compare">⇄</button>
@@ -1080,7 +1171,7 @@ setTimeout(scheduleRerender, 4000);
             <div style="font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${tierEmoji} ${a.name} ${pmIcon}${corrIcon}</div>
             <div style="color:var(--muted);font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${a.zone} · CVH ${p.raw.cvh_min}m · KW ${p.raw.kw_min}m</div>
           </div>
-          <div style="font-weight:700;font-variant-numeric:tabular-nums">$${(p.raw.rent||a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}</div>
+          <div style="font-weight:700;font-variant-numeric:tabular-nums">${formatMoney(p.raw.rent || baseRent(a))}</div>
           <div style="font-weight:600;color:${window.fitScoreColor(final)};font-variant-numeric:tabular-nums;font-size:13px;min-width:30px;text-align:right" title="6-axis composite ${p.total} ± PM/verification weight">${final}</div>
         </div>`;
       };
@@ -1152,10 +1243,10 @@ setTimeout(scheduleRerender, 4000);
       routeLayer = L.layerGroup([halo, main]).addTo(map);
       main.bringToFront();
     }
-    const photos = photoMap[id] || [];
+    const photos = galleryPhotos(a);
     // Detect synthetic photos (satellite/map mosaics) by filename pattern
     const REAL_KEYS = new Set(['elora','battleford_glen_erin','reid_drive','collegeway_2285','miracle_4900','arc_erin_mills','dialogue','lincoln_545','mill_road_340','markwood_4365','mimico_estates','walden_circle','lakewood_1257','forty_second_45','lakeshore_760','promenade_2301','park_lawn_285','newholm_8','james_90','shoreline_towers','lake_shore_155','landmark_2493','lake_shore_2335','eau_du_soleil','vita_on_the_lake']);
-    const isSynthetic = !REAL_KEYS.has(id);
+    const isSynthetic = !realPhotoList(a).length && !REAL_KEYS.has(id);
     function photoCaption(path, idx) {
       if (!isSynthetic) return '';
       if (path.endsWith('_1.jpg') || path.endsWith('_1.png')) return 'Satellite (Esri)';
@@ -1179,7 +1270,8 @@ setTimeout(scheduleRerender, 4000);
     const transitUrl = `https://www.google.com/maps/dir/?api=1&origin=${a.lat},${a.lng}&destination=Union+Station+Toronto&travelmode=transit`;
 
     const fit = computeFitScore(a, window.COSTS||{});
-    const fitColor = fitScoreColor(fit.score);
+    const currentScore = window.computeFinalScore ? window.computeFinalScore(a).final : fit.score;
+    const fitColor = fitScoreColor(currentScore);
     const fitBreakdown = fit.breakdown.map(b =>
       `<tr><td>${b.k}</td><td style="text-align:right">${b.v}/${b.max}</td><td style="color:var(--muted);font-size:11px">${b.note}</td></tr>`
     ).join('');
@@ -1187,11 +1279,11 @@ setTimeout(scheduleRerender, 4000);
     const cost = (window.COSTS||{})[a.id];
     let costHtml = '';
     if (cost) {
-      const baseRent = a.rent_1bed_low || a.rent_2bed || 0;
-      const eff = cost.net_effective_1bed || baseRent;
-      const total = cost.estimated_monthly_total_1bed || (baseRent + 100);
+      const displayRent = baseRent(a) || 0;
+      const eff = cost.net_effective_1bed || displayRent;
+      const total = cost.estimated_monthly_total_1bed || (displayRent + 100);
       const rows = [
-        ['Base rent', `$${baseRent.toLocaleString()}`],
+        ['Base rent', `$${displayRent.toLocaleString()}`],
         cost.promo_savings_year ? ['Promo savings/yr', `−$${cost.promo_savings_year.toLocaleString()}`] : null,
         ['Net effective rent', `$${eff.toLocaleString()}`],
         cost.parking_monthly?.underground ? ['Parking (underground)', `+$${cost.parking_monthly.underground}`] : null,
@@ -1286,7 +1378,7 @@ setTimeout(scheduleRerender, 4000);
 
     document.getElementById('detail').innerHTML = `
       <button id="detail-close" onclick="document.getElementById('detail').classList.remove('show')" aria-label="Close detail">✕</button>
-      <h2>${a.name} <span class="fit-badge" style="background:${fitColor}1f;color:${fitColor};border:1px solid ${fitColor}55;font-size:12px;padding:3px 8px">Fit ${fit.score}</span> <span class="badge ${cls}"><span class="dot"></span>${a.rating}</span></h2>
+      <h2>${a.name} <span class="fit-badge" style="background:${fitColor}1f;color:${fitColor};border:1px solid ${fitColor}55;font-size:12px;padding:3px 8px">Score ${currentScore}</span> <span class="badge ${cls}"><span class="dot"></span>${a.rating || 'Fine'}</span></h2>
       ${(() => {
         const audit = ((window.AVOID_AUDIT||{}).flagged_buildings||[]).find(f => f.id === a.id);
         if (audit) {
@@ -1439,7 +1531,7 @@ setTimeout(scheduleRerender, 4000);
       <div class="stats">
         <div class="stat"><div class="k">Rent (1-bed)</div><div class="v">${rentDisplay(a)}</div></div>
         <div class="stat"><div class="k">Sqft</div><div class="v">${a.sqft_low ? a.sqft_low + '–' + a.sqft_high : a.sqft_high || '—'}</div></div>
-        <div class="stat"><div class="k">→ Union</div><div class="v">${a.drive_to_union_min_offpeak ? a.drive_to_union_min_offpeak+' min' : '—'}</div></div>
+        <div class="stat"><div class="k">→ King W</div><div class="v">${downtownMinutes(a) != null ? Math.round(downtownMinutes(a))+' min' : '—'}</div></div>
         <div class="stat"><div class="k">Promo</div><div class="v">${a.promo || '—'}</div></div>
         ${premBadgeColor ? `<div class="stat"><div class="k">vs market</div><div class="v" style="color:${premBadgeColor}">${dm.value_call} · ${(dm.premium_index*100).toFixed(0)}%</div></div>` : ''}
       </div>
@@ -1718,11 +1810,11 @@ setTimeout(scheduleRerender, 4000);
           ${t.picks.map(id => {
             const a = APARTMENTS.find(x => x.id === id);
             if (!a) return '';
-            const photo = (photoMap[id] || [])[0] || '';
+            const photo = galleryPhotos(a)[0] || '';
             return `<div style="background:var(--panel);border:1px solid var(--border);border-radius:6px;padding:8px;cursor:pointer;" onclick="document.getElementById('shortlist-modal').classList.remove('show');selectApt('${id}')">
               ${photo ? `<img src="${photo}" style="width:100%;height:80px;object-fit:cover;border-radius:4px;margin-bottom:4px;">` : ''}
               <div style="font-weight:600;font-size:12px;">${a.name}</div>
-              <div style="color:var(--accent);font-size:11px;">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}+ · ${a.drive_to_cvh_km}km CVH</div>
+              <div style="color:var(--accent);font-size:11px;">${rentDisplay(a)} · CVH ${Math.round(candidateCvhMinutes(a)||0)}m</div>
               <div style="color:var(--muted);font-size:10px;">${a.zone}</div>
             </div>`;
           }).join('')}
@@ -1765,7 +1857,7 @@ setTimeout(scheduleRerender, 4000);
       c.innerHTML = `<p style="color:var(--muted);font-size:12px">${favs.length} saved · <button onclick="emailFavorites()" style="background:var(--bg);border:1px solid var(--border);color:var(--accent-text);padding:4px 10px;border-radius:4px;cursor:pointer;font-size:11px;margin-left:8px">✉️ Email me this list</button></p>` +
         favs.map(a => {
           const fit = computeFitScore(a, window.COSTS||{});
-          const photo = (photoMap[a.id]||[])[0] || '';
+          const photo = galleryPhotos(a)[0] || '';
           const isCmp = compareList.includes(a.id);
           return `
             <div style="display:grid;grid-template-columns:80px 1fr auto auto;gap:12px;padding:10px;border:1px solid var(--border);border-radius:6px;margin-bottom:8px;align-items:center;">
@@ -1773,7 +1865,7 @@ setTimeout(scheduleRerender, 4000);
               <div>
                 <div style="font-weight:600">${a.name}</div>
                 <div style="color:var(--muted);font-size:11px">${a.address}</div>
-                <div style="font-size:11px;color:var(--accent-text)">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()} · FIT ${fit.score} · ${a.drive_to_cvh_km}km CVH</div>
+                <div style="font-size:11px;color:var(--accent-text)">${rentDisplay(a)} · FIT ${fit.score} · CVH ${Math.round(candidateCvhMinutes(a)||0)}m</div>
               </div>
               <button onclick="document.getElementById('favorites-modal').classList.remove('show');selectApt('${a.id}')" style="background:var(--bg);border:1px solid var(--border);color:var(--text);padding:6px 10px;border-radius:4px;cursor:pointer">Open →</button>
               <button onclick="toggleCompare('${a.id}');this.textContent=compareList.includes('${a.id}')?'⚖️ added':'⚖️ add';this.style.color=compareList.includes('${a.id}')?'var(--accent)':'var(--text)'" style="background:var(--bg);border:1px solid var(--border);color:${isCmp?'var(--accent)':'var(--text)'};padding:6px 10px;border-radius:4px;cursor:pointer;font-size:11px">${isCmp?'⚖️ added':'⚖️ add'}</button>
@@ -1807,7 +1899,7 @@ setTimeout(scheduleRerender, 4000);
     const fdeeps = apts.map(a => (window.FINALIST_DEEP||{})[a.id]);
 
     const rows = [
-      ['Photo', (a, i) => { const rp = (window.REAL_PHOTOS||{})[a.id]; const url = rp?.real_interior?.[0] || rp?.real_exterior?.[0] || (photoMap[a.id]||[])[0]; return url?`<img src="${url}" style="width:100%;max-width:160px;height:90px;object-fit:cover;border-radius:4px">`:''; }],
+      ['Photo', (a, i) => { const url = galleryPhotos(a)[0]; return url?`<img src="${url}" style="width:100%;max-width:160px;height:90px;object-fit:cover;border-radius:4px">`:''; }],
       ['Zone', (a, i) => a.zone],
       ['<b>Composite (6-axis avg)</b>', (a, i) => `<b style="color:${window.fitScoreColor(profiles[i].total)};font-size:16px">${profiles[i].total}/100</b>`],
       ['CVH (Mon 7am lived)', (a, i) => `${profiles[i].raw.cvh_min} min`],
@@ -1901,11 +1993,11 @@ setTimeout(scheduleRerender, 4000);
       const a = APARTMENTS.find(x => x.id === id);
       if (!a) return '';
       const fit = computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score;
-      const photo = (photoMap[id]||[])[0] || '';
+      const photo = galleryPhotos(a)[0] || '';
       return `<div onclick="document.getElementById('playbook-modal').classList.remove('show');selectApt('${id}')" style="display:grid;grid-template-columns:80px 1fr auto;gap:12px;padding:10px;border:1px solid var(--border);border-radius:8px;margin-bottom:6px;cursor:pointer;align-items:center;">
         ${photo?`<img src="${photo}" style="width:80px;height:60px;object-fit:cover;border-radius:4px">`:'<div style="width:80px;height:60px;background:var(--panel-2);border-radius:4px"></div>'}
         <div><div style="font-weight:600">${a.name}</div><div style="color:var(--muted);font-size:11px">${a.address}</div><div style="font-size:11px;color:var(--accent-text);margin-top:2px">${a.zone} · Fit ${fit}/100</div></div>
-        <div style="text-align:right;font-weight:700;font-size:15px;color:var(--text);font-variant-numeric:tabular-nums">$${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()}</div>
+        <div style="text-align:right;font-weight:700;font-size:15px;color:var(--text);font-variant-numeric:tabular-nums">${rentDisplay(a)}</div>
       </div>`;
     };
     const playbook = `
@@ -2135,7 +2227,7 @@ setTimeout(scheduleRerender, 4000);
       const p = computeAxisProfile(a);
       // Color by running quality
       const rcol = p.axes.running >= 80 ? '#16a34a' : p.axes.running >= 65 ? '#84cc16' : p.axes.running >= 50 ? '#eab308' : p.axes.running >= 35 ? '#f97316' : '#ef4444';
-      const rent = a.rent_1bed_low || a.rent_2bed || 2200;
+      const rent = baseRent(a) || 2200;
       // Bubble radius — cheaper = larger
       const r = Math.max(4, Math.min(18, 28 - (rent - 1700) / 100));
       return {
@@ -2151,7 +2243,7 @@ setTimeout(scheduleRerender, 4000);
     // Cluster: split into Strategy A (cvh>20 + singles>60), B (cvh<15 + singles<40), C (rent<2050)
     const stratA = pts.filter(p => p.x >= 18 && p.y >= 55);
     const stratB = pts.filter(p => p.x <= 17 && p.y <= 50);
-    const stratC = pts.filter(p => (p._apt.rent_1bed_low||9999) <= 2000 && p.x > 17);
+    const stratC = pts.filter(p => (baseRent(p._apt)||9999) <= 2000 && p.x > 17);
     const other = pts.filter(p => !stratA.includes(p) && !stratB.includes(p) && !stratC.includes(p));
 
     if (_explorerChart) _explorerChart.destroy();
@@ -2175,7 +2267,7 @@ setTimeout(scheduleRerender, 4000);
               label: ctx => {
                 const a = ctx.raw._apt;
                 const p = ctx.raw._profile;
-                return [`${a.name}`, `${a.zone}`, `$${(a.rent_1bed_low||a.rent_2bed||'?').toLocaleString()} · CVH ${p.raw.cvh_min}m · Singles ${p.axes.singles}/100`];
+                return [`${a.name}`, `${a.zone}`, `${rentDisplay(a)} · CVH ${p.raw.cvh_min}m · Singles ${p.axes.singles}/100`];
               }
             }
           },
@@ -2199,7 +2291,7 @@ setTimeout(scheduleRerender, 4000);
           if (els && els.length) {
             const pt = _explorerChart.data.datasets[els[0].datasetIndex].data[els[0].index];
             const a = pt._apt;
-            document.getElementById('explorer-detail').innerHTML = `<b>${a.name}</b> · ${a.zone} · $${(a.rent_1bed_low||a.rent_2bed||'?').toLocaleString()} · click to open`;
+            document.getElementById('explorer-detail').innerHTML = `<b>${a.name}</b> · ${a.zone} · ${rentDisplay(a)} · click to open`;
           }
         },
       },
@@ -2214,14 +2306,14 @@ setTimeout(scheduleRerender, 4000);
     const osrm = window.OSRM || {};
     const row = (label, bid, opts={}) => {
       const a = APARTMENTS.find(x => x.id === bid);
-      const cvh = (osrm[bid]||{}).duration_min;
+      const cvh = a ? candidateCvhMinutes(a) : (osrm[bid]||{}).duration_min;
       const d = dests[bid] || {};
       const kw = d.king_west && d.king_west.duration_min;
       const yk = d.yorkville && d.yorkville.duration_min;
       const hb = d.harbourfront && d.harbourfront.duration_min;
       const yyz = d.yyz_pearson && d.yyz_pearson.duration_min;
-      const rent = a ? (a.rent_1bed_low||a.rent_2bed) : null;
-      const peakEst = cvh ? Math.round(cvh * 1.55) : null;
+      const rent = a ? baseRent(a) : null;
+      const peakEst = cvh ? Math.round(cvh) : null;
       return `<tr>
         <td style="padding:6px 8px;border-bottom:1px solid var(--border)"><b style="color:var(--accent-text);cursor:pointer" onclick="document.getElementById('tradeoff-modal').classList.remove('show');selectApt('${bid}')">${label}</b><div style="font-size:10px;color:var(--muted)">${a?a.address:''}</div></td>
         <td style="padding:6px 8px;border-bottom:1px solid var(--border);text-align:right;font-variant-numeric:tabular-nums">${cvh?cvh.toFixed(0)+' / '+peakEst:'—'}</td>
@@ -2390,7 +2482,7 @@ setTimeout(scheduleRerender, 4000);
       const note = STORE.getNote(a.id);
       body += `${i+1}. ${a.name}\n`;
       body += `   ${a.address}\n`;
-      body += `   $${(a.rent_1bed_low||a.rent_2bed||0).toLocaleString()} · FIT ${fit.score}/100 · ${a.drive_to_cvh_km}km CVH · ${a.zone}\n`;
+      body += `   ${rentDisplay(a)} · FIT ${fit.score}/100 · CVH ${Math.round(candidateCvhMinutes(a)||0)}m · ${a.zone}\n`;
       body += `   ${a.listing_url}\n`;
       if (note) body += `   📝 ${note}\n`;
       body += '\n';
