@@ -507,6 +507,7 @@ const _jsonLoaders = [
   ['reddit_sentiment.json', 'REDDIT_SENTIMENT', null],
   ['contacts.json', 'CONTACTS', null],
   ['floor_plans.json', 'FLOOR_PLANS', null],
+  ['zone_anatomy.json', 'ZONE_ANATOMY', null],
   ['neighborhoods.geojson', 'NEIGHBORHOODS', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
@@ -532,9 +533,10 @@ const _listingsPromise = Promise.all([
   fetch('data/wave5_high_park.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave6_king_west.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
   fetch('data/wave7_junction_depth.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
-  fetch('data/wave8_square_one.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
-]).then(([t1, t2, t3, t4, t5, t6, t7, t8]) => {
-  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'') + '\n' + (t4||'') + '\n' + (t5||'') + '\n' + (t6||'') + '\n' + (t7||'') + '\n' + (t8||'');
+  fetch('data/wave8_square_one.jsonl').then(r=>r.ok?r.text():'').catch(()=>''),
+  fetch('data/wave9_mls_mario.jsonl').then(r=>r.ok?r.text():'').catch(()=>'')
+]).then(([t1, t2, t3, t4, t5, t6, t7, t8, t9]) => {
+  const text = (t1||'') + '\n' + (t2||'') + '\n' + (t3||'') + '\n' + (t4||'') + '\n' + (t5||'') + '\n' + (t6||'') + '\n' + (t7||'') + '\n' + (t8||'') + '\n' + (t9||'');
   const existingIds = new Set((window.APARTMENTS||[]).map(a => a.id));
   // Build AVOID-address lookup from data.js AVOID list. Entries use {name, why} where
   // `name` is "1257 Lakeshore Rd E (Lakewood I)" — split on '(' or ',' to get street address.
@@ -1548,6 +1550,46 @@ setTimeout(scheduleRerender, 4000);
           ${go ? `<div style="background:var(--good-soft);border-left:3px solid var(--good);padding:8px 10px;border-radius:4px;margin-bottom:6px;font-size:12.5px"><b>GO Train:</b> ${go.station} — <b>${go.walk_min} min walk</b> (${go.dist_km}km).</div>` : ''}
           <div style="font-size:11px;color:var(--muted);margin-top:4px">All transit (top 3 nearest): ${td.top3.map(t => `${t.station} ${t.walk_min}m`).join(' · ')}</div>
           ${a.transit?`<p style="font-size:11px;color:var(--muted);margin-top:6px">Original note: ${a.transit}</p>`:''}
+        `;
+      })()}
+      ${(() => {
+        // Zone anatomy — restaurants / nightlife / transit / run clubs / honest_call for the zone
+        const za = window.ZONE_ANATOMY || {};
+        const zoneNames = Object.keys(za).filter(k => k !== '_meta');
+        const zoneStr = (a.zone || '').toLowerCase();
+        const matched = zoneNames.find(zn => zoneStr.includes(zn.toLowerCase().split('/')[0].split('·')[0].trim()))
+                     || zoneNames.find(zn => zoneStr.includes(zn.toLowerCase().split(' ')[0]));
+        const z = matched ? za[matched] : null;
+        if (!z) return '';
+        return `<h3>🍸 Zone vibe · ${matched}</h3>
+          <div style="background:linear-gradient(180deg,#fef3c7 0,#fffbeb 100%);border:1px solid #fde68a;border-radius:8px;padding:12px 14px;font-size:12.5px;line-height:1.55;margin-bottom:8px">
+            <p style="margin:0 0 8px"><b style="color:#92400e">Vibe:</b> ${z.vibe_one_paragraph}</p>
+            ${z.honest_call_for_fadi?`<p style="margin:0;padding:8px 10px;background:rgba(0,0,0,.04);border-radius:6px"><b style="color:#92400e">Honest call:</b> ${z.honest_call_for_fadi}</p>`:''}
+          </div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:11.5px;line-height:1.5">
+            <div style="border:1px solid var(--border);border-radius:6px;padding:8px 10px">
+              <div style="font-weight:700;color:var(--accent-text);font-size:11px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">🍴 Famous restaurants</div>
+              ${(z.famous_restaurants||[]).slice(0,5).map(r => `<div style="margin-bottom:4px"><b>${r.name}</b> <span style="color:var(--muted)">· ${r.type}</span><br><span style="color:var(--muted);font-size:11px">${r.why||''}</span></div>`).join('')}
+            </div>
+            <div style="border:1px solid var(--border);border-radius:6px;padding:8px 10px">
+              <div style="font-weight:700;color:var(--accent-text);font-size:11px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">🌃 Nightlife reach</div>
+              ${(z.nightlife_options||[]).slice(0,4).map(n => `<div style="margin-bottom:4px"><b>${n.name}</b> <span style="color:var(--muted)">${n.distance_walk_min?'· '+n.distance_walk_min+'min walk':''}</span><br><span style="color:var(--muted);font-size:11px">${n.note||n.type||''}</span></div>`).join('')}
+              ${z.nightlife_strip_reach?`<div style="margin-top:6px;padding-top:6px;border-top:1px dashed var(--border);color:var(--muted);font-size:10.5px">Ossington ${z.nightlife_strip_reach.ossington_strip_walk_min||z.nightlife_strip_reach.ossington_strip_drive_min}m · King W ${z.nightlife_strip_reach.king_west_walk_min||z.nightlife_strip_reach.king_west_drive_min}m · Queen W ${z.nightlife_strip_reach.queen_west_walk_min||z.nightlife_strip_reach.queen_west_drive_min}m</div>`:''}
+            </div>
+            <div style="border:1px solid var(--border);border-radius:6px;padding:8px 10px">
+              <div style="font-weight:700;color:var(--accent-text);font-size:11px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">🏃 Trails + run clubs</div>
+              ${(z.trails_and_running||[]).slice(0,3).map(t => `<div style="margin-bottom:3px"><b>${t.name}</b> <span style="color:var(--muted)">${t.access_walk_min}m walk · ${t.distance_km_loop}km${t.winter_maintained===true?' · winter ✓':''}</span></div>`).join('')}
+              ${(z.run_clubs_nearby||[]).slice(0,3).map(c => `<div style="margin-top:3px;padding-top:3px;border-top:1px dotted var(--border)"><b>${c.name}</b><br><span style="color:var(--muted);font-size:11px">${c.meet_days||''}${c.demo?' · age '+c.demo:''}</span></div>`).join('')}
+            </div>
+            <div style="border:1px solid var(--border);border-radius:6px;padding:8px 10px">
+              <div style="font-weight:700;color:var(--accent-text);font-size:11px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:6px">🚇 Transit + amenities</div>
+              ${(z.subway_or_transit||[]).slice(0,4).map(t => `<div style="margin-bottom:3px"><b>${t.line}</b> <span style="color:var(--muted)">${typeof t.walk_min_to_nearest_stop==='number'?t.walk_min_to_nearest_stop+'m walk':t.walk_min_to_nearest_stop} · Union ${t.to_union_min}m</span></div>`).join('')}
+              ${z.best_gym?`<div style="margin-top:4px;padding-top:4px;border-top:1px dashed var(--border);font-size:11px"><b>Gym:</b> ${z.best_gym}</div>`:''}
+              ${z.best_grocery?`<div style="font-size:11px"><b>Grocery:</b> ${z.best_grocery}</div>`:''}
+              ${z.dating_demo_summary?`<div style="margin-top:4px;font-size:11px;color:var(--accent-text);font-style:italic">${z.dating_demo_summary}</div>`:''}
+            </div>
+          </div>
         `;
       })()}
       ${(() => {

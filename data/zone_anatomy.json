@@ -1,0 +1,249 @@
+{
+  "_meta": {
+    "source": "Hand-curated from local Toronto knowledge + verified Wave G/H data — June 2026 state",
+    "purpose": "Decision-making lifestyle data per zone for a 27yo ER doctor (Fadi). 13 shifts/month, 12pm-6am off-hours, not a party animal but wants options + walkable amenities + dating reach."
+  },
+  "Liberty Village": {
+    "vibe_one_paragraph": "Toronto's young-professional condo concentration camp — dense, glassy, walkable. King West entertainment district at your eastern door; King + Dufferin transit terminus at western edge. The complaint is 'no character' and 'transient' (people stay 2 years then bounce). The advantage for someone single, mid-late 20s, downtown-curious post-NYC: you're swimming in the same demographic, everything is on foot, Hinge matches are within a 2km radius. Walk Score 92+. Not a 40yo couples zone — explicitly 25-32yo singles + young couples. Construction noise from M City + new builds is the trade-off. The CVH commute is the killer — 30-35 min via Gardiner, brutal at 3pm.",
+    "famous_restaurants": [
+      {"name": "Aloette", "type": "French bistro", "why": "Date-night benchmark, walkable from any Liberty unit", "address": "163 Spadina"},
+      {"name": "Pink Sky", "type": "Asian fusion + cocktails", "why": "Group dinners + bar after", "address": "11 Brock Ave"},
+      {"name": "Pizzeria Libretto", "type": "Neapolitan pizza", "why": "Walk-in casual, never disappoints", "address": "King W"},
+      {"name": "Mascot Brewery", "type": "craft beer + pub food", "why": "Liberty Village local, after-work spot", "address": "30 Liberty"},
+      {"name": "Brunch on King (Lady Marmalade-style)", "type": "brunch", "why": "Saturday post-run staple", "address": "King W strip"}
+    ],
+    "nightlife_options": [
+      {"name": "King West strip (Bathurst→Spadina)", "type": "bars + clubs + lounges", "distance_walk_min": 12, "note": "Toronto's main entertainment district. Mid-20s to mid-30s crowd."},
+      {"name": "Ossington strip", "type": "trendy bars + small venues", "distance_walk_min": 18, "note": "More indie/cool than King West. Bellwoods Brewery, Civil Liberties."},
+      {"name": "Queen West strip", "type": "bars + galleries", "distance_walk_min": 8, "note": "Just north — your closest 'going out' radius."}
+    ],
+    "trails_and_running": [
+      {"name": "Martin Goodman Trail (Waterfront)", "type": "paved year-round", "winter_maintained": true, "access_walk_min": 8, "distance_km_loop": 22},
+      {"name": "Trinity Bellwoods Park", "type": "urban park loop", "winter_maintained": true, "access_walk_min": 12, "distance_km_loop": 2},
+      {"name": "Garrison Common", "type": "open grass, short loops", "winter_maintained": false, "access_walk_min": 3, "distance_km_loop": 1.5}
+    ],
+    "run_clubs_nearby": [
+      {"name": "Parkdale Roadrunners", "meet_days": "Tue 7pm + Sat 9am at Stay Gold (124 Brock)", "distance_km_from_zone_centre": 2.5, "demo": "25-35"},
+      {"name": "BlackToe Running King West", "meet_days": "Tue/Thu 6:30am + Sat 8am", "distance_km_from_zone_centre": 1.5, "demo": "performance-focused"},
+      {"name": "Midnight Runners Toronto", "meet_days": "Thu 8pm bootcamp+run", "distance_km_from_zone_centre": 3, "demo": "25-35 social"}
+    ],
+    "subway_or_transit": [
+      {"line": "504/511 streetcar (King)", "walk_min_to_nearest_stop": 3, "to_union_min": 18},
+      {"line": "501 streetcar (Queen)", "walk_min_to_nearest_stop": 6, "to_union_min": 22},
+      {"line": "Exhibition GO station", "walk_min_to_nearest_stop": 8, "to_union_min": 9}
+    ],
+    "nightlife_strip_reach": {
+      "ossington_strip_walk_min": 18,
+      "king_west_walk_min": 12,
+      "queen_west_walk_min": 8,
+      "by_streetcar_min": "6-15 to anywhere downtown"
+    },
+    "best_gym": "GoodLife King West / F45 Liberty Village (every building has its own fitness centre — most are basic)",
+    "best_grocery": "Loblaws 60 Carlaw, Metro Liberty Village, Sobeys 1015 Lake Shore W",
+    "dating_demo_summary": "Hinge match radius hits maximum density here — 25-32yo single professionals, finance/tech/healthcare. Best dating zone in west Toronto.",
+    "honest_call_for_fadi": "The 'easy mode' play. You'll never run out of places to walk to, you're 1km from King West nightlife, you're swimming in your demographic. Cost: 30-35min commute to CVH (brutal at 3pm). Worth it if you'd otherwise feel isolated in Sauga — this is the social-density antidote."
+  },
+  "Junction": {
+    "vibe_one_paragraph": "Mid-gentrification cool — was industrial, now indie cafés + breweries + design shops on Dundas W between Keele and Runnymede. Demographic is 25-34 trendy young pro, mixed couples + singles. Quieter than Liberty Village (residential side streets dominate) but the strip has real evening energy Thursday-Saturday. Subway access at Dundas West, Keele, Runnymede (Bloor-Danforth line). New condos along Dupont/Wallace are 2020-2024 builds — modern but smaller footprints. Older buildings on Roncesvalles tend to be 1960s mid-rises with character but no in-suite laundry. Park access via High Park (5min). Mario's listings here: 18 units, $1600-$2423.",
+    "famous_restaurants": [
+      {"name": "The Federal", "type": "neighborhood bistro", "why": "Junction date-night go-to", "address": "1438 Dundas W"},
+      {"name": "Indie Alehouse", "type": "brewpub + food", "why": "Best craft beer in the Junction", "address": "2876 Dundas W"},
+      {"name": "Honest Weight", "type": "seafood + raw bar", "why": "Highest-rated Junction restaurant", "address": "Dundas W"},
+      {"name": "Junction Craft Brewing", "type": "brewery taproom", "why": "Saturday afternoon staple", "address": "150 Symes"},
+      {"name": "Hot Black Coffee", "type": "specialty coffee", "why": "Morning before shift coffee", "address": "245 Queen W (close but not Junction)"}
+    ],
+    "nightlife_options": [
+      {"name": "Junction strip (Dundas W)", "type": "breweries + bars + indie venues", "distance_walk_min": 5, "note": "Thursday-Saturday active. Quieter than King West but real."},
+      {"name": "Ossington strip", "type": "trendy bars", "distance_walk_min": 35, "note": "Drive 12min or 22min subway+walk."},
+      {"name": "Roncesvalles bars", "type": "neighborhood pubs", "distance_walk_min": 25, "note": "Walkable to The Westerly, Skyline."}
+    ],
+    "trails_and_running": [
+      {"name": "West Toronto Railpath", "type": "paved year-round", "winter_maintained": true, "access_walk_min": 5, "distance_km_loop": 4},
+      {"name": "High Park trails", "type": "mixed paved + dirt", "winter_maintained": "partial", "access_walk_min": 10, "distance_km_loop": "3-15"},
+      {"name": "Humber River Trail (south)", "type": "paved waterfront", "winter_maintained": true, "access_walk_min": 18, "distance_km_loop": 10}
+    ],
+    "run_clubs_nearby": [
+      {"name": "High Park Rogue Runners", "meet_days": "Tue 6:30pm + Sun 8am at High Park", "distance_km_from_zone_centre": 1.5, "demo": "25-40 trail-focused"},
+      {"name": "Parkdale Roadrunners", "meet_days": "Tue 7pm + Sat 9am Stay Gold", "distance_km_from_zone_centre": 2, "demo": "25-35 social"},
+      {"name": "Toronto West Athletics", "meet_days": "Tue/Thu 6:30pm coached track", "distance_km_from_zone_centre": 5, "demo": "performance"}
+    ],
+    "subway_or_transit": [
+      {"line": "Dundas West subway (BD line)", "walk_min_to_nearest_stop": "8-15 depending on building", "to_union_min": 18},
+      {"line": "Keele subway (BD line)", "walk_min_to_nearest_stop": "5-12", "to_union_min": 22},
+      {"line": "UP Express (from Dundas West)", "walk_min_to_nearest_stop": 15, "to_union_min": 9, "note": "Direct to Pearson — great for your US trips"},
+      {"line": "504/505 streetcar at Dundas", "walk_min_to_nearest_stop": 3, "to_union_min": 28}
+    ],
+    "nightlife_strip_reach": {
+      "ossington_strip_drive_min": 12,
+      "king_west_drive_min": 16,
+      "queen_west_drive_min": 14,
+      "by_transit_min": "Dundas W subway → downtown 18-25 min door-to-door"
+    },
+    "best_gym": "Goodlife Junction (Stockyards Mall) or F45 Roncesvalles. Most new condos have basic fitness rooms.",
+    "best_grocery": "Loblaws Stockyards, Metro Bloor + Keele, Farm Boy Roncesvalles",
+    "dating_demo_summary": "Strong 25-35 indie/creative-pro demographic. Less corporate-finance than Liberty but more concentrated than Roncesvalles. Hinge swings cool/artsy not Bay Street.",
+    "honest_call_for_fadi": "The thinking-person's choice. Cooler vibe than Liberty Village, real neighborhood feel, subway + UP Express to Pearson, High Park at your door. Trade-off: 30-32min to CVH (similar to Liberty), nightlife requires intentionality (Dundas W strip isn't as dense as King W). If you want to feel like a 27yo who lives in 'a real Toronto neighborhood' not a glass condo zone, Junction wins."
+  },
+  "Roncesvalles": {
+    "vibe_one_paragraph": "The most walkable strip in west Toronto — Polish-bakeries-meet-indie-cafés on Roncesvalles Ave from Queen St to Howard Park. 25-35 demographic that's slightly more 'settled' than Liberty (lots of young couples + some young families now creeping in). Less new-build density than Junction or Liberty — mostly 1960s-70s mid-rises + Victorian conversions + a few new condo projects (The Roncy, Howard Park, 411). Strong restaurant + bakery scene. High Park is at your eastern door (huge advantage for runners). Streetcar primary transit — slower than subway but you're on the 501/504 line. Mario's note: 'On Roncy there really aren't many condos btw. It's mostly older apartment buildings.' Lower inventory but the lifestyle is REAL — this is a place people stay.",
+    "famous_restaurants": [
+      {"name": "Barque Smokehouse", "type": "Texas BBQ", "why": "Roncey institution, walkable", "address": "299 Roncesvalles"},
+      {"name": "Hopper Hut", "type": "Sri Lankan", "why": "Best South Asian in the neighborhood", "address": "Roncesvalles"},
+      {"name": "Granowska's", "type": "Polish bakery", "why": "Saturday morning ritual", "address": "175 Roncesvalles"},
+      {"name": "Mata Petisco Bar", "type": "Portuguese tapas + wine", "why": "Date-night winner", "address": "Roncesvalles"},
+      {"name": "Cherry Bomb Coffee", "type": "specialty coffee", "why": "Pre-shift, pre-run", "address": "Roncesvalles"}
+    ],
+    "nightlife_options": [
+      {"name": "Roncesvalles strip", "type": "neighborhood pubs + wine bars", "distance_walk_min": 3, "note": "Skyline, The Westerly, Pour, Mata. Quieter, more 'sit and talk' than 'party'."},
+      {"name": "Parkdale strip (Queen W)", "type": "indie bars + venues", "distance_walk_min": 12, "note": "Stay Gold, Skyline (different one), brewery scene."},
+      {"name": "King West", "type": "main entertainment district", "distance_walk_min": "20 to streetcar + 15 ride = 35min", "note": "Doable but planned"}
+    ],
+    "trails_and_running": [
+      {"name": "High Park trails", "type": "paved + dirt mixed", "winter_maintained": "partial", "access_walk_min": 3, "distance_km_loop": "3-15"},
+      {"name": "Martin Goodman Trail (south end)", "type": "paved year-round", "winter_maintained": true, "access_walk_min": 12, "distance_km_loop": 22},
+      {"name": "Sunnyside Beach Trail", "type": "paved waterfront", "winter_maintained": true, "access_walk_min": 8, "distance_km_loop": 5}
+    ],
+    "run_clubs_nearby": [
+      {"name": "High Park Rogue Runners", "meet_days": "Tue 6:30pm + Sun 8am", "distance_km_from_zone_centre": 0.5, "demo": "trail-focused, mixed ages"},
+      {"name": "Parkdale Roadrunners", "meet_days": "Tue 7pm + Sat 9am Stay Gold", "distance_km_from_zone_centre": 1, "demo": "25-35 strong social"},
+      {"name": "RunTOBeer", "meet_days": "varies — brewery-to-brewery", "distance_km_from_zone_centre": 1.5, "demo": "25-40"}
+    ],
+    "subway_or_transit": [
+      {"line": "501/504 streetcar (Queen/King)", "walk_min_to_nearest_stop": 3, "to_union_min": 25},
+      {"line": "Dundas West subway (10-15min walk)", "walk_min_to_nearest_stop": 12, "to_union_min": 18},
+      {"line": "Keele subway (15-20min walk)", "walk_min_to_nearest_stop": 18, "to_union_min": 22}
+    ],
+    "nightlife_strip_reach": {
+      "ossington_strip_drive_min": 12,
+      "king_west_drive_min": 14,
+      "queen_west_drive_min": 8,
+      "by_transit_min": "Streetcar to King West 25 min door-to-door"
+    },
+    "best_gym": "Echelon Cycle Roncesvalles / Goodlife at Bloor + Dundas, indie yoga + pilates on the strip",
+    "best_grocery": "Farm Boy Roncesvalles, Loblaws Lake Shore + Roncesvalles",
+    "dating_demo_summary": "25-35 with slightly more 'settled couples' than Liberty but plenty of singles. Hinge will skew indie/grad-student/early-career-pro vs Liberty's corporate.",
+    "honest_call_for_fadi": "If you want to feel like you LIVE in Toronto not 'in a building' — Roncesvalles is the answer. High Park at door, real neighborhood walkability, strong restaurants. Trade-off: zero subway-direct (streetcar only, slower), less inventory (Mario's right — mostly older apartments), 30-35min commute. Best for someone who values the lived experience over commute optimization."
+  },
+  "Humber Bay Shores": {
+    "vibe_one_paragraph": "The West-GTA dating capital. 25 new + new-ish condo towers concentrated south of QEW, west of Park Lawn — Park Lawn / Marine Parade / Shore Breeze / Annie Craig. Dense 25-40yo professional renters in finance/tech/healthcare. Martin Goodman Trail at your door (best running access in west GTA). Eden Trattoria, Birds and Beans, San Remo, Cawthra patios all walkable. Single density 82/100 (highest in our dataset). Trade-off: 22-26min to CVH (worse than Junction/Liberty by ~5 min during peak), no subway (GO + 501 streetcar only). Mario's list has 10 specific units here, $2000-$2400. Vita on the Lake (70 Annie Craig), Lago (56 Annie Craig), Eau du Soleil are the marquee buildings.",
+    "famous_restaurants": [
+      {"name": "Eden Trattoria", "type": "Italian", "why": "HBS staple, walkable from every condo", "address": "2087 Lake Shore W"},
+      {"name": "Birds and Beans", "type": "specialty coffee", "why": "Morning before shift, weekend brunch", "address": "Lake Shore W"},
+      {"name": "San Remo Bakery", "type": "Italian bakery + café", "why": "Saturday post-run staple", "address": "Royal York"},
+      {"name": "Sanagan's Meat Locker (Mimico)", "type": "butcher + sandwiches", "why": "Walk over for lunch", "address": "2nd location Lake Shore"},
+      {"name": "IQ Food Co", "type": "healthy fast", "why": "Pre-shift fuel", "address": "Lake Shore W"}
+    ],
+    "nightlife_options": [
+      {"name": "Lakeshore W strip (Park Lawn → Mimico Village)", "type": "patios + pubs + cocktail bars", "distance_walk_min": 8, "note": "Mostly couples + early-30s crowd. Quieter than King W."},
+      {"name": "Mimico Village (Royal York)", "type": "neighborhood bars", "distance_walk_min": 18, "note": "Walkable food strip."},
+      {"name": "King West (downtown)", "type": "main entertainment", "distance_walk_min": "drive 11min OR streetcar 30min", "note": "Doable for weekend party trips — Uber back $25."}
+    ],
+    "trails_and_running": [
+      {"name": "Martin Goodman Trail", "type": "paved year-round", "winter_maintained": true, "access_walk_min": 2, "distance_km_loop": 22, "note": "Gold standard waterfront trail in GTA"},
+      {"name": "Humber Bay Shores Park", "type": "park + waterfront paths", "winter_maintained": true, "access_walk_min": 3, "distance_km_loop": 3},
+      {"name": "Mimico Creek trail", "type": "paved", "winter_maintained": "partial", "access_walk_min": 12, "distance_km_loop": 6}
+    ],
+    "run_clubs_nearby": [
+      {"name": "Humber Bay Run Club", "meet_days": "Tue/Wed/Thu 7pm + Sat 8:45am at Humber Bay Shores Park", "distance_km_from_zone_centre": 0.3, "demo": "25-35 strong social"},
+      {"name": "Mimico Run Club (Birds and Beans)", "meet_days": "Saturday 8am", "distance_km_from_zone_centre": 1.5, "demo": "mixed ages"},
+      {"name": "High Park Rogue Runners", "meet_days": "Tue 6:30pm + Sun 8am", "distance_km_from_zone_centre": 6, "demo": "trail"}
+    ],
+    "subway_or_transit": [
+      {"line": "501 streetcar (Queens Quay → Lake Shore)", "walk_min_to_nearest_stop": 4, "to_union_min": 32},
+      {"line": "Mimico GO station", "walk_min_to_nearest_stop": "12-20 depending on building", "to_union_min": 12, "note": "BEST option for downtown"},
+      {"line": "Park Lawn GO (in development, opening 2027)", "walk_min_to_nearest_stop": 6, "to_union_min": 10, "note": "Future upgrade"}
+    ],
+    "nightlife_strip_reach": {
+      "ossington_strip_drive_min": 15,
+      "king_west_drive_min": 11,
+      "queen_west_drive_min": 13,
+      "by_transit_min": "GO 12min to Union + 10min walk to King W = 22 min door-to-door"
+    },
+    "best_gym": "Most condos have FULL gyms (Eau du Soleil's is best-in-class). LA Fitness Park Lawn. Equinox doesn't have a location here yet.",
+    "best_grocery": "Sobeys Marine Pkwy, Metro Park Lawn",
+    "dating_demo_summary": "Highest 25-35 single density of any zone we surveyed (82/100). Hinge match radius hits King West + Liberty + downtown. Run club is a primary social entry.",
+    "honest_call_for_fadi": "The 'environmental nudge' play. Run club at door + dense demographic + walkable bar/restaurant scene = social life happens to you without planning. Cost: 22-26min to CVH (8min worse than Markwood, similar to Junction), no subway, condo-zone feel (not 'a neighborhood'). Strongest pick if your priority is dating + running + bouncing back post-breakup."
+  },
+  "King & Dufferin / Queen West": {
+    "vibe_one_paragraph": "Edge of West Queen West, the bohemian-cool stretch of Queen St W between Trinity Bellwoods and Roncesvalles. Mid-2000s artist district that's now mostly 25-35 indie-pro: tech, design, NGO, healthcare. Dense restaurants + Ossington strip 10 min walk = main party radius. King + Dufferin specifically is the back-of-Liberty-Village edge — newer condos (170/150 Sudbury) face the railway/Lamport Stadium, slightly removed from the King W chaos. Trinity Bellwoods Park is the central anchor (where everyone hangs in summer). Mario's list: 4 units $2200-$2500. Streetcar primary transit (501 Queen, 504 King, 505 Dundas).",
+    "famous_restaurants": [
+      {"name": "Bar Isabel", "type": "Spanish tapas", "why": "Best date-night in west Toronto", "address": "797 College"},
+      {"name": "Bar Raval", "type": "Spanish wine bar", "why": "Walk-in vibes, after-work", "address": "505 College"},
+      {"name": "Civil Liberties", "type": "cocktail bar (no menu)", "why": "Bartender picks your drink", "address": "878 Bloor W"},
+      {"name": "Gusto 101", "type": "Italian", "why": "Always-busy King W staple", "address": "101 Portland"},
+      {"name": "Dom's Bakery / Sud Forno", "type": "Italian bakery", "why": "Saturday morning", "address": "Queen W"}
+    ],
+    "nightlife_options": [
+      {"name": "Ossington strip", "type": "trendy bars + small music venues", "distance_walk_min": 12, "note": "Bellwoods Brewery, La Carnita, Civil Liberties, Communist's Daughter. The 25-32 indie/cool crowd."},
+      {"name": "King West (east of Bathurst)", "type": "clubs + lounges", "distance_walk_min": 18, "note": "Main entertainment district. Streetcar 10min."},
+      {"name": "Queen West strip", "type": "bars + galleries", "distance_walk_min": 5, "note": "Bar Wayland, Cold Tea, Cabin."}
+    ],
+    "trails_and_running": [
+      {"name": "Trinity Bellwoods Park", "type": "urban loop", "winter_maintained": true, "access_walk_min": 5, "distance_km_loop": 2},
+      {"name": "Martin Goodman Trail (Queens Quay → west)", "type": "paved year-round", "winter_maintained": true, "access_walk_min": 12, "distance_km_loop": 22},
+      {"name": "Garrison Common / Fort York", "type": "open grass", "winter_maintained": false, "access_walk_min": 8, "distance_km_loop": 1.5}
+    ],
+    "run_clubs_nearby": [
+      {"name": "Parkdale Roadrunners", "meet_days": "Tue 7pm + Sat 9am Stay Gold", "distance_km_from_zone_centre": 1.5, "demo": "25-35 strong social"},
+      {"name": "BlackToe Running King West", "meet_days": "Tue/Thu 6:30am + Sat 8am", "distance_km_from_zone_centre": 1, "demo": "performance"},
+      {"name": "Midnight Runners Toronto", "meet_days": "Thu 8pm bootcamp+run", "distance_km_from_zone_centre": 2, "demo": "25-35 social"}
+    ],
+    "subway_or_transit": [
+      {"line": "501 streetcar (Queen)", "walk_min_to_nearest_stop": 3, "to_union_min": 22},
+      {"line": "504/505 streetcar (King/Dundas)", "walk_min_to_nearest_stop": 5, "to_union_min": 18},
+      {"line": "Dufferin bus → Bloor subway", "walk_min_to_nearest_stop": 4, "to_union_min": 28, "note": "Not great"},
+      {"line": "Exhibition GO", "walk_min_to_nearest_stop": 12, "to_union_min": 9}
+    ],
+    "nightlife_strip_reach": {
+      "ossington_strip_walk_min": 12,
+      "king_west_walk_min": 18,
+      "queen_west_walk_min": 5,
+      "by_transit_min": "Streetcar anywhere downtown in 12-22 min"
+    },
+    "best_gym": "Equinox Bloor (35min by transit) / GoodLife Yonge + Eg / F45 Trinity Bellwoods",
+    "best_grocery": "Loblaws Queen W, Metro Trinity Bellwoods, Sanko Trading (Japanese specialty)",
+    "dating_demo_summary": "25-32 indie-cool demographic — design/tech/NGO. Slightly more bohemian than Liberty's finance crowd. Best for someone who reads, has a Substack subscription.",
+    "honest_call_for_fadi": "Mario's smart suggestion — Liberty Village vibes minus the glass-tower vibe. You get the King W radius + Ossington + Queen W walkability without paying Liberty Village premiums. CVH commute is same as Liberty (~30 min). If you want 'cool Toronto' and don't mind older buildings (170 Sudbury is older), this is the pick over Liberty Village proper."
+  },
+  "Bloor West Village / Swansea / High Park": {
+    "vibe_one_paragraph": "Family suburb meets young-pro starter-condo. Bloor West Village strip is dense walkable shops + restaurants but skews 40+ couples. High Park itself = best running/cycling in all of Toronto (398 acres, lit, year-round paved loops). Old Mill subway gives you the WESTERNMOST BD line stop = fastest expressway exit to CVH (saves 5-8min vs Junction). Swansea south is south of Bloor + west of High Park — quieter, big trees, Gardiner Expressway at your door for the CVH commute. New builds limited; mostly 1960s-70s rentals + a handful of new condos (The Livmore, High Park Village).",
+    "famous_restaurants": [
+      {"name": "Cheese Boutique", "type": "high-end cheese + prepared foods", "why": "Toronto institution, in Swansea", "address": "45 Ripley"},
+      {"name": "Pizzeria Defina", "type": "Roman-style pizza", "why": "Bloor West Village staple", "address": "2272 Bloor W"},
+      {"name": "Fishbar", "type": "seafood", "why": "Date-night Bloor W", "address": "2247 Bloor W"},
+      {"name": "Cumin", "type": "South Asian", "why": "Best curry on Bloor W", "address": "2222 Bloor W"},
+      {"name": "Roncesvalles edge restaurants", "type": "various", "why": "10-15min walk south", "address": "Roncey"}
+    ],
+    "nightlife_options": [
+      {"name": "Bloor West Village pubs", "type": "neighborhood pubs", "distance_walk_min": 5, "note": "Quiet by 11pm. Mostly couples."},
+      {"name": "Junction strip (Dundas W)", "type": "breweries + bars", "distance_walk_min": 18, "note": "Walk or 1-stop subway."},
+      {"name": "Roncesvalles strip", "type": "wine bars + pubs", "distance_walk_min": 20, "note": "Walk south through High Park."}
+    ],
+    "trails_and_running": [
+      {"name": "High Park (full)", "type": "mixed paved + dirt", "winter_maintained": "partial", "access_walk_min": 5, "distance_km_loop": "3-15"},
+      {"name": "Martin Goodman Trail (south Swansea)", "type": "paved year-round", "winter_maintained": true, "access_walk_min": 10, "distance_km_loop": 22},
+      {"name": "Humber River Trail", "type": "paved", "winter_maintained": true, "access_walk_min": 8, "distance_km_loop": 12}
+    ],
+    "run_clubs_nearby": [
+      {"name": "High Park Rogue Runners", "meet_days": "Tue 6:30pm + Sun 8am at High Park", "distance_km_from_zone_centre": 0.5, "demo": "trail mixed-age"},
+      {"name": "Toronto West Athletics", "meet_days": "Tue/Thu 6:30pm coached", "distance_km_from_zone_centre": 4, "demo": "performance"},
+      {"name": "Bloor West Village Running Room", "meet_days": "various", "distance_km_from_zone_centre": 0.3, "demo": "all ages, gear shop"}
+    ],
+    "subway_or_transit": [
+      {"line": "Old Mill subway (BD westernmost)", "walk_min_to_nearest_stop": "5-15", "to_union_min": 26},
+      {"line": "Jane subway (BD)", "walk_min_to_nearest_stop": "8-15", "to_union_min": 24},
+      {"line": "Runnymede subway (BD)", "walk_min_to_nearest_stop": "8-15", "to_union_min": 22},
+      {"line": "High Park subway (BD)", "walk_min_to_nearest_stop": "5-12", "to_union_min": 20}
+    ],
+    "nightlife_strip_reach": {
+      "ossington_strip_drive_min": 14,
+      "king_west_drive_min": 16,
+      "queen_west_drive_min": 12,
+      "by_transit_min": "Subway to Bathurst then walk = 25 min"
+    },
+    "best_gym": "GoodLife Bloor West Village, Iron Forged on Bloor, indie pilates studios",
+    "best_grocery": "Loblaws Bloor W, Metro Bloor + Runnymede, Cheese Boutique for fancy stuff",
+    "dating_demo_summary": "40-55 couples dominate BWV proper. Younger pros cluster south in Swansea (35-45%) or north in Junction. Not a primary dating zone — you'd date OUT (downtown / Liberty / King W).",
+    "honest_call_for_fadi": "The 'quiet hideout' play. Old Mill subway gives you 36-min CVH commute (best of any Toronto-side option), High Park at door (running heaven), but the dating + nightlife scene requires you to GO to it (subway 20min to downtown). Not your zone if you want ambient density — but if you want a 1BR + great trails + a real subway + cooking at home most nights, this is the most peaceful pick that still works."
+  }
+}
