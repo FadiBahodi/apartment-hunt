@@ -1,0 +1,1185 @@
+{
+  "generated_at": "2026-06-13T19:33:06.915924-04:00",
+  "source": "Google Distance Matrix for route snapshots; manually curated Toronto micro-area centres/polygons from local listing geography.",
+  "timezone": "America/Toronto",
+  "destination": {
+    "name": "Credit Valley Hospital",
+    "lat": 43.5594,
+    "lng": -79.7037
+  },
+  "time_slots": [
+    {
+      "id": "mon_0630_to_cvh",
+      "label": "Mon 6:30a -> CVH",
+      "weekday": 0,
+      "hour": 6,
+      "minute": 30,
+      "direction": "to_cvh",
+      "departure_time": 1781519400,
+      "departure_iso": "2026-06-15T06:30:00-04:00"
+    },
+    {
+      "id": "mon_1430_to_cvh",
+      "label": "Mon 2:30p -> CVH",
+      "weekday": 0,
+      "hour": 14,
+      "minute": 30,
+      "direction": "to_cvh",
+      "departure_time": 1781548200,
+      "departure_iso": "2026-06-15T14:30:00-04:00"
+    },
+    {
+      "id": "mon_2230_to_cvh",
+      "label": "Mon 10:30p -> CVH",
+      "weekday": 0,
+      "hour": 22,
+      "minute": 30,
+      "direction": "to_cvh",
+      "departure_time": 1781577000,
+      "departure_iso": "2026-06-15T22:30:00-04:00"
+    },
+    {
+      "id": "mon_1530_from_cvh",
+      "label": "Mon 3:30p CVH -> home",
+      "weekday": 0,
+      "hour": 15,
+      "minute": 30,
+      "direction": "from_cvh",
+      "departure_time": 1781551800,
+      "departure_iso": "2026-06-15T15:30:00-04:00"
+    },
+    {
+      "id": "tue_0730_from_cvh",
+      "label": "Tue 7:30a CVH -> home",
+      "weekday": 1,
+      "hour": 7,
+      "minute": 30,
+      "direction": "from_cvh",
+      "departure_time": 1781609400,
+      "departure_iso": "2026-06-16T07:30:00-04:00"
+    },
+    {
+      "id": "sat_1000_to_cvh",
+      "label": "Sat 10:00a -> CVH",
+      "weekday": 5,
+      "hour": 10,
+      "minute": 0,
+      "direction": "to_cvh",
+      "departure_time": 1781964000,
+      "departure_iso": "2026-06-20T10:00:00-04:00"
+    }
+  ],
+  "areas": [
+    {
+      "id": "liberty_village_core",
+      "tier": "1 primary",
+      "label": "1 Liberty Village core",
+      "name": "Liberty Village core",
+      "short_label": "LIBERTY",
+      "search": "liberty",
+      "priority": "highest young/social + best condo/parking odds",
+      "center": {
+        "lat": 43.6388,
+        "lng": -79.4146,
+        "label": "East Liberty St / Western Battery Rd"
+      },
+      "neighbourhoods": [
+        "Fort York-Liberty Village",
+        "Liberty Village",
+        "Exhibition Place edge"
+      ],
+      "streets": [
+        "East Liberty St",
+        "Western Battery Rd",
+        "Lynn Williams St",
+        "Hanna Ave",
+        "Atlantic Ave",
+        "Jefferson Ave",
+        "Strachan Ave",
+        "King St W",
+        "Ordnance St"
+      ],
+      "coords": [
+        [
+          43.635,
+          -79.424
+        ],
+        [
+          43.6418,
+          -79.426
+        ],
+        [
+          43.6428,
+          -79.4142
+        ],
+        [
+          43.6405,
+          -79.405
+        ],
+        [
+          43.6352,
+          -79.4068
+        ],
+        [
+          43.6335,
+          -79.416
+        ]
+      ],
+      "links": {
+        "strava": "https://www.strava.com/heatmap#14/-79.4146/43.6388/hot/run",
+        "google_maps": "https://www.google.com/maps/search/?api=1&query=Liberty+Village+core+Toronto&center=43.6388,-79.4146",
+        "route_to_cvh": "https://www.google.com/maps/dir/?api=1&origin=43.6388,-79.4146&destination=43.5594,-79.7037&travelmode=driving",
+        "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.6388,-79.4146"
+      },
+      "route_times": {
+        "mon_0630_to_cvh": {
+          "label": "Mon 6:30a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T06:30:00-04:00",
+          "distance_km": 31.89,
+          "models": {
+            "optimistic": 24.4,
+            "best_guess": 29.3,
+            "pessimistic": 40.5
+          },
+          "best_min": 29.3,
+          "range_min": [
+            24.4,
+            40.5
+          ]
+        },
+        "mon_1430_to_cvh": {
+          "label": "Mon 2:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T14:30:00-04:00",
+          "distance_km": 31.86,
+          "models": {
+            "optimistic": 31.1,
+            "best_guess": 41.6,
+            "pessimistic": 70.5
+          },
+          "best_min": 41.6,
+          "range_min": [
+            31.1,
+            70.5
+          ]
+        },
+        "mon_2230_to_cvh": {
+          "label": "Mon 10:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T22:30:00-04:00",
+          "distance_km": 31.89,
+          "models": {
+            "optimistic": 24.2,
+            "best_guess": 28.6,
+            "pessimistic": 40.3
+          },
+          "best_min": 28.6,
+          "range_min": [
+            24.2,
+            40.3
+          ]
+        },
+        "mon_1530_from_cvh": {
+          "label": "Mon 3:30p CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-15T15:30:00-04:00",
+          "distance_km": 40.82,
+          "models": {
+            "optimistic": 32.6,
+            "best_guess": 42.0,
+            "pessimistic": 57.4
+          },
+          "best_min": 42.0,
+          "range_min": [
+            32.6,
+            57.4
+          ]
+        },
+        "tue_0730_from_cvh": {
+          "label": "Tue 7:30a CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-16T07:30:00-04:00",
+          "distance_km": 32.73,
+          "models": {
+            "optimistic": 42.9,
+            "best_guess": 62.6,
+            "pessimistic": 80.3
+          },
+          "best_min": 62.6,
+          "range_min": [
+            42.9,
+            80.3
+          ]
+        },
+        "sat_1000_to_cvh": {
+          "label": "Sat 10:00a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-20T10:00:00-04:00",
+          "distance_km": 31.89,
+          "models": {
+            "optimistic": 26.2,
+            "best_guess": 33.6,
+            "pessimistic": 48.5
+          },
+          "best_min": 33.6,
+          "range_min": [
+            26.2,
+            48.5
+          ]
+        }
+      }
+    },
+    {
+      "id": "king_dufferin_west_queen",
+      "tier": "1 primary",
+      "label": "2 King-Dufferin / West Queen West",
+      "name": "King-Dufferin / West Queen West",
+      "short_label": "KING-DUFF",
+      "search": "king west",
+      "priority": "youngest/social highest-upside zone; parking must be verified",
+      "center": {
+        "lat": 43.6419,
+        "lng": -79.4286,
+        "label": "Queen St W / Dufferin St"
+      },
+      "neighbourhoods": [
+        "West Queen West",
+        "South Parkdale east edge",
+        "Little Portugal west edge"
+      ],
+      "streets": [
+        "Queen St W",
+        "King St W",
+        "Dufferin St",
+        "Gladstone Ave",
+        "Sudbury St",
+        "Dovercourt Rd",
+        "Shaw St",
+        "Ossington Ave"
+      ],
+      "coords": [
+        [
+          43.6368,
+          -79.4385
+        ],
+        [
+          43.6443,
+          -79.44
+        ],
+        [
+          43.6507,
+          -79.4238
+        ],
+        [
+          43.646,
+          -79.4145
+        ],
+        [
+          43.6392,
+          -79.4202
+        ],
+        [
+          43.6358,
+          -79.4315
+        ]
+      ],
+      "links": {
+        "strava": "https://www.strava.com/heatmap#14/-79.4286/43.6419/hot/run",
+        "google_maps": "https://www.google.com/maps/search/?api=1&query=King-Dufferin+%2F+West+Queen+West+Toronto&center=43.6419,-79.4286",
+        "route_to_cvh": "https://www.google.com/maps/dir/?api=1&origin=43.6419,-79.4286&destination=43.5594,-79.7037&travelmode=driving",
+        "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.6419,-79.4286"
+      },
+      "route_times": {
+        "mon_0630_to_cvh": {
+          "label": "Mon 6:30a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T06:30:00-04:00",
+          "distance_km": 30.2,
+          "models": {
+            "optimistic": 22.6,
+            "best_guess": 27.7,
+            "pessimistic": 39.1
+          },
+          "best_min": 27.7,
+          "range_min": [
+            22.6,
+            39.1
+          ]
+        },
+        "mon_1430_to_cvh": {
+          "label": "Mon 2:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T14:30:00-04:00",
+          "distance_km": 30.31,
+          "models": {
+            "optimistic": 30.0,
+            "best_guess": 39.4,
+            "pessimistic": 65.7
+          },
+          "best_min": 39.4,
+          "range_min": [
+            30.0,
+            65.7
+          ]
+        },
+        "mon_2230_to_cvh": {
+          "label": "Mon 10:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T22:30:00-04:00",
+          "distance_km": 30.2,
+          "models": {
+            "optimistic": 22.9,
+            "best_guess": 27.0,
+            "pessimistic": 38.2
+          },
+          "best_min": 27.0,
+          "range_min": [
+            22.9,
+            38.2
+          ]
+        },
+        "mon_1530_from_cvh": {
+          "label": "Mon 3:30p CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-15T15:30:00-04:00",
+          "distance_km": 39.6,
+          "models": {
+            "optimistic": 31.6,
+            "best_guess": 41.0,
+            "pessimistic": 56.1
+          },
+          "best_min": 41.0,
+          "range_min": [
+            31.6,
+            56.1
+          ]
+        },
+        "tue_0730_from_cvh": {
+          "label": "Tue 7:30a CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-16T07:30:00-04:00",
+          "distance_km": 31.51,
+          "models": {
+            "optimistic": 41.5,
+            "best_guess": 61.2,
+            "pessimistic": 77.9
+          },
+          "best_min": 61.2,
+          "range_min": [
+            41.5,
+            77.9
+          ]
+        },
+        "sat_1000_to_cvh": {
+          "label": "Sat 10:00a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-20T10:00:00-04:00",
+          "distance_km": 30.2,
+          "models": {
+            "optimistic": 25.1,
+            "best_guess": 32.0,
+            "pessimistic": 45.0
+          },
+          "best_min": 32.0,
+          "range_min": [
+            25.1,
+            45.0
+          ]
+        }
+      }
+    },
+    {
+      "id": "little_portugal_ossington_west",
+      "tier": "2 social stretch",
+      "label": "3 Little Portugal / Ossington west",
+      "name": "Little Portugal / Ossington west",
+      "short_label": "OSSINGTON",
+      "search": "dufferin",
+      "priority": "best social radius; CVH/parking are the tradeoff",
+      "center": {
+        "lat": 43.6493,
+        "lng": -79.421,
+        "label": "Dundas St W / Ossington Ave"
+      },
+      "neighbourhoods": [
+        "Little Portugal",
+        "Dufferin Grove edge",
+        "Dovercourt Village south"
+      ],
+      "streets": [
+        "Dundas St W",
+        "Ossington Ave",
+        "Dovercourt Rd",
+        "Dufferin St",
+        "College St",
+        "Queen St W",
+        "Dundas W Station reach"
+      ],
+      "coords": [
+        [
+          43.6428,
+          -79.431
+        ],
+        [
+          43.6548,
+          -79.429
+        ],
+        [
+          43.657,
+          -79.412
+        ],
+        [
+          43.649,
+          -79.4075
+        ],
+        [
+          43.6422,
+          -79.4192
+        ]
+      ],
+      "links": {
+        "strava": "https://www.strava.com/heatmap#14/-79.4210/43.6493/hot/run",
+        "google_maps": "https://www.google.com/maps/search/?api=1&query=Little+Portugal+%2F+Ossington+west+Toronto&center=43.6493,-79.421",
+        "route_to_cvh": "https://www.google.com/maps/dir/?api=1&origin=43.6493,-79.421&destination=43.5594,-79.7037&travelmode=driving",
+        "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.6493,-79.421"
+      },
+      "route_times": {
+        "mon_0630_to_cvh": {
+          "label": "Mon 6:30a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T06:30:00-04:00",
+          "distance_km": 32.09,
+          "models": {
+            "optimistic": 26.8,
+            "best_guess": 32.7,
+            "pessimistic": 45.7
+          },
+          "best_min": 32.7,
+          "range_min": [
+            26.8,
+            45.7
+          ]
+        },
+        "mon_1430_to_cvh": {
+          "label": "Mon 2:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T14:30:00-04:00",
+          "distance_km": 32.06,
+          "models": {
+            "optimistic": 34.4,
+            "best_guess": 46.4,
+            "pessimistic": 78.4
+          },
+          "best_min": 46.4,
+          "range_min": [
+            34.4,
+            78.4
+          ]
+        },
+        "mon_2230_to_cvh": {
+          "label": "Mon 10:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T22:30:00-04:00",
+          "distance_km": 32.09,
+          "models": {
+            "optimistic": 27.0,
+            "best_guess": 32.1,
+            "pessimistic": 45.0
+          },
+          "best_min": 32.1,
+          "range_min": [
+            27.0,
+            45.0
+          ]
+        },
+        "mon_1530_from_cvh": {
+          "label": "Mon 3:30p CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-15T15:30:00-04:00",
+          "distance_km": 33.24,
+          "models": {
+            "optimistic": 37.3,
+            "best_guess": 49.8,
+            "pessimistic": 68.3
+          },
+          "best_min": 49.8,
+          "range_min": [
+            37.3,
+            68.3
+          ]
+        },
+        "tue_0730_from_cvh": {
+          "label": "Tue 7:30a CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-16T07:30:00-04:00",
+          "distance_km": 33.24,
+          "models": {
+            "optimistic": 45.8,
+            "best_guess": 69.3,
+            "pessimistic": 88.8
+          },
+          "best_min": 69.3,
+          "range_min": [
+            45.8,
+            88.8
+          ]
+        },
+        "sat_1000_to_cvh": {
+          "label": "Sat 10:00a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-20T10:00:00-04:00",
+          "distance_km": 32.09,
+          "models": {
+            "optimistic": 29.0,
+            "best_guess": 37.6,
+            "pessimistic": 54.6
+          },
+          "best_min": 37.6,
+          "range_min": [
+            29.0,
+            54.6
+          ]
+        }
+      }
+    },
+    {
+      "id": "humber_bay_park_lawn",
+      "tier": "1 practical fallback",
+      "label": "4 Humber Bay / Park Lawn",
+      "name": "Humber Bay / Park Lawn",
+      "short_label": "HUMBER BAY",
+      "search": "humber bay",
+      "priority": "cleaner commute, easier parking, waterfront running, less downtown energy",
+      "center": {
+        "lat": 43.6235,
+        "lng": -79.4804,
+        "label": "Lake Shore Blvd W / Park Lawn Rd"
+      },
+      "neighbourhoods": [
+        "Humber Bay Shores",
+        "Mimico-Queensway",
+        "Park Lawn condo cluster"
+      ],
+      "streets": [
+        "Lake Shore Blvd W",
+        "Park Lawn Rd",
+        "Marine Parade Dr",
+        "Annie Craig Dr",
+        "Shore Breeze Dr",
+        "Silver Moon Dr",
+        "Brookers Ln",
+        "Legion Rd N",
+        "Manitoba St"
+      ],
+      "coords": [
+        [
+          43.621,
+          -79.493
+        ],
+        [
+          43.635,
+          -79.488
+        ],
+        [
+          43.633,
+          -79.4775
+        ],
+        [
+          43.628,
+          -79.471
+        ],
+        [
+          43.617,
+          -79.473
+        ],
+        [
+          43.6142,
+          -79.4865
+        ]
+      ],
+      "links": {
+        "strava": "https://www.strava.com/heatmap#14/-79.4804/43.6235/hot/run",
+        "google_maps": "https://www.google.com/maps/search/?api=1&query=Humber+Bay+%2F+Park+Lawn+Toronto&center=43.6235,-79.4804",
+        "route_to_cvh": "https://www.google.com/maps/dir/?api=1&origin=43.6235,-79.4804&destination=43.5594,-79.7037&travelmode=driving",
+        "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.6235,-79.4804"
+      },
+      "route_times": {
+        "mon_0630_to_cvh": {
+          "label": "Mon 6:30a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T06:30:00-04:00",
+          "distance_km": 24.66,
+          "models": {
+            "optimistic": 18.4,
+            "best_guess": 22.9,
+            "pessimistic": 33.3
+          },
+          "best_min": 22.9,
+          "range_min": [
+            18.4,
+            33.3
+          ]
+        },
+        "mon_1430_to_cvh": {
+          "label": "Mon 2:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T14:30:00-04:00",
+          "distance_km": 24.66,
+          "models": {
+            "optimistic": 21.9,
+            "best_guess": 28.8,
+            "pessimistic": 45.5
+          },
+          "best_min": 28.8,
+          "range_min": [
+            21.9,
+            45.5
+          ]
+        },
+        "mon_2230_to_cvh": {
+          "label": "Mon 10:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T22:30:00-04:00",
+          "distance_km": 24.66,
+          "models": {
+            "optimistic": 18.4,
+            "best_guess": 21.9,
+            "pessimistic": 31.0
+          },
+          "best_min": 21.9,
+          "range_min": [
+            18.4,
+            31.0
+          ]
+        },
+        "mon_1530_from_cvh": {
+          "label": "Mon 3:30p CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-15T15:30:00-04:00",
+          "distance_km": 25.32,
+          "models": {
+            "optimistic": 26.5,
+            "best_guess": 34.7,
+            "pessimistic": 45.9
+          },
+          "best_min": 34.7,
+          "range_min": [
+            26.5,
+            45.9
+          ]
+        },
+        "tue_0730_from_cvh": {
+          "label": "Tue 7:30a CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-16T07:30:00-04:00",
+          "distance_km": 25.32,
+          "models": {
+            "optimistic": 28.7,
+            "best_guess": 39.4,
+            "pessimistic": 49.1
+          },
+          "best_min": 39.4,
+          "range_min": [
+            28.7,
+            49.1
+          ]
+        },
+        "sat_1000_to_cvh": {
+          "label": "Sat 10:00a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-20T10:00:00-04:00",
+          "distance_km": 24.66,
+          "models": {
+            "optimistic": 20.3,
+            "best_guess": 26.0,
+            "pessimistic": 37.4
+          },
+          "best_min": 26.0,
+          "range_min": [
+            20.3,
+            37.4
+          ]
+        }
+      }
+    },
+    {
+      "id": "mimico_royal_york",
+      "tier": "2 practical fallback",
+      "label": "5 Mimico / Royal York",
+      "name": "Mimico / Royal York",
+      "short_label": "MIMICO",
+      "search": "mimico",
+      "priority": "quieter lakeshore backup with better parking odds",
+      "center": {
+        "lat": 43.6138,
+        "lng": -79.497,
+        "label": "Royal York Rd / Lake Shore Blvd W"
+      },
+      "neighbourhoods": [
+        "Mimico",
+        "Mimico Village",
+        "New Toronto east edge"
+      ],
+      "streets": [
+        "Royal York Rd",
+        "Lake Shore Blvd W",
+        "Mimico Ave",
+        "Superior Ave",
+        "Manitoba St",
+        "Hillside Ave",
+        "Stanley Ave"
+      ],
+      "coords": [
+        [
+          43.601,
+          -79.515
+        ],
+        [
+          43.617,
+          -79.518
+        ],
+        [
+          43.622,
+          -79.493
+        ],
+        [
+          43.615,
+          -79.484
+        ],
+        [
+          43.6035,
+          -79.485
+        ],
+        [
+          43.598,
+          -79.498
+        ]
+      ],
+      "links": {
+        "strava": "https://www.strava.com/heatmap#14/-79.4970/43.6138/hot/run",
+        "google_maps": "https://www.google.com/maps/search/?api=1&query=Mimico+%2F+Royal+York+Toronto&center=43.6138,-79.497",
+        "route_to_cvh": "https://www.google.com/maps/dir/?api=1&origin=43.6138,-79.497&destination=43.5594,-79.7037&travelmode=driving",
+        "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.6138,-79.497"
+      },
+      "route_times": {
+        "mon_0630_to_cvh": {
+          "label": "Mon 6:30a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T06:30:00-04:00",
+          "distance_km": 24.09,
+          "models": {
+            "optimistic": 20.0,
+            "best_guess": 24.7,
+            "pessimistic": 36.0
+          },
+          "best_min": 24.7,
+          "range_min": [
+            20.0,
+            36.0
+          ]
+        },
+        "mon_1430_to_cvh": {
+          "label": "Mon 2:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T14:30:00-04:00",
+          "distance_km": 24.09,
+          "models": {
+            "optimistic": 24.1,
+            "best_guess": 31.2,
+            "pessimistic": 50.8
+          },
+          "best_min": 31.2,
+          "range_min": [
+            24.1,
+            50.8
+          ]
+        },
+        "mon_2230_to_cvh": {
+          "label": "Mon 10:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T22:30:00-04:00",
+          "distance_km": 24.09,
+          "models": {
+            "optimistic": 20.3,
+            "best_guess": 23.4,
+            "pessimistic": 31.9
+          },
+          "best_min": 23.4,
+          "range_min": [
+            20.3,
+            31.9
+          ]
+        },
+        "mon_1530_from_cvh": {
+          "label": "Mon 3:30p CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-15T15:30:00-04:00",
+          "distance_km": 32.57,
+          "models": {
+            "optimistic": 26.1,
+            "best_guess": 33.0,
+            "pessimistic": 45.5
+          },
+          "best_min": 33.0,
+          "range_min": [
+            26.1,
+            45.5
+          ]
+        },
+        "tue_0730_from_cvh": {
+          "label": "Tue 7:30a CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-16T07:30:00-04:00",
+          "distance_km": 24.47,
+          "models": {
+            "optimistic": 29.4,
+            "best_guess": 39.8,
+            "pessimistic": 49.6
+          },
+          "best_min": 39.8,
+          "range_min": [
+            29.4,
+            49.6
+          ]
+        },
+        "sat_1000_to_cvh": {
+          "label": "Sat 10:00a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-20T10:00:00-04:00",
+          "distance_km": 24.09,
+          "models": {
+            "optimistic": 21.7,
+            "best_guess": 27.6,
+            "pessimistic": 41.0
+          },
+          "best_min": 27.6,
+          "range_min": [
+            21.7,
+            41.0
+          ]
+        }
+      }
+    },
+    {
+      "id": "high_park_dundas_west",
+      "tier": "3 special-unit backup",
+      "label": "6 High Park / Dundas West",
+      "name": "High Park / Dundas West",
+      "short_label": "HIGH PARK",
+      "search": "high park",
+      "priority": "excellent running and transit; more settled/family-coded",
+      "center": {
+        "lat": 43.6553,
+        "lng": -79.4639,
+        "label": "Bloor St W / High Park Ave"
+      },
+      "neighbourhoods": [
+        "High Park North",
+        "Roncesvalles north",
+        "Dundas West Station edge"
+      ],
+      "streets": [
+        "Bloor St W",
+        "High Park Ave",
+        "Keele St",
+        "Dundas St W",
+        "Roncesvalles Ave",
+        "Howard Park Ave",
+        "Indian Rd",
+        "Pacific Ave",
+        "Glenlake Ave"
+      ],
+      "coords": [
+        [
+          43.6475,
+          -79.4755
+        ],
+        [
+          43.6585,
+          -79.4775
+        ],
+        [
+          43.6658,
+          -79.4595
+        ],
+        [
+          43.6585,
+          -79.4455
+        ],
+        [
+          43.648,
+          -79.448
+        ],
+        [
+          43.6442,
+          -79.4615
+        ]
+      ],
+      "links": {
+        "strava": "https://www.strava.com/heatmap#14/-79.4639/43.6553/hot/run",
+        "google_maps": "https://www.google.com/maps/search/?api=1&query=High+Park+%2F+Dundas+West+Toronto&center=43.6553,-79.4639",
+        "route_to_cvh": "https://www.google.com/maps/dir/?api=1&origin=43.6553,-79.4639&destination=43.5594,-79.7037&travelmode=driving",
+        "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.6553,-79.4639"
+      },
+      "route_times": {
+        "mon_0630_to_cvh": {
+          "label": "Mon 6:30a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T06:30:00-04:00",
+          "distance_km": 29.33,
+          "models": {
+            "optimistic": 23.1,
+            "best_guess": 28.1,
+            "pessimistic": 40.4
+          },
+          "best_min": 28.1,
+          "range_min": [
+            23.1,
+            40.4
+          ]
+        },
+        "mon_1430_to_cvh": {
+          "label": "Mon 2:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T14:30:00-04:00",
+          "distance_km": 29.33,
+          "models": {
+            "optimistic": 28.4,
+            "best_guess": 37.4,
+            "pessimistic": 62.1
+          },
+          "best_min": 37.4,
+          "range_min": [
+            28.4,
+            62.1
+          ]
+        },
+        "mon_2230_to_cvh": {
+          "label": "Mon 10:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T22:30:00-04:00",
+          "distance_km": 29.33,
+          "models": {
+            "optimistic": 23.0,
+            "best_guess": 27.1,
+            "pessimistic": 38.6
+          },
+          "best_min": 27.1,
+          "range_min": [
+            23.0,
+            38.6
+          ]
+        },
+        "mon_1530_from_cvh": {
+          "label": "Mon 3:30p CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-15T15:30:00-04:00",
+          "distance_km": 37.77,
+          "models": {
+            "optimistic": 31.9,
+            "best_guess": 41.0,
+            "pessimistic": 56.1
+          },
+          "best_min": 41.0,
+          "range_min": [
+            31.9,
+            56.1
+          ]
+        },
+        "tue_0730_from_cvh": {
+          "label": "Tue 7:30a CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-16T07:30:00-04:00",
+          "distance_km": 29.68,
+          "models": {
+            "optimistic": 37.2,
+            "best_guess": 52.4,
+            "pessimistic": 65.6
+          },
+          "best_min": 52.4,
+          "range_min": [
+            37.2,
+            65.6
+          ]
+        },
+        "sat_1000_to_cvh": {
+          "label": "Sat 10:00a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-20T10:00:00-04:00",
+          "distance_km": 29.33,
+          "models": {
+            "optimistic": 25.0,
+            "best_guess": 32.4,
+            "pessimistic": 49.0
+          },
+          "best_min": 32.4,
+          "range_min": [
+            25.0,
+            49.0
+          ]
+        }
+      }
+    },
+    {
+      "id": "junction_triangle_west_bend",
+      "tier": "3 special-unit backup",
+      "label": "7 Junction Triangle / West Bend",
+      "name": "Junction Triangle / West Bend",
+      "short_label": "JUNCTION TRI",
+      "search": "junction",
+      "priority": "renter-heavy west-end compromise; block-by-block inspection matters",
+      "center": {
+        "lat": 43.6632,
+        "lng": -79.4534,
+        "label": "Perth Ave / Wallace Ave"
+      },
+      "neighbourhoods": [
+        "Junction Triangle",
+        "West Bend",
+        "Junction-Wallace Emerson"
+      ],
+      "streets": [
+        "Dundas St W",
+        "Dupont St",
+        "Perth Ave",
+        "Symington Ave",
+        "Wallace Ave",
+        "Sterling Rd",
+        "Lansdowne Ave",
+        "Bloor St W"
+      ],
+      "coords": [
+        [
+          43.6565,
+          -79.4655
+        ],
+        [
+          43.6708,
+          -79.469
+        ],
+        [
+          43.676,
+          -79.444
+        ],
+        [
+          43.662,
+          -79.438
+        ],
+        [
+          43.6555,
+          -79.45
+        ]
+      ],
+      "links": {
+        "strava": "https://www.strava.com/heatmap#14/-79.4534/43.6632/hot/run",
+        "google_maps": "https://www.google.com/maps/search/?api=1&query=Junction+Triangle+%2F+West+Bend+Toronto&center=43.6632,-79.4534",
+        "route_to_cvh": "https://www.google.com/maps/dir/?api=1&origin=43.6632,-79.4534&destination=43.5594,-79.7037&travelmode=driving",
+        "street_view": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=43.6632,-79.4534"
+      },
+      "route_times": {
+        "mon_0630_to_cvh": {
+          "label": "Mon 6:30a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T06:30:00-04:00",
+          "distance_km": 30.7,
+          "models": {
+            "optimistic": 26.4,
+            "best_guess": 32.0,
+            "pessimistic": 46.1
+          },
+          "best_min": 32.0,
+          "range_min": [
+            26.4,
+            46.1
+          ]
+        },
+        "mon_1430_to_cvh": {
+          "label": "Mon 2:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T14:30:00-04:00",
+          "distance_km": 30.7,
+          "models": {
+            "optimistic": 32.6,
+            "best_guess": 42.8,
+            "pessimistic": 68.2
+          },
+          "best_min": 42.8,
+          "range_min": [
+            32.6,
+            68.2
+          ]
+        },
+        "mon_2230_to_cvh": {
+          "label": "Mon 10:30p -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-15T22:30:00-04:00",
+          "distance_km": 30.7,
+          "models": {
+            "optimistic": 26.9,
+            "best_guess": 31.5,
+            "pessimistic": 43.7
+          },
+          "best_min": 31.5,
+          "range_min": [
+            26.9,
+            43.7
+          ]
+        },
+        "mon_1530_from_cvh": {
+          "label": "Mon 3:30p CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-15T15:30:00-04:00",
+          "distance_km": 32.5,
+          "models": {
+            "optimistic": 35.1,
+            "best_guess": 49.2,
+            "pessimistic": 75.1
+          },
+          "best_min": 49.2,
+          "range_min": [
+            35.1,
+            75.1
+          ]
+        },
+        "tue_0730_from_cvh": {
+          "label": "Tue 7:30a CVH -> home",
+          "direction": "from_cvh",
+          "departure_iso": "2026-06-16T07:30:00-04:00",
+          "distance_km": 32.5,
+          "models": {
+            "optimistic": 39.4,
+            "best_guess": 66.3,
+            "pessimistic": 99.0
+          },
+          "best_min": 66.3,
+          "range_min": [
+            39.4,
+            99.0
+          ]
+        },
+        "sat_1000_to_cvh": {
+          "label": "Sat 10:00a -> CVH",
+          "direction": "to_cvh",
+          "departure_iso": "2026-06-20T10:00:00-04:00",
+          "distance_km": 30.7,
+          "models": {
+            "optimistic": 28.9,
+            "best_guess": 37.2,
+            "pessimistic": 54.8
+          },
+          "best_min": 37.2,
+          "range_min": [
+            28.9,
+            54.8
+          ]
+        }
+      }
+    }
+  ],
+  "meta": {
+    "route_api": "google_distance_matrix",
+    "api_calls": 126,
+    "route_note": "Times are area-centre snapshots. Verify final shortlisted addresses individually."
+  }
+}

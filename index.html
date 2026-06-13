@@ -185,14 +185,34 @@
   .map-tools summary::-webkit-details-marker { display: none; }
   .map-tools summary:after { content: "▾"; color: var(--muted); font-size: 10px; }
   .map-tools details[open] summary { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-text); }
-  .map-panel { position: absolute; top: 36px; right: 0; width: 250px; max-width: calc(100vw - 28px); background: var(--map-overlay); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 12px; box-shadow: var(--shadow-md); line-height: 1.45; }
+  .map-panel { position: absolute; top: 36px; right: 0; width: 380px; max-width: calc(100vw - 28px); max-height: calc(100vh - 170px); overflow: auto; background: var(--map-overlay); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 12px; box-shadow: var(--shadow-md); line-height: 1.45; }
   .map-panel h4 { margin: 0 0 6px; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
   .map-panel label { display: flex; align-items: center; gap: 7px; cursor: pointer; padding: 5px 0; }
   .map-panel input { margin: 0; }
   .map-panel .swatch { width: 12px; height: 12px; border-radius: 3px; border: 1px solid rgba(0,0,0,.15); flex-shrink: 0; }
   .map-panel button { width: 100%; margin-top: 8px; border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent-text); border-radius: 6px; padding: 6px 8px; font-size: 11px; font-weight: 600; cursor: pointer; }
+  .target-area-list { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); display: grid; gap: 7px; }
+  .target-area { border: 1px solid var(--border); border-radius: 7px; background: color-mix(in srgb, var(--panel) 74%, transparent); padding: 8px; cursor: pointer; transition: border-color var(--t-fast), background var(--t-fast); }
+  .target-area:hover, .target-area.active { border-color: var(--accent); background: var(--accent-soft); }
+  .target-area .head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; font-size: 12px; font-weight: 700; }
+  .target-area .tier { color: var(--muted); font-size: 9px; text-transform: uppercase; letter-spacing: .06em; white-space: nowrap; }
+  .target-area .meta { margin-top: 3px; color: var(--muted); font-size: 10px; line-height: 1.35; }
+  .target-area .streets { color: var(--text); font-size: 10px; line-height: 1.35; margin-top: 4px; }
+  .route-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; margin-top: 6px; }
+  .route-pill { border: 1px solid var(--border); border-radius: 5px; padding: 4px 5px; background: var(--bg); min-width: 0; }
+  .route-pill b { display: block; font-size: 10px; font-variant-numeric: tabular-nums; color: var(--text); }
+  .route-pill span { display: block; font-size: 8px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .target-links { display: flex; gap: 5px; margin-top: 7px; flex-wrap: wrap; }
+  .target-links a, .target-links button { width: auto; margin: 0; border-radius: 5px; padding: 4px 7px; font-size: 10px; line-height: 1.1; text-decoration: none; border: 1px solid var(--border); background: var(--panel); color: var(--text); font-weight: 600; cursor: pointer; }
+  .target-links a:hover, .target-links button:hover { border-color: var(--accent); color: var(--accent-text); background: var(--accent-soft); }
   .target-zone-label { pointer-events: none; }
-  .target-zone-label div { transform: translate(-50%,-50%); background: rgba(255,255,255,.86); border: 1px solid rgba(22,82,240,.35); color: #123caa; border-radius: 999px; padding: 3px 8px; font: 700 10px/1.2 Geist, sans-serif; white-space: nowrap; box-shadow: 0 1px 5px rgba(0,0,0,.12); }
+  .target-zone-label div { transform: translate(-50%,-50%); background: rgba(255,255,255,.9); border: 1px solid rgba(22,82,240,.35); color: #123caa; border-radius: 999px; padding: 3px 8px; font: 700 10px/1.2 Geist, sans-serif; white-space: nowrap; box-shadow: 0 1px 5px rgba(0,0,0,.12); }
+  .target-center-dot { pointer-events: auto; }
+  .target-center-dot div { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #fff; background: #1652F0; color: #fff; display: flex; align-items: center; justify-content: center; font: 800 11px/1 Geist, sans-serif; box-shadow: 0 1px 6px rgba(0,0,0,.35); }
+  @media (max-width: 700px) {
+    .map-tools { position: fixed; top: auto; right: 12px; bottom: 12px; z-index: 5000; }
+    .map-panel { position: fixed; left: 12px; right: 12px; bottom: 62px; top: auto; width: auto; max-width: none; max-height: min(70vh, 620px); }
+  }
 
   /* Keyboard accessibility — visible focus rings on all interactives */
   :focus { outline: none; }
@@ -434,7 +454,7 @@
           <label>
             <input type="checkbox" id="toggle-target-zone" checked onchange="targetZoneVisible=this.checked; if(this.checked){targetZoneLayer.addTo(map)}else{map.removeLayer(targetZoneLayer)}">
             <span class="swatch" style="background:rgba(22,82,240,.28);border-color:#1652F0"></span>
-            Target west-end area
+            Target streets + commute zones
           </label>
           <label>
             <input type="checkbox" id="toggle-keylocs" onchange="keyLocationsVisible=this.checked; if(this.checked){keyLocationsLayer.addTo(map)}else{map.removeLayer(keyLocationsLayer)}">
@@ -447,6 +467,7 @@
             Old GTA neighbourhood overlay
           </label>
           <button type="button" onclick="focusTargetZones()">Focus target + CVH</button>
+          <div id="target-area-list" class="target-area-list"></div>
         </div>
       </details>
     </div>
@@ -481,6 +502,7 @@ function scheduleRerender() {
   clearTimeout(_rerenderTimer);
   _rerenderTimer = setTimeout(() => {
     if (typeof addOsmLayers === 'function') { try { addOsmLayers(); } catch(e) { console.error('addOsmLayers:', e); } }
+    if (typeof renderTargetAreaLayer === 'function') { try { renderTargetAreaLayer(); } catch(e) { console.error('renderTargetAreaLayer:', e); } }
     if (typeof renderCards === 'function') { try { renderCards(); } catch(e) { console.error('renderCards:', e); } }
     if (window.selectedId && typeof selectApt === 'function') { try { selectApt(window.selectedId); } catch(e) {} }
   }, 100);
@@ -518,6 +540,7 @@ const _jsonLoaders = [
   ['floor_plans.json', 'FLOOR_PLANS', null],
   ['zone_anatomy.json', 'ZONE_ANATOMY', null],
   ['neighborhoods.geojson', 'NEIGHBORHOODS', null],
+  ['target_areas.json', 'TARGET_AREAS', null],
 ];
 const _jsonPromises = _jsonLoaders.map(([fn, k, def]) =>
   fetch('data/' + fn)
@@ -791,78 +814,246 @@ setTimeout(scheduleRerender, 4000);
     })
   }).addTo(map).bindPopup('<b>11 Charlotte (old)</b>');
 
-  // === TARGET DECISION AREA ===
-  // Primary = young/social west-end zone. Fallback = practical waterfront condo zone with easier CVH access.
+  // === TARGET DECISION AREAS ===
+  // Street-level west-end Toronto search zones. Route times come from
+  // data/target_areas.json and are centre-point snapshots, not address quotes.
   let targetZoneVisible = true;
+  let targetAreaFilterId = null;
   const targetZoneLayer = L.featureGroup();
-  const TARGET_ZONES = [
-    {
-      name: 'Primary target: Liberty / King-Dufferin / West Queen West',
-      shortLabel: 'PRIMARY TARGET',
-      search: 'liberty',
-      color: '#1652F0',
-      fill: '#1652F0',
-      coords: [
-        [43.6338, -79.4405],
-        [43.6388, -79.4470],
-        [43.6518, -79.4315],
-        [43.6522, -79.4020],
-        [43.6372, -79.3990],
-        [43.6328, -79.4152],
-      ],
-      note: 'Youngest/social highest-upside zone: Liberty, King-Dufferin, Queen-Dufferin, Gladstone/Sudbury, West Queen West.',
-    },
-    {
-      name: 'Practical fallback: Humber Bay / Park Lawn',
-      shortLabel: 'PRACTICAL FALLBACK',
-      search: 'humber bay',
-      color: '#0E7C3A',
-      fill: '#16a34a',
-      coords: [
-        [43.6125, -79.4995],
-        [43.6285, -79.4990],
-        [43.6350, -79.4825],
-        [43.6230, -79.4685],
-        [43.6130, -79.4780],
-      ],
-      note: 'Cleaner commute/parking/running fallback: Park Lawn, Humber Bay Shores, Mimico waterfront.',
-    },
-  ];
+  const TARGET_AREAS_FALLBACK = {
+    areas: [
+      {
+        id: 'liberty_village_core',
+        tier: '1 primary',
+        label: '1 Liberty Village core',
+        name: 'Liberty Village core',
+        short_label: 'LIBERTY',
+        priority: 'highest young/social + best condo/parking odds',
+        search: 'liberty',
+        center: { lat: 43.6388, lng: -79.4146, label: 'East Liberty St / Western Battery Rd' },
+        neighbourhoods: ['Fort York-Liberty Village', 'Liberty Village', 'Exhibition Place edge'],
+        streets: ['East Liberty St', 'Western Battery Rd', 'Lynn Williams St', 'Hanna Ave', 'Atlantic Ave', 'Jefferson Ave', 'Strachan Ave', 'King St W', 'Ordnance St'],
+        coords: [[43.6350,-79.4240],[43.6418,-79.4260],[43.6428,-79.4142],[43.6405,-79.4050],[43.6352,-79.4068],[43.6335,-79.4160]],
+      },
+      {
+        id: 'king_dufferin_west_queen',
+        tier: '1 primary',
+        label: '2 King-Dufferin / West Queen West',
+        name: 'King-Dufferin / West Queen West',
+        short_label: 'KING-DUFF',
+        priority: 'youngest/social highest-upside zone; parking must be verified',
+        search: 'king west',
+        center: { lat: 43.6419, lng: -79.4286, label: 'Queen St W / Dufferin St' },
+        neighbourhoods: ['West Queen West', 'South Parkdale east edge', 'Little Portugal west edge'],
+        streets: ['Queen St W', 'King St W', 'Dufferin St', 'Gladstone Ave', 'Sudbury St', 'Dovercourt Rd', 'Shaw St', 'Ossington Ave'],
+        coords: [[43.6368,-79.4385],[43.6443,-79.4400],[43.6507,-79.4238],[43.6460,-79.4145],[43.6392,-79.4202],[43.6358,-79.4315]],
+      },
+      {
+        id: 'little_portugal_ossington_west',
+        tier: '2 social stretch',
+        label: '3 Little Portugal / Ossington west',
+        name: 'Little Portugal / Ossington west',
+        short_label: 'OSSINGTON',
+        priority: 'best social radius; CVH/parking are the tradeoff',
+        search: 'dufferin',
+        center: { lat: 43.6493, lng: -79.4210, label: 'Dundas St W / Ossington Ave' },
+        neighbourhoods: ['Little Portugal', 'Dufferin Grove edge', 'Dovercourt Village south'],
+        streets: ['Dundas St W', 'Ossington Ave', 'Dovercourt Rd', 'Dufferin St', 'College St', 'Queen St W', 'Dundas W Station reach'],
+        coords: [[43.6428,-79.4310],[43.6548,-79.4290],[43.6570,-79.4120],[43.6490,-79.4075],[43.6422,-79.4192]],
+      },
+      {
+        id: 'humber_bay_park_lawn',
+        tier: '1 practical fallback',
+        label: '4 Humber Bay / Park Lawn',
+        name: 'Humber Bay / Park Lawn',
+        short_label: 'HUMBER BAY',
+        priority: 'cleaner commute, easier parking, waterfront running, less downtown energy',
+        search: 'humber bay',
+        center: { lat: 43.6235, lng: -79.4804, label: 'Lake Shore Blvd W / Park Lawn Rd' },
+        neighbourhoods: ['Humber Bay Shores', 'Mimico-Queensway', 'Park Lawn condo cluster'],
+        streets: ['Lake Shore Blvd W', 'Park Lawn Rd', 'Marine Parade Dr', 'Annie Craig Dr', 'Shore Breeze Dr', 'Silver Moon Dr', 'Brookers Ln', 'Legion Rd N', 'Manitoba St'],
+        coords: [[43.6210,-79.4930],[43.6350,-79.4880],[43.6330,-79.4775],[43.6280,-79.4710],[43.6170,-79.4730],[43.6142,-79.4865]],
+      },
+      {
+        id: 'mimico_royal_york',
+        tier: '2 practical fallback',
+        label: '5 Mimico / Royal York',
+        name: 'Mimico / Royal York',
+        short_label: 'MIMICO',
+        priority: 'quieter lakeshore backup with better parking odds',
+        search: 'mimico',
+        center: { lat: 43.6138, lng: -79.4970, label: 'Royal York Rd / Lake Shore Blvd W' },
+        neighbourhoods: ['Mimico', 'Mimico Village', 'New Toronto east edge'],
+        streets: ['Royal York Rd', 'Lake Shore Blvd W', 'Mimico Ave', 'Superior Ave', 'Manitoba St', 'Hillside Ave', 'Stanley Ave'],
+        coords: [[43.6010,-79.5150],[43.6170,-79.5180],[43.6220,-79.4930],[43.6150,-79.4840],[43.6035,-79.4850],[43.5980,-79.4980]],
+      },
+      {
+        id: 'high_park_dundas_west',
+        tier: '3 special-unit backup',
+        label: '6 High Park / Dundas West',
+        name: 'High Park / Dundas West',
+        short_label: 'HIGH PARK',
+        priority: 'excellent running and transit; more settled/family-coded',
+        search: 'high park',
+        center: { lat: 43.6553, lng: -79.4639, label: 'Bloor St W / High Park Ave' },
+        neighbourhoods: ['High Park North', 'Roncesvalles north', 'Dundas West Station edge'],
+        streets: ['Bloor St W', 'High Park Ave', 'Keele St', 'Dundas St W', 'Roncesvalles Ave', 'Howard Park Ave', 'Indian Rd', 'Pacific Ave', 'Glenlake Ave'],
+        coords: [[43.6475,-79.4755],[43.6585,-79.4775],[43.6658,-79.4595],[43.6585,-79.4455],[43.6480,-79.4480],[43.6442,-79.4615]],
+      },
+      {
+        id: 'junction_triangle_west_bend',
+        tier: '3 special-unit backup',
+        label: '7 Junction Triangle / West Bend',
+        name: 'Junction Triangle / West Bend',
+        short_label: 'JUNCTION TRI',
+        priority: 'renter-heavy west-end compromise; block-by-block inspection matters',
+        search: 'junction',
+        center: { lat: 43.6632, lng: -79.4534, label: 'Perth Ave / Wallace Ave' },
+        neighbourhoods: ['Junction Triangle', 'West Bend', 'Junction-Wallace Emerson'],
+        streets: ['Dundas St W', 'Dupont St', 'Perth Ave', 'Symington Ave', 'Wallace Ave', 'Sterling Rd', 'Lansdowne Ave', 'Bloor St W'],
+        coords: [[43.6565,-79.4655],[43.6708,-79.4690],[43.6760,-79.4440],[43.6620,-79.4380],[43.6555,-79.4500]],
+      },
+    ],
+  };
 
-  TARGET_ZONES.forEach(z => {
-    const poly = L.polygon(z.coords, {
-      color: z.color,
-      fillColor: z.fill,
-      fillOpacity: z.name.startsWith('Primary') ? 0.22 : 0.15,
-      weight: z.name.startsWith('Primary') ? 3 : 2,
-      opacity: 0.9,
-      dashArray: z.name.startsWith('Primary') ? null : '6 5',
-      interactive: true,
+  function getTargetAreas() {
+    return window.TARGET_AREAS?.areas?.length ? window.TARGET_AREAS.areas : TARGET_AREAS_FALLBACK.areas;
+  }
+  function getTargetArea(id) {
+    return getTargetAreas().find(a => a.id === id);
+  }
+  function routeMinutesLabel(area, slotId) {
+    const r = area?.route_times?.[slotId];
+    if (!r) return 'n/a';
+    const lo = Math.round(r.range_min?.[0] ?? r.best_min ?? 0);
+    const hi = Math.round(r.range_min?.[1] ?? r.best_min ?? 0);
+    const best = Math.round(r.best_min ?? hi);
+    return lo && hi && lo !== hi ? `${lo}-${hi}m (${best})` : `${best}m`;
+  }
+  function routeSlot(area, slotId, label) {
+    return `<div class="route-pill"><b>${routeMinutesLabel(area, slotId)}</b><span>${label}</span></div>`;
+  }
+  function areaRoutesHtml(area) {
+    return `
+      <div class="route-grid">
+        ${routeSlot(area, 'mon_0630_to_cvh', '6:30a in')}
+        ${routeSlot(area, 'mon_1430_to_cvh', '2:30p in')}
+        ${routeSlot(area, 'mon_1530_from_cvh', '3:30p home')}
+        ${routeSlot(area, 'mon_2230_to_cvh', '10:30p in')}
+        ${routeSlot(area, 'tue_0730_from_cvh', '7:30a home')}
+        ${routeSlot(area, 'sat_1000_to_cvh', 'Sat 10a')}
+      </div>`;
+  }
+  function escapeAttr(s) {
+    return String(s || '').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+  function pointInPolygon(lat, lng, ring) {
+    let inside = false;
+    for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+      const yi = ring[i][0], xi = ring[i][1];
+      const yj = ring[j][0], xj = ring[j][1];
+      const intersects = ((yi > lat) !== (yj > lat)) && (lng < (xj - xi) * (lat - yi) / ((yj - yi) || 1e-9) + xi);
+      if (intersects) inside = !inside;
+    }
+    return inside;
+  }
+  function isAptInTargetArea(apt, area) {
+    if (!apt?.lat || !apt?.lng || !area?.coords?.length) return false;
+    return pointInPolygon(apt.lat, apt.lng, area.coords);
+  }
+  function setTargetAreaFilter(id, fit = true) {
+    targetAreaFilterId = id || null;
+    searchTerm = '';
+    const search = document.getElementById('search');
+    if (search) search.value = '';
+    renderTargetAreaList();
+    renderCards();
+    const area = getTargetArea(id);
+    if (fit && area?.coords?.length) {
+      map.fitBounds(L.latLngBounds(area.coords), { padding: [34, 34], maxZoom: 14 });
+    }
+  }
+  function clearTargetAreaFilter() {
+    setTargetAreaFilter(null, false);
+    focusTargetZones();
+  }
+  function areaTooltip(area, idx) {
+    return `<b>${idx + 1}. ${area.name}</b><br>
+      <span style="font-size:11px">${area.center?.label || ''}</span><br>
+      <span style="font-size:11px"><b>Neighbourhoods:</b> ${(area.neighbourhoods || []).join(', ')}</span><br>
+      <span style="font-size:11px"><b>Streets:</b> ${(area.streets || []).slice(0, 8).join(', ')}</span><br>
+      <span style="font-size:11px"><b>CVH ranges:</b> 6:30a ${routeMinutesLabel(area, 'mon_0630_to_cvh')} · 2:30p ${routeMinutesLabel(area, 'mon_1430_to_cvh')} · home ${routeMinutesLabel(area, 'tue_0730_from_cvh')}</span>`;
+  }
+  function renderTargetAreaList() {
+    const el = document.getElementById('target-area-list');
+    if (!el) return;
+    const updated = window.TARGET_AREAS?.generated_at
+      ? new Date(window.TARGET_AREAS.generated_at).toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' })
+      : 'loading routes';
+    const areas = getTargetAreas();
+    el.innerHTML = `
+      <div style="display:flex;justify-content:space-between;gap:8px;align-items:center">
+        <h4 style="margin:0">Target streets</h4>
+        <button type="button" style="width:auto;margin:0;padding:4px 7px;border-color:var(--border);background:var(--panel);color:var(--text)" onclick="clearTargetAreaFilter()">Clear</button>
+      </div>
+      <div style="color:var(--muted);font-size:9px;line-height:1.35;margin-top:-3px">Centre-point Google traffic ranges. Final address still needs individual route check. Updated ${updated}.</div>
+      ${areas.map((area, idx) => `
+        <div class="target-area ${targetAreaFilterId === area.id ? 'active' : ''}" onclick="setTargetAreaFilter('${area.id}')">
+          <div class="head"><span>${area.label || area.name}</span><span class="tier">${area.tier || ''}</span></div>
+          <div class="meta">${area.center?.label || ''} · ${(area.neighbourhoods || []).join(' / ')}</div>
+          <div class="streets">${(area.streets || []).join(' · ')}</div>
+          ${areaRoutesHtml(area)}
+          <div class="target-links" onclick="event.stopPropagation()">
+            <button type="button" onclick="setTargetAreaFilter('${area.id}')">Filter buildings</button>
+            ${area.links?.google_maps ? `<a href="${escapeAttr(area.links.google_maps)}" target="_blank" rel="noopener">Google Maps</a>` : ''}
+            ${area.links?.route_to_cvh ? `<a href="${escapeAttr(area.links.route_to_cvh)}" target="_blank" rel="noopener">Route</a>` : ''}
+            ${area.links?.street_view ? `<a href="${escapeAttr(area.links.street_view)}" target="_blank" rel="noopener">Street View</a>` : ''}
+            ${area.links?.strava ? `<a href="${escapeAttr(area.links.strava)}" target="_blank" rel="noopener">Strava</a>` : ''}
+          </div>
+        </div>
+      `).join('')}`;
+  }
+  function renderTargetAreaLayer() {
+    targetZoneLayer.clearLayers();
+    getTargetAreas().forEach((area, idx) => {
+      const isPrimary = String(area.tier || '').startsWith('1');
+      const color = isPrimary ? '#1652F0' : String(area.tier || '').includes('practical') ? '#0E7C3A' : '#7C3AED';
+      const poly = L.polygon(area.coords, {
+        color,
+        fillColor: color,
+        fillOpacity: isPrimary ? 0.20 : 0.13,
+        weight: isPrimary ? 3 : 2,
+        opacity: 0.9,
+        dashArray: isPrimary ? null : '6 5',
+        interactive: true,
+      });
+      poly.bindTooltip(areaTooltip(area, idx), { sticky: true, direction: 'top' });
+      poly.on('mouseover', e => e.target.setStyle({ fillOpacity: isPrimary ? 0.30 : 0.22, weight: 4 }));
+      poly.on('mouseout', e => e.target.setStyle({ fillOpacity: isPrimary ? 0.20 : 0.13, weight: isPrimary ? 3 : 2 }));
+      poly.on('click', () => setTargetAreaFilter(area.id));
+      targetZoneLayer.addLayer(poly);
+      const center = area.center || {};
+      targetZoneLayer.addLayer(L.marker([center.lat, center.lng], {
+        icon: L.divIcon({ className: 'target-center-dot', html: `<div>${idx + 1}</div>`, iconSize: [26, 26], iconAnchor: [13, 13] }),
+        zIndexOffset: 1600,
+      }).bindTooltip(areaTooltip(area, idx), { sticky: true, direction: 'top' }).on('click', () => setTargetAreaFilter(area.id)));
+      targetZoneLayer.addLayer(L.marker([center.lat, center.lng], {
+        icon: L.divIcon({ className: 'target-zone-label', html: `<div>${area.short_label || area.name}</div>`, iconSize: [1, 1], iconAnchor: [-15, 16] }),
+        interactive: false,
+        keyboard: false,
+        zIndexOffset: 500,
+      }));
     });
-    poly.bindTooltip(`<b>${z.name}</b><br><span style="font-size:11px">${z.note}</span>`, {sticky: true, direction: 'top'});
-    poly.on('mouseover', e => e.target.setStyle({ fillOpacity: z.name.startsWith('Primary') ? 0.32 : 0.25, weight: 4 }));
-    poly.on('mouseout', e => e.target.setStyle({ fillOpacity: z.name.startsWith('Primary') ? 0.22 : 0.15, weight: z.name.startsWith('Primary') ? 3 : 2 }));
-    poly.on('click', () => {
-      document.getElementById('search').value = z.search;
-      renderCards();
-      map.fitBounds(poly.getBounds(), { padding: [36, 36], maxZoom: 14 });
-    });
-    targetZoneLayer.addLayer(poly);
-    const lat = z.coords.reduce((s, c) => s + c[0], 0) / z.coords.length;
-    const lng = z.coords.reduce((s, c) => s + c[1], 0) / z.coords.length;
-    targetZoneLayer.addLayer(L.marker([lat, lng], {
-      icon: L.divIcon({ className: 'target-zone-label', html: `<div>${z.shortLabel}</div>`, iconSize: [1, 1], iconAnchor: [0, 0] }),
-      interactive: false,
-      keyboard: false,
-      zIndexOffset: 500,
-    }));
-  });
-  targetZoneLayer.addTo(map);
+    if (targetZoneVisible && !map.hasLayer(targetZoneLayer)) targetZoneLayer.addTo(map);
+    renderTargetAreaList();
+  }
   function focusTargetZones() {
     const bounds = L.latLngBounds([[CVH.lat, CVH.lng]]);
-    TARGET_ZONES.forEach(z => z.coords.forEach(c => bounds.extend(c)));
+    getTargetAreas().forEach(area => area.coords.forEach(c => bounds.extend(c)));
     map.fitBounds(bounds, { padding: [36, 36], maxZoom: 12 });
   }
+  renderTargetAreaLayer();
+  targetZoneLayer.addTo(map);
 
   // === KEY LOCATIONS LAYER (toggleable: subway stations, run clubs, downtown anchors) ===
   let keyLocationsLayer = L.layerGroup();
@@ -1069,6 +1260,7 @@ setTimeout(scheduleRerender, 4000);
   let searchTerm = '';
   function renderCards() {
     const q = searchTerm.toLowerCase().trim();
+    const targetArea = targetAreaFilterId ? getTargetArea(targetAreaFilterId) : null;
     // Special syntax: "fit:60" → fit_score >= 60
     let fitMin = 0;
     let textQ = q;
@@ -1084,6 +1276,7 @@ setTimeout(scheduleRerender, 4000);
       if (qualityFilter === 'leads_only' && tier !== 'lead') return false;
       if (fitMin && computeFitScore(a, window.COSTS||{}, window.OSRM||{}).score < fitMin) return false;
       if (rentMax < 99999 && (baseRent(a)||9999) > rentMax) return false;
+      if (targetArea && !isAptInTargetArea(a, targetArea)) return false;
       if (textQ) {
         const haystack = (a.name + ' ' + a.address + ' ' + a.zone + ' ' + (a.pros||[]).join(' ') + ' ' + (a.cons||[]).join(' ') + ' ' + (a.running||'')).toLowerCase();
         if (!haystack.includes(textQ)) return false;
@@ -1234,6 +1427,7 @@ setTimeout(scheduleRerender, 4000);
     }
     // TOP-10 HERO: ranked with PM weighting + verification penalties (same algo as Call This Week)
     const top10Hero = (() => {
+      if (targetArea || textQ || fitMin || rentMax < 99999) return '';
       const ranked = APARTMENTS
         .filter(a => isViableCandidate(a) && dataQualityTier(a) !== 'lead')
         .map(a => {
@@ -1269,7 +1463,15 @@ setTimeout(scheduleRerender, 4000);
     const cardsHtml = (sorted.length === 0)
       ? '<p style="color:var(--muted)">No matches.</p>'
       : buildZoneGroupedHtml(htmlArr, sorted);
-    document.getElementById('cards').innerHTML = top10Hero + cardsHtml;
+    const targetBanner = targetArea ? `
+      <div style="background:var(--accent-soft);border:1px solid var(--accent);border-radius:8px;margin-bottom:10px;padding:8px 10px;font-size:11px;line-height:1.35;color:var(--accent-text)">
+        <div style="display:flex;justify-content:space-between;gap:8px;align-items:center">
+          <b>Filtering exact area: ${targetArea.name}</b>
+          <button type="button" onclick="clearTargetAreaFilter()" style="border:1px solid var(--border);background:var(--panel);color:var(--text);border-radius:5px;padding:3px 7px;font-size:10px;cursor:pointer">Clear</button>
+        </div>
+        <div style="color:var(--muted);margin-top:3px">${targetArea.center?.label || ''} · ${(targetArea.streets || []).slice(0, 7).join(' · ')}</div>
+      </div>` : '';
+    document.getElementById('cards').innerHTML = targetBanner + top10Hero + cardsHtml;
     renderMarkers(sorted);
     document.getElementById('fav-count').textContent = STORE.favorites().length;
     document.getElementById('cmp-count').textContent = compareList.length ? `(${compareList.length})` : '';
