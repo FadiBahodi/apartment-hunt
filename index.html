@@ -752,7 +752,11 @@ setTimeout(scheduleRerender, 4000);
       });
       poly.bindTooltip(`<b>${props.name}</b>${props.vibe?'<br><span style="font-size:11px">'+props.vibe+'</span>':''}`, { sticky: true, direction: 'top', className: 'nh-tooltip' });
       poly.on('click', () => {
-        const term = (props.zone_key || props.name).toLowerCase();
+        // Pick the SHORTEST distinctive token from the polygon name so search-filter actually matches building zones
+        // e.g. polygon "Junction · Roncesvalles" → use "junction" — buildings tagged "Junction / Roncesvalles" will match
+        const name = props.name || '';
+        const tokens = name.split(/[·\/]/).map(t => t.trim()).filter(t => t.length >= 4);
+        const term = tokens[0] ? tokens[0].toLowerCase() : (props.zone_key || name).toLowerCase();
         document.getElementById('search').value = term;
         renderCards();
         map.fitBounds(poly.getBounds(), { padding: [20, 20], maxZoom: 14 });
