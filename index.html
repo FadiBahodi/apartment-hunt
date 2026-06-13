@@ -179,10 +179,20 @@
   .red { color: var(--bad); }
   .warn-banner { background: rgba(248,113,113,.1); border: 1px solid var(--bad); padding: 8px 10px; border-radius: 6px; font-size: 12px; margin: 8px 0; color: var(--bad); }
 
-  .legend { position: absolute; top: 12px; right: 12px; background: var(--map-overlay); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); padding: 10px 12px; border-radius: var(--radius); font-size: 11px; z-index: 1000; line-height: 1.7; color: var(--text); box-shadow: var(--shadow-md); }
-  .legend-head { font-size: 10px; color: var(--muted); margin-bottom: 4px; font-weight: 600; }
-  .legend .row { display: flex; align-items: center; gap: 6px; color: var(--text); }
-  .legend .dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+  .map-tools { position: absolute; top: 12px; right: 12px; z-index: 1000; font-size: 11px; color: var(--text); }
+  .map-tools details { position: relative; }
+  .map-tools summary { list-style: none; display: flex; align-items: center; gap: 6px; cursor: pointer; background: var(--map-overlay); border: 1px solid var(--border); border-radius: 999px; padding: 7px 11px; box-shadow: var(--shadow-sm); font-weight: 600; user-select: none; }
+  .map-tools summary::-webkit-details-marker { display: none; }
+  .map-tools summary:after { content: "▾"; color: var(--muted); font-size: 10px; }
+  .map-tools details[open] summary { border-color: var(--accent); background: var(--accent-soft); color: var(--accent-text); }
+  .map-panel { position: absolute; top: 36px; right: 0; width: 250px; max-width: calc(100vw - 28px); background: var(--map-overlay); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid var(--border); border-radius: var(--radius); padding: 10px 12px; box-shadow: var(--shadow-md); line-height: 1.45; }
+  .map-panel h4 { margin: 0 0 6px; font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  .map-panel label { display: flex; align-items: center; gap: 7px; cursor: pointer; padding: 5px 0; }
+  .map-panel input { margin: 0; }
+  .map-panel .swatch { width: 12px; height: 12px; border-radius: 3px; border: 1px solid rgba(0,0,0,.15); flex-shrink: 0; }
+  .map-panel button { width: 100%; margin-top: 8px; border: 1px solid var(--accent); background: var(--accent-soft); color: var(--accent-text); border-radius: 6px; padding: 6px 8px; font-size: 11px; font-weight: 600; cursor: pointer; }
+  .target-zone-label { pointer-events: none; }
+  .target-zone-label div { transform: translate(-50%,-50%); background: rgba(255,255,255,.86); border: 1px solid rgba(22,82,240,.35); color: #123caa; border-radius: 999px; padding: 3px 8px; font: 700 10px/1.2 Geist, sans-serif; white-space: nowrap; box-shadow: 0 1px 5px rgba(0,0,0,.12); }
 
   /* Keyboard accessibility — visible focus rings on all interactives */
   :focus { outline: none; }
@@ -416,30 +426,29 @@
   </aside>
   <main id="map-wrap">
     <div id="map"></div>
-    <div class="legend">
-      <div class="legend-head">Pins</div>
-      <div class="row"><span class="dot" style="background: var(--accent);width:10px;height:10px;border-radius:50%;border:1.5px solid #fff"></span> CVH</div>
-      <div class="row"><span class="dot" style="background: var(--good)"></span> Good</div>
-      <div class="row"><span class="dot" style="background: var(--warn)"></span> Caution</div>
-      <div class="row"><span class="dot" style="background: var(--bad)"></span> Avoid</div>
-      <div class="row"><span class="dot" style="background: var(--link)"></span> Fine</div>
-      <div class="legend-head" style="margin-top:8px">Map</div>
-      <div class="row"><span class="dot" style="background: #0E7C3A"></span> Trail (winter)</div>
-      <div class="row"><span class="dot" style="background: #7c3aed"></span> Trail (3-season)</div>
-      <div class="row"><span class="dot" style="background: #0E7C3A;opacity:.5"></span> Park (OSM)</div>
-      <div class="row"><span style="width:14px;height:3px;background:var(--accent);border-radius:1px"></span> Route to CVH (click building)</div>
-      <div class="row" style="margin-top:6px;border-top:1px solid var(--border);padding-top:6px">
-        <label style="cursor:pointer;display:flex;align-items:center;gap:6px;font-size:11px">
-          <input type="checkbox" id="toggle-neighborhoods" checked onchange="neighborhoodsVisible=this.checked; if(this.checked){neighborhoodsLayer.addTo(map)}else{map.removeLayer(neighborhoodsLayer)}" style="margin:0">
-          Neighborhood overlay
-        </label>
-      </div>
-      <div class="row">
-        <label style="cursor:pointer;display:flex;align-items:center;gap:6px;font-size:11px">
-          <input type="checkbox" id="toggle-keylocs" onchange="keyLocationsVisible=this.checked; if(this.checked){keyLocationsLayer.addTo(map)}else{map.removeLayer(keyLocationsLayer)}" style="margin:0">
-          Key locations (run clubs / downtown anchors / subway termini)
-        </label>
-      </div>
+    <div class="map-tools">
+      <details>
+        <summary>Map layers</summary>
+        <div class="map-panel">
+          <h4>Decision layers</h4>
+          <label>
+            <input type="checkbox" id="toggle-target-zone" checked onchange="targetZoneVisible=this.checked; if(this.checked){targetZoneLayer.addTo(map)}else{map.removeLayer(targetZoneLayer)}">
+            <span class="swatch" style="background:rgba(22,82,240,.28);border-color:#1652F0"></span>
+            Target west-end area
+          </label>
+          <label>
+            <input type="checkbox" id="toggle-keylocs" onchange="keyLocationsVisible=this.checked; if(this.checked){keyLocationsLayer.addTo(map)}else{map.removeLayer(keyLocationsLayer)}">
+            <span class="swatch" style="background:#16a34a"></span>
+            Run clubs / anchors
+          </label>
+          <label>
+            <input type="checkbox" id="toggle-neighborhoods" onchange="neighborhoodsVisible=this.checked; if(this.checked){neighborhoodsLayer.addTo(map)}else{map.removeLayer(neighborhoodsLayer)}">
+            <span class="swatch" style="background:rgba(14,124,58,.18)"></span>
+            Old GTA neighbourhood overlay
+          </label>
+          <button type="button" onclick="focusTargetZones()">Focus target + CVH</button>
+        </div>
+      </details>
     </div>
   </main>
   <aside id="detail">
@@ -782,9 +791,82 @@ setTimeout(scheduleRerender, 4000);
     })
   }).addTo(map).bindPopup('<b>11 Charlotte (old)</b>');
 
+  // === TARGET DECISION AREA ===
+  // Primary = young/social west-end zone. Fallback = practical waterfront condo zone with easier CVH access.
+  let targetZoneVisible = true;
+  const targetZoneLayer = L.featureGroup();
+  const TARGET_ZONES = [
+    {
+      name: 'Primary target: Liberty / King-Dufferin / West Queen West',
+      shortLabel: 'PRIMARY TARGET',
+      search: 'liberty',
+      color: '#1652F0',
+      fill: '#1652F0',
+      coords: [
+        [43.6338, -79.4405],
+        [43.6388, -79.4470],
+        [43.6518, -79.4315],
+        [43.6522, -79.4020],
+        [43.6372, -79.3990],
+        [43.6328, -79.4152],
+      ],
+      note: 'Youngest/social highest-upside zone: Liberty, King-Dufferin, Queen-Dufferin, Gladstone/Sudbury, West Queen West.',
+    },
+    {
+      name: 'Practical fallback: Humber Bay / Park Lawn',
+      shortLabel: 'PRACTICAL FALLBACK',
+      search: 'humber bay',
+      color: '#0E7C3A',
+      fill: '#16a34a',
+      coords: [
+        [43.6125, -79.4995],
+        [43.6285, -79.4990],
+        [43.6350, -79.4825],
+        [43.6230, -79.4685],
+        [43.6130, -79.4780],
+      ],
+      note: 'Cleaner commute/parking/running fallback: Park Lawn, Humber Bay Shores, Mimico waterfront.',
+    },
+  ];
+
+  TARGET_ZONES.forEach(z => {
+    const poly = L.polygon(z.coords, {
+      color: z.color,
+      fillColor: z.fill,
+      fillOpacity: z.name.startsWith('Primary') ? 0.22 : 0.15,
+      weight: z.name.startsWith('Primary') ? 3 : 2,
+      opacity: 0.9,
+      dashArray: z.name.startsWith('Primary') ? null : '6 5',
+      interactive: true,
+    });
+    poly.bindTooltip(`<b>${z.name}</b><br><span style="font-size:11px">${z.note}</span>`, {sticky: true, direction: 'top'});
+    poly.on('mouseover', e => e.target.setStyle({ fillOpacity: z.name.startsWith('Primary') ? 0.32 : 0.25, weight: 4 }));
+    poly.on('mouseout', e => e.target.setStyle({ fillOpacity: z.name.startsWith('Primary') ? 0.22 : 0.15, weight: z.name.startsWith('Primary') ? 3 : 2 }));
+    poly.on('click', () => {
+      document.getElementById('search').value = z.search;
+      renderCards();
+      map.fitBounds(poly.getBounds(), { padding: [36, 36], maxZoom: 14 });
+    });
+    targetZoneLayer.addLayer(poly);
+    const lat = z.coords.reduce((s, c) => s + c[0], 0) / z.coords.length;
+    const lng = z.coords.reduce((s, c) => s + c[1], 0) / z.coords.length;
+    targetZoneLayer.addLayer(L.marker([lat, lng], {
+      icon: L.divIcon({ className: 'target-zone-label', html: `<div>${z.shortLabel}</div>`, iconSize: [1, 1], iconAnchor: [0, 0] }),
+      interactive: false,
+      keyboard: false,
+      zIndexOffset: 500,
+    }));
+  });
+  targetZoneLayer.addTo(map);
+  function focusTargetZones() {
+    const bounds = L.latLngBounds([[CVH.lat, CVH.lng]]);
+    TARGET_ZONES.forEach(z => z.coords.forEach(c => bounds.extend(c)));
+    map.fitBounds(bounds, { padding: [36, 36], maxZoom: 12 });
+  }
+
   // === KEY LOCATIONS LAYER (toggleable: subway stations, run clubs, downtown anchors) ===
   let keyLocationsLayer = L.layerGroup();
-  let keyLocationsVisible = false;  // off by default — opt in via legend
+  let keyLocationsVisible = false;  // off by default — opt in via Map layers
   const KEY_LOCATIONS = [
     // Downtown anchors (for dating reach)
     {name:'King West / Wellington (dating anchor)', lat:43.6437, lng:-79.4030, icon:'🍸', color:'#dc2626'},
@@ -817,7 +899,7 @@ setTimeout(scheduleRerender, 4000);
   // === NEIGHBORHOOD POLYGONS (Google-Maps-NYC style) ===
   // 16 hand-curated polygons with soft pastels, always-labeled, click-to-filter
   let neighborhoodsLayer = L.layerGroup();
-  let neighborhoodsVisible = true;
+  let neighborhoodsVisible = false;
   function addNeighborhoodLayer() {
     if (!window.NEIGHBORHOODS) return;
     neighborhoodsLayer.clearLayers();
