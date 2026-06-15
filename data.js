@@ -764,6 +764,16 @@ const AVOID = [
     name: "2527 Lake Shore Blvd W (Mimico Estates / CAPREIT)",
     why: "Roaches on beds, 18 failed pest treatments in 1 year, retaliation alleged",
     source: "wave-3 audit; Yelp"
+  },
+  {
+    name: "38 Joe Shuster Way (The Bridge)",
+    why: "Urbancorp orphan (builder bankrupt 2016); BEDBUG REGISTRY ENTRY; weekly elevator outages; dedicated hate Twitter; warranty/repair issues unresolved",
+    source: "Wave 11 Agent A (Liberty Village deep research, 2026-06-15)"
+  },
+  {
+    name: "36 Lisgar Street",
+    why: "Urbancorp orphan (builder bankrupt 2016); 'fake 2BR' layouts (500-599sqft is a 1BR with wall); TikTok #blacklisted",
+    source: "Wave Y Mario 5-unit research"
   }
 ];
 
