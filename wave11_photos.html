@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<title>Wave 11 — Per-Building Photo Browser</title>
+<style>
+body { font-family: -apple-system, sans-serif; max-width: 1400px; margin: 0 auto; padding: 20px; background: #f7f7f7; }
+h1 { font-size: 28px; }
+.building { background: white; border-radius: 10px; padding: 20px; margin: 24px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.building h2 { margin: 0 0 8px 0; font-size: 22px; }
+.meta { color: #666; font-size: 14px; margin-bottom: 12px; }
+.units { background: #f0f0f0; padding: 8px 12px; border-radius: 6px; font-size: 13px; margin-bottom: 16px; }
+.units b { color: #2a7; }
+.section { margin-top: 12px; }
+.section h3 { font-size: 14px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin: 16px 0 8px 0; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
+.gallery img { width: 100%; height: 130px; object-fit: cover; border-radius: 6px; cursor: pointer; transition: transform 0.2s; }
+.gallery img:hover { transform: scale(1.05); }
+.maps { display: flex; gap: 10px; margin: 12px 0; }
+.maps img { width: 30%; border-radius: 6px; height: 200px; object-fit: cover; }
+.pdf-link { background: #2a7; color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 4px; font-size: 13px; }
+.no-photo { color: #aaa; font-style: italic; padding: 12px; }
+.lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 999; }
+.lightbox img { max-width: 90%; max-height: 90%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.lightbox.show { display: block; }
+.lightbox span { position: absolute; top: 20px; right: 30px; color: white; font-size: 40px; cursor: pointer; }
+</style>
+</head><body>
+<h1>Wave 11 — Per-Building Photo Browser</h1>
+<p>19 buildings • 280 photos • 21 floor plans. Click any photo to zoom.</p>
+<div class="lightbox" id="lb" onclick="this.classList.remove('show')"><span>×</span><img id="lbi"></div>
+
+<div class="building" id="zen_king_west_19_wb">
+<h2>Zen King West</h2>
+<div class="meta">19 Western Battery Rd — CentreCourt 2024 — indoor 200m running track, cold plunge spa, 5000sqft gym</div>
+<div class="units">UNITS: <b>#801</b> $2150 (450sf, 1) • <b>#1020</b> $2500 (600sf, 1+1) • DRIVE: 39.9m AM / 49.2m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_zen_king_west_19_wb_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zen_king_west_19_wb_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zen_king_west_19_wb_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (5)</h3><div class="gallery">
+<img src="photos/wave11_zen_king_west_19_wb_exterior_001.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zen_king_west_19_wb_exterior_003.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zen_king_west_19_wb_exterior_004.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zen_king_west_19_wb_exterior_005.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zen_king_west_19_wb_exterior_006.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (6)</h3><div class="gallery">
+<img src="photos/wave11_zen_king_west_19_wb_interior_006.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zen_king_west_19_wb_interior_007.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zen_king_west_19_wb_interior_008.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zen_king_west_19_wb_interior_009.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zen_king_west_19_wb_interior_real_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zen_king_west_19_wb_interior_real_2.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Floor plans (12)</h3>
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_001.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_002.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_003.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_004.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_005.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_007.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_008.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_011.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_012.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_013.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_014.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_zen_king_west_19_wb_floorplan_015.png" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+</div>
+</div>
+<div class="building" id="library_district_170_fy">
+<h2>Library District</h2>
+<div class="meta">170 Fort York Blvd — Context 2014 — Toronto Public Library in podium, mature crowd, soundproofed</div>
+<div class="units">UNITS: <b>#1404</b> $2400 (505sf, 1) • DRIVE: 40.5m AM / 54.8m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_library_district_170_fy_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_library_district_170_fy_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_library_district_170_fy_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (1)</h3><div class="gallery">
+<img src="photos/wave11_library_district_170_fy_exterior.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (2)</h3><div class="gallery">
+<img src="photos/wave11_library_district_170_fy_interior_bathroom.jpg" onclick="zoom(this)">
+<img src="photos/wave11_library_district_170_fy_interior_kitchen.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (2)</h3><div class="gallery">
+<img src="photos/wave11_library_district_170_fy_lobby.jpg" onclick="zoom(this)">
+<img src="photos/wave11_library_district_170_fy_amenities.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Floor plans (1)</h3>
+<a class="pdf-link" href="photos/wave11_library_district_170_fy_floorplan.pdf" target="_blank">📄 wave11_library_district_170_fy_floorplan.pdf</a>
+</div>
+</div>
+<div class="building" id="kw_phase3_65_el">
+<h2>KW Condos Phase III</h2>
+<div class="meta">65 East Liberty St — Plaza 2013 — tri-tower complex w/ bowling alley + virtual golf + sky lounge + pool</div>
+<div class="units">UNITS: <b>#1012</b> $2700 (650sf, 1) • <b>#1310</b> $2700 (650sf, 1+1) • DRIVE: 40.4m AM / 50.3m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_kw_phase3_65_el_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (4)</h3><div class="gallery">
+<img src="photos/wave11_kw_phase3_65_el_exterior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_exterior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_exterior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_exterior_4.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (14)</h3><div class="gallery">
+<img src="photos/wave11_kw_phase3_65_el_interior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_10.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_11.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_12.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_13.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_14.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_5.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_6.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_7.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_8.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_interior_9.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (3)</h3><div class="gallery">
+<img src="photos/wave11_kw_phase3_65_el_amenity_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_amenity_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase3_65_el_amenity_3.jpg" onclick="zoom(this)">
+</div></div>
+</div>
+<div class="building" id="kw_phase2_75_el">
+<h2>KW Condos Phase II</h2>
+<div class="meta">75 East Liberty St — Plaza 2013 — same shared amenities as Phase III, smaller floorplate</div>
+<div class="units">UNITS: <b>#1010</b> $2750 (650sf, 1+1) • DRIVE: 39.4m AM / 50.3m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_kw_phase2_75_el_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (4)</h3><div class="gallery">
+<img src="photos/wave11_kw_phase2_75_el_exterior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_exterior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_exterior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_exterior_4.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (8)</h3><div class="gallery">
+<img src="photos/wave11_kw_phase2_75_el_interior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_interior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_interior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_interior_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_interior_5.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_interior_6.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_interior_7.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kw_phase2_75_el_interior_8.jpg" onclick="zoom(this)">
+</div></div>
+</div>
+<div class="building" id="liberty_lakeview_85_el">
+<h2>Liberty Lakeview Phase I</h2>
+<div class="meta">85 East Liberty St — Plaza 2013 — same complex as 65 + 75, closest to Metro grocery</div>
+<div class="units">UNITS: <b>#1018</b> $2480 (600sf, 1) • DRIVE: 39.7m AM / 55.5m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_liberty_lakeview_85_el_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_liberty_lakeview_85_el_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_liberty_lakeview_85_el_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="no-photo">⚠ Only satellite map available — no broker photos found for this building.</div>
+</div>
+<div class="building" id="liberty_on_park_69_lw">
+<h2>Liberty on the Park</h2>
+<div class="meta">69 Lynn Williams St — Canalfa 2013 — boutique 201 units, quietest Liberty street, park access</div>
+<div class="units">UNITS: <b>#302</b> $2400 (635sf, 1) • <b>#205</b> $2600 (500sf, 1) • DRIVE: 39.2m AM / 50.2m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_liberty_on_park_69_lw_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_liberty_on_park_69_lw_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_liberty_on_park_69_lw_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (3)</h3><div class="gallery">
+<img src="photos/wave11_liberty_on_park_69_lw_exterior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_liberty_on_park_69_lw_exterior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_liberty_on_park_69_lw_exterior_3.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (3)</h3><div class="gallery">
+<img src="photos/wave11_liberty_on_park_69_lw_interior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_liberty_on_park_69_lw_interior_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_liberty_on_park_69_lw_interior_6.jpg" onclick="zoom(this)">
+</div></div>
+</div>
+<div class="building" id="zip_80_wb">
+<h2>Zip Condos & Lofts</h2>
+<div class="meta">80 Western Battery Rd — Monarch 2008 — oldest Liberty bldg, 9ft ceilings, 6ft balconies</div>
+<div class="units">UNITS: <b>#1512</b> $2350 (450sf, 1) • <b>#2202</b> $2500 (646sf, 1) • DRIVE: 40.5m AM / 50.6m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_zip_80_wb_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (3)</h3><div class="gallery">
+<img src="photos/wave11_zip_80_wb_exterior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_exterior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_exterior_3.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (8)</h3><div class="gallery">
+<img src="photos/wave11_zip_80_wb_interior_balcony1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_interior_bath.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_interior_bed3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_interior_dining1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_interior_kitchen1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_interior_kitchen2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_interior_kitchen5.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_interior_living5.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (2)</h3><div class="gallery">
+<img src="photos/wave11_zip_80_wb_lobby_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_zip_80_wb_amenity_1.jpg" onclick="zoom(this)">
+</div></div>
+</div>
+<div class="building" id="lv_townhomes_30_wb">
+<h2>Liberty Village Townhomes</h2>
+<div class="meta">30 Western Battery Rd — 2003 — multi-level townhouse w/ 16ft windows + private terrace</div>
+<div class="units">UNITS: <b>#315</b> $2300 (480sf, 1) • <b>#311</b> $2750 (850sf, 1+1) • DRIVE: 40.4m AM / 49.7m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_lv_townhomes_30_wb_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (5)</h3><div class="gallery">
+<img src="photos/wave11_lv_townhomes_30_wb_exterior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_exterior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_exterior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_exterior_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_exterior_5.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (10)</h3><div class="gallery">
+<img src="photos/wave11_lv_townhomes_30_wb_interior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_interior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_interior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_interior_30wb_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_interior_30wb_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_interior_30wb_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_interior_30wb_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_interior_30wb_5.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_interior_30wb_6.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_interior_4.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (6)</h3><div class="gallery">
+<img src="photos/wave11_lv_townhomes_30_wb_amenity_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_amenity_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_amenity_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_amenity_30wb_terrace_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_amenity_30wb_terrace_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_lv_townhomes_30_wb_amenity_4.jpg" onclick="zoom(this)">
+</div></div>
+</div>
+<div class="building" id="electra_1029_kw">
+<h2>Electra Lofts</h2>
+<div class="meta">1029 King St W — Urbancorp 2002 — 2-storey lofts w/ 17ft ceilings, exposed concrete, mezz bedroom</div>
+<div class="units">UNITS: <b>#622</b> $2650 (675sf, 1) • <b>#1011</b> $2700 (680sf, 1+1) • DRIVE: 41.3m AM / 56.1m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_electra_1029_kw_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (9)</h3><div class="gallery">
+<img src="photos/wave11_electra_1029_kw_exterior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_exterior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_exterior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_exterior_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_exterior_5.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_exterior_6.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_exterior_7.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_exterior_8.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_exterior_9.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (6)</h3><div class="gallery">
+<img src="photos/wave11_electra_1029_kw_interior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_interior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_interior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_interior_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_interior_5.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_interior_6.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (6)</h3><div class="gallery">
+<img src="photos/wave11_electra_1029_kw_amenity_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_amenity_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_amenity_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_amenity_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_amenity_5.jpg" onclick="zoom(this)">
+<img src="photos/wave11_electra_1029_kw_amenity_6.jpg" onclick="zoom(this)">
+</div></div>
+</div>
+<div class="building" id="dna3_1030_kw">
+<h2>DNA3</h2>
+<div class="meta">1030 King St W — Canderel 2014 — Loblaws in podium, 'Rain Room' amenity, 602 units</div>
+<div class="units">UNITS: <b>#1008</b> $2500 (450sf, 1) • <b>#1112</b> $2650 (500sf, 1) • <b>#Ph31</b> $2795 (564sf, 1+1) • DRIVE: 40.9m AM / 56.5m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_dna3_1030_kw_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (8)</h3><div class="gallery">
+<img src="photos/wave11_dna3_1030_kw_exterior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_exterior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_exterior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_exterior_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_exterior_5.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_exterior_6.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_exterior_7.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_exterior_8.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (5)</h3><div class="gallery">
+<img src="photos/wave11_dna3_1030_kw_interior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_interior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_interior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_interior_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_interior_5.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (9)</h3><div class="gallery">
+<img src="photos/wave11_dna3_1030_kw_amenity_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_amenity_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_amenity_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_amenity_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_amenity_5.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_amenity_6.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_amenity_7.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_amenity_8_lobby.jpg" onclick="zoom(this)">
+<img src="photos/wave11_dna3_1030_kw_amenity_9.jpg" onclick="zoom(this)">
+</div></div>
+</div>
+<div class="building" id="musee_525_adelaide">
+<h2>Musée Condos</h2>
+<div class="meta">525 Adelaide St W — Plaza 2017 — outdoor rooftop pool, sauna, yoga room, FirstService PM</div>
+<div class="units">UNITS: <b>#631</b> $2450 (509sf, 1) • <b>#1034</b> $2800 (746sf, 1+1) • DRIVE: 41.4m AM / 58.7m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_musee_525_adelaide_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (1)</h3><div class="gallery">
+<img src="photos/wave11_musee_525_adelaide_exterior_1.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (8)</h3><div class="gallery">
+<img src="photos/wave11_musee_525_adelaide_interior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_interior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_interior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_interior_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_interior_5.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_interior_6.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_interior_7.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_interior_8.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (5)</h3><div class="gallery">
+<img src="photos/wave11_musee_525_adelaide_amenity_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_amenity_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_amenity_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_amenity_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_musee_525_adelaide_amenity_5.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Floor plans (1)</h3>
+<a class="pdf-link" href="photos/wave11_musee_525_adelaide_floorplan_alt.pdf" target="_blank">📄 wave11_musee_525_adelaide_floorplan_alt.pdf</a>
+</div>
+</div>
+<div class="building" id="kingly_501_adelaide">
+<h2>Kingly Condos</h2>
+<div class="meta">501 Adelaide St W — Allied REIT + RioCan 2019 — Hariri Pontarini architect, boutique 132 units</div>
+<div class="units">UNITS: <b>#309</b> $2300 (450sf, 1) • DRIVE: 41.8m AM / 59.6m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_kingly_501_adelaide_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (4)</h3><div class="gallery">
+<img src="photos/wave11_kingly_501_adelaide_exterior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_exterior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_exterior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_exterior_4.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (8)</h3><div class="gallery">
+<img src="photos/wave11_kingly_501_adelaide_interior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_interior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_interior_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_interior_4.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_interior_5.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_interior_6.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_interior_7.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_interior_8.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (4)</h3><div class="gallery">
+<img src="photos/wave11_kingly_501_adelaide_amenity_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_amenity_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_amenity_3.jpg" onclick="zoom(this)">
+<img src="photos/wave11_kingly_501_adelaide_amenity_4_lobby.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Floor plans (6)</h3>
+<img src="photos/wave11_kingly_501_adelaide_floorplan_1199sf.jpg" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_kingly_501_adelaide_floorplan_424sf.jpg" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_kingly_501_adelaide_floorplan_548sf.jpg" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_kingly_501_adelaide_floorplan_640sf.jpg" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_kingly_501_adelaide_floorplan_780sf.jpg" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+<img src="photos/wave11_kingly_501_adelaide_floorplan_961sf.jpg" onclick="zoom(this)" style="max-width:200px; margin:4px;">
+</div>
+</div>
+<div class="building" id="optima_81_navy_wharf">
+<h2>Optima at CityPlace</h2>
+<div class="meta">81 Navy Wharf Ct — Concord Adex 2003 — FOB-per-floor security, self-managed, mature owner-occupied</div>
+<div class="units">UNITS: <b>#1606</b> $2800 (730sf, 1+1) • DRIVE: 37.6m AM / 51.2m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_optima_81_navy_wharf_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_optima_81_navy_wharf_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_optima_81_navy_wharf_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (1)</h3><div class="gallery">
+<img src="photos/wave11_optima_81_navy_wharf_exterior.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (6)</h3><div class="gallery">
+<img src="photos/wave11_optima_81_navy_wharf_lobby.jpg" onclick="zoom(this)">
+<img src="photos/wave11_optima_81_navy_wharf_amenity_gym.jpg" onclick="zoom(this)">
+<img src="photos/wave11_optima_81_navy_wharf_amenity_media.jpg" onclick="zoom(this)">
+<img src="photos/wave11_optima_81_navy_wharf_amenity_party.jpg" onclick="zoom(this)">
+<img src="photos/wave11_optima_81_navy_wharf_amenity_pool.jpg" onclick="zoom(this)">
+<img src="photos/wave11_optima_81_navy_wharf_amenity_terrace.jpg" onclick="zoom(this)">
+</div></div>
+</div>
+<div class="building" id="west_one_11_brunel">
+<h2>West One at CityPlace</h2>
+<div class="meta">11 Brunel Ct — Concord Adex 2008 — rock climbing wall amenity, lake-facing</div>
+<div class="units">UNITS: <b>#5009</b> $2150 (450sf, 1) • <b>#4106</b> $2700 (690sf, 1+1) • <b>#201</b> $2750 (720sf, 1+1) • DRIVE: 38.4m AM / 55.7m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_west_one_11_brunel_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_west_one_11_brunel_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_west_one_11_brunel_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (1)</h3><div class="gallery">
+<img src="photos/wave11_west_one_11_brunel_exterior.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (3)</h3><div class="gallery">
+<img src="photos/wave11_west_one_11_brunel_interior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_west_one_11_brunel_interior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_west_one_11_brunel_interior_3.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (4)</h3><div class="gallery">
+<img src="photos/wave11_west_one_11_brunel_amenity_gym.jpg" onclick="zoom(this)">
+<img src="photos/wave11_west_one_11_brunel_amenity_party.jpg" onclick="zoom(this)">
+<img src="photos/wave11_west_one_11_brunel_amenity_pool.jpg" onclick="zoom(this)">
+<img src="photos/wave11_west_one_11_brunel_amenity_terrace.jpg" onclick="zoom(this)">
+</div></div>
+</div>
+<div class="building" id="apex_397_front_w">
+<h2>Apex at CityPlace</h2>
+<div class="meta">397 Front St W — Concord Adex 2003 — original CityPlace tower, designer kitchens</div>
+<div class="units">UNITS: <b>#3110</b> $2675 (690sf, 1+1) • DRIVE: 38.0m AM / 51.5m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_apex_397_front_w_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_apex_397_front_w_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_apex_397_front_w_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (1)</h3><div class="gallery">
+<img src="photos/wave11_apex_397_front_w_exterior.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (3)</h3><div class="gallery">
+<img src="photos/wave11_apex_397_front_w_interior_1.jpg" onclick="zoom(this)">
+<img src="photos/wave11_apex_397_front_w_interior_2.jpg" onclick="zoom(this)">
+<img src="photos/wave11_apex_397_front_w_interior_3.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (4)</h3><div class="gallery">
+<img src="photos/wave11_apex_397_front_w_lobby.jpg" onclick="zoom(this)">
+<img src="photos/wave11_apex_397_front_w_amenity_gym.jpg" onclick="zoom(this)">
+<img src="photos/wave11_apex_397_front_w_amenity_partyroom.jpg" onclick="zoom(this)">
+<img src="photos/wave11_apex_397_front_w_amenity_pool.jpg" onclick="zoom(this)">
+</div></div>
+</div>
+<div class="building" id="matrix_373_front_w">
+<h2>Matrix at CityPlace</h2>
+<div class="meta">373 Front St W — Concord Adex 2002 — paired with Apex, original CityPlace</div>
+<div class="units">UNITS: <b>#1712</b> $2450 (673sf, 1+1) • DRIVE: 38.9m AM / 52.2m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_matrix_373_front_w_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_matrix_373_front_w_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_matrix_373_front_w_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="no-photo">⚠ Only satellite map available — no broker photos found for this building.</div>
+</div>
+<div class="building" id="icon1_270_wellington">
+<h2>Icon I</h2>
+<div class="meta">270 Wellington St W — Tridel 2002 — Mario's pick. Boutique scale, mature management</div>
+<div class="units">UNITS: <b>#502</b> $2550 (588sf, 1+1) • <b>#624</b> $2700 (657sf, 1+1) • DRIVE: 40.4m AM / 58.0m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_icon1_270_wellington_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_icon1_270_wellington_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_icon1_270_wellington_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (1)</h3><div class="gallery">
+<img src="photos/wave11_icon1_270_wellington_exterior.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (1)</h3><div class="gallery">
+<img src="photos/wave11_icon1_270_wellington_interior_kitchen.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (4)</h3><div class="gallery">
+<img src="photos/wave11_icon1_270_wellington_lobby.jpg" onclick="zoom(this)">
+<img src="photos/wave11_icon1_270_wellington_amenity_gym.jpg" onclick="zoom(this)">
+<img src="photos/wave11_icon1_270_wellington_amenity_pool.jpg" onclick="zoom(this)">
+<img src="photos/wave11_icon1_270_wellington_amenity_terrace.jpg" onclick="zoom(this)">
+</div></div>
+</div>
+<div class="building" id="novus_11_ordnance">
+<h2>Novus at Garrison Point</h2>
+<div class="meta">11 Ordnance St — Rental 2021 — institutional landlord (no condo board), pet-friendly, utilities sometimes incl</div>
+<div class="units">UNITS: <b>#1901</b> $2635 (550sf, 1+1) • DRIVE: 40.5m AM / 49.6m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_novus_11_ordnance_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_novus_11_ordnance_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_novus_11_ordnance_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Exterior (1)</h3><div class="gallery">
+<img src="photos/wave11_novus_11_ordnance_exterior.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Interior (2)</h3><div class="gallery">
+<img src="photos/wave11_novus_11_ordnance_int_010.jpg" onclick="zoom(this)">
+<img src="photos/wave11_novus_11_ordnance_int_022.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Amenities + Lobby (8)</h3><div class="gallery">
+<img src="photos/wave11_novus_11_ordnance_lobby.jpg" onclick="zoom(this)">
+<img src="photos/wave11_novus_11_ordnance_amenity_cafelounge.jpg" onclick="zoom(this)">
+<img src="photos/wave11_novus_11_ordnance_amenity_coworkspace.jpg" onclick="zoom(this)">
+<img src="photos/wave11_novus_11_ordnance_amenity_fitness.jpg" onclick="zoom(this)">
+<img src="photos/wave11_novus_11_ordnance_amenity_lounge.jpg" onclick="zoom(this)">
+<img src="photos/wave11_novus_11_ordnance_amenity_study.jpg" onclick="zoom(this)">
+<img src="photos/wave11_novus_11_ordnance_amenity_terrace.jpg" onclick="zoom(this)">
+<img src="photos/wave11_novus_11_ordnance_amenity_theater.jpg" onclick="zoom(this)">
+</div></div>
+<div class="section"><h3>Floor plans (1)</h3>
+<a class="pdf-link" href="photos/wave11_novus_11_ordnance_floorplan.pdf" target="_blank">📄 wave11_novus_11_ordnance_floorplan.pdf</a>
+</div>
+</div>
+<div class="building" id="yards_20_bruyeres">
+<h2>Yards at Fort York</h2>
+<div class="meta">20 Bruyeres Mews — Onni 2015 — best 'quiet professional' Fort York, real squat rack, FirstService PM</div>
+<div class="units">UNITS: <b>#505</b> $2050 (500sf, 1) • DRIVE: 41.0m AM / 48.4m Fri PM CVH</div>
+<div class="section"><h3>Map context</h3><div class="maps">
+<img src="photos/wave11_yards_20_bruyeres_satellite.jpg" onclick="zoom(this)">
+<img src="photos/wave11_yards_20_bruyeres_closeup.jpg" onclick="zoom(this)">
+<img src="photos/wave11_yards_20_bruyeres_neighborhood.jpg" onclick="zoom(this)">
+</div></div>
+<div class="no-photo">⚠ Only satellite map available — no broker photos found for this building.</div>
+</div>
+
+<script>
+function zoom(img) {
+  document.getElementById('lbi').src = img.src;
+  document.getElementById('lb').classList.add('show');
+}
+</script>
+</body></html>

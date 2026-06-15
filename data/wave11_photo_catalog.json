@@ -1,0 +1,544 @@
+{
+  "apex_397_front_w": {
+    "amenity": [
+      "wave11_apex_397_front_w_amenity_gym.jpg",
+      "wave11_apex_397_front_w_amenity_partyroom.jpg",
+      "wave11_apex_397_front_w_amenity_pool.jpg"
+    ],
+    "closeup": [
+      "wave11_apex_397_front_w_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_apex_397_front_w_exterior.jpg"
+    ],
+    "interior": [
+      "wave11_apex_397_front_w_interior_1.jpg",
+      "wave11_apex_397_front_w_interior_2.jpg",
+      "wave11_apex_397_front_w_interior_3.jpg"
+    ],
+    "lobby": [
+      "wave11_apex_397_front_w_lobby.jpg"
+    ],
+    "neighborhood": [
+      "wave11_apex_397_front_w_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_apex_397_front_w_satellite.jpg"
+    ]
+  },
+  "dna3_1030_kw": {
+    "amenity": [
+      "wave11_dna3_1030_kw_amenity_1.jpg",
+      "wave11_dna3_1030_kw_amenity_2.jpg",
+      "wave11_dna3_1030_kw_amenity_3.jpg",
+      "wave11_dna3_1030_kw_amenity_4.jpg",
+      "wave11_dna3_1030_kw_amenity_5.jpg",
+      "wave11_dna3_1030_kw_amenity_6.jpg",
+      "wave11_dna3_1030_kw_amenity_7.jpg",
+      "wave11_dna3_1030_kw_amenity_8_lobby.jpg",
+      "wave11_dna3_1030_kw_amenity_9.jpg"
+    ],
+    "closeup": [
+      "wave11_dna3_1030_kw_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_dna3_1030_kw_exterior_1.jpg",
+      "wave11_dna3_1030_kw_exterior_2.jpg",
+      "wave11_dna3_1030_kw_exterior_3.jpg",
+      "wave11_dna3_1030_kw_exterior_4.jpg",
+      "wave11_dna3_1030_kw_exterior_5.jpg",
+      "wave11_dna3_1030_kw_exterior_6.jpg",
+      "wave11_dna3_1030_kw_exterior_7.jpg",
+      "wave11_dna3_1030_kw_exterior_8.jpg"
+    ],
+    "interior": [
+      "wave11_dna3_1030_kw_interior_1.jpg",
+      "wave11_dna3_1030_kw_interior_2.jpg",
+      "wave11_dna3_1030_kw_interior_3.jpg",
+      "wave11_dna3_1030_kw_interior_4.jpg",
+      "wave11_dna3_1030_kw_interior_5.jpg"
+    ],
+    "neighborhood": [
+      "wave11_dna3_1030_kw_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_dna3_1030_kw_satellite.jpg"
+    ]
+  },
+  "electra_1029_kw": {
+    "amenity": [
+      "wave11_electra_1029_kw_amenity_1.jpg",
+      "wave11_electra_1029_kw_amenity_2.jpg",
+      "wave11_electra_1029_kw_amenity_3.jpg",
+      "wave11_electra_1029_kw_amenity_4.jpg",
+      "wave11_electra_1029_kw_amenity_5.jpg",
+      "wave11_electra_1029_kw_amenity_6.jpg"
+    ],
+    "closeup": [
+      "wave11_electra_1029_kw_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_electra_1029_kw_exterior_1.jpg",
+      "wave11_electra_1029_kw_exterior_2.jpg",
+      "wave11_electra_1029_kw_exterior_3.jpg",
+      "wave11_electra_1029_kw_exterior_4.jpg",
+      "wave11_electra_1029_kw_exterior_5.jpg",
+      "wave11_electra_1029_kw_exterior_6.jpg",
+      "wave11_electra_1029_kw_exterior_7.jpg",
+      "wave11_electra_1029_kw_exterior_8.jpg",
+      "wave11_electra_1029_kw_exterior_9.jpg"
+    ],
+    "interior": [
+      "wave11_electra_1029_kw_interior_1.jpg",
+      "wave11_electra_1029_kw_interior_2.jpg",
+      "wave11_electra_1029_kw_interior_3.jpg",
+      "wave11_electra_1029_kw_interior_4.jpg",
+      "wave11_electra_1029_kw_interior_5.jpg",
+      "wave11_electra_1029_kw_interior_6.jpg"
+    ],
+    "neighborhood": [
+      "wave11_electra_1029_kw_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_electra_1029_kw_satellite.jpg"
+    ]
+  },
+  "icon1_270_wellington": {
+    "amenity": [
+      "wave11_icon1_270_wellington_amenity_gym.jpg",
+      "wave11_icon1_270_wellington_amenity_pool.jpg",
+      "wave11_icon1_270_wellington_amenity_terrace.jpg"
+    ],
+    "closeup": [
+      "wave11_icon1_270_wellington_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_icon1_270_wellington_exterior.jpg"
+    ],
+    "interior": [
+      "wave11_icon1_270_wellington_interior_kitchen.jpg"
+    ],
+    "lobby": [
+      "wave11_icon1_270_wellington_lobby.jpg"
+    ],
+    "neighborhood": [
+      "wave11_icon1_270_wellington_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_icon1_270_wellington_satellite.jpg"
+    ]
+  },
+  "kingly_501_adelaide": {
+    "amenity": [
+      "wave11_kingly_501_adelaide_amenity_1.jpg",
+      "wave11_kingly_501_adelaide_amenity_2.jpg",
+      "wave11_kingly_501_adelaide_amenity_3.jpg",
+      "wave11_kingly_501_adelaide_amenity_4_lobby.jpg"
+    ],
+    "closeup": [
+      "wave11_kingly_501_adelaide_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_kingly_501_adelaide_exterior_1.jpg",
+      "wave11_kingly_501_adelaide_exterior_2.jpg",
+      "wave11_kingly_501_adelaide_exterior_3.jpg",
+      "wave11_kingly_501_adelaide_exterior_4.jpg"
+    ],
+    "floorplan": [
+      "wave11_kingly_501_adelaide_floorplan_1199sf.jpg",
+      "wave11_kingly_501_adelaide_floorplan_424sf.jpg",
+      "wave11_kingly_501_adelaide_floorplan_548sf.jpg",
+      "wave11_kingly_501_adelaide_floorplan_640sf.jpg",
+      "wave11_kingly_501_adelaide_floorplan_780sf.jpg",
+      "wave11_kingly_501_adelaide_floorplan_961sf.jpg"
+    ],
+    "interior": [
+      "wave11_kingly_501_adelaide_interior_1.jpg",
+      "wave11_kingly_501_adelaide_interior_2.jpg",
+      "wave11_kingly_501_adelaide_interior_3.jpg",
+      "wave11_kingly_501_adelaide_interior_4.jpg",
+      "wave11_kingly_501_adelaide_interior_5.jpg",
+      "wave11_kingly_501_adelaide_interior_6.jpg",
+      "wave11_kingly_501_adelaide_interior_7.jpg",
+      "wave11_kingly_501_adelaide_interior_8.jpg"
+    ],
+    "neighborhood": [
+      "wave11_kingly_501_adelaide_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_kingly_501_adelaide_satellite.jpg"
+    ]
+  },
+  "kw_phase2_75_el": {
+    "closeup": [
+      "wave11_kw_phase2_75_el_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_kw_phase2_75_el_exterior_1.jpg",
+      "wave11_kw_phase2_75_el_exterior_2.jpg",
+      "wave11_kw_phase2_75_el_exterior_3.jpg",
+      "wave11_kw_phase2_75_el_exterior_4.jpg"
+    ],
+    "interior": [
+      "wave11_kw_phase2_75_el_interior_1.jpg",
+      "wave11_kw_phase2_75_el_interior_2.jpg",
+      "wave11_kw_phase2_75_el_interior_3.jpg",
+      "wave11_kw_phase2_75_el_interior_4.jpg",
+      "wave11_kw_phase2_75_el_interior_5.jpg",
+      "wave11_kw_phase2_75_el_interior_6.jpg",
+      "wave11_kw_phase2_75_el_interior_7.jpg",
+      "wave11_kw_phase2_75_el_interior_8.jpg"
+    ],
+    "neighborhood": [
+      "wave11_kw_phase2_75_el_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_kw_phase2_75_el_satellite.jpg"
+    ]
+  },
+  "kw_phase3_65_el": {
+    "amenity": [
+      "wave11_kw_phase3_65_el_amenity_1.jpg",
+      "wave11_kw_phase3_65_el_amenity_2.jpg",
+      "wave11_kw_phase3_65_el_amenity_3.jpg"
+    ],
+    "closeup": [
+      "wave11_kw_phase3_65_el_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_kw_phase3_65_el_exterior_1.jpg",
+      "wave11_kw_phase3_65_el_exterior_2.jpg",
+      "wave11_kw_phase3_65_el_exterior_3.jpg",
+      "wave11_kw_phase3_65_el_exterior_4.jpg"
+    ],
+    "interior": [
+      "wave11_kw_phase3_65_el_interior_1.jpg",
+      "wave11_kw_phase3_65_el_interior_10.jpg",
+      "wave11_kw_phase3_65_el_interior_11.jpg",
+      "wave11_kw_phase3_65_el_interior_12.jpg",
+      "wave11_kw_phase3_65_el_interior_13.jpg",
+      "wave11_kw_phase3_65_el_interior_14.jpg",
+      "wave11_kw_phase3_65_el_interior_2.jpg",
+      "wave11_kw_phase3_65_el_interior_3.jpg",
+      "wave11_kw_phase3_65_el_interior_4.jpg",
+      "wave11_kw_phase3_65_el_interior_5.jpg",
+      "wave11_kw_phase3_65_el_interior_6.jpg",
+      "wave11_kw_phase3_65_el_interior_7.jpg",
+      "wave11_kw_phase3_65_el_interior_8.jpg",
+      "wave11_kw_phase3_65_el_interior_9.jpg"
+    ],
+    "neighborhood": [
+      "wave11_kw_phase3_65_el_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_kw_phase3_65_el_satellite.jpg"
+    ]
+  },
+  "liberty_lakeview_85_el": {
+    "closeup": [
+      "wave11_liberty_lakeview_85_el_closeup.jpg"
+    ],
+    "neighborhood": [
+      "wave11_liberty_lakeview_85_el_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_liberty_lakeview_85_el_satellite.jpg"
+    ]
+  },
+  "liberty_on_park_69_lw": {
+    "closeup": [
+      "wave11_liberty_on_park_69_lw_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_liberty_on_park_69_lw_exterior_1.jpg",
+      "wave11_liberty_on_park_69_lw_exterior_2.jpg",
+      "wave11_liberty_on_park_69_lw_exterior_3.jpg"
+    ],
+    "interior": [
+      "wave11_liberty_on_park_69_lw_interior_2.jpg",
+      "wave11_liberty_on_park_69_lw_interior_4.jpg",
+      "wave11_liberty_on_park_69_lw_interior_6.jpg"
+    ],
+    "neighborhood": [
+      "wave11_liberty_on_park_69_lw_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_liberty_on_park_69_lw_satellite.jpg"
+    ]
+  },
+  "library_district_170_fy": {
+    "amen": [
+      "wave11_library_district_170_fy_amenities.jpg"
+    ],
+    "closeup": [
+      "wave11_library_district_170_fy_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_library_district_170_fy_exterior.jpg"
+    ],
+    "floorplan": [
+      "wave11_library_district_170_fy_floorplan.pdf"
+    ],
+    "interior": [
+      "wave11_library_district_170_fy_interior_bathroom.jpg",
+      "wave11_library_district_170_fy_interior_kitchen.jpg"
+    ],
+    "lobby": [
+      "wave11_library_district_170_fy_lobby.jpg"
+    ],
+    "neighborhood": [
+      "wave11_library_district_170_fy_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_library_district_170_fy_satellite.jpg"
+    ]
+  },
+  "lv_townhomes_30_wb": {
+    "amenity": [
+      "wave11_lv_townhomes_30_wb_amenity_1.jpg",
+      "wave11_lv_townhomes_30_wb_amenity_2.jpg",
+      "wave11_lv_townhomes_30_wb_amenity_3.jpg",
+      "wave11_lv_townhomes_30_wb_amenity_30wb_terrace_1.jpg",
+      "wave11_lv_townhomes_30_wb_amenity_30wb_terrace_2.jpg",
+      "wave11_lv_townhomes_30_wb_amenity_4.jpg"
+    ],
+    "closeup": [
+      "wave11_lv_townhomes_30_wb_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_lv_townhomes_30_wb_exterior_1.jpg",
+      "wave11_lv_townhomes_30_wb_exterior_2.jpg",
+      "wave11_lv_townhomes_30_wb_exterior_3.jpg",
+      "wave11_lv_townhomes_30_wb_exterior_4.jpg",
+      "wave11_lv_townhomes_30_wb_exterior_5.jpg"
+    ],
+    "interior": [
+      "wave11_lv_townhomes_30_wb_interior_1.jpg",
+      "wave11_lv_townhomes_30_wb_interior_2.jpg",
+      "wave11_lv_townhomes_30_wb_interior_3.jpg",
+      "wave11_lv_townhomes_30_wb_interior_30wb_1.jpg",
+      "wave11_lv_townhomes_30_wb_interior_30wb_2.jpg",
+      "wave11_lv_townhomes_30_wb_interior_30wb_3.jpg",
+      "wave11_lv_townhomes_30_wb_interior_30wb_4.jpg",
+      "wave11_lv_townhomes_30_wb_interior_30wb_5.jpg",
+      "wave11_lv_townhomes_30_wb_interior_30wb_6.jpg",
+      "wave11_lv_townhomes_30_wb_interior_4.jpg"
+    ],
+    "neighborhood": [
+      "wave11_lv_townhomes_30_wb_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_lv_townhomes_30_wb_satellite.jpg"
+    ]
+  },
+  "matrix_373_front_w": {
+    "closeup": [
+      "wave11_matrix_373_front_w_closeup.jpg"
+    ],
+    "neighborhood": [
+      "wave11_matrix_373_front_w_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_matrix_373_front_w_satellite.jpg"
+    ]
+  },
+  "musee_525_adelaide": {
+    "amenity": [
+      "wave11_musee_525_adelaide_amenity_1.jpg",
+      "wave11_musee_525_adelaide_amenity_2.jpg",
+      "wave11_musee_525_adelaide_amenity_3.jpg",
+      "wave11_musee_525_adelaide_amenity_4.jpg",
+      "wave11_musee_525_adelaide_amenity_5.jpg"
+    ],
+    "closeup": [
+      "wave11_musee_525_adelaide_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_musee_525_adelaide_exterior_1.jpg"
+    ],
+    "floorplan": [
+      "wave11_musee_525_adelaide_floorplan_alt.pdf"
+    ],
+    "interior": [
+      "wave11_musee_525_adelaide_interior_1.jpg",
+      "wave11_musee_525_adelaide_interior_2.jpg",
+      "wave11_musee_525_adelaide_interior_3.jpg",
+      "wave11_musee_525_adelaide_interior_4.jpg",
+      "wave11_musee_525_adelaide_interior_5.jpg",
+      "wave11_musee_525_adelaide_interior_6.jpg",
+      "wave11_musee_525_adelaide_interior_7.jpg",
+      "wave11_musee_525_adelaide_interior_8.jpg"
+    ],
+    "neighborhood": [
+      "wave11_musee_525_adelaide_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_musee_525_adelaide_satellite.jpg"
+    ]
+  },
+  "novus_11_ordnance": {
+    "amenity": [
+      "wave11_novus_11_ordnance_amenity_cafelounge.jpg",
+      "wave11_novus_11_ordnance_amenity_coworkspace.jpg",
+      "wave11_novus_11_ordnance_amenity_fitness.jpg",
+      "wave11_novus_11_ordnance_amenity_lounge.jpg",
+      "wave11_novus_11_ordnance_amenity_study.jpg",
+      "wave11_novus_11_ordnance_amenity_terrace.jpg",
+      "wave11_novus_11_ordnance_amenity_theater.jpg"
+    ],
+    "closeup": [
+      "wave11_novus_11_ordnance_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_novus_11_ordnance_exterior.jpg"
+    ],
+    "floorplan": [
+      "wave11_novus_11_ordnance_floorplan.pdf"
+    ],
+    "int": [
+      "wave11_novus_11_ordnance_int_010.jpg",
+      "wave11_novus_11_ordnance_int_022.jpg"
+    ],
+    "lobby": [
+      "wave11_novus_11_ordnance_lobby.jpg"
+    ],
+    "neighborhood": [
+      "wave11_novus_11_ordnance_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_novus_11_ordnance_satellite.jpg"
+    ]
+  },
+  "optima_81_navy_wharf": {
+    "amenity": [
+      "wave11_optima_81_navy_wharf_amenity_gym.jpg",
+      "wave11_optima_81_navy_wharf_amenity_media.jpg",
+      "wave11_optima_81_navy_wharf_amenity_party.jpg",
+      "wave11_optima_81_navy_wharf_amenity_pool.jpg",
+      "wave11_optima_81_navy_wharf_amenity_terrace.jpg"
+    ],
+    "closeup": [
+      "wave11_optima_81_navy_wharf_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_optima_81_navy_wharf_exterior.jpg"
+    ],
+    "lobby": [
+      "wave11_optima_81_navy_wharf_lobby.jpg"
+    ],
+    "neighborhood": [
+      "wave11_optima_81_navy_wharf_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_optima_81_navy_wharf_satellite.jpg"
+    ]
+  },
+  "west_one_11_brunel": {
+    "amenity": [
+      "wave11_west_one_11_brunel_amenity_gym.jpg",
+      "wave11_west_one_11_brunel_amenity_party.jpg",
+      "wave11_west_one_11_brunel_amenity_pool.jpg",
+      "wave11_west_one_11_brunel_amenity_terrace.jpg"
+    ],
+    "closeup": [
+      "wave11_west_one_11_brunel_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_west_one_11_brunel_exterior.jpg"
+    ],
+    "interior": [
+      "wave11_west_one_11_brunel_interior_1.jpg",
+      "wave11_west_one_11_brunel_interior_2.jpg",
+      "wave11_west_one_11_brunel_interior_3.jpg"
+    ],
+    "neighborhood": [
+      "wave11_west_one_11_brunel_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_west_one_11_brunel_satellite.jpg"
+    ]
+  },
+  "yards_20_bruyeres": {
+    "closeup": [
+      "wave11_yards_20_bruyeres_closeup.jpg"
+    ],
+    "neighborhood": [
+      "wave11_yards_20_bruyeres_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_yards_20_bruyeres_satellite.jpg"
+    ]
+  },
+  "zen_king_west_19_wb": {
+    "closeup": [
+      "wave11_zen_king_west_19_wb_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_zen_king_west_19_wb_exterior_001.jpg",
+      "wave11_zen_king_west_19_wb_exterior_003.jpg",
+      "wave11_zen_king_west_19_wb_exterior_004.jpg",
+      "wave11_zen_king_west_19_wb_exterior_005.jpg",
+      "wave11_zen_king_west_19_wb_exterior_006.jpg"
+    ],
+    "floorplan": [
+      "wave11_zen_king_west_19_wb_floorplan_001.png",
+      "wave11_zen_king_west_19_wb_floorplan_002.png",
+      "wave11_zen_king_west_19_wb_floorplan_003.png",
+      "wave11_zen_king_west_19_wb_floorplan_004.png",
+      "wave11_zen_king_west_19_wb_floorplan_005.png",
+      "wave11_zen_king_west_19_wb_floorplan_007.png",
+      "wave11_zen_king_west_19_wb_floorplan_008.png",
+      "wave11_zen_king_west_19_wb_floorplan_011.png",
+      "wave11_zen_king_west_19_wb_floorplan_012.png",
+      "wave11_zen_king_west_19_wb_floorplan_013.png",
+      "wave11_zen_king_west_19_wb_floorplan_014.png",
+      "wave11_zen_king_west_19_wb_floorplan_015.png"
+    ],
+    "interior": [
+      "wave11_zen_king_west_19_wb_interior_006.jpg",
+      "wave11_zen_king_west_19_wb_interior_007.jpg",
+      "wave11_zen_king_west_19_wb_interior_008.jpg",
+      "wave11_zen_king_west_19_wb_interior_009.jpg",
+      "wave11_zen_king_west_19_wb_interior_real_1.jpg",
+      "wave11_zen_king_west_19_wb_interior_real_2.jpg"
+    ],
+    "neighborhood": [
+      "wave11_zen_king_west_19_wb_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_zen_king_west_19_wb_satellite.jpg"
+    ]
+  },
+  "zip_80_wb": {
+    "amenity": [
+      "wave11_zip_80_wb_amenity_1.jpg"
+    ],
+    "closeup": [
+      "wave11_zip_80_wb_closeup.jpg"
+    ],
+    "exterior": [
+      "wave11_zip_80_wb_exterior_1.jpg",
+      "wave11_zip_80_wb_exterior_2.jpg",
+      "wave11_zip_80_wb_exterior_3.jpg"
+    ],
+    "interior": [
+      "wave11_zip_80_wb_interior_balcony1.jpg",
+      "wave11_zip_80_wb_interior_bath.jpg",
+      "wave11_zip_80_wb_interior_bed3.jpg",
+      "wave11_zip_80_wb_interior_dining1.jpg",
+      "wave11_zip_80_wb_interior_kitchen1.jpg",
+      "wave11_zip_80_wb_interior_kitchen2.jpg",
+      "wave11_zip_80_wb_interior_kitchen5.jpg",
+      "wave11_zip_80_wb_interior_living5.jpg"
+    ],
+    "lobby": [
+      "wave11_zip_80_wb_lobby_1.jpg"
+    ],
+    "neighborhood": [
+      "wave11_zip_80_wb_neighborhood.jpg"
+    ],
+    "satellite": [
+      "wave11_zip_80_wb_satellite.jpg"
+    ]
+  }
+}
