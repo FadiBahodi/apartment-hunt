@@ -1,0 +1,1828 @@
+{
+  "10 CAPREOL COURT": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.1,
+      "distance_km": 32.68
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.6,
+      "distance_km": 33.4
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 43.8,
+      "distance_km": 41.66
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 51.3,
+      "distance_km": 41.66
+    },
+    "king_west_7pm": {
+      "duration_min": 5.6,
+      "distance_km": 1.38
+    }
+  },
+  "1029 KING STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.3,
+      "distance_km": 31.1
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 49.0,
+      "distance_km": 32.98
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.9,
+      "distance_km": 32.98
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 56.1,
+      "distance_km": 32.98
+    },
+    "king_west_7pm": {
+      "duration_min": 5.8,
+      "distance_km": 1.57
+    }
+  },
+  "1030 KING STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.9,
+      "distance_km": 31.03
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 49.7,
+      "distance_km": 32.98
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 48.0,
+      "distance_km": 33.14
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 56.5,
+      "distance_km": 33.14
+    },
+    "king_west_7pm": {
+      "duration_min": 5.5,
+      "distance_km": 1.51
+    }
+  },
+  "106 DOVERCOURT ROAD": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.4,
+      "distance_km": 30.82
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.8,
+      "distance_km": 31.97
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 47.7,
+      "distance_km": 32.13
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 56.2,
+      "distance_km": 32.13
+    },
+    "king_west_7pm": {
+      "duration_min": 6.9,
+      "distance_km": 2.01
+    }
+  },
+  "109 OSSINGTON AVENUENUE": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.5,
+      "distance_km": 31.3
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 49.3,
+      "distance_km": 32.45
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 49.0,
+      "distance_km": 32.61
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 58.3,
+      "distance_km": 32.61
+    },
+    "king_west_7pm": {
+      "duration_min": 6.6,
+      "distance_km": 1.9
+    }
+  },
+  "11 BRUNEL COURT": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.4,
+      "distance_km": 32.72
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 48.3,
+      "distance_km": 33.63
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.0,
+      "distance_km": 33.63
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 55.7,
+      "distance_km": 33.63
+    },
+    "king_west_7pm": {
+      "duration_min": 7.0,
+      "distance_km": 1.66
+    }
+  },
+  "11 ORDNANCE STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.5,
+      "distance_km": 31.75
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.3,
+      "distance_km": 32.59
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 43.6,
+      "distance_km": 40.69
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 49.6,
+      "distance_km": 40.69
+    },
+    "king_west_7pm": {
+      "duration_min": 6.5,
+      "distance_km": 1.6
+    }
+  },
+  "111 BATHURST STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.8,
+      "distance_km": 33.79
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 51.3,
+      "distance_km": 33.45
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 49.3,
+      "distance_km": 33.62
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 57.9,
+      "distance_km": 33.62
+    },
+    "king_west_7pm": {
+      "duration_min": 0.8,
+      "distance_km": 0.22
+    }
+  },
+  "111 ELIZABETH STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 44.4,
+      "distance_km": 35.04
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 57.8,
+      "distance_km": 36.07
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 55.3,
+      "distance_km": 36.23
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 64.5,
+      "distance_km": 36.23
+    },
+    "king_west_7pm": {
+      "duration_min": 9.4,
+      "distance_km": 2.72
+    }
+  },
+  "1169 QUEEN STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.9,
+      "distance_km": 30.45
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.0,
+      "distance_km": 31.76
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.7,
+      "distance_km": 31.76
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 49.8,
+      "distance_km": 39.86
+    },
+    "king_west_7pm": {
+      "duration_min": 7.5,
+      "distance_km": 2.24
+    }
+  },
+  "125 PETER STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.9,
+      "distance_km": 33.52
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 51.9,
+      "distance_km": 34.39
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 51.2,
+      "distance_km": 34.55
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 61.8,
+      "distance_km": 34.55
+    },
+    "king_west_7pm": {
+      "duration_min": 4.0,
+      "distance_km": 1.22
+    }
+  },
+  "126 SIMCOE STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.0,
+      "distance_km": 34.28
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 53.8,
+      "distance_km": 35.15
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 51.4,
+      "distance_km": 35.31
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 61.8,
+      "distance_km": 35.31
+    },
+    "king_west_7pm": {
+      "duration_min": 6.4,
+      "distance_km": 1.78
+    }
+  },
+  "14 YORK STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 37.0,
+      "distance_km": 33.25
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.0,
+      "distance_km": 34.14
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 43.7,
+      "distance_km": 42.23
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 51.4,
+      "distance_km": 42.23
+    },
+    "king_west_7pm": {
+      "duration_min": 7.9,
+      "distance_km": 2.87
+    }
+  },
+  "15 FORT YORK BOULEVARD": {
+    "mon_7am_to_cvh": {
+      "duration_min": 37.1,
+      "distance_km": 32.48
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.2,
+      "distance_km": 33.46
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 43.1,
+      "distance_km": 41.56
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 50.9,
+      "distance_km": 41.56
+    },
+    "king_west_7pm": {
+      "duration_min": 6.8,
+      "distance_km": 1.71
+    }
+  },
+  "15 ICEBOAT TERRACE": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.8,
+      "distance_km": 32.81
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 48.3,
+      "distance_km": 33.53
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.9,
+      "distance_km": 33.7
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 56.0,
+      "distance_km": 33.7
+    },
+    "king_west_7pm": {
+      "duration_min": 6.0,
+      "distance_km": 1.37
+    }
+  },
+  "150 EAST LIBERTY STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.1,
+      "distance_km": 30.66
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 45.6,
+      "distance_km": 39.93
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 43.9,
+      "distance_km": 39.93
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 50.1,
+      "distance_km": 39.93
+    },
+    "king_west_7pm": {
+      "duration_min": 7.6,
+      "distance_km": 2.06
+    }
+  },
+  "150 SUDBURY STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.9,
+      "distance_km": 30.64
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.5,
+      "distance_km": 31.79
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.6,
+      "distance_km": 31.95
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 54.5,
+      "distance_km": 31.95
+    },
+    "king_west_7pm": {
+      "duration_min": 7.2,
+      "distance_km": 2.15
+    }
+  },
+  "17 BATHURST STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.4,
+      "distance_km": 32.0
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.4,
+      "distance_km": 32.99
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.8,
+      "distance_km": 33.15
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 53.4,
+      "distance_km": 33.15
+    },
+    "king_west_7pm": {
+      "duration_min": 5.5,
+      "distance_km": 1.2
+    }
+  },
+  "170 FORT YORK BOULEVARD": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.5,
+      "distance_km": 33.1
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 49.1,
+      "distance_km": 33.22
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 47.5,
+      "distance_km": 33.39
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 54.8,
+      "distance_km": 33.39
+    },
+    "king_west_7pm": {
+      "duration_min": 4.6,
+      "distance_km": 1.06
+    }
+  },
+  "18 YONGE STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.4,
+      "distance_km": 33.71
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 48.9,
+      "distance_km": 35.66
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 48.4,
+      "distance_km": 35.66
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 53.2,
+      "distance_km": 43.76
+    },
+    "king_west_7pm": {
+      "duration_min": 9.9,
+      "distance_km": 3.31
+    }
+  },
+  "19 BATHURST STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.5,
+      "distance_km": 33.31
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 46.5,
+      "distance_km": 32.82
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.3,
+      "distance_km": 32.82
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 48.4,
+      "distance_km": 40.92
+    },
+    "king_west_7pm": {
+      "duration_min": 5.5,
+      "distance_km": 1.2
+    }
+  },
+  "19 GRAND TRUNK CRESCENTCENT": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.6,
+      "distance_km": 33.56
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 49.0,
+      "distance_km": 34.49
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 44.9,
+      "distance_km": 42.59
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 52.6,
+      "distance_km": 42.59
+    },
+    "king_west_7pm": {
+      "duration_min": 9.0,
+      "distance_km": 2.79
+    }
+  },
+  "19 WESTERN BATTERY ROAD": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.9,
+      "distance_km": 31.68
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 46.6,
+      "distance_km": 32.52
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 44.9,
+      "distance_km": 32.52
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 49.2,
+      "distance_km": 40.61
+    },
+    "king_west_7pm": {
+      "duration_min": 5.8,
+      "distance_km": 1.53
+    }
+  },
+  "2 AUGUSTA AVENUENUE": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.0,
+      "distance_km": 33.69
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 52.5,
+      "distance_km": 34.4
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 50.8,
+      "distance_km": 34.57
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 61.6,
+      "distance_km": 34.57
+    },
+    "king_west_7pm": {
+      "duration_min": 3.0,
+      "distance_km": 0.71
+    }
+  },
+  "20 BRUYERES MEWS": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.0,
+      "distance_km": 33.27
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 46.9,
+      "distance_km": 32.81
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.3,
+      "distance_km": 32.81
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 48.4,
+      "distance_km": 40.91
+    },
+    "king_west_7pm": {
+      "duration_min": 5.1,
+      "distance_km": 1.16
+    }
+  },
+  "20 GLADSTONE AVENUENUE": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.0,
+      "distance_km": 30.47
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 46.4,
+      "distance_km": 31.62
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.9,
+      "distance_km": 31.78
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 50.0,
+      "distance_km": 39.88
+    },
+    "king_west_7pm": {
+      "duration_min": 8.1,
+      "distance_km": 2.45
+    }
+  },
+  "20 JOE SHUSTER WAY": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.1,
+      "distance_km": 30.54
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.3,
+      "distance_km": 31.75
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.5,
+      "distance_km": 31.91
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 51.6,
+      "distance_km": 31.91
+    },
+    "king_west_7pm": {
+      "duration_min": 8.6,
+      "distance_km": 2.45
+    }
+  },
+  "20 MINOWAN MIIKAN LANE": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.1,
+      "distance_km": 30.57
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.1,
+      "distance_km": 31.64
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.4,
+      "distance_km": 31.81
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 54.5,
+      "distance_km": 31.81
+    },
+    "king_west_7pm": {
+      "duration_min": 9.2,
+      "distance_km": 2.65
+    }
+  },
+  "20 STEWART STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.8,
+      "distance_km": 33.9
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 53.9,
+      "distance_km": 33.97
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 52.4,
+      "distance_km": 34.13
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 61.6,
+      "distance_km": 34.13
+    },
+    "king_west_7pm": {
+      "duration_min": 3.9,
+      "distance_km": 0.87
+    }
+  },
+  "21 ICEBOAT TERRACE": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.7,
+      "distance_km": 33.0
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 48.3,
+      "distance_km": 33.12
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 47.1,
+      "distance_km": 33.28
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 54.7,
+      "distance_km": 33.28
+    },
+    "king_west_7pm": {
+      "duration_min": 5.7,
+      "distance_km": 1.31
+    }
+  },
+  "215 FORT YORK BOULEVARD": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.3,
+      "distance_km": 33.61
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 49.1,
+      "distance_km": 33.14
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 47.9,
+      "distance_km": 33.3
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 54.8,
+      "distance_km": 33.3
+    },
+    "king_west_7pm": {
+      "duration_min": 6.3,
+      "distance_km": 1.5
+    }
+  },
+  "219 FORT YORK BOULEVARD": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.0,
+      "distance_km": 33.56
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 49.9,
+      "distance_km": 33.27
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 48.4,
+      "distance_km": 33.43
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 55.7,
+      "distance_km": 33.43
+    },
+    "king_west_7pm": {
+      "duration_min": 6.0,
+      "distance_km": 1.44
+    }
+  },
+  "25 CAPREOL COURT": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.2,
+      "distance_km": 32.7
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 46.1,
+      "distance_km": 41.68
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.9,
+      "distance_km": 33.59
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 51.6,
+      "distance_km": 41.68
+    },
+    "king_west_7pm": {
+      "duration_min": 6.2,
+      "distance_km": 1.47
+    }
+  },
+  "25 OXLEY STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.6,
+      "distance_km": 33.58
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 50.0,
+      "distance_km": 33.82
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 47.9,
+      "distance_km": 33.98
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 58.5,
+      "distance_km": 33.98
+    },
+    "king_west_7pm": {
+      "duration_min": 6.2,
+      "distance_km": 1.55
+    }
+  },
+  "25 TELEGRAM MEWS": {
+    "mon_7am_to_cvh": {
+      "duration_min": 37.5,
+      "distance_km": 32.59
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 46.0,
+      "distance_km": 41.64
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.9,
+      "distance_km": 33.55
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 51.5,
+      "distance_km": 41.64
+    },
+    "king_west_7pm": {
+      "duration_min": 6.7,
+      "distance_km": 1.57
+    }
+  },
+  "250 WELLINGTON STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.6,
+      "distance_km": 33.22
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 50.2,
+      "distance_km": 33.87
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 48.4,
+      "distance_km": 34.03
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 58.8,
+      "distance_km": 34.03
+    },
+    "king_west_7pm": {
+      "duration_min": 7.3,
+      "distance_km": 1.71
+    }
+  },
+  "270 WELLINGTON STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.4,
+      "distance_km": 33.14
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 49.4,
+      "distance_km": 33.79
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 47.9,
+      "distance_km": 33.95
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 58.0,
+      "distance_km": 33.95
+    },
+    "king_west_7pm": {
+      "duration_min": 7.0,
+      "distance_km": 1.63
+    }
+  },
+  "285 DUFFERIN STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 37.2,
+      "distance_km": 29.89
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 44.6,
+      "distance_km": 31.2
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 41.6,
+      "distance_km": 39.3
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 46.7,
+      "distance_km": 39.3
+    },
+    "king_west_7pm": {
+      "duration_min": 7.7,
+      "distance_km": 2.43
+    }
+  },
+  "30 NELSON STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.9,
+      "distance_km": 33.97
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 53.0,
+      "distance_km": 34.51
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 51.0,
+      "distance_km": 34.67
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 62.0,
+      "distance_km": 34.67
+    },
+    "king_west_7pm": {
+      "duration_min": 5.8,
+      "distance_km": 1.66
+    }
+  },
+  "30 ORDNANCE STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.2,
+      "distance_km": 31.71
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 46.9,
+      "distance_km": 32.55
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 43.4,
+      "distance_km": 40.64
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 49.4,
+      "distance_km": 40.64
+    },
+    "king_west_7pm": {
+      "duration_min": 6.2,
+      "distance_km": 1.56
+    }
+  },
+  "30 WESTERN BATTERY ROAD": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.4,
+      "distance_km": 31.77
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.2,
+      "distance_km": 32.45
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.4,
+      "distance_km": 32.61
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 49.7,
+      "distance_km": 40.71
+    },
+    "king_west_7pm": {
+      "duration_min": 6.3,
+      "distance_km": 1.62
+    }
+  },
+  "300 FRONT STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.0,
+      "distance_km": 33.23
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 49.5,
+      "distance_km": 34.05
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 47.9,
+      "distance_km": 34.05
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 58.2,
+      "distance_km": 34.05
+    },
+    "king_west_7pm": {
+      "duration_min": 7.2,
+      "distance_km": 1.91
+    }
+  },
+  "36 LISGAR STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.3,
+      "distance_km": 30.71
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 48.4,
+      "distance_km": 31.92
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 47.9,
+      "distance_km": 32.09
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 55.6,
+      "distance_km": 32.09
+    },
+    "king_west_7pm": {
+      "duration_min": 7.4,
+      "distance_km": 2.14
+    }
+  },
+  "373 FRONT STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.9,
+      "distance_km": 32.97
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 46.4,
+      "distance_km": 41.88
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 44.6,
+      "distance_km": 41.88
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 52.2,
+      "distance_km": 41.88
+    },
+    "king_west_7pm": {
+      "duration_min": 7.2,
+      "distance_km": 1.8
+    }
+  },
+  "38 CAMERON STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 45.2,
+      "distance_km": 33.57
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 52.0,
+      "distance_km": 34.29
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 50.5,
+      "distance_km": 34.45
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 61.4,
+      "distance_km": 34.45
+    },
+    "king_west_7pm": {
+      "duration_min": 4.7,
+      "distance_km": 1.1
+    }
+  },
+  "38 DAN LECKIE WAY": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.5,
+      "distance_km": 33.07
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.0,
+      "distance_km": 32.91
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.6,
+      "distance_km": 33.07
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 48.8,
+      "distance_km": 41.17
+    },
+    "king_west_7pm": {
+      "duration_min": 5.8,
+      "distance_km": 1.24
+    }
+  },
+  "38 JOE SHUSTER WAY": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.6,
+      "distance_km": 30.32
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 46.9,
+      "distance_km": 31.8
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 44.0,
+      "distance_km": 39.89
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 49.3,
+      "distance_km": 39.89
+    },
+    "king_west_7pm": {
+      "duration_min": 7.3,
+      "distance_km": 2.23
+    }
+  },
+  "397 FRONT STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.0,
+      "distance_km": 32.72
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.2,
+      "distance_km": 33.56
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 44.0,
+      "distance_km": 41.66
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 51.5,
+      "distance_km": 41.66
+    },
+    "king_west_7pm": {
+      "duration_min": 5.2,
+      "distance_km": 1.39
+    }
+  },
+  "399 ADELAIDE STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.1,
+      "distance_km": 33.36
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 53.5,
+      "distance_km": 34.03
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 51.8,
+      "distance_km": 34.2
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 61.1,
+      "distance_km": 34.2
+    },
+    "king_west_7pm": {
+      "duration_min": 4.9,
+      "distance_km": 1.08
+    }
+  },
+  "400 WELLINGTON STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.2,
+      "distance_km": 33.04
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 51.8,
+      "distance_km": 34.53
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 50.0,
+      "distance_km": 34.53
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 60.4,
+      "distance_km": 34.53
+    },
+    "king_west_7pm": {
+      "duration_min": 5.8,
+      "distance_km": 1.5
+    }
+  },
+  "458 RICHMOND STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.9,
+      "distance_km": 33.83
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 52.6,
+      "distance_km": 34.51
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 51.8,
+      "distance_km": 34.68
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 62.1,
+      "distance_km": 34.68
+    },
+    "king_west_7pm": {
+      "duration_min": 3.0,
+      "distance_km": 0.85
+    }
+  },
+  "478 KING STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.7,
+      "distance_km": 33.11
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 53.4,
+      "distance_km": 34.69
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 53.1,
+      "distance_km": 34.86
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 63.2,
+      "distance_km": 34.86
+    },
+    "king_west_7pm": {
+      "duration_min": 7.3,
+      "distance_km": 1.78
+    }
+  },
+  "4K SPADINA AVENUENUE": {
+    "mon_7am_to_cvh": {
+      "duration_min": 37.0,
+      "distance_km": 32.47
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.7,
+      "distance_km": 33.58
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.8,
+      "distance_km": 33.74
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 52.3,
+      "distance_km": 41.84
+    },
+    "king_west_7pm": {
+      "duration_min": 6.2,
+      "distance_km": 1.59
+    }
+  },
+  "50 BRUYERES MEWS": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.2,
+      "distance_km": 33.32
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.5,
+      "distance_km": 32.92
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.8,
+      "distance_km": 32.92
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 49.0,
+      "distance_km": 41.01
+    },
+    "king_west_7pm": {
+      "duration_min": 5.3,
+      "distance_km": 1.22
+    }
+  },
+  "50 JOHN STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.2,
+      "distance_km": 33.31
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 50.0,
+      "distance_km": 33.96
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 48.4,
+      "distance_km": 34.13
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 59.1,
+      "distance_km": 34.13
+    },
+    "king_west_7pm": {
+      "duration_min": 6.6,
+      "distance_km": 1.81
+    }
+  },
+  "501 ADELAIDE STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.8,
+      "distance_km": 33.65
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 52.4,
+      "distance_km": 33.68
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 50.3,
+      "distance_km": 33.85
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 59.6,
+      "distance_km": 33.85
+    },
+    "king_west_7pm": {
+      "duration_min": 3.5,
+      "distance_km": 0.8
+    }
+  },
+  "51 EAST LIBERTY STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.9,
+      "distance_km": 31.78
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 46.8,
+      "distance_km": 32.62
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 45.0,
+      "distance_km": 32.62
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 49.7,
+      "distance_km": 40.72
+    },
+    "king_west_7pm": {
+      "duration_min": 6.0,
+      "distance_km": 1.63
+    }
+  },
+  "51 LOWER SIMCOE STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.6,
+      "distance_km": 33.6
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 48.5,
+      "distance_km": 34.47
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.5,
+      "distance_km": 34.47
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 52.5,
+      "distance_km": 42.56
+    },
+    "king_west_7pm": {
+      "duration_min": 8.5,
+      "distance_km": 2.76
+    }
+  },
+  "525 ADELAIDE STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.4,
+      "distance_km": 33.68
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 51.8,
+      "distance_km": 33.56
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 49.8,
+      "distance_km": 33.72
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 58.7,
+      "distance_km": 33.72
+    },
+    "king_west_7pm": {
+      "duration_min": 0.4,
+      "distance_km": 0.11
+    }
+  },
+  "543 RICHMOND STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.9,
+      "distance_km": 34.1
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 53.0,
+      "distance_km": 34.58
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 51.7,
+      "distance_km": 34.75
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 62.1,
+      "distance_km": 34.75
+    },
+    "king_west_7pm": {
+      "duration_min": 2.2,
+      "distance_km": 0.53
+    }
+  },
+  "550 QUEENS QUAY W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.4,
+      "distance_km": 33.09
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 45.9,
+      "distance_km": 32.73
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 44.5,
+      "distance_km": 32.9
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 47.5,
+      "distance_km": 40.99
+    },
+    "king_west_7pm": {
+      "duration_min": 8.7,
+      "distance_km": 2.24
+    }
+  },
+  "560 FRONT STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.3,
+      "distance_km": 33.3
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 52.3,
+      "distance_km": 33.62
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 49.7,
+      "distance_km": 33.62
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 59.1,
+      "distance_km": 33.62
+    },
+    "king_west_7pm": {
+      "duration_min": 4.4,
+      "distance_km": 1.15
+    }
+  },
+  "560 KING STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.7,
+      "distance_km": 33.9
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 53.9,
+      "distance_km": 33.98
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 52.5,
+      "distance_km": 34.14
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 61.6,
+      "distance_km": 34.14
+    },
+    "king_west_7pm": {
+      "duration_min": 4.0,
+      "distance_km": 0.87
+    }
+  },
+  "576 FRONT STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.5,
+      "distance_km": 33.22
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 48.7,
+      "distance_km": 33.94
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 47.8,
+      "distance_km": 34.1
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 58.2,
+      "distance_km": 34.1
+    },
+    "king_west_7pm": {
+      "duration_min": 3.3,
+      "distance_km": 0.78
+    }
+  },
+  "600 FLEET STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.9,
+      "distance_km": 33.37
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.4,
+      "distance_km": 32.97
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.0,
+      "distance_km": 32.97
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 53.5,
+      "distance_km": 32.97
+    },
+    "king_west_7pm": {
+      "duration_min": 5.8,
+      "distance_km": 1.26
+    }
+  },
+  "629 KING STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 43.0,
+      "distance_km": 33.94
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 54.3,
+      "distance_km": 34.0
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 52.6,
+      "distance_km": 34.17
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 61.7,
+      "distance_km": 34.17
+    },
+    "king_west_7pm": {
+      "duration_min": 4.1,
+      "distance_km": 0.91
+    }
+  },
+  "65 EAST LIBERTY STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.4,
+      "distance_km": 31.9
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.6,
+      "distance_km": 32.74
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.0,
+      "distance_km": 32.74
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 50.3,
+      "distance_km": 40.83
+    },
+    "king_west_7pm": {
+      "duration_min": 6.5,
+      "distance_km": 1.75
+    }
+  },
+  "650 KING STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.7,
+      "distance_km": 33.88
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 51.5,
+      "distance_km": 33.45
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 49.4,
+      "distance_km": 33.62
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 57.9,
+      "distance_km": 33.62
+    },
+    "king_west_7pm": {
+      "duration_min": 1.6,
+      "distance_km": 0.3
+    }
+  },
+  "68 ABELL STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 41.3,
+      "distance_km": 30.84
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.2,
+      "distance_km": 31.8
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.6,
+      "distance_km": 31.97
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 55.1,
+      "distance_km": 31.97
+    },
+    "king_west_7pm": {
+      "duration_min": 8.2,
+      "distance_km": 2.26
+    }
+  },
+  "69 LYNN WILLIAMS STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.2,
+      "distance_km": 30.69
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.6,
+      "distance_km": 31.87
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 43.9,
+      "distance_km": 39.96
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 50.2,
+      "distance_km": 39.96
+    },
+    "king_west_7pm": {
+      "duration_min": 6.6,
+      "distance_km": 1.83
+    }
+  },
+  "7 SHANK STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.5,
+      "distance_km": 31.09
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 49.0,
+      "distance_km": 33.0
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 47.3,
+      "distance_km": 33.0
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 56.1,
+      "distance_km": 33.0
+    },
+    "king_west_7pm": {
+      "duration_min": 4.8,
+      "distance_km": 1.36
+    }
+  },
+  "705 KING STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.9,
+      "distance_km": 31.88
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 51.9,
+      "distance_km": 33.32
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 49.2,
+      "distance_km": 33.48
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 57.9,
+      "distance_km": 33.48
+    },
+    "king_west_7pm": {
+      "duration_min": 2.5,
+      "distance_km": 0.49
+    }
+  },
+  "75 EAST LIBERTY STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.4,
+      "distance_km": 30.75
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.5,
+      "distance_km": 32.77
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 44.2,
+      "distance_km": 40.86
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 50.3,
+      "distance_km": 40.86
+    },
+    "king_west_7pm": {
+      "duration_min": 6.4,
+      "distance_km": 1.77
+    }
+  },
+  "75 PORTLAND STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.4,
+      "distance_km": 33.85
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 53.4,
+      "distance_km": 33.93
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 52.2,
+      "distance_km": 34.09
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 61.2,
+      "distance_km": 34.09
+    },
+    "king_west_7pm": {
+      "duration_min": 3.7,
+      "distance_km": 0.82
+    }
+  },
+  "775 KING STREET W": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.3,
+      "distance_km": 32.46
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 51.2,
+      "distance_km": 33.25
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 48.9,
+      "distance_km": 33.41
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 57.5,
+      "distance_km": 33.41
+    },
+    "king_west_7pm": {
+      "duration_min": 2.9,
+      "distance_km": 0.64
+    }
+  },
+  "78 TECUMSETH STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.4,
+      "distance_km": 32.49
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 50.4,
+      "distance_km": 33.2
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 48.6,
+      "distance_km": 33.36
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 57.2,
+      "distance_km": 33.36
+    },
+    "king_west_7pm": {
+      "duration_min": 2.8,
+      "distance_km": 0.61
+    }
+  },
+  "80 WESTERN BATTERY ROAD": {
+    "mon_7am_to_cvh": {
+      "duration_min": 40.5,
+      "distance_km": 31.96
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.6,
+      "distance_km": 32.8
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.0,
+      "distance_km": 32.8
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 50.6,
+      "distance_km": 40.89
+    },
+    "king_west_7pm": {
+      "duration_min": 6.7,
+      "distance_km": 1.8
+    }
+  },
+  "81 NAVY WHARF COURT": {
+    "mon_7am_to_cvh": {
+      "duration_min": 37.6,
+      "distance_km": 32.61
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 45.4,
+      "distance_km": 41.55
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 43.5,
+      "distance_km": 41.55
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 51.2,
+      "distance_km": 41.55
+    },
+    "king_west_7pm": {
+      "duration_min": 7.1,
+      "distance_km": 1.86
+    }
+  },
+  "85 EAST LIBERTY STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.7,
+      "distance_km": 30.75
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 48.1,
+      "distance_km": 32.91
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.6,
+      "distance_km": 32.91
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 55.5,
+      "distance_km": 32.91
+    },
+    "king_west_7pm": {
+      "duration_min": 7.0,
+      "distance_km": 1.92
+    }
+  },
+  "9 TECUMSETH STREET": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.7,
+      "distance_km": 32.48
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 50.9,
+      "distance_km": 33.32
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 48.3,
+      "distance_km": 33.32
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 56.7,
+      "distance_km": 33.32
+    },
+    "king_west_7pm": {
+      "duration_min": 3.9,
+      "distance_km": 0.92
+    }
+  },
+  "11 BRUNEL COURT E": {
+    "mon_7am_to_cvh": {
+      "duration_min": 38.4,
+      "distance_km": 32.72
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 48.3,
+      "distance_km": 33.63
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.0,
+      "distance_km": 33.63
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 55.7,
+      "distance_km": 33.63
+    },
+    "king_west_7pm": {
+      "duration_min": 7.0,
+      "distance_km": 1.66
+    }
+  },
+  "78 TECUMSETH STREET E": {
+    "mon_7am_to_cvh": {
+      "duration_min": 42.4,
+      "distance_km": 32.49
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 50.4,
+      "distance_km": 33.2
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 48.6,
+      "distance_km": 33.36
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 57.2,
+      "distance_km": 33.36
+    },
+    "king_west_7pm": {
+      "duration_min": 2.8,
+      "distance_km": 0.61
+    }
+  },
+  "80 QUEENS WHARD ROAD": {
+    "mon_7am_to_cvh": {
+      "duration_min": 39.9,
+      "distance_km": 33.03
+    },
+    "mon_6am_from_cvh": {
+      "duration_min": 47.7,
+      "distance_km": 33.03
+    },
+    "mon_3pm_from_cvh": {
+      "duration_min": 46.0,
+      "distance_km": 33.19
+    },
+    "fri_5pm_from_cvh": {
+      "duration_min": 53.8,
+      "distance_km": 33.19
+    },
+    "king_west_7pm": {
+      "duration_min": 5.8,
+      "distance_km": 1.24
+    }
+  }
+}

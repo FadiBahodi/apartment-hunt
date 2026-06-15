@@ -1,0 +1,1247 @@
+[
+  {
+    "address": "10 CAPREOL COURT",
+    "display_addr": "10 Capreol Court",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2300,
+      2300
+    ],
+    "sqft_range": [
+      517,
+      517
+    ],
+    "avoid": null
+  },
+  {
+    "address": "1029 KING STREET W",
+    "display_addr": "1029 King Street W",
+    "neighborhood": null,
+    "n_units": 2,
+    "rent_range": [
+      2650,
+      2700
+    ],
+    "sqft_range": [
+      675,
+      680
+    ],
+    "avoid": null
+  },
+  {
+    "address": "1030 KING STREET W",
+    "display_addr": "1030 King Street W",
+    "neighborhood": "Niagara",
+    "n_units": 3,
+    "rent_range": [
+      2500,
+      2795
+    ],
+    "sqft_range": [
+      450,
+      564
+    ],
+    "avoid": null
+  },
+  {
+    "address": "106 DOVERCOURT ROAD",
+    "display_addr": "106 Dovercourt Road",
+    "neighborhood": "Trinity-Bellwoods",
+    "n_units": 3,
+    "rent_range": [
+      2400,
+      2700
+    ],
+    "sqft_range": [
+      450,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "109 OSSINGTON AVENUENUE",
+    "display_addr": "109 Ossington Avenue",
+    "neighborhood": "Trinity-Bellwoods",
+    "n_units": 1,
+    "rent_range": [
+      2650,
+      2650
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "11 BRUNEL COURT",
+    "display_addr": "11 Brunel Court",
+    "neighborhood": null,
+    "n_units": 2,
+    "rent_range": [
+      2700,
+      2750
+    ],
+    "sqft_range": [
+      690,
+      720
+    ],
+    "avoid": null
+  },
+  {
+    "address": "11 BRUNEL COURT E",
+    "display_addr": "11 Brunel Court E",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2150,
+      2150
+    ],
+    "sqft_range": [
+      450,
+      450
+    ],
+    "avoid": null
+  },
+  {
+    "address": "11 ORDNANCE STREET",
+    "display_addr": "11 Ordnance Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2635,
+      2635
+    ],
+    "sqft_range": [
+      550,
+      550
+    ],
+    "avoid": null
+  },
+  {
+    "address": "111 BATHURST STREET",
+    "display_addr": "111 Bathurst Street",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 2,
+    "rent_range": [
+      2200,
+      2250
+    ],
+    "sqft_range": [
+      500,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "111 ELIZABETH STREET",
+    "display_addr": "111 Elizabeth Street",
+    "neighborhood": null,
+    "n_units": 2,
+    "rent_range": [
+      2580,
+      2599
+    ],
+    "sqft_range": [
+      670,
+      695
+    ],
+    "avoid": null
+  },
+  {
+    "address": "1169 QUEEN STREET W",
+    "display_addr": "1169 Queen Street W",
+    "neighborhood": "Little Portugal",
+    "n_units": 1,
+    "rent_range": [
+      2400,
+      2400
+    ],
+    "sqft_range": [
+      600,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "125 PETER STREET",
+    "display_addr": "125 Peter Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2600,
+      2600
+    ],
+    "sqft_range": [
+      480,
+      480
+    ],
+    "avoid": null
+  },
+  {
+    "address": "126 SIMCOE STREET",
+    "display_addr": "126 Simcoe Street",
+    "neighborhood": null,
+    "n_units": 2,
+    "rent_range": [
+      2600,
+      2700
+    ],
+    "sqft_range": [
+      642,
+      642
+    ],
+    "avoid": null
+  },
+  {
+    "address": "14 YORK STREET",
+    "display_addr": "14 York Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2450,
+      2450
+    ],
+    "sqft_range": [
+      528,
+      528
+    ],
+    "avoid": null
+  },
+  {
+    "address": "15 FORT YORK BOULEVARD",
+    "display_addr": "15 Fort York Boulevard",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2600,
+      2600
+    ],
+    "sqft_range": [
+      587,
+      587
+    ],
+    "avoid": null
+  },
+  {
+    "address": "15 ICEBOAT TERRACE",
+    "display_addr": "15 Iceboat Terrace",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2000,
+      2000
+    ],
+    "sqft_range": [
+      450,
+      450
+    ],
+    "avoid": null
+  },
+  {
+    "address": "150 EAST LIBERTY STREET",
+    "display_addr": "150 East Liberty Street",
+    "neighborhood": "Niagara",
+    "n_units": 2,
+    "rent_range": [
+      2100,
+      2350
+    ],
+    "sqft_range": [
+      450,
+      510
+    ],
+    "avoid": null
+  },
+  {
+    "address": "150 SUDBURY STREET",
+    "display_addr": "150 Sudbury Street",
+    "neighborhood": "Little Portugal",
+    "n_units": 1,
+    "rent_range": [
+      2150,
+      2150
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "17 BATHURST STREET",
+    "display_addr": "17 Bathurst Street",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 4,
+    "rent_range": [
+      2200,
+      2500
+    ],
+    "sqft_range": [
+      500,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "170 FORT YORK BOULEVARD",
+    "display_addr": "170 Fort York Boulevard",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2400,
+      2400
+    ],
+    "sqft_range": [
+      505,
+      505
+    ],
+    "avoid": null
+  },
+  {
+    "address": "18 YONGE STREET",
+    "display_addr": "18 Yonge Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2690,
+      2690
+    ],
+    "sqft_range": [
+      703,
+      703
+    ],
+    "avoid": null
+  },
+  {
+    "address": "19 BATHURST STREET",
+    "display_addr": "19 Bathurst Street",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 3,
+    "rent_range": [
+      2300,
+      2750
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "19 GRAND TRUNK CRESCENTCENT",
+    "display_addr": "19 Grand Trunk Crescent",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2500,
+      2500
+    ],
+    "sqft_range": [
+      662,
+      662
+    ],
+    "avoid": null
+  },
+  {
+    "address": "19 WESTERN BATTERY ROAD",
+    "display_addr": "19 Western Battery Road",
+    "neighborhood": "Niagara",
+    "n_units": 2,
+    "rent_range": [
+      2150,
+      2500
+    ],
+    "sqft_range": [
+      450,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "2 AUGUSTA AVENUENUE",
+    "display_addr": "2 Augusta Avenue",
+    "neighborhood": "Kensington-Chinatown",
+    "n_units": 1,
+    "rent_range": [
+      2700,
+      2700
+    ],
+    "sqft_range": [
+      600,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "20 BRUYERES MEWS",
+    "display_addr": "20 Bruyeres Mews",
+    "neighborhood": "Niagara",
+    "n_units": 1,
+    "rent_range": [
+      2050,
+      2050
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "20 GLADSTONE AVENUENUE",
+    "display_addr": "20 Gladstone Avenue",
+    "neighborhood": "Little Portugal",
+    "n_units": 1,
+    "rent_range": [
+      2700,
+      2700
+    ],
+    "sqft_range": [
+      600,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "20 JOE SHUSTER WAY",
+    "display_addr": "20 Joe Shuster Way",
+    "neighborhood": "South Parkdale",
+    "n_units": 1,
+    "rent_range": [
+      2395,
+      2395
+    ],
+    "sqft_range": [
+      600,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "20 MINOWAN MIIKAN LANE",
+    "display_addr": "20 Minowan Miikan Lane",
+    "neighborhood": "Little Portugal",
+    "n_units": 1,
+    "rent_range": [
+      2400,
+      2400
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "20 STEWART STREET",
+    "display_addr": "20 Stewart Street",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2350,
+      2350
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "21 ICEBOAT TERRACE",
+    "display_addr": "21 Iceboat Terrace",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2500,
+      2500
+    ],
+    "sqft_range": [
+      688,
+      688
+    ],
+    "avoid": null
+  },
+  {
+    "address": "215 FORT YORK BOULEVARD",
+    "display_addr": "215 Fort York Boulevard",
+    "neighborhood": "Niagara",
+    "n_units": 2,
+    "rent_range": [
+      2375,
+      2700
+    ],
+    "sqft_range": [
+      500,
+      604
+    ],
+    "avoid": null
+  },
+  {
+    "address": "219 FORT YORK BOULEVARD",
+    "display_addr": "219 Fort York Boulevard",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2650,
+      2650
+    ],
+    "sqft_range": [
+      610,
+      610
+    ],
+    "avoid": null
+  },
+  {
+    "address": "25 CAPREOL COURT",
+    "display_addr": "25 Capreol Court",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2090,
+      2090
+    ],
+    "sqft_range": [
+      515,
+      515
+    ],
+    "avoid": null
+  },
+  {
+    "address": "25 OXLEY STREET",
+    "display_addr": "25 Oxley Street",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2650,
+      2650
+    ],
+    "sqft_range": [
+      600,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "25 TELEGRAM MEWS",
+    "display_addr": "25 Telegram Mews",
+    "neighborhood": null,
+    "n_units": 2,
+    "rent_range": [
+      2390,
+      2600
+    ],
+    "sqft_range": [
+      544,
+      669
+    ],
+    "avoid": null
+  },
+  {
+    "address": "250 WELLINGTON STREET",
+    "display_addr": "250 Wellington Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2450,
+      2450
+    ],
+    "sqft_range": [
+      588,
+      588
+    ],
+    "avoid": null
+  },
+  {
+    "address": "270 WELLINGTON STREET W",
+    "display_addr": "270 Wellington Street W",
+    "neighborhood": null,
+    "n_units": 2,
+    "rent_range": [
+      2550,
+      2700
+    ],
+    "sqft_range": [
+      588,
+      657
+    ],
+    "avoid": null
+  },
+  {
+    "address": "285 DUFFERIN STREET",
+    "display_addr": "285 Dufferin Street",
+    "neighborhood": "South Parkdale",
+    "n_units": 3,
+    "rent_range": [
+      2200,
+      2500
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "30 NELSON STREET",
+    "display_addr": "30 Nelson Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2700,
+      2700
+    ],
+    "sqft_range": [
+      636,
+      636
+    ],
+    "avoid": null
+  },
+  {
+    "address": "30 ORDNANCE STREET",
+    "display_addr": "30 Ordnance Street",
+    "neighborhood": "Niagara",
+    "n_units": 1,
+    "rent_range": [
+      2300,
+      2300
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "30 WESTERN BATTERY ROAD",
+    "display_addr": "30 Western Battery Road",
+    "neighborhood": null,
+    "n_units": 2,
+    "rent_range": [
+      2300,
+      2750
+    ],
+    "sqft_range": [
+      480,
+      850
+    ],
+    "avoid": null
+  },
+  {
+    "address": "300 FRONT STREET",
+    "display_addr": "300 Front Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2750,
+      2750
+    ],
+    "sqft_range": [
+      647,
+      647
+    ],
+    "avoid": null
+  },
+  {
+    "address": "36 LISGAR STREET",
+    "display_addr": "36 Lisgar Street",
+    "neighborhood": "Little Portugal",
+    "n_units": 5,
+    "rent_range": [
+      1850,
+      2680
+    ],
+    "sqft_range": [
+      450,
+      500
+    ],
+    "avoid": "Urbancorp (bankrupt 2016) \u2014 fake 2BR per Wave Y research"
+  },
+  {
+    "address": "373 FRONT STREET W",
+    "display_addr": "373 Front Street W",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2450,
+      2450
+    ],
+    "sqft_range": [
+      673,
+      673
+    ],
+    "avoid": null
+  },
+  {
+    "address": "38 CAMERON STREET",
+    "display_addr": "38 Cameron Street",
+    "neighborhood": "Kensington-Chinatown",
+    "n_units": 1,
+    "rent_range": [
+      2600,
+      2600
+    ],
+    "sqft_range": [
+      600,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "38 DAN LECKIE WAY",
+    "display_addr": "38 Dan Leckie Way",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2300,
+      2300
+    ],
+    "sqft_range": [
+      700,
+      700
+    ],
+    "avoid": null
+  },
+  {
+    "address": "38 JOE SHUSTER WAY",
+    "display_addr": "38 Joe Shuster Way",
+    "neighborhood": "Niagara",
+    "n_units": 1,
+    "rent_range": [
+      2695,
+      2695
+    ],
+    "sqft_range": [
+      700,
+      700
+    ],
+    "avoid": null
+  },
+  {
+    "address": "397 FRONT STREET W",
+    "display_addr": "397 Front St W",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2675,
+      2675
+    ],
+    "sqft_range": [
+      690,
+      690
+    ],
+    "avoid": null
+  },
+  {
+    "address": "399 ADELAIDE STREET W",
+    "display_addr": "399 Adelaide Street W",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2650,
+      2650
+    ],
+    "sqft_range": [
+      700,
+      700
+    ],
+    "avoid": null
+  },
+  {
+    "address": "400 WELLINGTON STREET W",
+    "display_addr": "400 Wellington Street W",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2750,
+      2750
+    ],
+    "sqft_range": [
+      625,
+      625
+    ],
+    "avoid": null
+  },
+  {
+    "address": "458 RICHMOND STREET W",
+    "display_addr": "458 Richmond Street W",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2200,
+      2200
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "478 KING STREET W",
+    "display_addr": "478 King Street W",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2550,
+      2550
+    ],
+    "sqft_range": [
+      600,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "4K SPADINA AVENUENUE",
+    "display_addr": "4K Spadina Avenue",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2100,
+      2100
+    ],
+    "sqft_range": [
+      450,
+      450
+    ],
+    "avoid": null
+  },
+  {
+    "address": "50 BRUYERES MEWS",
+    "display_addr": "50 Bruyeres Mews",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 2,
+    "rent_range": [
+      2100,
+      2300
+    ],
+    "sqft_range": [
+      500,
+      512
+    ],
+    "avoid": null
+  },
+  {
+    "address": "50 JOHN STREET",
+    "display_addr": "50 John Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2395,
+      2395
+    ],
+    "sqft_range": [
+      636,
+      636
+    ],
+    "avoid": null
+  },
+  {
+    "address": "501 ADELAIDE STREET W",
+    "display_addr": "501 Adelaide Street W",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2300,
+      2300
+    ],
+    "sqft_range": [
+      450,
+      450
+    ],
+    "avoid": null
+  },
+  {
+    "address": "51 EAST LIBERTY STREET",
+    "display_addr": "51 East Liberty Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2350,
+      2350
+    ],
+    "sqft_range": [
+      561,
+      561
+    ],
+    "avoid": null
+  },
+  {
+    "address": "51 LOWER SIMCOE STREET",
+    "display_addr": "51 Lower Simcoe Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2500,
+      2500
+    ],
+    "sqft_range": [
+      546,
+      546
+    ],
+    "avoid": null
+  },
+  {
+    "address": "525 ADELAIDE STREET W",
+    "display_addr": "525 Adelaide Street W",
+    "neighborhood": null,
+    "n_units": 2,
+    "rent_range": [
+      2450,
+      2800
+    ],
+    "sqft_range": [
+      509,
+      746
+    ],
+    "avoid": null
+  },
+  {
+    "address": "543 RICHMOND STREET W",
+    "display_addr": "543 Richmond Street W",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 2,
+    "rent_range": [
+      2400,
+      2500
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "550 QUEENS QUAY W",
+    "display_addr": "550 Queens Quay W",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2790,
+      2790
+    ],
+    "sqft_range": [
+      700,
+      700
+    ],
+    "avoid": null
+  },
+  {
+    "address": "560 FRONT STREET",
+    "display_addr": "560 Front Street",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2350,
+      2350
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "560 KING STREET W",
+    "display_addr": "560 King Street W",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2275,
+      2275
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "576 FRONT STREET W",
+    "display_addr": "576 Front Street W",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 2,
+    "rent_range": [
+      2300,
+      2300
+    ],
+    "sqft_range": [
+      450,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "600 FLEET STREET",
+    "display_addr": "600 Fleet Street",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 2,
+    "rent_range": [
+      2400,
+      2400
+    ],
+    "sqft_range": [
+      500,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "629 KING STREET W",
+    "display_addr": "629 King Street W",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2400,
+      2400
+    ],
+    "sqft_range": [
+      450,
+      450
+    ],
+    "avoid": null
+  },
+  {
+    "address": "65 EAST LIBERTY STREET",
+    "display_addr": "65 East Liberty Street",
+    "neighborhood": null,
+    "n_units": 2,
+    "rent_range": [
+      2700,
+      2700
+    ],
+    "sqft_range": [
+      650,
+      650
+    ],
+    "avoid": null
+  },
+  {
+    "address": "650 KING STREET W",
+    "display_addr": "650 King Street W",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2300,
+      2300
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "68 ABELL STREET",
+    "display_addr": "68 Abell Street",
+    "neighborhood": "Little Portugal",
+    "n_units": 2,
+    "rent_range": [
+      2000,
+      2150
+    ],
+    "sqft_range": [
+      450,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "69 LYNN WILLIAMS STREET",
+    "display_addr": "69 Lynn Williams Street",
+    "neighborhood": "Niagara",
+    "n_units": 2,
+    "rent_range": [
+      2400,
+      2600
+    ],
+    "sqft_range": [
+      500,
+      635
+    ],
+    "avoid": null
+  },
+  {
+    "address": "7 SHANK STREET",
+    "display_addr": "7 Shank Street",
+    "neighborhood": "Niagara",
+    "n_units": 1,
+    "rent_range": [
+      2800,
+      2800
+    ],
+    "sqft_range": [
+      800,
+      800
+    ],
+    "avoid": null
+  },
+  {
+    "address": "705 KING STREET",
+    "display_addr": "705 King Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2650,
+      2650
+    ],
+    "sqft_range": [
+      750,
+      750
+    ],
+    "avoid": null
+  },
+  {
+    "address": "75 EAST LIBERTY STREET",
+    "display_addr": "75 East Liberty Street",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2750,
+      2750
+    ],
+    "sqft_range": [
+      650,
+      650
+    ],
+    "avoid": null
+  },
+  {
+    "address": "75 PORTLAND STREET",
+    "display_addr": "75 Portland Street",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 2,
+    "rent_range": [
+      2100,
+      2495
+    ],
+    "sqft_range": [
+      474,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "775 KING STREET W",
+    "display_addr": "775 King Street W",
+    "neighborhood": "Niagara",
+    "n_units": 1,
+    "rent_range": [
+      1900,
+      1900
+    ],
+    "sqft_range": [
+      450,
+      450
+    ],
+    "avoid": null
+  },
+  {
+    "address": "78 TECUMSETH STREET",
+    "display_addr": "78 Tecumseth Street",
+    "neighborhood": "Niagara",
+    "n_units": 2,
+    "rent_range": [
+      1850,
+      2200
+    ],
+    "sqft_range": [
+      450,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "78 TECUMSETH STREET E",
+    "display_addr": "78 Tecumseth Street E",
+    "neighborhood": "Niagara",
+    "n_units": 1,
+    "rent_range": [
+      1950,
+      1950
+    ],
+    "sqft_range": [
+      450,
+      450
+    ],
+    "avoid": null
+  },
+  {
+    "address": "80 QUEENS WHARD ROAD",
+    "display_addr": "80 Queens Whard Road",
+    "neighborhood": "Waterfront Communities",
+    "n_units": 1,
+    "rent_range": [
+      2280,
+      2280
+    ],
+    "sqft_range": [
+      500,
+      500
+    ],
+    "avoid": null
+  },
+  {
+    "address": "80 WESTERN BATTERY ROAD",
+    "display_addr": "80 Western Battery Road",
+    "neighborhood": "Niagara",
+    "n_units": 2,
+    "rent_range": [
+      2350,
+      2500
+    ],
+    "sqft_range": [
+      450,
+      646
+    ],
+    "avoid": null
+  },
+  {
+    "address": "81 NAVY WHARF COURT",
+    "display_addr": "81 Navy Wharf Court",
+    "neighborhood": null,
+    "n_units": 1,
+    "rent_range": [
+      2800,
+      2800
+    ],
+    "sqft_range": [
+      730,
+      730
+    ],
+    "avoid": null
+  },
+  {
+    "address": "85 EAST LIBERTY STREET",
+    "display_addr": "85 East Liberty Street",
+    "neighborhood": "Niagara",
+    "n_units": 1,
+    "rent_range": [
+      2480,
+      2480
+    ],
+    "sqft_range": [
+      600,
+      600
+    ],
+    "avoid": null
+  },
+  {
+    "address": "9 TECUMSETH STREET",
+    "display_addr": "9 Tecumseth Street",
+    "neighborhood": "Niagara",
+    "n_units": 3,
+    "rent_range": [
+      2200,
+      2300
+    ],
+    "sqft_range": [
+      450,
+      500
+    ],
+    "avoid": null
+  }
+]
