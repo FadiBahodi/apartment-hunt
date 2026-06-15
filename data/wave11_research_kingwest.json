@@ -7,14 +7,29 @@
     "property_manager": "Self-managed / various (no single PM dominant in sources)",
     "pm_rep_note": "Mid-tier; older Urbancorp build, no major PM scandals surfaced in search.",
     "units_floors": "~213 lofts over 6 storeys (some sources say 250; spans full block w/ townhomes)",
-    "amenities": ["Exercise room", "Sauna", "Party room", "Board room", "Card room", "Guest parking / visitor parking", "Two-storey loft layouts with 17-ft ceilings"],
+    "amenities": [
+      "Exercise room",
+      "Sauna",
+      "Party room",
+      "Board room",
+      "Card room",
+      "Guest parking / visitor parking",
+      "Two-storey loft layouts with 17-ft ceilings"
+    ],
     "reddit_quotes": [],
     "google_rating": "unknown",
-    "google_complaints": ["Constant construction noise echoing through building (2016 resident review)", "Dogs relieving themselves indoors/outdoors", "Mid-tier amenities compared to newer towers"],
+    "google_complaints": [
+      "Constant construction noise echoing through building (2016 resident review)",
+      "Dogs relieving themselves indoors/outdoors",
+      "Mid-tier amenities compared to newer towers"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["Older building (2002) with limited amenities vs newer Adelaide/Richmond stock", "Two-storey lofts can be punishing if you work nights and want quiet AC bedroom", "On the western edge of King West — less walkable to Ossington bars than King+Bathurst core"],
-    "honest_call": "Pass for this user. Soft-loft 2002 stock with thinner amenities, on far west end of the strip — further from Ossington/dating core, and the loft layout (sleeping mezz over open living) is rough for a shift-worker trying to sleep daytime post-night-shift. Save it for someone who wants character over convenience.",
-    "data_quality": "medium"
+    "red_flags": [
+      "On the western edge of King West \u2014 less walkable to Ossington bars than King+Bathurst core"
+    ],
+    "honest_call": "CORRECTED 2026-06-15: Agent B initially called 'Pass' citing Urbancorp DNA + soft-loft. Wave 11 verification via multiple sources (Apartments.com, condoessentials, libertyvillagetoronto, trevorfontaine) confirms positive 24-year operating history: 'never hear neighbours despite being on King St', 'structurally sound, no cracks/leaks', 'excellent building management with active board', long-term resident base. Urbancorp built it 2002 \u2014 14 YEARS BEFORE the Urbancorp bankruptcy cluster (36 Lisgar, 38 Joe Shuster etc are 2010-2017 builds). LEGITIMATE TIER 2 PICK. Two-storey lofts + 17ft ceilings = unique character = dating optics win. King+Shaw = solid King W location. KEY VIEWING CHECK: confirm bedroom is enclosed (wall + door), not an open mezzanine \u2014 open mezz = noise propagation = bad for daytime post-night-shift sleep.",
+    "data_quality": "high (multi-source verified 2026-06-15)",
+    "wave11_correction": true
   },
   {
     "address": "1030 King Street W",
@@ -22,15 +37,31 @@
     "year_built": 2014,
     "developer": "Canderel Residential (Canderel Stoneridge)",
     "property_manager": "Del Property Management (some sources note Dash as tenant info page; Del is operator)",
-    "pm_rep_note": "Del is one of the larger/established Toronto condo PMs — generally competent, not boutique. Active resident Facebook group, building described as friendly.",
-    "units_floors": "~602–603 lofts across 14 floors (two connected towers)",
-    "amenities": ["Indoor 'Rain Room' (signature feature instead of pool)", "Fitness centre + yoga studio", "Theatre room", "Business centre", "BBQ area", "Multiple party rooms", "Rooftop terrace", "24/7 concierge", "6000+ sq ft amenity space"],
+    "pm_rep_note": "Del is one of the larger/established Toronto condo PMs \u2014 generally competent, not boutique. Active resident Facebook group, building described as friendly.",
+    "units_floors": "~602\u2013603 lofts across 14 floors (two connected towers)",
+    "amenities": [
+      "Indoor 'Rain Room' (signature feature instead of pool)",
+      "Fitness centre + yoga studio",
+      "Theatre room",
+      "Business centre",
+      "BBQ area",
+      "Multiple party rooms",
+      "Rooftop terrace",
+      "24/7 concierge",
+      "6000+ sq ft amenity space"
+    ],
     "reddit_quotes": [],
-    "google_rating": "unknown — no aggregated Google score surfaced; mostly positive condo-site sentiment",
-    "google_complaints": ["Far west on King — feels Liberty Village-adjacent more than King West proper", "Rain Room is novelty not a pool; gym layout praised but no swimming"],
+    "google_rating": "unknown \u2014 no aggregated Google score surfaced; mostly positive condo-site sentiment",
+    "google_complaints": [
+      "Far west on King \u2014 feels Liberty Village-adjacent more than King West proper",
+      "Rain Room is novelty not a pool; gym layout praised but no swimming"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["602 units = elevator stack risk during peak hours", "West-end location: ~25 min walk to Ossington nightlife core; needs streetcar or rideshare"],
-    "honest_call": "Solid pick if you want newer building, large amenity space, and easy car-out west to Gardiner → QEW → CVH (probably best commute geometry of the 14). One resident review on a partner blog called it 'by far the friendliest building I've ever called home.' Downside: it's further from the Ossington/Bathurst dating gravity center. Worth a shortlist if commute weight > nightlife weight.",
+    "red_flags": [
+      "602 units = elevator stack risk during peak hours",
+      "West-end location: ~25 min walk to Ossington nightlife core; needs streetcar or rideshare"
+    ],
+    "honest_call": "Solid pick if you want newer building, large amenity space, and easy car-out west to Gardiner \u2192 QEW \u2192 CVH (probably best commute geometry of the 14). One resident review on a partner blog called it 'by far the friendliest building I've ever called home.' Downside: it's further from the Ossington/Bathurst dating gravity center. Worth a shortlist if commute weight > nightlife weight.",
     "data_quality": "medium"
   },
   {
@@ -39,14 +70,29 @@
     "year_built": 2012,
     "developer": "Lash Group / Originate Developments (built 2012)",
     "property_manager": "Dash Property Management",
-    "pm_rep_note": "Dash is mid-tier — gets mixed reviews across portfolio; not catastrophic but not Crossbridge/FirstService tier either.",
+    "pm_rep_note": "Dash is mid-tier \u2014 gets mixed reviews across portfolio; not catastrophic but not Crossbridge/FirstService tier either.",
     "units_floors": "179 lofts over 12 storeys",
-    "amenities": ["Fitness centre", "Party room", "Private film screening room", "Board room", "24-hr concierge", "Guest suites", "Outdoor terrace", "Parking garage", "Media room"],
+    "amenities": [
+      "Fitness centre",
+      "Party room",
+      "Private film screening room",
+      "Board room",
+      "24-hr concierge",
+      "Guest suites",
+      "Outdoor terrace",
+      "Parking garage",
+      "Media room"
+    ],
     "reddit_quotes": [],
     "google_rating": "unknown",
-    "google_complaints": ["Walk Score 100, but Spadina/King intersection is one of the loudest in the city — streetcar bells, sirens, weekend crowds"],
+    "google_complaints": [
+      "Walk Score 100, but Spadina/King intersection is one of the loudest in the city \u2014 streetcar bells, sirens, weekend crowds"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["Right on Spadina x King — heaviest streetcar + nightlife noise in the entire shortlist; low-floor or King-facing units will be punishing for a shift-worker", "Smaller building (179 units) = thinner amenity package than DNA3/Charlie/Picasso"],
+    "red_flags": [
+      "Right on Spadina x King \u2014 heaviest streetcar + nightlife noise in the entire shortlist; low-floor or King-facing units will be punishing for a shift-worker",
+      "Smaller building (179 units) = thinner amenity package than DNA3/Charlie/Picasso"
+    ],
     "honest_call": "Location is perfect for dating (literal center of King West), but only viable if you can confirm a HIGH-floor unit NOT facing King or Spadina. Post-night-shift sleep on a low floor here would be torture. Tour aggressively, ask to stand on the balcony at 1am Saturday.",
     "data_quality": "medium"
   },
@@ -57,14 +103,32 @@
     "developer": "Freed Developments + Core Architects",
     "property_manager": "Harmony Property Management (some Dash pages also reference)",
     "pm_rep_note": "Harmony is a smaller PM; Freed builds are notorious on UrbanToronto/Reddit for 'style over substance' finishes.",
-    "units_floors": "333 units, 12 storeys (two buildings — King side + Adelaide side share courtyard)",
-    "amenities": ["Rooftop heated infinity pool (9th floor)", "Fitness centre", "24-hour concierge", "Party room", "Outdoor courtyard between buildings", "Pet-friendly"],
+    "units_floors": "333 units, 12 storeys (two buildings \u2014 King side + Adelaide side share courtyard)",
+    "amenities": [
+      "Rooftop heated infinity pool (9th floor)",
+      "Fitness centre",
+      "24-hour concierge",
+      "Party room",
+      "Outdoor courtyard between buildings",
+      "Pet-friendly"
+    ],
     "reddit_quotes": [],
     "google_rating": "unknown (mixed condo-site reviews)",
-    "google_complaints": ["'80% of features cheap and deserving to be scrapped' — drywall thin, hollow finishes (resident review)", "Restaurant exhaust blowing into the inner courtyard", "Noise from nearby nightclub smoking area Fri/Sat/Sun (King-facing units)", "'Very impersonal, ugly, low quality structures' — one resident", "Poor window insulation"],
+    "google_complaints": [
+      "'80% of features cheap and deserving to be scrapped' \u2014 drywall thin, hollow finishes (resident review)",
+      "Restaurant exhaust blowing into the inner courtyard",
+      "Noise from nearby nightclub smoking area Fri/Sat/Sun (King-facing units)",
+      "'Very impersonal, ugly, low quality structures' \u2014 one resident",
+      "Poor window insulation"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["Freed build quality complaints recur across multiple Freed projects", "King-facing units get nightclub noise", "Courtyard exhaust smell is a specific named complaint", "Pool is the headline amenity but heated infinity pool reliability complaints are common at Freed buildings"],
-    "honest_call": "Risky. The pool + rooftop sound great on paper, but documented finish-quality and noise complaints are real. If you go here, ONLY take an Adelaide-side (461 Adelaide) higher-floor unit — residents specifically say that side is much quieter than the King side. Otherwise skip.",
+    "red_flags": [
+      "Freed build quality complaints recur across multiple Freed projects",
+      "King-facing units get nightclub noise",
+      "Courtyard exhaust smell is a specific named complaint",
+      "Pool is the headline amenity but heated infinity pool reliability complaints are common at Freed buildings"
+    ],
+    "honest_call": "Risky. The pool + rooftop sound great on paper, but documented finish-quality and noise complaints are real. If you go here, ONLY take an Adelaide-side (461 Adelaide) higher-floor unit \u2014 residents specifically say that side is much quieter than the King side. Otherwise skip.",
     "data_quality": "medium-high"
   },
   {
@@ -72,16 +136,37 @@
     "building_name": "Thompson Residences (also 621 King + 38 Stewart)",
     "year_built": 2015,
     "developer": "Freed Developments",
-    "property_manager": "FirstService Residential (one source notes Elite — appears to have changed hands)",
+    "property_manager": "FirstService Residential (one source notes Elite \u2014 appears to have changed hands)",
     "pm_rep_note": "FirstService is large/competent. But Thompson has long-standing issues with AirBnB tolerance, hotel-bleed (Thompson Hotel below).",
-    "units_floors": "408 soft lofts over 14 storeys, suites 357–1788 sqft",
-    "amenities": ["Access to Thompson Hotel rooftop bar/pool (Lavelle)", "Private gym", "Yoga studio", "Pool", "Rooftop deck", "Connection to Lavelle restaurant/club"],
+    "units_floors": "408 soft lofts over 14 storeys, suites 357\u20131788 sqft",
+    "amenities": [
+      "Access to Thompson Hotel rooftop bar/pool (Lavelle)",
+      "Private gym",
+      "Yoga studio",
+      "Pool",
+      "Rooftop deck",
+      "Connection to Lavelle restaurant/club"
+    ],
     "reddit_quotes": [],
-    "google_rating": "mixed — Thompson Hotel itself has 4+ but residences side has poorer sentiment",
-    "google_complaints": ["'Fire alarms in middle of the night, loud parties, used condoms, vomit, broken bottles' (resident review of Thompson Residences via condo review sites)", "Poor soundproofing — hear neighbors in kitchen from bedroom", "'You don't go to the Thompson to have quiet sleep' (resident)", "King-facing south units endure traffic + bar crowd noise every night, restaurant Lapinou blasts music", "Many units are AirBnB short-term — tolerated/allowed unusually", "Lavelle rooftop bar/club traffic in lobby"],
-    "tiktok_mentions": ["Lavelle rooftop heavily TikTok'd as a date-night spot (chezlavelle Instagram, ToDoTorondoTikTok @todotoronto)"],
-    "red_flags": ["AirBnB-heavy investor units mean transient neighbors / party rentals", "Hotel + nightclub literally in the building", "Sound transmission complaints recurring", "Worst-of-both-worlds for shift worker: rotating short-term-renter neighbors + nightclub on-premise"],
-    "honest_call": "Hard pass for a night-shift ER attending. This is THE archetype of 'looks amazing for dating, terrible for sleep.' Bringing dates to your building when Lavelle is downstairs is a flex, but you will not survive post-night-shift recovery here. If you must — only consider 38 Stewart side, high floor, AND verify your floor isn't AirBnB-heavy.",
+    "google_rating": "mixed \u2014 Thompson Hotel itself has 4+ but residences side has poorer sentiment",
+    "google_complaints": [
+      "'Fire alarms in middle of the night, loud parties, used condoms, vomit, broken bottles' (resident review of Thompson Residences via condo review sites)",
+      "Poor soundproofing \u2014 hear neighbors in kitchen from bedroom",
+      "'You don't go to the Thompson to have quiet sleep' (resident)",
+      "King-facing south units endure traffic + bar crowd noise every night, restaurant Lapinou blasts music",
+      "Many units are AirBnB short-term \u2014 tolerated/allowed unusually",
+      "Lavelle rooftop bar/club traffic in lobby"
+    ],
+    "tiktok_mentions": [
+      "Lavelle rooftop heavily TikTok'd as a date-night spot (chezlavelle Instagram, ToDoTorondoTikTok @todotoronto)"
+    ],
+    "red_flags": [
+      "AirBnB-heavy investor units mean transient neighbors / party rentals",
+      "Hotel + nightclub literally in the building",
+      "Sound transmission complaints recurring",
+      "Worst-of-both-worlds for shift worker: rotating short-term-renter neighbors + nightclub on-premise"
+    ],
+    "honest_call": "Hard pass for a night-shift ER attending. This is THE archetype of 'looks amazing for dating, terrible for sleep.' Bringing dates to your building when Lavelle is downstairs is a flex, but you will not survive post-night-shift recovery here. If you must \u2014 only consider 38 Stewart side, high floor, AND verify your floor isn't AirBnB-heavy.",
     "data_quality": "high"
   },
   {
@@ -89,16 +174,31 @@
     "building_name": "Six50 King West (650 King + 95 Bathurst)",
     "year_built": 2012,
     "developer": "Freed Developments (LEED certified, Core Architects)",
-    "property_manager": "Unknown PM in current sources — board is reportedly proactive",
+    "property_manager": "Unknown PM in current sources \u2014 board is reportedly proactive",
     "pm_rep_note": "Board (not PM) is the celebrated entity: residents praise 'strong proactive Board' that kept maintenance fees low and lowered them.",
     "units_floors": "233 units across two structures (10 + 16 storeys)",
-    "amenities": ["Rooftop terrace + green spaces", "Inner courtyard 'green oasis'", "Gas hookups on balconies for BBQ", "Gas cooking in units", "Bicycle parking", "Brioche Dorée café on ground floor", "Generous balconies"],
+    "amenities": [
+      "Rooftop terrace + green spaces",
+      "Inner courtyard 'green oasis'",
+      "Gas hookups on balconies for BBQ",
+      "Gas cooking in units",
+      "Bicycle parking",
+      "Brioche Dor\u00e9e caf\u00e9 on ground floor",
+      "Generous balconies"
+    ],
     "reddit_quotes": [],
-    "google_rating": "unknown — mostly positive condo-site sentiment",
-    "google_complaints": ["King-facing units extremely noisy at night (bars, clubs, traffic — though King St Transit Priority Corridor has reduced car noise)", "North-facing owners had construction next door (jackhammers 8am, 6 days/wk)", "Some elevator issues — but flagged as 'common across Toronto condos' not building-specific"],
+    "google_rating": "unknown \u2014 mostly positive condo-site sentiment",
+    "google_complaints": [
+      "King-facing units extremely noisy at night (bars, clubs, traffic \u2014 though King St Transit Priority Corridor has reduced car noise)",
+      "North-facing owners had construction next door (jackhammers 8am, 6 days/wk)",
+      "Some elevator issues \u2014 but flagged as 'common across Toronto condos' not building-specific"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["NOTE: Charlie Condos (Great Gulf, 8 Charlotte / 430 King W) is a DIFFERENT building — do not confuse. Charlie has thin-wall complaints.", "Six50 itself: King-facing noise. Bathurst side (95 Bathurst) is quieter."],
-    "honest_call": "Probably the BEST Freed product on the list. Strong board, lowered fees, generous units, gas hookups (rare), Brioche on ground floor. Bathurst-side higher floor unit would be a genuine top-3 candidate for this user. Pool-free though — if rooftop pool is non-negotiable, look elsewhere.",
+    "red_flags": [
+      "NOTE: Charlie Condos (Great Gulf, 8 Charlotte / 430 King W) is a DIFFERENT building \u2014 do not confuse. Charlie has thin-wall complaints.",
+      "Six50 itself: King-facing noise. Bathurst side (95 Bathurst) is quieter."
+    ],
+    "honest_call": "Probably the BEST Freed product on the list. Strong board, lowered fees, generous units, gas hookups (rare), Brioche on ground floor. Bathurst-side higher floor unit would be a genuine top-3 candidate for this user. Pool-free though \u2014 if rooftop pool is non-negotiable, look elsewhere.",
     "data_quality": "medium-high"
   },
   {
@@ -106,16 +206,34 @@
     "building_name": "The Summit II",
     "year_built": 1985,
     "developer": "Original developer not surfaced (older 1985 build)",
-    "property_manager": "Unknown — older co-op-feel building",
+    "property_manager": "Unknown \u2014 older co-op-feel building",
     "pm_rep_note": "Older building, established board, generally stable but dated finishes.",
     "units_floors": "304 units over 12 storeys",
-    "amenities": ["Large outdoor pool", "Hot tub", "Sauna", "Fitness centre", "Games room", "Business centre", "Squash court", "Theatre", "24-hr concierge", "Security guard", "Parking garage"],
+    "amenities": [
+      "Large outdoor pool",
+      "Hot tub",
+      "Sauna",
+      "Fitness centre",
+      "Games room",
+      "Business centre",
+      "Squash court",
+      "Theatre",
+      "24-hr concierge",
+      "Security guard",
+      "Parking garage"
+    ],
     "reddit_quotes": [],
     "google_rating": "unknown",
-    "google_complaints": ["Building is older — dated finishes per resident reviews", "1985 = potential for older mechanicals, hallway carpets, dated lobby"],
+    "google_complaints": [
+      "Building is older \u2014 dated finishes per resident reviews",
+      "1985 = potential for older mechanicals, hallway carpets, dated lobby"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["Built 1985 — mechanicals, plumbing, electrical may be approaching end-of-life; expect upcoming special assessments", "Older demographic mix (long-term owners + investors) — vibe will skew older than a 27yo dating-focused attending wants"],
-    "honest_call": "Skip unless you find a heavily renovated unit at a deep discount. Squash court + outdoor pool are unique perks, but the 1985 vintage means a vibe mismatch (older residents, dated common areas) and risk of looming special assessments. For a 27yo who 'dates a lot,' you want a building where the neighbors are in your age range — Summit II is not that.",
+    "red_flags": [
+      "Built 1985 \u2014 mechanicals, plumbing, electrical may be approaching end-of-life; expect upcoming special assessments",
+      "Older demographic mix (long-term owners + investors) \u2014 vibe will skew older than a 27yo dating-focused attending wants"
+    ],
+    "honest_call": "Skip unless you find a heavily renovated unit at a deep discount. Squash court + outdoor pool are unique perks, but the 1985 vintage means a vibe mismatch (older residents, dated common areas) and risk of looming special assessments. For a 27yo who 'dates a lot,' you want a building where the neighbors are in your age range \u2014 Summit II is not that.",
     "data_quality": "medium"
   },
   {
@@ -124,15 +242,35 @@
     "year_built": 2013,
     "developer": "Minto Group Inc (LEED Gold certified)",
     "property_manager": "Minto Properties / FirstService (varies by phase)",
-    "pm_rep_note": "Minto is one of the higher-reputation builder/PM combos in Toronto — generally well-managed.",
+    "pm_rep_note": "Minto is one of the higher-reputation builder/PM combos in Toronto \u2014 generally well-managed.",
     "units_floors": "352 units across two towers (12-storey terraced + 17-storey)",
-    "amenities": ["Gym", "Yoga studio", "Games room (billiards, video games)", "Movie/media room", "Lounge with kitchen", "Outdoor courtyard with BBQ + fireplace", "Pet run", "Guest suites", "24-hr concierge/security", "Car-sharing program", "Bike-sharing", "Green roof + rainwater harvesting", "Shoppers Drug Mart + Loblaws (Stackt-area) nearby"],
+    "amenities": [
+      "Gym",
+      "Yoga studio",
+      "Games room (billiards, video games)",
+      "Movie/media room",
+      "Lounge with kitchen",
+      "Outdoor courtyard with BBQ + fireplace",
+      "Pet run",
+      "Guest suites",
+      "24-hr concierge/security",
+      "Car-sharing program",
+      "Bike-sharing",
+      "Green roof + rainwater harvesting",
+      "Shoppers Drug Mart + Loblaws (Stackt-area) nearby"
+    ],
     "reddit_quotes": [],
-    "google_rating": "unknown — mostly positive sentiment from condo sites",
-    "google_complaints": ["'Hit and miss' — some units dark/cramped facing internal courtyard, others very nice", "Right next to King streetcar — convenient but morning rush is loud"],
+    "google_rating": "unknown \u2014 mostly positive sentiment from condo sites",
+    "google_complaints": [
+      "'Hit and miss' \u2014 some units dark/cramped facing internal courtyard, others very nice",
+      "Right next to King streetcar \u2014 convenient but morning rush is loud"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["Layouts vary wildly — picking the wrong floorplan = dark unit facing inner court", "King-facing units at streetcar level get morning noise"],
-    "honest_call": "Strong top-3 candidate. Minto build quality is among the best on this list, LEED Gold, real amenities (gym + yoga + outdoor BBQ + guest suites), young trendy demographic. The catch: AVOID inner-courtyard-facing units (dark, cramped). Want a 17-storey-tower south or west-facing unit. Walk Score 93, Transit 100, Bike 95 — and Loblaws + Shoppers literally in the podium. For a runner + ER attending + dater, this is geometrically excellent.",
+    "red_flags": [
+      "Layouts vary wildly \u2014 picking the wrong floorplan = dark unit facing inner court",
+      "King-facing units at streetcar level get morning noise"
+    ],
+    "honest_call": "Strong top-3 candidate. Minto build quality is among the best on this list, LEED Gold, real amenities (gym + yoga + outdoor BBQ + guest suites), young trendy demographic. The catch: AVOID inner-courtyard-facing units (dark, cramped). Want a 17-storey-tower south or west-facing unit. Walk Score 93, Transit 100, Bike 95 \u2014 and Loblaws + Shoppers literally in the podium. For a runner + ER attending + dater, this is geometrically excellent.",
     "data_quality": "high"
   },
   {
@@ -141,32 +279,65 @@
     "year_built": 2010,
     "developer": "Freed Developments",
     "property_manager": "Unknown specific PM (Freed-linked)",
-    "pm_rep_note": "Standard Freed setup — quality has the Freed reputation hit, but solid-concrete construction means good internal acoustics.",
+    "pm_rep_note": "Standard Freed setup \u2014 quality has the Freed reputation hit, but solid-concrete construction means good internal acoustics.",
     "units_floors": "211 lofts over 11 storeys",
-    "amenities": ["24/7 concierge", "Visitor parking (plentiful per reviews)", "Whimsical/futuristic lobby design", "Exposed concrete ceilings + pillars"],
+    "amenities": [
+      "24/7 concierge",
+      "Visitor parking (plentiful per reviews)",
+      "Whimsical/futuristic lobby design",
+      "Exposed concrete ceilings + pillars"
+    ],
     "reddit_quotes": [],
     "google_rating": "CondoGenius rating 3.0/5 noise",
-    "google_complaints": ["Building directly north (85 Portland) is an office for club promoters — 'expect loud parties until 5am' (resident review)", "Portland-facing units very noisy", "Surrounded by Spice Route, Everleigh, EFS clubs", "Limited amenity package vs newer towers"],
+    "google_complaints": [
+      "Building directly north (85 Portland) is an office for club promoters \u2014 'expect loud parties until 5am' (resident review)",
+      "Portland-facing units very noisy",
+      "Surrounded by Spice Route, Everleigh, EFS clubs",
+      "Limited amenity package vs newer towers"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["Geographically located ON the King West club strip — 85 Portland next door is literally a club-promoter office", "Limited amenities (no pool, modest gym) compared to Minto 775 or Charlie", "Freed build quality concerns"],
-    "honest_call": "Cool aesthetic, in the middle of everything — but this is the loudest immediate-environment building on the list because of 85 Portland next door. Solid concrete helps internal noise but the EXTERNAL late-night noise is unavoidable. Skip unless you find a unit on the high floor specifically facing south or east (away from 85 Portland). For someone whose sleep IS the job, this is high-risk.",
+    "red_flags": [
+      "Geographically located ON the King West club strip \u2014 85 Portland next door is literally a club-promoter office",
+      "Limited amenities (no pool, modest gym) compared to Minto 775 or Charlie",
+      "Freed build quality concerns"
+    ],
+    "honest_call": "Cool aesthetic, in the middle of everything \u2014 but this is the loudest immediate-environment building on the list because of 85 Portland next door. Solid concrete helps internal noise but the EXTERNAL late-night noise is unavoidable. Skip unless you find a unit on the high floor specifically facing south or east (away from 85 Portland). For someone whose sleep IS the job, this is high-risk.",
     "data_quality": "high"
   },
   {
     "address": "525 Adelaide Street W",
-    "building_name": "Musée Condos",
+    "building_name": "Mus\u00e9e Condos",
     "year_built": 2017,
     "developer": "Plaza (Plazacorp Urban Residential Communities)",
     "property_manager": "FirstService Residential",
-    "pm_rep_note": "Plaza is one of the top-tier Toronto developers — 'buildings by Plaza like Ivory on Adelaide and Musée have been positive' (UrbanToronto). FirstService is large + reliable.",
+    "pm_rep_note": "Plaza is one of the top-tier Toronto developers \u2014 'buildings by Plaza like Ivory on Adelaide and Mus\u00e9e have been positive' (UrbanToronto). FirstService is large + reliable.",
     "units_floors": "440 units (some sources 437) over 17 storeys",
-    "amenities": ["Outdoor rooftop pool", "Fitness centre", "Yoga room", "Sauna", "Party room", "Media/theatre room", "Meeting room", "Guest suites", "24-hour concierge", "On-site superintendent", "Parking garage", "Rooftop patio with sweeping city views"],
+    "amenities": [
+      "Outdoor rooftop pool",
+      "Fitness centre",
+      "Yoga room",
+      "Sauna",
+      "Party room",
+      "Media/theatre room",
+      "Meeting room",
+      "Guest suites",
+      "24-hour concierge",
+      "On-site superintendent",
+      "Parking garage",
+      "Rooftop patio with sweeping city views"
+    ],
     "reddit_quotes": [],
     "google_rating": "Building avg 4.8/5 across small review sample",
-    "google_complaints": ["'If you live on a lower floor and face the pool, be prepared to be serenaded between 5:30 am and 7:30 am several mornings a week by very loud banging and crashing as the bins are being emptied... this building is the worst I've lived in for noise that is not the fault of the residents. If you're considering living here, I'd suggest choosing a higher floor' (resident review)", "Garbage truck pickup is early-morning loud"],
+    "google_complaints": [
+      "'If you live on a lower floor and face the pool, be prepared to be serenaded between 5:30 am and 7:30 am several mornings a week by very loud banging and crashing as the bins are being emptied... this building is the worst I've lived in for noise that is not the fault of the residents. If you're considering living here, I'd suggest choosing a higher floor' (resident review)",
+      "Garbage truck pickup is early-morning loud"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["LOW-floor + pool-side = early-morning garbage truck noise (specific repeated complaint)", "Location on Bathurst not King — slightly further walk to King West core (though still walkable)"],
-    "honest_call": "Top-2 candidate. Plaza build > Freed/Lamb build, FirstService management, 2017 vintage, real outdoor pool, sauna, yoga room. Specifically positioned at Bathurst/Adelaide — one block off the loudest King West stretch, which is a FEATURE for a shift-worker. AVOID low floors facing the pool/courtyard (garbage truck noise). Want a higher floor with Adelaide view. Probably the best risk-adjusted pick on the list for this user.",
+    "red_flags": [
+      "LOW-floor + pool-side = early-morning garbage truck noise (specific repeated complaint)",
+      "Location on Bathurst not King \u2014 slightly further walk to King West core (though still walkable)"
+    ],
+    "honest_call": "Top-2 candidate. Plaza build > Freed/Lamb build, FirstService management, 2017 vintage, real outdoor pool, sauna, yoga room. Specifically positioned at Bathurst/Adelaide \u2014 one block off the loudest King West stretch, which is a FEATURE for a shift-worker. AVOID low floors facing the pool/courtyard (garbage truck noise). Want a higher floor with Adelaide view. Probably the best risk-adjusted pick on the list for this user.",
     "data_quality": "high"
   },
   {
@@ -176,14 +347,29 @@
     "developer": "Allied Properties REIT + RioCan REIT (designed by Hariri Pontarini Architects)",
     "property_manager": "Allied Properties / FirstService (Allied retains hands-on involvement on their projects)",
     "pm_rep_note": "Allied is a publicly-traded REIT specializing in heritage-conversion + high-quality urban product; their PM oversight is reputationally strong. Newer building means PM track record still forming.",
-    "units_floors": "132–133 units over 15 storeys (550–1300 sqft, plus larger penthouse-grade)",
-    "amenities": ["Gym", "Sauna", "Guest suites", "Lounge with catering kitchen", "Rooftop terrace with BBQs", "24-hr concierge", "Mixed-use ground floor (retail)"],
+    "units_floors": "132\u2013133 units over 15 storeys (550\u20131300 sqft, plus larger penthouse-grade)",
+    "amenities": [
+      "Gym",
+      "Sauna",
+      "Guest suites",
+      "Lounge with catering kitchen",
+      "Rooftop terrace with BBQs",
+      "24-hr concierge",
+      "Mixed-use ground floor (retail)"
+    ],
     "reddit_quotes": [],
-    "google_rating": "unknown — too new for substantial review volume",
-    "google_complaints": ["Limited review data — building is only ~6-7 years old and small (132 units) so signal is thin", "Smaller amenity package than Musée/DNA3"],
+    "google_rating": "unknown \u2014 too new for substantial review volume",
+    "google_complaints": [
+      "Limited review data \u2014 building is only ~6-7 years old and small (132 units) so signal is thin",
+      "Smaller amenity package than Mus\u00e9e/DNA3"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["Smallest unit count on the list (132 units) = thinner amenities, less elevator redundancy", "No pool", "Newer = less long-run mechanicals track record (but also less wear)"],
-    "honest_call": "Stealth top pick. Allied Properties + RioCan is the strongest developer pedigree on the list. Heritage brick podium + glass tower, Hariri Pontarini architect, smaller boutique feel (132 units vs 440 at Musée). Trade-off: no pool, smaller gym. If you don't need a pool and value quiet/curated > big amenity package, this beats Musée. Bring earplugs for the rooftop summer scene but interior should be quiet.",
+    "red_flags": [
+      "Smallest unit count on the list (132 units) = thinner amenities, less elevator redundancy",
+      "No pool",
+      "Newer = less long-run mechanicals track record (but also less wear)"
+    ],
+    "honest_call": "Stealth top pick. Allied Properties + RioCan is the strongest developer pedigree on the list. Heritage brick podium + glass tower, Hariri Pontarini architect, smaller boutique feel (132 units vs 440 at Mus\u00e9e). Trade-off: no pool, smaller gym. If you don't need a pool and value quiet/curated > big amenity package, this beats Mus\u00e9e. Bring earplugs for the rooftop summer scene but interior should be quiet.",
     "data_quality": "medium"
   },
   {
@@ -191,16 +377,29 @@
     "building_name": "Lofts 399",
     "year_built": 2013,
     "developer": "Cresford Developments",
-    "property_manager": "Shelter Canadian (per one listing) — varies",
-    "pm_rep_note": "Cresford as a developer became infamous (bankruptcy/scandal on OTHER projects in 2020) — but Lofts 399 was completed in 2013 before the trouble. Standalone building quality is decent.",
-    "units_floors": "173–178 units over 10 storeys",
-    "amenities": ["Resistance swimming pool (unique — current-resistance, not a true full lap pool)", "Expansive gym", "24-hr concierge", "Visitor roundabout drop-off", "10-ft exposed concrete ceilings", "Floor-to-ceiling windows"],
+    "property_manager": "Shelter Canadian (per one listing) \u2014 varies",
+    "pm_rep_note": "Cresford as a developer became infamous (bankruptcy/scandal on OTHER projects in 2020) \u2014 but Lofts 399 was completed in 2013 before the trouble. Standalone building quality is decent.",
+    "units_floors": "173\u2013178 units over 10 storeys",
+    "amenities": [
+      "Resistance swimming pool (unique \u2014 current-resistance, not a true full lap pool)",
+      "Expansive gym",
+      "24-hr concierge",
+      "Visitor roundabout drop-off",
+      "10-ft exposed concrete ceilings",
+      "Floor-to-ceiling windows"
+    ],
     "reddit_quotes": [],
-    "google_rating": "unknown — very limited review presence",
-    "google_complaints": ["Cresford developer's reputation took a major hit post-2019 on OTHER projects (Halo, YSL); residents may have residual concerns about warranty/post-completion support"],
+    "google_rating": "unknown \u2014 very limited review presence",
+    "google_complaints": [
+      "Cresford developer's reputation took a major hit post-2019 on OTHER projects (Halo, YSL); residents may have residual concerns about warranty/post-completion support"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["Cresford developer history (other project bankruptcies) — but 399 itself was completed and not affected", "Resistance pool is a gimmick — not a real lap pool", "Smaller, less-reviewed building means harder to verify quality before signing"],
-    "honest_call": "Decent boutique option in a great location (Adelaide btwn Spadina + Brant — quiet block, fast walk to King core). 10-ft ceilings + light are real selling points for a tall guy. But the Cresford ghost hurts confidence and there's almost no public review data — high info asymmetry. View in person, ask current residents about post-occupancy issue resolution. Tier-2 candidate.",
+    "red_flags": [
+      "Cresford developer history (other project bankruptcies) \u2014 but 399 itself was completed and not affected",
+      "Resistance pool is a gimmick \u2014 not a real lap pool",
+      "Smaller, less-reviewed building means harder to verify quality before signing"
+    ],
+    "honest_call": "Decent boutique option in a great location (Adelaide btwn Spadina + Brant \u2014 quiet block, fast walk to King core). 10-ft ceilings + light are real selling points for a tall guy. But the Cresford ghost hurts confidence and there's almost no public review data \u2014 high info asymmetry. View in person, ask current residents about post-occupancy issue resolution. Tier-2 candidate.",
     "data_quality": "low-medium"
   },
   {
@@ -208,15 +407,31 @@
     "building_name": "543 Richmond Condos",
     "year_built": 2021,
     "developer": "Pemberton Group",
-    "property_manager": "Unknown — likely Pemberton-affiliated or FirstService given vintage",
-    "pm_rep_note": "Pemberton is mid-tier — has been called out by residents for slow turnover responsiveness on this project specifically.",
-    "units_floors": "476 units over 15 storeys (510–1015 sqft)",
-    "amenities": ["Pool", "Gym", "Party room", "Rooftop terrace", "Concierge", "Co-working space typical of 2021-era developments"],
+    "property_manager": "Unknown \u2014 likely Pemberton-affiliated or FirstService given vintage",
+    "pm_rep_note": "Pemberton is mid-tier \u2014 has been called out by residents for slow turnover responsiveness on this project specifically.",
+    "units_floors": "476 units over 15 storeys (510\u20131015 sqft)",
+    "amenities": [
+      "Pool",
+      "Gym",
+      "Party room",
+      "Rooftop terrace",
+      "Concierge",
+      "Co-working space typical of 2021-era developments"
+    ],
     "reddit_quotes": [],
-    "google_rating": "unknown — building is new",
-    "google_complaints": ["Management responsiveness issues", "Delays in operational amenities (some not online at handover)", "AC outages reported", "Limited elevator access (only 3 elevators for 476 units across 15 floors = ~159 units per elevator — too high)"],
+    "google_rating": "unknown \u2014 building is new",
+    "google_complaints": [
+      "Management responsiveness issues",
+      "Delays in operational amenities (some not online at handover)",
+      "AC outages reported",
+      "Limited elevator access (only 3 elevators for 476 units across 15 floors = ~159 units per elevator \u2014 too high)"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["Elevator capacity vs unit count is a documented problem — expect 5-10 min waits at peak", "Still in 'occupancy period' shake-out — common issues with new-build registration period (typically 1-2 years post-occupancy is rough)", "Maintenance fees ARE low ($0.73/sqft vs neighborhood $0.92) — but that could indicate underfunded reserve fund. WATCH for special assessments in 2027-2028."],
+    "red_flags": [
+      "Elevator capacity vs unit count is a documented problem \u2014 expect 5-10 min waits at peak",
+      "Still in 'occupancy period' shake-out \u2014 common issues with new-build registration period (typically 1-2 years post-occupancy is rough)",
+      "Maintenance fees ARE low ($0.73/sqft vs neighborhood $0.92) \u2014 but that could indicate underfunded reserve fund. WATCH for special assessments in 2027-2028."
+    ],
     "honest_call": "Risky for 2026 move-in. Building still working through occupancy-period growing pains, elevator math is bad, fees are suspiciously low which often correlates with future special assessment. Location is good (Richmond is quieter than King by one block) but building maturity is a red flag. Tier-3 on the list.",
     "data_quality": "medium-high"
   },
@@ -225,15 +440,31 @@
     "building_name": "The Woodsworth (440-458 Richmond, sometimes 452)",
     "year_built": 2022,
     "developer": "Lamb Development Corp (Brad J. Lamb)",
-    "property_manager": "Likely Lamb-affiliated or FirstService — newer building, less established",
+    "property_manager": "Likely Lamb-affiliated or FirstService \u2014 newer building, less established",
     "pm_rep_note": "Lamb Development has POLARIZED reputation: 'amazing design, smug salesmen, poor build quality' is the recurring theme across his projects.",
     "units_floors": "125 units over 17 storeys (boutique scale)",
-    "amenities": ["24-hr concierge", "Fitness centre", "Party/meeting room", "Marble-clad tower facade", "Boutique 'unfinished' aesthetic in units (signature Lamb)"],
+    "amenities": [
+      "24-hr concierge",
+      "Fitness centre",
+      "Party/meeting room",
+      "Marble-clad tower facade",
+      "Boutique 'unfinished' aesthetic in units (signature Lamb)"
+    ],
     "reddit_quotes": [],
-    "google_rating": "mixed — small sample",
-    "google_complaints": ["'Very poor build quality — poor materials, workmanship and project management' (Lamb portfolio review)", "'Absolutely the worst customer service' — sales increased prices 2% on offer day without warning (Lamb)", "'Smug salesmen and poor quality workmanship' (Lamb portfolio)", "'Unfinished' aesthetic — exposed concrete + raw finishes — not for everyone; resale demographic is narrower"],
+    "google_rating": "mixed \u2014 small sample",
+    "google_complaints": [
+      "'Very poor build quality \u2014 poor materials, workmanship and project management' (Lamb portfolio review)",
+      "'Absolutely the worst customer service' \u2014 sales increased prices 2% on offer day without warning (Lamb)",
+      "'Smug salesmen and poor quality workmanship' (Lamb portfolio)",
+      "'Unfinished' aesthetic \u2014 exposed concrete + raw finishes \u2014 not for everyone; resale demographic is narrower"
+    ],
     "tiktok_mentions": [],
-    "red_flags": ["Lamb Development Corp build quality complaints are loud and consistent across multiple Lamb projects (not just Woodsworth)", "Brad Lamb personally controversial (Wikipedia entry covers media disputes)", "Smaller 125-unit boutique = thinner amenity package, single elevator stack, less resilience", "Unfinished/raw aesthetic might not appeal to dates — niche taste"],
+    "red_flags": [
+      "Lamb Development Corp build quality complaints are loud and consistent across multiple Lamb projects (not just Woodsworth)",
+      "Brad Lamb personally controversial (Wikipedia entry covers media disputes)",
+      "Smaller 125-unit boutique = thinner amenity package, single elevator stack, less resilience",
+      "Unfinished/raw aesthetic might not appeal to dates \u2014 niche taste"
+    ],
     "honest_call": "Hard skip unless you specifically love the Lamb raw-loft aesthetic and have budget room for warranty fights. Build quality complaints are the single most consistent red flag across the entire list. Location is good (Richmond + Spadina, quieter block) but the building underneath is suspect. For a busy attending physician who doesn't want post-move-in repair drama, this is the wrong building.",
     "data_quality": "medium-high"
   }
