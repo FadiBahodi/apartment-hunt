@@ -1,0 +1,257 @@
+[
+  {
+    "address": "25 Capreol Court",
+    "neighborhood": "CityPlace",
+    "run_clubs": [
+      {"name": "Tribe Fitness", "meets": "Wed 6:30pm (5km social), Sat 9am (long brunch run)", "location": "10 Lower Spadina (Canoe Landing)", "walk_min": 3},
+      {"name": "BlackToe Running King West", "meets": "Tue 6:30pm + Wed 6:30pm (coached, 4 pace groups)", "location": "95 Bathurst (Six50 King-Bathurst)", "walk_min": 10}
+    ],
+    "gyms": [
+      {"name": "Equinox King West (opens summer 2026)", "type": "ultra-premium full club", "walk_min": 11},
+      {"name": "Sweat & Tonic The Well", "type": "boutique HIIT/spin/yoga", "walk_min": 9}
+    ],
+    "grocery": {"name": "Sobeys Urban Fresh Fort York", "address": "22 Fort York Blvd", "walk_min": 6},
+    "best_run_loop": "Step onto Martin Goodman Trail at Bathurst Quay (3 min). East to Sugar Beach = 4km out-and-back; west to Ontario Place = 6km; Humber Bay Arch Bridge = 12km out-and-back. Bentway under Gardiner adds 1.75km traffic-free corridor.",
+    "ossington_walk_min": 28,
+    "king_bathurst_walk_min": 11,
+    "running_insight": "Lakefront access is the killer feature: 100km/week trivially doable since you can stack 10-20km Martin Goodman runs daily without crossing a road. Tribe Fitness is essentially your front door."
+  },
+  {
+    "address": "69 Lynn Williams Street",
+    "neighborhood": "Liberty Village",
+    "run_clubs": [
+      {"name": "Liberty Village Striders", "meets": "Wed 6:00am", "location": "Aroma Coffee, 120 Lynn Williams (next door)", "walk_min": 1},
+      {"name": "Parkdale Roadrunners", "meets": "Tue 7pm (Stay Gold 124 Brock), Sat 9am (Bather 450 Dufferin)", "location": "Brock/Dufferin", "walk_min": 16}
+    ],
+    "gyms": [
+      {"name": "F45 Liberty Village", "type": "HIIT bootcamp", "walk_min": 3},
+      {"name": "Equinox King West (opens summer 2026)", "type": "ultra-premium full club", "walk_min": 20}
+    ],
+    "grocery": {"name": "Metro Liberty Village", "address": "100 Lynn Williams (next door)", "walk_min": 1},
+    "best_run_loop": "South under rail corridor to Coronation Park (5 min) onto Martin Goodman Trail. West to Humber Bay Arch = 10-12km round trip; east to CityPlace = 6km. Liberty Village → Parkdale → High Park loop = 8km classic.",
+    "ossington_walk_min": 22,
+    "king_bathurst_walk_min": 20,
+    "running_insight": "Best of both worlds: in the Liberty Village run-club epicenter (Striders + Parkdale RR + F45 all <20 min) AND 5 min to the lake. King & Bathurst nightlife is a hike (20 min) — Uber it."
+  },
+  {
+    "address": "373 Front Street W",
+    "neighborhood": "Spadina/Front",
+    "run_clubs": [
+      {"name": "Tribe Fitness", "meets": "Wed 6:30pm, Sat 9am", "location": "10 Lower Spadina", "walk_min": 8},
+      {"name": "BlackToe Running King West", "meets": "Tue/Wed 6:30pm coached", "location": "95 Bathurst", "walk_min": 14}
+    ],
+    "gyms": [
+      {"name": "Sweat & Tonic The Well", "type": "boutique HIIT/spin/yoga", "walk_min": 12},
+      {"name": "Barry's Toronto", "type": "premium HIIT", "walk_min": 11}
+    ],
+    "grocery": {"name": "Sobeys Urban Fresh Fort York", "address": "22 Fort York Blvd", "walk_min": 11},
+    "best_run_loop": "Cross to Bremner → Martin Goodman Trail at HTO Park (5 min). East to Sugar Beach/Distillery = 5km; west to Ontario Place = 7km. Toronto Music Garden mid-route. Easy 10-15km lakefront daily.",
+    "ossington_walk_min": 30,
+    "king_bathurst_walk_min": 14,
+    "running_insight": "Sits between CityPlace and South Core with quick access to Barry's, Spinco, and waterfront. King W nightlife (King/Spadina) is essentially across the street."
+  },
+  {
+    "address": "30 Western Battery Road",
+    "neighborhood": "Liberty Village",
+    "run_clubs": [
+      {"name": "Liberty Village Striders", "meets": "Wed 6:00am", "location": "Aroma Coffee, 120 Lynn Williams", "walk_min": 5},
+      {"name": "Parkdale Roadrunners", "meets": "Tue 7pm Stay Gold, Sat 9am Bather", "location": "Brock/Dufferin", "walk_min": 20}
+    ],
+    "gyms": [
+      {"name": "F45 Liberty Village", "type": "HIIT bootcamp", "walk_min": 2},
+      {"name": "Equinox King West (opens summer 2026)", "type": "ultra-premium full club", "walk_min": 15}
+    ],
+    "grocery": {"name": "Metro Liberty Village", "address": "100 Lynn Williams", "walk_min": 5},
+    "best_run_loop": "South to Coronation Park (6 min) → Martin Goodman Trail. Humber Bay out-and-back = 12km. Or High Park gates via Queen W = 3.5km one-way (perfect 10-12km loop with the park's 4km perimeter).",
+    "ossington_walk_min": 23,
+    "king_bathurst_walk_min": 16,
+    "running_insight": "Liberty Village is arguably Toronto's #1 zip code for serious recreational runners — you're 5 min from the lake AND in the run-club density bubble. Loblaws King & Shaw (9 min) is a second grocery option."
+  },
+  {
+    "address": "51 East Liberty Street",
+    "neighborhood": "Liberty Village",
+    "run_clubs": [
+      {"name": "Liberty Village Striders", "meets": "Wed 6:00am", "location": "Aroma Coffee, 120 Lynn Williams", "walk_min": 5},
+      {"name": "Parkdale Roadrunners", "meets": "Tue 7pm Stay Gold, Sat 9am Bather (450 Dufferin)", "location": "Parkdale/Dufferin", "walk_min": 20}
+    ],
+    "gyms": [
+      {"name": "F45 Liberty Village", "type": "HIIT bootcamp", "walk_min": 2},
+      {"name": "Equinox King West (opens summer 2026)", "type": "ultra-premium full club", "walk_min": 16}
+    ],
+    "grocery": {"name": "Metro Liberty Village", "address": "100 Lynn Williams", "walk_min": 5},
+    "best_run_loop": "South to Coronation Park → Martin Goodman Trail (6 min). Humber Bay loop = 12km; High Park via Queen W = ~10km loop. Liberty Village → Parkdale → Roncesvalles is a classic 8km social run.",
+    "ossington_walk_min": 24,
+    "king_bathurst_walk_min": 17,
+    "running_insight": "Same as the other Liberty Village picks — bullseye on East Liberty puts you on top of F45, Metro, and the LV Striders meetup. 100km/week is structurally easy."
+  },
+  {
+    "address": "10 Capreol Court",
+    "neighborhood": "CityPlace",
+    "run_clubs": [
+      {"name": "Tribe Fitness", "meets": "Wed 6:30pm, Sat 9am", "location": "10 Lower Spadina (Canoe Landing across the street)", "walk_min": 2},
+      {"name": "BlackToe Running King West", "meets": "Tue/Wed 6:30pm coached", "location": "95 Bathurst", "walk_min": 10}
+    ],
+    "gyms": [
+      {"name": "Sweat & Tonic The Well", "type": "boutique HIIT/spin/yoga", "walk_min": 9},
+      {"name": "Equinox King West (opens summer 2026)", "type": "ultra-premium full club", "walk_min": 11}
+    ],
+    "grocery": {"name": "Sobeys Urban Fresh Fort York", "address": "22 Fort York Blvd", "walk_min": 5},
+    "best_run_loop": "Onto Martin Goodman Trail via Bathurst Quay/HTO Park in 3-4 min. Daily lakefront: 5km east to Sugar Beach, 10-12km west to Humber Bay Arch. Bentway loop adds variety. Canoe Landing track on-site for intervals.",
+    "ossington_walk_min": 28,
+    "king_bathurst_walk_min": 11,
+    "running_insight": "Tribe Fitness is literally across Canoe Landing Park. For a 100km/week runner this is the most convenient address on the list — 5 min to lakefront AND to your run-club home base."
+  },
+  {
+    "address": "25 Telegram Mews",
+    "neighborhood": "CityPlace",
+    "run_clubs": [
+      {"name": "Tribe Fitness", "meets": "Wed 6:30pm, Sat 9am", "location": "10 Lower Spadina (Canoe Landing)", "walk_min": 3},
+      {"name": "BlackToe Running King West", "meets": "Tue/Wed 6:30pm coached", "location": "95 Bathurst", "walk_min": 12}
+    ],
+    "gyms": [
+      {"name": "Sweat & Tonic The Well", "type": "boutique HIIT/spin/yoga", "walk_min": 10},
+      {"name": "Equinox King West (opens summer 2026)", "type": "ultra-premium full club", "walk_min": 12}
+    ],
+    "grocery": {"name": "Sobeys Urban Fresh Fort York", "address": "22 Fort York Blvd", "walk_min": 7},
+    "best_run_loop": "Martin Goodman Trail access via Bathurst Quay in 4-5 min. Sugar Beach east = 4km; Humber Bay Arch west = 11km. Toronto Music Garden + Music Garden Promenade are gems on the route.",
+    "ossington_walk_min": 28,
+    "king_bathurst_walk_min": 12,
+    "running_insight": "CityPlace canonical address — lake-close, Tribe-close, Sobeys-close. Slightly further from Liberty Village run clubs but BlackToe King West fills that gap."
+  },
+  {
+    "address": "50 Bruyeres Mews",
+    "neighborhood": "Fort York",
+    "run_clubs": [
+      {"name": "Tribe Fitness", "meets": "Wed 6:30pm, Sat 9am", "location": "10 Lower Spadina", "walk_min": 9},
+      {"name": "BlackToe Running King West", "meets": "Tue/Wed 6:30pm coached", "location": "95 Bathurst", "walk_min": 11}
+    ],
+    "gyms": [
+      {"name": "Sweat & Tonic The Well", "type": "boutique HIIT/spin/yoga", "walk_min": 10},
+      {"name": "Equinox King West (opens summer 2026)", "type": "ultra-premium full club", "walk_min": 12}
+    ],
+    "grocery": {"name": "Sobeys Urban Fresh Fort York", "address": "22 Fort York Blvd", "walk_min": 6},
+    "best_run_loop": "Step onto the Bentway in 2 min (1.75km traffic-free under Gardiner). Drop south to Martin Goodman at Bathurst Quay (6 min) for 10-15km lake runs. Fort York Historic Site green space immediately adjacent.",
+    "ossington_walk_min": 25,
+    "king_bathurst_walk_min": 13,
+    "running_insight": "Fort York sits between Liberty Village and CityPlace — you can flex either way for run clubs. Bentway directly out the door is unique: traffic-free, lit, all-weather."
+  },
+  {
+    "address": "150 East Liberty Street",
+    "neighborhood": "Liberty Village",
+    "run_clubs": [
+      {"name": "Liberty Village Striders", "meets": "Wed 6:00am", "location": "Aroma Coffee, 120 Lynn Williams", "walk_min": 1},
+      {"name": "Parkdale Roadrunners", "meets": "Tue 7pm Stay Gold, Sat 9am Bather (450 Dufferin)", "location": "Parkdale", "walk_min": 15}
+    ],
+    "gyms": [
+      {"name": "F45 Liberty Village", "type": "HIIT bootcamp", "walk_min": 4},
+      {"name": "Equinox King West (opens summer 2026)", "type": "ultra-premium full club", "walk_min": 21}
+    ],
+    "grocery": {"name": "Metro Liberty Village", "address": "100 Lynn Williams", "walk_min": 1},
+    "best_run_loop": "Coronation Park → Martin Goodman in ~6 min. Humber Bay out-and-back = 12km. Easy access to Parkdale loops + High Park (3.5km away, then 4km perimeter = 11km loop total).",
+    "ossington_walk_min": 22,
+    "king_bathurst_walk_min": 21,
+    "running_insight": "Western-most Liberty Village = closest to Parkdale Roadrunners' Saturday meetup and High Park, but furthest from King W nightlife. For a 100km/week runner this trade is worth it; for socializing it isn't."
+  },
+  {
+    "address": "19 Grand Trunk Crescent",
+    "neighborhood": "South Core",
+    "run_clubs": [
+      {"name": "Tribe Fitness", "meets": "Wed 6:30pm, Sat 9am", "location": "10 Lower Spadina", "walk_min": 17},
+      {"name": "BlackToe Running King West", "meets": "Tue/Wed 6:30pm coached", "location": "95 Bathurst", "walk_min": 26}
+    ],
+    "gyms": [
+      {"name": "Equinox Bay Street", "type": "ultra-premium full club", "walk_min": 12},
+      {"name": "Barry's Toronto Richmond", "type": "premium HIIT", "walk_min": 21}
+    ],
+    "grocery": {"name": "Longo's Maple Leaf Square", "address": "15 York (across the street)", "walk_min": 3},
+    "best_run_loop": "Down to Queens Quay → Martin Goodman Trail in 5-7 min. East to Distillery District/Sugar Beach = 5km; west to CityPlace/Bathurst = 6km. Total Toronto Islands loop accessible by ferry from Jack Layton terminal (5 min walk).",
+    "ossington_walk_min": 35,
+    "king_bathurst_walk_min": 26,
+    "running_insight": "Best gym situation on the list (Equinox Bay is 12 min) but worst for run clubs — Liberty Village + Parkdale crews are 25-40 min away. Trade-off: financial district convenience but socially isolated from the run scene."
+  },
+  {
+    "address": "80 Western Battery Road",
+    "neighborhood": "Liberty Village",
+    "run_clubs": [
+      {"name": "Liberty Village Striders", "meets": "Wed 6:00am", "location": "Aroma Coffee, 120 Lynn Williams (next building)", "walk_min": 2},
+      {"name": "Parkdale Roadrunners", "meets": "Tue 7pm Stay Gold, Sat 9am Bather (450 Dufferin)", "location": "Parkdale", "walk_min": 17}
+    ],
+    "gyms": [
+      {"name": "F45 Liberty Village", "type": "HIIT bootcamp", "walk_min": 2},
+      {"name": "Equinox King West (opens summer 2026)", "type": "ultra-premium full club", "walk_min": 18}
+    ],
+    "grocery": {"name": "Metro Liberty Village", "address": "100 Lynn Williams", "walk_min": 2},
+    "best_run_loop": "Coronation Park to Martin Goodman in ~6 min. Humber Bay = 12km out-and-back. Parkdale streets + Roncesvalles for variety. High Park = 10km tempo loop.",
+    "ossington_walk_min": 21,
+    "king_bathurst_walk_min": 19,
+    "running_insight": "Same Liberty Village logic — incredible run-club density, gym next door, grocery next door. King W nightlife requires a 19-min walk or 5-min Uber."
+  },
+  {
+    "address": "14 York Street",
+    "neighborhood": "South Core",
+    "run_clubs": [
+      {"name": "Tribe Fitness", "meets": "Wed 6:30pm, Sat 9am", "location": "10 Lower Spadina", "walk_min": 19},
+      {"name": "BlackToe Running King West", "meets": "Tue/Wed 6:30pm coached", "location": "95 Bathurst", "walk_min": 27}
+    ],
+    "gyms": [
+      {"name": "Equinox Bay Street", "type": "ultra-premium full club", "walk_min": 11},
+      {"name": "Barry's Toronto Richmond", "type": "premium HIIT", "walk_min": 22}
+    ],
+    "grocery": {"name": "Longo's Maple Leaf Square", "address": "15 York (inside the building/podium)", "walk_min": 1},
+    "best_run_loop": "Down to Queens Quay → Martin Goodman in 4-5 min. East to Distillery = 5km; west to CityPlace = 6km. Easy 10km out-and-back along lake. Toronto Islands ferry 5 min away for off-road island runs (12km island loop).",
+    "ossington_walk_min": 35,
+    "king_bathurst_walk_min": 28,
+    "running_insight": "Best grocery (Longo's downstairs) and Equinox Bay 11 min, but you'd Uber to every run club. For a 100km/week runner, lakefront access is still fine — it's the social side that suffers."
+  },
+  {
+    "address": "397 Front St W",
+    "neighborhood": "Front/Spadina",
+    "run_clubs": [
+      {"name": "Tribe Fitness", "meets": "Wed 6:30pm, Sat 9am", "location": "10 Lower Spadina", "walk_min": 7},
+      {"name": "BlackToe Running King West", "meets": "Tue/Wed 6:30pm coached", "location": "95 Bathurst", "walk_min": 12}
+    ],
+    "gyms": [
+      {"name": "Barry's Toronto Richmond", "type": "premium HIIT", "walk_min": 11},
+      {"name": "Sweat & Tonic The Well", "type": "boutique HIIT/spin/yoga", "walk_min": 11}
+    ],
+    "grocery": {"name": "Sobeys Urban Fresh Fort York", "address": "22 Fort York Blvd", "walk_min": 10},
+    "best_run_loop": "Cross to Bremner → Martin Goodman Trail (5-6 min). Sugar Beach east = 4km; Humber Bay west = 11km. Toronto Music Garden along the way. Bentway loop nearby for traffic-free intervals.",
+    "ossington_walk_min": 30,
+    "king_bathurst_walk_min": 12,
+    "running_insight": "Sweet spot between CityPlace and South Core. King W nightlife within 12 min, three boutique gyms within 12 min, lakefront in 7. Slightly inferior to Capreol on Tribe proximity but better on Barry's."
+  },
+  {
+    "address": "15 Fort York Boulevard",
+    "neighborhood": "Fort York",
+    "run_clubs": [
+      {"name": "Tribe Fitness", "meets": "Wed 6:30pm, Sat 9am", "location": "10 Lower Spadina (across Canoe Landing)", "walk_min": 2},
+      {"name": "BlackToe Running King West", "meets": "Tue/Wed 6:30pm coached", "location": "95 Bathurst", "walk_min": 13}
+    ],
+    "gyms": [
+      {"name": "Sweat & Tonic The Well", "type": "boutique HIIT/spin/yoga", "walk_min": 11},
+      {"name": "Equinox King West (opens summer 2026)", "type": "ultra-premium full club", "walk_min": 14}
+    ],
+    "grocery": {"name": "Sobeys Urban Fresh Fort York", "address": "22 Fort York Blvd (across the street)", "walk_min": 6},
+    "best_run_loop": "Martin Goodman via Bathurst Quay in 3-4 min. Bentway under Gardiner is 2 min away (1.75km traffic-free corridor). Lake runs 5-15km daily; Fort York Historic Site green space attached.",
+    "ossington_walk_min": 28,
+    "king_bathurst_walk_min": 14,
+    "running_insight": "Effectively tied with 10 Capreol for best 100km/week base: Tribe is across the park, Sobeys is across the street, Bentway and Martin Goodman are in front of the building. The most 'frictionless' running address on the list."
+  },
+  {
+    "address": "285 Dufferin Street",
+    "neighborhood": "Parkdale/Liberty edge",
+    "run_clubs": [
+      {"name": "Parkdale Roadrunners", "meets": "Tue 7pm Stay Gold (124 Brock), Sat 9am Bather (450 Dufferin)", "location": "Brock/Dufferin (~1 block to Sat meetup)", "walk_min": 1},
+      {"name": "Liberty Village Striders", "meets": "Wed 6:00am", "location": "Aroma Coffee, 120 Lynn Williams", "walk_min": 15}
+    ],
+    "gyms": [
+      {"name": "F45 Liberty Village", "type": "HIIT bootcamp", "walk_min": 18},
+      {"name": "Equinox King West (opens summer 2026)", "type": "ultra-premium full club", "walk_min": 34}
+    ],
+    "grocery": {"name": "Loblaws King & Shaw", "address": "1022 King Street West", "walk_min": 10},
+    "best_run_loop": "South under rail to Marilyn Bell Park / Sunnyside Beach (8 min) → Martin Goodman Trail. Humber Bay Arch = 8-10km round trip. High Park gates 2.5km north = 5km tempo + 4km park perimeter = great 12-14km long-run loop. Strava heatmap shows this corridor is the densest training stretch in west-end Toronto.",
+    "ossington_walk_min": 21,
+    "king_bathurst_walk_min": 34,
+    "running_insight": "On the doorstep of Parkdale Roadrunners' Saturday start line — the most serious-runner address on the list. But it's the worst for King W nightlife (34 min walk; Uber required). For a 100km/week + Sept exam grind, this is the 'focused training' pick; for socializing post-exam it's weaker."
+  }
+]

@@ -1,0 +1,1087 @@
+[
+  {
+    "rank": 1,
+    "composite": 45.4,
+    "listing": {
+      "id": "realtor_19_WESTERN_BATTERY_ROAD_801",
+      "unit_no": "801",
+      "address": "19 Western Battery Road",
+      "address_norm": "19 WESTERN BATTERY ROAD",
+      "rent": 2150,
+      "beds": "1",
+      "baths": 1,
+      "sqft": 450,
+      "mls": null,
+      "days_on_market": null,
+      "parking": "unknown \u2014 verify with agent",
+      "has_parking": null,
+      "status": "active",
+      "source": "realtor.ca",
+      "neighborhood": "Niagara",
+      "avoid": null,
+      "lat": 43.6396698,
+      "lng": -79.4113565,
+      "drive_mon_7am_to_cvh_min": 39.9,
+      "drive_mon_7am_to_cvh_km": 31.68,
+      "drive_mon_6am_from_cvh_min": 46.6,
+      "drive_mon_6am_from_cvh_km": 32.52,
+      "drive_mon_3pm_from_cvh_min": 44.9,
+      "drive_mon_3pm_from_cvh_km": 32.52,
+      "drive_fri_5pm_from_cvh_min": 49.2,
+      "drive_fri_5pm_from_cvh_km": 40.61,
+      "drive_king_west_7pm_min": 5.8,
+      "drive_king_west_7pm_km": 1.53
+    },
+    "research": {
+      "address": "19 Western Battery Road",
+      "building_name": "ZEN King West",
+      "year_built": "2024 (recent completion / occupancy underway 2024-2025)",
+      "developer": "CentreCourt Developments",
+      "property_manager": "Likely Crossbridge or Del (CentreCourt's usual rotation); confirm at viewing",
+      "pm_rep_note": "CentreCourt is a polarizing dev \u2014 known for tight units, premium amenities, on-time delivery. Build quality reviews trending positive in early occupancy.",
+      "units_floors": "481 units / 32 floors",
+      "amenities": [
+        "3,500 sq ft Scandinavian spa (hot + cold plunge pools)",
+        "5,000 sq ft gym",
+        "200m INDOOR running track (rare, big deal for a 100km/week runner)",
+        "indoor pool",
+        "hot tub",
+        "yoga studio",
+        "outdoor terrace",
+        "concierge",
+        "party room",
+        "ground-floor IQ Food Co retail",
+        "grand 14ft lobby"
+      ],
+      "reddit_quotes": [],
+      "review_quotes": [
+        {
+          "quote": "Living at Zen has been a really smooth experience ... The gym is one of the better ones seen in any condo and the rooftop is a great bonus in the summer.",
+          "url": "https://strata.ca/toronto/19-western-battery-rd-zen-king-west-condos/reviews",
+          "date": "early occupancy resident, 2024-2025"
+        },
+        {
+          "quote": "Sleek finishes, functional layouts and decent soundproofing ... well-maintained, quiet environment with responsive management, great location, amazing views and top-notch amenities like the gym and pool.",
+          "url": "https://strata.ca/toronto/19-western-battery-rd-zen-king-west-condos/reviews",
+          "date": "early occupancy resident, 2024-2025"
+        },
+        {
+          "quote": "The unit felt a bit tight, with pricing reflecting location and lifestyle rather than square footage.",
+          "url": "https://strata.ca/toronto/19-western-battery-rd-zen-king-west-condos/reviews",
+          "date": "early occupancy, 2024-2025"
+        }
+      ],
+      "google_rating": "early but trending positive (newer building)",
+      "google_complaints": [
+        "small unit sizes (CentreCourt's signature)",
+        "congestion on event/game nights"
+      ],
+      "tiktok_mentions": [],
+      "red_flags": [
+        "Small floorplate per unit \u2014 at $2,700 budget you may end up in 450-500 sqft",
+        "Newest building = early-occupancy mgmt teething likely over next 12mo"
+      ],
+      "honest_call": "STRONGEST PICK on this list for Fadi specifically. The 200m indoor running track + Scandinavian cold plunge + 5,000 sqft gym is unicorn-tier for a 100km/week runner who's also dating-focused. Indoor track means he doesn't lose mileage to Toronto winters. CentreCourt brand = expect tight square footage but premium fit/finish. Walk Score 91, Transit 96. If a unit is in budget, view it first.",
+      "data_quality": "good"
+    },
+    "amenities": {},
+    "breakdown": {
+      "drive_score": 12.4,
+      "quality_score": 8.0,
+      "vibe_score": 11,
+      "cost_score": 9.5,
+      "sqft_score": 4.5,
+      "drive_am": 39.9,
+      "drive_pm_worst": 49.2,
+      "year_built": 2024,
+      "red_flag_count": 2
+    }
+  },
+  {
+    "rank": 2,
+    "composite": 39.2,
+    "listing": {
+      "id": "realtor_50_BRUYERES_MEWS_708",
+      "unit_no": "708",
+      "address": "50 Bruyeres Mews",
+      "address_norm": "50 BRUYERES MEWS",
+      "rent": 2100,
+      "beds": "1",
+      "baths": 1,
+      "sqft": 500,
+      "mls": null,
+      "days_on_market": null,
+      "parking": "unknown \u2014 verify with agent",
+      "has_parking": null,
+      "status": "active",
+      "source": "realtor.ca",
+      "neighborhood": "Waterfront Communities",
+      "avoid": null,
+      "lat": 43.6376942,
+      "lng": -79.4021259,
+      "drive_mon_7am_to_cvh_min": 41.2,
+      "drive_mon_7am_to_cvh_km": 33.32,
+      "drive_mon_6am_from_cvh_min": 47.5,
+      "drive_mon_6am_from_cvh_km": 32.92,
+      "drive_mon_3pm_from_cvh_min": 45.8,
+      "drive_mon_3pm_from_cvh_km": 32.92,
+      "drive_fri_5pm_from_cvh_min": 49.0,
+      "drive_fri_5pm_from_cvh_km": 41.01,
+      "drive_king_west_7pm_min": 5.3,
+      "drive_king_west_7pm_km": 1.22
+    },
+    "research": {
+      "address": "50 Bruyeres Mews",
+      "building_name": "Local at Fort York (parcel: 50 Bruyeres + 69 Grand Magazine + 36 Bruyeres)",
+      "year_built": 2016,
+      "developer": "Onni Group",
+      "property_manager": "Crossbridge Condominium Services",
+      "pm_rep_note": "Crossbridge here, not FirstService - downgrade vs Yards on PM. Building is mid-rise (less amenity scale).",
+      "units_floors": "240-249 units, 15 storeys",
+      "amenities": [
+        "Local Lounge fitness centre",
+        "garden plots",
+        "games lounge",
+        "BBQ patio",
+        "catering kitchen / party room"
+      ],
+      "reddit_quotes": [
+        {
+          "quote": "Great location with Loblaws, Shoppers Drug Mart and LCBO nearby.",
+          "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10240/Local-at-Fort-York",
+          "date": "Condo Essentials resident review"
+        },
+        {
+          "quote": "Past guest reported finding a live bed bug in the guest suite, and after their stay contracted bed bugs which inspection confirmed - 'several bed bug larvae and eggs'. Management reimbursed rental but not personal damage.",
+          "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10240/Local-at-Fort-York",
+          "date": "Condo Essentials review 2016-2017"
+        }
+      ],
+      "google_rating": "thin",
+      "google_complaints": [
+        "NO pool",
+        "expensive $/sqft for the amenity set",
+        "one-bedroom units sold without parking included",
+        "documented bed bug incident in guest suite (2016-2017)"
+      ],
+      "tiktok_mentions": [
+        "thin"
+      ],
+      "red_flags": [
+        "bed bug incident in guest suite is a yellow flag - confirm if remediation was building-wide",
+        "no pool",
+        "1BR units without parking - Fadi has a car, verify parking deeded with any unit"
+      ],
+      "honest_call": "Solid mid-rise Onni build, but the bed bug history and lack of pool drop it below Yards (20 Bruyeres). If you can get a parking-included unit and verify post-2017 pest history, it is a reasonable pick at $2,700.",
+      "data_quality": "medium"
+    },
+    "amenities": {
+      "address": "50 Bruyeres Mews",
+      "neighborhood": "Fort York",
+      "run_clubs": [
+        {
+          "name": "Tribe Fitness",
+          "meets": "Wed 6:30pm, Sat 9am",
+          "location": "10 Lower Spadina",
+          "walk_min": 9
+        },
+        {
+          "name": "BlackToe Running King West",
+          "meets": "Tue/Wed 6:30pm coached",
+          "location": "95 Bathurst",
+          "walk_min": 11
+        }
+      ],
+      "gyms": [
+        {
+          "name": "Sweat & Tonic The Well",
+          "type": "boutique HIIT/spin/yoga",
+          "walk_min": 10
+        },
+        {
+          "name": "Equinox King West (opens summer 2026)",
+          "type": "ultra-premium full club",
+          "walk_min": 12
+        }
+      ],
+      "grocery": {
+        "name": "Sobeys Urban Fresh Fort York",
+        "address": "22 Fort York Blvd",
+        "walk_min": 6
+      },
+      "best_run_loop": "Step onto the Bentway in 2 min (1.75km traffic-free under Gardiner). Drop south to Martin Goodman at Bathurst Quay (6 min) for 10-15km lake runs. Fort York Historic Site green space immediately adjacent.",
+      "ossington_walk_min": 25,
+      "king_bathurst_walk_min": 13,
+      "running_insight": "Fort York sits between Liberty Village and CityPlace \u2014 you can flex either way for run clubs. Bentway directly out the door is unique: traffic-free, lit, all-weather."
+    },
+    "breakdown": {
+      "drive_score": 11.7,
+      "quality_score": 4.5,
+      "vibe_score": 8,
+      "cost_score": 10.0,
+      "sqft_score": 5.0,
+      "drive_am": 41.2,
+      "drive_pm_worst": 49.0,
+      "year_built": 2016,
+      "red_flag_count": 3
+    }
+  },
+  {
+    "rank": 3,
+    "composite": 37.8,
+    "listing": {
+      "id": "C13421438",
+      "unit_no": "1017",
+      "address": "51 East Liberty Street",
+      "address_norm": "51 EAST LIBERTY STREET",
+      "rent": 2350,
+      "beds": "1",
+      "baths": 1,
+      "sqft": 561,
+      "mls": "C13421438",
+      "days_on_market": 5,
+      "parking": "1 Parking",
+      "has_parking": true,
+      "status": "",
+      "source": "condos.ca",
+      "neighborhood": null,
+      "avoid": null,
+      "lat": 43.63864,
+      "lng": -79.4121355,
+      "drive_mon_7am_to_cvh_min": 39.9,
+      "drive_mon_7am_to_cvh_km": 31.78,
+      "drive_mon_6am_from_cvh_min": 46.8,
+      "drive_mon_6am_from_cvh_km": 32.62,
+      "drive_mon_3pm_from_cvh_min": 45.0,
+      "drive_mon_3pm_from_cvh_km": 32.62,
+      "drive_fri_5pm_from_cvh_min": 49.7,
+      "drive_fri_5pm_from_cvh_km": 40.72,
+      "drive_king_west_7pm_min": 6.0,
+      "drive_king_west_7pm_km": 1.63
+    },
+    "research": {
+      "address": "51 East Liberty Street",
+      "building_name": "Liberty Central by the Lake (Phase I)",
+      "year_built": 2015,
+      "developer": "CanAlfa Group",
+      "property_manager": "Crossbridge / FirstService Residential (per Liberty Village condo manager directory)",
+      "pm_rep_note": "FirstService acquired Crossbridge April 2023; among the more competent Liberty PMs but high volume across LV portfolio means inconsistent unit-level response.",
+      "units_floors": "approx 385-395 units / 25 floors (twin curved glass towers)",
+      "amenities": [
+        "gym",
+        "yoga / Pilates studio",
+        "indoor pool + hot tub",
+        "steam room",
+        "misting station",
+        "party room w/ full kitchen",
+        "games room",
+        "media / theatre room",
+        "guest suites",
+        "shared rooftop patio",
+        "24h concierge / security"
+      ],
+      "reddit_quotes": [],
+      "review_quotes": [
+        {
+          "quote": "Those with south facing units have views of Lake Ontario, and everyone else gets to enjoy the city skyline.",
+          "url": "https://libertyvillagetoronto.com/51-east-liberty-st-liberty-central-by-the-lake",
+          "date": "ongoing listing copy 2024-2026"
+        },
+        {
+          "quote": "Aqua massage rooms and a party room with a full spacious kitchen ... pilates studio.",
+          "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10700/Liberty-Central-Phase-1",
+          "date": "review index, multi-year"
+        }
+      ],
+      "google_rating": "not surfaced; condoessentials index exists",
+      "google_complaints": [
+        "loading dock / move-in bottlenecks common in CanAlfa twin-tower layouts",
+        "elevator wait at peak (typical of 385-unit / 25-floor mass)"
+      ],
+      "tiktok_mentions": [],
+      "red_flags": [
+        "No major systemic red flags surfaced. Generic large-tower friction (elevator peaks, move-in chaos) noted."
+      ],
+      "honest_call": "Solid mid-tier Liberty pick. Newer build (2015), south-facing lake views, full amenity stack incl. pool/steam \u2014 strong dating optics. 8-10 min walk to King W bars at Strachan, but EAST end of Liberty so the actual Ossington / Trinity Bellwoods scene is a 20-25 min walk or 8 min Uber. Fine for a 27yo attending; not the best-of-class but reliable.",
+      "data_quality": "good"
+    },
+    "amenities": {
+      "address": "51 East Liberty Street",
+      "neighborhood": "Liberty Village",
+      "run_clubs": [
+        {
+          "name": "Liberty Village Striders",
+          "meets": "Wed 6:00am",
+          "location": "Aroma Coffee, 120 Lynn Williams",
+          "walk_min": 5
+        },
+        {
+          "name": "Parkdale Roadrunners",
+          "meets": "Tue 7pm Stay Gold, Sat 9am Bather (450 Dufferin)",
+          "location": "Parkdale/Dufferin",
+          "walk_min": 20
+        }
+      ],
+      "gyms": [
+        {
+          "name": "F45 Liberty Village",
+          "type": "HIIT bootcamp",
+          "walk_min": 2
+        },
+        {
+          "name": "Equinox King West (opens summer 2026)",
+          "type": "ultra-premium full club",
+          "walk_min": 16
+        }
+      ],
+      "grocery": {
+        "name": "Metro Liberty Village",
+        "address": "100 Lynn Williams",
+        "walk_min": 5
+      },
+      "best_run_loop": "South to Coronation Park \u2192 Martin Goodman Trail (6 min). Humber Bay loop = 12km; High Park via Queen W = ~10km loop. Liberty Village \u2192 Parkdale \u2192 Roncesvalles is a classic 8km social run.",
+      "ossington_walk_min": 24,
+      "king_bathurst_walk_min": 17,
+      "running_insight": "Same as the other Liberty Village picks \u2014 bullseye on East Liberty puts you on top of F45, Metro, and the LV Striders meetup. 100km/week is structurally easy."
+    },
+    "breakdown": {
+      "drive_score": 12.2,
+      "quality_score": 4.5,
+      "vibe_score": 8,
+      "cost_score": 7.5,
+      "sqft_score": 5.6,
+      "drive_am": 39.9,
+      "drive_pm_worst": 49.7,
+      "year_built": 2015,
+      "red_flag_count": 1
+    }
+  },
+  {
+    "rank": 4,
+    "composite": 35.4,
+    "listing": {
+      "id": "C13275122",
+      "unit_no": "1503",
+      "address": "25 Telegram Mews",
+      "address_norm": "25 TELEGRAM MEWS",
+      "rent": 2390,
+      "beds": "1+1",
+      "baths": 1,
+      "sqft": 544,
+      "mls": "C13275122",
+      "days_on_market": 9,
+      "parking": "1 Parking",
+      "has_parking": true,
+      "status": "",
+      "source": "condos.ca",
+      "neighborhood": null,
+      "avoid": null,
+      "lat": 43.6409971,
+      "lng": -79.3943918,
+      "drive_mon_7am_to_cvh_min": 37.5,
+      "drive_mon_7am_to_cvh_km": 32.59,
+      "drive_mon_6am_from_cvh_min": 46.0,
+      "drive_mon_6am_from_cvh_km": 41.64,
+      "drive_mon_3pm_from_cvh_min": 45.9,
+      "drive_mon_3pm_from_cvh_km": 33.55,
+      "drive_fri_5pm_from_cvh_min": 51.5,
+      "drive_fri_5pm_from_cvh_km": 41.64,
+      "drive_king_west_7pm_min": 6.7,
+      "drive_king_west_7pm_km": 1.57
+    },
+    "research": {
+      "address": "25 Telegram Mews",
+      "building_name": "Montage at CityPlace (paired with Neo)",
+      "year_built": 2009,
+      "developer": "Concord Adex",
+      "property_manager": "Crossbridge",
+      "pm_rep_note": "Crossbridge; Montage is one of the more 'fun young' CityPlace addresses.",
+      "units_floors": "532 units, 46 storeys (LE 'Luxury Edition' suites floors 31+)",
+      "amenities": [
+        "indoor pool",
+        "hot tub",
+        "party room",
+        "gym",
+        "rooftop patio with BBQs",
+        "theatre",
+        "poker room"
+      ],
+      "reddit_quotes": [
+        {
+          "quote": "It's still a young crowd in the building, so it's noisy on weekends, though some floors are pretty quiet. Elevators now have key-fob access after 10pm so no one can head up without a fob.",
+          "url": "https://urbantoronto.ca/forum/threads/luna-condos-concord-cityplace-real-estate.8569/page-17",
+          "date": "UrbanToronto forum"
+        }
+      ],
+      "google_rating": "thin",
+      "google_complaints": [
+        "weekend party noise",
+        "young / transient demographic",
+        "previous elevator issues now reportedly resolved"
+      ],
+      "tiktok_mentions": [
+        "Montage rooftop pool / BBQ shows up in CityPlace lifestyle TikToks - 'aspirational young condo' branding"
+      ],
+      "red_flags": [
+        "explicitly called out as a 'noisy on weekends, young crowd' building by UT forum residents",
+        "frat-y is the right adjective"
+      ],
+      "honest_call": "If Fadi WANTS the social weekend vibe and dates a lot, Montage is actually well-suited - it's a young-professional party-adjacent building. Downside is post-night-shift sleep. Borderline pick - depends on his shift schedule.",
+      "data_quality": "medium"
+    },
+    "amenities": {
+      "address": "25 Telegram Mews",
+      "neighborhood": "CityPlace",
+      "run_clubs": [
+        {
+          "name": "Tribe Fitness",
+          "meets": "Wed 6:30pm, Sat 9am",
+          "location": "10 Lower Spadina (Canoe Landing)",
+          "walk_min": 3
+        },
+        {
+          "name": "BlackToe Running King West",
+          "meets": "Tue/Wed 6:30pm coached",
+          "location": "95 Bathurst",
+          "walk_min": 12
+        }
+      ],
+      "gyms": [
+        {
+          "name": "Sweat & Tonic The Well",
+          "type": "boutique HIIT/spin/yoga",
+          "walk_min": 10
+        },
+        {
+          "name": "Equinox King West (opens summer 2026)",
+          "type": "ultra-premium full club",
+          "walk_min": 12
+        }
+      ],
+      "grocery": {
+        "name": "Sobeys Urban Fresh Fort York",
+        "address": "22 Fort York Blvd",
+        "walk_min": 7
+      },
+      "best_run_loop": "Martin Goodman Trail access via Bathurst Quay in 4-5 min. Sugar Beach east = 4km; Humber Bay Arch west = 11km. Toronto Music Garden + Music Garden Promenade are gems on the route.",
+      "ossington_walk_min": 28,
+      "king_bathurst_walk_min": 12,
+      "running_insight": "CityPlace canonical address \u2014 lake-close, Tribe-close, Sobeys-close. Slightly further from Liberty Village run clubs but BlackToe King West fills that gap."
+    },
+    "breakdown": {
+      "drive_score": 12.9,
+      "quality_score": -2.0,
+      "vibe_score": 12,
+      "cost_score": 7.1,
+      "sqft_score": 5.4,
+      "drive_am": 37.5,
+      "drive_pm_worst": 51.5,
+      "year_built": 2009,
+      "red_flag_count": 2
+    }
+  },
+  {
+    "rank": 5,
+    "composite": 34.5,
+    "listing": {
+      "id": "realtor_20_BRUYERES_MEWS_505",
+      "unit_no": "505",
+      "address": "20 Bruyeres Mews",
+      "address_norm": "20 BRUYERES MEWS",
+      "rent": 2050,
+      "beds": "1",
+      "baths": 1,
+      "sqft": 500,
+      "mls": null,
+      "days_on_market": null,
+      "parking": "unknown \u2014 verify with agent",
+      "has_parking": null,
+      "status": "active",
+      "source": "realtor.ca",
+      "neighborhood": "Niagara",
+      "avoid": null,
+      "lat": 43.63755,
+      "lng": -79.4008,
+      "drive_mon_7am_to_cvh_min": 41.0,
+      "drive_mon_7am_to_cvh_km": 33.27,
+      "drive_mon_6am_from_cvh_min": 46.9,
+      "drive_mon_6am_from_cvh_km": 32.81,
+      "drive_mon_3pm_from_cvh_min": 45.3,
+      "drive_mon_3pm_from_cvh_km": 32.81,
+      "drive_fri_5pm_from_cvh_min": 48.4,
+      "drive_fri_5pm_from_cvh_km": 40.91,
+      "drive_king_west_7pm_min": 5.1,
+      "drive_king_west_7pm_km": 1.16
+    },
+    "research": {
+      "address": "20 Bruyeres Mews",
+      "building_name": "The Yards at Fort York",
+      "year_built": 2015,
+      "developer": "Onni Group (Vancouver-based, ~50 yr operator)",
+      "property_manager": "FirstService Residential (typical Onni)",
+      "pm_rep_note": "FirstService is widely considered the best of the big-three Toronto condo PMs; Onni QA is significantly higher than Concord Adex.",
+      "units_floors": "412 units, 28 storeys (glass tower + select townhouses)",
+      "amenities": [
+        "gym",
+        "sauna",
+        "visitor parking",
+        "guest suites",
+        "outdoor terrace (highway-facing)"
+      ],
+      "reddit_quotes": [
+        {
+          "quote": "Condo walls are very soundproof. Can barely hear cars on the highway or neighbours. Lived here 7 months, condo management responds quickly.",
+          "url": "https://www.condogenius.io/buildings/toronto/downtown-n1/the-yards-at-fort-york-20-bruyeres-mews",
+          "date": "CondoGenius resident review"
+        },
+        {
+          "quote": "Lived at The Yards for 5 years and thoroughly enjoy it. Gym has full weights and a squat rack.",
+          "url": "https://www.condogenius.io/buildings/toronto/downtown-n1/the-yards-at-fort-york-20-bruyeres-mews",
+          "date": "CondoGenius resident review"
+        }
+      ],
+      "google_rating": "thin but positive",
+      "google_complaints": [
+        "no pool",
+        "outdoor patio looks at the highway",
+        "smaller amenity set than CityPlace mega-buildings"
+      ],
+      "tiktok_mentions": [
+        "thin"
+      ],
+      "red_flags": [
+        "right next to Gardiner Expressway - soundproofing reportedly handles it, but ask to visit during rush hour",
+        "smaller amenity set means no pool for off-day swimming"
+      ],
+      "honest_call": "Strong pick. Onni quality, FirstService management, real squat rack (matters for a 100km/week runner who likely lifts), good soundproofing, mature building. Best 'quiet professional' Fort York option. Highly recommend - get a unit on a high floor NOT facing the Gardiner.",
+      "data_quality": "medium"
+    },
+    "amenities": {},
+    "breakdown": {
+      "drive_score": 12.0,
+      "quality_score": 6.0,
+      "vibe_score": 1,
+      "cost_score": 10.5,
+      "sqft_score": 5.0,
+      "drive_am": 41.0,
+      "drive_pm_worst": 48.4,
+      "year_built": 2015,
+      "red_flag_count": 2
+    }
+  },
+  {
+    "rank": 6,
+    "composite": 34.2,
+    "listing": {
+      "id": "C13422630",
+      "unit_no": "302",
+      "address": "69 Lynn Williams Street",
+      "address_norm": "69 LYNN WILLIAMS STREET",
+      "rent": 2400,
+      "beds": "1",
+      "baths": 1,
+      "sqft": 635,
+      "mls": "C13422630",
+      "days_on_market": 5,
+      "parking": "1 Parking",
+      "has_parking": true,
+      "status": "",
+      "source": "condos.ca",
+      "neighborhood": null,
+      "avoid": null,
+      "lat": 43.638726,
+      "lng": -79.4155286,
+      "drive_mon_7am_to_cvh_min": 39.2,
+      "drive_mon_7am_to_cvh_km": 30.69,
+      "drive_mon_6am_from_cvh_min": 47.6,
+      "drive_mon_6am_from_cvh_km": 31.87,
+      "drive_mon_3pm_from_cvh_min": 43.9,
+      "drive_mon_3pm_from_cvh_km": 39.96,
+      "drive_fri_5pm_from_cvh_min": 50.2,
+      "drive_fri_5pm_from_cvh_km": 39.96,
+      "drive_king_west_7pm_min": 6.6,
+      "drive_king_west_7pm_km": 1.83
+    },
+    "research": {
+      "address": "69 Lynn Williams Street",
+      "building_name": "Liberty on the Park",
+      "year_built": 2013,
+      "developer": "CanAlfa Group",
+      "property_manager": "Crossbridge / FirstService Residential (per LV directory)",
+      "pm_rep_note": "Smaller building = generally better unit-level service.",
+      "units_floors": "201 units / 15 floors",
+      "amenities": [
+        "fitness room / gym",
+        "indoor lounge / party room",
+        "outdoor terrace with BBQ"
+      ],
+      "reddit_quotes": [],
+      "review_quotes": [
+        {
+          "quote": "Walk Score 94. Located right beside Liberty Village Park ... simpler and smaller than most Liberty Village condos, offering a more intimate feel.",
+          "url": "https://condomapper.ca/condos-for-sale/toronto/downtown/liberty-village/liberty-on-the-park-69-lynn-williams-street/",
+          "date": "ongoing"
+        }
+      ],
+      "google_rating": "limited reviews due to small footprint",
+      "google_complaints": [
+        "thin amenity package (no pool, no concierge listed in most summaries)",
+        "older 9ft ceilings now standard but stainless appliances aging"
+      ],
+      "tiktok_mentions": [],
+      "red_flags": [
+        "Amenity-light vs others on the list \u2014 no pool, no sauna, no big lounge"
+      ],
+      "honest_call": "If you DON'T care about pool/spa/big-amenity-stack and want a quieter 201-unit building with a park literally next door for those 100km/week runs, this is interesting. But for a 27yo who dates a lot, the amenity story is too thin vs King West Condos / Liberty Central. The park-adjacency is the unique selling point. Mid-tier pick.",
+      "data_quality": "moderate"
+    },
+    "amenities": {
+      "address": "69 Lynn Williams Street",
+      "neighborhood": "Liberty Village",
+      "run_clubs": [
+        {
+          "name": "Liberty Village Striders",
+          "meets": "Wed 6:00am",
+          "location": "Aroma Coffee, 120 Lynn Williams (next door)",
+          "walk_min": 1
+        },
+        {
+          "name": "Parkdale Roadrunners",
+          "meets": "Tue 7pm (Stay Gold 124 Brock), Sat 9am (Bather 450 Dufferin)",
+          "location": "Brock/Dufferin",
+          "walk_min": 16
+        }
+      ],
+      "gyms": [
+        {
+          "name": "F45 Liberty Village",
+          "type": "HIIT bootcamp",
+          "walk_min": 3
+        },
+        {
+          "name": "Equinox King West (opens summer 2026)",
+          "type": "ultra-premium full club",
+          "walk_min": 20
+        }
+      ],
+      "grocery": {
+        "name": "Metro Liberty Village",
+        "address": "100 Lynn Williams (next door)",
+        "walk_min": 1
+      },
+      "best_run_loop": "South under rail corridor to Coronation Park (5 min) onto Martin Goodman Trail. West to Humber Bay Arch = 10-12km round trip; east to CityPlace = 6km. Liberty Village \u2192 Parkdale \u2192 High Park loop = 8km classic.",
+      "ossington_walk_min": 22,
+      "king_bathurst_walk_min": 20,
+      "running_insight": "Best of both worlds: in the Liberty Village run-club epicenter (Striders + Parkdale RR + F45 all <20 min) AND 5 min to the lake. King & Bathurst nightlife is a hike (20 min) \u2014 Uber it."
+    },
+    "breakdown": {
+      "drive_score": 12.4,
+      "quality_score": 2.5,
+      "vibe_score": 6,
+      "cost_score": 7.0,
+      "sqft_score": 6.3,
+      "drive_am": 39.2,
+      "drive_pm_worst": 50.2,
+      "year_built": 2013,
+      "red_flag_count": 1
+    }
+  },
+  {
+    "rank": 7,
+    "composite": 34.2,
+    "listing": {
+      "id": "realtor_85_EAST_LIBERTY_STREET_1018",
+      "unit_no": "1018",
+      "address": "85 East Liberty Street",
+      "address_norm": "85 EAST LIBERTY STREET",
+      "rent": 2480,
+      "beds": "1",
+      "baths": 1,
+      "sqft": 600,
+      "mls": null,
+      "days_on_market": null,
+      "parking": "unknown \u2014 verify with agent",
+      "has_parking": null,
+      "status": "active",
+      "source": "realtor.ca",
+      "neighborhood": "Niagara",
+      "avoid": null,
+      "lat": 43.6378584,
+      "lng": -79.4154765,
+      "drive_mon_7am_to_cvh_min": 39.7,
+      "drive_mon_7am_to_cvh_km": 30.75,
+      "drive_mon_6am_from_cvh_min": 48.1,
+      "drive_mon_6am_from_cvh_km": 32.91,
+      "drive_mon_3pm_from_cvh_min": 46.6,
+      "drive_mon_3pm_from_cvh_km": 32.91,
+      "drive_fri_5pm_from_cvh_min": 55.5,
+      "drive_fri_5pm_from_cvh_km": 32.91,
+      "drive_king_west_7pm_min": 7.0,
+      "drive_king_west_7pm_km": 1.92
+    },
+    "research": {
+      "address": "85 East Liberty Street",
+      "building_name": "King West Condominiums (Phase I of the tri-tower; sometimes labeled as the main King West Condos building)",
+      "year_built": 2013,
+      "developer": "Plaza (Plazacorp)",
+      "property_manager": "Crossbridge / FirstService Residential (shared with 65 & 75)",
+      "pm_rep_note": "Same as 65/75.",
+      "units_floors": "398 units / 24 floors",
+      "amenities": [
+        "pool",
+        "gym",
+        "sauna",
+        "hot tub",
+        "rooftop patio",
+        "party room",
+        "media room",
+        "bowling alley",
+        "golf simulator",
+        "billiards",
+        "movie theatre",
+        "concierge",
+        "parking"
+      ],
+      "reddit_quotes": [],
+      "review_quotes": [
+        {
+          "quote": "The Liberty Village area is great with grocery stores, beer store and LCBO all within 1-2 minutes walking distance.",
+          "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10255/King-West-Condos",
+          "date": "review index, ongoing"
+        }
+      ],
+      "google_rating": "not surfaced separately",
+      "google_complaints": [],
+      "tiktok_mentions": [],
+      "red_flags": [],
+      "honest_call": "Closest of the tri-tower to the LCBO / Metro / King St strip \u2014 slightly tighter walk to King W bars than 65 or 75. Same amenity package. Fine pick.",
+      "data_quality": "good"
+    },
+    "amenities": {},
+    "breakdown": {
+      "drive_score": 10.0,
+      "quality_score": 7.0,
+      "vibe_score": 5,
+      "cost_score": 6.2,
+      "sqft_score": 6.0,
+      "drive_am": 39.7,
+      "drive_pm_worst": 55.5,
+      "year_built": 2013,
+      "red_flag_count": 0
+    }
+  },
+  {
+    "rank": 8,
+    "composite": 34.1,
+    "listing": {
+      "id": "C13443422",
+      "unit_no": "1012",
+      "address": "65 East Liberty Street",
+      "address_norm": "65 EAST LIBERTY STREET",
+      "rent": 2700,
+      "beds": "1",
+      "baths": 1,
+      "sqft": 650,
+      "mls": "C13443422",
+      "days_on_market": 0,
+      "parking": "1 Parking",
+      "has_parking": true,
+      "status": "just listed",
+      "source": "condos.ca",
+      "neighborhood": null,
+      "avoid": null,
+      "lat": 43.6381507,
+      "lng": -79.4140767,
+      "drive_mon_7am_to_cvh_min": 40.4,
+      "drive_mon_7am_to_cvh_km": 31.9,
+      "drive_mon_6am_from_cvh_min": 47.6,
+      "drive_mon_6am_from_cvh_km": 32.74,
+      "drive_mon_3pm_from_cvh_min": 46.0,
+      "drive_mon_3pm_from_cvh_km": 32.74,
+      "drive_fri_5pm_from_cvh_min": 50.3,
+      "drive_fri_5pm_from_cvh_km": 40.83,
+      "drive_king_west_7pm_min": 6.5,
+      "drive_king_west_7pm_km": 1.75
+    },
+    "research": {
+      "address": "65 East Liberty Street",
+      "building_name": "King West Condominiums Phase III (Liberty Lakeview Towers complex w/ 75 & 85)",
+      "year_built": 2013,
+      "developer": "Plaza (Plazacorp)",
+      "property_manager": "Crossbridge / FirstService Residential (shared mgmt across the King West tri-tower per LV condo directory)",
+      "pm_rep_note": "Plaza buildings generally well-regarded for construction quality; mgmt criticism is that ONE property manager covers nearly 1,200 suites across three towers \u2014 response time can lag.",
+      "units_floors": "425 units / 25 floors",
+      "amenities": [
+        "indoor pool",
+        "hot tub / sauna",
+        "large gym",
+        "rooftop Sky Lounge",
+        "virtual golf simulator",
+        "two-lane bowling alley",
+        "billiards / games room (ping pong, foosball, air hockey)",
+        "movie theatre",
+        "party room",
+        "24h concierge",
+        "spa",
+        "guest suites"
+      ],
+      "reddit_quotes": [],
+      "review_quotes": [
+        {
+          "quote": "Buyers love the variety of suite sizes, exceptional management, and amenity range that suits every lifestyle. ... The Ossington bus stops right in front of the building for easy TTC access.",
+          "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10255/King-West-Condos",
+          "date": "review index, ongoing"
+        },
+        {
+          "quote": "Property management could be an issue, with only one main property manager for the entire building.",
+          "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10255/King-West-Condos",
+          "date": "review index, ongoing"
+        }
+      ],
+      "google_rating": "not directly surfaced; review aggregators positive-leaning",
+      "google_complaints": [
+        "single PM stretched over 1,200 suites",
+        "amenity overcrowding at peak (large tenant pool)"
+      ],
+      "tiktok_mentions": [],
+      "red_flags": [],
+      "honest_call": "Best-amenity-per-dollar in Liberty Village for a single 27yo. Bowling alley + virtual golf + sky lounge + pool is genuinely great for dating optics ('come over, we have a bowling alley'). Plaza build = solid. Ossington bus runs from front door = no streetcar dependency. Strong pick.",
+      "data_quality": "good"
+    },
+    "amenities": {},
+    "breakdown": {
+      "drive_score": 11.6,
+      "quality_score": 7.0,
+      "vibe_score": 5,
+      "cost_score": 4.0,
+      "sqft_score": 6.5,
+      "drive_am": 40.4,
+      "drive_pm_worst": 50.3,
+      "year_built": 2013,
+      "red_flag_count": 0
+    }
+  },
+  {
+    "rank": 9,
+    "composite": 34.1,
+    "listing": {
+      "id": "C13423642",
+      "unit_no": "1010",
+      "address": "75 East Liberty Street",
+      "address_norm": "75 EAST LIBERTY STREET",
+      "rent": 2750,
+      "beds": "1+1",
+      "baths": 1,
+      "sqft": 650,
+      "mls": "C13423642",
+      "days_on_market": 5,
+      "parking": "1 Parking",
+      "has_parking": true,
+      "status": "",
+      "source": "condos.ca",
+      "neighborhood": null,
+      "avoid": null,
+      "lat": 43.6379927,
+      "lng": -79.4147691,
+      "drive_mon_7am_to_cvh_min": 39.4,
+      "drive_mon_7am_to_cvh_km": 30.75,
+      "drive_mon_6am_from_cvh_min": 47.5,
+      "drive_mon_6am_from_cvh_km": 32.77,
+      "drive_mon_3pm_from_cvh_min": 44.2,
+      "drive_mon_3pm_from_cvh_km": 40.86,
+      "drive_fri_5pm_from_cvh_min": 50.3,
+      "drive_fri_5pm_from_cvh_km": 40.86,
+      "drive_king_west_7pm_min": 6.4,
+      "drive_king_west_7pm_km": 1.77
+    },
+    "research": {
+      "address": "75 East Liberty Street",
+      "building_name": "King West Condominiums Phase II",
+      "year_built": 2013,
+      "developer": "Plaza (Plazacorp)",
+      "property_manager": "Crossbridge / FirstService Residential (shared with 65 & 85)",
+      "pm_rep_note": "Same shared mgmt as Phase III; same complaint about PM thinness.",
+      "units_floors": "approx 300 units / 24 floors",
+      "amenities": [
+        "shared with 65 & 85: pool",
+        "gym",
+        "sauna",
+        "hot tub",
+        "rooftop patio",
+        "party room",
+        "multimedia room",
+        "bowling alley",
+        "golf / sports simulator",
+        "billiards",
+        "movie theatre",
+        "concierge / 24h security",
+        "parking garage"
+      ],
+      "reddit_quotes": [],
+      "review_quotes": [
+        {
+          "quote": "Good quality construction, and the builder is very quick to address deficiencies, taking pride in their workmanship with issues addressed immediately.",
+          "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10255/King-West-Condos",
+          "date": "review index, ongoing"
+        }
+      ],
+      "google_rating": "not surfaced separately from tri-tower",
+      "google_complaints": [
+        "shared amenity bottlenecks",
+        "elevator wait peaks"
+      ],
+      "tiktok_mentions": [],
+      "red_flags": [],
+      "honest_call": "Functionally identical to 65 East Liberty (same complex, shared amenities). Slightly smaller floorplate (300 vs 425 units) so marginally less crowded elevators. Pick this over 65 if you find a better-priced unit; otherwise they're the same building.",
+      "data_quality": "good"
+    },
+    "amenities": {},
+    "breakdown": {
+      "drive_score": 12.2,
+      "quality_score": 7.0,
+      "vibe_score": 5,
+      "cost_score": 3.3,
+      "sqft_score": 6.5,
+      "drive_am": 39.4,
+      "drive_pm_worst": 50.3,
+      "year_built": 2013,
+      "red_flag_count": 0
+    }
+  },
+  {
+    "rank": 10,
+    "composite": 33.0,
+    "listing": {
+      "id": "realtor_150_EAST_LIBERTY_STREET_1308",
+      "unit_no": "1308",
+      "address": "150 East Liberty Street",
+      "address_norm": "150 EAST LIBERTY STREET",
+      "rent": 2100,
+      "beds": "1",
+      "baths": 0,
+      "sqft": 450,
+      "mls": null,
+      "days_on_market": null,
+      "parking": "unknown \u2014 verify with agent",
+      "has_parking": null,
+      "status": "active",
+      "source": "realtor.ca",
+      "neighborhood": "Niagara",
+      "avoid": null,
+      "lat": 43.6388044,
+      "lng": -79.4162679,
+      "drive_mon_7am_to_cvh_min": 39.1,
+      "drive_mon_7am_to_cvh_km": 30.66,
+      "drive_mon_6am_from_cvh_min": 45.6,
+      "drive_mon_6am_from_cvh_km": 39.93,
+      "drive_mon_3pm_from_cvh_min": 43.9,
+      "drive_mon_3pm_from_cvh_km": 39.93,
+      "drive_fri_5pm_from_cvh_min": 50.1,
+      "drive_fri_5pm_from_cvh_km": 39.93,
+      "drive_king_west_7pm_min": 7.6,
+      "drive_king_west_7pm_km": 2.06
+    },
+    "research": {
+      "address": "150 East Liberty Street",
+      "building_name": "Liberty Place",
+      "year_built": 2014,
+      "developer": "CanAlfa Group",
+      "property_manager": "FirstService Residential",
+      "pm_rep_note": "Liberty Place has surfaced specific 1-star complaints about management responsiveness (see review quotes). FirstService corporate is generally OK but this building's on-site mgmt history is mixed.",
+      "units_floors": "460-466 units / 30-32 floors (Flatiron-inspired tower)",
+      "amenities": [
+        "fitness centre",
+        "yoga / Pilates studio",
+        "his/hers saunas",
+        "internet / business lounge",
+        "media room",
+        "games room",
+        "party room w/ landscaped terrace + BBQ",
+        "guest suites",
+        "concierge",
+        "security guard",
+        "parking garage"
+      ],
+      "reddit_quotes": [],
+      "review_quotes": [
+        {
+          "quote": "Plumbing issues weekly with massive water damage that remains unrepaired, regular elevator breakdowns ... management couldn't care about the owners and residents less if they tried. 1.0/5.",
+          "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10698/Liberty-Place-Condos",
+          "date": "January 2022"
+        },
+        {
+          "quote": "Residents love the tower's clean design, strong management and unbeatable walkability.",
+          "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10698/Liberty-Place-Condos",
+          "date": "review index, more recent"
+        }
+      ],
+      "google_rating": "mixed; 1-star and 5-star both surface, suggesting unit-by-unit experience",
+      "google_complaints": [
+        "weekly plumbing leaks reported",
+        "elevator breakdowns",
+        "security desk located at unused entrance leaving main door unsafe",
+        "broken accessibility door (1+ year unrepaired)",
+        "alleged AODA case against board"
+      ],
+      "tiktok_mentions": [],
+      "red_flags": [
+        "AODA discrimination allegation (per resident review)",
+        "chronic plumbing leaks",
+        "NO swimming pool (despite the size) \u2014 surprising omission for amenity-shopping",
+        "elevator chronic complaints"
+      ],
+      "honest_call": "Tallest tower in the cluster (32 floors, Flatiron design \u2014 high views are stunning), but reputation is the most damaged of the bunch. Weekly plumbing leak reports + no pool + accessibility lawsuit allegations = avoid unless you find a deeply-discounted high-floor unit and you're OK gambling on which side of management you get. Not the first choice for a $2,700/mo attending.",
+      "data_quality": "good"
+    },
+    "amenities": {
+      "address": "150 East Liberty Street",
+      "neighborhood": "Liberty Village",
+      "run_clubs": [
+        {
+          "name": "Liberty Village Striders",
+          "meets": "Wed 6:00am",
+          "location": "Aroma Coffee, 120 Lynn Williams",
+          "walk_min": 1
+        },
+        {
+          "name": "Parkdale Roadrunners",
+          "meets": "Tue 7pm Stay Gold, Sat 9am Bather (450 Dufferin)",
+          "location": "Parkdale",
+          "walk_min": 15
+        }
+      ],
+      "gyms": [
+        {
+          "name": "F45 Liberty Village",
+          "type": "HIIT bootcamp",
+          "walk_min": 4
+        },
+        {
+          "name": "Equinox King West (opens summer 2026)",
+          "type": "ultra-premium full club",
+          "walk_min": 21
+        }
+      ],
+      "grocery": {
+        "name": "Metro Liberty Village",
+        "address": "100 Lynn Williams",
+        "walk_min": 1
+      },
+      "best_run_loop": "Coronation Park \u2192 Martin Goodman in ~6 min. Humber Bay out-and-back = 12km. Easy access to Parkdale loops + High Park (3.5km away, then 4km perimeter = 11km loop total).",
+      "ossington_walk_min": 22,
+      "king_bathurst_walk_min": 21,
+      "running_insight": "Western-most Liberty Village = closest to Parkdale Roadrunners' Saturday meetup and High Park, but furthest from King W nightlife. For a 100km/week runner this trade is worth it; for socializing it isn't."
+    },
+    "breakdown": {
+      "drive_score": 12.5,
+      "quality_score": 0.0,
+      "vibe_score": 6,
+      "cost_score": 10.0,
+      "sqft_score": 4.5,
+      "drive_am": 39.1,
+      "drive_pm_worst": 50.1,
+      "year_built": 2014,
+      "red_flag_count": 4
+    }
+  }
+]

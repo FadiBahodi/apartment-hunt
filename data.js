@@ -774,6 +774,76 @@ const AVOID = [
     name: "36 Lisgar Street",
     why: "Urbancorp orphan (builder bankrupt 2016); 'fake 2BR' layouts (500-599sqft is a 1BR with wall); TikTok #blacklisted",
     source: "Wave Y Mario 5-unit research"
+  },
+  {
+    name: "68 Abell Street (Epic on Triangle Park)",
+    why: "Urbancorp cluster — same defect DNA as 36 Lisgar + 150 Sudbury + 20 Joe Shuster; documented Toronto Realty Blog as part of 'Urbancrap' problem developer",
+    source: "Wave 11 Agent E (Little Portugal research)"
+  },
+  {
+    name: "150 Sudbury Street (Westside Gallery Lofts)",
+    why: "Urbancorp orphan; 'bare-concrete tomb with flaking walls' at handover; Office of Superintendent of Bankruptcy CCAA proceedings",
+    source: "Wave 11 Agent E"
+  },
+  {
+    name: "20 Joe Shuster Way (Fuzion)",
+    why: "Urbancorp build defects + bed bug / litigation history + Strata.ca documented complaints",
+    source: "Wave 11 Agent E"
+  },
+  {
+    name: "14 York Street (ICE Condos)",
+    why: "#1 in 311 short-term-rental complaints in Toronto; TWO SHOOTINGS on record; governance war over Airbnb; documented as 'I regret buying' building",
+    source: "Wave 11 Agent F (Downtown core); Substack condoliving"
+  },
+  {
+    name: "15 Iceboat Terrace (Parade 1)",
+    why: "835 units / 3 elevators = canonical CityPlace elevator-hell; pool offline for full year; heavy Airbnb/short-stay turnover; explicit STAY AWAY reviews",
+    source: "Wave 11 Agent C (Fort York/CityPlace)"
+  },
+  {
+    name: "21 Iceboat Terrace (Parade 2)",
+    why: "Same Parade complex — see 15 Iceboat",
+    source: "Wave 11 Agent C"
+  },
+  {
+    name: "215 Fort York Boulevard (Neptune)",
+    why: "80% rentals confirmed via status certificate; saturated resale market; Gardiner/rail adjacency noise; hotel-like culture",
+    source: "Wave 11 Agent C"
+  },
+  {
+    name: "219 Fort York Boulevard (Neptune)",
+    why: "Same Neptune complex — see 215 Fort York",
+    source: "Wave 11 Agent C"
+  },
+  {
+    name: "600 Fleet Street (Malibu)",
+    why: "Worst documented party/police-call/Airbnb noise history of the Fort York set; Globe and Mail Airbnb war documentation",
+    source: "Wave 11 Agent C"
+  },
+  {
+    name: "629 King Street W (Thompson Residences)",
+    why: "Lavelle nightclub literally on-premise; AirBnB-heavy investor units; rotating transient neighbors + nightclub = sleep killer for night-shift ER attending",
+    source: "Wave 11 Agent B (King West)"
+  },
+  {
+    name: "458 Richmond Street W (Woodsworth)",
+    why: "Lamb Development chronic build-quality complaints; raw-loft aesthetic doesn't justify the trade-offs",
+    source: "Wave 11 Agent B"
+  },
+  {
+    name: "285 Dufferin Street (XO2)",
+    why: "Sister building XO at 270 Dufferin had viral 2023 Reddit/BlogTO scandal over crumbling brick facade; same Lifetime developer + same site = elevated risk",
+    source: "Wave 11 Agent E"
+  },
+  {
+    name: "300 Front Street West",
+    why: "CBC-documented WORST Airbnb-complaint building in Toronto (20% of citywide STR complaints from this one building); violent crime reports; absolute do-not-rent",
+    source: "Wave 11 Agent D (Bathurst/Wellington); CBC report"
+  },
+  {
+    name: "576 Front Street West (Minto Westside)",
+    why: "Going downhill fast — 3.7/5 Birdeye n=41; management transition + theft + 5am false fire alarms; sleep-destroying for shift worker",
+    source: "Wave 11 Agent D"
   }
 ];
 

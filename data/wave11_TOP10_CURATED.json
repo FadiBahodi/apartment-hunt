@@ -1,0 +1,659 @@
+[
+  {
+    "rank": 1,
+    "tier": "\u2b50\u2b50 TIER 1 \u2014 Tour FIRST",
+    "headline": "Zen King West (2024) \u2014 200m INDOOR RUNNING TRACK + 5000sqft gym + cold plunge spa",
+    "why_top": "Unicorn-tier for a 100km/wk runner. Indoor track means winter mileage doesn't drop. Cold plunge spa = recovery for night-shift body. CentreCourt 2024 build = newest on the list. Walk Score 91, Transit 96.",
+    "watch_out": "CentreCourt builds tight \u2014 at $2,150 you're in a 450sqft studio-1BR. Verify floor plan. Building is in occupancy phase 2024-25, expect 12mo of management teething. ASK: which units have access to the indoor track at peak hours? Is the track 24h?",
+    "alt_unit": "1020 ($2,500, 600sqft 1+1, 2BA) \u2014 if you want more space",
+    "listing": {
+      "address": "19 Western Battery Road",
+      "unit": "801",
+      "rent": 2150,
+      "sqft": 450,
+      "beds": "1",
+      "baths": 1,
+      "mls": null,
+      "days_on_market": null,
+      "parking": "unknown \u2014 verify with agent",
+      "lat": 43.6396698,
+      "lng": -79.4113565
+    },
+    "drive_times": {
+      "mon_7am_to_cvh": 39.9,
+      "mon_6am_post_night": 46.6,
+      "mon_3pm_home_peak": 44.9,
+      "fri_5pm_worst_case": 49.2,
+      "king_west_7pm": 5.8
+    },
+    "building": {
+      "name": "ZEN King West",
+      "year_built": "2024 (recent completion / occupancy underway 2024-2025)",
+      "developer": "CentreCourt Developments",
+      "property_manager": "Likely Crossbridge or Del (CentreCourt's usual rotation); confirm at viewing",
+      "pm_rep": "CentreCourt is a polarizing dev \u2014 known for tight units, premium amenities, on-time delivery. Build quality reviews trending positive in early occupancy.",
+      "size": "481 units / 32 floors",
+      "amenities": [
+        "3,500 sq ft Scandinavian spa (hot + cold plunge pools)",
+        "5,000 sq ft gym",
+        "200m INDOOR running track (rare, big deal for a 100km/week runner)",
+        "indoor pool",
+        "hot tub",
+        "yoga studio",
+        "outdoor terrace",
+        "concierge",
+        "party room",
+        "ground-floor IQ Food Co retail",
+        "grand 14ft lobby"
+      ],
+      "red_flags": [
+        "Small floorplate per unit \u2014 at $2,700 budget you may end up in 450-500 sqft",
+        "Newest building = early-occupancy mgmt teething likely over next 12mo"
+      ],
+      "reddit_quotes": []
+    },
+    "amenities_nearby": {
+      "run_clubs": [],
+      "gyms": [],
+      "grocery": null,
+      "best_run_loop": null,
+      "ossington_walk_min": null,
+      "king_bathurst_walk_min": null,
+      "running_insight": null
+    }
+  },
+  {
+    "rank": 2,
+    "tier": "\u2b50\u2b50 TIER 1",
+    "headline": "Mus\u00e9e Condos (Plaza 2017) \u2014 best risk-adjusted King West pick",
+    "why_top": "Plaza build > Freed/Lamb. FirstService PM (good rep). Outdoor rooftop pool. ONE block off King's loudest stretch = quieter for shift worker but still 8-min walk to King W bars. 2017 vintage = no Urbancorp concerns.",
+    "watch_out": "AVOID low floor + pool/courtyard-facing (specific complaint: garbage truck noise early AM). Want higher floor, Adelaide-facing. ASK to see specifically how much sun the unit gets \u2014 Adelaide-facing > pool-courtyard.",
+    "alt_unit": "1034 ($2,800, 746sqft 1+1+2BA) \u2014 bigger if budget allows",
+    "listing": {
+      "address": "525 Adelaide Street W",
+      "unit": "631",
+      "rent": 2450,
+      "sqft": 509,
+      "beds": "1",
+      "baths": 1,
+      "mls": "C13414460",
+      "days_on_market": 6,
+      "parking": "1 Parking",
+      "lat": 43.6450448,
+      "lng": -79.4022643
+    },
+    "drive_times": {
+      "mon_7am_to_cvh": 41.4,
+      "mon_6am_post_night": 51.8,
+      "mon_3pm_home_peak": 49.8,
+      "fri_5pm_worst_case": 58.7,
+      "king_west_7pm": 0.4
+    },
+    "building": {
+      "name": "Mus\u00e9e Condos",
+      "year_built": 2017,
+      "developer": "Plaza (Plazacorp Urban Residential Communities)",
+      "property_manager": "FirstService Residential",
+      "pm_rep": "Plaza is one of the top-tier Toronto developers \u2014 'buildings by Plaza like Ivory on Adelaide and Mus\u00e9e have been positive' (UrbanToronto). FirstService is large + reliable.",
+      "size": "440 units (some sources 437) over 17 storeys",
+      "amenities": [
+        "Outdoor rooftop pool",
+        "Fitness centre",
+        "Yoga room",
+        "Sauna",
+        "Party room",
+        "Media/theatre room",
+        "Meeting room",
+        "Guest suites",
+        "24-hour concierge",
+        "On-site superintendent",
+        "Parking garage",
+        "Rooftop patio with sweeping city views"
+      ],
+      "red_flags": [
+        "LOW-floor + pool-side = early-morning garbage truck noise (specific repeated complaint)",
+        "Location on Bathurst not King \u2014 slightly further walk to King West core (though still walkable)"
+      ],
+      "reddit_quotes": []
+    },
+    "amenities_nearby": {
+      "run_clubs": [],
+      "gyms": [],
+      "grocery": null,
+      "best_run_loop": null,
+      "ossington_walk_min": null,
+      "king_bathurst_walk_min": null,
+      "running_insight": null
+    }
+  },
+  {
+    "rank": 3,
+    "tier": "\u2b50\u2b50 TIER 1 \u2014 STEALTH PICK",
+    "headline": "Kingly Condos (Allied + RioCan 2019) \u2014 strongest developer pedigree on the list",
+    "why_top": "Allied Properties REIT + RioCan = institutional landlords, no condo board BS. Hariri Pontarini architect (premium). 132-unit BOUTIQUE feel \u2014 no elevator hell. Heritage brick podium aesthetic. Designed to last.",
+    "watch_out": "No pool. Smaller gym vs Mus\u00e9e. 132 units = thinner amenity menu. NO research from Agent on this specific unit so verify. ASK: any short-term-rental units in building? What's the noise-transmission rating?",
+    "alt_unit": "None in dataset",
+    "listing": {
+      "address": "501 Adelaide Street W",
+      "unit": "309",
+      "rent": 2300,
+      "sqft": 450,
+      "beds": "1",
+      "baths": 1,
+      "mls": null,
+      "days_on_market": null,
+      "parking": "unknown \u2014 verify with agent",
+      "lat": 43.645221,
+      "lng": -79.401143
+    },
+    "drive_times": {
+      "mon_7am_to_cvh": 41.8,
+      "mon_6am_post_night": 52.4,
+      "mon_3pm_home_peak": 50.3,
+      "fri_5pm_worst_case": 59.6,
+      "king_west_7pm": 3.5
+    },
+    "building": {
+      "name": "Kingly Condos (501 Adelaide + 620 King W)",
+      "year_built": 2019,
+      "developer": "Allied Properties REIT + RioCan REIT (designed by Hariri Pontarini Architects)",
+      "property_manager": "Allied Properties / FirstService (Allied retains hands-on involvement on their projects)",
+      "pm_rep": "Allied is a publicly-traded REIT specializing in heritage-conversion + high-quality urban product; their PM oversight is reputationally strong. Newer building means PM track record still forming.",
+      "size": "132\u2013133 units over 15 storeys (550\u20131300 sqft, plus larger penthouse-grade)",
+      "amenities": [
+        "Gym",
+        "Sauna",
+        "Guest suites",
+        "Lounge with catering kitchen",
+        "Rooftop terrace with BBQs",
+        "24-hr concierge",
+        "Mixed-use ground floor (retail)"
+      ],
+      "red_flags": [
+        "Smallest unit count on the list (132 units) = thinner amenities, less elevator redundancy",
+        "No pool",
+        "Newer = less long-run mechanicals track record (but also less wear)"
+      ],
+      "reddit_quotes": []
+    },
+    "amenities_nearby": {
+      "run_clubs": [],
+      "gyms": [],
+      "grocery": null,
+      "best_run_loop": null,
+      "ossington_walk_min": null,
+      "king_bathurst_walk_min": null,
+      "running_insight": null
+    }
+  },
+  {
+    "rank": 4,
+    "tier": "\u2b50\u2b50 TIER 1 \u2014 BUDGET KILLER",
+    "headline": "Minto 775 King West (LEED Gold 2013) \u2014 Loblaws + Shoppers IN PODIUM, $1,900",
+    "why_top": "Minto = top-tier dev quality. LEED Gold. Loblaws + Shoppers DrugMart literally in the building (grocery walk = 30 seconds). Walk Score 93, Transit 100, Bike 95. At $1,900 this is the lowest-priced unit in the top tier.",
+    "watch_out": "AVOID inner-courtyard units (dark, cramped \u2014 picking wrong floorplan kills the deal). Want 17-storey south or west-facing. King-facing units at low floors get streetcar morning noise. ASK to see floorplan + which direction the unit faces BEFORE viewing.",
+    "alt_unit": "None in dataset (only one unit here)",
+    "listing": {
+      "address": "775 King Street W",
+      "unit": "317",
+      "rent": 1900,
+      "sqft": 450,
+      "beds": "1",
+      "baths": 0,
+      "mls": null,
+      "days_on_market": null,
+      "parking": "unknown \u2014 verify with agent",
+      "lat": 43.6428229,
+      "lng": -79.4058405
+    },
+    "drive_times": {
+      "mon_7am_to_cvh": 42.3,
+      "mon_6am_post_night": 51.2,
+      "mon_3pm_home_peak": 48.9,
+      "fri_5pm_worst_case": 57.5,
+      "king_west_7pm": 2.9
+    },
+    "building": {
+      "name": "Minto 775 King West",
+      "year_built": 2013,
+      "developer": "Minto Group Inc (LEED Gold certified)",
+      "property_manager": "Minto Properties / FirstService (varies by phase)",
+      "pm_rep": "Minto is one of the higher-reputation builder/PM combos in Toronto \u2014 generally well-managed.",
+      "size": "352 units across two towers (12-storey terraced + 17-storey)",
+      "amenities": [
+        "Gym",
+        "Yoga studio",
+        "Games room (billiards, video games)",
+        "Movie/media room",
+        "Lounge with kitchen",
+        "Outdoor courtyard with BBQ + fireplace",
+        "Pet run",
+        "Guest suites",
+        "24-hr concierge/security",
+        "Car-sharing program",
+        "Bike-sharing",
+        "Green roof + rainwater harvesting",
+        "Shoppers Drug Mart + Loblaws (Stackt-area) nearby"
+      ],
+      "red_flags": [
+        "Layouts vary wildly \u2014 picking the wrong floorplan = dark unit facing inner court",
+        "King-facing units at streetcar level get morning noise"
+      ],
+      "reddit_quotes": []
+    },
+    "amenities_nearby": {
+      "run_clubs": [],
+      "gyms": [],
+      "grocery": null,
+      "best_run_loop": null,
+      "ossington_walk_min": null,
+      "king_bathurst_walk_min": null,
+      "running_insight": null
+    }
+  },
+  {
+    "rank": 5,
+    "tier": "\u2b50 TIER 2 \u2014 Liberty Village",
+    "headline": "Liberty Place West (2015) \u2014 south-facing lake views, solid mid-tier Liberty",
+    "why_top": "2015 build = no Urbancorp era. Full amenities (gym, pool). South-facing units = lake views. Mid-tier price for Liberty. Walk to Liberty Village Striders run club at Aroma (Lynn Williams) = 6 min.",
+    "watch_out": "ASK about which floor faces SOUTH (lake) vs NORTH (rail corridor). North-facing = train noise. 1 documented red flag but not severe. Verify the actual unit's view + sun direction at viewing.",
+    "alt_unit": "None more in dataset",
+    "listing": {
+      "address": "51 East Liberty Street",
+      "unit": "1017",
+      "rent": 2350,
+      "sqft": 561,
+      "beds": "1",
+      "baths": 1,
+      "mls": "C13421438",
+      "days_on_market": 5,
+      "parking": "1 Parking",
+      "lat": 43.63864,
+      "lng": -79.4121355
+    },
+    "drive_times": {
+      "mon_7am_to_cvh": 39.9,
+      "mon_6am_post_night": 46.8,
+      "mon_3pm_home_peak": 45.0,
+      "fri_5pm_worst_case": 49.7,
+      "king_west_7pm": 6.0
+    },
+    "building": {
+      "name": "Liberty Central by the Lake (Phase I)",
+      "year_built": 2015,
+      "developer": "CanAlfa Group",
+      "property_manager": "Crossbridge / FirstService Residential (per Liberty Village condo manager directory)",
+      "pm_rep": "FirstService acquired Crossbridge April 2023; among the more competent Liberty PMs but high volume across LV portfolio means inconsistent unit-level response.",
+      "size": "approx 385-395 units / 25 floors (twin curved glass towers)",
+      "amenities": [
+        "gym",
+        "yoga / Pilates studio",
+        "indoor pool + hot tub",
+        "steam room",
+        "misting station",
+        "party room w/ full kitchen",
+        "games room",
+        "media / theatre room",
+        "guest suites",
+        "shared rooftop patio",
+        "24h concierge / security"
+      ],
+      "red_flags": [
+        "No major systemic red flags surfaced. Generic large-tower friction (elevator peaks, move-in chaos) noted."
+      ],
+      "reddit_quotes": []
+    },
+    "amenities_nearby": {
+      "run_clubs": [
+        {
+          "name": "Liberty Village Striders",
+          "meets": "Wed 6:00am",
+          "location": "Aroma Coffee, 120 Lynn Williams",
+          "walk_min": 5
+        },
+        {
+          "name": "Parkdale Roadrunners",
+          "meets": "Tue 7pm Stay Gold, Sat 9am Bather (450 Dufferin)",
+          "location": "Parkdale/Dufferin",
+          "walk_min": 20
+        }
+      ],
+      "gyms": [
+        {
+          "name": "F45 Liberty Village",
+          "type": "HIIT bootcamp",
+          "walk_min": 2
+        },
+        {
+          "name": "Equinox King West (opens summer 2026)",
+          "type": "ultra-premium full club",
+          "walk_min": 16
+        }
+      ],
+      "grocery": {
+        "name": "Metro Liberty Village",
+        "address": "100 Lynn Williams",
+        "walk_min": 5
+      },
+      "best_run_loop": "South to Coronation Park \u2192 Martin Goodman Trail (6 min). Humber Bay loop = 12km; High Park via Queen W = ~10km loop. Liberty Village \u2192 Parkdale \u2192 Roncesvalles is a classic 8km social run.",
+      "ossington_walk_min": 24,
+      "king_bathurst_walk_min": 17,
+      "running_insight": "Same as the other Liberty Village picks \u2014 bullseye on East Liberty puts you on top of F45, Metro, and the LV Striders meetup. 100km/week is structurally easy."
+    }
+  },
+  {
+    "rank": 6,
+    "tier": "\u2b50 TIER 2 \u2014 Liberty Village",
+    "headline": "Liberty Walk (2013) \u2014 boutique 201-unit, quieter Liberty Village",
+    "why_top": "201 units = 50%+ smaller than the East Liberty tri-tower complex. Means: faster elevators, quieter amenity spaces, less Airbnb. Lynn Williams is the quietest Liberty street (off main drag). Liberty Village Striders MEETS HERE (Aroma at 120 Lynn Williams).",
+    "watch_out": "Thinner amenity package vs tri-tower (no bowling alley, no virtual golf). If you don't care about big amenity stack, this is the better quiet pick.",
+    "alt_unit": "None more in dataset (one of two on Lynn Williams)",
+    "listing": {
+      "address": "69 Lynn Williams Street",
+      "unit": "302",
+      "rent": 2400,
+      "sqft": 635,
+      "beds": "1",
+      "baths": 1,
+      "mls": "C13422630",
+      "days_on_market": 5,
+      "parking": "1 Parking",
+      "lat": 43.638726,
+      "lng": -79.4155286
+    },
+    "drive_times": {
+      "mon_7am_to_cvh": 39.2,
+      "mon_6am_post_night": 47.6,
+      "mon_3pm_home_peak": 43.9,
+      "fri_5pm_worst_case": 50.2,
+      "king_west_7pm": 6.6
+    },
+    "building": {
+      "name": "Liberty on the Park",
+      "year_built": 2013,
+      "developer": "CanAlfa Group",
+      "property_manager": "Crossbridge / FirstService Residential (per LV directory)",
+      "pm_rep": "Smaller building = generally better unit-level service.",
+      "size": "201 units / 15 floors",
+      "amenities": [
+        "fitness room / gym",
+        "indoor lounge / party room",
+        "outdoor terrace with BBQ"
+      ],
+      "red_flags": [
+        "Amenity-light vs others on the list \u2014 no pool, no sauna, no big lounge"
+      ],
+      "reddit_quotes": []
+    },
+    "amenities_nearby": {
+      "run_clubs": [
+        {
+          "name": "Liberty Village Striders",
+          "meets": "Wed 6:00am",
+          "location": "Aroma Coffee, 120 Lynn Williams (next door)",
+          "walk_min": 1
+        },
+        {
+          "name": "Parkdale Roadrunners",
+          "meets": "Tue 7pm (Stay Gold 124 Brock), Sat 9am (Bather 450 Dufferin)",
+          "location": "Brock/Dufferin",
+          "walk_min": 16
+        }
+      ],
+      "gyms": [
+        {
+          "name": "F45 Liberty Village",
+          "type": "HIIT bootcamp",
+          "walk_min": 3
+        },
+        {
+          "name": "Equinox King West (opens summer 2026)",
+          "type": "ultra-premium full club",
+          "walk_min": 20
+        }
+      ],
+      "grocery": {
+        "name": "Metro Liberty Village",
+        "address": "100 Lynn Williams (next door)",
+        "walk_min": 1
+      },
+      "best_run_loop": "South under rail corridor to Coronation Park (5 min) onto Martin Goodman Trail. West to Humber Bay Arch = 10-12km round trip; east to CityPlace = 6km. Liberty Village \u2192 Parkdale \u2192 High Park loop = 8km classic.",
+      "ossington_walk_min": 22,
+      "king_bathurst_walk_min": 20,
+      "running_insight": "Best of both worlds: in the Liberty Village run-club epicenter (Striders + Parkdale RR + F45 all <20 min) AND 5 min to the lake. King & Bathurst nightlife is a hike (20 min) \u2014 Uber it."
+    }
+  },
+  {
+    "rank": 7,
+    "tier": "\u2b50 TIER 2 \u2014 Liberty Tri-Tower",
+    "headline": "King West Condominiums Phase III (Plaza 2013) \u2014 bowling alley + virtual golf + sky lounge",
+    "why_top": "Plaza build. Crossbridge/FirstService PM. SHARED amenity complex with 75 + 85 East Liberty: bowling alley, virtual golf, sky lounge, indoor pool, movie theatre. Genuinely impressive for dating ('come over, we have a bowling alley'). Ossington bus from front door.",
+    "watch_out": "425 units = elevator congestion at peak. 75 East Liberty same complex is slightly smaller (300 units) so consider that as an alternative. ASK: how many units per floor? Floor heights? Is the pool actually open year-round?",
+    "alt_unit": "75 East Liberty #1010 ($2,750) \u2014 same complex, slightly smaller, same amenities",
+    "listing": {
+      "address": "65 East Liberty Street",
+      "unit": "1012",
+      "rent": 2700,
+      "sqft": 650,
+      "beds": "1",
+      "baths": 1,
+      "mls": "C13443422",
+      "days_on_market": 0,
+      "parking": "1 Parking",
+      "lat": 43.6381507,
+      "lng": -79.4140767
+    },
+    "drive_times": {
+      "mon_7am_to_cvh": 40.4,
+      "mon_6am_post_night": 47.6,
+      "mon_3pm_home_peak": 46.0,
+      "fri_5pm_worst_case": 50.3,
+      "king_west_7pm": 6.5
+    },
+    "building": {
+      "name": "King West Condominiums Phase III (Liberty Lakeview Towers complex w/ 75 & 85)",
+      "year_built": 2013,
+      "developer": "Plaza (Plazacorp)",
+      "property_manager": "Crossbridge / FirstService Residential (shared mgmt across the King West tri-tower per LV condo directory)",
+      "pm_rep": "Plaza buildings generally well-regarded for construction quality; mgmt criticism is that ONE property manager covers nearly 1,200 suites across three towers \u2014 response time can lag.",
+      "size": "425 units / 25 floors",
+      "amenities": [
+        "indoor pool",
+        "hot tub / sauna",
+        "large gym",
+        "rooftop Sky Lounge",
+        "virtual golf simulator",
+        "two-lane bowling alley",
+        "billiards / games room (ping pong, foosball, air hockey)",
+        "movie theatre",
+        "party room",
+        "24h concierge",
+        "spa",
+        "guest suites"
+      ],
+      "red_flags": [],
+      "reddit_quotes": []
+    },
+    "amenities_nearby": {
+      "run_clubs": [],
+      "gyms": [],
+      "grocery": null,
+      "best_run_loop": null,
+      "ossington_walk_min": null,
+      "king_bathurst_walk_min": null,
+      "running_insight": null
+    }
+  },
+  {
+    "rank": 8,
+    "tier": "\u2b50 TIER 2 \u2014 Fort York (non-CityPlace)",
+    "headline": "Yards at Fort York (Onni 2015) \u2014 best 'quiet professional' Fort York pick",
+    "why_top": "Onni Group = top-tier dev. FirstService PM. 5-year residents specifically called out SOUNDPROOFING as good. Has a real squat rack in the gym. Fort York west of Bathurst (Onni/Context/Conservatory builds) is genuinely more mature than Concord CityPlace east of Bathurst.",
+    "watch_out": "No pool. ASK to specifically test sound transmission (knock on adjacent unit walls during viewing). Verify which floor \u2014 Fort York Blvd noise on low floors.",
+    "alt_unit": "None more in dataset",
+    "listing": {
+      "address": "20 Bruyeres Mews",
+      "unit": "505",
+      "rent": 2050,
+      "sqft": 500,
+      "beds": "1",
+      "baths": 1,
+      "mls": null,
+      "days_on_market": null,
+      "parking": "unknown \u2014 verify with agent",
+      "lat": 43.63755,
+      "lng": -79.4008
+    },
+    "drive_times": {
+      "mon_7am_to_cvh": 41.0,
+      "mon_6am_post_night": 46.9,
+      "mon_3pm_home_peak": 45.3,
+      "fri_5pm_worst_case": 48.4,
+      "king_west_7pm": 5.1
+    },
+    "building": {
+      "name": "The Yards at Fort York",
+      "year_built": 2015,
+      "developer": "Onni Group (Vancouver-based, ~50 yr operator)",
+      "property_manager": "FirstService Residential (typical Onni)",
+      "pm_rep": "FirstService is widely considered the best of the big-three Toronto condo PMs; Onni QA is significantly higher than Concord Adex.",
+      "size": "412 units, 28 storeys (glass tower + select townhouses)",
+      "amenities": [
+        "gym",
+        "sauna",
+        "visitor parking",
+        "guest suites",
+        "outdoor terrace (highway-facing)"
+      ],
+      "red_flags": [
+        "right next to Gardiner Expressway - soundproofing reportedly handles it, but ask to visit during rush hour",
+        "smaller amenity set means no pool for off-day swimming"
+      ],
+      "reddit_quotes": [
+        {
+          "quote": "Condo walls are very soundproof. Can barely hear cars on the highway or neighbours. Lived here 7 months, condo management responds quickly.",
+          "url": "https://www.condogenius.io/buildings/toronto/downtown-n1/the-yards-at-fort-york-20-bruyeres-mews",
+          "date": "CondoGenius resident review"
+        },
+        {
+          "quote": "Lived at The Yards for 5 years and thoroughly enjoy it. Gym has full weights and a squat rack.",
+          "url": "https://www.condogenius.io/buildings/toronto/downtown-n1/the-yards-at-fort-york-20-bruyeres-mews",
+          "date": "CondoGenius resident review"
+        }
+      ]
+    },
+    "amenities_nearby": {
+      "run_clubs": [],
+      "gyms": [],
+      "grocery": null,
+      "best_run_loop": null,
+      "ossington_walk_min": null,
+      "king_bathurst_walk_min": null,
+      "running_insight": null
+    }
+  },
+  {
+    "rank": 9,
+    "tier": "\u2b50 TIER 2 \u2014 Little Portugal (Pemberton)",
+    "headline": "TEN93 Queen West (Pemberton 2018) \u2014 boutique west-end pick",
+    "why_top": "Pemberton + 2018 build (newer than most picks). Boutique scale. Walkable to Trinity Bellwoods, Queen W, Ossington. NOT Urbancorp (unlike its Little Portugal neighbors). Dovercourt corridor is creative-class indie, real caf\u00e9s.",
+    "watch_out": "Slightly LONGER drive to CVH than Liberty buildings (~3 min). Queen W safety zone proximity (City of Toronto declared Community Safety Zone Sept 2024 \u2014 Queen+Sudbury area). But Dovercourt is the SAFER edge.",
+    "alt_unit": "#418 ($2,400) or #706 ($2,700) \u2014 same building, multiple units",
+    "listing": {
+      "address": "106 Dovercourt Road",
+      "unit": "515",
+      "rent": 2450,
+      "sqft": 500,
+      "beds": "1",
+      "baths": 1,
+      "mls": null,
+      "days_on_market": null,
+      "parking": "unknown \u2014 verify with agent",
+      "lat": 43.6430602,
+      "lng": -79.4223976
+    },
+    "drive_times": {
+      "mon_7am_to_cvh": 40.4,
+      "mon_6am_post_night": 47.8,
+      "mon_3pm_home_peak": 47.7,
+      "fri_5pm_worst_case": 56.2,
+      "king_west_7pm": 6.9
+    },
+    "building": {
+      "name": "TEN93 Queen West",
+      "year_built": 2018,
+      "developer": "Pemberton Group (architect: RAW Design)",
+      "property_manager": "Pemberton-affiliated (unverified specific PM)",
+      "pm_rep": null,
+      "size": null,
+      "amenities": "Concierge, gym, rooftop deck/garden, BBQs, party/meeting room, bike storage, visitor parking, guest suites",
+      "red_flags": [
+        "High maintenance fees (~$0.92/sqft) \u2014 for a renter, this gets baked into rent",
+        "Only 134 units = limited concierge hours possible",
+        "RAW Design floorplates can be quirky"
+      ],
+      "reddit_quotes": []
+    },
+    "amenities_nearby": {
+      "run_clubs": [],
+      "gyms": [],
+      "grocery": null,
+      "best_run_loop": null,
+      "ossington_walk_min": null,
+      "king_bathurst_walk_min": null,
+      "running_insight": null
+    }
+  },
+  {
+    "rank": 10,
+    "tier": "\u2b50 TIER 2 \u2014 Little Portugal (Streetcar)",
+    "headline": "The Carnaby (Streetcar 2016) \u2014 boutique 213-unit West Queen W",
+    "why_top": "Streetcar Developments = credible local dev with decent track record. 213 units = boutique scale without mega-tower issues. 2016 vintage. Closer to Ossington nightlife than most picks (walking distance to Ossington strip).",
+    "watch_out": "Queen W shootout context (Nov 11, 2024 at 1196 Queen) \u2014 the building is 1 block from that incident. Verify daytime + nighttime walk safety yourself. Streetcar dev is solid; building itself is fine.",
+    "alt_unit": "None in dataset",
+    "listing": {
+      "address": "20 Minowan Miikan Lane",
+      "unit": "704",
+      "rent": 2400,
+      "sqft": 500,
+      "beds": "1",
+      "baths": 1,
+      "mls": null,
+      "days_on_market": null,
+      "parking": "unknown \u2014 verify with agent",
+      "lat": 43.6431587,
+      "lng": -79.4282511
+    },
+    "drive_times": {
+      "mon_7am_to_cvh": 40.1,
+      "mon_6am_post_night": 47.1,
+      "mon_3pm_home_peak": 46.4,
+      "fri_5pm_worst_case": 54.5,
+      "king_west_7pm": 9.2
+    },
+    "building": {
+      "name": "The Carnaby (Phase 1)",
+      "year_built": 2016,
+      "developer": "Streetcar Developments",
+      "property_manager": "Streetcar-affiliated / Crossbridge (unverified)",
+      "pm_rep": null,
+      "size": null,
+      "amenities": "Outdoor terrace, state-of-art fitness centre, indoor party lounge, guest suites, adjacent urban park",
+      "red_flags": [
+        "Weekend street/bar noise (per resident reviews)",
+        "Proximity to Nov 2024 Queen W shootout",
+        "Lane/laneway address means orientation/sun varies wildly by unit"
+      ],
+      "reddit_quotes": []
+    },
+    "amenities_nearby": {
+      "run_clubs": [],
+      "gyms": [],
+      "grocery": null,
+      "best_run_loop": null,
+      "ossington_walk_min": null,
+      "king_bathurst_walk_min": null,
+      "running_insight": null
+    }
+  }
+]

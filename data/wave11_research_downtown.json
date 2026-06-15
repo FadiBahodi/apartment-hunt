@@ -1,0 +1,381 @@
+[
+  {
+    "address": "14 York Street",
+    "building_name": "ICE Condominiums (ICE I & II)",
+    "year_built": "2014-2015",
+    "developer": "Lanterra Developments / Cadillac Fairview",
+    "property_manager": "Crossbridge Condominium Services (historical)",
+    "tower_size": "67 storeys (twin towers), among 10th tallest in Toronto",
+    "amenities": "Pool, gym, sauna, party room, theatre, concierge, business centre, rooftop terrace",
+    "reddit_signals": "Confirmed: ICE Condos ranked #1 in Toronto for 311 short-term-rental complaints (CBC 2019). Two shootings in under two years tied to Airbnb units. Substack/condo-living article: 'I regret buying a unit in this building' — twin towers became 'battleground' between owners over Airbnb. Governance battles between owners pro/anti STR. Reports of fighting, screaming, middle-of-night disturbances from party units.",
+    "google_reviews": "Mixed; reputation as transient/party building has dragged ratings",
+    "tiktok_youtube": "Many tour videos exist (visible CN-tower views); also negative TikToks about Airbnb chaos in CityPlace/ICE area",
+    "red_flags": "PARTY/TRANSIENT BUILDING. Heavy Airbnb/STR presence. Gardiner noise. Security incidents. PATH access is the upside. For a 27yo ER doc dating + sleeping odd shifts, this is a NO — sleep will be ruined by transient neighbours.",
+    "honest_call": "AVOID. Despite location and price, this building's transient/party reputation is a critical fit-fail for a shift-worker who needs to sleep odd hours. Two shootings + 311-complaint record are not noise — they're a pattern. Walk away.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/ICE_Condominiums",
+      "https://condoliving.substack.com/p/i-regret-buying-a-unit-in-this-building",
+      "https://www.blogto.com/city/2020/10/another-shooting-torontos-most-notorious-ghost-hotel/"
+    ]
+  },
+  {
+    "address": "50 John Street",
+    "building_name": "The Rosemount (Rosemont) Residences",
+    "year_built": "2003",
+    "developer": "JP1 Canada Inc.",
+    "property_manager": "On-site management; corporate Rosemont Residences entity (operates as part rental, part owner-occupied)",
+    "tower_size": "21 storeys, 424 units",
+    "amenities": "Rooftop lounge + Jacuzzi, stadium-style theatre, billiards, golf simulator, 24hr fitness, business centre",
+    "reddit_signals": "Limited Reddit footprint. Tripadvisor + Yelp reviews exist (operates partly as serviced rental). Resident reports: friendly concierge (Jean named), but laneway noise from trucks backing up; window-closed mitigates but kills fresh air.",
+    "google_reviews": "Generally positive on staff/concierge; complaints about laneway noise + dated suites",
+    "tiktok_youtube": "Minimal building-specific tour content",
+    "red_flags": "Entertainment District = nightlife noise on weekends. Building is 23 years old, some dated finishes. Laneway truck noise. Heavily corporate-rental (serviced suites) — possible transient lobby feel.",
+    "honest_call": "DECENT. Solid location for King W/Ossington walk, mature building means quirks-known. Better than ICE on stability. Verify which side of building unit faces (avoid John Street + laneway side). Reasonable for $2,500 range if unit is on quieter side.",
+    "sources": [
+      "https://strata.ca/toronto/50-john-st-the-rosemount-residences",
+      "https://www.yelp.ca/biz/the-rosemont-residences-toronto",
+      "https://www.tripadvisor.ca/ShowUserReviews-g155019-d1758995-r918546259-The_Rosemont_Residences-Toronto_Ontario.html"
+    ]
+  },
+  {
+    "address": "18 Yonge Street",
+    "building_name": "Pinnacle Centre (18 Yonge tower)",
+    "year_built": "2007 (18 Yonge specifically; Pinnacle Centre complex 2002-2018)",
+    "developer": "Pinnacle International",
+    "property_manager": "Crossbridge (historically) / Pinnacle managed",
+    "tower_size": "39 storeys, ~400+ units",
+    "amenities": "Club 18: gym, indoor pool, whirlpool, saunas, party room, business centre, rooftop garden with putting green",
+    "reddit_signals": "RedFlagDeals forum threads exist (older). Reviewers report: 'Board of directors are like dictators and management is useless,' amenities limited post-COVID, gym bookings hard to get. Elevators reported unreliable with 3-person limit and long waits. Other reviewers praise the gym, location, lake/financial-district proximity.",
+    "google_reviews": "Mixed — high amenities offset by elevator + management complaints",
+    "tiktok_youtube": "Some unit-tour content exists (lake views)",
+    "red_flags": "Yonge corridor noise (Yonge + Harbour intersection). Elevator wait reports. Recurring fire-alarm complaints + parking-garage hygiene issues per Condoessentials. Pinnacle One Yonge (separate, newer, taller) often confused with this.",
+    "honest_call": "MID. Amenities are real but management drag is real. Yonge/Harbour corner means Sugar Beach + lakefront access — good for 100km/wk running. Commute to CVH via Gardiner is brutal during current construction. Tour any unit during PM rush to test elevator wait.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Pinnacle_Centre",
+      "https://condos.ca/toronto/pinnacle-centre-16-yonge-st",
+      "https://forums.redflagdeals.com/advice-purchasing-condo-pinnacle-centre-met-surrounding-area-708791/"
+    ]
+  },
+  {
+    "address": "30 Nelson Street",
+    "building_name": "Studio 2 on Richmond",
+    "year_built": "2017",
+    "developer": "Aspen Ridge Homes",
+    "property_manager": "Unknown (likely third-party; Aspen Ridge spinout)",
+    "tower_size": "41 storeys, 411 units",
+    "amenities": "Concierge, gym, lounge, event room, multimedia room, rooftop terrace, spa, board room",
+    "reddit_signals": "Strata.ca reviews split: one positive ('great energy, beautifully maintained, high ceilings, underrated'), one BRUTAL ('worst managed building... often only ONE elevator serving 41 FLOORS'). Soundproofing concerns ('street noise intense at night').",
+    "google_reviews": "Polarized — strong location praise, strong management criticism",
+    "tiktok_youtube": "Some unit-tour content",
+    "red_flags": "ONE-elevator-for-41-floors report is the deal-breaker for shift work. Entertainment District noise on weekends. Sound transmission poor between units. Aspen Ridge had separate tenant-payment lawsuit allegations (forum mentions).",
+    "honest_call": "RISKY. Location is excellent (Richmond + Peter, walking distance to King W everything), but elevator + soundproofing issues are exactly what destroys ER shift recovery. Tour multiple times of day, ride elevator during peak. If unit faces interior courtyard and high floor, maybe — otherwise skip.",
+    "sources": [
+      "https://strata.ca/toronto/30-nelson-st-studio-2/reviews",
+      "https://strata.ca/toronto/30-nelson-st-studio-2",
+      "https://condonow.com/30-Nelson-St-Toronto-Studio-2-On-Richmond"
+    ]
+  },
+  {
+    "address": "111 Elizabeth Street",
+    "building_name": "One City Hall Place",
+    "year_built": "2007",
+    "developer": "Diamante Development",
+    "property_manager": "Unknown (mature, well-rated corp)",
+    "tower_size": "16 storeys, 522 units (lower-rise dense floorplate)",
+    "amenities": "Two gyms, indoor pool, hot tub, concierge, rooftop terrace, party room",
+    "reddit_signals": "Limited Reddit but Toronto Star architecture critic Christopher Hume gave it an 'A grade'. Condoessentials reviews: 'very well run building, courteous and professional security and concierge.' One negative on 'location isn't best' (bus station across).",
+    "google_reviews": "Strong reputation, well-managed",
+    "tiktok_youtube": "Limited; not a tour-heavy building",
+    "red_flags": "Location is more 'civic/bureaucratic' than 'fun' — Old City Hall, Eaton Centre tourist zone. Bus station noise across. Not walking-distance to Ossington/King W (15+ min walk west).",
+    "honest_call": "BORING-BUT-SOLID. Best-run building on this list per reputation, walk score 100, near hospitals (Toronto General, Mount Sinai if he wants extra coverage shifts). BUT social fit is weak — no King W vibe, doesn't match his dating/nightlife pattern. Engineering-grade building, location too sleepy for 27yo single guy.",
+    "sources": [
+      "https://condos.ca/toronto/one-city-hall-place-111-elizabeth-st",
+      "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10288/One-City-Hall",
+      "https://strata.ca/toronto/111-elizabeth-st-one-city-hall-place"
+    ]
+  },
+  {
+    "address": "126 Simcoe Street",
+    "building_name": "Boutique II",
+    "year_built": "2011",
+    "developer": "Urban Capital Property Group",
+    "property_manager": "Unknown",
+    "tower_size": "34 storeys, 304 units",
+    "amenities": "Indoor pool, hot tub, steam, fitness, party room, billiards, rooftop deck, concierge — shared with original Boutique next door",
+    "reddit_signals": "Limited Reddit. Strata reviews call demographic 'young professionals 25-45,' management 'well managed.' Rentitornot.com tracks bed-bug status (unknown rating). Long-term renters report positively.",
+    "google_reviews": "Generally positive on management + demographic fit",
+    "tiktok_youtube": "Minimal",
+    "red_flags": "Adelaide + University area = office-heavy, dead on weekends in that block. Building shares amenities with Boutique I (~700+ residents sharing pool/gym). Urban Capital not top-tier developer.",
+    "honest_call": "GOOD FIT. Demographic match (young professionals 25-45), well-managed reputation, walking to King W in 8-10 min, easy Spadina/410 entry for CVH commute. Shared amenities crowded but workable. Strong candidate if budget allows.",
+    "sources": [
+      "https://condos.ca/toronto/boutique-ii-126-simcoe-st",
+      "https://strata.ca/toronto/126-simcoe-st-boutique-ii-condos",
+      "https://unity.re/condos/boutique-ii/"
+    ]
+  },
+  {
+    "address": "19 Grand Trunk Crescent",
+    "building_name": "Infinity III Condos",
+    "year_built": "2014",
+    "developer": "The Conservatory Group",
+    "property_manager": "Unknown",
+    "tower_size": "35 storeys, 407 units",
+    "amenities": "Indoor pool, hot tub, sauna, fitness, basketball half-court, outdoor terrace, theatre, library, boardroom, guest suites, 24hr concierge with secure floor access, PATH connection",
+    "reddit_signals": "CondoAdvisory/CondoEssentials: mixed reviews. 'Helpful guards and maintenance staff but management could use improvement.' Plumbing complaints. Elevator scheduling complaints (one of the most-cited Infinity problems). Limited direct Reddit threads.",
+    "google_reviews": "Mixed; PATH access praised, management/elevators criticized",
+    "tiktok_youtube": "Some lake/CN-tower tour content",
+    "red_flags": "Sealed PATH-connected high-rise = great for commute, dead street level (Lower Simcoe = no nightlife, walk 10 min N for King W). Older Conservatory finish, plumbing issues reported. Gardiner noise on south-facing units.",
+    "honest_call": "INTERESTING. PATH access is a sleeper asset — winter walks to Union/financial district indoor. But for someone driving to Mississauga, PATH irrelevant. Lower Simcoe block is sterile. Decent fallback if Niagara/King W priced out.",
+    "sources": [
+      "https://strata.ca/toronto/19-grand-trunk-cres-infinity-iii-condos",
+      "https://condos.ca/toronto/infinity-3-19-grand-trunk-cres",
+      "https://www.condoadvisory.com/reviews/30649-"
+    ]
+  },
+  {
+    "address": "125 Peter Street",
+    "building_name": "Tableau Condominiums",
+    "year_built": "2016",
+    "developer": "Lifetime Developments / Wallman Architects (designer); listed as Menkes in some sources — verify",
+    "property_manager": "Unknown — TSCC 2560",
+    "tower_size": "36 storeys, 415 units",
+    "amenities": "Concierge, gym, party room, rooftop terrace, theatre, guest suites",
+    "reddit_signals": "CondoAdvisory: average 3/5 across categories. Limited Reddit. Condoessentials notes 125 Peter described as 'better value for renting at same price as neighboring property' — implying competing buildings (87 Peter Noir, etc.) command premium.",
+    "google_reviews": "Modest 3/5 average; no major flags surfaced",
+    "tiktok_youtube": "Some entertainment-district tour content",
+    "red_flags": "Peter + Richmond is HEAVY Entertainment District noise (Rebel, Cabana Pool Bar district reach). Weekend nightlife = sleep destroyer for shift work. Building is solid but the corner is not.",
+    "honest_call": "MIXED. Building itself decent (newer, 2016, well-amenitied), but the location is peak nightlife noise corridor. If unit is high floor (25+) facing north/away from Richmond, possibly workable. Lower floors = avoid.",
+    "sources": [
+      "https://condos.ca/toronto/tableau-condominiums-125-peter-st",
+      "https://www.condoadvisory.com/reviews/30068-",
+      "https://strata.ca/toronto/125-peter-st-tableau-condominiums"
+    ]
+  },
+  {
+    "address": "2 Augusta Avenue",
+    "building_name": "Rush Condos",
+    "year_built": "2021 (some sources 2023)",
+    "developer": "Alterra Group (architecture: Quadrangle)",
+    "property_manager": "Brad J. Lamb Realty (sales rep); PM unknown",
+    "tower_size": "13-15 storeys, 108-123 units (small boutique)",
+    "amenities": "Gym with yoga + climbing wall, party room, outdoor terrace with BBQ, bike storage, concierge",
+    "reddit_signals": "Limited Reddit footprint (new building). Maintenance fees flagged HIGH at $0.96/sqft vs city avg $0.67. Units sell 7% below list — low demand signal. No major review aggregation yet.",
+    "google_reviews": "Insufficient data — newer building",
+    "tiktok_youtube": "Some Kensington/Fashion District tour content",
+    "red_flags": "HIGH MAINTENANCE FEES (~44% above city avg). Selling below list = soft demand. Augusta + Richmond is fringe Kensington — vibey but sketchy at night (Augusta has homeless/encampment pressure). Small building = thin amenities crowd.",
+    "honest_call": "INTERESTING BUT FLAWED. Boutique size + climbing wall appeals to a runner/active person, location is genuinely cool (Kensington + Ossington walkable). But high fees and softer resale should make him cautious. Renting OK; buying not. For dating + nightlife reach, location is best in this list.",
+    "sources": [
+      "https://condonow.com/2-Augusta-Ave-Toronto-Rush-Condos",
+      "https://strata.ca/toronto/520-richmond-st-w-rush-condos",
+      "https://condos.ca/toronto/2-augusta-avenue-toronto"
+    ]
+  },
+  {
+    "address": "38 Cameron Street",
+    "building_name": "SQ at Alexandra Park",
+    "year_built": "2017",
+    "developer": "Tridel",
+    "property_manager": "Tridel-affiliated (good reputation per master picture)",
+    "tower_size": "14 storeys, 241 units (mid-rise)",
+    "amenities": "Rooftop deck, party room, media room, concierge, spa, dining room, gym, outdoor patio, yoga studio, storage",
+    "reddit_signals": "Very limited Reddit. CondoReviews + Strata: no reviews aggregated. Tridel as developer carries good general reputation. LEED Gold + Toronto Green Standard Tier 2.",
+    "google_reviews": "Sparse — newer building, smaller resident pool",
+    "tiktok_youtube": "Some tour content",
+    "red_flags": "Located IN Alexandra Park revitalization — formerly Toronto Community Housing area, mixed-income redevelopment. Some residents perceive transitional neighbourhood feel. Spadina + Queen W tram noise. Close to homelessness/mental health pressure of Queen W corridor.",
+    "honest_call": "QUALITY BUILDING, EDGY BLOCK. Tridel build quality is a real positive. Walking distance to Ossington/Queen W/Kensington — perfect for nightlife. But the immediate block has rough edges from TCH legacy. For a 27yo guy who's seen everything in the ER, probably non-issue. Worth touring.",
+    "sources": [
+      "https://condos.ca/toronto/sq-at-alexandra-park-38-cameron-st",
+      "https://www.toronto.ca/city-government/planning-development/official-plan-guidelines/toronto-green-standard/tier-2-project-profiles/38-cameron-street/",
+      "https://www.tridel.com/resources/home-owners/community-resources/sq-at-alexandra-park/"
+    ]
+  },
+  {
+    "address": "78 Tecumseth Street",
+    "building_name": "Minto 775 King West",
+    "year_built": "2013",
+    "developer": "Minto Group Inc. (architect: Hariri Pontarini)",
+    "property_manager": "Minto-managed (strong reputation)",
+    "tower_size": "16-17 storeys, ~176-352 units (two-tower podium)",
+    "amenities": "24hr concierge, gym, party room, theatre room, yoga studio, garden with water feature + firepit, BBQ",
+    "reddit_signals": "Limited Reddit but generally positive reviews on Strata. 'Fantastic location, very close to everything in trendiest neighbourhoods, clubs/restaurants/cafes/groceries.' Hariri Pontarini design + LEED Gold = build quality real.",
+    "google_reviews": "Generally positive — Minto reputation strong",
+    "tiktok_youtube": "Some King W tour content",
+    "red_flags": "King + Bathurst = peak King W nightlife noise (CRAFT, El Catrin proximity). South of King industrial micro-area (Wellington/Tecumseth) less developed. Streetcar 504 noise at base.",
+    "honest_call": "STRONG CANDIDATE. Minto is a top-3 Toronto developer for build quality. King W heart, walkable everywhere. Match for his lifestyle. Only caveat is noise on lower floors facing King — book high-floor units facing courtyard/west. Realistic top-3 on this list.",
+    "sources": [
+      "https://strata.ca/toronto/78-tecumseth-st-minto-775",
+      "https://condonow.com/Minto-775-King-West",
+      "https://rentitfurnished.com/toronto/building/minto-775"
+    ]
+  },
+  {
+    "address": "78 Tecumseth Street East",
+    "building_name": "Likely same as 78 Tecumseth Street (Minto 775) — 'East' is not a standard suffix here. May refer to opposite tower / different entrance.",
+    "year_built": "2013 (if same building)",
+    "developer": "Minto Group Inc.",
+    "property_manager": "Minto-managed",
+    "tower_size": "Same complex",
+    "amenities": "Same as 78 Tecumseth",
+    "reddit_signals": "No separate Reddit footprint — address with 'East' suffix not used by Minto 775. Possible MLS/listing error or refers to townhouse component or rear-entrance addressing.",
+    "google_reviews": "N/A — duplicate",
+    "tiktok_youtube": "N/A",
+    "red_flags": "Address validity uncertain — VERIFY in listing source. Could be a unit identifier misparse.",
+    "honest_call": "PROBABLY DUPLICATE of 78 Tecumseth. Confirm exact entry with broker. If genuinely a separate building (e.g., townhouse/podium subset), treat as Minto 775 with same analysis.",
+    "sources": [
+      "https://condos.ca/toronto/78-tecumseth-st-minto-775"
+    ]
+  },
+  {
+    "address": "9 Tecumseth Street",
+    "building_name": "WEST Condos",
+    "year_built": "2024",
+    "developer": "Aspen Ridge Homes (architect: Core Architects)",
+    "property_manager": "TBD (newly registered)",
+    "tower_size": "12 and 14 storeys (twin), 320-367 units",
+    "amenities": "Party room, yoga studio, fitness centre, WiFi lounge, billiards room",
+    "reddit_signals": "Limited Reddit. UrbanToronto forum thread has 6+ pages of discussion — generally positive on architecture but Aspen Ridge tenant-dispute allegations surfaced ('refused to pay tenants 3 months rent, served forged documents' — verify, may be specific dispute). Walk score 94, transit 100.",
+    "google_reviews": "Sparse — brand new building (2024)",
+    "tiktok_youtube": "Some tour content emerging",
+    "red_flags": "BRAND NEW = unknown maintenance/management track record. Aspen Ridge less prestigious than Minto/Tridel. Niagara micro-area: still industrial-transitional. Strachan + King intersection is improving but not King W proper. Cross-Bathurst commute friction.",
+    "honest_call": "WAIT-AND-SEE. New unit = pristine condition, modern layouts. Walk to King W is 8-10 min. But 1-year-old buildings notoriously have deficiency callbacks, board not yet seasoned. Possible value play if priced right but riskier than mature Minto/Tridel options.",
+    "sources": [
+      "https://condos.ca/toronto/west-condos-89-niagara-st-9-tecumseth-st",
+      "https://urbantoronto.ca/forum/threads/toronto-west-condos-46-51m-14s-aspen-ridge-core-architects.18577/page-6",
+      "https://strata.ca/toronto/89-niagara-st-west-condos"
+    ]
+  },
+  {
+    "address": "10 Capreol Court",
+    "building_name": "Parade 1 (CityPlace)",
+    "year_built": "2011",
+    "developer": "Concord Adex (architects: KPF — Kohn Pedersen Fox)",
+    "property_manager": "Concord Adex-affiliated; BBB rating C+ for parent dev corp",
+    "tower_size": "36 storeys, ~835 units across Parade 1 + 2",
+    "amenities": "Club Parade (shared with 15 Iceboat): squash court, fitness, yoga, party room, spa, table tennis, indoor pool, theatre, kids play, outdoor lounge",
+    "reddit_signals": "CityPlace broadly is a Reddit lightning rod ('paper-thin walls, concrete jungle, transient'). 21 Iceboat (sister building) had a 2019 police raid tied to human-trafficking investigation. CityPlace shootings (separate buildings, 2020) reinforce the 'unsafe' narrative — likely overstated but visible on r/toronto.",
+    "google_reviews": "Mixed; Club Parade amenities praised, build quality (Concord) criticized",
+    "tiktok_youtube": "Heavy Airbnb tour content (red flag for transient density)",
+    "red_flags": "CITYPLACE EDGE. Concord Adex build quality questioned. Heavy Airbnb. Sterile street-level. Liberty Village traffic spillover (King + Strachan gridlock per City of Toronto 2024 report). Walk to King W requires crossing Spadina and rail corridor.",
+    "honest_call": "PASS UNLESS PRICED FAR BELOW BUDGET. CityPlace is exactly what you DON'T want for shift-recovery sleep and walking-life. PATH is irrelevant if you drive. Skip.",
+    "sources": [
+      "https://condos.ca/toronto/parade-15-iceboat-terr-10-capreol-crt",
+      "https://en.wikipedia.org/wiki/CityPlace,_Toronto",
+      "https://www.bbb.org/ca/on/toronto/profile/property-management/concord-adex-developments-corp-0107-1164325",
+      "https://www.cbc.ca/news/canada/toronto/city-place-condo-flood-1.4316598"
+    ]
+  },
+  {
+    "address": "25 Capreol Court",
+    "building_name": "Luna / Luna Vista at CityPlace",
+    "year_built": "2010",
+    "developer": "Concord Adex",
+    "property_manager": "Concord Adex-affiliated",
+    "tower_size": "18 + 38 storeys (Luna + Luna Vista joined)",
+    "amenities": "Rooftop pool, BBQ deck, gym, steam, sauna, games room with pool table, party room",
+    "reddit_signals": "Same CityPlace reputation issues as 10 Capreol. Walk score 95. No major reddit-specific defenses or attacks on Luna individually.",
+    "google_reviews": "Average; high walk score offset by Concord build complaints",
+    "tiktok_youtube": "Many tour videos (Airbnb-heavy)",
+    "red_flags": "Same CityPlace edge issues: Concord build quality, Airbnb density, Gardiner noise (south-facing), sterile streetscape, Liberty Village traffic for any westbound drive.",
+    "honest_call": "PASS. Same call as 10 Capreol — CityPlace is structurally wrong for an attending physician who'll work shifts and need sleep + walkability + driveability west. Skip.",
+    "sources": [
+      "https://condos.ca/toronto/luna-luna-vista-at-cityplace-46-fort-york-blvd-25-capreol-crt-8-telegram-mews",
+      "https://thearmstrongteam.ca/toronto-condos/cityplace-condos/luna-condos-condos/25-capreol-court",
+      "https://en.wikipedia.org/wiki/CityPlace,_Toronto"
+    ]
+  },
+  {
+    "address": "11 Ordnance Street",
+    "building_name": "Novus at Garrison Point (rental tower)",
+    "year_built": "2021",
+    "developer": "BGO Living (Bentall Group)",
+    "property_manager": "BGO Living (purpose-built rental, professionally managed)",
+    "tower_size": "34 storeys, 579 units (across 11 + 25 Ordnance)",
+    "amenities": "Sky Lounge 360 views, co-work cafe, rooftop terrace, yoga studio. Heat + A/C included in rent. In-unit W/D. Pet-friendly.",
+    "reddit_signals": "Limited Reddit. RentCafe rating 8.5 'Very Good'. Purpose-built rental = no Airbnb, no condo-board dysfunction. Single owner (institutional) = consistent maintenance response.",
+    "google_reviews": "Generally positive; institutional rental advantage",
+    "tiktok_youtube": "Some tour content",
+    "red_flags": "LIBERTY VILLAGE TRAFFIC. blogTO July 2024: Liberty Village = 'worst traffic in Toronto by far' with King/Strachan gridlock. Gardiner Expressway 2025+ rebuild has DOUBLED commute times westbound. For a CVH (Mississauga) driver: this is a real cost. Garrison Point is on the wrong side of the rail corridor for King W walkability — bridge required.",
+    "honest_call": "TOP CANDIDATE FOR LIFESTYLE MATCH (institutional rental, included utilities, no condo-board BS, modern unit, pet-friendly), BUT COMMUTE-FAIL for daily Mississauga driving. If shifts are 4-5/wk and Gardiner stays under construction through 2027, this adds 20-40 min/leg vs alternatives east. Real trade-off.",
+    "sources": [
+      "https://www.rentcafe.com/apartments/on/toronto/novus0/default.aspx",
+      "https://strata.ca/toronto/11-ordnance-street-novus-at-garrison-point",
+      "https://www.blogto.com/city/2024/07/traffic-liberty-village-toronto/"
+    ]
+  },
+  {
+    "address": "30 Ordnance Street",
+    "building_name": "Garrison Point Condos (Phase 1)",
+    "year_built": "2020",
+    "developer": "Cityzen Development Group + Diamondcorp + Fernbrook Homes (architect: Hariri Pontarini, interiors: Studio Munge)",
+    "property_manager": "Likely Crossbridge or Del — verify",
+    "tower_size": "35 storeys, 395-684 suites",
+    "amenities": "Rooftop infinity pool with city + lake views, kids centre, access to Ordnance Park + Garrison Common",
+    "reddit_signals": "UrbanToronto forum heavy discussion. Generally positive on architecture (Hariri Pontarini). Cityzen has mixed Toronto reputation. No major scandals surfaced.",
+    "google_reviews": "Limited",
+    "tiktok_youtube": "Some tour content (rooftop pool features heavily)",
+    "red_flags": "Same Liberty Village traffic issue as 11 Ordnance. Wrong side of rail corridor for King W walk. New (2020) — condo-board still maturing. Industrial micro-area surroundings.",
+    "honest_call": "GOOD BUILDING, WRONG LOCATION FOR THIS USER. Hariri Pontarini + Studio Munge means a beautiful unit. But the commute math doesn't work for Mississauga + the King W walk requires crossing the rail bridge. Skip in favor of Niagara/King W proper buildings.",
+    "sources": [
+      "https://condos.ca/toronto/garrison-point-30-ordnance-st",
+      "https://urbantoronto.ca/forum/threads/toronto-garrison-point-118-56m-35s-cityzen-hariri-pontarini.12449/",
+      "https://condonow.com/Garrison-Point-Condos"
+    ]
+  },
+  {
+    "address": "38 Dan Leckie Way",
+    "building_name": "Panorama (CityPlace)",
+    "year_built": "2010",
+    "developer": "Royalpark Homes (some sources say built within Concord CityPlace masterplan)",
+    "property_manager": "On-site Panorama Condo office (M5V 2V8)",
+    "tower_size": "29 storeys, 401 units, elliptical footprint",
+    "amenities": "Rooftop deck, party room, catering kitchen, dining room, storage. Limited compared to Concord Adex Parade.",
+    "reddit_signals": "CondoGenius 4 stars; CondoEssentials 3.1/5. Elevators flagged repeatedly ('rarely all 3 working,' 2 elevators for 32 floors common). Washer/dryer combos don't dry well. Awkward pillars in living spaces. Gardiner noise mitigated by closed windows. Lower-than-average fees praised. Front desk friendly.",
+    "google_reviews": "3.1/5 — mid-tier",
+    "tiktok_youtube": "Curved-building distinctive look features in tours",
+    "red_flags": "Elevator unreliability (consistent complaint). Awkward floor plates (pillars). CityPlace edge. Sandwiched between Gardiner and Lakeshore Blvd = brutal road noise on south side. Walk score is misleading because pedestrian access to King W is via Spadina/rail underpass.",
+    "honest_call": "PASS. CityPlace + elevator problems + odd layouts = three strikes. Cheap for a reason. Skip.",
+    "sources": [
+      "https://condos.ca/toronto/panorama-38-dan-leckie-way",
+      "https://www.condogenius.io/buildings/toronto/downtown-n1/panorama-38-dan-leckie-way",
+      "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10066/Panorama-Condo"
+    ]
+  },
+  {
+    "address": "38 Joe Shuster Way",
+    "building_name": "The Bridge",
+    "year_built": "2012",
+    "developer": "Urbancorp",
+    "property_manager": "Post-turnover board",
+    "tower_size": "22 storeys, 531 units",
+    "amenities": "24hr concierge, gym, indoor pool, hot tub, rec room, 2 guest suites",
+    "reddit_signals": "REAL RED FLAGS. CondoEssentials: 'building had bedbugs before it was a year old.' Urbancorp 'relatively new builder, serious delays and numerous problems.' (Urbancorp later went into receivership in 2016 — public company collapse.) Affordable for area = correlated with deferred maintenance. Recent board improvements noted but legacy issues persist.",
+    "google_reviews": "Below-average; Urbancorp scandal cloud",
+    "tiktok_youtube": "Some tour content",
+    "red_flags": "URBANCORP. The developer LITERALLY WENT BANKRUPT in 2016 amid fraud/insolvency proceedings. Bedbugs documented < 1 yr after build. Construction quality known-poor. Liberty Village edge → King W = streetcar/bridge required.",
+    "honest_call": "AVOID. Urbancorp's track record alone disqualifies. Cheap = trap. Documented bedbugs + receivership-tier developer + Liberty Village traffic. Hard pass.",
+    "sources": [
+      "https://condos.ca/toronto/the-bridge-38-joe-shuster-way",
+      "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10067/Bridge-Condo",
+      "https://www.condoadvisory.com/reviews/25077"
+    ]
+  },
+  {
+    "address": "20 Stewart Street",
+    "building_name": "Twenty Stewart Lofts",
+    "year_built": "2007",
+    "developer": "Freed Developments + Lash Developments (designer: Cecconi Simone)",
+    "property_manager": "Unknown — small building self-managed feel",
+    "tower_size": "8 storeys, 59 units (boutique loft)",
+    "amenities": "MINIMAL — underground parking, storage, key-coded entry. No gym/pool/concierge.",
+    "reddit_signals": "Limited Reddit; loft enthusiasts on TorontoLofts.ca rate it well. Freed (the King W boutique developer) has cachet. 'Tree-lined street, polished concrete, exposed ceilings, floor-to-ceiling windows.' Light on amenities = light on dues.",
+    "google_reviews": "Limited (small building)",
+    "tiktok_youtube": "Some unit tours (loft aesthetic catches camera)",
+    "red_flags": "NO AMENITIES (gym, pool, concierge) — for a 100km/week runner this means joining external gym ($$). Small building = neighbour disputes amplified, no anonymity. Stewart + Bathurst is genuinely King W but tucked away. Freed boutique = pricier per sqft.",
+    "honest_call": "STRONG IF AMENITIES NOT NEEDED. Best aesthetic + actual King W location on this list. Real lofts (concrete + 10ft ceilings) read well to dates, fits 27yo male aesthetic. BUT he runs 100km/wk and likes gym proximity → external gym membership essentially mandatory. If pricing allows F45/equipment gym membership in budget, this is a top pick.",
+    "sources": [
+      "https://strata.ca/toronto/20-stewart-st-twenty-stewart",
+      "https://condos.ca/toronto/twenty-stewart-20-stewart-st",
+      "https://acondointhecity.com/communities/king-west-condos/20-stewart-lofts/"
+    ]
+  }
+]

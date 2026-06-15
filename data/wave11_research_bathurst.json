@@ -1,0 +1,609 @@
+[
+  {
+    "address": "17 Bathurst Street",
+    "building_name": "The LakeShore Condos (East Tower)",
+    "year_built": 2021,
+    "developer": "Concord Adex",
+    "property_manager": "Crossbridge Condominium Services (inferred from Concord Adex defaults; not explicitly confirmed in research)",
+    "pm_rep_note": "Concord Adex buildings have documented forum complaints around fire alarms, elevators, flooding. Mixed track record.",
+    "units_floors": "~886 units, 41 storeys (part of LakeShore/LakeFront West Block complex on 17/19 Bathurst + 500 Lake Shore)",
+    "amenities": [
+      "23,000 sqft Prisma-style amenity centre",
+      "Two state-of-the-art fitness centres",
+      "Two pools w/ stone loungers + hot tub",
+      "Sauna",
+      "Yoga studio",
+      "Pet spa + outdoor pet playground",
+      "Putting green",
+      "42nd floor party room + rooftop lounge",
+      "24hr concierge",
+      "Guest suites",
+      "Media/cinema room"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "No direct Reddit threads surfaced via search; Reddit search blocked via WebFetch. Forum (UrbanToronto) chatter generally notes Concord-wide issues: fire alarm/elevator/flooding complaints.",
+        "url": "https://urbantoronto.ca/forum/threads/the-lakeshore-and-lakefront-at-west-block-est-1928-concord-adex-real-estate.30808/",
+        "date": "ongoing forum thread"
+      }
+    ],
+    "google_rating": "Unknown — no aggregate Google rating surfaced. CondoReviews.ca shows 4.0/5 from 3 reviews (small sample).",
+    "google_complaints": [
+      "Elevators broken/out-of-service ~2x/week per resident reports",
+      "Long elevator wait times during peak hours",
+      "Pipe burst/flooding in lobby took all 3 elevators down for extended period",
+      "Frequent fire alarms reported",
+      "Management responsiveness flagged as inconsistent",
+      "One reviewer called it 'by far the worst-managed condo'"
+    ],
+    "tiktok_mentions": [
+      "No specific TikTok tours surfaced for 17 Bathurst in search results."
+    ],
+    "red_flags": [
+      "Brand new (2021) but already reporting frequent elevator failures — common Concord Adex pattern",
+      "886 units = high density, elevator pressure",
+      "Mixed mgmt reviews this early in lifecycle is a warning sign for 5-10yr trajectory",
+      "Right on Bathurst/Lake Shore = Gardiner noise/dust on lower floors"
+    ],
+    "honest_call": "Newest waterfront tower with the best amenities of the whole list, but already showing the classic Concord Adex elevator/fire-alarm/management symptoms. For a 27yo ER attending who needs reliable elevators after a night shift, this is a coin-flip — gorgeous building, big amenity stack, but caveat emptor on operations. Worth touring + asking residents about elevator outages in past 60 days before signing."
+  },
+  {
+    "address": "19 Bathurst Street",
+    "building_name": "The LakeFront Condos (West Tower of West Block / LakeShore complex)",
+    "year_built": "2021-2022 (second tower of LakeShore complex)",
+    "developer": "Concord Adex",
+    "property_manager": "Same management as 17 Bathurst (linked complex)",
+    "pm_rep_note": "Same Concord Adex operations critique as 17 Bathurst. Shared amenity centre.",
+    "units_floors": "Part of three-building West Block complex (17 Bathurst + 19 Bathurst + 500 Lake Shore). Combined ~876 condos, paired with 17 Bathurst.",
+    "amenities": [
+      "Shared Prisma-style 23,000 sqft amenity centre with 17 Bathurst",
+      "Same gym/pool/sauna/pet spa/party room stack"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "Same forum complex thread as 17 Bathurst — no Reddit-specific quotes located.",
+        "url": "https://urbantoronto.ca/forum/threads/the-lakeshore-and-lakefront-at-west-block-est-1928-concord-adex-real-estate.30808/",
+        "date": "ongoing"
+      }
+    ],
+    "google_rating": "Unknown standalone (lumped with 17 Bathurst on most review platforms)",
+    "google_complaints": [
+      "Same complaints pool as 17 Bathurst — flooding, elevators, fire alarms",
+      "One reviewer specifically called complex 'worst-managed condo'"
+    ],
+    "tiktok_mentions": [
+      "Generic 'Lakeshore Condos Toronto' walkthroughs exist; nothing building-specific to 19 vs 17"
+    ],
+    "red_flags": [
+      "Functionally identical to 17 Bathurst issues",
+      "Slightly newer = even less operational track record",
+      "May have construction punch-list issues still being resolved"
+    ],
+    "honest_call": "Treat as same building as 17 Bathurst for decision purposes — shared management, shared amenities, shared operational risk. Pick whichever has the unit/view/price that wins; don't rely on the 17 vs 19 distinction."
+  },
+  {
+    "address": "111 Bathurst Street",
+    "building_name": "OneEleven Condos",
+    "year_built": 2016,
+    "developer": "Harhay Developments + Carttera Private Equities (built by Harhay Construction Management)",
+    "property_manager": "Goldview Property Management (some sources say Icon Property Management — conflicting; verify with listing)",
+    "pm_rep_note": "Boutique-builder reputation; Harhay known for design-forward smaller projects. Reviews skew positive vs Concord Adex peers.",
+    "units_floors": "255 units, 17 storeys",
+    "amenities": [
+      "Concierge",
+      "Common rooftop deck",
+      "Party room",
+      "Visitor parking",
+      "Guest suites",
+      "Cinema / media room",
+      "Function/recreation room",
+      "Board room",
+      "Outdoor terrace + BBQs",
+      "NOTE: Building does NOT have a true full gym — residents reportedly pay for access at nearby gym"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "No direct Reddit threads surfaced (search blocked). Investor/resident commentary on real estate sites is positive: 'solid property with steady rents, attractive location for young professionals, finishes that have held up well with low turnover.'",
+        "url": "https://condos.ca/toronto/oneeleven-condos-111-bathurst-st",
+        "date": "various 2023-2025"
+      }
+    ],
+    "google_rating": "CondoGenius rating: ~4 stars. CORE Architects + design press coverage strongly positive.",
+    "google_complaints": [
+      "No real gym in building — surprising for a 2016 condo. Residents either pay for an external gym or use the small fitness room (reviewers call it inadequate)",
+      "Can get loud Friday/Saturday nights — but that's King West, not the building's fault",
+      "Bathurst-facing units sit on busy street"
+    ],
+    "tiktok_mentions": [
+      "King West / 111 Bathurst lobby (blue tiger's eye wall) gets featured in design/condo TikToks occasionally"
+    ],
+    "red_flags": [
+      "Gym situation is the only major minus — for a 100km/wk runner this MATTERS",
+      "Pay-to-use external gym = added monthly cost",
+      "Smaller building (255 units) = limited amenity scale"
+    ],
+    "honest_call": "Genuinely well-regarded boutique building, low-turnover, lots of post-grad professionals at King/Bathurst nexus. The gym deficit is a real problem for Fadi (100km/wk + 6am shift workouts) — he'd need an external gym membership (which is fine, Fit Factory/Equinox/F45 are all walkable). If the unit/light/price is right, this is one of the safer picks on the list."
+  },
+  {
+    "address": "270 Wellington Street West",
+    "building_name": "Icon I Condos",
+    "year_built": 2002,
+    "developer": "Tridel",
+    "property_manager": "Del Property Management (Tridel's in-house arm) historically; some sources list Dash Property Management — verify with listing",
+    "pm_rep_note": "Tridel/Del = generally regarded as competent operationally for King West stock of this era. 23 years old now, so capital reserves + recent special assessments worth checking.",
+    "units_floors": "247 units, 12 storeys",
+    "amenities": [
+      "Active fitness facility + recreation area",
+      "Indoor pool",
+      "Sauna",
+      "Rooftop sundeck + communal BBQ",
+      "Bicycle parking",
+      "Cyber lounge",
+      "Concierge"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "Reviews note 'tight-knit community feel' and 'functional units and quality build' — positioned as more intimate vs typical King West high-rise.",
+        "url": "https://www.guestable.com/blog/270-wellington-st-w-icon-i-condos-toronto/",
+        "date": "2024"
+      }
+    ],
+    "google_rating": "Icon I/II combined TripAdvisor rating ~3.3/5 from 3 reviews (low sample, mostly Airbnb guest reviews not residents). Tripadvisor reviewer 'Aravind' May 2022 1/5: 'water from the toilet bowl started overflowing... 5-hour response delay... no alternate accommodations.' Yelp reviewer Dec 2019 5/5: 'Location is perfect, just a few blocks from CN tower.'",
+    "google_complaints": [
+      "Slow elevator response during busy hours",
+      "Some Airbnb-guest complaints about plumbing response time (but those are guest-management not condo-corp)",
+      "Building is 23 years old — finishes feel dated to some buyers"
+    ],
+    "tiktok_mentions": [
+      "King West condo tour TikToks occasionally feature Icon I; no specific viral complaints"
+    ],
+    "red_flags": [
+      "12 storeys at Wellington/John = right next to nightlife noise; lower floors hear King West weekends",
+      "23-year-old building = aging mechanicals, may face special assessments soon",
+      "Mid-rise = fewer elevators if one goes down",
+      "Some Airbnb/short-term rental activity (Icon I/II appears in short-stay listings)"
+    ],
+    "honest_call": "Solid 'pre-Concord-era' Tridel building with a real King West community feel; smaller scale + indoor pool + walkable to all the bars Fadi cares about. Aging building though — 2002 stock is hitting reserve-fund pressure. Honest call: a B+ pick if you want community feel and don't mind 23yo finishes, but verify recent status certificate before signing."
+  },
+  {
+    "address": "250 Wellington Street West",
+    "building_name": "Icon II Condos",
+    "year_built": "~2005-2006 (sister building to Icon I, completed shortly after)",
+    "developer": "Tridel",
+    "property_manager": "Dash Property Management (confirmed on Dash website for Icon Phase 2)",
+    "pm_rep_note": "Dash PM is a mid-tier Toronto manager — generally OK reputation, not standout.",
+    "units_floors": "304 units, 18 storeys",
+    "amenities": [
+      "Gym",
+      "Swimming pool (Icon II's own)",
+      "Cedar saunas",
+      "Rooftop terrace with BBQs",
+      "Walkout balconies",
+      "Concierge"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "Resident review: 'good, dependable building, exactly what you expect of Tridel... situated in a nice, happening area... great if you're younger and hip!' Counter-review: 'more and more students moving in to the building, and not respecting normal sleeping hours... definitely too loud for us older folk!!'",
+        "url": "https://www.condogenius.io/buildings/toronto/downtown-n1/icon-ii-250-wellington-st-w",
+        "date": "ongoing reviews on CondoGenius"
+      }
+    ],
+    "google_rating": "CondoGenius: ~3 stars (mixed). Yelp page exists but limited reviews.",
+    "google_complaints": [
+      "Increasing student/young-renter population disturbing sleep hours",
+      "Same noise issue as Icon I — Wellington/John is loud on weekends",
+      "Aging Tridel stock"
+    ],
+    "tiktok_mentions": [
+      "No specific viral mentions located"
+    ],
+    "red_flags": [
+      "Student demographic shift is the main flag — could be annoying for an ER attending who needs reliable sleep between shifts",
+      "Building is ~20 years old",
+      "King West weekend noise"
+    ],
+    "honest_call": "Tridel-solid bones, slightly bigger and newer than Icon I, but the student-renter creep is a real concern for someone working nights. If you can get a high floor away from common areas, fine. Otherwise consider 400 Wellington as a quieter Wellington Street alternative."
+  },
+  {
+    "address": "400 Wellington Street West",
+    "building_name": "400 Wellington West (the building literally goes by its address)",
+    "year_built": "~2014-2015",
+    "developer": "Sorbara Group of Companies",
+    "property_manager": "Unconfirmed via research — likely Crossbridge or boutique mgmt given small unit count; verify with listing",
+    "pm_rep_note": "Sorbara is a respected mid-size Toronto developer (less prolific than Tridel/Concord but solid). Boutique scale = generally better-managed than mega-towers.",
+    "units_floors": "102 units, 11-12 storeys (different sources say 11 or 12)",
+    "amenities": [
+      "Executive concierge",
+      "Underground parking",
+      "Party room",
+      "DELIBERATELY MINIMAL amenities — design philosophy is 'less is more, get out into the city'",
+      "9-foot exposed concrete ceilings, floor-to-ceiling double-glazed windows"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "Christopher Hume (Toronto Star architecture critic) gave it an A grade. Building reputation: 'pragmatic, affordable collection of condos appropriate for first-time buyers... right mix of owner-occupied and rentals... boutique feel.'",
+        "url": "https://storeys.com/site-seeing-with-hume-400-wellington-gets-its-grade/",
+        "date": "Hume column"
+      }
+    ],
+    "google_rating": "Limited but positive aggregate. No major complaint clusters surfaced.",
+    "google_complaints": [
+      "Amenities are basic — no pool, no big gym (deliberate)",
+      "Spadina/King streetcar traffic on lower floors",
+      "Smaller building = if one elevator down, it's noticeable"
+    ],
+    "tiktok_mentions": [
+      "Architecture-focused content occasionally features the Miesian design; nothing viral"
+    ],
+    "red_flags": [
+      "No real gym = same problem as 111 Bathurst for a 100km/wk runner — need external membership",
+      "Only 102 units = limited rental supply, hard to find unit at the right time"
+    ],
+    "honest_call": "Best-reputation boutique on this list — Miesian aesthetic, owner-heavy, quiet, architecturally praised. Massive downside for Fadi: NO REAL GYM. Same gym dealbreaker as OneEleven. If you don't care about in-building gym (e.g., he'd run outside + use an external gym), this is the most 'professional/serious' building of the corridor and pairs perfectly with 100km/wk running + dating-friendly King West location. Tour it."
+  },
+  {
+    "address": "80 Queens Wharf Road",
+    "building_name": "Quartz / Spectra Condos (75 + 85 Queens Wharf addresses; 80 is the same complex)",
+    "year_built": "2015 (topped off 2014, occupancy ~2015)",
+    "developer": "Concord Adex (Concord CityPlace masterplan)",
+    "property_manager": "Crossbridge Condominium Services (standard for Concord CityPlace; verify with listing)",
+    "pm_rep_note": "Same Concord Adex operational concerns as LakeShore — fire alarm, elevator complaints are a Concord-wide pattern.",
+    "units_floors": "943 units combined (Quartz 39 storeys + Spectra 41 storeys)",
+    "amenities": [
+      "Access to Prisma Club — 3-level resort-style amenity centre",
+      "Indoor pool",
+      "Outdoor hot tub",
+      "Full fitness centre",
+      "Yoga studio",
+      "Jacuzzi, sauna, spa",
+      "Party + meeting + media + games rooms",
+      "Rooftop patio + gardens",
+      "24hr concierge"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "RateTheCondo forum ranked 85/75 Queens Wharf as B-tier in CityPlace: 'reasonable amenities and decent layouts, but some balconies have dust issues from proximity to the Gardiner.'",
+        "url": "https://ratethecondo.com/community/toronto/cityplace-condo-review-ranking-the-buildings-from-a-to-c-tier/",
+        "date": "ongoing forum"
+      }
+    ],
+    "google_rating": "CondoReviews.ca: 5/5 (n=1 review — not representative). CondoEssentials: 4-5 star range from limited sample.",
+    "google_complaints": [
+      "Gardiner Expressway proximity = dust on balconies, traffic noise on lower floors",
+      "Prisma Club gets crowded at peak hours (943 units sharing)",
+      "Concierge staff flagged as 'rude' in some reviews",
+      "Wind tunnel effect at street level (CityPlace-wide)"
+    ],
+    "tiktok_mentions": [
+      "CityPlace generally has heavy TikTok presence — Quartz/Spectra appear in tour content. '1 Concord CityPlace Way Toronto Review' search returns dedicated TikTok hub."
+    ],
+    "red_flags": [
+      "943-unit dual-tower = peak-hour elevator + amenity congestion",
+      "Concord Adex pattern of operational issues",
+      "Gardiner-adjacent = lower floors get noise/dust",
+      "Heavy renter/transient population at CityPlace generally"
+    ],
+    "honest_call": "Solid B-tier CityPlace. The Prisma Club is genuinely impressive and addresses Fadi's running/fitness needs better than boutique buildings. Downside is the Concord Adex operational pattern + 943-unit scale + Gardiner. If price is good and you can get a higher floor away from Gardiner, decent value. Don't expect boutique service."
+  },
+  {
+    "address": "550 Queens Quay West",
+    "building_name": "550 Queens Quay West",
+    "year_built": 2001,
+    "developer": "Developer not definitively confirmed in research — most sources don't name it. Toronto Music Garden adjacency suggests early Harbourfront-era project.",
+    "property_manager": "Unconfirmed — verify with listing",
+    "pm_rep_note": "Reviews suggest 'management has been good at keeping costs manageable and under control... always updating something in the building.' Positive operational reputation.",
+    "units_floors": "245 units, 12 storeys (mid-rise)",
+    "amenities": [
+      "Gym",
+      "Sauna",
+      "Concierge",
+      "24hr security guard",
+      "Underground parking",
+      "Function + party rooms",
+      "Rooftop terrace with waterfront views"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "No Reddit-specific quotes located. Aggregate sentiment from real estate review sites: 'Residents living at 550 Queens Quay West love their condos in Harbourfront.' Walk score 96, bike score 96, transit score 93.",
+        "url": "https://condos.ca/toronto/550-queens-quay-west-550-queens-quay-w",
+        "date": "ongoing"
+      }
+    ],
+    "google_rating": "No aggregated Google score located but review tone is broadly positive.",
+    "google_complaints": [
+      "Building is 24 years old — aging mechanicals possible",
+      "Limited amenity scale vs newer CityPlace stack",
+      "Far from King West nightlife (need streetcar or car)"
+    ],
+    "tiktok_mentions": [
+      "Generic Harbourfront content; nothing specific to 550"
+    ],
+    "red_flags": [
+      "Older building = capital reserves question, request status cert",
+      "Furthest from King West nightlife of all 14 buildings — Fadi would drive/streetcar for dates",
+      "Mid-rise = if one elevator down it's noticeable",
+      "Quieter, more residential = pro or con depending on dating-life intensity"
+    ],
+    "honest_call": "Quieter end of the corridor — Music Garden adjacent, waterfront trail right there (great for 100km/wk running), mature professional crowd, well-managed reputation. The trade-off is you're a longer walk/streetcar to King W nightlife. For a single ER attending who wants to date on King W, this is geographically inferior to anything west of Bathurst. But if you want the running-friendly, sleep-friendly waterfront life, it's quietly one of the better-managed buildings on the list."
+  },
+  {
+    "address": "300 Front Street West",
+    "building_name": "300 Front Street West (a.k.a. Three Hundred)",
+    "year_built": 2013,
+    "developer": "Tridel",
+    "property_manager": "Del Property Management (Tridel in-house); some sources list Dash for related towers — verify",
+    "pm_rep_note": "Despite Tridel pedigree, this building has SERIOUS operational + security issues per multiple sources. Reputation has collapsed since opening.",
+    "units_floors": "685 units, 49 storeys (one of the tallest on the list)",
+    "amenities": [
+      "Pool",
+      "Gym",
+      "Concierge",
+      "Party room",
+      "Theatre",
+      "Lounges",
+      "Outdoor terrace"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "'The condo has gone extremely downhill over the years and has essentially become a hotel. Many residents have moved out due to units being turned into Airbnb rentals.'",
+        "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10227/300-Front-Street-West",
+        "date": "review aggregator, ongoing"
+      },
+      {
+        "quote": "'Short-term rental complaints about 300 Front St. accounted for 20 per cent of the overall complaints the City of Toronto received during a two-month ban on short-term rentals.'",
+        "url": "https://amp.cbc.ca/lite/story/1.4124142",
+        "date": "CBC, during STR ban period"
+      }
+    ],
+    "google_rating": "Significant negative trend in published reviews. Building cited in CBC news coverage as Toronto's worst Airbnb-complaint building.",
+    "google_complaints": [
+      "20% of all citywide short-term-rental complaints in one period came from THIS building (per CBC)",
+      "Reports of stabbings, shootings, kidnappings in/around building",
+      "Lobby described as 'campsite for hotel guests'",
+      "Elevators chronically overcrowded",
+      "Security: 'people off the street can easily get access to units and amenities'",
+      "Operates like 'unsanctioned hotel'",
+      "Units rented for 'crazy parties' during pandemic"
+    ],
+    "tiktok_mentions": [
+      "Featured in viral Toronto Airbnb-problem content; appears in dedicated TikTok review searches as cautionary tale"
+    ],
+    "red_flags": [
+      "CRITICAL: This is the worst-rated building on the list by a wide margin",
+      "Airbnb saturation + security failures + reported violent incidents",
+      "Tridel name does NOT save it",
+      "49 storeys + 685 units + transient population = nightmare for an ER attending needing sleep",
+      "Documented in mainstream news (CBC) — not just hearsay"
+    ],
+    "honest_call": "DO NOT RENT HERE. This is genuinely the only building on the list with a clear AVOID signal. Despite the Tridel pedigree and prime King/Spadina location, the Airbnb infestation + security incidents make it incompatible with shift-work sleep needs and basic safety. Pass without touring."
+  },
+  {
+    "address": "373 Front Street West",
+    "building_name": "Matrix at CityPlace (paired with 361 Front)",
+    "year_built": 2002,
+    "developer": "Concord Adex",
+    "property_manager": "Canlight Hall Management (some sources say Dash — verify with listing)",
+    "pm_rep_note": "Canlight is mid-tier. Building has known construction-defect litigation history.",
+    "units_floors": "642 units across both towers (373 = 29 storeys, 297 suites at this specific address)",
+    "amenities": [
+      "Access to Club Vista (shared with Apex) — health-club-style amenity centre",
+      "Pool",
+      "Hot tub",
+      "Sauna",
+      "Weight room",
+      "Basketball court",
+      "Salon and spa",
+      "Concierge"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "'Many issues with this building, including a lawsuit for balcony glass issues in the very beginning and more lawsuits since have happened due to its shoddy construction. The elevators are horrendous, and for every 10 times on the elevator, at least 1-2 times there will be an issue with it.'",
+        "url": "https://www.condogenius.io/buildings/toronto/downtown-n1/matrix-at-cityplace-361-front-st-w",
+        "date": "CondoGenius review, ongoing"
+      }
+    ],
+    "google_rating": "CondoGenius: ~3 stars (mixed-negative). Repeated mentions of construction defects.",
+    "google_complaints": [
+      "Multiple lawsuits over balcony glass + construction defects",
+      "Elevator failures at ~10-20% frequency",
+      "Aging Concord Adex stock",
+      "Club Vista shared with another tower = congestion"
+    ],
+    "tiktok_mentions": [
+      "Generic CityPlace TikTok presence; no Matrix-specific viral content"
+    ],
+    "red_flags": [
+      "Active construction-defect litigation history is a major flag",
+      "Elevator reliability is documented as poor",
+      "First-built CityPlace tower (2002) = oldest Concord Adex stock here, all the original sins"
+    ],
+    "honest_call": "Skip. Matrix is the textbook 'why people hate CityPlace' building — early Concord Adex, defect litigation, bad elevators. If you want CityPlace, Quartz/Spectra is newer and better. If you want this price point at this scale, Apex (next door) tested marginally better but it's the same complex."
+  },
+  {
+    "address": "397 Front Street West",
+    "building_name": "Apex at CityPlace (paired with 381 Front)",
+    "year_built": 2003,
+    "developer": "Concord Adex",
+    "property_manager": "Shared Club Vista with Matrix; mgmt likely Canlight or similar — verify",
+    "pm_rep_note": "Same Concord Adex era as Matrix but reviews skew slightly more positive on board/management.",
+    "units_floors": "397 Front = 36 storeys, 373 units. Combined with 381 Front it's a two-tower complex (28 + 36 storeys).",
+    "amenities": [
+      "Access to Club Vista (shared with Matrix)",
+      "Rooftop pool + hot tub",
+      "24/7 concierge + security",
+      "Wet bar",
+      "Fitness center",
+      "Rooftop patio",
+      "Steam rooms",
+      "Games room, library, media room, lounge, billiards",
+      "Guest suites",
+      "Private theatre"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "'Great community, great BoD and management, clean, well kept building with reasonable fees which include heat, hydro and cable.'",
+        "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10337/Apex-at-Cityplace-Condos",
+        "date": "CondoEssentials, ongoing"
+      },
+      {
+        "quote": "'Functional, spacious and it still holds up.'",
+        "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10337/Apex-at-Cityplace-Condos",
+        "date": "ongoing"
+      }
+    ],
+    "google_rating": "Better than Matrix per CondoEssentials reviews. Specific fee inclusion (heat/hydro/cable) is unusual and positively noted.",
+    "google_complaints": [
+      "Same Club Vista crowding as Matrix",
+      "Same construction era — aging mechanicals",
+      "Concord Adex-wide elevator/fire alarm issues"
+    ],
+    "tiktok_mentions": [
+      "Generic CityPlace tours; not building-specific viral content"
+    ],
+    "red_flags": [
+      "Same era + same developer as Matrix = same defect risk profile, though reviews are kinder",
+      "Heat/hydro/cable INCLUDED in fees is positive but means fees are high"
+    ],
+    "honest_call": "Best-reviewed of the early-era Concord CityPlace towers. Genuinely usable amenity stack via Club Vista. Older finishes but solid bones. If price/unit is right and you've toured and confirmed elevators work, this is a B-tier reasonable pick. Better than Matrix, worse than Quartz/Spectra."
+  },
+  {
+    "address": "576 Front Street West",
+    "building_name": "Minto Westside (paired with 27 Bathurst St)",
+    "year_built": 2019,
+    "developer": "Minto Group",
+    "property_manager": "Minto-affiliated initially; reports of management transition flagged as decline trigger",
+    "pm_rep_note": "Birdeye 3.7/5 (41 reviews) — among lowest aggregate scores on this list. Specific complaints about management change.",
+    "units_floors": "690 units, 17-20 storeys depending on tower section",
+    "amenities": [
+      "Outdoor pool (rooftop)",
+      "Rooftop deck + lounge",
+      "Gym",
+      "Party room",
+      "Guest suites",
+      "Concierge",
+      "Bike storage",
+      "Games room",
+      "Coin laundry (some units)",
+      "Visitor parking"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "'Used to have a very positive impression of Minto, but things have gone downhill after a recent change in administration, with treatment of residents becoming impersonal and theft becoming a serious issue.'",
+        "url": "https://reviews.birdeye.com/minto-westside-condos-170692689892085",
+        "date": "Birdeye review, recent"
+      },
+      {
+        "quote": "'Wallpaper coming off walls, baseboards broken, dirty hallway carpets, and holes in walls... new building in a great neighborhood with nice-looking amenities but poor construction and very poor maintenance.'",
+        "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10229/Minto-Westside",
+        "date": "2021 review"
+      }
+    ],
+    "google_rating": "Birdeye: 3.7/5 (n=41) — this is statistically meaningful and the lowest on the list excluding 300 Front.",
+    "google_complaints": [
+      "Theft reported as 'serious issue'",
+      "Management change degraded service quality",
+      "Construction defects: wallpaper, baseboards, hallway carpets, holes in walls",
+      "Cheap fire alarm system with frequent false alarms (5am ringings reported)",
+      "Customer service collapses after move-in per Minto-wide complaints"
+    ],
+    "tiktok_mentions": [
+      "Minto Westside has tour content on TikTok — generally positive aesthetics, complaints surface in comments"
+    ],
+    "red_flags": [
+      "5-6 year old building already showing construction-defect symptoms is concerning",
+      "Theft + 5am false fire alarms = direct shift-worker dealbreaker",
+      "Management decline trajectory is the wrong direction",
+      "Large unit count + poor management = bad combo"
+    ],
+    "honest_call": "Looks great on paper — newest building at Front/Bathurst, top-shelf walk/bike/transit scores, rooftop pool, classic Minto aesthetic — but the resident-review pattern is clearly downward. 5am false fire alarms alone should disqualify it for an ER attending. If touring, ASK ABOUT the fire alarm history in the past 90 days and verify theft incident reporting. C-tier at this price."
+  },
+  {
+    "address": "560 Front Street West",
+    "building_name": "Rêve Condos (a.k.a. Reve)",
+    "year_built": 2011,
+    "developer": "Tridel",
+    "property_manager": "Dash Property Management (TSCC #2203) — confirmed on Dash website",
+    "pm_rep_note": "Reviews are notably positive for ops: 'well-managed and maintenance issues are addressed promptly.' Best-reviewed mgmt on this list along with 400 Wellington.",
+    "units_floors": "305 units, 14 storeys",
+    "amenities": [
+      "Gym (described as 'spacious and never overcrowded' — rare praise)",
+      "Sauna",
+      "Party room",
+      "Cinema room",
+      "Meeting room",
+      "Rooftop deck with BBQ",
+      "Concierge",
+      "Parking garage (note: requires separate elevator transfer to reach)"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "'Great construction, amenities and maintenance, with stunning rooftop views, a well-equipped gym and friendly concierge. The building is well managed and maintenance issues are addressed promptly.'",
+        "url": "https://strata.ca/toronto/560-front-st-w-reve/reviews",
+        "date": "ongoing Strata reviews"
+      },
+      {
+        "quote": "'The building is quiet and well maintained, and the community is friendly.'",
+        "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10183/Thompson-Hotel-Condos",
+        "date": "ongoing"
+      }
+    ],
+    "google_rating": "Consistently positive across review sites. No standout complaint clusters.",
+    "google_complaints": [
+      "Two-elevator transfer to reach parking garage is an annoyance",
+      "Some Front Street traffic noise on lower floors",
+      "Only 14 storeys = fewer high-view units"
+    ],
+    "tiktok_mentions": [
+      "Limited specific viral content; appears in Tridel showcase content"
+    ],
+    "red_flags": [
+      "Very few — this is one of the cleaner buildings on the list",
+      "Smaller scale (305 units) = if you don't like neighbors, less anonymity"
+    ],
+    "honest_call": "Strong pick. Tridel from the post-Concord-CityPlace era + well-managed by Dash + actually-spacious gym (rare praise) + 14 storeys keeps it intimate. Front Street location splits the difference between King West nightlife and waterfront running. For a 27yo ER attending who runs 100km/wk and wants reliable mgmt + actual gym, this is probably the top of the list along with 400 Wellington (different vibe). Tour it."
+  },
+  {
+    "address": "25 Oxley Street",
+    "building_name": "Glas Lofts (a.k.a. Glas Condos)",
+    "year_built": 2009,
+    "developer": "Lamb Development Corp (Brad Lamb)",
+    "property_manager": "Icon Property Management (phone 416-236-7979) — confirmed",
+    "pm_rep_note": "Lamb buildings have a mixed reputation industry-wide, but specific Glas reviews are positive: 'The superintendent is great and management is easy to deal with.' Icon PM is mid-tier.",
+    "units_floors": "165-172 units (sources vary), 16 storeys",
+    "amenities": [
+      "Fitness facility (small, boutique-scale)",
+      "Underground parking",
+      "DELIBERATELY MINIMAL amenities (Lamb signature)",
+      "10-foot ceilings, wall-length windows in units",
+      "Extra-large balconies with gas BBQ hookups"
+    ],
+    "reddit_quotes": [
+      {
+        "quote": "'Right in the middle of it all at King/Spadina, but off the main drag on a quiet street. Amenities are pretty much non-existent, which has been good for condo fees.'",
+        "url": "https://condoessentials.com/Reviews/Toronto-Condos-Reviews/10264/Glas-Condos",
+        "date": "ongoing"
+      },
+      {
+        "quote": "'Well maintained in a fantastic location.'",
+        "url": "https://www.dashpm.ca/tenant/glas-condos-property-management/",
+        "date": "ongoing"
+      }
+    ],
+    "google_rating": "Limited reviews but tone is positive. Low fees, quiet location, positive super/mgmt mentions.",
+    "google_complaints": [
+      "Views compromised by 8 Charlotte tower built right next door",
+      "Tiny gym — minimal amenities",
+      "Loft-style hard surfaces = sound travels between units",
+      "Small unit count = limited rental supply"
+    ],
+    "tiktok_mentions": [
+      "Loft/design content occasionally features Glas; nothing viral"
+    ],
+    "red_flags": [
+      "Views killed by 8 Charlotte adjacency — verify your unit before signing",
+      "Small/no gym = need external membership (same issue as 400 Wellington / OneEleven)",
+      "Lamb buildings industry-wide have mixed PM track record (Glas specifically is fine)"
+    ],
+    "honest_call": "Hidden-gem boutique loft on a literal side street. Quiet, walkable to King/Spadina, low fees, mgmt actually praised. Compromised views and no real gym are the trade-offs. If you find a unit with intact views and you're OK with external gym, this is a sleeper pick — under-the-radar, owner-heavy, NOT a Concord Adex mass-tower. Worth touring."
+  }
+]
